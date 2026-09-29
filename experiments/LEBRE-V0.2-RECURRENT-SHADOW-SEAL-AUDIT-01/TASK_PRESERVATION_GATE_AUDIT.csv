@@ -1,0 +1,2 @@
+rule,prescribed_threshold,observed_preservation,preregistration_status,binding_in_prereg,adjudication
+TASK_PRESERVATION_12_OF_14,>= 12 / 14 tasks,7 / 14 tasks,POST_HOC_DESCRIPTIVE,NO,The 12/14 task rule was introduced post-hoc as a descriptive metric. It was not preregistered in RECURRENT_SHADOW_PREREGISTRATION.md.

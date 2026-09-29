@@ -1,0 +1,2 @@
+task_id,task_code,c0_dual_occupancy_pct,c2_dual_occupancy_pct,delta_dual_occupancy_pct,c0_nmse,c2_nmse,delta_nmse,g_d_br_positive,g_r_bd_positive,hybrid_complementarity_preserved
+I9_Hybrid_Delay_Plus_Latent_State,I9,47.6111111111111,40.86944444444444,-6.74166666666666,0.2258907190004807,0.2305021471437513,0.004611428143270618,True,True,True

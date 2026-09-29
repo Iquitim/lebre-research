@@ -1,0 +1,6 @@
+scope,seeds,tasks,steps_per_stream,total_steps,scientific_notation,purpose
+DEV_COHORT_SINGLE_ARM,10 (1401-1410),14,6000,840000,0.84e6,"Exploratory sensitivity, parameter verification"
+CONFIRMATORY_COHORT_SINGLE_ARM,30 (1411-1440),14,6000,2520000,2.52e6,Confirmatory inferential equivalence testing
+TOTAL_SINGLE_ARM_C1,40 (1401-1440),14,6000,3360000,3.36e6,All streamed steps executed under FP16 corr_grid
+CONFIRMATORY_BOTH_ARMS_C0_C1,30 paired (1411-1440),14,6000,5040000,5.04e6,Paired confirmatory evaluation (2 x 2.52e6)
+TOTAL_EXPERIMENT_STEPS,40 paired (1401-1440),14,6000,6720000,6.72e6,Complete experimental volume (2 x 3.36e6)

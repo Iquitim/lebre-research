@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_C2_NLMS_SEED_125",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "C2_NLMS",
+  "seed": 125,
+  "config": "{\"step_size\": 0.2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.4857932014486377,
+  "mae": 0.6848725620471018,
+  "nmse": 0.02362541397316989,
+  "mean_flops": 83.0,
+  "p95_flops": 83.0,
+  "peak_flops": 83.0,
+  "memory_bytes": 136,
+  "active_params": 13,
+  "wall_time_sec": 0.5760045051574707
+}

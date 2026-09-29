@@ -1,0 +1,7 @@
+seed,task,model_id,candidate_type,candidate_birth_stream_step,promotion_stream_step,shadow_observations_before_promotion,parameter_updates_before_promotion,configured_probation_threshold,empirical_match,source_artifact
+1711,I3_Single_Exact_Delay,M0,RECURRENT_STATE,0,15,15,15,15,YES,FIRST_DIVERGENCE_TRACE.csv:2
+1711,I3_Single_Exact_Delay,M1,RECURRENT_STATE,0,75,15,7,15,YES,MULTIRATE_FINAL_RESULTS.csv / scratch/run_v02_multirate_experiments.py
+1712,I6_Continuous_Latent_State,M0,RECURRENT_STATE,0,15,15,15,15,YES,MULTIRATE_FINAL_RESULTS.csv
+1712,I6_Continuous_Latent_State,M1,RECURRENT_STATE,0,75,15,7,15,YES,MULTIRATE_FINAL_RESULTS.csv
+1715,I4_Multi_Sparse_Delay,M0,DELAY_TAP,2,17,15,15,15,YES,MULTIRATE_FINAL_RESULTS.csv
+1715,I4_Multi_Sparse_Delay,M1,DELAY_TAP,2,77,15,7,15,YES,MULTIRATE_FINAL_RESULTS.csv

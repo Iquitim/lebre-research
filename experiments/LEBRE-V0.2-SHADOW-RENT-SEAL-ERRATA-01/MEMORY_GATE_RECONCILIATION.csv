@@ -1,0 +1,5 @@
+scheduler_id,static_preallocated_bytes,allocated_capacity_bytes,mean_occupied_persistent_bytes,max_occupied_persistent_bytes,transient_workspace_bytes,peak_working_bytes,scheduler_state_bytes,scheduler_allowance_bytes,scheduler_allowance_status,reported_value_in_report,reported_metric_name,true_metric_of_reported_value,historical_r2_memory_status,shadow_rent_gate3_status,static_capacity_1k_status,max_occupied_1k_status,peak_working_1k_status,proposed_2k_status
+S0_CONTINUOUS,904,1064,976.32,1064,8,1064,0,40,PASS,976,Peak RAM <= 1024 B,Mean Occupied Persistent Bytes,FAIL_ON_PEAK_PASS_ON_MEAN,FAIL_ON_CAPACITY_PASS_ON_MEAN,PASS,FAIL,FAIL,PASS
+S1_SHADOW_OFF,904,904,904.0,904,8,904,0,40,PASS,904,Peak RAM <= 1024 B,Max Occupied Persistent Bytes,PASS,PASS,PASS,PASS,PASS,PASS
+S2_PERIODIC,908,1068,980.32,1068,8,1068,4,40,PASS,980,Peak RAM <= 1024 B,Mean Occupied Persistent Bytes,FAIL_ON_PEAK_PASS_ON_MEAN,FAIL_ON_CAPACITY_PASS_ON_MEAN,PASS,FAIL,FAIL,PASS
+S3_EVENT_TRIGGERED,920,1080,992.32,1080,8,1080,16,40,PASS,992,Peak RAM <= 1024 B,Mean Occupied Persistent Bytes,FAIL_ON_PEAK_PASS_ON_MEAN,FAIL_ON_CAPACITY_PASS_ON_MEAN,PASS,FAIL,FAIL,PASS

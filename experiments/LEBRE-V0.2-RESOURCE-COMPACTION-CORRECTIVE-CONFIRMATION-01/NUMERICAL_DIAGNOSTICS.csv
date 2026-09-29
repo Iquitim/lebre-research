@@ -1,0 +1,6 @@
+check_item,c0_occurrences,c1_occurrences,verdict
+NaN_or_Inf_Losses,0,0,PASS
+Extreme_NMSE_Outliers (> 5.0),0,0,PASS
+Weight_Saturation (|w| > 50.0),0,0,PASS
+Underflow_To_Zero_Taps,0,0,PASS
+Structural_Divergence_Events,32,32,ANALYZED_HARMLESS

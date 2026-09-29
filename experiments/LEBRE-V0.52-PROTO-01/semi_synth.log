@@ -1,0 +1,14 @@
+model  ARX_NLMS  NLINEAR_ONLINE   v051   v052
+task                                         
+SS0       1.007           1.027  1.060  1.064
+SS1       0.601           0.660  0.643  0.649
+SS2       0.305           0.342  0.341  0.343
+SS3       0.082           0.093  0.099  0.092
+SS4       0.419           0.414  0.520  0.519
+      true_found  n_truth  exact_final  false_exog_adds  first_true      fp
+task                                                                       
+SS0          0.0      0.0          1.0              0.0         NaN  198.88
+SS1          0.0      1.0          0.0              0.0         NaN  198.27
+SS2          0.0      3.0          0.0              0.0         NaN  198.15
+SS3          0.0      3.0          0.0              0.0         NaN  197.06
+SS4          0.0      1.0          0.0              0.0         NaN  228.23

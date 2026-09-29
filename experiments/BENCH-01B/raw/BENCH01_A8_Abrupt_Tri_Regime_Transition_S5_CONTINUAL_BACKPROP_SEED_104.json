@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_S5_CONTINUAL_BACKPROP_SEED_104",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 104,
+  "config": "{\"learning_rate\": 0.03, \"replacement_rate\": 0.0001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4824910813400422,
+  "mae": 0.5137731585416782,
+  "nmse": 1.0151595801811373,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 304,
+  "active_params": 10,
+  "wall_time_sec": 0.11341547966003418
+}

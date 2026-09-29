@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_S1_VARIABLE_TAP_LMS_SEED_107",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 107,
+  "config": "{\"learning_rate\": 0.003, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 3.9728760124574225,
+  "mae": 1.5666403653295025,
+  "nmse": 0.9472221758916683,
+  "mean_flops": 51.055142857142854,
+  "p95_flops": 125.0,
+  "peak_flops": 131.0,
+  "memory_bytes": 544,
+  "active_params": 20,
+  "wall_time_sec": 0.09955668449401855
+}

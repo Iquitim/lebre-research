@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_S4_ACESN_SEED_115",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "S4_ACESN",
+  "seed": 115,
+  "config": "{\"reservoir_size\": 40, \"spectral_radius\": 0.85, \"compression_ratio\": 0.25, \"readout_lr\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6269311787609269,
+  "mae": 0.6310139126774502,
+  "nmse": 1.0029501504001552,
+  "mean_flops": 5284.897142857143,
+  "p95_flops": 5285.0,
+  "peak_flops": 5285.0,
+  "memory_bytes": 19968,
+  "active_params": 40,
+  "wall_time_sec": 0.09625506401062012
+}

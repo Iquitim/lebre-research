@@ -1,0 +1,44 @@
+{
+  "stage": "LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01-BASELINE",
+  "certified_candidate": "T3_FP16_CORR_GRID_FP32_UPDATE",
+  "frozen_state": {
+    "canonical_version": "0.1",
+    "lebre_v0_1_status": "FROZEN_WITH_SCOPE_LIMITS",
+    "m3_status": "UNOPENED",
+    "novelty_claim_ready": "NO"
+  },
+  "certified_memory_ledger_bytes": {
+    "scaler_mean_var": 80,
+    "history_ring_buffer": 332,
+    "linear_base_predictor": 40,
+    "fp16_corr_grid": 330,
+    "active_tap_metadata_max": 64,
+    "candidate_metadata_max": 48,
+    "active_recurrent_max": 48,
+    "shadow_recurrent": 48,
+    "arbitrator_registers": 64,
+    "base_fixed_persistent": 894,
+    "mean_occupied_persistent": 976.32,
+    "max_peak_capacity_persistent": 1054
+  },
+  "certified_compute_ledger_flops": {
+    "canonical_live_fp_mean": 81.37,
+    "instrumented_live_fp_compacted": 56.52,
+    "canonical_shadow_fp_mean": 86.63,
+    "instrumented_shadow_fp_compacted": 88.65,
+    "marginal_removable_shadow_fp": 26.83,
+    "single_regime_total_online": 108.19,
+    "all_task_total_online": 167.99,
+    "integer_ops_c1": 37.18,
+    "memory_traffic_bytes_c1": 291.15
+  },
+  "shadow_duty_cycle_targets": {
+    "continuous_probing_flops": 8.0,
+    "candidate_maintenance_flops": 12.0,
+    "shadow_recurrent_flops": 40.0,
+    "arbitrator_filtering_flops": 28.0,
+    "target_quiescent_duty_cycle_probing": 0.1,
+    "target_quiescent_duty_cycle_shadow_rec": 0.2,
+    "projected_quiescent_shadow_flops": 14.8
+  }
+}

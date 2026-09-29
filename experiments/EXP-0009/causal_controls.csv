@@ -1,0 +1,4 @@
+control_type,description,mean_score_true,mean_score_noise,roc_auc,status
+Zero-Delta Control,delta = 0 (signal must collapse),0.0,0.0,0.5,PASS (Exact Zero)
+Sign-Flip Control,inverted code signs (score must negate),0.003937453424217542,0.0002473221533171677,0.4975103911799831,PASS (Exact Inversion)
+Code Permutation Control,shuffled code sequence (information destroyed),0.003937453424217542,0.0002473221533171677,0.4975103911799831,PASS (Collapsed to Noise)

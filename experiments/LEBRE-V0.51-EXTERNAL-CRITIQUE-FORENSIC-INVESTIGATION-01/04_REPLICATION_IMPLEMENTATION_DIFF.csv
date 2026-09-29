@@ -1,0 +1,12 @@
+component,parameter_or_behavior,spec,original_code,replica,difference,expected_behavioral_effect,expected_resource_effect,classification
+S,martingale prior,"tau formula, value missing",rho = 1 (tau = 1/(sigma2 m_phi)),"m in {50, 200, 1000} (tau ~ 1/m, per report)",replica far more conservative,"lower power, slower/rarer promotion",none,AMBIGUOUS_SPEC_CHOICE
+S,test horizon / slots,missing,"4 lag slots, 200 samples (400 steps)","4 slots, up to 500 shadow steps",longer tests in replica,slower search throughput,none,AMBIGUOUS_SPEC_CHOICE
+S,active-set-full policy,missing,replace victim with R >= h/2,no replacement,replica cannot swap atoms,structures blocked when full,none,AMBIGUOUS_SPEC_CHOICE
+S,input normalizer,'standardised by environment',EMA alpha=1e-4 (benchmarks) / raw (internal suite),v0.1 prototype causal normalizer (EMA ~100 steps),different normalizer,structure drift on non-stationary inputs (A1/A8),4d vs ~12d,REPLICA_DEVIATION
+S,screening order,missing,screen updated with probes after evidence/tests in the step,screening before scale update (after a fix),unknown equivalence,B2 boundary shifts (0.835 -> 0.794 in replica),none,UNRESOLVED
+M,NLMS epsilon,missing,none (skip only if ||phi||^2 == 0),unstated default; tested eps >= 1% of increment variance,unknown,divergence on plateaus without eps,none,AMBIGUOUS_SPEC_CHOICE
+M,missing lags,missing,no feature forecast until buffer 2s+2 is full,missing lag = 0,different warm-up,early errors differ,none,AMBIGUOUS_SPEC_CHOICE
+interval,batch semantics,'step x 8',current indicator x 8,tested both readings,none on i.i.d. data,phase aliasing on seasonal data,none,VALID_SPEC_INTERPRETATION
+accounting,normalizer cost,not stated,not counted (environment),4d counted,scope,FP levels not comparable (replica ~350 vs original ~120-150),large,UNRESOLVED
+tasks,A1/A7/A8 generators,n/a,not part of v0.51 evaluation,replica's own v0.1 tasks,different benchmark,not comparable,n/a,UNRESOLVED
+tasks,"N1,N2,T1,B1-B4 generators",n/a,re-implemented from the replica's written description,replica code,"noise scale, stream length and check schedule not stated",affects exact fractions and latency counts,n/a,UNRESOLVED

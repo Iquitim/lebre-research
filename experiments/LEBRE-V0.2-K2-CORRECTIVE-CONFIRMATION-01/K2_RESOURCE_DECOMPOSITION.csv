@@ -1,0 +1,10 @@
+subsystem,c0_fp_mean,c2_fp_mean,delta_fp,notes
+Live LMS Baseline (y_base),2.0,2.0,0.0,Strict invariant: 1 mult + 1 add per step
+Live Tap Forward & Update,73.68441666666666,72.48326587301587,-1.2011507936507968,Occupancy dependent (4 FP per active tap)
+"Search Probe & Management (K_probe=2, B=4)",8.0,8.0,0.0,4 FP/probe * 4 probes / 2 steps = 8.0 FP/step
+Recurrent Shadow Forward (K_rec_forward: 1 vs 2),34.0,17.0,-17.0,C0: 34 FP/step (every step); C2: 34/2 = 17 FP/step (alternating steps)
+Recurrent Shadow Learning (K_rec_learn=10),0.6,0.6,0.0,6.0 FP / 10 steps = 0.60 FP/step
+Candidate Observation (K_cand_obs=5),1.849631746031746,1.8389730158730158,-0.0106587301587302,Observation when candidate active
+Candidate Learning (K_cand_learn=10),7.449631746031745,7.438973015873015,-0.0106587301587302,Learning when candidate active
+Arbitration (K_arb=5),5.6,5.6,0.0,Arbitration evaluation every 5 steps
+Total Floating Point Ops,111.23611825396826,101.02328333333334,-10.212834920634918,Overall delta: -10.213 FP/step

@@ -1,0 +1,434 @@
+[
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURAL_DECISIONS.md",
+    "line": 20,
+    "text": "- **Benchmark BENCH-01B:** Track B achieved a mean algorithmic compute of 90.44 FLOPs/step (with an observed transient peak of approximately 206 FLOPs/step during simultaneous probe and shadow candidate updates) and 440.0 bytes of persistent model RAM, complying with the mean R2-FLOP threshold ($\\le 100$ FLOPs/step) while operating below heavy dense baselines (Minimal GRU: 281.8 FLOPs; Online ESN: 1,683.7 FLOPs)."
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURAL_DECISIONS.md",
+    "line": 121,
+    "text": "## ADR-006: Current v0.1 Recurrent State Capacity is Strictly Bounded at $N \\le 1$"
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_DIAGRAMS.md",
+    "line": 165,
+    "text": "- **Data Flow (Microsecond Critical Path):** Consists strictly of matrix-vector inner products and scalar activations. It executes synchronously upon arrival of $x_t$ without querying governance thresholds, ensuring strictly bounded per-step execution latency."
+  },
+  {
+    "cat": "100_flops",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_DIAGRAMS.md",
+    "line": 338,
+    "text": "V5[\"Mean FLOP Compliance: <= 100 FLOPs/step Mean Budget\"]"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_DIAGRAMS.md",
+    "line": 339,
+    "text": "V6[\"State RAM Envelope: ~440 Bytes Persistent Model State\"]"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md",
+    "line": 22,
+    "text": "By executing candidate exploration via non-interfering shadow probation, decoupling fast observed activity from slow structural relevance to protect silent memory during quiescent intervals, demanding positive evidence of obsolescence before deallocation, and enforcing parsimonious linear-first escalation, LEBRE dynamically adapts compute and topology to task demands. In benchmark evaluations across 15 continuous workloads and 6,750 runs (BENCH-01B), LEBRE achieved a mean algorithmic compute of 90.44 FLOPs/step (observed transient peak $\\approx 206$ FLOPs/step) and 440.0 bytes of persistent model RAM with zero observed numerical divergences across 450 evaluated runs, achieving lower aggregate error than static recurrent baselines on non-stationary physical and sensor streams."
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md",
+    "line": 409,
+    "text": "- **Persistent Model Memory:** **440.0 Bytes** (compliant with R2-MEM $\\le 1024$)."
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md",
+    "line": 574,
+    "text": "Complex Recurrent Stream:   [■■■■■□]  (92 FLOPs, 440 Bytes)"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md",
+    "line": 637,
+    "text": "**LEBRE** (*Lifecycle-governed Evidence-Based Resource Evolution*) is an agile, online learning architecture designed for micro-edge streaming where compute and memory are precious. Instead of running a fixed, heavy neural network, LEBRE treats observable features, temporal delays, and internal memory states as cost-bearing structures that are created only when residual errors demand them, tested safely in shadow mode, protected during silent periods, and physically deleted when proven obsolete. By running at a measured mean of 90.44 FLOPs per step and 440.0 bytes of persistent model RAM, LEBRE adapts to non-stationary environments with the speed, frugality, and alertness of a hare."
+  },
+  {
+    "cat": "100_flops",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md",
+    "line": 19,
+    "text": "Esta especificação formaliza a arquitetura **LEBRE** (*Lifecycle-governed Evidence-Based Resource Evolution*), anteriormente investigada sob a designação provisória de \"Organização de Estado Único Track B\". A LEBRE é uma arquitetura online de aprendizado adaptativo projetada para regressão streaming contínua e não estacionária sob restrições de micro-recursos (computação algorítmica média abaixo do limiar R2 de 100 FLOPs e $\\le 1024$ bytes de RAM persistente de modelo). O princípio arquitetural central da LEBRE consiste em tratar a própria estrutura computacional—conexões de features observáveis, atrasos temporais (lags) e estados recorrentes internos—como **estruturas adaptativas com custo**, governadas por um ciclo de vida unificado e orientado por evidência:"
+  },
+  {
+    "cat": "quatro_fases",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md",
+    "line": 546,
+    "text": "Vejamos como a LEBRE se adapta através de quatro fases ambientais consecutivas:"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md",
+    "line": 575,
+    "text": "Fluxo Recorrente Complexo:    [■■■■■□]  (92 FLOPs, 440 Bytes)"
+  },
+  {
+    "cat": "sempre",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md",
+    "line": 625,
+    "text": "| - Um algoritmo mágico que sempre vence em erro em todas as tarefas.         |"
+  },
+  {
+    "cat": "sempre",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md",
+    "line": 654,
+    "text": "2. **Por que não guardar todos os estados descobertos para sempre?**"
+  },
+  {
+    "cat": "sempre",
+    "file": "docs/architecture\\LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md",
+    "line": 660,
+    "text": "4. **Por que não usar sempre variáveis explícitas de atraso (lags)?**"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_OVERVIEW_EN.md",
+    "line": 14,
+    "text": "**LEBRE** is an online adaptive learning architecture designed for continuous streaming regression under micro-edge compute and memory constraints. Rather than maintaining a rigid, static parameter network or dense reservoir, LEBRE treats observable input features, temporal delay taps, and internal recurrent states as **cost-bearing adaptive computational structures**. Every structural component is subjected to a unified, evidence-driven lifecycle ($\\text{DORMANT} \\to \\text{PROVISIONAL} \\to \\text{ACTIVE} \\to \\text{MATURE} \\to \\text{EVICTED}$). By isolating provisional candidates in non-interfering shadow probation, decoupling fast activity from slow relevance across quiescent gaps, and demanding positive evidence of obsolescence before deallocation, LEBRE achieves continuous, stable adaptation with a measured mean algorithmic compute below the 100-FLOP R2 threshold (mean 90.44 FLOPs/step, observed transient peak $\\approx 206$ FLOPs/step) and 440 bytes of persistent model RAM."
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_OVERVIEW_EN.md",
+    "line": 39,
+    "text": "| **Persistent Model RAM** | **440.0 Bytes** | 569.6 Bytes | 6,112.0 Bytes | **PASS** (Persistent R2-MEM $\\le 1024$; excludes stack/OS) |"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\LEBRE_OVERVIEW_PTBR.md",
+    "line": 15,
+    "text": "A **LEBRE** é uma arquitetura de aprendizado online adaptativo, projetada para regressão streaming contínua sob restrições de computação e memória em dispositivos micro-edge. Em vez de manter uma rede estática densa ou um reservatório fixo, a LEBRE trata features observáveis, atrasos temporais (lags) e estados recorrentes internos como **estruturas computacionais adaptativas com custo**. Cada componente estrutural está submetido a um ciclo de vida unificado e orientado por evidência ($\\text{DORMANT} \\to \\text{PROVISIONAL} \\to \\text{ACTIVE} \\to \\text{MATURE} \\to \\text{EVICTED}$). Ao isolar candidatos em estágio probatório em sombra (sem interferência no modelo ativo), desacoplar atividade rápida de relevância estrutural lenta durante fases de quiescência, e exigir evidência positiva de obsolescência antes da remoção, a LEBRE atinge adaptação contínua e estável com média de computação algorítmica abaixo do limiar R2 de 100 FLOPs (média de 90,44 FLOPs/passo, pico transitório observado de $\\approx 206$ FLOPs/passo) e 440 bytes de RAM persistente de modelo."
+  },
+  {
+    "cat": "100_flops",
+    "file": "docs/architecture\\LEBRE_OVERVIEW_PTBR.md",
+    "line": 15,
+    "text": "A **LEBRE** é uma arquitetura de aprendizado online adaptativo, projetada para regressão streaming contínua sob restrições de computação e memória em dispositivos micro-edge. Em vez de manter uma rede estática densa ou um reservatório fixo, a LEBRE trata features observáveis, atrasos temporais (lags) e estados recorrentes internos como **estruturas computacionais adaptativas com custo**. Cada componente estrutural está submetido a um ciclo de vida unificado e orientado por evidência ($\\text{DORMANT} \\to \\text{PROVISIONAL} \\to \\text{ACTIVE} \\to \\text{MATURE} \\to \\text{EVICTED}$). Ao isolar candidatos em estágio probatório em sombra (sem interferência no modelo ativo), desacoplar atividade rápida de relevância estrutural lenta durante fases de quiescência, e exigir evidência positiva de obsolescência antes da remoção, a LEBRE atinge adaptação contínua e estável com média de computação algorítmica abaixo do limiar R2 de 100 FLOPs (média de 90,44 FLOPs/passo, pico transitório observado de $\\approx 206$ FLOPs/passo) e 440 bytes de RAM persistente de modelo."
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_EN.html",
+    "line": 468,
+    "text": "<p>LEBRE continuously enforces hard resource bounds. Observed mean persistent model-state footprint is 440.0 bytes of RAM (excluding stack, code, runtime, and I/O buffers; benchmark limit \\(R_2\\text{-MEM} \\le 1024\\) bytes), while operational throughput is constrained to \\(\\le 100\\) FLOPs/step mean. Physical arrays of evicted structures are excised from execution graphs and reclaimed immediately.</p>"
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_EN.html",
+    "line": 1298,
+    "text": "<text x=\"15\" y=\"78\" font-size=\"10\" fill=\"#1E40AF\">Strictly bounded to at most 1 active scalar state</text>"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_EN.html",
+    "line": 1304,
+    "text": "<text x=\"15\" y=\"170\" font-size=\"10\" fill=\"#1E40AF\">Mean 90.44 FLOPs/step, 440 bytes persistent RAM</text>"
+  },
+  {
+    "cat": "garante",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 459,
+    "text": "<p>Nenhuma capacidade estrutural não linear ou recorrente é instanciada enquanto persistir a capacidade de adaptação da linha de base linear esparsa. Em regressão streaming e identificação de sistemas, correlações lineares estáticas explicam grande parte da variância observada. A LEBRE garante que dependências lineares triviais jamais disparem alocações de estado computacionalmente dispendiosas.</p>"
+  },
+  {
+    "cat": "jamais",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 459,
+    "text": "<p>Nenhuma capacidade estrutural não linear ou recorrente é instanciada enquanto persistir a capacidade de adaptação da linha de base linear esparsa. Em regressão streaming e identificação de sistemas, correlações lineares estáticas explicam grande parte da variância observada. A LEBRE garante que dependências lineares triviais jamais disparem alocações de estado computacionalmente dispendiosas.</p>"
+  },
+  {
+    "cat": "jamais",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 462,
+    "text": "<p>Unidades estruturais provisionais jamais têm permissão para corromper as predições ativas do modelo durante sua fase de treinamento inicial. Candidatos recém-nascidos aprendem em modo sombra desacoplado por um horizonte fixo de provação (\\(T_{\\text{prob}} = 50\\) passos). Apenas candidatos que demonstrem redução contrafactual de erro estatisticamente verificada (\\(G_{\\text{cand}} > 0,05\\)) são promovidos à inferência ativa.</p>"
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 547,
+    "text": "<p>Todo objeto estrutural na LEBRE progride por um ciclo de vida rigorosamente delimitado em quatro estados: <strong>DORMANT</strong> (Dormente), <strong>PROVISIONAL</strong> (Provisional), <strong>ACTIVE / MATURE</strong> (Ativo / Maduro) e <strong>EVICTED</strong> (Desalojado). As transições são governadas por acumuladores objetivos de evidência.</p>"
+  },
+  {
+    "cat": "jamais",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 606,
+    "text": "<p>Se \\(G_{\\text{cand}} \\le \\theta_{\\text{promote}}\\), o candidato é descartado e seus buffers são liberados sem jamais terem perturbado a inferência ativa.</p>"
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 1298,
+    "text": "<text x=\"15\" y=\"78\" font-size=\"10\" fill=\"#1E40AF\">Strictly bounded to at most 1 active scalar state</text>"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 1304,
+    "text": "<text x=\"15\" y=\"170\" font-size=\"10\" fill=\"#1E40AF\">Mean 90.44 FLOPs/step, 440 bytes persistent RAM</text>"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 1586,
+    "text": "<strong>Qualificação de Viabilidade em Hardware (Correção B):</strong> A quantia de 440 bytes representa a <strong>RAM de estado do modelo</strong>, e não o orçamento total de memória de um sistema microcontrolador físico (o qual precisa alocar pilha de execução C, buffers de anel de I/O e runtime de RTOS). Ademais, a LEBRE v0.1 foi avaliada exclusivamente em simulação matemática bit a bit. O deployment em microcontroladores físicos reais (como núcleos ARM Cortex-M0+ ou Cortex-M4) constitui um <em>alvo prospectivo para validação futura</em>, e não um resultado experimental realizado nesta especificação."
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "docs/architecture\\pdf_source\\LEBRE_CONDENSED_PTBR.html",
+    "line": 1616,
+    "text": "<td>Máquina discreta de quatro estados</td>"
+  },
+  {
+    "cat": "four_state",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 41,
+    "text": "- **Defect Identified:** Prior drafts alternately used \"four-state lifecycle\", \"four-phase lifecycle\", and \"five-state lifecycle\"."
+  },
+  {
+    "cat": "four_phase",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 41,
+    "text": "- **Defect Identified:** Prior drafts alternately used \"four-state lifecycle\", \"four-phase lifecycle\", and \"five-state lifecycle\"."
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 64,
+    "text": "- **Defect Identified:** Occasional occurrences of words like \"guarantee\", \"perfect\", \"flawless\", \"strictly bounded to 440 bytes\", or descriptions of Cortex-M microcontrollers as validated."
+  },
+  {
+    "cat": "flawless",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 64,
+    "text": "- **Defect Identified:** Occasional occurrences of words like \"guarantee\", \"perfect\", \"flawless\", \"strictly bounded to 440 bytes\", or descriptions of Cortex-M microcontrollers as validated."
+  },
+  {
+    "cat": "perfect",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 64,
+    "text": "- **Defect Identified:** Occasional occurrences of words like \"guarantee\", \"perfect\", \"flawless\", \"strictly bounded to 440 bytes\", or descriptions of Cortex-M microcontrollers as validated."
+  },
+  {
+    "cat": "guarantee",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 64,
+    "text": "- **Defect Identified:** Occasional occurrences of words like \"guarantee\", \"perfect\", \"flawless\", \"strictly bounded to 440 bytes\", or descriptions of Cortex-M microcontrollers as validated."
+  },
+  {
+    "cat": "440_bytes",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 64,
+    "text": "- **Defect Identified:** Occasional occurrences of words like \"guarantee\", \"perfect\", \"flawless\", \"strictly bounded to 440 bytes\", or descriptions of Cortex-M microcontrollers as validated."
+  },
+  {
+    "cat": "flawless",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_AUDIT.md",
+    "line": 78,
+    "text": "- **Verification:** Flawless visual contrast, title readability, and grayscale compatibility verified on rendered page images."
+  },
+  {
+    "cat": "guarantee",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_CHANGELOG.md",
+    "line": 44,
+    "text": "- **Bounded:** Word \"guarantee\" replaced with \"observed to sustain\" in event density row."
+  },
+  {
+    "cat": "guarantee",
+    "file": "experiments/ARCH-SPEC-01R2\\ARCH_SPEC_01R2_CHANGELOG.md",
+    "line": 51,
+    "text": "- **Section 35:** Bounded operational claims (replaced \"guaranteed\" with \"empirically validated within tested stationary horizons\")."
+  },
+  {
+    "cat": "four_state",
+    "file": "experiments/ARCH-SPEC-01R2\\DIAGRAM_REPAIR_REPORT.md",
+    "line": 32,
+    "text": "- **Prior Problem / Defect:** Labeled as a four-phase or four-state lifecycle in narrative headers, despite containing five distinct structural states. The Provisional state displayed historical exploratory range ($T_{\\text{prob}} = 20 - 80$ steps) rather than the frozen policy."
+  },
+  {
+    "cat": "four_phase",
+    "file": "experiments/ARCH-SPEC-01R2\\DIAGRAM_REPAIR_REPORT.md",
+    "line": 32,
+    "text": "- **Prior Problem / Defect:** Labeled as a four-phase or four-state lifecycle in narrative headers, despite containing five distinct structural states. The Provisional state displayed historical exploratory range ($T_{\\text{prob}} = 20 - 80$ steps) rather than the frozen policy."
+  },
+  {
+    "cat": "flawless",
+    "file": "experiments/ARCH-SPEC-01R2\\DIAGRAM_REPAIR_REPORT.md",
+    "line": 68,
+    "text": "- **PDF Headless Engine Render Status:** PASS (Flawless readability at 100% zoom on Page 11 of both PDFs)"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "experiments/ARCH-SPEC-01R2\\FROZEN_EVIDENCE_RECONCILIATION.md",
+    "line": 115,
+    "text": "4. **Removed:** Claim that LEBRE memory is universally bounded to 440 bytes for any system."
+  },
+  {
+    "cat": "flawless",
+    "file": "experiments/ARCH-SPEC-01R2\\VISUAL_QA_REPORT.md",
+    "line": 26,
+    "text": "| `FORMULA_RENDERING` | Zero raw LaTeX, broken glyphs, or formula cutoffs | KaTeX client-side prerendering flawless | **PASS** |"
+  },
+  {
+    "cat": "guarantee",
+    "file": "experiments/ARCH-SPEC-01R2\\VISUAL_QA_REPORT.md",
+    "line": 40,
+    "text": "| **3** | Section 2: Architectural Identity & Core Principles | Unhedged language regarding linear baseline guarantees | LOW | Bounded claims to evaluated empirical regimes | **PASS** |"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "scratch\\build_en_html.py",
+    "line": 502,
+    "text": "<p>LEBRE continuously enforces hard resource bounds. Observed mean persistent model-state footprint is 440.0 bytes of RAM (excluding stack, code, runtime, and I/O buffers; benchmark limit \\(R_2\\text{-MEM} \\le 1024\\) bytes), while operational throughput is constrained to \\(\\le 100\\) FLOPs/step mean. Physical arrays of evicted structures are excised from execution graphs and reclaimed immediately.</p>"
+  },
+  {
+    "cat": "garante",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 493,
+    "text": "<p>Nenhuma capacidade estrutural não linear ou recorrente é instanciada enquanto persistir a capacidade de adaptação da linha de base linear esparsa. Em regressão streaming e identificação de sistemas, correlações lineares estáticas explicam grande parte da variância observada. A LEBRE garante que dependências lineares triviais jamais disparem alocações de estado computacionalmente dispendiosas.</p>"
+  },
+  {
+    "cat": "jamais",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 493,
+    "text": "<p>Nenhuma capacidade estrutural não linear ou recorrente é instanciada enquanto persistir a capacidade de adaptação da linha de base linear esparsa. Em regressão streaming e identificação de sistemas, correlações lineares estáticas explicam grande parte da variância observada. A LEBRE garante que dependências lineares triviais jamais disparem alocações de estado computacionalmente dispendiosas.</p>"
+  },
+  {
+    "cat": "jamais",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 496,
+    "text": "<p>Unidades estruturais provisionais jamais têm permissão para corromper as predições ativas do modelo durante sua fase de treinamento inicial. Candidatos recém-nascidos aprendem em modo sombra desacoplado por um horizonte fixo de provação (\\(T_{\\text{prob}} = 50\\) passos). Apenas candidatos que demonstrem redução contrafactual de erro estatisticamente verificada (\\(G_{\\text{cand}} > 0,05\\)) são promovidos à inferência ativa.</p>"
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 581,
+    "text": "<p>Todo objeto estrutural na LEBRE progride por um ciclo de vida rigorosamente delimitado em quatro estados: <strong>DORMANT</strong> (Dormente), <strong>PROVISIONAL</strong> (Provisional), <strong>ACTIVE / MATURE</strong> (Ativo / Maduro) e <strong>EVICTED</strong> (Desalojado). As transições são governadas por acumuladores objetivos de evidência.</p>"
+  },
+  {
+    "cat": "jamais",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 640,
+    "text": "<p>Se \\(G_{\\text{cand}} \\le \\theta_{\\text{promote}}\\), o candidato é descartado e seus buffers são liberados sem jamais terem perturbado a inferência ativa.</p>"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 926,
+    "text": "<strong>Qualificação de Viabilidade em Hardware (Correção B):</strong> A quantia de 440 bytes representa a <strong>RAM de estado do modelo</strong>, e não o orçamento total de memória de um sistema microcontrolador físico (o qual precisa alocar pilha de execução C, buffers de anel de I/O e runtime de RTOS). Ademais, a LEBRE v0.1 foi avaliada exclusivamente em simulação matemática bit a bit. O deployment em microcontroladores físicos reais (como núcleos ARM Cortex-M0+ ou Cortex-M4) constitui um <em>alvo prospectivo para validação futura</em>, e não um resultado experimental realizado nesta especificação."
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "scratch\\build_ptbr_html.py",
+    "line": 956,
+    "text": "<td>Máquina discreta de quatro estados</td>"
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "scratch\\generate_diagrams.py",
+    "line": 724,
+    "text": "<text x=\"15\" y=\"78\" font-size=\"10\" fill=\"#1E40AF\">Strictly bounded to at most 1 active scalar state</text>"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "scratch\\generate_diagrams.py",
+    "line": 730,
+    "text": "<text x=\"15\" y=\"170\" font-size=\"10\" fill=\"#1E40AF\">Mean 90.44 FLOPs/step, 440 bytes persistent RAM</text>"
+  },
+  {
+    "cat": "four_phase",
+    "file": "scratch\\update_html_templates.py",
+    "line": 342,
+    "text": "'<li class=\"toc-item\"><span class=\"toc-title\">4. Four-Phase Structural Lifecycle State Machine</span><span class=\"toc-page\">Page 6</span></li>',"
+  },
+  {
+    "cat": "guarantee",
+    "file": "scratch\\update_html_templates.py",
+    "line": 348,
+    "text": "'LEBRE guarantees that trivial linear dependencies never trigger expensive state allocations.',"
+  },
+  {
+    "cat": "strictly_bounded",
+    "file": "scratch\\update_html_templates.py",
+    "line": 352,
+    "text": "'Memory footprint is strictly bounded to \\\\(\\\\approx 440\\\\) bytes of persistent model state RAM (weights and state registers), while operational throughput is constrained to \\\\(\\\\le 100\\\\) FLOPs/step mean.',"
+  },
+  {
+    "cat": "440_bytes",
+    "file": "scratch\\update_html_templates.py",
+    "line": 353,
+    "text": "'Observed mean persistent model-state footprint is 440.0 bytes of RAM (excluding stack, code, runtime, and I/O buffers; benchmark limit \\\\(R_2\\\\text{-MEM} \\\\le 1024\\\\) bytes), while operational throughput is constrained to \\\\(\\\\le 100\\\\) FLOPs/step mean.'"
+  },
+  {
+    "cat": "four_state",
+    "file": "scratch\\update_html_templates.py",
+    "line": 358,
+    "text": "'<h1>4. Four-Phase Structural Lifecycle State Machine</h1>\\n\\n<p>Every structural object in LEBRE progresses through a rigorously bounded four-state lifecycle: <strong>DORMANT</strong>, <strong>PROVISIONAL</strong>, <strong>ACTIVE / MATURE</strong>, and <strong>EVICTED</strong>.',"
+  },
+  {
+    "cat": "four_phase",
+    "file": "scratch\\update_html_templates.py",
+    "line": 358,
+    "text": "'<h1>4. Four-Phase Structural Lifecycle State Machine</h1>\\n\\n<p>Every structural object in LEBRE progresses through a rigorously bounded four-state lifecycle: <strong>DORMANT</strong>, <strong>PROVISIONAL</strong>, <strong>ACTIVE / MATURE</strong>, and <strong>EVICTED</strong>.',"
+  },
+  {
+    "cat": "four_state",
+    "file": "scratch\\update_html_templates.py",
+    "line": 364,
+    "text": "'<div class=\"diagram-caption\">Figure D2: Four-state structural lifecycle governing all candidate and active allocations.</div>',"
+  },
+  {
+    "cat": "four_state",
+    "file": "scratch\\update_html_templates.py",
+    "line": 376,
+    "text": "'<td>Discrete four-state machine (Dormant-Prov-Act-Evict)</td>',"
+  },
+  {
+    "cat": "quatro_fases",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 347,
+    "text": "'<li class=\"toc-item\"><span class=\"toc-title\">4. Máquina de Estados do Ciclo de Vida Estrutural em Quatro Fases</span><span class=\"toc-page\">Página 6</span></li>',"
+  },
+  {
+    "cat": "garante",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 353,
+    "text": "'A LEBRE garante que dependências lineares triviais jamais disparem alocações caras de estados.',"
+  },
+  {
+    "cat": "jamais",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 353,
+    "text": "'A LEBRE garante que dependências lineares triviais jamais disparem alocações caras de estados.',"
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 363,
+    "text": "'<h1>4. Máquina de Estados do Ciclo de Vida Estrutural em Quatro Fases</h1>\\n\\n<p>Todo objeto estrutural na LEBRE progride por um ciclo de vida rigorosamente delimitado em quatro estados: <strong>DORMANT</strong> (Dormente), <strong>PROVISIONAL</strong> (Provisional), <strong>ACTIVE / MATURE</strong> (Ativo / Maduro) e <strong>EVICTED</strong> (Desalojado).',"
+  },
+  {
+    "cat": "quatro_fases",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 363,
+    "text": "'<h1>4. Máquina de Estados do Ciclo de Vida Estrutural em Quatro Fases</h1>\\n\\n<p>Todo objeto estrutural na LEBRE progride por um ciclo de vida rigorosamente delimitado em quatro estados: <strong>DORMANT</strong> (Dormente), <strong>PROVISIONAL</strong> (Provisional), <strong>ACTIVE / MATURE</strong> (Ativo / Maduro) e <strong>EVICTED</strong> (Desalojado).',"
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 369,
+    "text": "'<div class=\"diagram-caption\">Figura D2: Ciclo de vida estrutural em quatro estados governando todas as alocações.</div>',"
+  },
+  {
+    "cat": "quatro_estados",
+    "file": "scratch\\update_ptbr_html.py",
+    "line": 381,
+    "text": "'<td>Máquina discreta de quatro estados (Dormant-Prov-Act-Evict)</td>',"
+  }
+]

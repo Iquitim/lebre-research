@@ -1,0 +1,19 @@
+# Versions used to produce LEBRE v0.52-r1 (Windows 11, CPython 3.11.9). Pinned as recorded on 2026-09-29.
+# pandas MUST stay at 2.2.3: pandas >= 3 makes to_numpy() read-only and breaks the frozen data loader.
+numpy==2.2.5
+pandas==2.2.3
+scipy==1.17.1
+statsmodels==0.15.0
+scikit-learn==1.7.2
+pyarrow==25.0.1
+matplotlib==3.10.7
+pillow==11.3.0
+pypdfium2==5.13.0
+requests==2.32.3
+river==0.26.1
+ziglang==0.16.0
+# Foundation-model references (comparators only; not needed for LEBRE itself)
+torch==2.11.0
+transformers==5.17.0
+chronos-forecasting==2.3.2
+granite-tsfm==0.3.9

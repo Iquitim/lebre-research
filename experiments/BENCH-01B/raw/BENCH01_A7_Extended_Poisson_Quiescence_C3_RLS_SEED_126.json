@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_C3_RLS_SEED_126",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "C3_RLS",
+  "seed": 126,
+  "config": "{\"forgetting_factor\": 1.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.9050921026475174,
+  "mae": 0.7308172833849521,
+  "nmse": 1.000746135084771,
+  "mean_flops": 485.0,
+  "p95_flops": 485.0,
+  "peak_flops": 485.0,
+  "memory_bytes": 944,
+  "active_params": 10,
+  "wall_time_sec": 0.11172175407409668
+}

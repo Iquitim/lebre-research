@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_Track_B_SEED_119",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "Track_B",
+  "seed": 119,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.15647070168729932,
+  "mae": 0.12262742693238902,
+  "nmse": 0.035669753557174624,
+  "mean_flops": 205.34285714285716,
+  "p95_flops": 214.0,
+  "peak_flops": 228.0,
+  "memory_bytes": 600,
+  "active_params": 50,
+  "wall_time_sec": 0.11021542549133301
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_C1_CURRENT_ONLY_LINEAR_SEED_116",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 116,
+  "config": "{\"learning_rate\": 0.03}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0018249082125820371,
+  "mae": 0.02503086009930876,
+  "nmse": 0.9788109701965982,
+  "mean_flops": 21.0,
+  "p95_flops": 21.0,
+  "peak_flops": 21.0,
+  "memory_bytes": 72,
+  "active_params": 5,
+  "wall_time_sec": 0.3444328308105469
+}

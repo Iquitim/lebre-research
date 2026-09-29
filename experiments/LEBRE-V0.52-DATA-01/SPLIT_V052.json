@@ -1,0 +1,781 @@
+{
+ "created": "2026-09-26T21:51:49",
+ "seeds": {
+  "ons": 5201,
+  "camels_br": 5202,
+  "bdg2": 5203
+ },
+ "data_checksums_sha256": "e10c663063f445cc8bd585597b4894c9357ead4156786839f2751ab4dc3f34b0",
+ "ons": {
+  "window": [
+   "2015-01-01",
+   "2025-12-31 23:00"
+  ],
+  "hours_in_window": 96432,
+  "aggregation": "3-hour means (pre-declared)",
+  "min_coverage": 0.9,
+  "dev_river": "GRANDE",
+  "development": [
+   {
+    "river": "GRANDE",
+    "target": "ITUTINGA",
+    "inputs": [
+     "CAMARGOS"
+    ],
+    "coverage": {
+     "target_inflow": 0.9842,
+     "input_outflow:CAMARGOS": 0.9852
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "FUNIL-MG",
+    "inputs": [
+     "ITUTINGA"
+    ],
+    "coverage": {
+     "target_inflow": 0.989,
+     "input_outflow:ITUTINGA": 0.9855
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "FURNAS",
+    "inputs": [
+     "FUNIL-MG"
+    ],
+    "coverage": {
+     "target_inflow": 0.9918,
+     "input_outflow:FUNIL-MG": 0.9867
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "M. MORAES",
+    "inputs": [
+     "FURNAS"
+    ],
+    "coverage": {
+     "target_inflow": 0.9918,
+     "input_outflow:FURNAS": 0.9918
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "L. C. BARRETO",
+    "inputs": [
+     "M. MORAES"
+    ],
+    "coverage": {
+     "target_inflow": 0.9918,
+     "input_outflow:M. MORAES": 0.9918
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "JAGUARA",
+    "inputs": [
+     "L. C. BARRETO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9919,
+     "input_outflow:L. C. BARRETO": 0.9918
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "IGARAPAVA",
+    "inputs": [
+     "JAGUARA"
+    ],
+    "coverage": {
+     "target_inflow": 0.989,
+     "input_outflow:JAGUARA": 0.9919
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "VOLTA GRANDE",
+    "inputs": [
+     "IGARAPAVA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9894,
+     "input_outflow:IGARAPAVA": 0.9888
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "P. COLOMBIA",
+    "inputs": [
+     "VOLTA GRANDE"
+    ],
+    "coverage": {
+     "target_inflow": 0.9917,
+     "input_outflow:VOLTA GRANDE": 0.9895
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "MARIMBONDO",
+    "inputs": [
+     "P. COLOMBIA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9917,
+     "input_outflow:P. COLOMBIA": 0.9917
+    }
+   },
+   {
+    "river": "GRANDE",
+    "target": "A. VERMELHA",
+    "inputs": [
+     "MARIMBONDO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9894,
+     "input_outflow:MARIMBONDO": 0.9917
+    }
+   }
+  ],
+  "held_out": [
+   {
+    "river": "TIETE",
+    "target": "BARIRI",
+    "inputs": [
+     "B. BONITA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9894,
+     "input_outflow:B. BONITA": 0.9914
+    }
+   },
+   {
+    "river": "TIETE",
+    "target": "IBITINGA",
+    "inputs": [
+     "BARIRI"
+    ],
+    "coverage": {
+     "target_inflow": 0.9915,
+     "input_outflow:BARIRI": 0.9894
+    }
+   },
+   {
+    "river": "TIETE",
+    "target": "PROMISSÃO",
+    "inputs": [
+     "IBITINGA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9914,
+     "input_outflow:IBITINGA": 0.9914
+    }
+   },
+   {
+    "river": "TIETE",
+    "target": "N. AVANHANDAVA",
+    "inputs": [
+     "PROMISSÃO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9914,
+     "input_outflow:PROMISSÃO": 0.9914
+    }
+   },
+   {
+    "river": "TIETE",
+    "target": "TRÊS IRMÃOS",
+    "inputs": [
+     "N. AVANHANDAVA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9816,
+     "input_outflow:N. AVANHANDAVA": 0.9914
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "PIRAJU",
+    "inputs": [
+     "JURUMIRIM"
+    ],
+    "coverage": {
+     "target_inflow": 0.9653,
+     "input_outflow:JURUMIRIM": 0.9906
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "CHAVANTES",
+    "inputs": [
+     "PIRAJU"
+    ],
+    "coverage": {
+     "target_inflow": 0.9904,
+     "input_outflow:PIRAJU": 0.9653
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "OURINHOS",
+    "inputs": [
+     "CHAVANTES"
+    ],
+    "coverage": {
+     "target_inflow": 0.9638,
+     "input_outflow:CHAVANTES": 0.9904
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "SALTO GRANDE CS",
+    "inputs": [
+     "OURINHOS"
+    ],
+    "coverage": {
+     "target_inflow": 0.9903,
+     "input_outflow:OURINHOS": 0.9638
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "CANOAS II",
+    "inputs": [
+     "SALTO GRANDE CS"
+    ],
+    "coverage": {
+     "target_inflow": 0.9903,
+     "input_outflow:SALTO GRANDE CS": 0.9903
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "CANOAS I",
+    "inputs": [
+     "CANOAS II"
+    ],
+    "coverage": {
+     "target_inflow": 0.9903,
+     "input_outflow:CANOAS II": 0.9903
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "CAPIVARA",
+    "inputs": [
+     "CANOAS I",
+     "GOV JAYME CANET JR"
+    ],
+    "coverage": {
+     "target_inflow": 0.9903,
+     "input_outflow:CANOAS I": 0.9904,
+     "input_outflow:GOV JAYME CANET JR": 0.9436
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "TAQUARUÇU",
+    "inputs": [
+     "CAPIVARA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9907,
+     "input_outflow:CAPIVARA": 0.9903
+    }
+   },
+   {
+    "river": "PARANAPANEMA",
+    "target": "ROSANA",
+    "inputs": [
+     "TAQUARUÇU"
+    ],
+    "coverage": {
+     "target_inflow": 0.9903,
+     "input_outflow:TAQUARUÇU": 0.9906
+    }
+   },
+   {
+    "river": "IGUACU",
+    "target": "SEGREDO",
+    "inputs": [
+     "G. B. MUNHOZ"
+    ],
+    "coverage": {
+     "target_inflow": 0.9902,
+     "input_outflow:G. B. MUNHOZ": 0.9904
+    }
+   },
+   {
+    "river": "IGUACU",
+    "target": "SALTO SANTIAGO",
+    "inputs": [
+     "SEGREDO"
+    ],
+    "coverage": {
+     "target_inflow": 0.991,
+     "input_outflow:SEGREDO": 0.9902
+    }
+   },
+   {
+    "river": "IGUACU",
+    "target": "SALTO OSORIO",
+    "inputs": [
+     "SALTO SANTIAGO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9909,
+     "input_outflow:SALTO SANTIAGO": 0.9909
+    }
+   },
+   {
+    "river": "IGUACU",
+    "target": "SALTO CAXIAS",
+    "inputs": [
+     "SALTO OSORIO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9907,
+     "input_outflow:SALTO OSORIO": 0.9908
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "MIRANDA",
+    "inputs": [
+     "NOVA PONTE"
+    ],
+    "coverage": {
+     "target_inflow": 0.9919,
+     "input_outflow:NOVA PONTE": 0.9886
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "C.BRANCO-1",
+    "inputs": [
+     "MIRANDA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9891,
+     "input_outflow:MIRANDA": 0.992
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "C.BRANCO-2",
+    "inputs": [
+     "C.BRANCO-1"
+    ],
+    "coverage": {
+     "target_inflow": 0.9887,
+     "input_outflow:C.BRANCO-1": 0.9889
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "CORUMBA-3",
+    "inputs": [
+     "CORUMBA-4"
+    ],
+    "coverage": {
+     "target_inflow": 0.9397,
+     "input_outflow:CORUMBA-4": 0.962
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "CORUMBA",
+    "inputs": [
+     "CORUMBA-3"
+    ],
+    "coverage": {
+     "target_inflow": 0.9917,
+     "input_outflow:CORUMBA-3": 0.9397
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "ITUMBIARA",
+    "inputs": [
+     "EMBORCAÇÃO",
+     "C.BRANCO-2",
+     "CORUMBA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9917,
+     "input_outflow:EMBORCAÇÃO": 0.9884,
+     "input_outflow:C.BRANCO-2": 0.9863,
+     "input_outflow:CORUMBA": 0.9917
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "C. DOURADA",
+    "inputs": [
+     "ITUMBIARA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9916,
+     "input_outflow:ITUMBIARA": 0.9918
+    }
+   },
+   {
+    "river": "PARANAIBA",
+    "target": "SÃO SIMÃO",
+    "inputs": [
+     "C. DOURADA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9786,
+     "input_outflow:C. DOURADA": 0.992
+    }
+   },
+   {
+    "river": "SAO FRANCISCO",
+    "target": "LUIZ GONZAGA",
+    "inputs": [
+     "SOBRADINHO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9467,
+     "input_outflow:SOBRADINHO": 0.9919
+    }
+   },
+   {
+    "river": "SAO FRANCISCO",
+    "target": "APOLONIO SALES",
+    "inputs": [
+     "LUIZ GONZAGA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9467,
+     "input_outflow:LUIZ GONZAGA": 0.9467
+    }
+   },
+   {
+    "river": "TOCANTINS",
+    "target": "CANA BRAVA",
+    "inputs": [
+     "SERRA DA MESA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9922,
+     "input_outflow:SERRA DA MESA": 0.9918
+    }
+   },
+   {
+    "river": "TOCANTINS",
+    "target": "SAO SALVADOR",
+    "inputs": [
+     "CANA BRAVA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9833,
+     "input_outflow:CANA BRAVA": 0.9922
+    }
+   },
+   {
+    "river": "TOCANTINS",
+    "target": "PEIXE ANGICAL",
+    "inputs": [
+     "SAO SALVADOR"
+    ],
+    "coverage": {
+     "target_inflow": 0.9858,
+     "input_outflow:SAO SALVADOR": 0.9833
+    }
+   },
+   {
+    "river": "TOCANTINS",
+    "target": "LAJEADO",
+    "inputs": [
+     "PEIXE ANGICAL"
+    ],
+    "coverage": {
+     "target_inflow": 0.9865,
+     "input_outflow:PEIXE ANGICAL": 0.9857
+    }
+   },
+   {
+    "river": "TOCANTINS",
+    "target": "ESTREITO",
+    "inputs": [
+     "LAJEADO"
+    ],
+    "coverage": {
+     "target_inflow": 0.9921,
+     "input_outflow:LAJEADO": 0.9865
+    }
+   },
+   {
+    "river": "TOCANTINS",
+    "target": "TUCURUI",
+    "inputs": [
+     "ESTREITO"
+    ],
+    "coverage": {
+     "target_inflow": 0.956,
+     "input_outflow:ESTREITO": 0.9921
+    }
+   },
+   {
+    "river": "URUGUAI",
+    "target": "MACHADINHO",
+    "inputs": [
+     "BARRA GRANDE",
+     "CAMPOS NOVOS"
+    ],
+    "coverage": {
+     "target_inflow": 0.9902,
+     "input_outflow:BARRA GRANDE": 0.9895,
+     "input_outflow:CAMPOS NOVOS": 0.9904
+    }
+   },
+   {
+    "river": "URUGUAI",
+    "target": "ITÁ",
+    "inputs": [
+     "MACHADINHO"
+    ],
+    "coverage": {
+     "target_inflow": 0.991,
+     "input_outflow:MACHADINHO": 0.9902
+    }
+   },
+   {
+    "river": "URUGUAI",
+    "target": "FOZ CHAPECO",
+    "inputs": [
+     "ITÁ"
+    ],
+    "coverage": {
+     "target_inflow": 0.9905,
+     "input_outflow:ITÁ": 0.991
+    }
+   },
+   {
+    "river": "PARANA",
+    "target": "JUPIA",
+    "inputs": [
+     "I. SOLTEIRA",
+     "TRÊS IRMÃOS"
+    ],
+    "coverage": {
+     "target_inflow": 0.9912,
+     "input_outflow:I. SOLTEIRA": 0.9912,
+     "input_outflow:TRÊS IRMÃOS": 0.9817
+    }
+   },
+   {
+    "river": "PARANA",
+    "target": "PORTO PRIMAVERA",
+    "inputs": [
+     "JUPIA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9822,
+     "input_outflow:JUPIA": 0.9912
+    }
+   },
+   {
+    "river": "JACUI",
+    "target": "JACUI",
+    "inputs": [
+     "PASSO REAL"
+    ],
+    "coverage": {
+     "target_inflow": 0.9887,
+     "input_outflow:PASSO REAL": 0.9888
+    }
+   },
+   {
+    "river": "JACUI",
+    "target": "ITAUBA",
+    "inputs": [
+     "JACUI"
+    ],
+    "coverage": {
+     "target_inflow": 0.9887,
+     "input_outflow:JACUI": 0.9889
+    }
+   },
+   {
+    "river": "JACUI",
+    "target": "D. FRANCISCA",
+    "inputs": [
+     "ITAUBA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9881,
+     "input_outflow:ITAUBA": 0.9887
+    }
+   },
+   {
+    "river": "DOCE",
+    "target": "BAGUARI",
+    "inputs": [
+     "CANDONGA"
+    ],
+    "coverage": {
+     "target_inflow": 0.9856,
+     "input_outflow:CANDONGA": 0.9474
+    }
+   },
+   {
+    "river": "DOCE",
+    "target": "AIMORES",
+    "inputs": [
+     "BAGUARI"
+    ],
+    "coverage": {
+     "target_inflow": 0.988,
+     "input_outflow:BAGUARI": 0.9817
+    }
+   },
+   {
+    "river": "DOCE",
+    "target": "MASCARENHAS",
+    "inputs": [
+     "AIMORES"
+    ],
+    "coverage": {
+     "target_inflow": 0.9841,
+     "input_outflow:AIMORES": 0.9867
+    }
+   }
+  ],
+  "excluded_low_coverage": [
+   {
+    "river": "IGUACU",
+    "target": "BAIXO IGUACU",
+    "inputs": [
+     "SALTO CAXIAS"
+    ],
+    "coverage": {
+     "target_inflow": 0.6303,
+     "input_outflow:SALTO CAXIAS": 0.9907
+    }
+   }
+  ]
+ },
+ "camels_br": {
+  "eligibility": "consumptive_use_perc < 1; regulation_degree < 0.05; q_quality_control_perc >= 95",
+  "n_eligible": 237,
+  "development": [
+   17350000,
+   24900000,
+   54110002,
+   58258000,
+   60778000,
+   60940000,
+   61510000,
+   64360000,
+   64477600,
+   71350001
+  ],
+  "held_out": [
+   13600002,
+   13750000,
+   13880000,
+   17345000,
+   23230000,
+   24500000,
+   24950000,
+   28150000,
+   32830000,
+   33460000,
+   34020000,
+   44250000,
+   54010005,
+   56075000,
+   56800000,
+   56870000,
+   57320000,
+   57360000,
+   57370000,
+   57700000,
+   58040000,
+   58542000,
+   58550001,
+   58610000,
+   59181000,
+   61078000,
+   61250000,
+   61320000,
+   61410000,
+   63250000,
+   64380000,
+   64620000,
+   64652000,
+   64659000,
+   64764000,
+   64815000,
+   65136550,
+   65180000,
+   65945000,
+   65948000,
+   71200000,
+   71250000,
+   74750000,
+   74880000,
+   83105000,
+   83892998,
+   84150100,
+   84520010,
+   84551000,
+   87317060
+  ],
+  "target": "daily streamflow",
+  "inputs": [
+   "precipitation",
+   "actual evapotranspiration",
+   "temperature"
+  ]
+ },
+ "bdg2": {
+  "eligibility": "cleaned heating/cooling meters (chilledwater, hotwater, steam) with coverage >= 0.9 and >= 50% non-zero",
+  "n_eligible": 766,
+  "development": [
+   "chilledwater:Bull_education_Hayley",
+   "hotwater:Moose_education_Lori",
+   "steam:Eagle_assembly_Herbert",
+   "steam:Hog_assembly_Colette",
+   "steam:Hog_education_Luvenia"
+  ],
+  "held_out": [
+   "chilledwater:Bull_assembly_Goldie",
+   "chilledwater:Bull_education_Jae",
+   "chilledwater:Bull_education_Joseph",
+   "chilledwater:Bull_education_Mario",
+   "chilledwater:Bull_education_Myra",
+   "chilledwater:Eagle_education_April",
+   "chilledwater:Eagle_education_Shanna",
+   "chilledwater:Eagle_office_Freida",
+   "chilledwater:Fox_education_Ray",
+   "chilledwater:Fox_lodging_Wallace",
+   "chilledwater:Fox_office_Rowena",
+   "chilledwater:Fox_office_Thelma",
+   "chilledwater:Hog_office_Joey",
+   "chilledwater:Moose_education_Florence",
+   "chilledwater:Peacock_office_Effie",
+   "hotwater:Eagle_office_Lane",
+   "hotwater:Fox_assembly_Audrey",
+   "steam:Bull_assembly_Freddie",
+   "steam:Bull_assembly_Nathanial",
+   "steam:Bull_education_Linnie",
+   "steam:Bull_education_Miquel",
+   "steam:Cockatoo_assembly_Ed",
+   "steam:Cockatoo_office_Delores",
+   "steam:Eagle_education_Sherrill",
+   "steam:Eagle_health_Reba",
+   "steam:Eagle_office_Sheree",
+   "steam:Hog_assembly_Edward",
+   "steam:Hog_education_Cathleen",
+   "steam:Moose_education_Diane",
+   "steam:Peacock_office_Major"
+  ],
+  "inputs": "site weather (air temperature, dew temperature, etc.)"
+ },
+ "synthetic": "pure synthetic (mechanism tests) and semi-synthetic (real inputs through declared structures) are generated later, from DEVELOPMENT inputs only for tuning"
+}

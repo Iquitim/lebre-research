@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_S5_CONTINUAL_BACKPROP_SEED_117",
+  "task_id": "A6_Context_Routing",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 117,
+  "config": "{\"learning_rate\": 0.005, \"replacement_rate\": 0.001, \"maturity_threshold\": 100}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.3915649468824238,
+  "mae": 0.4971393958027532,
+  "nmse": 0.5319348632580374,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 304,
+  "active_params": 10,
+  "wall_time_sec": 0.11357951164245605
+}

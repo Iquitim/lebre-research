@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_Track_B_SEED_106",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "Track_B",
+  "seed": 106,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.7544982617801256,
+  "mae": 0.6510134538538737,
+  "nmse": 0.9050254600316977,
+  "mean_flops": 56.96771428571429,
+  "p95_flops": 78.0,
+  "peak_flops": 78.0,
+  "memory_bytes": 408,
+  "active_params": 15,
+  "wall_time_sec": 0.2191171646118164
+}

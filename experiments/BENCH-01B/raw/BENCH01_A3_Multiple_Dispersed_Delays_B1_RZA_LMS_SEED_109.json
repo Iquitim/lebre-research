@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_B1_RZA_LMS_SEED_109",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "B1_RZA_LMS",
+  "seed": 109,
+  "config": "{\"learning_rate\": 0.001, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.491216418985596,
+  "mae": 0.5618363561537941,
+  "nmse": 1.0001245756193033,
+  "mean_flops": 201.0,
+  "p95_flops": 201.0,
+  "peak_flops": 201.0,
+  "memory_bytes": 224,
+  "active_params": 19,
+  "wall_time_sec": 0.0941472053527832
+}

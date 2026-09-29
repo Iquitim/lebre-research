@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_B5_ONLINE_ESN_SEED_114",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 114,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.85, \"leak_rate\": 0.3, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4737267161216094,
+  "mae": 0.5483146551521911,
+  "nmse": 0.9614746897417573,
+  "mean_flops": 1881.0,
+  "p95_flops": 1881.0,
+  "peak_flops": 1881.0,
+  "memory_bytes": 6848,
+  "active_params": 20,
+  "wall_time_sec": 0.1125800609588623
+}

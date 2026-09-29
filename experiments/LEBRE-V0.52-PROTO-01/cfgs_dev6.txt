@@ -1,0 +1,1 @@
+{"cost2_week": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1", lazy_halves=True, rls_every=2, rls_after_warm=True, screen_skip_active=True, track_groups=True, weekly=True)}

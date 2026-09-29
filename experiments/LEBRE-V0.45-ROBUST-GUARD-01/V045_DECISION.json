@@ -1,0 +1,124 @@
+{
+  "part1": {
+    "gates": {
+      "G1": true,
+      "G2": true,
+      "G3": true,
+      "G4": true,
+      "G5": true,
+      "G6": true
+    },
+    "safeguards": {
+      "latency_I11_I14<=+50": true,
+      "dNMSE_task<=+0.010": false,
+      "I7_reactivation<=+25": true,
+      "detection<=1.25x": false,
+      "NI_vs_V042_upper<=+0.005": true
+    },
+    "nmse": {
+      "CTRL_ARX": 0.3376,
+      "V02_A0": 0.3133,
+      "V032": 0.2151,
+      "V042": 0.2146,
+      "V045": 0.2146
+    },
+    "fp_V045": 99.49315555555555,
+    "coverage_V045": 0.9006820353559485,
+    "struct": {
+      "CTRL_ARX": NaN,
+      "V02_A0": 0.747,
+      "V032": 0.903,
+      "V042": 0.9258,
+      "V045": 0.9258
+    },
+    "detection_delay": {
+      "CTRL_ARX": NaN,
+      "V02_A0": NaN,
+      "V032": 207.4,
+      "V042": 268.9,
+      "V045": 268.9
+    },
+    "V045-V042 nmse upper95": 0.0,
+    "V045-V032 nmse upper95": 0.0017300848440817856,
+    "max_dNMSE_task_vs_V032": 0.018064810657424213,
+    "max_latency_delta": 24.100000000000023
+  },
+  "part2": {
+    "T3_runs_with_false_promotion": 0.0,
+    "T3_ok(<=0.05)": true,
+    "T9_max_gap": 0.0,
+    "T9_ok": true,
+    "T10_mean_cov": 0.9013049909956264,
+    "T10_ok": true,
+    "T5_ratio_median": 1.19017563480649,
+    "T5_ratio_max": 2.129032020646636,
+    "T4_false_evictions_total": 5
+  },
+  "part3": {
+    "V045": {
+      "K-a": 0.8,
+      "K-b": 0.9,
+      "K-c": true,
+      "K-d": 1.0,
+      "K-e": 0.8,
+      "passes": 5,
+      "decision": "COMPETITIVE_WITH_OBSERVABILITY_ADVANTAGE",
+      "mean_rank": 9.1,
+      "position": 7,
+      "n_models": 35,
+      "geo_vs_v032": 0.9139782396017632,
+      "geo_vs_best_chronos": 3.2444067192148034,
+      "geo_vs_nlinear": 2.082569370700494
+    },
+    "V042": {
+      "K-a": 0.6,
+      "K-b": 0.7,
+      "K-c": true,
+      "K-d": 0.6,
+      "K-e": 0.8,
+      "passes": 3,
+      "decision": "PARTIALLY_COMPETITIVE",
+      "mean_rank": 9.9,
+      "position": 9,
+      "n_models": 35,
+      "geo_vs_v032": 1.1753556910687357,
+      "geo_vs_best_chronos": 4.172234891754429,
+      "geo_vs_nlinear": 2.6781378985180155
+    },
+    "geo_V045_vs_V042": 0.7776184235520183
+  },
+  "part4": {
+    "H1_geo_V045_V042": 0.9255976886815737,
+    "H1_ok": true,
+    "H2_geo_V045_V032": 0.973688203758133,
+    "H2_ok": true,
+    "H3_instab": {
+      "V032": 1.0742867282588464,
+      "V042": 3.229241539656124,
+      "V045": 3.561563288762395
+    },
+    "bench04_offsets_geo_V045_V042": 0.8377015874329753,
+    "bench04_offsets_geo_V045_V032": 1.0470987360394628,
+    "bench04_offsets_instab": {
+      "V032": 1.0942009139793925,
+      "V042": 1.6128936226007893,
+      "V045": 1.5060422316170174
+    }
+  },
+  "part5": {
+    "X3_median": {
+      "PERSISTENCE": 0.1703,
+      "V032": 4.2416,
+      "V042": 0.2733,
+      "V045": 0.2615
+    },
+    "X3_ok": true
+  },
+  "PROMOTION": "NAO_PROMOVIDA",
+  "POST_HOC_DECISION": {
+    "date": "2026-09-23",
+    "decision": "V045_SUBSTITUI_V042_NA_LINHA_V04 (correcao, nao promocao plena)",
+    "record": "DECISAO_V045_SUBSTITUI_V042.md",
+    "preregistered_outcome_kept": "NAO_PROMOVIDA"
+  }
+}

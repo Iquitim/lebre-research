@@ -1,0 +1,178 @@
+{
+  "stage": "LEBRE-V0.2-CANDIDATE-SUBSYSTEM-RESOURCE-FEASIBILITY-01",
+  "timestamp_utc": "2026-09-22T15:20:00Z",
+  "primary_outcome": "CANDIDATE_SUBSYSTEM_NOT_PRIMARY_BOTTLENECK",
+  "verdict": {
+    "CANDIDATE_SUBSYSTEM_CAN_MATHEMATICALLY_CLOSE_100FP_GAP": "NO",
+    "CANDIDATE_SUBSYSTEM_CAN_PLAUSIBLY_CLOSE_100FP_GAP": "NO",
+    "RESOURCE_FEASIBILITY_CLASS": "NO_FEASIBILITY",
+    "CANDIDATE_PROBATION_COST_STAGE_AUTHORIZED": "NO",
+    "NEXT_RECOMMENDED_STAGE": "HUMAN_REVIEW_REQUIRED",
+    "SEARCH_FRONTIER_STATUS": "PROMISING_EXPERIMENTAL_CANDIDATE",
+    "GLOBAL_SEARCH_COMPACTION_VALIDATION": "FAILED",
+    "DENSE_SEARCH_PERMANENTLY_DEPRECATED": "NO"
+  },
+  "reconciled_metrics": {
+    "CURRENT_M1_TOTAL_FP": 111.013591,
+    "TARGET_TOTAL_FP": 100.0,
+    "REQUIRED_SAVING_FP": 11.013591,
+    "FAILED_PROBATION_FP": 1.769083,
+    "SUCCESSFUL_PROBATION_FP": 0.04005,
+    "TOTAL_PROBATION_FP": 1.809133,
+    "DIRECT_CANDIDATE_FP": 1.844634,
+    "INDIRECT_CANDIDATE_DESCENDANT_FP": 5.6,
+    "TOTAL_CANDIDATE_SUBSYSTEM_FP": 7.444633,
+    "MAX_THEORETICAL_CANDIDATE_SAVING_FP": 7.444633,
+    "MAX_SEMANTICALLY_REMOVABLE_SAVING_FP": 1.769083,
+    "MAX_RETROSPECTIVE_EARLY_REJECTION_SAVING_FP": 0.884542,
+    "ORACLE_MINIMUM_TOTAL_FP": 103.568958,
+    "SEMANTIC_MINIMUM_TOTAL_FP": 109.244508,
+    "RETROSPECTIVE_EARLY_REJECTION_TOTAL_FP": 110.129049,
+    "ORACLE_CLOSURE_RATIO": 0.675949,
+    "SEMANTIC_CLOSURE_RATIO": 0.160627,
+    "RETROSPECTIVE_CLOSURE_RATIO": 0.080314,
+    "PROJECTED_RESOURCE_SAFETY_MARGIN_FP": -3.568958
+  },
+  "artifacts": [
+    {
+      "filename": "ARTIFACT_AUTHORITY_MAP.md",
+      "size_bytes": 3937,
+      "sha256": "718369f4baee44d9f54820f3ab796062a43186f3e3481f764f6e638f0c612863"
+    },
+    {
+      "filename": "CANDIDATE_COST_BY_OUTCOME.csv",
+      "size_bytes": 719,
+      "sha256": "f493e3f18a421056eeb74e0039f3e9e8e789ed81a62a37f66efba5952f22de2c"
+    },
+    {
+      "filename": "CANDIDATE_COST_BY_TASK.csv",
+      "size_bytes": 3132,
+      "sha256": "d7608e82227d7cc8c304820ea5cf6036853cc84eaab0412076120d85736c8084"
+    },
+    {
+      "filename": "CANDIDATE_DESCENDANT_COST.csv",
+      "size_bytes": 417,
+      "sha256": "ae25c5c2e287b653bf05b25daa4598a6f069c0b1a517e9835b703c150c96a61b"
+    },
+    {
+      "filename": "CANDIDATE_FEASIBILITY_DECISION.md",
+      "size_bytes": 6145,
+      "sha256": "03b807e8672c2ddd7fd92e8ad4a7881f567ac4ebf0982ed35260eaa7af2010b2"
+    },
+    {
+      "filename": "CANDIDATE_LIFECYCLE_TRACE.csv",
+      "size_bytes": 652,
+      "sha256": "4b147ea80770d78800b8aa0cc1fb4554243256b5a87083d5e3ccd7b22a57b2fa"
+    },
+    {
+      "filename": "CANDIDATE_PROBATION_LITERATURE_NOTE.md",
+      "size_bytes": 6210,
+      "sha256": "cdf30c7a2b060dd661b9c50e890de01cfaca19f720d18110e5184811f559046d"
+    },
+    {
+      "filename": "CANDIDATE_RESOURCE_CLOSURE_TABLE.csv",
+      "size_bytes": 1190,
+      "sha256": "8f6a0225d3d5df0cc989d29f95e19211dcce78f8fd5676093697f1bc6286382e"
+    },
+    {
+      "filename": "CANDIDATE_RESOURCE_FEASIBILITY_FINAL_REPORT.md",
+      "size_bytes": 16239,
+      "sha256": "d244b7d22563bdb5089c3768818c3ca7e187e53de55ffd80620aeb859a873da7"
+    },
+    {
+      "filename": "CANDIDATE_RESOURCE_FEASIBILITY_PROTOCOL.md",
+      "size_bytes": 4363,
+      "sha256": "fc9631c0bed2bb721b23ff455b5784996b44d82d4e1ec15080747ec624730849"
+    },
+    {
+      "filename": "CANDIDATE_RESOURCE_RECONCILIATION.csv",
+      "size_bytes": 999,
+      "sha256": "563cafc7d41405cc274f96d90ac4f418ab63a4a99fba00efbd59ada238163e84"
+    },
+    {
+      "filename": "CANDIDATE_SUBSYSTEM_BOUNDARY.md",
+      "size_bytes": 4400,
+      "sha256": "db22e373c329ec8fe9e3e75154c014d7ded412da20274217bc220c64be1e16be"
+    },
+    {
+      "filename": "CANDIDATE_SUBSYSTEM_OPERATION_LEDGER.csv",
+      "size_bytes": 1998,
+      "sha256": "6c7c21bb2635bc7947643f172e07ac8986d1bfa45ff0ef5aeedac71fb6572c50"
+    },
+    {
+      "filename": "CANDIDATE_VALUE_TO_COST.csv",
+      "size_bytes": 266,
+      "sha256": "3e210db8165520b5c862e3e447e04d13625bef33260c21ac1a0827b3bec49a0a"
+    },
+    {
+      "filename": "EARLY_PROMOTION_NET_RESOURCE_EFFECT.csv",
+      "size_bytes": 278,
+      "sha256": "26804656adb9365e8b6cff8fab7c4b39ef37e929c50a185127d09d6ed2abefc7"
+    },
+    {
+      "filename": "EARLY_REJECTION_ZERO_FALSE_NEGATIVE_FRONTIER.csv",
+      "size_bytes": 897,
+      "sha256": "52ea25576fd58f4306b6148569f985c1b28d118cacb9eaeee68b6e9c9b9328a0"
+    },
+    {
+      "filename": "FUTURE_PROBATION_DESIGN_BRIEF.md",
+      "size_bytes": 4756,
+      "sha256": "d79513538016ae6be32ce686e3fc17db2f9ee2858f480f02d24398f590327c9d"
+    },
+    {
+      "filename": "MICROCORRECTION_MANIFEST.json",
+      "size_bytes": 2371,
+      "sha256": "f0789ebc268d7ce15b2fec1122e6b3a329a7b725a2887ecf1ead4c38c3b6df15"
+    },
+    {
+      "filename": "PARENT_HASHES.txt",
+      "size_bytes": 10130,
+      "sha256": "7a4acb35413adb524a065efc16a1af57e77ef961d3d1e7e8c2956089a46c6b2c"
+    },
+    {
+      "filename": "POST_SEAL_MICROCORRECTION.md",
+      "size_bytes": 3966,
+      "sha256": "f13dd81727e499649b2fbd71462efbc0fc6dce60a3c5c6d23920f9f0dc25d728"
+    },
+    {
+      "filename": "QUEUE_CAUSAL_WORDING_CORRIGENDUM.md",
+      "size_bytes": 3037,
+      "sha256": "61df1b39ba6b7aa7c69d713db5b777c4d9f0f6771fcb070fa2763c4fe84a3946"
+    },
+    {
+      "filename": "R0_G8_RECONCILIATION.csv",
+      "size_bytes": 2337,
+      "sha256": "b02c2b3a45c51f05cd60c1a72492162ff5ff64f65d0b7ac4e4804224956a0405"
+    },
+    {
+      "filename": "R0_IDENTITY_AUDIT.md",
+      "size_bytes": 2937,
+      "sha256": "6b1854f143ccf5db7fcea0021fcccb10d8d349652b00d05457e4265e79fb9a78"
+    },
+    {
+      "filename": "RETROSPECTIVE_FUTILITY_CURVES.csv",
+      "size_bytes": 1315,
+      "sha256": "9965d26a4c5dcf27fb80ff412540e32b3f28646605f618872ccd2a29bffde72f"
+    },
+    {
+      "filename": "RETROSPECTIVE_STABLE_PROMOTION.csv",
+      "size_bytes": 346,
+      "sha256": "140694cd877fc065b930e09abdd354cc90912d987f37de5df8a0d825272e0131"
+    },
+    {
+      "filename": "SEARCH_MEMORY_TERMINOLOGY_CORRIGENDUM.md",
+      "size_bytes": 5303,
+      "sha256": "561e63ebf71f30aaf1e0d0946ae98b18ef5be8141a29179d30c61dbec29b23e0"
+    },
+    {
+      "filename": "SWITCHING_LATENCY_DECOMPOSITION.csv",
+      "size_bytes": 454,
+      "sha256": "04de484f0e8695aba60fbaf15a792df2be6e6d84597fb56f16ca691641199e29"
+    },
+    {
+      "filename": "generate_candidate_resource_feasibility.py",
+      "size_bytes": 31543,
+      "sha256": "e5b8f4378d3d717106e9d8bee0265fedf7ca0d74ecbf6237461c8e217cd29203"
+    }
+  ]
+}

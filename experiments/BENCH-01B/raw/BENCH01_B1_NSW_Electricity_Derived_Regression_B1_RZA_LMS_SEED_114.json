@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_B1_RZA_LMS_SEED_114",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "B1_RZA_LMS",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.03, \"rho_zero_attraction\": 1e-06, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0018247941158829875,
+  "mae": 0.025022396839160115,
+  "nmse": 0.9787497730909449,
+  "mean_flops": 51.0,
+  "p95_flops": 51.0,
+  "peak_flops": 51.0,
+  "memory_bytes": 104,
+  "active_params": 5,
+  "wall_time_sec": 0.46820545196533203
+}

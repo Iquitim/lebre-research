@@ -1,0 +1,5 @@
+{"base": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1"),
+ "lazy": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1", lazy_halves=True),
+ "lazy_s8": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1", lazy_halves=True, screen_every=8),
+ "lazy_s8_r2": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1", lazy_halves=True, screen_every=8, rls_every=2),
+ "lazy_s8_r2_m1": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1", lazy_halves=True, screen_every=8, rls_every=2, m_slots=1)}

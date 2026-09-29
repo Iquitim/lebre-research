@@ -1,0 +1,17 @@
+task_id,scheduler_id,mean_discovery_latency,median_discovery_latency,s0_median_discovery,delta_median_discovery_vs_s0,mean_retirement_latency,median_retirement_latency,s0_median_retirement,delta_median_retirement_vs_s0,post_switch_regret,gate4_latency_ceiling,gate4_task_verdict
+I11_Regime_Switch_Delay_To_Latent,S0_CONTINUOUS,335.47,296.5,296.5,0.0,70.83,77.0,77.0,0.0,0.214545,50.0,REFERENCE
+I11_Regime_Switch_Delay_To_Latent,S1_SHADOW_OFF,999.0,999.0,296.5,702.5,0.0,0.0,77.0,-77.0,0.0,50.0,FAIL_BLIND
+I11_Regime_Switch_Delay_To_Latent,S2_PERIODIC,1247.08,879.0,296.5,582.5,155.33,0.0,77.0,-77.0,0.08798,50.0,FAIL
+I11_Regime_Switch_Delay_To_Latent,S3_EVENT_TRIGGERED,670.13,587.0,296.5,290.5,36.67,0.0,77.0,-77.0,0.079088,50.0,FAIL
+I12_Regime_Switch_Latent_To_Delay,S0_CONTINUOUS,280.37,163.5,163.5,0.0,44.3,35.5,35.5,0.0,0.54318,50.0,REFERENCE
+I12_Regime_Switch_Latent_To_Delay,S1_SHADOW_OFF,999.0,999.0,163.5,835.5,0.0,0.0,35.5,-35.5,0.295545,50.0,FAIL_BLIND
+I12_Regime_Switch_Latent_To_Delay,S2_PERIODIC,1174.71,926.5,163.5,763.0,713.07,794.0,35.5,758.5,0.536177,50.0,FAIL
+I12_Regime_Switch_Latent_To_Delay,S3_EVENT_TRIGGERED,402.76,148.0,163.5,-15.5,65.69,58.0,35.5,22.5,0.476286,50.0,PASS
+I13_Regime_Switch_Hybrid_To_Memoryless,S0_CONTINUOUS,999.0,999.0,999.0,0.0,81.6,90.0,90.0,0.0,0.0,50.0,REFERENCE
+I13_Regime_Switch_Hybrid_To_Memoryless,S1_SHADOW_OFF,999.0,999.0,999.0,0.0,0.0,0.0,90.0,-90.0,0.0,50.0,FAIL_BLIND
+I13_Regime_Switch_Hybrid_To_Memoryless,S2_PERIODIC,999.0,999.0,999.0,0.0,356.17,424.0,90.0,334.0,0.0,50.0,NO_DISCOVERY_EVENT
+I13_Regime_Switch_Hybrid_To_Memoryless,S3_EVENT_TRIGGERED,999.0,999.0,999.0,0.0,3.75,0.0,90.0,-90.0,0.0,50.0,NO_DISCOVERY_EVENT
+I14_Intermittent_Hybrid,S0_CONTINUOUS,0.0,0.0,0.0,0.0,999.0,999.0,999.0,0.0,0.507151,50.0,REFERENCE
+I14_Intermittent_Hybrid,S1_SHADOW_OFF,999.0,999.0,0.0,999.0,999.0,999.0,999.0,0.0,0.590541,50.0,FAIL_BLIND
+I14_Intermittent_Hybrid,S2_PERIODIC,44.47,0.0,0.0,0.0,999.0,999.0,999.0,0.0,0.487486,50.0,PASS
+I14_Intermittent_Hybrid,S3_EVENT_TRIGGERED,0.0,0.0,0.0,0.0,999.0,999.0,999.0,0.0,0.473049,50.0,PASS

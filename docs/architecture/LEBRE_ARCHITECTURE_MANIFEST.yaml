@@ -1,0 +1,113 @@
+architecture:
+  name: "LEBRE"
+  full_expansion: "Lifecycle-governed Evidence-Based Resource Evolution"
+  specification_version: "0.1"
+  status: "FROZEN_WITH_SCOPE_LIMITS"
+  former_experimental_designation: "Track B Single-State Organization"
+  project_codename: "Codinome Lebre"
+
+governance:
+  primary_scientific_contribution: "RESOURCE_GOVERNED_STRUCTURAL_LIFECYCLE"
+  supporting_contributions:
+    - "TWO_TIMESCALE_QUIESCENT_RETENTION"
+    - "ASYMMETRIC_OBSOLESCENCE_GOVERNANCE"
+  architecture_evidence_level: "VALIDATED_WITH_SCOPE_LIMITS"
+  integration_status: "NONTRIVIAL_EMPIRICALLY_DERIVED_ARCHITECTURE"
+  novelty_claim_ready: false
+  m3_multi_state_status: "UNOPENED"
+  hardware_deployment_validated: false
+
+core_taxonomy:
+  structural_object_abstraction:
+    concept: "Cost-bearing adaptive computational structure"
+    lifecycle_states:
+      - "DORMANT"
+      - "PROVISIONAL"
+      - "ACTIVE"
+      - "MATURE"
+      - "EVICTED"
+  structural_object_types:
+    - type: "ObservableFeature"
+      capacity_max: 10
+      discovery_mechanism: "Bounded probe bank with sequential Wald bounds"
+    - type: "TemporalLagTap"
+      capacity_max: 5
+      discovery_mechanism: "Residual correlation probing"
+    - type: "RecurrentInternalState"
+      capacity_max: 1
+      supported_classes:
+        - "LinearScalarState (h_t = lambda * h_{t-1} + u_t)"
+        - "GatedScalarState (h_t = (1-g_t)*h_{t-1} + g_t * c_t)"
+
+resource_envelope:
+  micro_edge_compliance: "MEAN_R2_COMPLIANT"
+  mean_flops_per_step: 90.44
+  observed_peak_flops: 206.0
+  mean_flop_ceiling: 100.0
+  mean_persistent_memory_bytes: 440.0
+  memory_ceiling_bytes: 1024.0
+  observed_divergences: 0
+  evaluated_runs: 450
+  divergence_rate_percent: 0.00
+
+architectural_invariants:
+  - id: "I1"
+    name: "Non-Interfering Shadow Probation"
+    type: "CORE_INVARIANT"
+  - id: "I2"
+    name: "Evidence-Gated Promotion"
+    type: "CORE_INVARIANT"
+  - id: "I3"
+    name: "Explicit Resource Accounting"
+    type: "CORE_INVARIANT"
+  - id: "I4"
+    name: "Quiescence Is Not Obsolescence"
+    type: "CORE_INVARIANT"
+  - id: "I5"
+    name: "Asymmetric Eviction Governance"
+    type: "CURRENT_EMPIRICALLY_SELECTED_POLICY"
+  - id: "I6"
+    name: "Parsimonious Linear-First Escalation"
+    type: "CORE_INVARIANT"
+  - id: "I7"
+    name: "Physical Resource Reclamation"
+    type: "CORE_INVARIANT"
+  - id: "I8"
+    name: "Strict Causal Prequential Ordering"
+    type: "CORE_INVARIANT"
+
+known_limitations:
+  - id: "LIM-01"
+    workloads: ["Task A2", "Task A3", "Task A4"]
+    description: "High-order pure shift-register delays exceed scalar recurrence capacity without large lag banks"
+    severity: "REPRESENTATIONAL_BOUNDARY"
+  - id: "LIM-02"
+    workloads: ["Task B4 (Silverbox)"]
+    description: "Complex continuous nonlinear physical dynamical system identification favors multidimensional random reservoirs"
+    severity: "INDUCTIVE_BIAS_BOUNDARY"
+  - id: "LIM-03"
+    description: "Micro-regimes with duration < 200 steps do not permit full hysteresis eviction"
+    severity: "TIME_HORIZON_BOUNDARY"
+  - id: "LIM-04"
+    description: "Hardware deployment (MCU latency, energy, complete stack RAM) has not yet been experimentally validated"
+    severity: "HARDWARE_DEPLOYMENT_BOUNDARY"
+
+benchmark_status:
+  suite: "BENCH-01B"
+  status: "SEALED"
+  evaluation_seeds: 30
+  total_workloads: 15
+  total_competitive_runs: 6750
+  statistical_win_rate_percent: 53.3
+  statistical_tie_rate_percent: 8.0
+  statistical_loss_rate_percent: 38.7
+
+documentation_files:
+  formal_specification_en: "docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md"
+  formal_specification_ptbr: "docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md"
+  overview_en: "docs/architecture/LEBRE_OVERVIEW_EN.md"
+  overview_ptbr: "docs/architecture/LEBRE_OVERVIEW_PTBR.md"
+  diagrams: "docs/architecture/LEBRE_ARCHITECTURE_DIAGRAMS.md"
+  decisions: "docs/architecture/LEBRE_ARCHITECTURAL_DECISIONS.md"
+  traceability_matrix: "docs/architecture/LEBRE_TRACEABILITY_MATRIX.csv"
+  constant_traceability: "docs/architecture/LEBRE_CONSTANT_TRACEABILITY.md"

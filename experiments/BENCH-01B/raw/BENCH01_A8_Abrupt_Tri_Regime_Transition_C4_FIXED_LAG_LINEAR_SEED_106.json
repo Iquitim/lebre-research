@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_C4_FIXED_LAG_LINEAR_SEED_106",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 106,
+  "config": "{\"max_lag\": 4, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4583423950060504,
+  "mae": 0.5250686380749504,
+  "nmse": 0.9236433249817378,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 96,
+  "active_params": 4,
+  "wall_time_sec": 0.08011388778686523
+}

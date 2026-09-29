@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_S2_LRU_STREAM_SEED_110",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 110,
+  "config": "{\"state_lr\": 0.01, \"readout_lr\": 0.001, \"state_decay\": 0.98}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.5457470759667484,
+  "mae": 1.15296712055041,
+  "nmse": 0.990628968049671,
+  "mean_flops": 332.0,
+  "p95_flops": 332.0,
+  "peak_flops": 332.0,
+  "memory_bytes": 728,
+  "active_params": 82,
+  "wall_time_sec": 0.09190511703491211
+}

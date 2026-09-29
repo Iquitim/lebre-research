@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_S3_RSONN_SEED_124",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "S3_RSONN",
+  "seed": 124,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 32.231212200826874,
+  "mae": 3.951232223074339,
+  "nmse": 0.9934388032471566,
+  "mean_flops": 1280.8891428571428,
+  "p95_flops": 1282.0,
+  "peak_flops": 1282.0,
+  "memory_bytes": 1856,
+  "active_params": 220,
+  "wall_time_sec": 0.29356861114501953
+}

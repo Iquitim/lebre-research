@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_S1_VARIABLE_TAP_LMS_SEED_118",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 118,
+  "config": "{\"learning_rate\": 0.01, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.25161135073231966,
+  "mae": 0.3997294585855883,
+  "nmse": 0.5004647126878778,
+  "mean_flops": 31.484,
+  "p95_flops": 41.0,
+  "peak_flops": 47.0,
+  "memory_bytes": 544,
+  "active_params": 5,
+  "wall_time_sec": 0.08323073387145996
+}

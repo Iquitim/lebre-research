@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_C1_CURRENT_ONLY_LINEAR_SEED_114",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6224758229035199,
+  "mae": 0.6316324627181457,
+  "nmse": 1.0107797533688467,
+  "mean_flops": 81.0,
+  "p95_flops": 81.0,
+  "peak_flops": 81.0,
+  "memory_bytes": 192,
+  "active_params": 20,
+  "wall_time_sec": 0.06351971626281738
+}

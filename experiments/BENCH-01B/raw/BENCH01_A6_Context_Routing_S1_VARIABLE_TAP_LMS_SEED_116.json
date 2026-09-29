@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_S1_VARIABLE_TAP_LMS_SEED_116",
+  "task_id": "A6_Context_Routing",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 116,
+  "config": "{\"learning_rate\": 0.003, \"tap_leakage\": 0.1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.7833076216491077,
+  "mae": 0.5738522324619896,
+  "nmse": 1.0000584738463905,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 544,
+  "active_params": 2,
+  "wall_time_sec": 0.09694337844848633
+}

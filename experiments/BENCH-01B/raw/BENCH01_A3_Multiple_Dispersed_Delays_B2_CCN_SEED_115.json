@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_B2_CCN_SEED_115",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "B2_CCN",
+  "seed": 115,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.0001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4894468567338109,
+  "mae": 0.5570216276389641,
+  "nmse": 1.0106265296613661,
+  "mean_flops": 385.0,
+  "p95_flops": 385.0,
+  "peak_flops": 385.0,
+  "memory_bytes": 640,
+  "active_params": 64,
+  "wall_time_sec": 0.25212788581848145
+}

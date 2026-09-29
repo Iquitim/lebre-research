@@ -1,0 +1,10 @@
+8cee836f1e5f029338e0c42cf30eabcf974e627d686b5b919d35a61fcc36b931 *eval_v05.py
+051225b479d97efbad4a7602dad31056232afa5a90f65d4b680ceeb2e9e78dee *chronos_v05.py
+f8b677a387cf0a209cb349d2b9e6d673706e09f52148276698792ec63b3e4c3c *../../data/external_v05/load05.py
+34f667e834e30457e5e725817b5ec0493e10d16de8f0a6a3f444fa23077bd5bc *../../data/external_v05/BALANCO_2021.csv
+52704015ffc2d3411134d61782b3eb928754bba7b6fac4d8dd7ac3f9c03c1950 *../../data/external_v05/BALANCO_2022.csv
+b5d76ab85a6807479e054c1b3ac6462838ae4d8ced7c42f0f43e2c101b958345 *../../data/external_v05/CURVA_CARGA_2021.csv
+d56a7b23d4f987d862ce8268584907b372d3e79bfc241d5e46fd6bb4ed0fefaa *../../data/external_v05/CURVA_CARGA_2022.csv
+f4e030494cb0096db17b06bbd0fd58c7402eaea52c1fa52fcfc79f748614ae1d *../../data/external_v05/bcb_eur_1.json
+de075bc9a0abf4bd355b8c504d0b428e141a8a5ff63571a54aeb2b4ceab1bdfe *../../data/external_v05/bcb_eur_2.json
+a292510b15b87ebef5aa9a4cd52d5258e7e9d180eefef99433a1ce6b873278dc *../../data/external_v05/elecdemand_dataset.tsf

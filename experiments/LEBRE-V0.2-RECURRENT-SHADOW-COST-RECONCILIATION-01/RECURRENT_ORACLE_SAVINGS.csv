@@ -1,0 +1,5 @@
+ceiling_id,description,max_saving_fp,residual_recurrent_fp,residual_total_fp,closes_100_fp_gap
+ORACLE_REMOVE_ALL_RECURRENCE,Completely remove all recurrent shadow operations across all tasks (impossible floor),20.2,0.0,90.813591,YES
+MAX_ORACLE_REGIME_AWARE_SAVING,Retrospective oracle executing recurrent shadow ONLY during stream steps with true latent dynamics,12.264285714285712,7.935714285714287,98.74930528571429,YES
+RETROSPECTIVE_LIFECYCLE_AWARE_SAVING,Eliminate recurrent shadow on tasks/intervals where recurrence never reaches active live promotion,10.1,10.1,100.91359100000001,NO
+SEMANTICALLY_MANDATORY_RECURRENCE_FLOOR,Minimum compute required if continuous latent tracking is preserved on all 14 streams,0.0,20.2,111.013591,NO

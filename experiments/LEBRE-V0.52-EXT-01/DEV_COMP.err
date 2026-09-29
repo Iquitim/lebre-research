@@ -1,0 +1,1576 @@
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:p-37064:t-35544:_http.py:_warn_on_warning_headers:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:p-41436:t-33992:_http.py:_warn_on_warning_headers:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 10657.35it/s]
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 14432.66it/s]
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:p-41708:t-41440:_http.py:_warn_on_warning_headers:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8054.87it/s]
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Loading weights: 100%|██████████| 134/134 [00:00<?, ?it/s]
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:p-35556:t-26376:_http.py:_warn_on_warning_headers:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8138.85it/s]
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9912.11it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7114.48it/s]
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:p-13272:t-34632:_http.py:_warn_on_warning_headers:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7624.87it/s]
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<?, ?it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 15510.02it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9061.75it/s]
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 19614.60it/s]
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9212.51it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6046.85it/s]
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 13389.16it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6768.59it/s]
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9914.56it/s]
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8527.85it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7187.17it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7998.25it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8057.99it/s]
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7838.84it/s]
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9619.14it/s]
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8690.04it/s]
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8225.45it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6895.65it/s]
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s][transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8006.68it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6852.02it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9401.44it/s]
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8272.79it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8183.29it/s]
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7169.11it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8767.30it/s]
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9910.37it/s]
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9001.95it/s]
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8860.18it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 10485.76it/s]
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9920.51it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8456.77it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8889.33it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9129.75it/s]
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9009.60it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9516.37it/s]
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9767.76it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8205.28it/s]
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 7624.97it/s]
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8511.07it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 9081.22it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8605.15it/s]
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41708:t-41440:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41708:t-41440:get_model.py:get_model:Model path type is 2
+INFO:p-41708:t-41440:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41708:t-41440:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8617.55it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41708:t-41440:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41708:t-41440:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 8377.35it/s]
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-41436:t-33992:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-41436:t-33992:get_model.py:get_model:Model path type is 2
+INFO:p-41436:t-33992:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-41436:t-33992:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 11253.56it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-41436:t-33992:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-41436:t-33992:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6432.39it/s]
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-13272:t-34632:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-13272:t-34632:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 12547.42it/s]
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-37064:t-35544:get_model.py:get_model:Model path type is 2
+INFO:p-13272:t-34632:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]INFO:p-37064:t-35544:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6896.75it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-13272:t-34632:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-13272:t-34632:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-37064:t-35544:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 14131.82it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-37064:t-35544:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-37064:t-35544:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<?, ?it/s]
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96
+INFO:p-35556:t-26376:get_model.py:get_model:Loading model from: ibm-granite/granite-timeseries-ttm-r2
+INFO:p-35556:t-26376:get_model.py:get_model:Model path type is 2
+INFO:p-35556:t-26376:get_model.py:get_model:Attempting model load from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ibm-granite/granite-timeseries-ttm-r2/d6a79570cac0f33d526601cd3a0fc7c80a8f9a2f/config.json?%2Fibm-granite%2Fgranite-timeseries-ttm-r2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2209e937ef5082573c0785a180f23753110b78696c%22 "HTTP/1.1 200 OK"
+INFO:p-35556:t-26376:_client.py:_send_single_request:HTTP Request: HEAD https://huggingface.co/ibm-granite/granite-timeseries-ttm-r2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+Loading weights:   0%|          | 0/134 [00:00<?, ?it/s]Loading weights: 100%|██████████| 134/134 [00:00<00:00, 6224.86it/s]
+[transformers] [1mTinyTimeMixerForPrediction LOAD REPORT[0m from: ibm-granite/granite-timeseries-ttm-r2
+Key                                                                                      | Status  | 
+-----------------------------------------------------------------------------------------+---------+-
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.bias    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.weight                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc1.bias                      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.bias      | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc2.bias                    | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.norm.norm.weight                  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.bias                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.bias                   | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.bias                      | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.weight | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.gating_block.attn_layer.weight  | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.norm.norm.weight                | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.bias                                          | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.feature_mixer.mlp.fc1.bias                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.bias                   | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.gating_block.attn_layer.bias   | MISSING | 
+head.fcm_block.fcm_embedding.bias                                                        | MISSING | 
+head.fcm_block.mlp.bias                                                                  | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc1.weight                 | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.mlp.fc2.weight                    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.weight               | MISSING | 
+head.fcm_block.exog_mixer.mixers.{0, 1, 2}.patch_mixer.gating_block.attn_layer.weight    | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.mlp.fc2.weight                 | MISSING | 
+decoder.decoder_block.mixers.{0, 1}.channel_feature_mixer.norm.norm.bias                 | MISSING | 
+head.fcm_block.mlp.weight                                                                | MISSING | 
+head.fcm_block.fcm_embedding.weight                                                      | MISSING | 
+head.fcm_block.fcm_gating_block.attn_layer.weight                                        | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+INFO:p-35556:t-26376:get_model.py:get_model:Model loaded successfully from ibm-granite/granite-timeseries-ttm-r2, revision = main.
+INFO:p-35556:t-26376:get_model.py:get_model:[TTM] context_length = 512, prediction_length = 96

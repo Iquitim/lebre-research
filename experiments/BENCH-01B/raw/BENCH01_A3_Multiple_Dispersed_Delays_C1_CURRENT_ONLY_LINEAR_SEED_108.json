@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_C1_CURRENT_ONLY_LINEAR_SEED_108",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 108,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.5011630518826962,
+  "mae": 0.5640258511416381,
+  "nmse": 1.0105543142341722,
+  "mean_flops": 81.0,
+  "p95_flops": 81.0,
+  "peak_flops": 81.0,
+  "memory_bytes": 192,
+  "active_params": 20,
+  "wall_time_sec": 0.07231402397155762
+}

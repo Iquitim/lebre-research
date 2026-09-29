@@ -1,0 +1,49 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="800" height="400" fill="#FFFFFF" rx="8" />
+  <text x="30" y="32" font-size="16" font-weight="700" fill="#0F172A">D7: Architecture Principle vs. Current v0.1 Instantiation</text>
+  <text x="30" y="50" font-size="12" fill="#64748B">Demarcating general architectural principles from certified single-state implementation limits</text>
+
+  <!-- Left Column: General Architectural Principle -->
+  <g transform="translate(40, 75)">
+    <rect width="345" height="290" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" rx="6" />
+    <rect x="0" y="0" width="345" height="35" fill="#E2E8F0" rx="6" />
+    <text x="172" y="23" font-size="12" font-weight="700" text-anchor="middle" fill="#1E293B">GENERAL ARCHITECTURAL PRINCIPLE</text>
+    
+    <text x="15" y="60" font-size="11" font-weight="600" fill="#0F172A">Adaptive Computational Structure:</text>
+    <text x="15" y="78" font-size="10" fill="#475569">Structures exist only when justified by evidence</text>
+    
+    <text x="15" y="106" font-size="11" font-weight="600" fill="#0F172A">Multi-State &amp; Latent Scalability:</text>
+    <text x="15" y="124" font-size="10" fill="#475569">Principle permits arbitrary N recurrent states</text>
+    
+    <text x="15" y="152" font-size="11" font-weight="600" fill="#0F172A">Two-Timescale Quiescent Governance:</text>
+    <text x="15" y="170" font-size="10" fill="#475569">Decouples fast activity from slow relevance</text>
+    
+    <text x="15" y="198" font-size="11" font-weight="600" fill="#0F172A">Asymmetric Obsolescence:</text>
+    <text x="15" y="216" font-size="10" fill="#475569">Requires evidence of absence before eviction</text>
+    
+    <text x="15" y="244" font-size="11" font-weight="600" fill="#0F172A">Substrate Neutral:</text>
+    <text x="15" y="262" font-size="10" fill="#475569">Applies to software, neuromorphic, or edge hardware</text>
+  </g>
+
+  <!-- Right Column: Current v0.1 Instantiation -->
+  <g transform="translate(415, 75)">
+    <rect width="345" height="290" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5" rx="6" />
+    <rect x="0" y="0" width="345" height="35" fill="#DBEAFE" rx="6" />
+    <text x="172" y="23" font-size="12" font-weight="700" text-anchor="middle" fill="#1D4ED8">CURRENT v0.1 FROZEN INSTANTIATION</text>
+    
+    <text x="15" y="60" font-size="11" font-weight="600" fill="#0F172A">Scalar Recurrent Capacity (N &lt;= 1):</text>
+    <text x="15" y="78" font-size="10" fill="#1E40AF">Strictly bounded to at most 1 active scalar state</text>
+    
+    <text x="15" y="106" font-size="11" font-weight="600" fill="#0F172A">Milestone M3 Status:</text>
+    <text x="15" y="124" font-size="10" fill="#B91C1C">UNOPENED (multi-state coupling not yet validated)</text>
+    
+    <text x="15" y="152" font-size="11" font-weight="600" fill="#0F172A">Micro-Resource Operating Point:</text>
+    <text x="15" y="170" font-size="10" fill="#1E40AF">Mean 90.44 FLOPs/step, 440 bytes persistent RAM</text>
+    
+    <text x="15" y="198" font-size="11" font-weight="600" fill="#0F172A">Concrete State Classes:</text>
+    <text x="15" y="216" font-size="10" fill="#1E40AF">LinearScalarState &amp; GatedScalarState</text>
+    
+    <text x="15" y="244" font-size="11" font-weight="600" fill="#0F172A">Empirical Scope Limits:</text>
+    <text x="15" y="262" font-size="10" fill="#B91C1C">Boundaries on pure shift registers (A2-A4) &amp; Silverbox (B4)</text>
+  </g>
+</svg>

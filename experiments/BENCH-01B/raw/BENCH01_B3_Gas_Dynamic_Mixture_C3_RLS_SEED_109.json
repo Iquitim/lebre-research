@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_C3_RLS_SEED_109",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "C3_RLS",
+  "seed": 109,
+  "config": "{\"forgetting_factor\": 0.99}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 24987458.596759792,
+  "mae": 125.5931273822133,
+  "nmse": 430.4533978764884,
+  "mean_flops": 1157.0,
+  "p95_flops": 1157.0,
+  "peak_flops": 1157.0,
+  "memory_bytes": 2240,
+  "active_params": 16,
+  "wall_time_sec": 0.24172639846801758
+}

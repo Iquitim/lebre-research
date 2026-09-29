@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_C2_NLMS_SEED_124",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "C2_NLMS",
+  "seed": 124,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2155.1398872922946,
+  "mae": 14.280584427314226,
+  "nmse": 0.03712611603904435,
+  "mean_flops": 101.0,
+  "p95_flops": 101.0,
+  "peak_flops": 101.0,
+  "memory_bytes": 160,
+  "active_params": 16,
+  "wall_time_sec": 0.1638476848602295
+}

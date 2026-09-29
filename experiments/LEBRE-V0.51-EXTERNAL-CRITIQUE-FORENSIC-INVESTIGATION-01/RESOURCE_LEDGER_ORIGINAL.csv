@@ -1,0 +1,17 @@
+component,ADD,MUL,DIV,COMPARE,SQRT,EXP,counted_in_LEBRE_FP,note,arith_total
+environment standardiser (transform),10,0.0,5.0,0,5.0,0.0,NO,"add eps, subtract mean, sqrt, divide",20.0
+environment standardiser (update),15,20.0,0.0,5,0.0,0.0,NO,"EMA mean and variance, floor",40.0
+S base prediction,6,5.0,0.0,0,0.0,0.0,YES,bias + theta_b . x,11.0
+S lag atoms prediction,2,2.0,0.0,0,0.0,0.0,YES,2 atoms,4.0
+S NLMS update,16,16.0,1.0,0,0.0,0.0,YES,"normaliser, step, updates",33.0
+S latent bank (3 non-trivial poles),4,7.0,1.0,0,1.0,0.0,YES,"u/sigma, pole filters, sqrt(sigma2)",13.0
+S candidate search (2 probes),4,4.0,0.0,0,0.0,0.0,YES,EMA of e*x,8.0
+"S martingale tests (4 lag + 4 latent, every 2 steps)",8,8.0,0.0,0,0.0,0.0,YES,"S += z, Q += z^2",16.0
+"S CUSUM (2 atoms, every 2 steps)",4,4.0,0.0,2,0.0,0.0,YES,"LLR, rent, max",10.0
+S decisions (every 10 steps),1,1.0,0.3,1,0.0,0.1,YES,log-mixture with log only when needed,3.4
+S sigma2 / excitation gate,4,3.0,0.0,2,0.0,0.0,YES,,9.0
+M features (5),6,0.0,0.0,0,0.0,0.0,YES,differences,6.0
+M prediction + NLMS,13,16.0,1.0,1,0.0,0.0,YES,"dot, ||phi||^2, update",31.0
+M profile + mean,4,2.0,0.0,0,0.0,0.0,YES,,6.0
+combiner,7,6.0,0.125,1,0.125,0.125,YES,"errors, D, weight every 8",14.375
+interval,1,0.4,0.0,1,0.0,0.0,YES,compare; update every 8,2.4

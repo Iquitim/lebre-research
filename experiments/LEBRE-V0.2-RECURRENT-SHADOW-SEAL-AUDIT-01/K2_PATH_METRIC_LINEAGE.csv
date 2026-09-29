@@ -1,0 +1,3 @@
+reported_value,provenance,status,note
+0.082,HISTORICAL_D9F,UNMEASURED_IN_DEV,Derived from historical D9F rate-ladder study (LEBRE-V0.2-MULTIRATE-SEAL-AUDIT-01). Not logged during Phase B DEV.
+0.124,ESTIMATED,ANALYTICAL_ESTIMATE,Theoretical projection under zero-order hold state assumption. Not logged during Phase B DEV.

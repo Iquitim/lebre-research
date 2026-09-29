@@ -1,0 +1,5 @@
+milestone_option,certification_rate_pct,false_certification_rate_pct,unnecessary_rejection_rate_pct,interpretability,regime_dependence,generalization_robustness
+Option A: Original Single M1,8.181818181818182,0.0,83.92857142857143,Poor (Mixes structural exactness with prediction),"Severe (Requires favorable D, sigma, change load)",Fragile (Collapses under broad holdouts)
+Option B: Split M1 (M1-Pred Component),31.212121212121215,0.0,38.69047619047619,High (Direct measure of online predictive adaptation),Low to Moderate (Maintains utility across spectra & holdouts),Strong (Holds across 30 fresh seeds and diverse holdouts)
+Option B: Split M1 (M1-Struct Component),0.0,0.0,100.0,High (Strictly tests ground-truth support identification),"High (Conditionally valid where Gamma >= 20, C <= 3)",Valid within identifiable scope limits
+Option C: Energy-Based Single M1,31.212121212121215,0.0,38.69047619047619,Moderate (Conflates energetic recall with predictive output),Moderate,Moderate

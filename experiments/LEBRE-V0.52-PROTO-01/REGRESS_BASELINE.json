@@ -1,0 +1,26 @@
+{
+ "T1:9101": {
+  "pred_sha": "65554ca0c0b03acc",
+  "events": "d68ce7641481a3d6",
+  "fp": 212.62456,
+  "structure": "[('lag', 1, 3)]"
+ },
+ "B2:9102": {
+  "pred_sha": "17cb3c5097d476a3",
+  "events": "4ea1cccb819c1ccd",
+  "fp": 216.28274,
+  "structure": "[('lag', 0, 3), ('lag', 2, 7), ('lag', 4, 20)]"
+ },
+ "B3:9103": {
+  "pred_sha": "7e14830ecd04a77b",
+  "events": "27d51284186cb1d5",
+  "fp": 212.02862,
+  "structure": "[('lag', 3, 12)]"
+ },
+ "N1:9104": {
+  "pred_sha": "5826fdbb5a1a7a72",
+  "events": "8c207aa6d0f687c2",
+  "fp": 207.23529,
+  "structure": "[]"
+ }
+}

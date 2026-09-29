@@ -1,0 +1,16 @@
+exposure_n,promoted_candidates_already_above_theta_pct,mean_subsequent_gain,is_stable
+1,0.0,0.012,NO
+2,0.0,0.012,NO
+3,0.0,0.012,NO
+4,0.0,0.012,NO
+5,0.0,0.012,NO
+6,0.0,0.012,NO
+7,0.0,0.012,NO
+8,25.0,0.045,NO
+9,25.0,0.045,NO
+10,62.0,0.045,NO
+11,62.0,0.045,NO
+12,88.0,0.045,YES
+13,88.0,0.045,YES
+14,88.0,0.045,YES
+15,100.0,0.045,YES

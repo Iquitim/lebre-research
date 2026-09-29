@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_C3_RLS_SEED_111",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "C3_RLS",
+  "seed": 111,
+  "config": "{\"forgetting_factor\": 0.995}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 142752.1949406766,
+  "mae": 23.396157073386,
+  "nmse": 2269.8849999878125,
+  "mean_flops": 785.0,
+  "p95_flops": 785.0,
+  "peak_flops": 785.0,
+  "memory_bytes": 1520,
+  "active_params": 13,
+  "wall_time_sec": 0.8878579139709473
+}

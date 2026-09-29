@@ -1,0 +1,45 @@
+{
+  "experiment_id": "M2-EXP-0005R",
+  "milestone": "M2",
+  "title": "State Lifecycle Reconciliation & Type-Selection Diagnostic",
+  "description": "Decomposing performance bottlenecks in adaptive recurrent state lifecycle management: birth latency, probation delay, type selection error, and premature eviction.",
+  "eval_seeds": [
+    7001, 7002, 7003, 7004, 7005, 7006, 7007, 7008, 7009, 7010,
+    7011, 7012, 7013, 7014, 7015, 7016, 7017, 7018, 7019, 7020,
+    7021, 7022, 7023, 7024, 7025, 7026, 7027, 7028, 7029, 7030
+  ],
+  "fresh_seeds": [
+    7031, 7032, 7033, 7034, 7035, 7036, 7037, 7038, 7039, 7040,
+    7041, 7042, 7043, 7044, 7045, 7046, 7047, 7048, 7049, 7050
+  ],
+  "d_features": 10,
+  "noise_std": 0.05,
+  "primary_stream": {
+    "phases": [
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "LINEAR_USEFUL", "duration": 1500, "decay": 0.80},
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "GATED_NECESSARY", "duration": 1500, "p_event": 0.02},
+      {"type": "STATE_FREE", "duration": 1000}
+    ],
+    "total_steps": 6000
+  },
+  "lifecycle_parameters": {
+    "probation_window": 80,
+    "maturity_window": 120,
+    "birth_threshold": 0.15,
+    "promote_threshold": 0.05,
+    "evict_threshold": 0.02,
+    "evict_patience": 40
+  },
+  "variants": [
+    "Q0_Original_V3_DeltaLoss",
+    "Q1_Original_V4_CxO",
+    "Q2_Oracle_Birth_Only",
+    "Q3_Oracle_Type_Only",
+    "Q4_Oracle_Eviction_Only",
+    "Q5_Oracle_Birth_Type",
+    "Q6_Oracle_Type_Eviction",
+    "Q7_Oracle_Full_Lifecycle"
+  ]
+}

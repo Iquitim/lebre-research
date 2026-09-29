@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_C2_NLMS_SEED_105",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "C2_NLMS",
+  "seed": 105,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6350614840257063,
+  "mae": 0.636858467041965,
+  "nmse": 1.0066684050996915,
+  "mean_flops": 125.0,
+  "p95_flops": 125.0,
+  "peak_flops": 125.0,
+  "memory_bytes": 192,
+  "active_params": 20,
+  "wall_time_sec": 0.0825815200805664
+}

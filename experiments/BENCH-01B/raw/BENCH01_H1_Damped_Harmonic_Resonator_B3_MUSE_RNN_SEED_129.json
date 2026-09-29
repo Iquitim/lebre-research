@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_B3_MUSE_RNN_SEED_129",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 129,
+  "config": "{\"learning_rate\": 0.003, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 31.88331012521107,
+  "mae": 3.9946123130072384,
+  "nmse": 1.0001758429604701,
+  "mean_flops": 248.97885714285715,
+  "p95_flops": 448.0,
+  "peak_flops": 1180.0,
+  "memory_bytes": 552,
+  "active_params": 52,
+  "wall_time_sec": 0.3094501495361328
+}

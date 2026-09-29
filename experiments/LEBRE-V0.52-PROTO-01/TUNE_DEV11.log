@@ -1,0 +1,70 @@
+nmse
+cfg         base6   cand   stag
+suite task                     
+semi  SS0   1.034  1.034  1.034
+      SS1   0.613  0.605  0.609
+      SS2   0.310  0.325  0.309
+      SS3   0.089  0.090  0.086
+      SS4   0.474  0.467  0.475
+synth B1    0.627  0.627  0.627
+      B2    0.461  0.462  0.463
+      B3    0.378  0.370  0.387
+      N1    1.034  1.034  1.034
+      N2    1.053  1.053  1.053
+      T1    0.631  0.631  0.631
+true_exo
+cfg         base6   cand   stag
+suite task                     
+semi  SS0   0.000  0.000  0.000
+      SS1   0.333  0.333  0.667
+      SS2   1.667  0.667  1.333
+      SS3   0.667  0.000  0.667
+      SS4   0.333  1.000  0.333
+synth B1    1.000  1.000  1.000
+      B2    3.000  3.000  3.000
+      B3    1.333  1.667  1.333
+      N1    0.000  0.000  0.000
+      N2    0.000  0.000  0.000
+      T1    1.000  1.000  1.000
+false_exo
+cfg         base6  cand  stag
+suite task                   
+semi  SS0       0     0     0
+      SS1       3     2     1
+      SS2       1     2     1
+      SS3       0     0     0
+      SS4       0     0     0
+synth B1        0     0     0
+      B2        0     0     0
+      B3        0     0     0
+      N1        0     0     0
+      N2        0     0     0
+      T1        0     0     0
+fp
+cfg           base6     cand     stag
+suite task                           
+semi  SS0   405.152  417.365  384.848
+      SS1   490.780  539.390  471.779
+      SS2   584.384  563.646  542.493
+      SS3   598.913  775.115  592.617
+      SS4   583.300  715.769  580.339
+synth B1    434.079  449.221  428.765
+      B2    561.366  565.078  549.385
+      B3    576.982  607.510  542.081
+      N1    382.541  402.582  376.446
+      N2    360.419  370.279  351.726
+      T1    436.797  453.844  431.514
+ons     atom 0.579 {'base6': 0.519, 'cand': 0.507, 'stag': 0.519} fp {'base6': 315, 'cand': 315, 'stag': 312}
+camels  atom 0.994 {'base6': 0.913, 'cand': 0.915, 'stag': 0.908} fp {'base6': 388, 'cand': 403, 'stag': 409}
+bdg2    atom 0.93 {'base6': 0.931, 'cand': 0.934, 'stag': 0.931} fp {'base6': 401, 'cand': 377, 'stag': 395}
+ALL     atom 0.793 {'base6': 0.694, 'cand': 0.695, 'stag': 0.7} fp {'base6': 360, 'cand': 361, 'stag': 364}
+Empty DataFrame
+Columns: [kind, seed, n_acc, accepted, fp]
+Index: []
+runs with any accepted change: 0 of 40  (white 0, heavy 0)
+== cost dict(mu=0.05)
+mean over tasks: v052 360 ARX 390 | tasks with mean > ARX: 15 of 29 | max p99.9/ARX 3.94 | max peak 1409
+== cost dict(mu=0.05, stagger=True)
+mean over tasks: v052 364 ARX 390 | tasks with mean > ARX: 15 of 29 | max p99.9/ARX 3.47 | max peak 1306
+== cost dict(mu=0.05, screen_raw=True, chal_persist=True, chal_forget=1.0, T_max=20000, stagger=True)
+mean over tasks: v052 361 ARX 390 | tasks with mean > ARX: 16 of 29 | max p99.9/ARX 3.73 | max peak 1342

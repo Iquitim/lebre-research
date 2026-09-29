@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_C4_FIXED_LAG_LINEAR_SEED_103",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 103,
+  "config": "{\"max_lag\": 8, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0027236939718714775,
+  "mae": 0.04173411187502464,
+  "nmse": 0.004255187111640716,
+  "mean_flops": 33.0,
+  "p95_flops": 33.0,
+  "peak_flops": 33.0,
+  "memory_bytes": 160,
+  "active_params": 8,
+  "wall_time_sec": 0.06908607482910156
+}

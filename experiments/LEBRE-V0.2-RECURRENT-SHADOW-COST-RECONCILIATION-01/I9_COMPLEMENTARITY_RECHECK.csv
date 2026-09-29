@@ -1,0 +1,2 @@
+task_id,c0_nmse,c1_nmse,c0_g_d_br,c1_g_d_br,c0_g_r_bd,c1_g_r_bd,c1_g_d_br_positive,c1_g_r_bd_positive,complementarity_preserved
+I9_Hybrid_Delay_Plus_Latent_State,0.22594599725813222,0.26930427177233984,0.34792371731605326,0.38336451971546753,0.11184839314290951,-0.0005258686525968841,YES,NO,NO

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_B3_MUSE_RNN_SEED_104",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 104,
+  "config": "{\"learning_rate\": 0.003, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6370167425660189,
+  "mae": 0.6366131316242316,
+  "nmse": 1.0003425895950668,
+  "mean_flops": 102.48628571428571,
+  "p95_flops": 100.0,
+  "peak_flops": 324.0,
+  "memory_bytes": 312,
+  "active_params": 22,
+  "wall_time_sec": 0.3049154281616211
+}

@@ -1,0 +1,25 @@
+{
+  "_description": "Canonical configuration of the frozen LEBRE v0.52 (evaluated in reserves 2 and 3, documented in spec revision 1). Keyword arguments to LebreV052H(d, season, **config); every other constructor argument keeps its default in experiments/LEBRE-V0.52-PROTO-01/lebre_v052h.py. season2 = 168 for hourly building series (BDG2), None otherwise.",
+  "_source": "experiments/LEBRE-V0.52-HELDOUT-02/heldout2_run.py V052['V052_CORRIGIDA'] (frozen; checked by scripts/reproduce_smoke.py)",
+  "model_class": "lebre_v052h.LebreV052H",
+  "config": {
+    "scale_floor": 0.1,
+    "peak_persist": true,
+    "evidence": "psiE1",
+    "lazy_halves": true,
+    "screen_skip_active": true,
+    "track_groups": true,
+    "mu": 0.05,
+    "stagger": true,
+    "screen_spread": true,
+    "peak_split": true,
+    "peak_until": 200,
+    "chal_warm": 250,
+    "gap_hold": true,
+    "out_contract": true
+  },
+  "season2_rule": {
+    "bdg2": 168,
+    "default": null
+  }
+}

@@ -1,0 +1,8 @@
+variant,active_state_bytes,base_feature_bytes,total_memory_bytes,mean_flops
+V0_No_State,0,80,80,24.0
+V1_Fixed_Linear,48,80,136,42.0
+V2_Fixed_Gated,104,80,192,54.0
+V3_Adaptive_DeltaLoss,52,80,132,34.5
+V4_Adaptive_CxO,52,80,132,35.8
+V5_Oracle_Presence,52,80,132,33.2
+V6_Oracle_Type,52,80,132,31.8

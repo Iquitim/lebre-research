@@ -1,0 +1,143 @@
+{
+  "audit_name": "LEBRE-V0.2-SEAL-ARTIFACT-RECONCILIATION-01",
+  "audit_date": "2026-09-20",
+  "auditor": "Independent Scientific-Software Auditor",
+  "parent_studies": [
+    "experiments/LEBRE-V0.2-INTEGRATION-DESIGN-01/",
+    "experiments/LEBRE-V0.2-INTEGRATION-SEAL-AUDIT-01/",
+    "experiments/LEBRE-V0.2-SEAL-AUDIT-ERRATA-01/"
+  ],
+  "confirmatory_seeds": [
+    1311,
+    1312,
+    1313,
+    1314,
+    1315,
+    1316,
+    1317,
+    1318,
+    1319,
+    1320,
+    1321,
+    1322,
+    1323,
+    1324,
+    1325,
+    1326,
+    1327,
+    1328,
+    1329,
+    1330,
+    1331,
+    1332,
+    1333,
+    1334,
+    1335,
+    1336,
+    1337,
+    1338,
+    1339,
+    1340
+  ],
+  "quarantined_dev_seeds": [
+    1301,
+    1302,
+    1303,
+    1304,
+    1305,
+    1306,
+    1307,
+    1308,
+    1309,
+    1310
+  ],
+  "benchmark_tasks": [
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "I5",
+    "I6",
+    "I7",
+    "I8",
+    "I9",
+    "I10",
+    "I11",
+    "I12",
+    "I13",
+    "I14"
+  ],
+  "topologies_evaluated": [
+    "T1",
+    "T1R",
+    "T2",
+    "T3",
+    "O_ALL"
+  ],
+  "canonical_invariants": {
+    "canonical_version": "0.1",
+    "lebre_v0_1_status": "FROZEN_WITH_SCOPE_LIMITS",
+    "m3_status": "UNOPENED",
+    "novelty_claim_ready": false,
+    "src_immutable": true,
+    "tests_immutable": true
+  },
+  "file_manifest": {
+    "ARTIFACT_RECONCILIATION_CORRIGENDUM.md": {
+      "sha256": "9a87290b3f229512fca7162c9ae9f44c6c63f76316d663f63053984dfdcd004e",
+      "size_bytes": 4470
+    },
+    "ARTIFACT_RECONCILIATION_PROTOCOL.md": {
+      "sha256": "2a365cca9de57fa0fdcea4d10dffadd45e93c387fdde8221a1deb2227e7c5b4f",
+      "size_bytes": 7028
+    },
+    "figures/F1_H7_old_vs_reconciled.png": {
+      "sha256": "ec106710df16a05afddafcc5bbdabbc3d19d676a3747ca1bcda3d671171b31f4",
+      "size_bytes": 171243
+    },
+    "figures/F2_Gate6_frac_both_by_seed.png": {
+      "sha256": "316b940aebd708a2dd63e159b191771ec67fa159d3c9d56a3e962bf2a3c0166b",
+      "size_bytes": 132043
+    },
+    "GATE6_BY_SEED.csv": {
+      "sha256": "a02bdbdc56203ed99ee301d7ec6f0d05701f1f9431e71fd4b507842b367493aa",
+      "size_bytes": 14020
+    },
+    "GATE6_PREREGISTERED_DEFINITION.md": {
+      "sha256": "cf3a65a8bd34ce2ceee8d61c19bb7fdb244b7317249a3fecf9b48515ddad05eb",
+      "size_bytes": 4161
+    },
+    "GATE6_RECONCILIATION.md": {
+      "sha256": "f6565edf0026b5e6736c69a7a6a43208d1946cac268aec85bd057b6f98dfa6df",
+      "size_bytes": 5150
+    },
+    "generate_reconciliation_outputs.py": {
+      "sha256": "05852559d490be865a68bb016f2ac4e54397220c2c271a44ffded4841c17f00b",
+      "size_bytes": 16234
+    },
+    "H7_ARTIFACT_RECONCILIATION.csv": {
+      "sha256": "a0a21a80a1a231804ebd3fc222afac1a107e44b5c0c8b71ab3efe6c59c4be44f",
+      "size_bytes": 3128
+    },
+    "H7_PAIRED_RAW_VALUES_RECONCILED.csv": {
+      "sha256": "4ad8e28a5b02dc47c8048b62dafa20cbe918b48323b0b1672c333b51fa6f1b04",
+      "size_bytes": 48074
+    },
+    "H7_TASK_SUMMARY_RECONCILED.csv": {
+      "sha256": "6421488dfdfd6a3960c31af5439b5412a68b6c284e1061dcf71cf1e97b5b0ff7",
+      "size_bytes": 4012
+    },
+    "H7_WILCOXON_BY_TASK_RECONCILED.csv": {
+      "sha256": "cd21296ef62cf2725750183dc77c693bff1ae805c9bff7ba0d27f9bb736e9dee",
+      "size_bytes": 1789
+    },
+    "LEBRE_V0_2_SEAL_ARTIFACT_RECONCILIATION_FINAL_REPORT.md": {
+      "sha256": "162519ffa6da59ebdb0cdb24fc60917c15b147b6ae27738820e14ca59c457298",
+      "size_bytes": 11238
+    },
+    "PARENT_HASHES.txt": {
+      "sha256": "f797b08c959b635a14bdf5e7bac305ca019f05fb8d2e0453f7f51f189e60bab0",
+      "size_bytes": 9831
+    }
+  }
+}

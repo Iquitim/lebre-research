@@ -1,0 +1,140 @@
+{
+  "stage_name": "LEBRE-V0.2-RESOURCE-COMPACTION-SEAL-01",
+  "seal_date": "2026-09-20",
+  "auditor_role": "INDEPENDENT_SKEPTICAL_SENIOR_REVIEWER",
+  "seal_decision": "SEALED_FOR_SHADOW_RENT_GOVERNANCE",
+  "environment": {
+    "python_version": "3.11.9",
+    "os_platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+  },
+  "frozen_governance": {
+    "canonical_version": "0.1",
+    "lebre_v0_1_status": "FROZEN_WITH_SCOPE_LIMITS",
+    "m3_status": "UNOPENED",
+    "novelty_claim_ready": "NO",
+    "canonical_src_touched": false,
+    "canonical_tests_touched": false
+  },
+  "certified_candidate": "T3_FP16_CORR_GRID_FP32_UPDATE",
+  "parent_experiment": "LEBRE-V0.2-RESOURCE-COMPACTION-01",
+  "parent_artifacts_verified_count": 26,
+  "total_seal_artifacts_generated": 23,
+  "artifacts": [
+    {
+      "relative_path": "COMPUTE_EXECUTION_GRAPH.md",
+      "sha256": "f1631862ee561f5aa5f94546327753238b5776548386ec75cb72e970bd6456e7",
+      "size_bytes": 6054
+    },
+    {
+      "relative_path": "COMPUTE_FIELD_DICTIONARY.md",
+      "sha256": "83fc32665473073cc4c207dabad395731f90ac3d5629e5c186746bcd5c7f3fd4",
+      "size_bytes": 7481
+    },
+    {
+      "relative_path": "COMPUTE_LEDGER_RECONCILIATION.csv",
+      "sha256": "f218eb6cccca6ef2f18bd5288ce7a88f0498f24a567c4eedc766a023f7976fa5",
+      "size_bytes": 2150
+    },
+    {
+      "relative_path": "EQUIVALENCE_RECONCILIATION.md",
+      "sha256": "5eb4a05adaa47035a6dca54328ccd0cc1459da328ed7c1ab75267950a448be87",
+      "size_bytes": 6636
+    },
+    {
+      "relative_path": "GATE6_CROSS_COHORT_RECONCILIATION.md",
+      "sha256": "914fb12ec3f5f1de6b7c2e1de56e1f8bf5ea420b1fbe2be35b0534028b76594b",
+      "size_bytes": 4879
+    },
+    {
+      "relative_path": "INFERENTIAL_UNIT_AUDIT.md",
+      "sha256": "801031f66d9356365cc4895772aefb29146d8fc4fc8a072f3e8f65d08f4cf1f3",
+      "size_bytes": 5669
+    },
+    {
+      "relative_path": "MEMORY_COMPONENT_PROVENANCE.md",
+      "sha256": "ddadd18e15f57259b85aa2bc1eac2b77b91346016018a1e792a22ae928d70ebc",
+      "size_bytes": 8835
+    },
+    {
+      "relative_path": "MEMORY_LEDGER_RECONCILIATION.csv",
+      "sha256": "dd4cf8aff9ef109e62b5c26884b4de7bbed22cdb2227e71af4188cfe61e0acae",
+      "size_bytes": 1440
+    },
+    {
+      "relative_path": "NUMERICAL_STABILITY_RECONCILIATION.csv",
+      "sha256": "e3864759e9fc7638a2d28098f2789582e499d28cec16e076e0f267f8ad0b8341",
+      "size_bytes": 446
+    },
+    {
+      "relative_path": "PARENT_ARTIFACT_HASHES.txt",
+      "sha256": "f98490a4472a1eea3c78db3d114979a0604be3fa8d6a48b9b60008e2e8774edc",
+      "size_bytes": 2888
+    },
+    {
+      "relative_path": "RESOURCE_COMPACTION_SEAL_CORRIGENDUM.md",
+      "sha256": "6a965f766b2b715b092d72d82635dad75087d9e6ee1c1e226c67573bb2b99abb",
+      "size_bytes": 5399
+    },
+    {
+      "relative_path": "RESOURCE_COMPACTION_SEAL_FINAL_REPORT.md",
+      "sha256": "597b41d368f2b680008de6effdae6a8a7f8c536eb6b8bc2f2374b9168e13c4d4",
+      "size_bytes": 15403
+    },
+    {
+      "relative_path": "RESOURCE_COMPACTION_SEAL_METHOD_NOTE.md",
+      "sha256": "c99d8dc50e78c73e09e46700267bd3d8a33285219bab95602c1d03a03e42b38e",
+      "size_bytes": 6449
+    },
+    {
+      "relative_path": "RESOURCE_COMPACTION_SEAL_PROTOCOL.md",
+      "sha256": "17a44378ba8b358ea12ce3620d53f9fb516fa0b7cfd40ad2b9fd040471627b7e",
+      "size_bytes": 6562
+    },
+    {
+      "relative_path": "RESOURCE_VECTOR_CERTIFIED.csv",
+      "sha256": "aca62762c02870008ec3a9053ba3ba6b37be39ff5cdcadb2268a46caa9c41ed3",
+      "size_bytes": 794
+    },
+    {
+      "relative_path": "SEED_LEVEL_EQUIVALENCE_RECOMPUTATION.csv",
+      "sha256": "4e26956ef7b8dc055ae82af10226f653c9d2d2a338a28d4e6f411cb1a09e10e4",
+      "size_bytes": 3475
+    },
+    {
+      "relative_path": "SHADOW_RENT_BASELINE.json",
+      "sha256": "b4a5637d15a05749e546a0165d54d8154161517e9791507e50696e613018bcc7",
+      "size_bytes": 1507
+    },
+    {
+      "relative_path": "STEP_COUNT_PROVENANCE.csv",
+      "sha256": "e18977a6759b86eac9424b4cfd2bf7b38c8a23178a918edbc786d8b35d2e798e",
+      "size_bytes": 639
+    },
+    {
+      "relative_path": "figures\\F1_compute_semantics_reconciliation.png",
+      "sha256": "262042fbc08babfeb26bc50b5a1e347b652387824e8a92c034ede250890d386e",
+      "size_bytes": 307488
+    },
+    {
+      "relative_path": "figures\\F2_memory_component_reconciliation.png",
+      "sha256": "f2257d57672161b966e7504ff2ac393a8a9a8ed0e1d1ead6a621cbfaeeb02d29",
+      "size_bytes": 230447
+    },
+    {
+      "relative_path": "figures\\F3_seed_level_equivalence_delta.png",
+      "sha256": "a7774b21a9a5ea658f5d06ed5b5d7b824f9f5c9ace877ae47a81fa9219f5cde9",
+      "size_bytes": 210845
+    },
+    {
+      "relative_path": "figures\\F4_gate6_cross_cohort_distribution.png",
+      "sha256": "677d63a60dbec4c13fb6ebe2b3f62cf8d006197bffc08d11400662a0c6ffd72f",
+      "size_bytes": 132562
+    },
+    {
+      "relative_path": "generate_resource_compaction_seal.py",
+      "sha256": "032dfa0cff9b950f7ee7cfe4d82292470a10024f482e1e8788c85452e0ae2973",
+      "size_bytes": 8053
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_C1_CURRENT_ONLY_LINEAR_SEED_105",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 105,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 33.9872002883672,
+  "mae": 3.961723363176203,
+  "nmse": 0.9990441353321114,
+  "mean_flops": 201.0,
+  "p95_flops": 201.0,
+  "peak_flops": 201.0,
+  "memory_bytes": 432,
+  "active_params": 50,
+  "wall_time_sec": 0.08677387237548828
+}

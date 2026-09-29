@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_S1_VARIABLE_TAP_LMS_SEED_120",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 120,
+  "config": "{\"learning_rate\": 0.03, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003007607610876325,
+  "mae": 0.0428037424913388,
+  "nmse": 0.7802934253151584,
+  "mean_flops": 28.919428571428572,
+  "p95_flops": 35.0,
+  "peak_flops": 35.0,
+  "memory_bytes": 544,
+  "active_params": 5,
+  "wall_time_sec": 0.41283655166625977
+}

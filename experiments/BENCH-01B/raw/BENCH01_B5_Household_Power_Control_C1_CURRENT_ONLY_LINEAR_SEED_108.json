@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_C1_CURRENT_ONLY_LINEAR_SEED_108",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 108,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.18377153348292244,
+  "mae": 0.3597052365131626,
+  "nmse": 0.09126722646207401,
+  "mean_flops": 25.0,
+  "p95_flops": 25.0,
+  "peak_flops": 25.0,
+  "memory_bytes": 80,
+  "active_params": 6,
+  "wall_time_sec": 0.19064831733703613
+}

@@ -1,0 +1,27 @@
+parameter,B0,B1,B2,B3,B3_vs_B2,B2_vs_B1
+search_H,32,32,32,32,IDENTICAL,IDENTICAL
+search_B,4,4,4,4,IDENTICAL,IDENTICAL
+K_probe,2,2,2,2,IDENTICAL,IDENTICAL
+K_cand_obs,5,5,5,5,IDENTICAL,IDENTICAL
+K_cand_learn,10,10,10,10,IDENTICAL,IDENTICAL
+candidate_min_obs_for_promotion (T_prob),15,15,15,15,IDENTICAL,IDENTICAL
+candidate_evidence_promote_threshold,0.02,0.02,0.02,0.02,IDENTICAL,IDENTICAL
+candidate_evidence_ema,0.95/0.05 (unchanged),0.95/0.05 (unchanged),0.95/0.05 (unchanged),0.95/0.05 (unchanged),IDENTICAL,IDENTICAL
+candidate_prune_rule,stream_age>150 and evidence<0.02,stream_age>150 and evidence<0.02,stream_age>150 and evidence<0.02,stream_age>150 and evidence<0.02,IDENTICAL,IDENTICAL
+theta_tol (code),0.015,0.015,0.015,0.015,IDENTICAL,IDENTICAL
+"conditional_pair_threshold G_D|BR,G_R|BD",0.015,0.015,0.015,0.015,IDENTICAL,IDENTICAL
+lag_eviction_threshold G_D|B,0.005,0.005,0.005,0.005,IDENTICAL,IDENTICAL
+rec_eviction_threshold G_R|B,0.008,0.008,0.008,0.008,IDENTICAL,IDENTICAL
+eviction_warmup_guard_step_count,300,300,300,300,IDENTICAL,IDENTICAL
+tap_R_ema,0.999/0.001 (unchanged),0.999/0.001 (unchanged),0.999/0.001 (unchanged),0.999/0.001 (unchanged),IDENTICAL,IDENTICAL
+tap_lr,0.08,0.08,0.08,0.08,IDENTICAL,IDENTICAL
+frontier_corr_ema,0.95/0.05 fp16 (unchanged),0.95/0.05 fp16 (unchanged),0.95/0.05 fp16 (unchanged),0.95/0.05 fp16 (unchanged),IDENTICAL,IDENTICAL
+K_rec_learn,10,10,10,10,IDENTICAL,IDENTICAL
+rec_evidence_ema,0.98/0.02 at K_rec_learn (UNCHANGED; not an arbitration EMA),0.98/0.02 at K_rec_learn (UNCHANGED; not an arbitration EMA),0.98/0.02 at K_rec_learn (UNCHANGED; not an arbitration EMA),0.98/0.02 at K_rec_learn (UNCHANGED; not an arbitration EMA),IDENTICAL,IDENTICAL
+recurrent_state_semantics,HOLD_STATE,HOLD_STATE,HOLD_STATE,HOLD_STATE,IDENTICAL,IDENTICAL
+arbitration_fp_per_event,28.0,28.0,28.0,28.0,IDENTICAL,IDENTICAL
+stream_length,6000,6000,6000,6000,IDENTICAL,IDENTICAL
+tasks,I1..I14 (scratch/bench_v02_integration.BENCHMARK_TASKS),I1..I14 (scratch/bench_v02_integration.BENCHMARK_TASKS),I1..I14 (scratch/bench_v02_integration.BENCHMARK_TASKS),I1..I14 (scratch/bench_v02_integration.BENCHMARK_TASKS),IDENTICAL,IDENTICAL
+K_rec_forward,1,2,2,2,IDENTICAL,IDENTICAL
+K_arbitration,5,5,10,10,IDENTICAL,INTERVENTION
+alpha_gain_EMA,0.02,0.02,0.02,0.03960000000000008,INTERVENTION,IDENTICAL

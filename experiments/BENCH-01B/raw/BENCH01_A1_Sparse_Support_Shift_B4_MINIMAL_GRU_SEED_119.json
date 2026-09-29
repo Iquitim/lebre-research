@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_B4_MINIMAL_GRU_SEED_119",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 3.511202149707071,
+  "mae": 1.3415110657598173,
+  "nmse": 0.8004291795135408,
+  "mean_flops": 657.0,
+  "p95_flops": 657.0,
+  "peak_flops": 657.0,
+  "memory_bytes": 1320,
+  "active_params": 157,
+  "wall_time_sec": 0.1868593692779541
+}

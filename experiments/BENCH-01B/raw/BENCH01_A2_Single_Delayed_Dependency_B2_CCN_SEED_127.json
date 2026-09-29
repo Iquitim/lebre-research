@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_B2_CCN_SEED_127",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "B2_CCN",
+  "seed": 127,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.652818680210156,
+  "mae": 0.6475042128100049,
+  "nmse": 1.0103335905631994,
+  "mean_flops": 385.0,
+  "p95_flops": 385.0,
+  "peak_flops": 385.0,
+  "memory_bytes": 640,
+  "active_params": 64,
+  "wall_time_sec": 0.250546932220459
+}

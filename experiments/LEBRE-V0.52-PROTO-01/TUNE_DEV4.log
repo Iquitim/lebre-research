@@ -1,0 +1,60 @@
+nmse
+cfg         lazy_r4_m1
+suite task            
+semi  SS0        1.066
+      SS1        0.650
+      SS2        0.344
+      SS3        0.092
+      SS4        0.503
+synth B1         0.646
+      B2         0.536
+      B3         0.419
+      N1         1.069
+      N2         1.164
+      T1         0.650
+true_exo
+cfg         lazy_r4_m1
+suite task            
+semi  SS0          0.0
+      SS1          0.0
+      SS2          0.0
+      SS3          0.0
+      SS4          0.0
+synth B1           1.0
+      B2           3.0
+      B3           1.0
+      N1           0.0
+      N2           0.0
+      T1           1.0
+false_exo
+cfg         lazy_r4_m1
+suite task            
+semi  SS0            0
+      SS1            0
+      SS2            0
+      SS3            0
+      SS4            0
+synth B1             0
+      B2             0
+      B3             0
+      N1             0
+      N2             0
+      T1             0
+fp
+cfg         lazy_r4_m1
+suite task            
+semi  SS0      313.267
+      SS1      319.935
+      SS2      329.520
+      SS3      333.201
+      SS4      377.459
+synth B1       368.482
+      B2       472.552
+      B3       374.113
+      N1       311.359
+      N2       287.441
+      T1       377.425
+ons     atom 0.579 {'lazy_r4_m1': 0.528} fp {'lazy_r4_m1': 228}
+camels  atom 0.994 {'lazy_r4_m1': 0.897} fp {'lazy_r4_m1': 263}
+bdg2    atom 0.93 {'lazy_r4_m1': 0.93} fp {'lazy_r4_m1': 257}
+ALL     atom 0.793 {'lazy_r4_m1': 0.688} fp {'lazy_r4_m1': 249}

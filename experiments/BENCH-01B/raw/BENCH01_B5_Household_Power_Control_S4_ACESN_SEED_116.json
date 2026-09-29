@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_S4_ACESN_SEED_116",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "S4_ACESN",
+  "seed": 116,
+  "config": "{\"reservoir_size\": 40, \"spectral_radius\": 0.85, \"compression_ratio\": 0.5, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.07906248739227671,
+  "mae": 0.19283611329482395,
+  "nmse": 0.039265134293262796,
+  "mean_flops": 4161.023314285714,
+  "p95_flops": 4165.0,
+  "peak_flops": 4165.0,
+  "memory_bytes": 15488,
+  "active_params": 40,
+  "wall_time_sec": 0.2691347599029541
+}

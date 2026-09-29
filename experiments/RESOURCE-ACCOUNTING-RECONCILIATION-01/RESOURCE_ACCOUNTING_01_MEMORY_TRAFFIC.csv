@@ -1,0 +1,6 @@
+provider_id,persistent_bytes,history_buffer_bytes,bytes_read_per_step,bytes_written_per_step,total_bytes_moved_per_step,fp_ops_per_byte,arithmetic_ops_per_byte,memory_traffic_reduction_vs_h0
+H0_EXACT_FP32,680,660,176.07,130.11,306.18,0.5818,0.7958,+0.0%
+H1_FP16,350,330,158.13,120.11,278.24,0.6403,0.9262,+9.1%
+H2_INT16,370,330,158.15,120.13,278.28,0.7265,1.0833,+9.1%
+H3_INT8,205,165,148.94,114.94,263.88,0.7648,1.1405,+13.8%
+H4_MIXED,259,215,151.31,124.78,276.1,0.6667,0.9355,+9.8%

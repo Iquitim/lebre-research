@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_B1_RZA_LMS_SEED_121",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "B1_RZA_LMS",
+  "seed": 121,
+  "config": "{\"learning_rate\": 0.001, \"rho_zero_attraction\": 0.0001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 29.554511201081556,
+  "mae": 3.7932756922621897,
+  "nmse": 0.9885676921974091,
+  "mean_flops": 501.0,
+  "p95_flops": 501.0,
+  "peak_flops": 501.0,
+  "memory_bytes": 464,
+  "active_params": 50,
+  "wall_time_sec": 0.1056673526763916
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_B2_CCN_SEED_117",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "B2_CCN",
+  "seed": 117,
+  "config": "{\"readout_lr\": 0.01, \"recurrent_lr\": 0.001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.07907851087082965,
+  "mae": 0.08669925768981301,
+  "nmse": 0.018881016247240593,
+  "mean_flops": 865.0,
+  "p95_flops": 865.0,
+  "peak_flops": 865.0,
+  "memory_bytes": 1360,
+  "active_params": 154,
+  "wall_time_sec": 0.26941418647766113
+}

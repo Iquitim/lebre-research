@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_S5_CONTINUAL_BACKPROP_SEED_126",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 126,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.0001, \"maturity_threshold\": 100}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 36.97890929019565,
+  "mae": 4.132518572979786,
+  "nmse": 0.9951149394868144,
+  "mean_flops": 305.0,
+  "p95_flops": 305.0,
+  "peak_flops": 305.0,
+  "memory_bytes": 1264,
+  "active_params": 50,
+  "wall_time_sec": 0.15823721885681152
+}

@@ -1,0 +1,2 @@
+comparison,N_seeds,mean_delta_nmse,std_delta_nmse,se_delta_nmse,ci95_upper_bound,margin,noninferiority_supported,t_stat,p_val_two_sided
+C1_K5_vs_C0_M1_PARENT,30,0.032063739017757484,0.006625035794432749,0.0012095605162966584,0.034118935981224945,0.01,NO,26.508586040761177,7.032349975183659e-22

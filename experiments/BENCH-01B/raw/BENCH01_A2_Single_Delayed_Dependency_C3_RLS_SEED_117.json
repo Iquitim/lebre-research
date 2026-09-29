@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_C3_RLS_SEED_117",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "C3_RLS",
+  "seed": 117,
+  "config": "{\"forgetting_factor\": 1.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6426754837657239,
+  "mae": 0.6429875649689742,
+  "nmse": 1.0036189650508687,
+  "mean_flops": 1765.0,
+  "p95_flops": 1765.0,
+  "peak_flops": 1765.0,
+  "memory_bytes": 3424,
+  "active_params": 20,
+  "wall_time_sec": 0.12801742553710938
+}

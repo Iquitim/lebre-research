@@ -1,0 +1,2 @@
+# Byte-exact storage: frozen results are verified by SHA-256, so git must never rewrite line endings or encodings.
+* -text

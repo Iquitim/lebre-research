@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_B3_MUSE_RNN_SEED_107",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 107,
+  "config": "{\"learning_rate\": 0.001, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 4191.0256229050965,
+  "mae": 11.710235401262924,
+  "nmse": 0.07219786730135337,
+  "mean_flops": 381.2142857142857,
+  "p95_flops": 500.0,
+  "peak_flops": 500.0,
+  "memory_bytes": 1048,
+  "active_params": 110,
+  "wall_time_sec": 0.5997452735900879
+}

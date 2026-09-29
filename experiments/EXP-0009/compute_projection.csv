@@ -1,0 +1,11 @@
+channel_id,channel_name,extra_flops_per_test,projected_total_flops_step,pct_dense_compute,compute_gate_status,rounds_per_cand
+A0_Passive_Control,A0 Passive Control (Excess Gain),0.0,142.8,23.72093023255814,PASS (<= 25% Dense),1.0
+A1_Paired_Dir_Signed,A1 Paired ±Delta (Signed),12.0,148.8,24.717607973421927,PASS (<= 25% Dense),1.0
+A1_Paired_Dir_Mag,A1 Paired ±Delta (Magnitude),12.0,148.8,24.717607973421927,PASS (<= 25% Dense),1.0
+A2_Random_Sign_R2,A2 Random-Sign Code (R=2),24.0,154.8,25.71428571428572,BORDERLINE / PASS,2.0
+A2_Random_Sign_R4,A2 Random-Sign Code (R=4),48.0,166.8,27.707641196013288,BORDERLINE / PASS,4.0
+A3_Group_G4_R4_Signed,"A3 Group Coding (G=4, R=4)",16.0,150.8,25.049833887043192,BORDERLINE / PASS,1.0
+A3_Group_G8_R8_Signed,"A3 Group Coding (G=8, R=8)",20.0,152.8,25.382059800664454,BORDERLINE / PASS,1.0
+A4_Paired_Sham_Signed,A4 Paired + Sham Excess,24.0,154.8,25.71428571428572,BORDERLINE / PASS,1.0
+A5_Multi_Round_R4,A5 Multi-Round Acc (R=4),48.0,166.8,27.707641196013288,BORDERLINE / PASS,4.0
+Oracle,Oracle Support Ceiling,0.0,142.8,23.72093023255814,PASS (<= 25% Dense),0.0

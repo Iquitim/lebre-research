@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_B3_MUSE_RNN_SEED_102",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 102,
+  "config": "{\"learning_rate\": 0.03, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.8405805664273962,
+  "mae": 0.5107111042193934,
+  "nmse": 0.41746104775730586,
+  "mean_flops": 202.48457142857143,
+  "p95_flops": 300.0,
+  "peak_flops": 300.0,
+  "memory_bytes": 512,
+  "active_params": 44,
+  "wall_time_sec": 0.7869844436645508
+}

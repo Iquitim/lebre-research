@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_Track_B_SEED_127",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "Track_B",
+  "seed": 127,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.9177052564671184,
+  "mae": 1.2812180996985738,
+  "nmse": 1.0872297710217287,
+  "mean_flops": 182.108,
+  "p95_flops": 198.0,
+  "peak_flops": 198.0,
+  "memory_bytes": 648,
+  "active_params": 40,
+  "wall_time_sec": 0.2218155860900879
+}

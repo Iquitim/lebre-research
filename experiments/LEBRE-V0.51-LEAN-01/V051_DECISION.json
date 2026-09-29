@@ -1,0 +1,98 @@
+{
+  "part1": {
+    "I-1_upper95": 0.0018185777730634258,
+    "I-1": true,
+    "I-2_cov": 0.9017216117216116,
+    "I-2": true,
+    "I-3_faith": 9.686695889854492e-15,
+    "I-3": true,
+    "nmse": {
+      "V045": 0.2151,
+      "V05": 0.1954,
+      "V051": 0.2151
+    },
+    "fp_mean_by_arm": {
+      "V045": 99.8,
+      "V05": 940.1,
+      "V051": 133.6
+    },
+    "fp_peak_by_arm": {
+      "V045": 712.0,
+      "V05": 2065.0,
+      "V051": 249.0
+    },
+    "struct_exact": {
+      "V045": 0.9076,
+      "V05": 0.9076,
+      "V051": 0.9091
+    },
+    "B_internal_max_mean_fp": 147.49698333333333,
+    "B_internal_max_peak": 249.0
+  },
+  "part2": {
+    "C1_geo_vs_NLinear": 0.8389265574066705,
+    "C2_geo_vs_best_modern_linear": 0.8394464469383043,
+    "C4_geo_vs_V05": 0.7730682718233465,
+    "C3_geo_vs_best_chronos": 1.3671467487963522,
+    "S1_median": 1.000018542221886,
+    "S1_max": 1.0763811181127785,
+    "S1_all_arms_max": {
+      "NLIN": 1.015,
+      "V05": 1.048,
+      "V051": 1.076
+    },
+    "S2_frac": 0.9,
+    "K-c": true,
+    "faith_max": 3.9525238378304566e-14,
+    "B_heldout_max_mean_fp": 138.3068968325055,
+    "B_heldout_max_peak": 196.0,
+    "geo_vs_V045": 0.32398988384749966,
+    "geo_vs_persistence": 0.35634278674107317,
+    "position": 3,
+    "n_models": 15,
+    "ranking": {
+      "CHRONOS2": 1.5,
+      "CHRONOS2_COV": 1.75,
+      "CHRONOS_BOLT_SMALL": 4.0,
+      "LEBRE_V051": 4.0,
+      "NLINEAR_ONLINE": 4.3,
+      "LEBRE_V05": 5.9,
+      "CHRONOS_BOLT_TINY": 6.6,
+      "DLINEAR_ONLINE": 7.4,
+      "CTRL_PERSISTENCE": 8.9,
+      "LEBRE_V032": 9.4,
+      "HOLT_WINTERS": 10.2,
+      "CTRL_ARX_NLMS": 10.7,
+      "LEBRE_V045": 10.9,
+      "IPNLMS": 12.2,
+      "CTRL_SEASONAL_NAIVE": 14.33
+    },
+    "C1": true,
+    "C2": true,
+    "C4": true,
+    "C3_meta": true,
+    "S1": true,
+    "S2": true
+  },
+  "B1": true,
+  "B2": true,
+  "part3": {
+    "heldout_v05": {
+      "geo_vs_NLinear": 0.798109382322585,
+      "geo_vs_V05": 0.7545952854512226,
+      "geo_vs_best_chronos": 1.1219316836552657,
+      "position": 3,
+      "n_models": 15
+    },
+    "bench04": {
+      "geo_vs_NLinear": 0.8509643816858677,
+      "geo_vs_V05": 0.8178972735635366,
+      "geo_vs_best_chronos": 1.325705926821276,
+      "position": 3,
+      "n_models": 36,
+      "instab_max": 1.159208458450764,
+      "mean_fp": 132.14848350304104
+    }
+  },
+  "PROMOTION": "PROMOVIDA_v0.51"
+}

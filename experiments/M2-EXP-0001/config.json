@@ -1,0 +1,58 @@
+{
+  "experiment": "M2-EXP-0001",
+  "title": "Delayed Dependency Discovery",
+  "description": "Evaluating autonomous discovery of unknown delayed temporal dependencies (feature_id, lag) using frozen M1 causal learning principles.",
+  "dev_seed": 3000,
+  "evaluation_seeds": [
+    3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010,
+    3011, 3012, 3013, 3014, 3015, 3016, 3017, 3018, 3019, 3020,
+    3021, 3022, 3023, 3024, 3025, 3026, 3027, 3028, 3029, 3030
+  ],
+  "total_steps": 2000,
+  "target_probe_budget": 10000,
+  "canonical_setup": {
+    "d_features": 20,
+    "l_max": 10,
+    "noise_std": 0.10,
+    "beta": 1.0,
+    "true_feature": 7,
+    "tested_delays": [0, 1, 2, 5, 10],
+    "holdout_delays": [3, 7]
+  },
+  "variants": ["T0", "T1", "T2", "T3", "T4", "T5"],
+  "scaling_studies": {
+    "axis_1_lmax": {
+      "d_features": 20,
+      "l_max_values": [2, 5, 10, 20],
+      "eval_delay": 2
+    },
+    "axis_2_d": {
+      "l_max": 10,
+      "d_values": [10, 20, 50],
+      "eval_delay": 2
+    }
+  },
+  "delay_shift_setup": {
+    "d_features": 20,
+    "l_max": 10,
+    "noise_std": 0.10,
+    "beta": 1.0,
+    "true_feature": 7,
+    "shift_step": 1000,
+    "regime_1_delay": 2,
+    "regime_2_delay": 7
+  },
+  "gates": {
+    "m2_pred": {
+      "dense_temporal_ratio_max": 1.0,
+      "compute_temporal_dense_max_pct": 25.0,
+      "min_seed_pass_rate_pct": 90.0
+    },
+    "m2_struct": {
+      "exact_pair_recovery_min_pct": 80.0,
+      "median_lag_error_max": 0,
+      "acquisition_latency_bound": 300,
+      "compute_temporal_dense_max_pct": 25.0
+    }
+  }
+}

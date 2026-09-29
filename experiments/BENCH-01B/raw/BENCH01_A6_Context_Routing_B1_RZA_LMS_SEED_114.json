@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_B1_RZA_LMS_SEED_114",
+  "task_id": "A6_Context_Routing",
+  "model_id": "B1_RZA_LMS",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.01, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4082913421348219,
+  "mae": 0.5065059101316405,
+  "nmse": 0.5200563060771874,
+  "mean_flops": 101.0,
+  "p95_flops": 101.0,
+  "peak_flops": 101.0,
+  "memory_bytes": 144,
+  "active_params": 10,
+  "wall_time_sec": 0.13724660873413086
+}

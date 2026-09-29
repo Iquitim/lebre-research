@@ -1,0 +1,7 @@
+Overhead_Category,Operations_Per_Step,Data_Type,Operation_Type,Incremental_FLOPs,Incremental_Int_Ops,Incremental_Bytes_Moved,Explanation
+Input Scale Checking & Update,5 abs + 5 cmp + 0.5 update,FLOAT32,SCALE_UPDATE,+0.5,+10.0,0.0,Causal peak amplitude tracking
+Input Quantization (Scaled Clip/Round),5 div + 5 mul + 5 round + 10 clip,INT8,QUANTIZE,+10.0,+20.0,0.0,Conversion from float32 to int8
+Quantized History Buffer Store,5 int8 byte writes,INT8,STORE_BYTES,0.0,0.0,-15.0,Saved 15 bytes written vs FP32
+Dequantization on Query,~5.5 cast + 5.5 fp_mul,INT8_TO_FP,DEQUANTIZE,+5.5,+5.5,-16.5,Unpacking queried values with 3x memory traffic saving
+Scale Metadata Reads,~5.5 scale reads,FLOAT32,LOAD_BYTES,0.0,0.0,+22.0,Amortized / register-cached scale access
+TOTAL_H3_INCREMENTAL_DELTA,Sum of all categories,MIXED,TOTAL,+23.67,+33.62,-42.30,Total net incremental delta of H3 relative to H0

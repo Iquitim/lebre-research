@@ -1,0 +1,59 @@
+task,contract,nmse,structure
+ons:ITUTINGA,False,0.015310927127174951,[]
+ons:ITUTINGA,True,0.015310926978109738,[]
+ons:FUNIL-MG,False,0.038090299972668155,"[('lp', 0, 0.8), ('res', 0.8)]"
+ons:FUNIL-MG,True,0.03873315927783159,"[('lag', 0, 16), ('lp', 0, 0.8), ('res', 0.8), ('res', 0.95)]"
+ons:FURNAS,False,1.0298516705400722,[]
+ons:FURNAS,True,1.0316520433948093,[]
+ons:M. MORAES,False,0.5673815267170417,"[('lag', 0, 2)]"
+ons:M. MORAES,True,0.576033917873619,"[('lag', 0, 2)]"
+ons:L. C. BARRETO,False,0.1062394818029747,[]
+ons:L. C. BARRETO,True,0.1062394818029747,[]
+ons:JAGUARA,False,0.021248761229286085,[]
+ons:JAGUARA,True,0.021248761229286085,[]
+ons:IGARAPAVA,False,0.11636888586527591,"[('lag', 0, 2)]"
+ons:IGARAPAVA,True,0.06867046613130796,"[('lag', 0, 1)]"
+ons:VOLTA GRANDE,False,0.320752842643239,"[('lp', 0, 0.8)]"
+ons:VOLTA GRANDE,True,0.3207044810486488,"[('lag', 0, 2)]"
+ons:P. COLOMBIA,False,0.2552443798774865,[]
+ons:P. COLOMBIA,True,0.2552443798774865,[]
+ons:MARIMBONDO,False,0.5062166930926075,"[('lag', 0, 3)]"
+ons:MARIMBONDO,True,0.5063030349600756,"[('lag', 0, 3)]"
+ons:A. VERMELHA,False,0.3518240230630862,[]
+ons:A. VERMELHA,True,0.3518240230630862,[]
+camels:17350000,False,0.04534533808015643,"[('lag', 2, 28), ('lp', 0, 0.8), ('lp', 0, 0.95), ('lp', 1, 0.95)]"
+camels:17350000,True,0.030133196988573484,"[('lp', 1, 0.95)]"
+camels:24900000,False,0.3605141866199646,[]
+camels:24900000,True,0.3741254050228167,[]
+camels:54110002,False,0.37233241436214015,[]
+camels:54110002,True,0.37803996103025767,[]
+camels:58258000,False,0.8417051593470871,[]
+camels:58258000,True,0.8579418826051307,[]
+camels:60778000,False,0.08715419619850441,"[('lag', 1, 4), ('lp', 0, 0.8), ('lp', 1, 0.8), ('lp', 1, 0.95), ('lp', 2, 0.95)]"
+camels:60778000,True,0.08715420281968471,"[('lp', 0, 0.8), ('lp', 0, 0.95), ('lp', 1, 0.8), ('lp', 2, 0.95)]"
+camels:60940000,False,0.012721973966313877,"[('lag', 1, 9), ('lag', 1, 18), ('lp', 0, 0.8), ('lp', 0, 0.95)]"
+camels:60940000,True,0.012721973966313877,"[('lag', 2, 22), ('lp', 0, 0.8), ('lp', 0, 0.95), ('lp', 1, 0.8), ('lp', 2, 0.8)]"
+camels:61510000,False,0.04462060604380312,"[('res', 0.95)]"
+camels:61510000,True,0.044620606043803114,"[('lp', 0, 0.8), ('res', 0.8)]"
+camels:64360000,False,0.5475041585662593,[]
+camels:64360000,True,0.586467883651552,[]
+camels:64477600,False,0.1008997581091814,"[('lp', 0, 0.95), ('lp', 1, 0.95)]"
+camels:64477600,True,0.10079563471094691,"[('lp', 0, 0.8), ('lp', 2, 0.95)]"
+camels:71350001,False,0.028981153539755014,"[('lp', 0, 0.8), ('lp', 0, 0.95), ('lp', 1, 0.8), ('lp', 1, 0.95), ('lp', 2, 0.95)]"
+camels:71350001,True,0.028981153539755014,"[('lp', 0, 0.95), ('lp', 1, 0.95)]"
+bdg2:chilledwater:Bull_education_Hayley,False,0.033944721776703324,"[('lag', 1, 21), ('lp', 0, 0.8), ('lp', 1, 0.8), ('lp', 1, 0.95), ('res', 0.8)]"
+bdg2:chilledwater:Bull_education_Hayley,True,0.03371919474919975,"[('lag', 0, 17), ('lp', 0, 0.8), ('lp', 0, 0.95), ('lp', 1, 0.95), ('res', 0.8)]"
+bdg2:hotwater:Moose_education_Lori,False,0.029273411033779985,"[('lag', 1, 21), ('lag', 1, 30), ('lp', 0, 0.8), ('lp', 0, 0.95), ('res', 0.95)]"
+bdg2:hotwater:Moose_education_Lori,True,0.02927341888854649,"[('lp', 0, 0.95), ('lp', 1, 0.8), ('lp', 1, 0.95), ('res', 0.95)]"
+bdg2:steam:Eagle_assembly_Herbert,False,0.13960003641359406,[]
+bdg2:steam:Eagle_assembly_Herbert,True,0.13960006046731863,[]
+bdg2:steam:Hog_assembly_Colette,False,0.10034563611261413,"[('lp', 0, 0.95), ('lp', 1, 0.8), ('lp', 1, 0.95), ('res', 0.8), ('res', 0.95)]"
+bdg2:steam:Hog_assembly_Colette,True,0.1003332858469442,"[('lp', 0, 0.8), ('lp', 0, 0.95), ('lp', 1, 0.95), ('res', 0.8)]"
+bdg2:steam:Hog_education_Luvenia,False,0.040255844676952465,"[('lag', 0, 16), ('lag', 0, 22), ('lag', 1, 9), ('lp', 0, 0.95), ('res', 0.8)]"
+bdg2:steam:Hog_education_Luvenia,True,0.040773498291938,"[('lag', 0, 4), ('lag', 0, 18), ('lp', 0, 0.8), ('lp', 0, 0.95)]"
+silverbox,False,0.03325977336120316,"[('res', 0.8)]"
+silverbox,True,0.03325977336120316,"[('res', 0.8)]"
+tanks:est,False,0.000912960673686163,"[('lag', 0, 19), ('lag', 0, 20), ('lp', 0, 0.8), ('lp', 0, 0.95)]"
+tanks:est,True,0.000912960673686163,"[('lag', 0, 19), ('lag', 0, 20), ('lp', 0, 0.8), ('lp', 0, 0.95)]"
+tanks:val,False,0.0011258775802324384,"[('lag', 0, 7), ('lp', 0, 0.8), ('lp', 0, 0.95)]"
+tanks:val,True,0.0011258775802324384,"[('lag', 0, 7), ('lp', 0, 0.8), ('lp', 0, 0.95)]"

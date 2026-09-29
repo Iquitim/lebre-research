@@ -1,0 +1,2 @@
+comparison,N_seeds,mean_delta_nmse,std_delta_nmse,se_delta_nmse,ci95_upper_bound,margin,noninferiority_supported,t_stat,p_val_two_sided
+C1_K5_vs_R0_CONTINUOUS,30,0.05343219765659943,0.02651813147305432,0.00484152626355985,0.06165856578068571,0.01,NO,11.036230053890508,6.731576185561088e-12

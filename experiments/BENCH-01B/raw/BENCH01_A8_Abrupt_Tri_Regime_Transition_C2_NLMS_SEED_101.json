@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_C2_NLMS_SEED_101",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "C2_NLMS",
+  "seed": 101,
+  "config": "{\"step_size\": 0.2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.45650631456729274,
+  "mae": 0.5087874941519297,
+  "nmse": 0.9424887185197215,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.08920860290527344
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_S5_CONTINUAL_BACKPROP_SEED_107",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 107,
+  "config": "{\"learning_rate\": 0.01, \"replacement_rate\": 0.0001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.07877620113903247,
+  "mae": 0.0833770688749777,
+  "nmse": 0.01878200185896029,
+  "mean_flops": 305.0,
+  "p95_flops": 305.0,
+  "peak_flops": 305.0,
+  "memory_bytes": 1264,
+  "active_params": 50,
+  "wall_time_sec": 0.1557772159576416
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_Track_B_SEED_129",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "Track_B",
+  "seed": 129,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0038282532085227835,
+  "mae": 0.04779040642807288,
+  "nmse": 0.9932016391531941,
+  "mean_flops": 8.0,
+  "p95_flops": 8.0,
+  "peak_flops": 8.0,
+  "memory_bytes": 208,
+  "active_params": 1,
+  "wall_time_sec": 0.418729305267334
+}

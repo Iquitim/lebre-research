@@ -1,0 +1,23 @@
+1000-pt mask check (n_ok == stored): True
+FULL MASK
+         model   ons  camels    bdg2   ALL
+          V052 0.506   0.907   0.909 0.697
+          FITS 1.146   1.410   1.164 1.438
+     SPARSETSF 1.463   4.252   3.590 3.513
+DLINEAR_ONLINE 1.008   1.059   1.032 1.279
+NLINEAR_ONLINE 1.000   1.000   1.000 1.000
+     AIRLINE_X 0.873   0.808   0.965 0.992
+      ARX_NLMS 0.589   1.219   1.929 1.155
+          v051 0.607   1.883 338.498 2.791
+1000 POINTS
+         model   ons  camels  bdg2   ALL
+          V052 0.461   0.899 0.901 0.668
+          FITS 1.090   1.411 1.196 1.419
+     SPARSETSF 1.360   4.282 3.811 3.464
+        TTM_ZS 1.017   1.228 1.061 1.384
+   TTM_FT_EXOG 1.028   1.121 1.149 2.136
+  CHRONOS2_COV 0.500   0.838 0.718 0.701
+      CHRONOS2 0.858   0.892 0.780 0.915
+     AIRLINE_X 0.847   0.825 0.970 0.988
+DLINEAR_ONLINE 0.981   1.049 1.036 1.261
+mean FLOPs per forecast: {'V052': 395.0, 'FITS': 9757.0, 'SPARSETSF': 2856.0, 'FITS_params': 1200.0, 'SPARSETSF_params': 31.0, 'TTM_ZS': 15613952.0, 'TTM_FT_EXOG': 45400183.0}

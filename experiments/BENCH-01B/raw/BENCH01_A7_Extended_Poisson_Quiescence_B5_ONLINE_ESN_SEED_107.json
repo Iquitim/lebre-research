@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_B5_ONLINE_ESN_SEED_107",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 107,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"leak_rate\": 0.7, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.9438926716793452,
+  "mae": 0.7817663660746647,
+  "nmse": 0.9984024428398223,
+  "mean_flops": 1481.0,
+  "p95_flops": 1481.0,
+  "peak_flops": 1481.0,
+  "memory_bytes": 5248,
+  "active_params": 20,
+  "wall_time_sec": 0.10755395889282227
+}

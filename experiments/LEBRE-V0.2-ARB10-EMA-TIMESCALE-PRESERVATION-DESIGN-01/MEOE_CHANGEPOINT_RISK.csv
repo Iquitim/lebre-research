@@ -1,0 +1,5 @@
+task_id,arm_code,n_pre,n_post_early,mean_abs_pre,mean_abs_post_early,ratio,ratio_ge_2
+I11_Regime_Switch_Delay_To_Latent,A0_K1_KARB5,10,10,0.01357904387,0.02650688741,1.952043727,False
+I11_Regime_Switch_Delay_To_Latent,A1_K2_KARB5,10,10,0.01357174434,0.02650688741,1.95309363,False
+I12_Regime_Switch_Latent_To_Delay,A0_K1_KARB5,10,10,0.008695989858,0.01830610442,2.105120259,True
+I12_Regime_Switch_Latent_To_Delay,A1_K2_KARB5,10,10,0.005924201547,0.01160215436,1.95843343,False

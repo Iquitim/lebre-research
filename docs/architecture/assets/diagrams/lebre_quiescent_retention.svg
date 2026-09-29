@@ -1,0 +1,62 @@
+<svg width="800" height="380" viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+  </defs>
+
+  <rect width="800" height="380" fill="#FFFFFF" rx="8" />
+  <text x="30" y="32" font-size="16" font-weight="700" fill="#0F172A">D5: Two-Timescale Relevance &amp; Quiescent Retention</text>
+  <text x="30" y="50" font-size="12" fill="#64748B">Decoupling fast instantaneous activity from slow structural relevance bridges silent gaps</text>
+
+  <!-- Graph Axis Area -->
+  <g transform="translate(60, 80)">
+    <!-- Axes -->
+    <line x1="40" y1="180" x2="680" y2="180" stroke="#475569" stroke-width="1.5" marker-end="url(#arr5)" />
+    <line x1="40" y1="180" x2="40" y2="20" stroke="#475569" stroke-width="1.5" marker-end="url(#arr5)" />
+    
+    <text x="690" y="184" font-size="10" font-weight="600" fill="#475569">Time t (steps)</text>
+    <text x="35" y="15" font-size="10" font-weight="600" text-anchor="end" fill="#475569">Relevance</text>
+
+    <!-- Quiescent Region Highlight -->
+    <rect x="140" y="30" width="380" height="150" fill="#F1F5F9" opacity="0.7" />
+    <text x="330" y="48" font-size="11" font-weight="600" text-anchor="middle" fill="#64748B">QUIESCENT INTERVAL (Silence: x_t ~ 0, s_t ~ 0)</text>
+
+    <!-- Event 1 -->
+    <rect x="70" y="30" width="70" height="150" fill="#FEF3C7" opacity="0.5" />
+    <text x="105" y="48" font-size="10" font-weight="700" text-anchor="middle" fill="#B45309">BURST 1</text>
+
+    <!-- Event 2 -->
+    <rect x="520" y="30" width="70" height="150" fill="#FEF3C7" opacity="0.5" />
+    <text x="555" y="48" font-size="10" font-weight="700" text-anchor="middle" fill="#B45309">BURST 2</text>
+
+    <!-- Naive Fast Curve (Red Dash) -->
+    <path d="M 40 170 L 70 170 L 105 50 L 140 60 L 170 170 L 520 170 L 555 50 L 590 60" 
+          stroke="#DC2626" stroke-width="2" stroke-dasharray="4,4" fill="none" />
+    
+    <!-- LEBRE Slow Curve U_ret (Blue Solid) -->
+    <path d="M 40 170 L 70 170 L 105 55 L 140 65 Q 260 95 380 120 T 520 135 L 555 50" 
+          stroke="#0284C7" stroke-width="2.5" fill="none" />
+
+    <!-- Eviction Threshold Line -->
+    <line x1="40" y1="150" x2="660" y2="150" stroke="#94A3B8" stroke-dasharray="2,2" stroke-width="1.2" />
+    <text x="665" y="153" font-size="9" fill="#94A3B8">theta_ret</text>
+
+    <!-- Annotation: Naive Eviction Point -->
+    <circle cx="165" cy="150" r="4" fill="#DC2626" />
+    <text x="175" y="142" font-size="9" font-weight="700" fill="#DC2626">Naive Eviction (False Loss!)</text>
+
+    <!-- Annotation: LEBRE Survival -->
+    <text x="330" y="105" font-size="10" font-weight="700" fill="#0284C7">LEBRE U_ret bridges gap (Memory Preserved &gt; 99%)</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(100, 290)">
+    <rect width="600" height="70" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="4" />
+    <line x1="20" y1="25" x2="60" y2="25" stroke="#DC2626" stroke-dasharray="4,4" stroke-width="2" />
+    <text x="70" y="29" font-size="10" fill="#0F172A">Instantaneous Activity Tracker (collapses in ~15 steps of silence -&gt; triggers catastrophic eviction)</text>
+    
+    <line x1="20" y1="50" x2="60" y2="50" stroke="#0284C7" stroke-width="2.5" />
+    <text x="70" y="54" font-size="10" fill="#0F172A">LEBRE Slow Relevance U_ret (alpha_slow = 0.005, tau ~ 140 steps -&gt; retains state across Poisson gaps)</text>
+  </g>
+</svg>

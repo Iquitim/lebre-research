@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_S3_RSONN_SEED_119",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "S3_RSONN",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.05, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0635409421719597,
+  "mae": 0.7687376709857747,
+  "nmse": 0.24244949946638084,
+  "mean_flops": 1282.0,
+  "p95_flops": 1282.0,
+  "peak_flops": 1282.0,
+  "memory_bytes": 1856,
+  "active_params": 220,
+  "wall_time_sec": 0.29967522621154785
+}

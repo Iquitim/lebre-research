@@ -1,0 +1,51 @@
+{
+  "experiment_id": "M2-EXP-0004",
+  "milestone": "M2",
+  "title": "Minimal Learned State Mechanism",
+  "description": "Evaluating scalar recurrent learning (STATE_DIM=1) across exponential integration, SET/RESET memory, and context-dependent routing without BPTT.",
+  "dev_seed": 6000,
+  "eval_seeds": [
+    6001, 6002, 6003, 6004, 6005, 6006, 6007, 6008, 6009, 6010,
+    6011, 6012, 6013, 6014, 6015, 6016, 6017, 6018, 6019, 6020,
+    6021, 6022, 6023, 6024, 6025, 6026, 6027, 6028, 6029, 6030
+  ],
+  "task_a": {
+    "d_features": 10,
+    "driving_feature": 0,
+    "decays": [0.5, 0.8, 0.95, 0.99],
+    "noise_std": 0.1,
+    "total_steps": 3000,
+    "lr_linear": 0.05,
+    "dynamic_shift": {
+      "step": 1500,
+      "init_decay": 0.8,
+      "post_decay": 0.95
+    }
+  },
+  "task_b": {
+    "d_features": 10,
+    "gaps": [10, 50, 100, 500, 1000, 5000],
+    "noise_std": 0.05,
+    "total_steps": 6000,
+    "lr_gated": 0.10,
+    "init_bg": -2.0
+  },
+  "task_c": {
+    "d_features": 10,
+    "delay_a": 2,
+    "delay_b": 7,
+    "signal_feature": 2,
+    "p_switch": 0.02,
+    "noise_std": 0.1,
+    "total_steps": 3000,
+    "lr_router": 0.10
+  },
+  "ablations": [
+    "A0_Random_State",
+    "A1_Output_Only",
+    "A2_Linear_State",
+    "A3_Learned_Gate",
+    "A4_No_Sensitivity",
+    "A5_With_Sensitivity"
+  ]
+}

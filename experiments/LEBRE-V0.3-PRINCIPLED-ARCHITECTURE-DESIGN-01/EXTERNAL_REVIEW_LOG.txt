@@ -1,0 +1,42 @@
+calibration done: 540 configs, 16s
+status                       NUMERICAL_DIVERGENCE  SUCCESS
+part model_id                                             
+II   B1_RZA_LMS                                 0      300
+     B2_CCN                                     0      300
+     B3_MUSE_RNN                                0      300
+     B4_MINIMAL_GRU                             0      300
+     B5_ONLINE_ESN                              0      300
+     C1_CURRENT_ONLY_LINEAR                     0      300
+     C2_NLMS                                    0      300
+     C3_RLS                                     0      300
+     C4_FIXED_LAG_LINEAR                        0      300
+     CTRL_ARX_NLMS                              0      300
+     CTRL_PERSISTENCE                           0      300
+     LEBRE_V03                                  0      300
+     LEBRE_V031                                 0      300
+     S1_VARIABLE_TAP_LMS                        0      300
+     S2_LRU_STREAM                             15      285
+     S3_RSONN                                   0      300
+     S4_ACESN                                   0      300
+     S5_CONTINUAL_BACKPROP                      0      300
+     Track_B                                    0      300
+III  B1_RZA_LMS                                10        5
+     B2_CCN                                    10        5
+     B3_MUSE_RNN                                0       15
+     B4_MINIMAL_GRU                             0       15
+     B5_ONLINE_ESN                              0       15
+     C1_CURRENT_ONLY_LINEAR                    10        5
+     C2_NLMS                                    0       15
+     C3_RLS                                     0       15
+     C4_FIXED_LAG_LINEAR                        5       10
+     CTRL_ARX_NLMS                              0       15
+     CTRL_PERSISTENCE                           0       15
+     LEBRE_V03                                  0       15
+     LEBRE_V031                                 0       15
+     S1_VARIABLE_TAP_LMS                       15        0
+     S2_LRU_STREAM                             15        0
+     S3_RSONN                                   0       15
+     S4_ACESN                                   0       15
+     S5_CONTINUAL_BACKPROP                     10        5
+     Track_B                                    0       15
+5985 runs, 153s

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_Track_B_SEED_124",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "Track_B",
+  "seed": 124,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.832546367112463,
+  "mae": 0.5468441320685349,
+  "nmse": 0.8290271231502093,
+  "mean_flops": 66.90857142857143,
+  "p95_flops": 78.0,
+  "peak_flops": 78.0,
+  "memory_bytes": 408,
+  "active_params": 13,
+  "wall_time_sec": 0.23138856887817383
+}

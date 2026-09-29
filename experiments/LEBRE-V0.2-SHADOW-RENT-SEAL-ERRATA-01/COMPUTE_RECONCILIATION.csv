@@ -1,0 +1,5 @@
+scheduler_id,mean_live_fp,mean_shadow_fp,mean_scheduler_fp,mean_total_fp,mean_int_ops,mean_bytes_moved,mean_duty_fraction,gate1_compute_ceiling,gate1_status,absolute_execution_floor,behavior_preserving_reference_floor,floor_interpretation
+S0_CONTINUOUS,82.64,86.42,0.0,169.06,40.35,372.97,1.0,100.0,FAIL,58.0,83.17,S1 achieves 58.00 FP (minimal base path); 83.17 FP is conditioned on S0 reference structural burden + 2 FP housekeeping.
+S1_SHADOW_OFF,58.0,0.0,0.0,58.0,7.0,290.0,0.0,100.0,PASS,58.0,83.17,S1 achieves 58.00 FP (minimal base path); 83.17 FP is conditioned on S0 reference structural burden + 2 FP housekeeping.
+S2_PERIODIC,72.6,16.93,0.0,89.53,16.19,318.12,0.2,100.0,PASS,58.0,83.17,S1 achieves 58.00 FP (minimal base path); 83.17 FP is conditioned on S0 reference structural burden + 2 FP housekeeping.
+S3_EVENT_TRIGGERED,80.49,25.58,4.0,110.07,21.09,333.43,0.2919,100.0,FAIL,58.0,83.17,S1 achieves 58.00 FP (minimal base path); 83.17 FP is conditioned on S0 reference structural burden + 2 FP housekeeping.

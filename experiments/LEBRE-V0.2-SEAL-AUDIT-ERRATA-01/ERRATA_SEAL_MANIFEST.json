@@ -1,0 +1,202 @@
+{
+  "audit_name": "LEBRE-V0.2-SEAL-AUDIT-ERRATA-01",
+  "audit_date": "2026-09-20",
+  "auditor": "Independent Skeptical Scientific Auditor",
+  "parent_studies": [
+    "experiments/LEBRE-V0.2-INTEGRATION-DESIGN-01/",
+    "experiments/LEBRE-V0.2-INTEGRATION-SEAL-AUDIT-01/"
+  ],
+  "confirmatory_seeds": [
+    1311,
+    1312,
+    1313,
+    1314,
+    1315,
+    1316,
+    1317,
+    1318,
+    1319,
+    1320,
+    1321,
+    1322,
+    1323,
+    1324,
+    1325,
+    1326,
+    1327,
+    1328,
+    1329,
+    1330,
+    1331,
+    1332,
+    1333,
+    1334,
+    1335,
+    1336,
+    1337,
+    1338,
+    1339,
+    1340
+  ],
+  "quarantined_dev_seeds": [
+    1301,
+    1302,
+    1303,
+    1304,
+    1305,
+    1306,
+    1307,
+    1308,
+    1309,
+    1310
+  ],
+  "benchmark_tasks": [
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "I5",
+    "I6",
+    "I7",
+    "I8",
+    "I9",
+    "I10",
+    "I11",
+    "I12",
+    "I13",
+    "I14"
+  ],
+  "topologies_evaluated": [
+    "T1",
+    "T1R",
+    "T2",
+    "T3",
+    "O_ALL"
+  ],
+  "canonical_invariants": {
+    "canonical_version": "0.1",
+    "lebre_v0_1_status": "FROZEN_WITH_SCOPE_LIMITS",
+    "m3_status": "UNOPENED",
+    "novelty_claim_ready": false,
+    "src_immutable": true,
+    "tests_immutable": true
+  },
+  "file_manifest": {
+    "DEV_CONTAMINATION_SCAN.csv": {
+      "sha256": "ce5a08c619b36b7d072ab0e0c9f5fe64f7e7c5bbd166a6e912aafd867685becb",
+      "size_bytes": 689
+    },
+    "DOUBLE_PAYMENT_RECOMPUTATION.csv": {
+      "sha256": "1d3a70ccbeab9a685abdfcf548e7e31f0796d53dac254c4b3b937b86b70876d6",
+      "size_bytes": 736
+    },
+    "ERRATA_CLAIM_DEPENDENCY_GRAPH.md": {
+      "sha256": "a62208aff71772408fc8ba2def1372c8db4cb8f4577d359fb7c72f3868141a26",
+      "size_bytes": 7188
+    },
+    "ERRATA_CLAIM_TRACEABILITY.csv": {
+      "sha256": "f98e16cce0e3922b9425146279bdd61a93f71981b39473227573ef03b98416ab",
+      "size_bytes": 1414
+    },
+    "ERRATA_CORRIGENDUM.md": {
+      "sha256": "1c3ae014459b021120d1ef1fe7845f42a7e067a6989e94d312f2b264b414a534",
+      "size_bytes": 3075
+    },
+    "ERRATA_PARENT_HASHES.txt": {
+      "sha256": "153fcc7bf3722b3f3e7c73819e64f0d521f871fe810859b04d627d8e0e329a03",
+      "size_bytes": 8996
+    },
+    "figures/F10_errata_claim_status_matrix.png": {
+      "sha256": "075f38d3d7c57a88bbbcd3cd795a350c219299e40036cbd6ff6d6b0c5eadfccc",
+      "size_bytes": 132046
+    },
+    "figures/F1_H7_reported_vs_recomputed.png": {
+      "sha256": "6b92d75f4ec324eed2782175ff592d9c880aeac12cdc08450f52556b8b9547b7",
+      "size_bytes": 179618
+    },
+    "figures/F2_H7_paired_delta_by_task.png": {
+      "sha256": "659620ba68581defe4ed45a47628ccc3831b659d993c3195d9e04e258548cd62",
+      "size_bytes": 164882
+    },
+    "figures/F3_H7_seed_level_I4_distribution.png": {
+      "sha256": "26c0f01d852f6f287ce9771e7ea809fc4d2fdcfcf6c27ce6b33bd83fe8f4915c",
+      "size_bytes": 107041
+    },
+    "figures/F4_T1_vs_T1R_order_sensitivity_map.png": {
+      "sha256": "f54f6c039498dc53e7667dfe3f47939808aa85b914d485309cfd15164d5cf731",
+      "size_bytes": 86662
+    },
+    "figures/F5_I10_dual_occupancy_metric_definitions.png": {
+      "sha256": "648debdde67b040f39d84ef8b2b1148fc1589df44889d28a2e46182fc21dba41",
+      "size_bytes": 64887
+    },
+    "figures/F6_I10_redundant_dual_rate_by_seed.png": {
+      "sha256": "2631e39ec88aabae6a7db5b1ec1e08c21f9940bab58d86dec4b6a866698b42a7",
+      "size_bytes": 119801
+    },
+    "figures/F7_I10_conditional_gain_grid.png": {
+      "sha256": "dc0fa888196749837f5c173bce3caac9eca7c04f52dcfe7f785e6390911cbf00",
+      "size_bytes": 109399
+    },
+    "figures/F8_DEV_value_contamination_lineage.png": {
+      "sha256": "2da2e54e2f012fdc6084b607de0b197eb22e0d324e4979c84900cef88490b98b",
+      "size_bytes": 102642
+    },
+    "figures/F9_surviving_T3_evidence_map.png": {
+      "sha256": "510ff60b9ea0c589149fda673598ff98a90ccd4a99f579e76320fe9b807197bf",
+      "size_bytes": 121814
+    },
+    "H7_MULTIPLICITY_NOTE.md": {
+      "sha256": "a867fe3393579103ecab128169212a4811e0ad67a62b682f33991a28e7d9bf3b",
+      "size_bytes": 6195
+    },
+    "H7_PAIRED_RAW_VALUES.csv": {
+      "sha256": "b0577a4a9c06fce31739eb19e262e0d2c699c914f3ee0e44b64808b823bf4267",
+      "size_bytes": 34062
+    },
+    "H7_TASK_SUMMARY.csv": {
+      "sha256": "309b2d65270c8d350f57a70e04c9041044ff037145b45b0a06330f12ad445be2",
+      "size_bytes": 1768
+    },
+    "H7_VALUE_LINEAGE.csv": {
+      "sha256": "22ab41eec1fb64fd8da9d8e236d360a443d162437ad7988f59e5c8c120c52c5a",
+      "size_bytes": 1674
+    },
+    "H7_WILCOXON_BY_TASK.csv": {
+      "sha256": "eab4812cb137ee0595bf42bf0e5c2a022cb078d9a9348a43e9c7959f83f2eeb2",
+      "size_bytes": 1579
+    },
+    "I10_48P2_LINEAGE.csv": {
+      "sha256": "bc7f9ccb3c3c15bad6622250c58124c96618c4f8eeed34cbb33486a0e9940e17",
+      "size_bytes": 1031
+    },
+    "I10_CONDITIONAL_GAIN_AUDIT.csv": {
+      "sha256": "d2a8735007ce20ec2f26edc316287feadbfe4def6113292333aeafe3f82a2ac9",
+      "size_bytes": 7223
+    },
+    "I10_METRIC_DICTIONARY.md": {
+      "sha256": "fcd4e43d759301bad826c556c58c7d7d0dfd48feac81faca73cb4d54664a1d6b",
+      "size_bytes": 7219
+    },
+    "I10_REDUNDANCY_BY_SEED.csv": {
+      "sha256": "92a67285978dff97a654d733137876ef6abaa247efe48feadbd75aee87d4033d",
+      "size_bytes": 15385
+    },
+    "LEBRE_V0_2_ERRATA_METHOD_NOTE.md": {
+      "sha256": "6cd606fbcdbdc27e1482d7898823ca1263a1c4f712e450cb46f682b008f65a16",
+      "size_bytes": 8258
+    },
+    "LEBRE_V0_2_ERRATA_PROTOCOL.md": {
+      "sha256": "b36c673f7e6dbf6a1668d897db526bef483ffb46be09b6c107d94fc20f330864",
+      "size_bytes": 8830
+    },
+    "LEBRE_V0_2_SEAL_AUDIT_ERRATA_FINAL_REPORT.md": {
+      "sha256": "b0c354a4400818dd5d22325495b33c9799e6e858d09e51c1c232aa48fea03b90",
+      "size_bytes": 14716
+    },
+    "T3_ORDER_PERMUTATION_TEST.csv": {
+      "sha256": "5ce5a3c2e16301593df65bbeb6c8d559b5bc04dadc237926577087288b6dab77",
+      "size_bytes": 499
+    }
+  }
+}

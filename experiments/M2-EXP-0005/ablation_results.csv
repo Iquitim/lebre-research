@@ -1,0 +1,8 @@
+ablation,mse,active_precision,active_recall,state_churn,birth_latency,eviction_latency,flops
+A0_Birth_Disabled,0.4825,1.0,0.0,0.0,0.0,0.0,24.0
+A1_Eviction_Disabled,0.062,0.52,0.96,2.0,45.0,9999.0,48.0
+A2_Maturity_Disabled,0.125,0.88,0.72,9.4,45.0,22.0,32.0
+A3_Controllability_Removed,0.089,0.76,0.82,5.8,50.0,38.0,37.0
+A4_Observability_Removed,0.095,0.74,0.8,6.2,52.0,40.0,37.0
+A5_Sensitivity_Trace_Disabled,0.142,0.92,0.88,3.0,45.0,48.0,29.0
+A6_Always_On_Gated_Ref,0.045,0.5,1.0,0.0,0.0,0.0,54.0

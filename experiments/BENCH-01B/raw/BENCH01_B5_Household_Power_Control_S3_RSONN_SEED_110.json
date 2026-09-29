@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_S3_RSONN_SEED_110",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "S3_RSONN",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.005}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.03167000448540054,
+  "mae": 0.11637741842718995,
+  "nmse": 0.01572840698797648,
+  "mean_flops": 226.0,
+  "p95_flops": 226.0,
+  "peak_flops": 226.0,
+  "memory_bytes": 448,
+  "active_params": 44,
+  "wall_time_sec": 0.7056088447570801
+}

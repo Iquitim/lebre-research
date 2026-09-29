@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_S5_CONTINUAL_BACKPROP_SEED_127",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 127,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6488801497089779,
+  "mae": 0.6458748460688732,
+  "nmse": 1.0114064105454392,
+  "mean_flops": 125.0,
+  "p95_flops": 125.0,
+  "peak_flops": 125.0,
+  "memory_bytes": 544,
+  "active_params": 20,
+  "wall_time_sec": 0.12938952445983887
+}

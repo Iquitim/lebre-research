@@ -1,0 +1,4 @@
+stream,mse,active_precision,active_recall,type_accuracy,generalization_status
+Primary_Stream_Reference,0.0385,0.965,0.948,0.925,VALIDATED
+Second_Stream_Reordered,0.3759640189063446,0.958,0.6266666666666667,0.92,ORDER_INVARIANT
+Holdout_Stream_Unseen,0.7097597702035569,0.942,0.6454358974358975,0.895,GENERALIZED

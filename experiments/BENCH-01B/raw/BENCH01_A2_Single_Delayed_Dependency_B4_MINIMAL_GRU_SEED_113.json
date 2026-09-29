@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_B4_MINIMAL_GRU_SEED_113",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 113,
+  "config": "{\"learning_rate\": 0.001, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.637734278405746,
+  "mae": 0.6360368901974943,
+  "nmse": 1.0002958839550224,
+  "mean_flops": 297.0,
+  "p95_flops": 297.0,
+  "peak_flops": 297.0,
+  "memory_bytes": 600,
+  "active_params": 67,
+  "wall_time_sec": 0.2007288932800293
+}

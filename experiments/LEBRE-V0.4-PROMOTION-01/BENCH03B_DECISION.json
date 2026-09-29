@@ -1,0 +1,62 @@
+{
+  "BENCH03B": {
+    "K-a": 0.9333333333333333,
+    "K-b": 0.9333333333333333,
+    "K-c": true,
+    "K-d": 0.9333333333333333,
+    "K-e": 0.9333333333333333,
+    "passes": 5,
+    "decision": "COMPETITIVE_WITH_OBSERVABILITY_ADVANTAGE",
+    "mean_rank": 3.6,
+    "position": 1,
+    "n_models": 24,
+    "n_tasks": 15,
+    "beats_best_classic": 9,
+    "geo_ratio_vs_best_classic": 0.9844838519935376,
+    "geo_ratio_vs_v032": 0.9351353955306256,
+    "mean_fp": 177.30333074147106,
+    "label": "BENCH-03b held-out"
+  },
+  "BENCH03_semi": {
+    "K-a": 0.8333333333333334,
+    "K-b": 0.9444444444444444,
+    "K-c": true,
+    "K-d": 1.0,
+    "K-e": 0.9444444444444444,
+    "passes": 5,
+    "decision": "COMPETITIVE_WITH_OBSERVABILITY_ADVANTAGE",
+    "mean_rank": 3.5555555555555554,
+    "position": 1,
+    "n_models": 24,
+    "n_tasks": 18,
+    "beats_best_classic": 11,
+    "geo_ratio_vs_best_classic": 0.9746255321633133,
+    "geo_ratio_vs_v032": 0.9431455944127555,
+    "mean_fp": 167.9010793084287,
+    "label": "BENCH-03 semi-held-out"
+  },
+  "top_BENCH03B": {
+    "LEBRE_V042": 3.6,
+    "IPNLMS": 5.4,
+    "LEBRE_V032": 5.73,
+    "B2_CCN": 7.2,
+    "RIVER_HATR": 8.67,
+    "RIVER_SGD_LINREG": 8.87,
+    "CTRL_ARX_NLMS": 9.93,
+    "RIVER_ARF": 10.2,
+    "CTRL_SEASONAL_NAIVE": 10.5,
+    "S3_RSONN": 10.8
+  },
+  "top_BENCH03_semi": {
+    "LEBRE_V042": 3.56,
+    "LEBRE_V032": 5.22,
+    "IPNLMS": 6.28,
+    "B2_CCN": 8.0,
+    "RIVER_SGD_LINREG": 8.11,
+    "CTRL_SEASONAL_NAIVE": 8.2,
+    "CTRL_ARX_NLMS": 9.33,
+    "RIVER_HATR": 9.39,
+    "S3_RSONN": 10.06,
+    "RIVER_ARF": 10.25
+  }
+}

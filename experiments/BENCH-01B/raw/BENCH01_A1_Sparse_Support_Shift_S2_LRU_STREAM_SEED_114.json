@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_S2_LRU_STREAM_SEED_114",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 114,
+  "config": "{\"state_lr\": 0.001, \"readout_lr\": 0.01, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.07971553727285693,
+  "mae": 0.08523450510245505,
+  "nmse": 0.019005694917045214,
+  "mean_flops": 412.0,
+  "p95_flops": 412.0,
+  "peak_flops": 412.0,
+  "memory_bytes": 888,
+  "active_params": 102,
+  "wall_time_sec": 0.08817434310913086
+}

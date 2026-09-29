@@ -1,0 +1,16 @@
+[21:54:13.9780] [INFO] Loaded monitor commands from: D:\Projetos\Codinome Lebre\tools\renode\renode_1.17.0-portable\scripts/monitor.py
+[0mRenode, version 1.17.0 (1.17.0+20260906gitf1dd1b4af)
+
+[91m(monitor) [0minclude @<HOME>\AppData\Local\Temp\claude\lebre_doc\run_ons_vg.resc
+[21:54:14.0011] [INFO] Including script(s): <HOME>\AppData\Local\Temp\claude\lebre_doc\run_ons_vg.resc
+[21:54:14.0126] [INFO] System bus created.
+[21:54:14.4256] [INFO] SynopsysEthernetMAC: Bus width not specified, defaulting to Bits32
+[21:54:14.6839] [INFO] sysbus: Loaded SVD: <HOME>\AppData\Local\Temp\renode-28196\67c80025-6d76-4cfe-8a6f-e185330ffab4.tmp. Name: STM32F40x. Description: STM32F40x.
+[21:54:14.9604] [INFO] sysbus: Loading block of 316624 bytes length at 0x8000000.
+[21:54:14.9653] [INFO] sysbus: Loading block of 95996 bytes length at 0x804D4D0.
+[21:54:15.0596] [INFO] cpu: Guessing VectorTableOffset value to be 0x8000000.
+[21:54:15.0663] [INFO] cpu: Setting initial values: PC = 0x8000045, SP = 0x20040000.
+[21:54:15.0674] [INFO] lebre: Machine started.
+[21:55:00.0689] [INFO] lebre: Machine paused.
+[92mR[0m[92me[0m[92mn[0m[92mo[0m[92md[0m[92me[0m[92m [0m[92mi[0m[92ms[0m[92m [0m[92mq[0m[92mu[0m[92mi[0m[92mt[0m[92mt[0m[92mi[0m[92mn[0m[92mg[0m[92m[0m[92m
+[0m[92m[0m[0m[0m[21:55:00.0936] [INFO] lebre: Disposed.

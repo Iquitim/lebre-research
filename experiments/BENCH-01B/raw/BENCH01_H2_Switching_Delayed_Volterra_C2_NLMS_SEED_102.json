@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_C2_NLMS_SEED_102",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "C2_NLMS",
+  "seed": 102,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.6354850591323555,
+  "mae": 1.1692499621644472,
+  "nmse": 0.9543324448194468,
+  "mean_flops": 245.0,
+  "p95_flops": 245.0,
+  "peak_flops": 245.0,
+  "memory_bytes": 352,
+  "active_params": 40,
+  "wall_time_sec": 0.08390665054321289
+}

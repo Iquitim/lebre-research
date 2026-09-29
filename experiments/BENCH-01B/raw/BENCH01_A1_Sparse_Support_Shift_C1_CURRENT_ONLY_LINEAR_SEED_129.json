@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_C1_CURRENT_ONLY_LINEAR_SEED_129",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 129,
+  "config": "{\"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0784229561522013,
+  "mae": 0.08800228127353936,
+  "nmse": 0.018499405441000222,
+  "mean_flops": 201.0,
+  "p95_flops": 201.0,
+  "peak_flops": 201.0,
+  "memory_bytes": 432,
+  "active_params": 50,
+  "wall_time_sec": 0.06826019287109375
+}

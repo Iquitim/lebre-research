@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_Track_B_SEED_103",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "Track_B",
+  "seed": 103,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.722779328787849,
+  "mae": 0.6813415830895191,
+  "nmse": 1.135941205092558,
+  "mean_flops": 97.48742857142857,
+  "p95_flops": 118.0,
+  "peak_flops": 118.0,
+  "memory_bytes": 488,
+  "active_params": 23,
+  "wall_time_sec": 0.25265955924987793
+}

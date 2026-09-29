@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_C4_FIXED_LAG_LINEAR_SEED_105",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 105,
+  "config": "{\"max_lag\": 4, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 4.078747126593764,
+  "mae": 1.593272847479383,
+  "nmse": 0.9548157505455631,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 96,
+  "active_params": 4,
+  "wall_time_sec": 0.07847213745117188
+}

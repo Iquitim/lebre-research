@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_Track_B_SEED_106",
+  "task_id": "A6_Context_Routing",
+  "model_id": "Track_B",
+  "seed": 106,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.41678734131326783,
+  "mae": 0.5116518999314503,
+  "nmse": 0.5666640617721155,
+  "mean_flops": 56.17914285714286,
+  "p95_flops": 78.0,
+  "peak_flops": 78.0,
+  "memory_bytes": 408,
+  "active_params": 10,
+  "wall_time_sec": 0.2213742733001709
+}

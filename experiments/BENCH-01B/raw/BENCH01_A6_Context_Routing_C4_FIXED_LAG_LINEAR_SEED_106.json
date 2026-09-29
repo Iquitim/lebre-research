@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_C4_FIXED_LAG_LINEAR_SEED_106",
+  "task_id": "A6_Context_Routing",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 106,
+  "config": "{\"max_lag\": 4, \"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.7372149811536349,
+  "mae": 0.5558993849302799,
+  "nmse": 1.0023174751504234,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 96,
+  "active_params": 4,
+  "wall_time_sec": 0.08710002899169922
+}

@@ -1,0 +1,13 @@
+s,operator,coverage,phase_cov_min,phase_cov_max,phases_observed_by_refresh
+24,A_code_current_indicator_x8,0.9138020833333333,0.74375,1.0,3
+24,B_accumulated_8_indicators,0.9020833333333333,0.725,1.0,3
+24,C_every_step,0.9010416666666666,0.725,1.0,3
+48,A_code_current_indicator_x8,0.9005208333333333,0.71875,1.0,6
+48,B_accumulated_8_indicators,0.9018229166666667,0.675,1.0,6
+48,C_every_step,0.9002604166666667,0.66875,1.0,6
+144,A_code_current_indicator_x8,0.9126736111111111,0.7,1.0,18
+144,B_accumulated_8_indicators,0.9012586805555556,0.65,1.0,18
+144,C_every_step,0.8999131944444444,0.66875,1.0,18
+25,A_code_current_indicator_x8,0.8965,0.7125,1.0,25
+25,B_accumulated_8_indicators,0.90225,0.725,1.0,25
+25,C_every_step,0.90175,0.7125,1.0,25

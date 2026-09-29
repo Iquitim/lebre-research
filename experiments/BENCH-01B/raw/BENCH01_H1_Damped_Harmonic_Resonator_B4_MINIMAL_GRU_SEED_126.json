@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_B4_MINIMAL_GRU_SEED_126",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 126,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 36.080772251782626,
+  "mae": 4.0406167362399446,
+  "nmse": 0.9709457684164224,
+  "mean_flops": 657.0,
+  "p95_flops": 657.0,
+  "peak_flops": 657.0,
+  "memory_bytes": 1320,
+  "active_params": 157,
+  "wall_time_sec": 0.19371652603149414
+}

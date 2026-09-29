@@ -1,0 +1,12 @@
+Component,Original_Count,Original_Convention,Standardized_FP_FLOPs,Integer_Ops,Memory_Ops,Control_Ops
+Base Linear Forward Pass,10.0,2*D (D=5: 5 mult + 5 add),10.0,0,40,0
+Scalar Recurrent Forward Pass,8.0,Drive (3) + tanh (3) + out (2),8.0,0,8,0
+Base Linear Weight Adaptation,15.0,3*D (Dot 2D + scale/add D),15.0,0,20,0
+Scalar Recurrent Weight Adaptation,4.0,Update (3) + clip (1),4.0,0,8,0
+History Buffer Write,5.0,D memory stores mislabeled as FLOPs,0.0,1,20,0
+Active Tap Forward Pass,4.0,2*K (K=2.0: 2 mult + 2 add),4.0,0,16,0
+Active Tap Weight Adaptation,8.0,4*K (K=2.0: 2 mult + 2 add),8.0,0,8,0
+Two-Timescale Relevance Update,8.0,4*K (K=2.0: marginal error + EMA),8.0,0,8,0
+Candidate Probing,8.0,4*M (M=2: 2 mult + 2 add),8.0,0,8,0
+Shadow Candidate Scoring,12.0,8*C (C=1.5: error + gain + EMA),12.0,0,24,0
+TOTAL_SUM,82.0,Original B7 Reference,77.0,1,160,0

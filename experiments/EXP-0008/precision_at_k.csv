@@ -1,0 +1,176 @@
+n,seed,channel,precision_at_3,precision_at_5,enrichment_at_3
+1,42,I0 Passive Corr,0.0,0.0,0.0
+1,123,I0 Passive Corr,0.3333333333333333,0.2,15.833333333333332
+1,456,I0 Passive Corr,0.3333333333333333,0.2,12.305555555555555
+1,789,I0 Passive Corr,0.0,0.0,0.0
+1,1024,I0 Passive Corr,0.0,0.0,0.0
+1,42,I1 Delayed Corr,0.0,0.0,0.0
+1,123,I1 Delayed Corr,0.0,0.0,0.0
+1,456,I1 Delayed Corr,0.0,0.2,0.0
+1,789,I1 Delayed Corr,0.0,0.0,0.0
+1,1024,I1 Delayed Corr,0.0,0.0,0.0
+1,42,I2 Single Micro-Update Gain,0.0,0.0,0.0
+1,123,I2 Single Micro-Update Gain,0.0,0.0,0.0
+1,456,I2 Single Micro-Update Gain,0.0,0.0,0.0
+1,789,I2 Single Micro-Update Gain,0.0,0.0,0.0
+1,1024,I2 Single Micro-Update Gain,0.0,0.0,0.0
+1,42,I3 Paired Shadow Gain,0.0,0.0,0.0
+1,123,I3 Paired Shadow Gain,0.0,0.0,0.0
+1,456,I3 Paired Shadow Gain,0.0,0.0,0.0
+1,789,I3 Paired Shadow Gain,0.0,0.0,0.0
+1,1024,I3 Paired Shadow Gain,0.0,0.0,0.0
+1,42,I4 Persistent Micro-Update,0.0,0.0,0.0
+1,123,I4 Persistent Micro-Update,0.0,0.0,0.0
+1,456,I4 Persistent Micro-Update,0.0,0.0,0.0
+1,789,I4 Persistent Micro-Update,0.0,0.0,0.0
+1,1024,I4 Persistent Micro-Update,0.0,0.2,0.0
+1,42,Causal Direction Margin,0.0,0.0,0.0
+1,123,Causal Direction Margin,0.0,0.0,0.0
+1,456,Causal Direction Margin,0.3333333333333333,0.2,12.305555555555555
+1,789,Causal Direction Margin,0.0,0.0,0.0
+1,1024,Causal Direction Margin,0.0,0.0,0.0
+1,42,Excess Causal Gain,0.0,0.0,0.0
+1,123,Excess Causal Gain,0.0,0.0,0.0
+1,456,Excess Causal Gain,0.0,0.2,0.0
+1,789,Excess Causal Gain,0.0,0.0,0.0
+1,1024,Excess Causal Gain,0.0,0.0,0.0
+2,42,I0 Passive Corr,0.0,0.0,0.0
+2,123,I0 Passive Corr,0.3333333333333333,0.2,15.944444444444443
+2,456,I0 Passive Corr,0.3333333333333333,0.2,12.305555555555555
+2,789,I0 Passive Corr,0.3333333333333333,0.2,40.99999999999999
+2,1024,I0 Passive Corr,0.0,0.0,0.0
+2,42,I1 Delayed Corr,0.0,0.0,0.0
+2,123,I1 Delayed Corr,0.0,0.0,0.0
+2,456,I1 Delayed Corr,0.0,0.0,0.0
+2,789,I1 Delayed Corr,0.0,0.0,0.0
+2,1024,I1 Delayed Corr,0.0,0.0,0.0
+2,42,I2 Single Micro-Update Gain,0.0,0.0,0.0
+2,123,I2 Single Micro-Update Gain,0.0,0.0,0.0
+2,456,I2 Single Micro-Update Gain,0.0,0.2,0.0
+2,789,I2 Single Micro-Update Gain,0.0,0.0,0.0
+2,1024,I2 Single Micro-Update Gain,0.0,0.0,0.0
+2,42,I3 Paired Shadow Gain,0.3333333333333333,0.2,13.666666666666666
+2,123,I3 Paired Shadow Gain,0.3333333333333333,0.2,15.944444444444443
+2,456,I3 Paired Shadow Gain,0.0,0.0,0.0
+2,789,I3 Paired Shadow Gain,0.0,0.0,0.0
+2,1024,I3 Paired Shadow Gain,0.0,0.0,0.0
+2,42,I4 Persistent Micro-Update,0.0,0.0,0.0
+2,123,I4 Persistent Micro-Update,0.0,0.0,0.0
+2,456,I4 Persistent Micro-Update,0.0,0.0,0.0
+2,789,I4 Persistent Micro-Update,0.0,0.0,0.0
+2,1024,I4 Persistent Micro-Update,0.0,0.0,0.0
+2,42,Causal Direction Margin,0.0,0.0,0.0
+2,123,Causal Direction Margin,0.0,0.0,0.0
+2,456,Causal Direction Margin,0.0,0.0,0.0
+2,789,Causal Direction Margin,0.0,0.0,0.0
+2,1024,Causal Direction Margin,0.0,0.0,0.0
+2,42,Excess Causal Gain,0.0,0.2,0.0
+2,123,Excess Causal Gain,0.0,0.0,0.0
+2,456,Excess Causal Gain,0.0,0.0,0.0
+2,789,Excess Causal Gain,0.0,0.0,0.0
+2,1024,Excess Causal Gain,0.0,0.0,0.0
+3,42,I0 Passive Corr,0.0,0.0,0.0
+3,123,I0 Passive Corr,0.3333333333333333,0.2,15.777777777777777
+3,456,I0 Passive Corr,0.3333333333333333,0.2,12.305555555555555
+3,789,I0 Passive Corr,0.3333333333333333,0.2,39.199999999999996
+3,1024,I0 Passive Corr,0.0,0.0,0.0
+3,42,I1 Delayed Corr,0.3333333333333333,0.2,12.23076923076923
+3,123,I1 Delayed Corr,0.3333333333333333,0.4,15.777777777777777
+3,456,I1 Delayed Corr,0.0,0.0,0.0
+3,789,I1 Delayed Corr,0.0,0.0,0.0
+3,1024,I1 Delayed Corr,0.0,0.0,0.0
+3,42,I2 Single Micro-Update Gain,0.0,0.0,0.0
+3,123,I2 Single Micro-Update Gain,0.0,0.0,0.0
+3,456,I2 Single Micro-Update Gain,0.0,0.2,0.0
+3,789,I2 Single Micro-Update Gain,0.0,0.0,0.0
+3,1024,I2 Single Micro-Update Gain,0.0,0.0,0.0
+3,42,I3 Paired Shadow Gain,0.0,0.2,0.0
+3,123,I3 Paired Shadow Gain,0.0,0.0,0.0
+3,456,I3 Paired Shadow Gain,0.0,0.0,0.0
+3,789,I3 Paired Shadow Gain,0.0,0.0,0.0
+3,1024,I3 Paired Shadow Gain,0.0,0.0,0.0
+3,42,I4 Persistent Micro-Update,0.0,0.0,0.0
+3,123,I4 Persistent Micro-Update,0.0,0.0,0.0
+3,456,I4 Persistent Micro-Update,0.0,0.0,0.0
+3,789,I4 Persistent Micro-Update,0.0,0.0,0.0
+3,1024,I4 Persistent Micro-Update,0.0,0.0,0.0
+3,42,Causal Direction Margin,0.0,0.2,0.0
+3,123,Causal Direction Margin,0.3333333333333333,0.2,15.777777777777777
+3,456,Causal Direction Margin,0.0,0.0,0.0
+3,789,Causal Direction Margin,0.0,0.0,0.0
+3,1024,Causal Direction Margin,0.0,0.0,0.0
+3,42,Excess Causal Gain,0.0,0.2,0.0
+3,123,Excess Causal Gain,0.3333333333333333,0.2,15.777777777777777
+3,456,Excess Causal Gain,0.0,0.0,0.0
+3,789,Excess Causal Gain,0.0,0.0,0.0
+3,1024,Excess Causal Gain,0.0,0.0,0.0
+4,42,I0 Passive Corr,0.3333333333333333,0.2,8.45238095238095
+4,123,I0 Passive Corr,0.3333333333333333,0.2,14.2
+4,456,I0 Passive Corr,0.3333333333333333,0.2,12.555555555555555
+4,789,I0 Passive Corr,0.3333333333333333,0.2,48.33333333333333
+4,1024,I0 Passive Corr,0.0,0.0,0.0
+4,42,I1 Delayed Corr,0.6666666666666666,0.4,16.9047619047619
+4,123,I1 Delayed Corr,0.0,0.0,0.0
+4,456,I1 Delayed Corr,0.3333333333333333,0.2,12.555555555555555
+4,789,I1 Delayed Corr,0.0,0.0,0.0
+4,1024,I1 Delayed Corr,0.0,0.0,0.0
+4,42,I2 Single Micro-Update Gain,0.0,0.0,0.0
+4,123,I2 Single Micro-Update Gain,0.0,0.2,0.0
+4,456,I2 Single Micro-Update Gain,0.0,0.0,0.0
+4,789,I2 Single Micro-Update Gain,0.0,0.0,0.0
+4,1024,I2 Single Micro-Update Gain,0.0,0.0,0.0
+4,42,I3 Paired Shadow Gain,0.0,0.2,0.0
+4,123,I3 Paired Shadow Gain,0.0,0.0,0.0
+4,456,I3 Paired Shadow Gain,0.0,0.0,0.0
+4,789,I3 Paired Shadow Gain,0.0,0.2,0.0
+4,1024,I3 Paired Shadow Gain,0.0,0.0,0.0
+4,42,I4 Persistent Micro-Update,0.0,0.0,0.0
+4,123,I4 Persistent Micro-Update,0.0,0.0,0.0
+4,456,I4 Persistent Micro-Update,0.0,0.0,0.0
+4,789,I4 Persistent Micro-Update,0.0,0.0,0.0
+4,1024,I4 Persistent Micro-Update,0.0,0.0,0.0
+4,42,Causal Direction Margin,0.3333333333333333,0.2,8.45238095238095
+4,123,Causal Direction Margin,0.0,0.0,0.0
+4,456,Causal Direction Margin,0.3333333333333333,0.2,12.555555555555555
+4,789,Causal Direction Margin,0.0,0.0,0.0
+4,1024,Causal Direction Margin,0.0,0.0,0.0
+4,42,Excess Causal Gain,0.0,0.2,0.0
+4,123,Excess Causal Gain,0.0,0.0,0.0
+4,456,Excess Causal Gain,0.3333333333333333,0.2,12.555555555555555
+4,789,Excess Causal Gain,0.0,0.0,0.0
+4,1024,Excess Causal Gain,0.0,0.0,0.0
+5,42,I0 Passive Corr,0.0,0.2,0.0
+5,123,I0 Passive Corr,0.3333333333333333,0.2,17.333333333333332
+5,456,I0 Passive Corr,0.3333333333333333,0.2,12.148148148148147
+5,789,I0 Passive Corr,0.3333333333333333,0.2,45.33333333333333
+5,1024,I0 Passive Corr,0.0,0.0,0.0
+5,42,I1 Delayed Corr,0.0,0.0,0.0
+5,123,I1 Delayed Corr,0.0,0.0,0.0
+5,456,I1 Delayed Corr,0.0,0.0,0.0
+5,789,I1 Delayed Corr,0.0,0.0,0.0
+5,1024,I1 Delayed Corr,0.0,0.0,0.0
+5,42,I2 Single Micro-Update Gain,0.0,0.0,0.0
+5,123,I2 Single Micro-Update Gain,0.0,0.0,0.0
+5,456,I2 Single Micro-Update Gain,0.0,0.0,0.0
+5,789,I2 Single Micro-Update Gain,0.0,0.0,0.0
+5,1024,I2 Single Micro-Update Gain,0.0,0.0,0.0
+5,42,I3 Paired Shadow Gain,0.0,0.0,0.0
+5,123,I3 Paired Shadow Gain,0.0,0.0,0.0
+5,456,I3 Paired Shadow Gain,0.0,0.0,0.0
+5,789,I3 Paired Shadow Gain,0.0,0.0,0.0
+5,1024,I3 Paired Shadow Gain,0.3333333333333333,0.2,18.0
+5,42,I4 Persistent Micro-Update,0.0,0.0,0.0
+5,123,I4 Persistent Micro-Update,0.0,0.0,0.0
+5,456,I4 Persistent Micro-Update,0.0,0.0,0.0
+5,789,I4 Persistent Micro-Update,0.0,0.0,0.0
+5,1024,I4 Persistent Micro-Update,0.0,0.0,0.0
+5,42,Causal Direction Margin,0.0,0.0,0.0
+5,123,Causal Direction Margin,0.0,0.0,0.0
+5,456,Causal Direction Margin,0.0,0.0,0.0
+5,789,Causal Direction Margin,0.0,0.0,0.0
+5,1024,Causal Direction Margin,0.0,0.0,0.0
+5,42,Excess Causal Gain,0.3333333333333333,0.2,8.261904761904761
+5,123,Excess Causal Gain,0.0,0.0,0.0
+5,456,Excess Causal Gain,0.0,0.0,0.0
+5,789,Excess Causal Gain,0.0,0.0,0.0
+5,1024,Excess Causal Gain,0.0,0.0,0.0

@@ -1,0 +1,138 @@
+{
+  "stage_id": "LEBRE-V0.2-RECURRENT-SHADOW-COST-RECONCILIATION-01",
+  "milestone": "Milestone 2 (Experimental Stream v0.2)",
+  "phase_a_status": "COMPLETE",
+  "phase_b_executed": "YES",
+  "primary_outcome": "RECURRENT_CADENCE_STATE_DISTORTION",
+  "empirical_mean_total_fp": 85.98382380952383,
+  "empirical_p95_total_fp": 97.58184999999999,
+  "delta_nmse_vs_c0": 0.032063739017757505,
+  "ci95_upper_vs_c0": 0.034118935981224965,
+  "delta_nmse_vs_r0": 0.053432197656599435,
+  "ci95_upper_vs_r0": 0.061658565780685716,
+  "compute_gate": "PASS",
+  "local_noninferiority": "NOT_SUPPORTED",
+  "global_r0_noninferiority": "NOT_SUPPORTED",
+  "artifacts": {
+    "RECURRENT_SHADOW_PROTOCOL.md": {
+      "sha256": "3525a8465db0c2ac7c48be769210932c653fc4d4cf30ed0e1e9a2bc390ff387d",
+      "bytes": 3086
+    },
+    "RECURRENT_SHADOW_PREREGISTRATION.md": {
+      "sha256": "dba72498bd3060cdbcc0750e6f4b6b722516fbf7ed95557c0ce8796819f74bd6",
+      "bytes": 2362
+    },
+    "PARENT_HASHES.txt": {
+      "sha256": "af74c833b4ec2cdb22e9e1766d463d6033b7911e739dc4a0a96a810bf301c54a",
+      "bytes": 2210
+    },
+    "SEED_PROVENANCE.md": {
+      "sha256": "caa27906ae7135a0585b93cbed73f81efe3417352caf9d7110f9f721734dfc44",
+      "bytes": 2631
+    },
+    "RECURRENT_SHADOW_OPERATION_LEDGER.csv": {
+      "sha256": "e815aafb736dbf478018a812f45d67fc6c17bcdc1db3207ff55abb67ca72a65d",
+      "bytes": 2109
+    },
+    "RECURRENT_COMPUTE_RECONCILIATION.csv": {
+      "sha256": "2d244b7865d97c3437b1d0d3c4531a5ff6a74f8e2a7d262044a40b4d29212e05",
+      "bytes": 371
+    },
+    "RECURRENT_CURRENT_CLOCK_AUDIT.md": {
+      "sha256": "ae8d035c7e63e9f6949f98bc84308b0ae4db4144db1bcce22cccc8168819b754",
+      "bytes": 2219
+    },
+    "RECURRENT_PRIOR_TRANSFERABILITY_AUDIT.md": {
+      "sha256": "1e0f225ebf3db96f3776900b12811f3113b112727edebb7d7d938126a5013065",
+      "bytes": 3557
+    },
+    "PRIOR_D9F_D9L_RECONCILIATION.csv": {
+      "sha256": "0ee344d8e490140a154f7944f6b6efb8016de1695a537858eb19b8955732a26c",
+      "bytes": 1072
+    },
+    "RECURRENT_COST_BY_TASK.csv": {
+      "sha256": "ca78991226591577563a7fd37c48356a92c95ef89991057dec8357b004693746",
+      "bytes": 1927
+    },
+    "RECURRENT_COST_BY_LIFECYCLE_STATE.csv": {
+      "sha256": "d695ba4155edcf780f295974de01d076bbeb5ae5b80796ea76bebeace9e6ab42",
+      "bytes": 520
+    },
+    "RECURRENT_ORACLE_SAVINGS.csv": {
+      "sha256": "81b8a017637c921d0376e5a4c1f7693a44881af4cc1e0caceebd65d9c2d4001b",
+      "bytes": 744
+    },
+    "RECURRENT_RESOURCE_CLOSURE_TABLE.csv": {
+      "sha256": "00f58cc074154258cb7ffe7b2130deb8233a00e4649d2e314bec84a4a09dc820",
+      "bytes": 618
+    },
+    "RECURRENT_FAST_FORWARD_DERIVATION.md": {
+      "sha256": "2b9f13f90ec78cf62ec949f6d7a0cee8e46cf5ac4bc958e1ac06855e41045f7c",
+      "bytes": 3326
+    },
+    "RECURRENT_SKIP_SEMANTICS.md": {
+      "sha256": "1187186343b573c372dc9e5979d696fd58a8ee46c5b934a55152c3d88430bb26",
+      "bytes": 2204
+    },
+    "RECURRENT_SPARSE_EXECUTION_LITERATURE_NOTE.md": {
+      "sha256": "d62a5e8659244bd4977fcb0f62864c9ece2795f98b7306993ab49ce2ee93a91a",
+      "bytes": 4407
+    },
+    "PHASE_A_FEASIBILITY_DECISION.md": {
+      "sha256": "900c0535c381def3d4466cf771af26c5b13077f5e972f9cefd9698136610bbbf",
+      "bytes": 3714
+    },
+    "RECURRENT_DEV_RESULTS.csv": {
+      "sha256": "0f443fd0a754319af19fbed9b581b1a330a6335b032c2ffa6ef0f6f6d899553b",
+      "bytes": 130797
+    },
+    "FINAL_RECURRENT_CANDIDATE_FREEZE.md": {
+      "sha256": "bf0b718944089c6d9b684ef2c0c4d2079ea9098a568f67fc57c2efcc6694f415",
+      "bytes": 2154
+    },
+    "RECURRENT_FINAL_RESULTS.csv": {
+      "sha256": "7406636538253b389ec426aad806388eefa7ca44cd255e27b805f00b0ffcccb7",
+      "bytes": 389184
+    },
+    "RECURRENT_STATE_TRAJECTORY_ANALYSIS.csv": {
+      "sha256": "5d7bd9f4150b9f9327ff400d28bd1e2b1fb06cd153612a99798688a1a0cdabad",
+      "bytes": 2831
+    },
+    "RECURRENT_RESOURCE_BY_SEED.csv": {
+      "sha256": "5db8bb5e5244b5e25d59a77bb5308a4cbc35079c297f3944693b3a2b5082352f",
+      "bytes": 4230
+    },
+    "RECURRENT_UPDATE_DUTY.csv": {
+      "sha256": "8f981104ac183d3589498af5bee1289578d2b7488fa9fbd77af5451e51b5306b",
+      "bytes": 274
+    },
+    "RECURRENT_SWITCHING_ANALYSIS.csv": {
+      "sha256": "c77768221b31f977d9e008349a678641d6ed21dfab94ab506556d97efccee1b5",
+      "bytes": 421
+    },
+    "RECURRENT_QUIESCENCE_ANALYSIS.csv": {
+      "sha256": "ea229af04e6e43b626aaad13ccc893d1a471f63106778863da430d49a11d0160",
+      "bytes": 317
+    },
+    "I9_COMPLEMENTARITY_RECHECK.csv": {
+      "sha256": "7696a78cb93c9e8e67b85c5a71c0c0c8d2f48991302244a8629a7eba1821e9ea",
+      "bytes": 297
+    },
+    "LOCAL_NONINFERIORITY.csv": {
+      "sha256": "85498091ccd74497194a96fdb5452725c6afa6c1a23971119f5b44bbd375ef93",
+      "bytes": 297
+    },
+    "GLOBAL_R0_STATUS.csv": {
+      "sha256": "8146b4e191ff2805c461be507b0e3a95a5dd5e13e84c3a76947c342b59c0f862",
+      "bytes": 293
+    },
+    "RECURRENT_SHADOW_FINAL_REPORT.md": {
+      "sha256": "f81f5dab698c389c774d5414b2200bbcf6ecc0fb044dff6fdd1f8aa5052c5729",
+      "bytes": 15927
+    },
+    "generate_recurrent_shadow_outputs.py": {
+      "sha256": "c4099fcb4500220ad2ac510b93bcbbbfb92a7b70dc896be681cdf2116b76c191",
+      "bytes": 14133
+    }
+  }
+}

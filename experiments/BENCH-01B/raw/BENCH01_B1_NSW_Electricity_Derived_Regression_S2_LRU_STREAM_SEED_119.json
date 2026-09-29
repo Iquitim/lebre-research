@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_S2_LRU_STREAM_SEED_119",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 119,
+  "config": "{\"state_lr\": 0.001, \"readout_lr\": 0.03, \"state_decay\": 0.98}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0013577636947913405,
+  "mae": 0.017826715296505553,
+  "nmse": 0.7282525171586876,
+  "mean_flops": 52.0,
+  "p95_flops": 52.0,
+  "peak_flops": 52.0,
+  "memory_bytes": 168,
+  "active_params": 12,
+  "wall_time_sec": 0.4052572250366211
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_C2_NLMS_SEED_104",
+  "task_id": "A6_Context_Routing",
+  "model_id": "C2_NLMS",
+  "seed": 104,
+  "config": "{\"step_size\": 0.1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4061887525839195,
+  "mae": 0.50649281232909,
+  "nmse": 0.5487302263420364,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.07756423950195312
+}

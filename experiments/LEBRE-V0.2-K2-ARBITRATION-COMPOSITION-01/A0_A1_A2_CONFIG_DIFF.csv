@@ -1,0 +1,11 @@
+parameter,arm_A0,arm_A1,arm_A2,A2_vs_A1_status,mechanism
+K_rec_forward,1.0,2.0,2.0,IDENTICAL,Recurrent forward decimation (HOLD_STATE)
+K_rec_learn,10.0,10.0,10.0,IDENTICAL,RTRL learning cadence
+K_arbitration,5.0,5.0,10.0,SINGLE_NEW_INTERVENTION,Arbitration execution period (5 -> 10)
+alpha_gain_EMA,0.02,0.02,0.02,IDENTICAL,Fixed per-event EMA smoothing coefficient
+H_capacity,32.0,32.0,32.0,IDENTICAL,Frontier capacity
+B_batch,4.0,4.0,4.0,IDENTICAL,Probing batch size
+K_probe,2.0,2.0,2.0,IDENTICAL,Probing period
+K_cand_obs,5.0,5.0,5.0,IDENTICAL,Candidate observation period
+K_cand_learn,10.0,10.0,10.0,IDENTICAL,Candidate learning period
+theta_tol,0.01,0.01,0.01,IDENTICAL,Arbitration tolerance threshold

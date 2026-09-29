@@ -1,0 +1,11 @@
+component,analytical_model_bytes,implemented_logical_bytes,allocated_capacity_bytes,mean_occupied_bytes_c0,mean_occupied_bytes_c1,max_peak_bytes,byte_reduction_c1,notes
+CausalStandardScaler,40,80,80,80.0,80.0,80,0.0,5 features x 16 B (float64 mean + var). Protocol initially modeled as float32 (40 B).
+FP16HistoryRingBuffer,330,332,332,332.0,332.0,332,0.0,5 features x 33 lags x 2 B + 2 B pointer index. Protocol omitted 2 B pointer.
+LinearBasePredictor,24,40,40,40.0,40.0,40,0.0,5 features x 8 B (float64 weights). Early v0.1 model had 5x4+4=24 B.
+ShadowCorrelationGrid,80,660,660,660.0,330.0,330,330.0,C0: 5x33 float32 = 660 B. C1: 5x33 float16 = 330 B. 50.0% reduction.
+ActiveTapMetadata,64,64,64,41.6,41.6,64,0.0,Max 4 taps x 16 B = 64 B. Mean occupied taps across tasks = 2.49 taps (39.8 B).
+ProvisionalCandidateMetadata,48,48,48,21.3838,21.3838,48,0.0,Max 3 candidates x 16 B = 48 B. Mean occupied candidates = 1.20 (19.2 B).
+ActiveRecurrentUnit,48,48,48,19.34,19.34,48,0.0,Allocated dynamically in RECURRENT and BOTH states (48 B). Inactive in memoryless/lag.
+ShadowRecurrentUnit,48,48,48,48.0,48.0,48,0.0,Permanently allocated for background shadow recurrent tracking (48 B).
+CapacityArbitrator,64,64,64,64.0,64.0,64,0.0,"Loss filters, gain filters, hysteresis state registers = 64 B."
+TOTAL_PERSISTENT_STATE,746,1384,1384,1306.32,976.32,1054,330.0,C1 Mean Occupied = 976.32 B (PASS <= 1024 B). C1 Max Capacity = 1054 B.

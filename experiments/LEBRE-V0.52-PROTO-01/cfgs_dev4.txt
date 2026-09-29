@@ -1,0 +1,1 @@
+{"lazy_r4_m1": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1", lazy_halves=True, rls_every=4, m_slots=1)}

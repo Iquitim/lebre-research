@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>KaTeX Test</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+        ]
+    });
+});
+</script>
+<style>
+  body { font-family: sans-serif; margin: 40px; }
+  h1 { color: #1e3a8a; }
+</style>
+</head>
+<body>
+  <h1>LEBRE KaTeX Test</h1>
+  <p>Here is an inline equation: $y_t = y_{\text{base},t} + y_{\text{rec},t}$ and a block equation:</p>
+  <p>$$\mathcal{L}(w) = \frac{1}{2}(y_t - \hat{y}_t)^2 + \lambda \sum |w_i|$$</p>
+</body>
+</html>

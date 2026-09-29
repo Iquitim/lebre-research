@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_Track_B_SEED_114",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "Track_B",
+  "seed": 114,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.5607156912940257,
+  "mae": 0.6972432332167663,
+  "nmse": 0.02481674721979674,
+  "mean_flops": 69.80902040816326,
+  "p95_flops": 80.0,
+  "peak_flops": 90.0,
+  "memory_bytes": 432,
+  "active_params": 16,
+  "wall_time_sec": 1.2755975723266602
+}

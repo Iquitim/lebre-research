@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_B1_RZA_LMS_SEED_101",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "B1_RZA_LMS",
+  "seed": 101,
+  "config": "{\"learning_rate\": 0.003, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.7753849384537452,
+  "mae": 1.1955680580378882,
+  "nmse": 0.9806736584952048,
+  "mean_flops": 401.0,
+  "p95_flops": 401.0,
+  "peak_flops": 401.0,
+  "memory_bytes": 384,
+  "active_params": 40,
+  "wall_time_sec": 0.10367035865783691
+}

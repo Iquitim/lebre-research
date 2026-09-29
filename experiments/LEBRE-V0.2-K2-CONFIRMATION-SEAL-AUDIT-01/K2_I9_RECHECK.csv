@@ -1,0 +1,3 @@
+metric,c0_value,c2_value,criterion,status
+G_D|B+R (Delay gain over base+rec),0.3965972860342509,0.41448406413955075,> 0.0,PASS
+G_R|B+D (Recurrent gain over base+delay),0.10318522257545666,0.06324136488334603,> 0.0,PASS

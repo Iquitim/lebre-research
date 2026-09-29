@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_S2_LRU_STREAM_SEED_104",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 104,
+  "config": "{\"state_lr\": 0.01, \"readout_lr\": 0.001, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6420556722388452,
+  "mae": 0.6399806695428406,
+  "nmse": 1.0082554992893988,
+  "mean_flops": 172.0,
+  "p95_flops": 172.0,
+  "peak_flops": 172.0,
+  "memory_bytes": 408,
+  "active_params": 42,
+  "wall_time_sec": 0.09432578086853027
+}

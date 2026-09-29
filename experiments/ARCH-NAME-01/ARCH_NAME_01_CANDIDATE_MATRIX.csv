@@ -1,0 +1,32 @@
+Candidate,Full Expansion,Family,Core Concept,Pronunciation,Scientific Fit,Pronunciability,Memorability,Distinctiveness,Searchability,Longevity,Low Collision,Acronym Naturalness,Total Score,Academic Collision,Software Collision,Trademark Risk,Status
+AETAS,Adaptive Evidence-driven Temporal Allocation System,WORD_ACRONYM,Latin for lifespan / epoch / maturation age,EY-tahs,5.0,5.0,4.5,4.5,4.5,5.0,4.8,4.7,38.0,LOW,LOW,LOW,FINALIST
+LEBRE,Lifecycle-governed Evidence-driven Bounded Resource Engine,WORD_ACRONYM,Portuguese for hare (agile/frugal) & Project Codename Heritage,LEH-bree / LEH-breh,4.5,4.5,5.0,5.0,5.0,4.8,5.0,4.2,38.0,LOW,LOW,LOW,FINALIST
+SOLON,Structural Online Learning with Obsolescence Negotiation,WORD_ACRONYM,Athenian economic lawmaker & debt balance,SO-lon,4.8,5.0,4.5,4.5,4.5,4.8,4.5,4.5,37.1,LOW,LOW,LOW,FINALIST
+OIKOS,Online Inference-constrained Kinetic Organization of Structure,METAPHORICAL,Greek for household economy & ecology,OY-koss,5.0,4.5,4.5,4.5,3.5,5.0,3.5,4.0,34.5,LOW,MODERATE,MODERATE,FINALIST
+STRATO,Structural Temporal Resource-governed Adaptive Topology Organization,WORD_ACRONYM,Latin stratum (layered structural tiers),STRAH-toh,4.2,5.0,4.0,4.0,3.8,4.5,3.8,4.2,33.5,LOW,LOW,MODERATE,FINALIST
+TELOS,Temporal Evidence-driven Lifecycle for Online Structure,WORD_ACRONYM,Greek for purpose / goal / end state,TEH-loss,4.2,5.0,4.0,3.8,3.2,4.5,3.2,4.0,31.9,MODERATE,MODERATE,MODERATE,SHORTLISTED
+ORDO,Online Resource-governed Dynamic Organization,WORD_ACRONYM,Latin for order / methodical rank,OR-doh,4.2,4.8,3.8,3.5,3.2,4.2,3.5,4.2,31.4,MODERATE,LOW,LOW,SHORTLISTED
+TRIBUTE,Temporal Resource-governed Incremental Budget Utility and Tax Eviction,WORD_ACRONYM,Payment of rent/tax by active parameters,TRIB-yoot,4.2,4.0,4.0,4.0,3.5,4.0,4.5,3.2,31.4,LOW,LOW,LOW,SHORTLISTED
+THALLUS,None,METAPHORICAL,Botanical modular growth under resource limits,THAL-us,4.0,3.5,3.5,4.5,4.5,3.8,4.5,N/A,31.3,LOW,LOW,LOW,SHORTLISTED
+PARSIM,Parsimonious Adaptive Recurrent and Structural Inference Mechanism,HYBRID,Parsimony / Occam's razor,PAR-sim,4.0,4.5,4.0,3.5,2.0,4.0,2.0,3.8,27.8,MODERATE,HIGH (MATLAB),MODERATE,SHORTLISTED
+FORMA,Frugal Online Resource-governed Morphological Adaptation,WORD_ACRONYM,Shape / morphology / form,FOR-muh,4.5,5.0,4.5,3.5,2.0,4.5,1.0,4.5,29.5,LOW,HIGH (Autodesk),HIGH,ELIMINATED
+MODUS,Modular Online Dynamic Utility Structure,WORD_ACRONYM,Mode / manner / measure,MO-dus,4.2,5.0,4.2,3.0,1.5,4.2,1.0,4.0,27.1,HIGH (ICML 2026),MODERATE,MODERATE,ELIMINATED
+NOMOS,Normalized Online Morphological Organization of Structure,WORD_ACRONYM,Greek for governance / law,NO-mos,4.5,4.5,4.0,3.5,2.0,4.5,1.0,4.0,28.0,HIGH (Nous Research),LOW,LOW,ELIMINATED
+MERIT,Minimal Evidence-governed Recurrence and Input Topology,WORD_ACRONYM,Survival by earned utility/merit,MAIR-it,4.5,5.0,4.5,3.0,2.0,4.5,1.5,4.5,29.5,HIGH (Optimizer/GNN),LOW,LOW,ELIMINATED
+OSLO,Online Structural Lifecycle Organization,DESCRIPTIVE,City name / organizational acronym,OSS-lo,4.0,5.0,4.0,3.0,1.5,4.0,1.0,4.0,26.5,LOW,HIGH (Hugging Face),LOW,ELIMINATED
+VESTA,Validated Evidence-driven Structural Temporal Architecture,WORD_ACRONYM,Roman goddess of the hearth,VES-tuh,4.5,5.0,4.5,3.0,1.5,4.5,1.0,4.5,28.5,HIGH (SNN Accelerator),LOW,MODERATE,ELIMINATED
+TECTON,Temporal Evidence-driven Computational Topology Organization,WORD_ACRONYM,Greek for builder/craftsman,TEK-ton,4.0,4.5,4.0,3.0,1.5,4.0,1.0,3.5,25.5,LOW,HIGH (Tecton.ai),HIGH,ELIMINATED
+CELIA,Cost-governed Evidence-driven Lifecycle for Incremental Adaptation,WORD_ACRONYM,Cellular sensing structure / name,SEH-lee-uh,4.0,4.5,4.0,3.0,1.5,4.0,1.0,4.0,26.0,LOW,HIGH (Huawei AI),HIGH,ELIMINATED
+RESL,Resource-governed Evidence-driven Structural Lifecycle,DESCRIPTIVE,Direct contribution description,REZ-el,5.0,2.5,2.5,3.0,3.5,5.0,4.5,2.0,28.0,LOW,LOW,LOW,ELIMINATED
+RG-SL,Resource-Governed Structural Learner,DESCRIPTIVE,Abbreviation of framework,Ar-Gee-Ess-El,5.0,1.5,2.0,2.5,3.0,5.0,5.0,1.5,25.5,LOW,LOW,LOW,ELIMINATED
+ARCL,Adaptive Resource-Constrained Lifecycle,DESCRIPTIVE,Direct structural description,ARK-el,4.5,2.5,2.5,3.0,3.0,4.5,4.5,2.5,27.0,LOW,LOW,LOW,ELIMINATED
+CSLA,Cost-bearing Structural Lifecycle Architecture,DESCRIPTIVE,Direct cost-bearing description,See-Ess-El-Ay,4.8,1.5,2.0,2.5,3.0,4.8,5.0,1.5,25.1,LOW,LOW,LOW,ELIMINATED
+ESLA,Evidence-driven Structural Lifecycle Architecture,DESCRIPTIVE,Direct evidence description,ESS-luh,4.5,4.0,3.0,2.5,2.5,4.5,4.0,3.0,28.0,LOW,LOW,LOW,ELIMINATED
+SOLA,Structural Online Lifecycle Adaptation,DESCRIPTIVE,Online structural adaptation,SO-luh,4.2,4.5,3.5,2.5,2.0,4.2,2.5,3.5,26.9,LOW,MODERATE,HIGH,ELIMINATED
+MOSA,Minimal Online Structural Adaptation,DESCRIPTIVE,Minimal structural adaptation,MO-suh,4.0,4.5,3.0,2.0,2.0,4.0,2.0,3.5,25.0,HIGH (Optimization),LOW,LOW,ELIMINATED
+PRAXIS,None,METAPHORICAL,Action / purposeful execution,PRAK-sis,4.2,4.5,4.0,2.5,1.5,4.5,1.5,N/A,22.7,MODERATE,HIGH,HIGH,ELIMINATED
+ANESIS,None,METAPHORICAL,Remission / slack / tolerance of dormancy,uh-NEE-sis,4.0,3.0,2.5,4.0,4.0,4.0,4.5,N/A,26.0,LOW,LOW,LOW,ELIMINATED
+FISCUS,None,METAPHORICAL,Latin for state treasury / resource accounting,FIS-kus,4.5,3.5,3.0,3.5,3.5,4.5,4.5,N/A,27.0,LOW,LOW,LOW,ELIMINATED
+SELVA,None,METAPHORICAL,Lush forest / ecosystem competition,SEL-vuh,3.0,4.5,4.0,3.5,2.5,3.0,4.0,N/A,24.5,LOW,LOW,LOW,ELIMINATED
+STASIS,None,METAPHORICAL,Homeostasis / equilibrium balance,STAY-sis,3.5,4.5,4.0,3.0,2.0,3.5,3.0,N/A,23.5,MODERATE,LOW,LOW,ELIMINATED
+CYCLUS,Cost-governed Yield-controlled Computational Lifecycle for Uncertain Streams,WORD_ACRONYM,Latin for cycle,SIK-lus,4.2,3.5,3.5,3.0,3.0,4.2,4.0,3.0,28.4,LOW,LOW,LOW,ELIMINATED

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_S2_LRU_STREAM_SEED_130",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 130,
+  "config": "{\"state_lr\": 0.001, \"readout_lr\": 0.001, \"state_decay\": 0.9}",
+  "status": "NUMERICAL_DIVERGENCE",
+  "failure_step": 1,
+  "fraction_completed": 5e-05,
+  "mse": Infinity,
+  "mae": Infinity,
+  "nmse": Infinity,
+  "mean_flops": 0.0,
+  "p95_flops": 0.0,
+  "peak_flops": 0.0,
+  "memory_bytes": 344,
+  "active_params": 34,
+  "wall_time_sec": 0.0
+}

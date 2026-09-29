@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_S2_LRU_STREAM_SEED_112",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 112,
+  "config": "{\"state_lr\": 0.001, \"readout_lr\": 0.001, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6572451683580249,
+  "mae": 0.6471990736258382,
+  "nmse": 1.0127341341644536,
+  "mean_flops": 172.0,
+  "p95_flops": 172.0,
+  "peak_flops": 172.0,
+  "memory_bytes": 408,
+  "active_params": 42,
+  "wall_time_sec": 0.09119486808776855
+}

@@ -1,0 +1,6 @@
+state,description,shadow_recurrent_fp,live_recurrent_fp,total_recurrent_fp
+DORMANT,"No active unit in live, evidence accumulation below threshold",20.2,0.0,20.2
+PROVISIONAL,Candidate shadow unit accumulating evidence (T_prob < 15 or evidence < 0.02),20.2,0.0,20.2
+ACTIVE,"Promoted to live pipeline, tracking streaming target",20.2,34.0,54.2
+MATURE,Sustained high utility in live pipeline (age > 300 steps),20.2,34.0,54.2
+EVICTED / ABSENT,"Utility dropped below theta_tol, evicted from live pipeline",20.2,0.0,20.2

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_Track_B_SEED_106",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "Track_B",
+  "seed": 106,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.5716616993102013,
+  "mae": 0.6014065403546174,
+  "nmse": 1.1327859012254182,
+  "mean_flops": 97.33628571428571,
+  "p95_flops": 118.0,
+  "peak_flops": 118.0,
+  "memory_bytes": 488,
+  "active_params": 25,
+  "wall_time_sec": 0.23086023330688477
+}

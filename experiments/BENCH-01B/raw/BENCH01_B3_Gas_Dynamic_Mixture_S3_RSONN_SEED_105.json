@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_S3_RSONN_SEED_105",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "S3_RSONN",
+  "seed": 105,
+  "config": "{\"learning_rate\": 0.001, \"growth_threshold\": 0.05, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2713.106370461309,
+  "mae": 9.841113762030536,
+  "nmse": 0.046738080683277575,
+  "mean_flops": 366.65914285714285,
+  "p95_flops": 466.0,
+  "peak_flops": 466.0,
+  "memory_bytes": 768,
+  "active_params": 84,
+  "wall_time_sec": 0.5029098987579346
+}

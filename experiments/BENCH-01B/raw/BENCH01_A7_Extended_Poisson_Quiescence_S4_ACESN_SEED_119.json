@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_S4_ACESN_SEED_119",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "S4_ACESN",
+  "seed": 119,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"compression_ratio\": 0.5, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.1210032785992872,
+  "mae": 0.8715641907859385,
+  "nmse": 0.9998291711512809,
+  "mean_flops": 1443.0062857142857,
+  "p95_flops": 1445.0,
+  "peak_flops": 1445.0,
+  "memory_bytes": 5248,
+  "active_params": 20,
+  "wall_time_sec": 0.10531377792358398
+}

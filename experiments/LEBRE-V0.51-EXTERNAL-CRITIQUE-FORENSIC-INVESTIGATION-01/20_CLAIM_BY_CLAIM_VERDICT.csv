@@ -1,0 +1,18 @@
+claim,text,verdict,evidence
+C1,Forecasting competitive with lightweight online comparators (held-out protocol),SUPPORTED_WITH_SCOPE_LIMITS,"0.84x NLinear, wins 8/10 vs preregistered online comparators; post-hoc airline MLE 5% better on 9/10; Chronos-2 1.36x better"
+C2,Real-data advantage primarily due to M,SUPPORTED,"M alone/LEBRE 1.034 and 1.006; 0 structural promotions in 15/20 real series (N6: 1 promotion, zero combiner weight); w_S ~ 0 on 16/20"
+C3,S discovers a single true lag robustly,SUPPORTED_WITH_SCOPE_LIMITS,"T1 exact 0.98, B1 0.93 (checks from t=1000); found in 10/10 seeds; slow first proposal"
+C4,S discovers multiple true lags robustly,NOT_SUPPORTED,"B2 exact 0.57 (0.22-0.91 per seed), B4 0.27; tau-sensitive"
+C5,S discovers latent-state structures robustly,REFUTED,B3 exact 0/10 seeds at all tau and all normalizers: wrong latent pole locks in (single-latent limit)
+C6,S controls false promotions,SUPPORTED,"0 false promotions in 2M null steps / 17,686 test episodes (95% upper bound ~1.7e-4 per episode)"
+C7,True atoms remain stable after promotion,SUPPORTED_WITH_SCOPE_LIMITS,"T1: 3 utility removals in 974,840 active steps, all rediscovered; heavy tails (B4) 30 removals"
+C8,<=2000-step discovery latency,NOT_SUPPORTED,gate feasible by construction (lower bound ~300-600 steps) but search throughput delays first proposal to ~1500-2900 steps; latent atoms never
+C9,Dynamic combination does not materially harm prediction,SUPPORTED_WITH_SCOPE_LIMITS,"ratio V051/S <= 1.001 on T1,B1,B2,B4; B3 1.020 (> 1.01 gate)"
+C10,Structural discovery buys sufficient compute efficiency,SUPPORTED_WITH_SCOPE_LIMITS,"vs the project's dense-window variant: FP ratio 0.15-0.21 under all 3 conventions, NMSE ratio 1.01-1.08; replica's failure depends on its own dense window"
+C11,~1.3 KB memory valid across the stated envelope,NOT_SUPPORTED,"memory ~ 196d + 12s + ~190 bytes (float32 accounting); <=1.3 KB only if s<=78 (d=1), 46 (d=3), 13 (d=5), never at d=6; 1.46 KB at d=5,s=24; 2.9 KB s=144; 18 KB s=1440; Python stores float64 (x2)"
+C12,Interval implementation preserves stream-time semantics,NOT_SUPPORTED,current-indicator x 8 aliases with 8|s: real-series coverage 0.85-0.97 vs 0.900-0.906 with the 8 indicators accumulated
+C13,NLMS numerics fully specified and scale-safe,NOT_SUPPORTED,M has no epsilon: exact scale invariance but divergence on flat-then-step (NMSE 8e20)
+C14,Stability metric supports the wording,NOT_SUPPORTED,"measures burn-in/initialisation sensitivity on one test window, not stability across time segments"
+C15,Preregistration and hashes independently verifiable,INSUFFICIENT_EVIDENCE,"hashes verify locally (frozen code, prereg, data match; timestamps ordered) but none are published with the document"
+C16,Specification complete for independent reimplementation,NOT_SUPPORTED,11 items MISSING and 6 AMBIGUOUS in the completeness matrix
+C17,Evidence supports real-world structural discovery,NOT_SUPPORTED,no real input-driven dataset evaluated; w_S ~ 0 on 16/20 real series

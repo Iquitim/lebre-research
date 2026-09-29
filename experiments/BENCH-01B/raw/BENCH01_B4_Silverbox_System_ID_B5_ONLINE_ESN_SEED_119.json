@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_B5_ONLINE_ESN_SEED_119",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 119,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"leak_rate\": 0.7, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0035992112548187,
+  "mae": 0.04657764100830811,
+  "nmse": 0.9337790170164715,
+  "mean_flops": 1121.0,
+  "p95_flops": 1121.0,
+  "peak_flops": 1121.0,
+  "memory_bytes": 3808,
+  "active_params": 20,
+  "wall_time_sec": 0.45279645919799805
+}

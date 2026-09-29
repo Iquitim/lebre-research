@@ -1,0 +1,36 @@
+{
+  "experiment_id": "M2-R1",
+  "title": "Single-State Lifecycle Pareto Freeze Review",
+  "noise_std": 0.05,
+  "calibration_seeds": [8991, 8992, 8993, 8994, 8995, 8996, 8997, 8998, 8999, 9000],
+  "validation_seeds": [
+    9001, 9002, 9003, 9004, 9005, 9006, 9007, 9008, 9009, 9010,
+    9011, 9012, 9013, 9014, 9015, 9016, 9017, 9018, 9019, 9020,
+    9021, 9022, 9023, 9024, 9025, 9026, 9027, 9028, 9029, 9030
+  ],
+  "holdout_seeds": [
+    9031, 9032, 9033, 9034, 9035, 9036, 9037, 9038, 9039, 9040,
+    9041, 9042, 9043, 9044, 9045, 9046, 9047, 9048, 9049, 9050,
+    9051, 9052, 9053, 9054, 9055, 9056, 9057, 9058, 9059, 9060
+  ],
+  "freeze_gates": {
+    "active_recall_min": 0.90,
+    "premature_evictions_max": 0.15,
+    "state_free_active_pct_max": 10.0,
+    "mean_flops_max": 55.0,
+    "global_mse_oracle_ratio_max": 1.02,
+    "churn_max": 1.2
+  },
+  "cost_model": {
+    "c_fe_initial": 9.225,
+    "c_fr_initial": 0.001
+  },
+  "lifecycle_parameters": {
+    "probation_window": 80,
+    "maturity_window": 120,
+    "birth_threshold": 0.15,
+    "promote_threshold": 0.05,
+    "evict_threshold": 0.02,
+    "evict_patience": 40
+  }
+}

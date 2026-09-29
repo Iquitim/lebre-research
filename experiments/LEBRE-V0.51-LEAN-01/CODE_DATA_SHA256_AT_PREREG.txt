@@ -1,0 +1,10 @@
+dacc17bc084c7d3092cdc832283b3ff099d128359a37bbcd16a20f77be7423ce *ARQUITETURA_V051.md
+e44098d0438de0b1fea408d17fbdafd97034eaa124589dda6006dd42e4f31852 *eval_v051.py
+d30fb9c72995c2d576789c9462ff9f2ada92a0ac753efb3b98401f0116ba1234 *chronos_v051.py
+04788307dd3460681e98bb7a6cbdba01902cd417aaaa275e34a3939be03b14b1 *../../data/external_v051/load051.py
+8a6f540109a33a1350b86ef6954bd5f5fff49c7fd2c7370c5e35be3e7bd1f8fc *../../data/external_v051/BALANCO_2019.csv
+4cd52d6ed2a33ed10ecefc6728f60c422bed8afeba363a5b862667a1f7c9123e *../../data/external_v051/BALANCO_2020.csv
+23cc26534ef22c1da59496ef2064b90a3481ef41973256e5fdf69d7780fc9817 *../../data/external_v051/CURVA_CARGA_2019.csv
+838121d4ba5d8b0d3497da5b8f8522d6d2597e9ec00c6b3821e18e41ee4cc0c2 *../../data/external_v051/CURVA_CARGA_2020.csv
+d949f00de4b6361160d8b41fa60a9fbedd5e6653bdb80613cf9adf2c159e21c2 *../../data/external_v051/bcb_gbp_1.json
+dc239144050856750e109f16e083e0e282f9a9d506162caf1b14fc8c418a485c *../../data/external_v051/bcb_gbp_2.json

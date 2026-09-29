@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_C3_RLS_SEED_118",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "C3_RLS",
+  "seed": 118,
+  "config": "{\"forgetting_factor\": 1.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0009129979718,
+  "mae": 0.9950222153313777,
+  "nmse": 1.0775739029949263,
+  "mean_flops": 485.0,
+  "p95_flops": 485.0,
+  "peak_flops": 485.0,
+  "memory_bytes": 944,
+  "active_params": 10,
+  "wall_time_sec": 0.1130516529083252
+}

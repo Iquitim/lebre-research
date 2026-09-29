@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_B3_MUSE_RNN_SEED_112",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 112,
+  "config": "{\"learning_rate\": 0.03, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.8894855507460045,
+  "mae": 0.7137694930025291,
+  "nmse": 1.0272769763015892,
+  "mean_flops": 66.10628571428572,
+  "p95_flops": 60.0,
+  "peak_flops": 380.0,
+  "memory_bytes": 232,
+  "active_params": 12,
+  "wall_time_sec": 0.3064258098602295
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_C3_RLS_SEED_123",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "C3_RLS",
+  "seed": 123,
+  "config": "{\"forgetting_factor\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 40.24773085550485,
+  "mae": 4.042640195800839,
+  "nmse": 1.0041040695315544,
+  "mean_flops": 10405.0,
+  "p95_flops": 10405.0,
+  "peak_flops": 10405.0,
+  "memory_bytes": 20464,
+  "active_params": 50,
+  "wall_time_sec": 0.15448379516601562
+}

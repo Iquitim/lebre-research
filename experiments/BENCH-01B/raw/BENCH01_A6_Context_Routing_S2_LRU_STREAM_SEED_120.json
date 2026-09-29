@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_S2_LRU_STREAM_SEED_120",
+  "task_id": "A6_Context_Routing",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 120,
+  "config": "{\"state_lr\": 0.01, \"readout_lr\": 0.01, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4009350943842884,
+  "mae": 0.5009816212273425,
+  "nmse": 0.5437003109007952,
+  "mean_flops": 92.0,
+  "p95_flops": 92.0,
+  "peak_flops": 92.0,
+  "memory_bytes": 248,
+  "active_params": 22,
+  "wall_time_sec": 0.08830499649047852
+}

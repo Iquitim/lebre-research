@@ -1,0 +1,157 @@
+{
+  "audit_metadata": {
+    "audit_id": "LEBRE-V0.2-INTEGRATION-SEAL-AUDIT-01",
+    "parent_study": "LEBRE-V0.2-INTEGRATION-DESIGN-01",
+    "target_architecture": "T3_RESOURCE_AWARE_CONDITIONAL_ARBITRATION",
+    "canonical_version": "0.1",
+    "lebre_v0_1_status": "FROZEN_WITH_SCOPE_LIMITS",
+    "m3_status": "UNOPENED",
+    "novelty_claim_ready": "NO",
+    "canonical_src_mutated": "NO",
+    "canonical_tests_mutated": "NO",
+    "primary_audit_outcome": "MULTIPLE_CORRECTABLE_ISSUES",
+    "candidate_status": "EXPERIMENTAL_NON_CANONICAL",
+    "safe_for_integrated_v0_2_validation": "NO",
+    "next_recommended_stage": "LEBRE-V0.2-RESOURCE-COMPACTION-01"
+  },
+  "environment": {
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "numpy_version": "numpy",
+    "pandas_version": "2.2.3"
+  },
+  "verification_accounting": {
+    "raw_runs_expected": 2100,
+    "raw_runs_verified": 2100,
+    "seeds_verified": "1311..1340 (N=30)",
+    "tasks_verified": "I1..I14 (N=14)",
+    "topologies_verified": "T1, T1R, T2, T3, O_ALL (N=5)",
+    "report_cells_audited": 100,
+    "report_cells_mismatched": 98,
+    "unexplained_mismatches": 0,
+    "root_cause_mismatches": "Pasting DEV seed 1301 single-run into report table instead of 30-seed confirmatory mean"
+  },
+  "artifact_inventory": {
+    "CLAIM_TRACEABILITY.csv": {
+      "sha256": "01d291cb20596eec1d57981f3e5126cd740778f020e5ea1baae1c4f10fb18db6",
+      "size_bytes": 2775
+    },
+    "figures/F10_useful_transitions_vs_churn.png": {
+      "sha256": "351a4b67b4ed233361b0d9d5f36f2cfee267bcb04490224f330e2594156a7f88",
+      "size_bytes": 199077
+    },
+    "figures/F11_I9_conditional_gain_distribution.png": {
+      "sha256": "09122cf4a2f80f2cc7c744cb6c33527f7722212bae8130be765383ea76742406",
+      "size_bytes": 147048
+    },
+    "figures/F12_claim_status_matrix.png": {
+      "sha256": "8916a2d0bcc900303d9f94e3c2f7033e1307a994fe482580fc7dc5b1b8445015",
+      "size_bytes": 269141
+    },
+    "figures/F1_reported_vs_recomputed_values.png": {
+      "sha256": "3104f1f739ffdbd2cc3280f3854a641bcab6586d4a939b29e0aa730aa96edb8e",
+      "size_bytes": 311375
+    },
+    "figures/F2_resource_gate_provenance_timeline.png": {
+      "sha256": "1d9d4269984a39e65ca0d90a98b08d217fe9d6d1c74252330d0b7fe405548ec3",
+      "size_bytes": 167290
+    },
+    "figures/F3_live_shadow_total_compute_by_task.png": {
+      "sha256": "5465d79ce67620aea19cbd52d0445a9f73225a8045dcdefd39acac0986e41907",
+      "size_bytes": 327313
+    },
+    "figures/F4_persistent_vs_peak_memory_by_task.png": {
+      "sha256": "289f1d8ec688a7179349b20c349d7c9d47a84ed10b9f7b90ce8355ade9490a32",
+      "size_bytes": 338775
+    },
+    "figures/F5_legacy_vs_proposed_resource_compliance.png": {
+      "sha256": "c617eafa6983647a28e40edb73347300260d6a73ef8b38c3cafad1c48302b9ce",
+      "size_bytes": 300556
+    },
+    "figures/F6_live_vector_pareto_front.png": {
+      "sha256": "0eeb7dc5b8e6c5e9069518a86f808f76a37e17596606add812da797153f1bced",
+      "size_bytes": 183056
+    },
+    "figures/F7_full_online_vector_pareto_front.png": {
+      "sha256": "8dadfe3fe1b498f3c456096f062a1c9c16b2ee3e0c466c2f80f356150df8be71",
+      "size_bytes": 192475
+    },
+    "figures/F8_I3_I4_support_precision_recall.png": {
+      "sha256": "c08aef3b13fbd206cf27a08207943796ed6a2976cb5faf36536e37752974d714",
+      "size_bytes": 112194
+    },
+    "figures/F9_regime_switch_correct_state_timeline.png": {
+      "sha256": "4d694e87025bbc977682649f4d96342caa7e6cdcb9c04f74e23b9c0c99b16f1e",
+      "size_bytes": 192885
+    },
+    "GATE_PROVENANCE_AUDIT.csv": {
+      "sha256": "ff9c2e23c0748c25a2ca1f827c8975382ef67a9aa3152a2d39ac185884a17fef",
+      "size_bytes": 4658
+    },
+    "LEBRE_V0_2_PARENT_ARTIFACT_HASHES.txt": {
+      "sha256": "b15c1f2cc7c76bfbd249e01209514f31d8b80a7dbceeab2e30ee8f80baba3e87",
+      "size_bytes": 3338
+    },
+    "LEBRE_V0_2_SEAL_AUDIT_CORRIGENDUM.md": {
+      "sha256": "fd1633a84510f4be27cb098437b41b16f7e07af487a84b3400db5756f59b3ecb",
+      "size_bytes": 14548
+    },
+    "LEBRE_V0_2_SEAL_AUDIT_FINAL_REPORT.md": {
+      "sha256": "41b6c1fc09a6a7a88d5f8a4c3234d30d72ea8468373d1eef410e78e9084b986a",
+      "size_bytes": 29802
+    },
+    "LEBRE_V0_2_SEAL_AUDIT_METHOD_NOTE.md": {
+      "sha256": "52ab88c6acce4c1808ff425f306d62efd6e6160194fa595475104fc5b7b319f5",
+      "size_bytes": 7614
+    },
+    "LEBRE_V0_2_SEAL_AUDIT_PROTOCOL.md": {
+      "sha256": "0d7d6a58fcaf501a45c52f586404dd4976235c65ca063135fd4b24371701a004",
+      "size_bytes": 5981
+    },
+    "ORDER_INVARIANCE_AUDIT.md": {
+      "sha256": "913d51dda5f9f47d08e281d6a66939b12fdc9f4691761cfefb690905e0a51031",
+      "size_bytes": 6438
+    },
+    "PARETO_OBJECTIVE_PROVENANCE.md": {
+      "sha256": "c1e3599d0d8d7f861a816d2f04124ff327e8cf3b3972703254492908fd65c66b",
+      "size_bytes": 6627
+    },
+    "PARETO_RECOMPUTATION.csv": {
+      "sha256": "4224cd9f02ad6c9a63a8e103a81cfdac9d805e77b90febad959ff1902141bebd",
+      "size_bytes": 7146
+    },
+    "R2_COMPUTE_SEMANTICS_HISTORY.md": {
+      "sha256": "28ca0339370e5e95e56d38a3821c71459ccc08d642ae54287087382848cc0b6f",
+      "size_bytes": 6175
+    },
+    "REGIME_TRACKING_AUDIT.csv": {
+      "sha256": "8b7d3815178f6c172356b038c3e846c200a25deb56e83cd6d0b2fedcadec8f18",
+      "size_bytes": 384
+    },
+    "REPORT_CELL_TRACEABILITY.csv": {
+      "sha256": "0f6c649e571e2f4e6ccfad2ed13e6ab2bd9204914b4dc70e40505c7d2e976dec",
+      "size_bytes": 25213
+    },
+    "RESOURCE_CEILING_PROVENANCE.md": {
+      "sha256": "f2ff79eeca6623e4c4fab946c929cae922e855d5e2b8ed72adabcd43c01dfcd7",
+      "size_bytes": 6920
+    },
+    "RESOURCE_COMPLIANCE_MATRIX.csv": {
+      "sha256": "f8c51180004d75524f98189b2bd6c6d7dc0e4ccc9711d9537e89c9bda096f263",
+      "size_bytes": 2170
+    },
+    "STATISTICAL_CLAIM_TRACEABILITY.csv": {
+      "sha256": "b8ae340c03fe0a604c850ede22dc2d35dedf99d14d71ba20b560c8524153df41",
+      "size_bytes": 2987
+    },
+    "SUPPORT_RECOVERY_AUDIT.csv": {
+      "sha256": "6406b0b1d5ff93243a07672da3ae062cf00a392e739c26276dbcbe6d53875ec8",
+      "size_bytes": 441
+    },
+    "TRANSITION_CLASSIFICATION.csv": {
+      "sha256": "7c10fbcce106f39a8469bcca2db058cb21ff4299e185b7612759092dfdde9bbd",
+      "size_bytes": 305
+    }
+  }
+}

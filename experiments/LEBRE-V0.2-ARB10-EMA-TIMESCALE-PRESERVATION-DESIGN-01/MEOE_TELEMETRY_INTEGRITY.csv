@@ -1,0 +1,17 @@
+task_id,arm_code,gain,update_steps_in_window,hold_between_events_exact
+I11_Regime_Switch_Delay_To_Latent,A0_K1_KARB5,G_D|B,80,True
+I11_Regime_Switch_Delay_To_Latent,A0_K1_KARB5,G_R|B,80,True
+I11_Regime_Switch_Delay_To_Latent,A1_K2_KARB5,G_D|B,80,True
+I11_Regime_Switch_Delay_To_Latent,A1_K2_KARB5,G_R|B,80,True
+I12_Regime_Switch_Latent_To_Delay,A0_K1_KARB5,G_D|B,80,True
+I12_Regime_Switch_Latent_To_Delay,A0_K1_KARB5,G_R|B,80,True
+I12_Regime_Switch_Latent_To_Delay,A1_K2_KARB5,G_D|B,80,True
+I12_Regime_Switch_Latent_To_Delay,A1_K2_KARB5,G_R|B,80,True
+I13_Regime_Switch_Hybrid_To_Memoryless,A0_K1_KARB5,G_D|B,80,True
+I13_Regime_Switch_Hybrid_To_Memoryless,A0_K1_KARB5,G_R|B,80,True
+I13_Regime_Switch_Hybrid_To_Memoryless,A1_K2_KARB5,G_D|B,80,True
+I13_Regime_Switch_Hybrid_To_Memoryless,A1_K2_KARB5,G_R|B,80,True
+I14_Intermittent_Hybrid,A0_K1_KARB5,G_D|B,80,True
+I14_Intermittent_Hybrid,A0_K1_KARB5,G_R|B,80,True
+I14_Intermittent_Hybrid,A1_K2_KARB5,G_D|B,80,True
+I14_Intermittent_Hybrid,A1_K2_KARB5,G_R|B,80,True

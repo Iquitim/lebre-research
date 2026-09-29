@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_S5_CONTINUAL_BACKPROP_SEED_129",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 129,
+  "config": "{\"learning_rate\": 0.03, \"replacement_rate\": 0.001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.9986174071040441,
+  "mae": 0.992721457079686,
+  "nmse": 0.9953847670716428,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 304,
+  "active_params": 10,
+  "wall_time_sec": 0.11252450942993164
+}

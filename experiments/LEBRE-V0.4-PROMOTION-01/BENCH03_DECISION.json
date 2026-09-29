@@ -1,0 +1,38 @@
+{
+  "LEBRE_V04": {
+    "K-a skill>0 vs persistence": 0.8333333333333334,
+    "K-b <=1.25x best classic": 0.9444444444444444,
+    "K-c zero divergences": true,
+    "K-d <=1.25x v0.3.2": 1.0,
+    "K-e coverage in [0.85,0.95]": 1.0,
+    "passes": 5,
+    "decision": "COMPETITIVE_WITH_OBSERVABILITY_ADVANTAGE",
+    "mean_rank": 3.7777777777777777,
+    "global_position_by_mean_rank": 2,
+    "beats_best_classic": 9,
+    "n_tasks": 18,
+    "geo_ratio_vs_best_classic": 0.9441838076698773,
+    "mean_fp": 170.99463222162515
+  },
+  "LEBRE_V041": {
+    "K-a skill>0 vs persistence": 0.8333333333333334,
+    "K-b <=1.25x best classic": 0.9444444444444444,
+    "K-c zero divergences": true,
+    "K-d <=1.25x v0.3.2": 1.0,
+    "K-e coverage in [0.85,0.95]": 1.0,
+    "passes": 5,
+    "decision": "COMPETITIVE_WITH_OBSERVABILITY_ADVANTAGE",
+    "mean_rank": 3.6666666666666665,
+    "global_position_by_mean_rank": 1,
+    "beats_best_classic": 9,
+    "n_tasks": 18,
+    "geo_ratio_vs_best_classic": 0.9652384531369219,
+    "mean_fp": 170.46596525474084
+  },
+  "LEBRE_V032_reference": {
+    "K-a": 0.8333333333333334,
+    "K-b": 0.8333333333333334,
+    "mean_rank": 5.833333333333333,
+    "divergences": 0
+  }
+}

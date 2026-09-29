@@ -1,0 +1,15 @@
+scheduler_id,variable_name,dtype,bytes,scope,purpose
+S0_CONTINUOUS,none,none,0,none,Baseline continuous reference incurs zero scheduler memory overhead
+S1_SHADOW_OFF,none,none,0,none,Diagnostic control disables shadow completely with zero scheduler memory
+S2_PERIODIC,period_K,uint16,2,persistent,Stores integer sampling period K=5
+S2_PERIODIC,step_mod_counter,uint16,2,persistent,Tracks step counter modulo K
+S3_EVENT_TRIGGERED,ref_loss_ema,float32,4,persistent,Running baseline reference mean of live prequential squared error
+S3_EVENT_TRIGGERED,cumulative_dev,float32,4,persistent,Page-Hinkley cumulative positive deviation statistic U_t
+S3_EVENT_TRIGGERED,heartbeat_counter,uint16,2,persistent,Steps elapsed since last shadow execution (anti-starvation)
+S3_EVENT_TRIGGERED,burst_counter,uint16,2,persistent,Remaining shadow-active timesteps in active wake burst
+S3_EVENT_TRIGGERED,is_shadow_awake,uint8,1,persistent,Boolean flag indicating current active status of shadow block
+S3_EVENT_TRIGGERED,wake_reason_code,uint8,1,persistent,Categorical indicator (0=sleep 1=event_alarm 2=heartbeat 3=initial)
+S3_EVENT_TRIGGERED,structure_padding,uint8_array_2,2,persistent,Word alignment padding for 32-bit architecture boundary
+S3_TOTAL_STATE,TOTAL_PERSISTENT_BYTES,struct,16,persistent,Total preallocated persistent state for S3 event scheduler
+S3_TOTAL_STATE,TRANSIENT_WORKSPACE,stack,0,transient,Sentinel uses existing floating point registers (0 B heap workspace)
+S3_TOTAL_STATE,COMPLIANCE_HEADROOM,bytes,24,governance,Margin remaining below 40 B allowance (40 - 16 = 24 B headroom)

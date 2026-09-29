@@ -1,0 +1,5 @@
+task_id,seed,steps_evaluated,max_pred_abs_diff,decisions_identical,mean_g_d_br,mean_g_r_bd,internal_order_invariance
+I1_Memoryless_Linear,1311,500,0.0,True,-0.005080420973056837,0.008725533183864312,VERIFIED
+I3_Single_Exact_Delay,1311,500,0.0,True,-0.047350780054925656,0.017475769768597778,VERIFIED
+I6_Continuous_Latent_State,1311,500,0.0,True,-0.032967751422417306,0.3362965032546592,VERIFIED
+I9_Hybrid_Delay_Plus_Latent_State,1311,500,0.0,True,0.1670729135530914,0.1018081103931053,VERIFIED

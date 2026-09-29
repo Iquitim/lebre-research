@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_B2_CCN_SEED_106",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "B2_CCN",
+  "seed": 106,
+  "config": "{\"readout_lr\": 0.03, \"recurrent_lr\": 0.001, \"max_columns\": 1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.49423447870375353,
+  "mae": 0.5441863145020133,
+  "nmse": 0.5928373981897133,
+  "mean_flops": 133.0,
+  "p95_flops": 133.0,
+  "peak_flops": 133.0,
+  "memory_bytes": 280,
+  "active_params": 22,
+  "wall_time_sec": 0.18520069122314453
+}

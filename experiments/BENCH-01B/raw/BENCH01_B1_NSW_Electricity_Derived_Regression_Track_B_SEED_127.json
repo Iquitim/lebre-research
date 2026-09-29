@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_Track_B_SEED_127",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "Track_B",
+  "seed": 127,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0015593943424993093,
+  "mae": 0.022207686956089368,
+  "nmse": 0.8363994850684686,
+  "mean_flops": 24.04035436173902,
+  "p95_flops": 24.0,
+  "peak_flops": 34.0,
+  "memory_bytes": 240,
+  "active_params": 5,
+  "wall_time_sec": 0.43169736862182617
+}

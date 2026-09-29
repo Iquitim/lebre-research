@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_S1_VARIABLE_TAP_LMS_SEED_121",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 121,
+  "config": "{\"learning_rate\": 0.01, \"tap_leakage\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.46958646090688183,
+  "mae": 0.5289521167316537,
+  "nmse": 0.9921786715612356,
+  "mean_flops": 108.97571428571429,
+  "p95_flops": 167.0,
+  "peak_flops": 179.0,
+  "memory_bytes": 544,
+  "active_params": 2,
+  "wall_time_sec": 0.09805774688720703
+}

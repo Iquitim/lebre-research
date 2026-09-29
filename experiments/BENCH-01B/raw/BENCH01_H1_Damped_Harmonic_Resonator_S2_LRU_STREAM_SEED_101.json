@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_S2_LRU_STREAM_SEED_101",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 101,
+  "config": "{\"state_lr\": 0.01, \"readout_lr\": 0.001, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 24.850908012792086,
+  "mae": 3.6093853824269497,
+  "nmse": 0.9135349561245922,
+  "mean_flops": 412.0,
+  "p95_flops": 412.0,
+  "peak_flops": 412.0,
+  "memory_bytes": 888,
+  "active_params": 102,
+  "wall_time_sec": 0.09058046340942383
+}

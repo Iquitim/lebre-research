@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_C2_NLMS_SEED_115",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "C2_NLMS",
+  "seed": 115,
+  "config": "{\"step_size\": 0.2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0015566136593407193,
+  "mae": 0.021211484282583036,
+  "nmse": 0.8349080329715887,
+  "mean_flops": 35.0,
+  "p95_flops": 35.0,
+  "peak_flops": 35.0,
+  "memory_bytes": 72,
+  "active_params": 5,
+  "wall_time_sec": 0.370617151260376
+}

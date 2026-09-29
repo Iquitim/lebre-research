@@ -1,0 +1,64 @@
+{
+  "stage": "LEBRE-V0.2-CANDIDATE-SUBSYSTEM-RESOURCE-FEASIBILITY-01",
+  "phase": "PHASE_A_POST_SEAL_MICROCORRECTION",
+  "status": "COMPLETE",
+  "hard_gates": {
+    "R0_G8_RECONCILED": "YES",
+    "MEMORY_TERMINOLOGY_RECONCILED": "YES",
+    "QUEUE_CAUSAL_WORDING_RECONCILED": "YES"
+  },
+  "reconciled_findings": {
+    "R0_G8_ROOT_CAUSE": "MANUAL_TRANSCRIPTION_ERROR",
+    "R0_M1_DELTA_NMSE_RECOMPUTED": 0.013027,
+    "R0_NONINFERIORITY_95CI_UPPER": 0.019402,
+    "R0_NONINFERIORITY_STATUS": "NOT_SUPPORTED",
+    "DENSE_SEARCH_ACCUMULATOR_BYTES": 330,
+    "SPARSE_SEARCH_ACCUMULATOR_BYTES": 192,
+    "ACCUMULATOR_MEMORY_REDUCTION_PCT": 41.82,
+    "DENSE_TOTAL_SEARCH_STATE_BYTES": 330,
+    "SPARSE_TOTAL_SEARCH_STATE_BYTES": 260,
+    "TOTAL_SEARCH_STATE_REDUCTION_PCT": 21.21,
+    "LEGACY_FULL_SEARCH_SUBSYSTEM_STATE_BYTES": 802,
+    "LEGACY_67P58_PERCENT_ROOT_CAUSE": "REDUCTION_RELATIVE_TO_802B_LEGACY_SUBSYSTEM",
+    "QUEUE_SPEED_CAUSAL_ABLATION_EXISTS": "NO",
+    "FASTER_QUEUE_TRAVERSAL_STATUS": "SUPPORTED_MECHANISTIC_EXPLANATION",
+    "ISOLATED_CAUSAL_EFFECT": "NOT_ESTABLISHED"
+  },
+  "artifacts": [
+    {
+      "filename": "ARTIFACT_AUTHORITY_MAP.md",
+      "size_bytes": 3937,
+      "sha256": "718369f4baee44d9f54820f3ab796062a43186f3e3481f764f6e638f0c612863"
+    },
+    {
+      "filename": "PARENT_HASHES.txt",
+      "size_bytes": 10130,
+      "sha256": "7a4acb35413adb524a065efc16a1af57e77ef961d3d1e7e8c2956089a46c6b2c"
+    },
+    {
+      "filename": "POST_SEAL_MICROCORRECTION.md",
+      "size_bytes": 3966,
+      "sha256": "f13dd81727e499649b2fbd71462efbc0fc6dce60a3c5c6d23920f9f0dc25d728"
+    },
+    {
+      "filename": "QUEUE_CAUSAL_WORDING_CORRIGENDUM.md",
+      "size_bytes": 3037,
+      "sha256": "61df1b39ba6b7aa7c69d713db5b777c4d9f0f6771fcb070fa2763c4fe84a3946"
+    },
+    {
+      "filename": "R0_G8_RECONCILIATION.csv",
+      "size_bytes": 2337,
+      "sha256": "b02c2b3a45c51f05cd60c1a72492162ff5ff64f65d0b7ac4e4804224956a0405"
+    },
+    {
+      "filename": "R0_IDENTITY_AUDIT.md",
+      "size_bytes": 2937,
+      "sha256": "6b1854f143ccf5db7fcea0021fcccb10d8d349652b00d05457e4265e79fb9a78"
+    },
+    {
+      "filename": "SEARCH_MEMORY_TERMINOLOGY_CORRIGENDUM.md",
+      "size_bytes": 5303,
+      "sha256": "561e63ebf71f30aaf1e0d0946ae98b18ef5be8141a29179d30c61dbec29b23e0"
+    }
+  ]
+}

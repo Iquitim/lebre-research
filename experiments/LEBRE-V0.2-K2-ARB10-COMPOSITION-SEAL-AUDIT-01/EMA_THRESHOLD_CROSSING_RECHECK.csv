@@ -1,0 +1,7 @@
+metric,value
+Matched Crossing Count,420.0
+Median Crossing Delay (stream steps),175.0
+Mean Crossing Delay (stream steps),182.43
+P90 Crossing Delay (stream steps),230.0
+P95 Crossing Delay (stream steps),248.5
+Max Crossing Delay (stream steps),310.0

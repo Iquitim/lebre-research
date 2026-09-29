@@ -1,0 +1,4 @@
+statistic,level1_raw_csv_value,reported_narrative_offset_value,delta_offset,provenance,classification
+C0_MEAN_NMSE,0.3170085203226988,0.174582,0.14242652032269879,Raw CSV mean of 420 C0 runs in RECURRENT_FINAL_RESULTS.csv. The 0.174582 figure was an intermediate offset copy in narrative summary.,DEV_FINAL_CONFLATION_IN_SUMMARY_ONLY
+C1_MEAN_NMSE,0.34907225934045616,0.206646,0.14242625934045616,Raw CSV mean of 420 C1 runs in RECURRENT_FINAL_RESULTS.csv. Preserves exact pairwise delta: 0.349072 - 0.317009 = +0.032064.,DEV_FINAL_CONFLATION_IN_SUMMARY_ONLY
+R0_MEAN_NMSE,0.2956400616838568,0.153214,0.14242606168385682,Raw CSV mean of 420 R0 runs in RECURRENT_FINAL_RESULTS.csv. Preserves exact pairwise delta: 0.349072 - 0.295640 = +0.053432.,DEV_FINAL_CONFLATION_IN_SUMMARY_ONLY

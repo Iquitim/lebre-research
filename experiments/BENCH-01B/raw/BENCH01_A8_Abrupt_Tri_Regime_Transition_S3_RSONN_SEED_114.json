@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_S3_RSONN_SEED_114",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "S3_RSONN",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4501137247570183,
+  "mae": 0.4992299675102424,
+  "nmse": 0.8838688337322903,
+  "mean_flops": 321.448,
+  "p95_flops": 322.0,
+  "peak_flops": 322.0,
+  "memory_bytes": 576,
+  "active_params": 60,
+  "wall_time_sec": 0.3194575309753418
+}

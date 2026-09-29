@@ -1,0 +1,3 @@
+source,A0_live_fp,A1_live_fp,A2_live_fp,live_saving_A1_minus_A2,status
+Level-1 Raw Telemetry (Authoritative),75.64486111111111,74.14195634920635,73.22221428571429,0.9197420634920661,EXACT_RECOMPUTATION
+Parent Narrative (Stale Summary Text),75.64,74.25,73.34,0.91,STALE_INTERMEDIATE_TRANSCRIPTION

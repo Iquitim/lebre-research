@@ -1,0 +1,32 @@
+operation_id,operation_name,category,subsystem,fp_flops_per_exec,int_ops_per_exec,memory_traffic_bytes,execution_cadence,is_removable_when_asleep,description
+OP-01,scaler_transform,LIVE_REQUIRED,scaler,10.0,0,80.0,every_step,False,Causal input standardization (5 subtractions + 5 divisions)
+OP-02,history_buffer_write,SHARED_REQUIRED,history,0.0,5,10.0,every_step,False,Write 5 normalized features to circular ring buffer
+OP-03,base_predict,LIVE_REQUIRED,base,10.0,0,40.0,every_step,False,Base linear predictor dot product (5 mul + 5 add)
+OP-04,active_taps_predict,LIVE_REQUIRED,discrete_lag,2.0,1,2.0,per_active_tap,False,Active discrete delay prediction (1 mul + 1 add per active tap)
+OP-05,active_rec_forward,LIVE_REQUIRED,recurrent,18.0,0,24.0,if_active_rec,False,Active recurrent unit forward pass and sensitivity propagation
+OP-06,aggregate_live_prediction,LIVE_REQUIRED,arbitrator,2.0,0,0.0,every_step,False,Sum base + active lag + active rec predictions
+OP-07,prequential_loss_eval,LIVE_REQUIRED,arbitrator,2.0,0,0.0,every_step,False,Compute live prequential error e_live and squared loss ell_live
+OP-08,base_lms_update,LIVE_REQUIRED,base,18.0,0,40.0,every_step,False,Normalized LMS update of 5 base weights
+OP-09,active_taps_lms_update,LIVE_REQUIRED,discrete_lag,2.0,0,8.0,per_active_tap,False,LMS weight update for active discrete taps
+OP-10,active_rec_rtrl_update,LIVE_REQUIRED,recurrent,16.0,0,24.0,if_active_rec,False,RTRL parameter update (alpha b c) of active recurrent unit
+OP-11,scaler_welford_update,LIVE_REQUIRED,scaler,20.0,0,80.0,every_step,False,Online causal running mean and variance update
+OP-12,active_tap_leave_one_out,LIFECYCLE_REQUIRED,discrete_lag,6.0,0,0.0,per_active_tap,False,Leave-one-out counterfactual gain and tap retention EMA
+OP-13,active_tap_eviction_check,LIFECYCLE_REQUIRED,discrete_lag,0.0,1,0.0,per_active_tap,False,Tap eviction threshold evaluation (R < 0.03 and age > 250)
+OP-14,active_rec_eviction_check,LIFECYCLE_REQUIRED,recurrent,0.0,1,0.0,if_active_rec,False,Recurrent eviction check against conditional gain floor
+OP-15,history_delay_query_live,SHARED_REQUIRED,history,0.0,2,2.0,per_live_query,False,Read delayed feature from history ring buffer for active tap
+OP-16,history_delay_query_shadow,SHADOW_REMOVABLE,history,0.0,2,2.0,per_shadow_query,True,Read delayed feature from history buffer for candidate or probe
+OP-17,shadow_candidate_predict,SHADOW_REMOVABLE,discrete_lag,2.0,0,2.0,if_no_active_tap,True,Predict best provisional candidate for counterfactual lag evaluation
+OP-18,shadow_rec_forward,SHADOW_REMOVABLE,recurrent,18.0,0,24.0,shadow_active_only,True,Shadow recurrent unit forward pass and sensitivity tracking
+OP-19,counterfactual_loss_eval,SHADOW_REMOVABLE,arbitrator,8.0,0,0.0,shadow_active_only,True,Evaluate losses for P_BASE P_BASE_D P_BASE_R P_BASE_D_R
+OP-20,conditional_gain_eval,SHADOW_REMOVABLE,arbitrator,4.0,0,0.0,shadow_active_only,True,Compute raw gains G_D|B G_R|B G_R|BD G_D|BR
+OP-21,gain_ema_filtering,SHADOW_REMOVABLE,arbitrator,12.0,0,16.0,shadow_active_only,True,Exponential moving average updates for 4 conditional gains
+OP-22,shadow_rec_rtrl_update,SHADOW_REMOVABLE,recurrent,16.0,0,24.0,shadow_active_only,True,RTRL gradient parameter updates for shadow recurrent unit
+OP-23,shadow_rec_evidence_ema,SHADOW_REMOVABLE,recurrent,6.0,0,4.0,shadow_active_only,True,Update standalone evidence metric and age for shadow unit
+OP-24,provisional_cands_lms_update,SHADOW_REMOVABLE,discrete_lag,8.0,0,16.0,per_provisional_cand,True,Candidate weight update and evidence EMA (up to 3 cands)
+OP-25,shadow_probing_execution,SHADOW_REMOVABLE,probing,8.0,4,8.0,2_probes_per_exec,True,Correlation grid query update (FP16 storage with transient FP32)
+OP-26,provisional_cand_admission,SHADOW_REMOVABLE,discrete_lag,0.0,2,16.0,if_corr_gt_0_20,True,Admit probed delay with |corr| > 0.20 to provisional pool
+OP-27,arbitration_promotion_logic,SHADOW_REMOVABLE,arbitrator,0.0,6,0.0,shadow_active_only,True,Compare conditional gains to theta_tol and promote candidates
+OP-28,provisional_cand_pruning,SHADOW_REMOVABLE,discrete_lag,0.0,2,0.0,shadow_active_only,True,Evict stale candidates (age > 150 and evidence < 0.02)
+OP-29,step_and_dual_bookkeeping,BOOKKEEPING_REQUIRED,diagnostics,0.0,4,0.0,every_step,False,Increment step counter and record dual-active co-activation
+OP-30,scheduler_sentinel_eval,LIFECYCLE_REQUIRED,scheduler,2.0,3,0.0,every_step,False,Evaluate Page-Hinkley cumulative deviation on live loss ell_live
+OP-31,scheduler_heartbeat_check,LIFECYCLE_REQUIRED,scheduler,0.0,2,0.0,every_step,False,Increment heartbeat counter and check wake deadline

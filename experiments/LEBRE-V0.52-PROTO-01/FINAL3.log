@@ -1,0 +1,112 @@
+                    nmse       fp  true_found  n_true  false_exo
+suite task model                                                
+semi3 SP0  ATOM    1.064  197.985       0.000     0.0          0
+           ENXUTO  1.064  316.005       0.000     0.0          0
+           PADRAO  1.064  458.161       0.000     0.0          0
+      SP1  ATOM    0.814  199.143       0.000     1.0          0
+           ENXUTO  0.763  339.805       1.000     1.0          0
+           PADRAO  0.698  460.318       1.000     1.0          0
+      SP2  ATOM    0.660  200.002       0.000     2.0          0
+           ENXUTO  0.660  328.347       0.000     2.0          0
+           PADRAO  0.569  511.191       1.000     2.0          0
+      SP3  ATOM    0.447  197.462       0.000     2.0          0
+           ENXUTO  0.446  311.458       0.000     2.0          0
+           PADRAO  0.446  438.763       0.000     2.0          0
+      SP4  ATOM    0.105  198.719       0.000     0.0          0
+           ENXUTO  0.105  347.704       0.000     0.0          0
+           PADRAO  0.105  424.333       0.000     0.0          0
+synth B1   ATOM    0.658  212.628       1.000     1.0          0
+           ENXUTO  0.656  379.219       1.000     1.0          0
+           PADRAO  0.656  436.825       1.000     1.0          0
+      B2   ATOM    0.612  216.389       2.667     3.0          0
+           ENXUTO  0.498  489.968       3.000     3.0          0
+           PADRAO  0.478  578.700       3.000     3.0          0
+      B3   ATOM    0.413  212.528       1.000     2.0          0
+           ENXUTO  0.453  368.036       1.000     2.0          0
+           PADRAO  0.384  591.245       1.667     2.0          0
+      N1   ATOM    1.065  207.252       0.000     0.0          0
+           ENXUTO  1.065  310.008       0.000     0.0          0
+           PADRAO  1.065  364.500       0.000     0.0          0
+      N2   ATOM    1.111  192.604       0.000     0.0          0
+           ENXUTO  1.110  285.317       0.000     0.0          0
+           PADRAO  1.110  334.676       0.000     0.0          0
+      T1   ATOM    0.652  212.583       1.000     1.0          0
+           ENXUTO  0.651  380.893       1.000     1.0          0
+           PADRAO  0.651  439.939       1.000     1.0          0
+    suite task  seed   model                          structure  first_acc
+0   synth   N1  9301  PADRAO                                 []        NaN
+1   synth   N1  9301  ENXUTO                                 []        NaN
+3   synth   N1  9302  PADRAO                                 []        NaN
+4   synth   N1  9302  ENXUTO                                 []        NaN
+6   synth   N1  9303  PADRAO                                 []        NaN
+7   synth   N1  9303  ENXUTO                                 []        NaN
+9   synth   N2  9301  PADRAO                                 []        NaN
+10  synth   N2  9301  ENXUTO                                 []        NaN
+12  synth   N2  9302  PADRAO                                 []        NaN
+13  synth   N2  9302  ENXUTO                                 []        NaN
+15  synth   N2  9303  PADRAO                                 []        NaN
+16  synth   N2  9303  ENXUTO                                 []        NaN
+18  synth   T1  9301  PADRAO                        [('in', 1)]      970.0
+19  synth   T1  9301  ENXUTO                        [('in', 1)]     1040.0
+21  synth   T1  9302  PADRAO                        [('in', 1)]      660.0
+22  synth   T1  9302  ENXUTO                        [('in', 1)]      760.0
+24  synth   T1  9303  PADRAO                        [('in', 1)]      970.0
+25  synth   T1  9303  ENXUTO                        [('in', 1)]     1420.0
+27  synth   B1  9301  PADRAO                        [('in', 1)]      900.0
+28  synth   B1  9301  ENXUTO                        [('in', 1)]      910.0
+30  synth   B1  9302  PADRAO                        [('in', 1)]      830.0
+31  synth   B1  9302  ENXUTO                        [('in', 1)]      980.0
+33  synth   B1  9303  PADRAO                        [('in', 1)]      510.0
+34  synth   B1  9303  ENXUTO                        [('in', 1)]      610.0
+36  synth   B2  9301  PADRAO  [('in', 0), ('in', 2), ('in', 4)]     1080.0
+37  synth   B2  9301  ENXUTO  [('in', 0), ('in', 2), ('in', 4)]     1260.0
+39  synth   B2  9302  PADRAO  [('in', 0), ('in', 2), ('in', 4)]     2170.0
+40  synth   B2  9302  ENXUTO  [('in', 0), ('in', 2), ('in', 4)]     1840.0
+42  synth   B2  9303  PADRAO  [('in', 0), ('in', 2), ('in', 4)]     1020.0
+43  synth   B2  9303  ENXUTO  [('in', 0), ('in', 2), ('in', 4)]     1120.0
+45  synth   B3  9301  PADRAO             [('in', 3), ('in', 5)]     2140.0
+46  synth   B3  9301  ENXUTO                        [('in', 3)]     2250.0
+48  synth   B3  9302  PADRAO  [('in', 0), ('in', 3), ('in', 5)]      720.0
+49  synth   B3  9302  ENXUTO                        [('in', 3)]    18700.0
+51  synth   B3  9303  PADRAO  [('in', 0), ('in', 3), ('in', 5)]      740.0
+52  synth   B3  9303  ENXUTO                        [('in', 3)]      800.0
+54  semi3  SP0  6301  PADRAO                                 []        NaN
+55  semi3  SP0  6301  ENXUTO                                 []        NaN
+57  semi3  SP0  6302  PADRAO                        [('in', 5)]     5270.0
+58  semi3  SP0  6302  ENXUTO                                 []        NaN
+60  semi3  SP0  6303  PADRAO                                 []        NaN
+61  semi3  SP0  6303  ENXUTO                                 []        NaN
+63  semi3  SP1  6301  PADRAO                        [('in', 4)]     4390.0
+64  semi3  SP1  6301  ENXUTO                        [('in', 4)]     5010.0
+66  semi3  SP1  6302  PADRAO                        [('in', 4)]     6210.0
+67  semi3  SP1  6302  ENXUTO                        [('in', 4)]    29650.0
+69  semi3  SP1  6303  PADRAO                        [('in', 4)]     4740.0
+70  semi3  SP1  6303  ENXUTO                        [('in', 4)]    30210.0
+72  semi3  SP2  6301  PADRAO                        [('in', 3)]    17220.0
+73  semi3  SP2  6301  ENXUTO                                 []        NaN
+75  semi3  SP2  6302  PADRAO                        [('in', 3)]     5370.0
+76  semi3  SP2  6302  ENXUTO                                 []        NaN
+78  semi3  SP2  6303  PADRAO                        [('in', 3)]    12880.0
+79  semi3  SP2  6303  ENXUTO                                 []        NaN
+81  semi3  SP3  6301  PADRAO                                 []        NaN
+82  semi3  SP3  6301  ENXUTO                                 []        NaN
+84  semi3  SP3  6302  PADRAO                                 []        NaN
+85  semi3  SP3  6302  ENXUTO                                 []        NaN
+87  semi3  SP3  6303  PADRAO                                 []        NaN
+88  semi3  SP3  6303  ENXUTO                                 []        NaN
+90  semi3  SP4  6301  PADRAO                                 []        NaN
+91  semi3  SP4  6301  ENXUTO                                 []        NaN
+93  semi3  SP4  6302  PADRAO                        [('in', 5)]     1140.0
+94  semi3  SP4  6302  ENXUTO                        [('in', 5)]     1190.0
+96  semi3  SP4  6303  PADRAO                        [('in', 5)]     1010.0
+97  semi3  SP4  6303  ENXUTO                        [('in', 5)]     1020.0
+ons     {'ENXUTO': 0.528, 'PADRAO': 0.515} atom 0.579 fp {'ENXUTO': 228, 'PADRAO': 313}
+camels  {'ENXUTO': 0.897, 'PADRAO': 0.923} atom 0.994 fp {'ENXUTO': 263, 'PADRAO': 383}
+bdg2    {'ENXUTO': 0.93, 'PADRAO': 0.927} atom 0.93 fp {'ENXUTO': 257, 'PADRAO': 381}
+ALL     {'ENXUTO': 0.688, 'PADRAO': 0.683} atom 0.793 fp {'ENXUTO': 249, 'PADRAO': 359}
+1000pts ons {'v052H_PADRAO': 0.472, 'v052H_ENXUTO': 0.491, 'CHRONOS2_COV': 0.5, 'v052': 0.535, 'CHRONOS2': 0.858, 'ARX_NLMS': 0.529, 'AIRLINE_X': 0.847}
+1000pts camels {'v052H_PADRAO': 0.87, 'v052H_ENXUTO': 0.895, 'CHRONOS2_COV': 0.838, 'v052': 0.951, 'CHRONOS2': 0.892, 'ARX_NLMS': 1.208, 'AIRLINE_X': 0.825}
+1000pts bdg2 {'v052H_PADRAO': 0.916, 'v052H_ENXUTO': 0.918, 'CHRONOS2_COV': 0.718, 'v052': 0.92, 'CHRONOS2': 0.78, 'ARX_NLMS': 2.008, 'AIRLINE_X': 0.97}
+1000pts ALL {'v052H_PADRAO': 0.645, 'v052H_ENXUTO': 0.666, 'CHRONOS2_COV': 0.701, 'v052': 0.757, 'CHRONOS2': 0.915, 'ARX_NLMS': 1.109, 'AIRLINE_X': 0.988}
+PADRAO beats CHRONOS2_COV in 13 of 29
+ENXUTO beats CHRONOS2_COV in 13 of 29

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_S5_CONTINUAL_BACKPROP_SEED_119",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.1816581401249327,
+  "mae": 0.35851740563175977,
+  "nmse": 0.09021764306604159,
+  "mean_flops": 41.0,
+  "p95_flops": 41.0,
+  "peak_flops": 41.0,
+  "memory_bytes": 208,
+  "active_params": 6,
+  "wall_time_sec": 0.269864559173584
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_B2_CCN_SEED_128",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "B2_CCN",
+  "seed": 128,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.001, \"max_columns\": 2}",
+  "status": "NUMERICAL_DIVERGENCE",
+  "failure_step": 5,
+  "fraction_completed": 7.142857142857143e-05,
+  "mse": Infinity,
+  "mae": Infinity,
+  "nmse": Infinity,
+  "mean_flops": 0.0,
+  "p95_flops": 0.0,
+  "peak_flops": 0.0,
+  "memory_bytes": 328,
+  "active_params": 28,
+  "wall_time_sec": 0.0
+}

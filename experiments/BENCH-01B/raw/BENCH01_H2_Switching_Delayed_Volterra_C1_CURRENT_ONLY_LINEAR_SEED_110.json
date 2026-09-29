@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_C1_CURRENT_ONLY_LINEAR_SEED_110",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.6134434064082313,
+  "mae": 1.1570080035591674,
+  "nmse": 1.016971705157806,
+  "mean_flops": 161.0,
+  "p95_flops": 161.0,
+  "peak_flops": 161.0,
+  "memory_bytes": 352,
+  "active_params": 40,
+  "wall_time_sec": 0.07724356651306152
+}

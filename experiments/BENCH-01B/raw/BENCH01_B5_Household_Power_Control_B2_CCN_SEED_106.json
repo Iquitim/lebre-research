@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_B2_CCN_SEED_106",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "B2_CCN",
+  "seed": 106,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.0001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.01639287202515971,
+  "mae": 0.09913323306451495,
+  "nmse": 0.00814126070087499,
+  "mean_flops": 161.0,
+  "p95_flops": 161.0,
+  "peak_flops": 161.0,
+  "memory_bytes": 304,
+  "active_params": 22,
+  "wall_time_sec": 0.6788146495819092
+}

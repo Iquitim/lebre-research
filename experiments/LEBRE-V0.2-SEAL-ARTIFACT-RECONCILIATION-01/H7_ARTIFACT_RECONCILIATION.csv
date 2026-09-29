@@ -1,0 +1,17 @@
+artifact,task,metric,old_value,recomputed_value,match,root_cause_if_mismatch
+H7_TASK_SUMMARY.csv,I10_Redundant_Temporal_Structure,mean_absolute_paired_difference,0.0,0.005170998288360315,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I11_Regime_Switch_Delay_To_Latent,mean_absolute_paired_difference,0.0,0.033932234968271024,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I12_Regime_Switch_Latent_To_Delay,mean_absolute_paired_difference,0.0,0.002972735332166452,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I13_Regime_Switch_Hybrid_To_Memoryless,mean_absolute_paired_difference,0.0,0.022279195400627762,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I14_Intermittent_Hybrid,mean_absolute_paired_difference,0.0,0.0316905019106988,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I1_Memoryless_Linear,mean_absolute_paired_difference,0.0,0.00012109219008031348,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I2_Static_Nonlinear_Negative_Control,mean_absolute_paired_difference,0.0,0.01730820456271443,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I3_Single_Exact_Delay,mean_absolute_paired_difference,0.0,0.15864138640229386,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I4_Multi_Sparse_Delay,mean_absolute_paired_difference,0.0,0.04775005929054058,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I5_Moving_Delay_Support,mean_absolute_paired_difference,0.0,0.05851649762775012,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I6_Continuous_Latent_State,mean_absolute_paired_difference,0.0,0.001284706348282571,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I7_Quiescent_Continuous_State,mean_absolute_paired_difference,0.0,0.0038739632651414537,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I8_Quiescent_Discrete_Delay,mean_absolute_paired_difference,0.0,0.16542629509259307,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+H7_TASK_SUMMARY.csv,I9_Hybrid_Delay_Plus_Latent_State,mean_absolute_paired_difference,0.0,0.04228935693454226,False,EXTRACTION_BUG_IN_PRIOR_SCRIPT: Line 80 assigned nmse_t1r = sub_t1['nmse'].values
+Narrative_Report_I4,I4_Multi_Sparse_Delay,difference_of_means,0.1654,0.0007720804981390383,False,REPORTING_CONFLATION: Paste from DEV Seed 1301 and I8 maximum
+Narrative_Report_I4,I4_Multi_Sparse_Delay,wilcoxon_p_value,1.86e-09,0.8871948085725307,False,REPORTING_TRANSCRIPTION_ERROR: Transposed p-value from T3 vs T1 win

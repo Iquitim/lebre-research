@@ -1,0 +1,5 @@
+task_id,m0_latency_steps,m1_latency_steps,delta_latency_steps,threshold_steps,status
+I11_Regime_Switch_Delay_To_Latent,354.8,434.5,79.69999999999999,50.0,FAIL
+I12_Regime_Switch_Latent_To_Delay,1903.5666666666666,2537.3,633.7333333333336,50.0,FAIL
+I13_Regime_Switch_Hybrid_To_Memoryless,134.93333333333334,133.43333333333334,-1.5,50.0,PASS
+I14_Intermittent_Hybrid,1303.1666666666667,1219.9666666666667,-83.20000000000005,50.0,PASS

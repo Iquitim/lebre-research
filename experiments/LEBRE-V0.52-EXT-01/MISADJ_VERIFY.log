@@ -1,0 +1,23 @@
+  print(R.groupby("mu").apply(lambda g: pd.Series({"runs_with_acceptance": int(g.any_acc.sum()), "runs_with_Dmax>0": int((g.D_max > 0).sum()),
+       M_emp         M_theory           D_max        
+        mean     max     mean     max    mean     max
+mu                                                   
+0.03  0.0213  0.0329   0.0152  0.0152 -0.0004  0.0002
+0.05  0.0369  0.0697   0.0256  0.0256  0.0013  0.0027
+0.10  0.0818  0.2132   0.0526  0.0526  0.0044  0.0096
+      runs_with_acceptance  runs_with_Dmax>0  acc_and_D>0  acc_and_D<=0
+mu                                                                     
+0.03                     0                 1            0             0
+0.05                     0                40            0             0
+0.10                    10                33            3             7
+ kind  seed  mu      accepted argmax_unit     D_max
+white  7203 0.1 ["('in', 5)"]           5 -0.001765
+white  7205 0.1 ["('in', 5)"]           5 -0.001896
+white  7208 0.1 ["('in', 5)"]           5 -0.000593
+heavy  7221 0.1 ["('in', 5)"]           5 -0.001857
+heavy  7224 0.1 ["('in', 5)"]           5  0.000565
+heavy  7226 0.1 ["('in', 5)"]           5  0.001879
+heavy  7227 0.1 ["('in', 5)"]           5  0.006805
+heavy  7230 0.1 ["('in', 5)"]           5 -0.000455
+heavy  7236 0.1 ["('in', 5)"]           5 -0.001829
+heavy  7237 0.1 ["('in', 5)"]           5 -0.001569

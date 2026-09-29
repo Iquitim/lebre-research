@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_S1_VARIABLE_TAP_LMS_SEED_126",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 126,
+  "config": "{\"learning_rate\": 0.001, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1701.829016287776,
+  "mae": 9.43150592381698,
+  "nmse": 0.02931703037462434,
+  "mean_flops": 136.886,
+  "p95_flops": 185.0,
+  "peak_flops": 185.0,
+  "memory_bytes": 544,
+  "active_params": 30,
+  "wall_time_sec": 0.19756174087524414
+}

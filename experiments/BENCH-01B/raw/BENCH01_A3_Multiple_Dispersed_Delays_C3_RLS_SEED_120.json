@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_C3_RLS_SEED_120",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "C3_RLS",
+  "seed": 120,
+  "config": "{\"forgetting_factor\": 1.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.5047785373086212,
+  "mae": 0.5690650372788043,
+  "nmse": 1.0039995118433431,
+  "mean_flops": 1765.0,
+  "p95_flops": 1765.0,
+  "peak_flops": 1765.0,
+  "memory_bytes": 3424,
+  "active_params": 20,
+  "wall_time_sec": 0.12278866767883301
+}

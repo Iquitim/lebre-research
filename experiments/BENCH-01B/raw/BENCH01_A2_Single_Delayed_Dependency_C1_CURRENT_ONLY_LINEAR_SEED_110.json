@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_C1_CURRENT_ONLY_LINEAR_SEED_110",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6569721501877485,
+  "mae": 0.6474074266505062,
+  "nmse": 1.0107050222966387,
+  "mean_flops": 81.0,
+  "p95_flops": 81.0,
+  "peak_flops": 81.0,
+  "memory_bytes": 192,
+  "active_params": 20,
+  "wall_time_sec": 0.08001828193664551
+}

@@ -1,0 +1,9 @@
+using sysbus
+mach create "lebre"
+machine LoadPlatformDescription @D:\Projetos\Codinome Lebre\experiments\LEBRE-V0.52-EXT-01\mcu\platform.repl
+cpu PerformanceInMips 168
+sysbus LoadELF @D:\Projetos\Codinome Lebre\experiments\LEBRE-V0.52-EXT-01\mcu\fw_ons_vg.elf
+usart2 CreateFileBackend @D:\Projetos\Codinome Lebre\experiments\LEBRE-V0.52-EXT-01\mcu\uart_ons_vg.txt true
+emulation RunFor "00:00:40"
+cpu ExecutedInstructions
+quit

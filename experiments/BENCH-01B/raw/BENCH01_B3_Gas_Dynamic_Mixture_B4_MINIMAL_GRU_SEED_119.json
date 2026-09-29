@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_B4_MINIMAL_GRU_SEED_119",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.95}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1315.1233640727944,
+  "mae": 5.521965660714606,
+  "nmse": 0.022655338016860205,
+  "mean_flops": 249.0,
+  "p95_flops": 249.0,
+  "peak_flops": 249.0,
+  "memory_bytes": 504,
+  "active_params": 55,
+  "wall_time_sec": 0.3796651363372803
+}

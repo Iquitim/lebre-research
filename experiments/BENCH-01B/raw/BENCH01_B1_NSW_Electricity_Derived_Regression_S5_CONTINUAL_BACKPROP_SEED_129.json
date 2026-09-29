@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_S5_CONTINUAL_BACKPROP_SEED_129",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 129,
+  "config": "{\"learning_rate\": 0.03, \"replacement_rate\": 0.001, \"maturity_threshold\": 100}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0018276682386730591,
+  "mae": 0.025048559894338386,
+  "nmse": 0.9802913426324803,
+  "mean_flops": 35.0,
+  "p95_flops": 35.0,
+  "peak_flops": 35.0,
+  "memory_bytes": 184,
+  "active_params": 5,
+  "wall_time_sec": 0.48317861557006836
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_B1_RZA_LMS_SEED_101",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "B1_RZA_LMS",
+  "seed": 101,
+  "config": "{\"learning_rate\": 0.01, \"rho_zero_attraction\": 1e-06, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0426146664959361,
+  "mae": 0.8383395982976847,
+  "nmse": 1.0628433566404851,
+  "mean_flops": 101.0,
+  "p95_flops": 101.0,
+  "peak_flops": 101.0,
+  "memory_bytes": 144,
+  "active_params": 10,
+  "wall_time_sec": 0.09958863258361816
+}

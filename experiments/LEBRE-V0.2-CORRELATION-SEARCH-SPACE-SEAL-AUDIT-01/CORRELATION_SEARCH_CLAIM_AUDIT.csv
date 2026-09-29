@@ -1,0 +1,35 @@
+claim_id,claim_text,parent_artifact,reported_value,authoritative_recomputed_value,error_class,audit_status,corrective_action
+C01,dense grid has 160 cells,CORRELATION_SEARCH_FINAL_REPORT.md,160 searchable cells,160 searchable temporal delay coordinates,NO_ERROR,VERIFIED,Scope explicitly as searchable delay coordinates (k in 1..32)
+C02,dense physical grid has 165 cells,CORRELATION_SEARCH_PROTOCOL.md,165 physical cells,165 physical cells in buffer (5 features x 33 lags),NO_ERROR,VERIFIED,Retain as physical buffer geometry including k=0
+C03,dense state memory = 330 B,CORRELATION_SEARCH_RESOURCE_REPORT.md,330 B,330 B (165 physical cells x 2 bytes FP16),GEOMETRY_SEMANTIC_DRIFT,VERIFIED_WITH_CLARIFICATION,Explain that 330B reflects 165 physical cells not 160
+C04,compact state memory = 192 B,CORRELATION_SEARCH_RESOURCE_REPORT.md,192 B,192 B (32 slots x 6 bytes struct slot),NO_ERROR,VERIFIED,Clarify slot struct has 6 bytes (2B key + 2B corr + 2B timestamp)
+C05,compact total search state = 260 B,CORRELATION_SEARCH_RESOURCE_REPORT.md,260 B,260 B (192B slots + 68B control & queue),NO_ERROR,VERIFIED,Certified exact state breakdown
+C06,search RAM reduction = 67.58%,CORRELATION_SEARCH_RESOURCE_REPORT.md,67.58%,67.58% total state reduction (802B to 260B),NO_ERROR,VERIFIED,Certified; raw accumulator reduction is 41.82% (330B to 192B)
+C07,locality neighbor correlation r = 0.2176,LAG_SCORE_LOCALITY_AUDIT.csv,0.2176,0.217649,NO_ERROR,VERIFIED,Certified DEV diagnostic audit
+C08,neighbor recall ratio = 26.50%,LAG_SCORE_LOCALITY_AUDIT.csv,26.50%,26.4959%,NO_ERROR,VERIFIED,Certified DEV diagnostic audit
+C09,C2 coarse peak capture ge 70% = 3.64%,LAG_SCORE_LOCALITY_AUDIT.csv,3.64%,3.6419%,NO_ERROR,VERIFIED,Certified DEV diagnostic audit
+C10,Kronecker delta failure of coarse-to-fine,LAG_SCORE_LOCALITY_REPORT.md,Kronecker delta spike,approximate delta-like profile with finite noise floor,UNSUPPORTED_GENERALIZATION,SCOPED_SUPPORTED,Scope to tested white-innovation generators; not all delay processes
+C11,M1 max observed silence = 80 steps,ANTI_STARVATION_AUDIT.csv,80.0 steps,80.00 steps across all 420 regimes,NO_ERROR,VERIFIED,Certified exact empirical match
+C12,anti-starvation mathematically guaranteed,CORRELATION_SEARCH_FINAL_REPORT.md,mathematically guaranteed,proven bound T_revisit = 80 steps for B=4,NO_ERROR,VERIFIED,Certified; exact proof documented in FRONTIER_ANTI_STARVATION_PROOF.md
+C13,M1 total online compute = 110.82 FP/step,CORRELATION_SEARCH_RESOURCE_REPORT.md,110.82 FP/step,111.013591 FP/step,RESOURCE_AGGREGATION_ERROR,CORRECTED,110.82 was component sum; raw mean is 111.01 FP/step
+C14,recomputed total compute from FINAL raw,CORRELATION_SEARCH_FINAL_RESULTS.csv,111.01 FP/step,R0=169.46; R1=106.74; M1=111.01,NO_ERROR,VERIFIED,Certified Level 1 raw data ground truth
+C15,Delta NMSE M1 vs R0 = +0.013027,PREDICTIVE_NONINFERIORITY.csv,+0.013027,+0.0130265,NO_ERROR,VERIFIED,Certified Level 1 raw data ground truth
+C16,one-sided 95% upper CI = +0.019403,PREDICTIVE_NONINFERIORITY.csv,+0.019403,+0.0194023,NO_ERROR,VERIFIED,Certified Level 1 raw data ground truth; fails margin +0.0100
+C17,Delta NMSE M1 vs R1 = -0.011417,PREDICTIVE_NONINFERIORITY.csv,-0.011417,-0.01141697,NO_ERROR,VERIFIED,Certified Level 1 raw data ground truth
+C18,t-statistic M1 vs R1 = -4.57,CORRELATION_SEARCH_FINAL_REPORT.md,-4.57,-2.43523,STATISTICAL_AGGREGATION_ERROR,CORRECTED,-4.57 was test vs margin 0.0100; true paired test vs 0.0 is t(29)=-2.44
+C19,p-value M1 vs R1 = 4.20e-5,CORRELATION_SEARCH_FINAL_REPORT.md,4.20e-5,0.021265 (two-sided) / 0.010632 (one-sided),STATISTICAL_AGGREGATION_ERROR,CORRECTED,4.20e-5 was p-value vs margin 0.0100; true p vs 0.0 is 0.0213
+C20,DEV candidate births dropped 89.94 to 38.64,CORRELATION_SEARCH_FINAL_REPORT.md,89.94 to 38.64,R1=89.94; M1*(H32B4)=94.03,MECHANISTIC_NONREPLICATION,REFUTED,38.64 was an erroneous/hypothetical value; M1* births did not drop in DEV
+C21,FINAL candidate births R1 vs M1*,CORRELATION_SEARCH_FINAL_RESULTS.csv,claimed large reduction,R1=90.22; M1*=92.97,MECHANISTIC_NONREPLICATION,REFUTED,Candidate births slightly higher in M1*; churn reduction claim refuted
+C22,wasted probation compute reduced by 70.06%,CORRELATION_SEARCH_FINAL_REPORT.md,70.06% reduction,R1=1.711 FP/step; M1*=1.769 FP/step,MECHANISTIC_NONREPLICATION,REFUTED,Wasted probation compute identical between R1 and M1* on FINAL
+C23,true promotion recall 66.55% to 76.31%,CORRELATION_SEARCH_FINAL_REPORT.md,66.55% to 76.31%,R1=66.55%; M1*=76.31%,NO_ERROR,VERIFIED,True promotion recall genuinely improved due to faster B=4 queue traversal
+C24,sparse frontier acts as epistemic noise filter,CORRELATION_SEARCH_FINAL_REPORT.md,epistemic noise filter,churn not reduced; benefit comes from queue revisit rate,CAUSAL_ATTRIBUTION_OVERREACH,RECLASSIFIED,Reclassify from proven mechanism to refuted hypothesis
+C25,irreducible compute floor = 88.45 FP/step,CORRELATION_SEARCH_RESOURCE_REPORT.md,88.45 FP/step,88.45 FP/step conditioned on active structure,UNSUPPORTED_IMPOSSIBILITY_CLAIM,SCOPED_SUPPORTED,Scope to active multi-component models; inactive models run at 58 FP
+C26,below-100 FP/step is mathematically impossible,CORRELATION_SEARCH_FINAL_REPORT.md,mathematically impossible,impossible under frozen M1 clocks and active structure,UNSUPPORTED_IMPOSSIBILITY_CLAIM,SCOPED_SUPPORTED,Scope strictly to frozen M1 multirate clock set and active tier
+C27,frontier operates identically to Matching Pursuit,CORRELATION_SEARCH_FINAL_REPORT.md,identically,conceptual active-set analogy only,LITERATURE_ANALOGY_OVERREACH,RECLASSIFIED,Replace 'identically' with 'conceptual active-set analogy'
+C28,dense correlation permanently deprecated,CORRELATION_SEARCH_DECISION.md,permanently deprecated,dense search retained as scientific comparator,GOVERNANCE_OVERSTATEMENT,OVERRULED,M1* failed global validation; dense references cannot be deprecated
+C29,Phase 2 evaluated 840 DEV runs,CORRELATION_SEARCH_FINAL_REPORT.md,840 runs,980 runs executed (840 initial + 140 R1 baseline),RUN_COUNT_ERROR,CORRECTED,840 reflected initial 6 configs; df_full contained 980 runs
+C30,confirmatory evaluated 2.52M stream steps,CORRELATION_SEARCH_FINAL_REPORT.md,2.52M stream steps,2.52M steps per model cohort; 7.56M total across 3 models,STEP_COUNT_ERROR,CORRECTED,Clarify 2.52M is per-model cohort and 7.56M is total study steps
+C31,SEARCH_SPACE_COMPACTION_SUPPORTED = YES,CORRELATION_SEARCH_DECISION.md,YES (WITHIN MULTIRATE),NO (mandatory global gates failed),OUTCOME_TAXONOMY_DRIFT,OVERRULED,Must be NO under frozen preregistration rules
+C32,PRIMARY_OUTCOME label drift,CORRELATION_SEARCH_DECISION.md,COMPACTED_FRONTIER_SUPERIOR,MULTIPLE_CORRECTABLE_ISSUES,OUTCOME_TAXONOMY_DRIFT,CORRECTED,Adopt standard taxonomy
+C33,safe for integrated validation,CORRELATION_SEARCH_FINAL_REPORT.md,NO,NO,NO_ERROR,VERIFIED,Certified; global gates failed
+C34,M3 status unopened,CORRELATION_SEARCH_FINAL_REPORT.md,UNOPENED,UNOPENED,NO_ERROR,VERIFIED,Certified; M3 remains unopened

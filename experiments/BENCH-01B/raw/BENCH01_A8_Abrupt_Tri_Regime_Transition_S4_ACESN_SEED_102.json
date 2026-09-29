@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_S4_ACESN_SEED_102",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "S4_ACESN",
+  "seed": 102,
+  "config": "{\"reservoir_size\": 40, \"spectral_radius\": 0.85, \"compression_ratio\": 0.5, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.45513633038608375,
+  "mae": 0.50628498888213,
+  "nmse": 0.9081862361708418,
+  "mean_flops": 4484.815428571428,
+  "p95_flops": 4485.0,
+  "peak_flops": 4485.0,
+  "memory_bytes": 16768,
+  "active_params": 40,
+  "wall_time_sec": 0.10957670211791992
+}

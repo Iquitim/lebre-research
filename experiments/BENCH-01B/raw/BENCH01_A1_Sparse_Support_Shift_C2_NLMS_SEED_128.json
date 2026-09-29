@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_C2_NLMS_SEED_128",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "C2_NLMS",
+  "seed": 128,
+  "config": "{\"step_size\": 0.2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.1602961345011715,
+  "mae": 0.12680643500840902,
+  "nmse": 0.03749058038646041,
+  "mean_flops": 305.0,
+  "p95_flops": 305.0,
+  "peak_flops": 305.0,
+  "memory_bytes": 432,
+  "active_params": 50,
+  "wall_time_sec": 0.07933354377746582
+}

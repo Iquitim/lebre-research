@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_S3_RSONN_SEED_116",
+  "task_id": "A6_Context_Routing",
+  "model_id": "S3_RSONN",
+  "seed": 116,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.005}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.3779020846803827,
+  "mae": 0.47878626406382274,
+  "nmse": 0.482472239033222,
+  "mean_flops": 322.0,
+  "p95_flops": 322.0,
+  "peak_flops": 322.0,
+  "memory_bytes": 576,
+  "active_params": 60,
+  "wall_time_sec": 0.32425856590270996
+}

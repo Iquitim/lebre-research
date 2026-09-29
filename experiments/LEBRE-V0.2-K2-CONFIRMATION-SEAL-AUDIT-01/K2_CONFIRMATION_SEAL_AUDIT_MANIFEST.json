@@ -1,0 +1,117 @@
+{
+  "stage_id": "LEBRE-V0.2-K2-CONFIRMATION-SEAL-AUDIT-01",
+  "audited_parent": "LEBRE-V0.2-K2-CORRECTIVE-CONFIRMATION-01",
+  "audit_timestamp_utc": "2026-09-22T19:32:11.441404+00:00",
+  "git_commit": "NOT_A_GIT_REPO",
+  "python_version": "3.11.9",
+  "numpy_version": "2.2.5",
+  "scipy_version": "1.17.1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "primary_outcome": "K2_BEHAVIOR_CONFIRMED_RESOURCE_STATUS_RECLASSIFIED",
+  "artifacts": {
+    "ARTIFACT_AUTHORITY_MAP.md": {
+      "sha256": "a9eb58bedf29c84cbfb677d5b836a93bac73bf2d7888e6a9cb24a3b8b98a2141",
+      "size_bytes": 1550
+    },
+    "AUXILIARY_RESOURCE_LEVER_FEASIBILITY.csv": {
+      "sha256": "f23693eb3b2dee59aa21e6186fcbffe82ec9c1209cbd20c977880e12522a4df3",
+      "size_bytes": 1097
+    },
+    "C0_K2_CONFIG_DIFF_RECHECK.csv": {
+      "sha256": "e83bdbe5cb8899c53cb71dedc66d2d65061896e04d11f87fb045f95161e5b137",
+      "size_bytes": 940
+    },
+    "K2_AUXILIARY_RESOURCE_LEVER_DECISION.md": {
+      "sha256": "99a3d60fa3d44e21f1496009b827e323f02f3155228b702e0887027f80104940",
+      "size_bytes": 3006
+    },
+    "K2_CADENCE_EVIDENCE_BOUNDARY.md": {
+      "sha256": "dffc29c3bdfb1ca2ff21fc8fd623296224fcfb03063041cda967cccad9fa58e2",
+      "size_bytes": 1777
+    },
+    "K2_COMPUTE_ERROR_CORRELATION_RECHECK.md": {
+      "sha256": "0a28eb915e7ce4fe168681ff3eee3ba6ad7408c1332b2f5beff7bec4e64d8fba",
+      "size_bytes": 1863
+    },
+    "K2_CONFIRMATION_CLAIM_AUDIT.csv": {
+      "sha256": "c45d71cd6e5f41dfc4eb4b3266e4665b4df24a2b5649b460d83a3d305522d6fc",
+      "size_bytes": 5316
+    },
+    "K2_CONFIRMATION_CLAIM_DEPENDENCY_GRAPH.md": {
+      "sha256": "a59c5a6c6c82940df58f92407f96970fdbee3c5ebb5e675ac356e2e7a50c43f8",
+      "size_bytes": 1777
+    },
+    "K2_CONFIRMATION_SEAL_AUDIT_FINAL_REPORT.md": {
+      "sha256": "856aec8e27260966af0eacd6cc35866dfba055dec8e64a2e5e953057bf74d948",
+      "size_bytes": 10388
+    },
+    "K2_CONFIRMATION_SEAL_AUDIT_PROTOCOL.md": {
+      "sha256": "02c27eba554c439436bfc13db818bc539368b30675171600bf9070f689774317",
+      "size_bytes": 1557
+    },
+    "K2_CONFIRMATION_SEAL_CORRIGENDUM.md": {
+      "sha256": "c4311c306dd4c714163dab261ca298760920fd82b25659dbd00e1858a0de968b",
+      "size_bytes": 6076
+    },
+    "K2_CONFIRMATION_SEAL_ROOT_CAUSE_ANALYSIS.md": {
+      "sha256": "44b1e4e6401b901f625f0d34f922f8abf9cba77dfc804bcbeb634abdaa045214",
+      "size_bytes": 5447
+    },
+    "K2_I9_RECHECK.csv": {
+      "sha256": "faae141ae7cc3f2767029312648685ebb310624131d456d9d1fa76f5ecd413c9",
+      "size_bytes": 222
+    },
+    "K2_RESOURCE_COMPONENT_CLOSURE.md": {
+      "sha256": "5008b6f6e17ef14d0bf54c04261e9dc8f33cb1cf0945df5c6239d2c8d0bfc0fb",
+      "size_bytes": 2609
+    },
+    "K2_RESOURCE_GATE_AUDIT.md": {
+      "sha256": "c219b8d1249a6238af85ff04526d887b8f82a7f6322b7b296cbe8218c05bb74d",
+      "size_bytes": 1764
+    },
+    "K2_RESOURCE_SEAL_RECONCILIATION.csv": {
+      "sha256": "66eed41e62dbc7a941a474e9f93f9b47da756bf4e281869b140dea7a3b2ee9b6",
+      "size_bytes": 1267
+    },
+    "K2_STATE_HOLD_UPDATE_RATIO_RECHECK.md": {
+      "sha256": "a3258c3c3ac7697012d587e3afc2520519d2bbd3ac49b093bfb4f7f529a4a60b",
+      "size_bytes": 2256
+    },
+    "K2_STATISTICAL_LINEAGE.md": {
+      "sha256": "b31148e295086d93218729e380f2d28a81908bd86aa887dd231f13b582b8c8b9",
+      "size_bytes": 3424
+    },
+    "K2_STATISTICAL_RECONCILIATION.csv": {
+      "sha256": "d82acbf03eb72b7622334ffdf53591a2a412631124090ec85b6f29c936ddad3e",
+      "size_bytes": 4470
+    },
+    "K2_STRUCTURAL_OCCUPANCY_RECHECK.csv": {
+      "sha256": "18d102d67ea977c62ddadfea25546c1470a6abbedb6031d7a8185a739a240083",
+      "size_bytes": 703
+    },
+    "K2_SWITCHING_RECHECK.csv": {
+      "sha256": "3048c5142ae35e0624390ecc127615cce4fdc508ad833c4fecbb2621da0f6187",
+      "size_bytes": 352
+    },
+    "K2_TASK_LEVEL_RECHECK.csv": {
+      "sha256": "4664c9a633431a17b98e7193b15aa0f3169d5ea84c87bda8d6038e86745f6e59",
+      "size_bytes": 1389
+    },
+    "PARENT_ARTIFACT_HASHES.txt": {
+      "sha256": "e19d4f7dd30716f032631025d1c6a931c475eba778a5370dd577cc73f5493fa8",
+      "size_bytes": 3215
+    },
+    "RAW_CARDINALITY_AUDIT.md": {
+      "sha256": "82f4afa695a8fa0649a32468d2f2bd6520d04969b5ed982cd781fd48bdfc4af7",
+      "size_bytes": 998
+    },
+    "SEED_PROVENANCE_RECHECK.md": {
+      "sha256": "98c599f247463cc6b4bdecc2c031c608f9c1df5b3a60bf429cc83ba34b55d046",
+      "size_bytes": 1480
+    },
+    "generate_k2_confirmation_seal_audit.py": {
+      "sha256": "31f2416d6e76a1c9970123668b5014e194c56d0930f34d16bff0a02aeaf45540",
+      "size_bytes": 83188
+    }
+  }
+}

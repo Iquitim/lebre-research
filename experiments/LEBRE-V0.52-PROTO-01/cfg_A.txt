@@ -1,0 +1,1 @@
+dict(scale_floor=0.1, peak_persist=True, evidence='psiE1', lazy_halves=True, screen_skip_active=True, track_groups=True, mu=0.05, stagger=True, screen_spread=True, peak_split=True, peak_until=200, chal_warm=250)

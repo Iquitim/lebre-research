@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_C1_CURRENT_ONLY_LINEAR_SEED_110",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "NUMERICAL_DIVERGENCE",
+  "failure_step": 5,
+  "fraction_completed": 7.142857142857143e-05,
+  "mse": Infinity,
+  "mae": Infinity,
+  "nmse": Infinity,
+  "mean_flops": 0.0,
+  "p95_flops": 0.0,
+  "peak_flops": 0.0,
+  "memory_bytes": 136,
+  "active_params": 13,
+  "wall_time_sec": 0.0
+}

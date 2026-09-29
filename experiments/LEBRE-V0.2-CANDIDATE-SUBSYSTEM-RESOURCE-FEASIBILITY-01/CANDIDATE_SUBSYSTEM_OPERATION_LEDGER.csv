@@ -1,0 +1,11 @@
+operation_id,component,role,trigger,FP_cost_per_execution,INT_cost_per_execution,CAST_cost_per_execution,memory_bytes_moved,persistent_bytes,execution_count_total,execution_rate_per_step,mean_FP_per_step,mandatory_or_optional,dependency,can_be_skipped_without_semantic_change,notes
+OP_01,DISCOVERY,DISCOVERY,FRONTIER_THRESHOLD_CROSSING,0.0,6.0,2.0,12,6,39049,0.015496,0.0,MANDATORY,SEARCH_FRONTIER,NO,Allocates candidate tracking slot
+OP_02,OBSERVATION,OBSERVATION,K_OBS_CLOCK (5 steps),3.0,4.0,1.0,8,0,206800,0.082063,0.24614761904761903,MANDATORY,DELAY_BUFFER,NO,Delay tap fetch and counterfactual error prediction
+OP_03,STATE_PROPAGATION,STATE_PROPAGATION,K_OBS_CLOCK (5 steps),0.0,2.0,0.0,4,0,206800,0.082063,0.0,MANDATORY,CANDIDATE_SLOT,NO,Increments shadow observation counter
+OP_04,PARAMETER_LEARNING,PARAMETER_LEARNING,K_LEARN_CLOCK (10 steps),10.0,5.0,1.0,12,0,96800,0.038413,1.5984857142857143,MANDATORY,OBSERVATION,NO,Normalized LMS gradient update on candidate weight
+OP_05,COUNTERFACTUAL_SCORING,COUNTERFACTUAL_SCORING,K_OBS_CLOCK (5 steps),2.0,2.0,0.0,4,0,206800,0.082063,0.164126,MANDATORY,OBSERVATION,NO,Computes error power difference (bundled in obs)
+OP_06,EVIDENCE_ACCUMULATION,EVIDENCE_ACCUMULATION,K_OBS_CLOCK (5 steps),1.0,1.0,0.0,4,0,206800,0.082063,0.082063,MANDATORY,SCORING,NO,Running utility filter update (bundled in obs)
+OP_07,PROMOTION_DECISION,PROMOTION_DECISION,T_PROB_MATURITY (n=15 obs),1.0,2.0,0.0,2,0,39049,0.015496,0.015496,MANDATORY,EVIDENCE,NO,Fixed horizon threshold check vs theta_promote
+OP_08,DISCARD_DECISION,DISCARD_DECISION,FAILED_MATURITY,0.0,4.0,0.0,6,0,37400,0.014841,0.0,MANDATORY,PROMOTION_DECISION,NO,Slot deallocation and coordinate reset
+OP_09,ARBITRATION,ARBITRATION,K_ARB_CLOCK (2.5 steps),14.0,8.0,2.0,24,0,1008000,0.4,5.6,OPTIONAL_PARTIALLY,CANDIDATE_ACTIVE,NO,Pairwise gain comparison against incumbent
+OP_10,HOUSEKEEPING,HOUSEKEEPING,EVERY_STEP,0.0,4.0,0.0,8,0,2520000,1.0,0.0,MANDATORY,SYSTEM,NO,Active slot table maintenance

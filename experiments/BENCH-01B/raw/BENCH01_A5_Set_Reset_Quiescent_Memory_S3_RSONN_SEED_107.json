@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_S3_RSONN_SEED_107",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "S3_RSONN",
+  "seed": 107,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.2916113079674193,
+  "mae": 0.30386627487776613,
+  "nmse": 0.3313857432088857,
+  "mean_flops": 321.832,
+  "p95_flops": 322.0,
+  "peak_flops": 322.0,
+  "memory_bytes": 576,
+  "active_params": 60,
+  "wall_time_sec": 0.291611909866333
+}

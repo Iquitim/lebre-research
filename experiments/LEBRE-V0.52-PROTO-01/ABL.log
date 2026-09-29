@@ -1,0 +1,11 @@
+                fp                    ...                           
+             count     mean      std  ...      50%      75%      max
+model                                 ...                           
+ARX_RLS_PLS   29.0  33578.0  24674.0  ...  32572.0  65316.0  65316.0
+LASSO_ONLINE  29.0    579.0    181.0  ...    606.0    804.0    804.0
+
+[2 rows x 8 columns]
+ons     atom 0.579 {'COMPLETA': 0.508, 'SEM_DIVISOES': 0.507, 'TUDO_LIGADO': 0.505, 'TUDO_LIGADO_RLS': 0.595} fp {'COMPLETA': 318, 'SEM_DIVISOES': 290, 'TUDO_LIGADO': 281, 'TUDO_LIGADO_RLS': 1150}
+camels  atom 0.994 {'COMPLETA': 0.937, 'SEM_DIVISOES': 0.939, 'TUDO_LIGADO': 1.033, 'TUDO_LIGADO_RLS': 0.889} fp {'COMPLETA': 406, 'SEM_DIVISOES': 398, 'TUDO_LIGADO': 392, 'TUDO_LIGADO_RLS': 2731}
+bdg2    atom 0.93 {'COMPLETA': 0.932, 'SEM_DIVISOES': 0.932, 'TUDO_LIGADO': 0.982, 'TUDO_LIGADO_RLS': 0.982} fp {'COMPLETA': 411, 'SEM_DIVISOES': 395, 'TUDO_LIGADO': 379, 'TUDO_LIGADO_RLS': 2072}
+ALL     atom 0.793 {'COMPLETA': 0.709, 'SEM_DIVISOES': 0.699, 'TUDO_LIGADO': 0.731, 'TUDO_LIGADO_RLS': 0.732} fp {'COMPLETA': 380, 'SEM_DIVISOES': 357, 'TUDO_LIGADO': 334, 'TUDO_LIGADO_RLS': 1855}

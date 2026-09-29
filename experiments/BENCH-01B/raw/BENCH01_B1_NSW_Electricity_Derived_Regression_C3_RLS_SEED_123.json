@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_C3_RLS_SEED_123",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "C3_RLS",
+  "seed": 123,
+  "config": "{\"forgetting_factor\": 0.995}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 71586.70261367103,
+  "mae": 3.1950456386542165,
+  "nmse": 38396369.392914206,
+  "mean_flops": 145.0,
+  "p95_flops": 145.0,
+  "peak_flops": 145.0,
+  "memory_bytes": 304,
+  "active_params": 5,
+  "wall_time_sec": 0.5159668922424316
+}

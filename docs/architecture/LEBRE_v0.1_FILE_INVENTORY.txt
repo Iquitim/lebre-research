@@ -1,0 +1,30 @@
+# ==============================================================================
+# LEBRE ARCHITECTURE SPECIFICATION v0.1 — FILE INVENTORY
+# Freeze Stage: LEBRE-SPEC-FREEZE-01
+# Timestamp: 2026-09-19T21:35:00-03:00
+# Total Frozen Primary Artifacts: 23 files
+# ==============================================================================
+
+40791 bytes  docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md
+44715 bytes  docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md
+ 6519 bytes  docs/architecture/LEBRE_OVERVIEW_EN.md
+ 7194 bytes  docs/architecture/LEBRE_OVERVIEW_PTBR.md
+21671 bytes  docs/architecture/LEBRE_ARCHITECTURE_DIAGRAMS.md
+10727 bytes  docs/architecture/LEBRE_ARCHITECTURAL_DECISIONS.md
+ 4067 bytes  docs/architecture/LEBRE_ARCHITECTURE_MANIFEST.yaml
+ 3565 bytes  docs/architecture/LEBRE_TRACEABILITY_MATRIX.csv
+ 8179 bytes  docs/architecture/LEBRE_CONSTANT_TRACEABILITY.md
+1504935 bytes  docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf
+1515323 bytes  docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf
+758874 bytes  docs/architecture/pdf_source/LEBRE_CONDENSED_EN.html
+761166 bytes  docs/architecture/pdf_source/LEBRE_CONDENSED_PTBR.html
+491487 bytes  logo/LEBRE Logo.png
+ 7371 bytes  docs/architecture/assets/diagrams/lebre_high_level_architecture.svg
+ 6096 bytes  docs/architecture/assets/diagrams/lebre_lifecycle.svg
+ 5176 bytes  docs/architecture/assets/diagrams/lebre_data_control_flow.svg
+ 9425 bytes  docs/architecture/assets/diagrams/lebre_shadow_probation.svg
+ 9413 bytes  docs/architecture/assets/diagrams/lebre_shadow_probation_ptbr.svg
+ 3699 bytes  docs/architecture/assets/diagrams/lebre_quiescent_retention.svg
+ 5295 bytes  docs/architecture/assets/diagrams/lebre_resource_elasticity.svg
+ 3634 bytes  docs/architecture/assets/diagrams/lebre_v01_scope.svg
+ 7511 bytes  docs/architecture/assets/diagrams/lebre_prequential_cycle.svg

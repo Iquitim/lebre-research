@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_S5_CONTINUAL_BACKPROP_SEED_106",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 106,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6464557743849996,
+  "mae": 0.6405853556511008,
+  "nmse": 1.0099525495758799,
+  "mean_flops": 125.0,
+  "p95_flops": 125.0,
+  "peak_flops": 125.0,
+  "memory_bytes": 544,
+  "active_params": 20,
+  "wall_time_sec": 0.13103914260864258
+}

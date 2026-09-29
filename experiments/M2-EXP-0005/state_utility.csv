@@ -1,0 +1,6 @@
+utility_rule,birth_precision,eviction_precision,predictive_loss,state_churn,compute_flops
+Output Magnitude Only,0.52,0.48,0.284,14.2,46.2
+Predictive Delta Loss (V3),0.96,0.95,0.038,2.2,34.5
+Controllability Proxy Only,0.65,0.6,0.195,8.4,39.0
+Observability Proxy Only,0.68,0.64,0.18,7.6,38.5
+Controllability x Observability (V4),0.94,0.93,0.042,2.4,35.8

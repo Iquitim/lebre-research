@@ -1,0 +1,9 @@
+channel,score_col,k_elevated,useful_elevation_precision,false_elevation_rate,enrichment_at_k,est_useful_elevated_probes,est_wasted_elevated_probes
+I0 Passive Corr,abs_mean_corr,5,0.12000000000000002,0.88,11.160568868108319,322.56000000000006,2365.44
+I1 Delayed Corr,score_i1,5,0.12000000000000002,0.88,12.486336278520758,322.56000000000006,2365.44
+I2 Single Micro-Update Gain,normalized_gain_i2,5,0.0,1.0,0.0,0.0,2688.0
+I3 Paired Shadow Gain,normalized_gain_i3,5,0.0,1.0,0.0,0.0,2688.0
+I4 Persistent Micro-Update,normalized_gain_i4,5,0.0,1.0,0.0,0.0,2688.0
+Causal Direction Margin,causal_direction_margin,5,0.08,0.92,8.070453925579582,215.04,2472.96
+Excess Causal Gain,excess_causal_gain,5,0.16,0.84,15.968020631402709,430.08,2257.92
+Oracle,Oracle,5,1.0,0.0,97.62893111757629,2688.0,0.0

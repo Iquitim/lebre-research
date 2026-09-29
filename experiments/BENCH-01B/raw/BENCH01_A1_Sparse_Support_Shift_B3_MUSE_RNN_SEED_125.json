@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_B3_MUSE_RNN_SEED_125",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 125,
+  "config": "{\"learning_rate\": 0.001, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 4.260023496095316,
+  "mae": 1.6459446242661073,
+  "nmse": 1.0001225687832467,
+  "mean_flops": 225.34628571428573,
+  "p95_flops": 220.0,
+  "peak_flops": 684.0,
+  "memory_bytes": 552,
+  "active_params": 52,
+  "wall_time_sec": 0.2922384738922119
+}

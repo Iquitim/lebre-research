@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_S4_ACESN_SEED_113",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "S4_ACESN",
+  "seed": 113,
+  "config": "{\"reservoir_size\": 40, \"spectral_radius\": 0.95, \"compression_ratio\": 0.5, \"readout_lr\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 32.567072492027506,
+  "mae": 3.9723540061670546,
+  "nmse": 0.9682038423953964,
+  "mean_flops": 7684.977142857143,
+  "p95_flops": 7685.0,
+  "peak_flops": 7685.0,
+  "memory_bytes": 29568,
+  "active_params": 40,
+  "wall_time_sec": 0.1077115535736084
+}

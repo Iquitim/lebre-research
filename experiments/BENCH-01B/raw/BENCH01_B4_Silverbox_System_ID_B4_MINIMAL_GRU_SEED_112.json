@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_B4_MINIMAL_GRU_SEED_112",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 112,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0038539640806637214,
+  "mae": 0.04798574942305979,
+  "nmse": 0.9998720653145534,
+  "mean_flops": 69.0,
+  "p95_flops": 69.0,
+  "peak_flops": 69.0,
+  "memory_bytes": 144,
+  "active_params": 10,
+  "wall_time_sec": 0.8787968158721924
+}

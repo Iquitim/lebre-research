@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_B4_MINIMAL_GRU_SEED_129",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 129,
+  "config": "{\"learning_rate\": 0.003, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6314194599023224,
+  "mae": 0.6349282727681782,
+  "nmse": 1.0002081072985938,
+  "mean_flops": 297.0,
+  "p95_flops": 297.0,
+  "peak_flops": 297.0,
+  "memory_bytes": 600,
+  "active_params": 67,
+  "wall_time_sec": 0.19052553176879883
+}

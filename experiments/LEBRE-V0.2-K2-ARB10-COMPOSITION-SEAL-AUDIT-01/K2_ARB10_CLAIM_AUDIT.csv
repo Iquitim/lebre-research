@@ -1,0 +1,54 @@
+claim_id,claim_text,raw_level_1_result,error_class,audit_notes
+C01,1260 complete runs completed,YES (1260/1260),NO_ERROR,Exact match to raw telemetry
+C02,Seeds 1971..2000 fresh,PASS,NO_ERROR,Zero overlap across historical manifests
+C03,A2 differs from A1 only by K_arb,PASS,NO_ERROR,Single-intervention invariant confirmed
+C04,alpha fixed at 0.02,0.020000 across all arms,NO_ERROR,Fixed parameter confirmed
+C05,A1-A0 mean Delta = +0.003196,+0.003196,NO_ERROR,Exact match
+C06,A1-A0 upper = +0.004477,+0.004477,NO_ERROR,Exact match (< +0.010000)
+C07,K2 replication PASS,PASS,NO_ERROR,Confirmed
+C08,A2-A1 mean Delta = +0.011352,+0.011352,NO_ERROR,Exact match
+C09,A2-A1 upper = +0.016960,+0.016960,NO_ERROR,Exact match
+C10,A2-A0 mean Delta = +0.014548,+0.014548,NO_ERROR,Exact match
+C11,A2-A0 upper = +0.020204,+0.020204,NO_ERROR,Exact match (> +0.010000)
+C12,end-to-end NI FAIL,FAIL,NO_ERROR,Robust confirmatory failure
+C13,A2 total FP = 96.957851,96.957851,NO_ERROR,Exact match
+C14,resource PASS,PASS,NO_ERROR,Below strict 100.0 budget
+C15,empirical headroom = +3.042149,+3.042149,NO_ERROR,Exact match
+C16,arbitration 5.6 -> 2.8,5.600000 -> 2.800000,NO_ERROR,Exact match
+C17,historical projection residual = -1.265432,-1.265432,NO_ERROR,Valid relative to historical 98.223283 baseline
+C18,concurrent indirect saving ≈ +0.916967,+0.916967,NO_ERROR,Valid relative to concurrent 100.674818 baseline
+C19,A0 total concurrent FP,111.188662,NO_ERROR,Exact Level-1 mean
+C20,A1 total concurrent FP,100.674818,NO_ERROR,Exact Level-1 mean
+C21,A2 total concurrent FP,96.957851,NO_ERROR,Exact Level-1 mean
+C22,live-FP lineage,74.141956 and 73.222214,STALE_INTERMEDIATE,Parent narrative cited draft 74.25 and 73.34
+C23,candidate_descendant field semantics,INCLUSIVE_DIRECT_PLUS_ARBITRATION,RESOURCE_FIELD_SEMANTIC_ERROR,Inclusive field must not be summed with direct and arb
+C24,resource accounting zero residual,0.000000 FP/step,NO_ERROR,Sum of orthogonal components matches total FP
+C25,I6 PASS,+0.005277 <= +0.0100,NO_ERROR,Confirmed
+C26,I7 FAIL,+0.017118 > +0.0100,NO_ERROR,Confirmed
+C27,I9 gains positive,"G_D|BR=0.3647, G_R|BD=0.0352",NO_ERROR,Confirmed
+C28,I9 NMSE Delta,+0.013261,NO_ERROR,Descriptive reporting
+C29,I10 NMSE degradation,+0.029732,NO_ERROR,Confirmed
+C30,I11 A2-A0 switching,+76.166667 steps,CONTRAST_CONFLATION,Parent cited +19.83 (A2-A1) and marked PASS; A2-A0 is +76.17 (FAIL)
+C31,I11 A2-A1 switching,+19.833333 steps,NO_ERROR,Exact incremental latency
+C32,I12 A2-A0 switching,+213.633333 steps,NO_ERROR,Confirmed FAIL
+C33,I12 A2-A1 switching,+167.966667 steps,NO_ERROR,Exact incremental latency
+C34,I13 contrasts,"A2-A0=-1.73, A2-A1=+0.53",NO_ERROR,Confirmed PASS
+C35,I14 contrasts,"A2-A0=-398.27, A2-A1=-428.13",TRANSCRIPTION_ERROR,Parent cited -422.20 in summary table
+C36,only I12 fails switching,FALSE (Both I11 and I12 fail),CONTRAST_CONFLATION,I11 fails preregistered A2-A0 gate (+76.17 > 50)
+C37,tau_event value,49.498316 events,ROUNDING_APPROXIMATION,Parent cited 49.4965 from truncated log
+C38,tau_stream K5,247.491582 steps,ROUNDING_APPROXIMATION,Parent cited 247.4827
+C39,tau_stream K10,494.983165 steps,ROUNDING_APPROXIMATION,Parent cited 494.9654
+C40,150-250 threshold crossing delay,175-248 stream steps,NO_ERROR,Confirmed empirically
+C41,slower EMA materially affects structure,YES,NO_ERROR,Supported by crossing and promotion delays
+C42,decision staleness mechanism,YES,NO_ERROR,Supported by 2.0x sparser evaluation cadence
+C43,causal mechanism isolated,COUPLED_MECHANISM (NOT ISOLATED),COUPLED_MECHANISM_MISLABELED_AS_ISOLATED,Intervention altered both cadence and stream EMA pole
+C44,under-modeling confirmed,TASK_CONDITIONAL,TASK_LEVEL_OVERGENERALIZATION,"True under-modeling on I12/I10, but not on I7"
+C45,lag promotions suppressed,YES globally (2.205 -> 1.776),NO_ERROR,Confirmed
+C46,lag active duty suppressed,FALSE globally (0.343 -> 0.368),TASK_LEVEL_OVERGENERALIZATION,"Suppressed on I12, but increased on I6/I7/I13/I14"
+C47,churn declined,MIXED_STRUCTURAL_CHURN_EFFECT,CHURN_METRIC_AMBIGUITY,"Lag churn fell, but recurrent churn increased"
+C48,dwell time increased,TASK_CONDITIONAL,TASK_LEVEL_OVERGENERALIZATION,"Increased in transitions (+130), decreased globally (-125)"
+C49,resource backfill absent,CONFIRMED_ABSENT,NO_ERROR,No expansion of active tap compute
+C50,local resource-compliant candidate = NO,NO,NO_ERROR,Failed behavioral non-inferiority
+C51,global validation = NO,NO,NO_ERROR,Confirmed
+C52,event-triggered future hypothesis,FUTURE_HYPOTHESIS_ONLY,NO_ERROR,Confirmed
+C53,EMA-timescale-preserving future hypothesis,ANALYTICALLY_DERIVED_FUTURE_HYPOTHESIS,NO_ERROR,Confirmed (alpha=0.039600)

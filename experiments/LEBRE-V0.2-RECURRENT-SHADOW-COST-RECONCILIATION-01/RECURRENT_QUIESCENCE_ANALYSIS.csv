@@ -1,0 +1,2 @@
+task_id,c0_nmse,c1_nmse,delta_nmse,c0_reactivation_steps,c1_reactivation_steps,reactivation_delta,c0_total_fp,c1_total_fp,quiescence_preserved
+I7_Quiescent_Continuous_State,0.1540165300673285,0.25572838108519963,0.10171185101787114,102.43333333333334,135.1,32.66666666666666,120.47234444444446,85.52245555555555,NO

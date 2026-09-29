@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_S4_ACESN_SEED_113",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "S4_ACESN",
+  "seed": 113,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"compression_ratio\": 0.5, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.8828218496085108,
+  "mae": 0.8919156190001986,
+  "nmse": 0.9034474318274274,
+  "mean_flops": 1444.988,
+  "p95_flops": 1445.0,
+  "peak_flops": 1445.0,
+  "memory_bytes": 5248,
+  "active_params": 20,
+  "wall_time_sec": 0.10406970977783203
+}

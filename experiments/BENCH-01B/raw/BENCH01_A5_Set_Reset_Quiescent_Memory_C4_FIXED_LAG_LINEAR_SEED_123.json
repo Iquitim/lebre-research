@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_C4_FIXED_LAG_LINEAR_SEED_123",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 123,
+  "config": "{\"max_lag\": 32, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.9554912022223112,
+  "mae": 0.9494150763103377,
+  "nmse": 0.9610995081769003,
+  "mean_flops": 129.0,
+  "p95_flops": 129.0,
+  "peak_flops": 129.0,
+  "memory_bytes": 544,
+  "active_params": 32,
+  "wall_time_sec": 0.08063173294067383
+}

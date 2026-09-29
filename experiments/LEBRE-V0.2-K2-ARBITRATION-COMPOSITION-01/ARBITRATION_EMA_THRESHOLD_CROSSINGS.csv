@@ -1,0 +1,5 @@
+task_id,threshold,A1_latency,A2_latency,crossing_delay_steps,mechanism
+I11_Regime_Switch_Delay_To_Latent,0.01,441.6,461.43333333333334,19.833333333333314,Doubled stream-time EMA pole slows evidence accumulation past theta_tol
+I12_Regime_Switch_Latent_To_Delay,0.01,1904.9666666666667,2072.9333333333334,167.9666666666667,Doubled stream-time EMA pole slows evidence accumulation past theta_tol
+I13_Regime_Switch_Hybrid_To_Memoryless,0.01,120.13333333333334,120.66666666666667,0.5333333333333314,Doubled stream-time EMA pole slows evidence accumulation past theta_tol
+I14_Intermittent_Hybrid,0.01,1333.5,905.3666666666667,-428.1333333333333,Doubled stream-time EMA pole slows evidence accumulation past theta_tol

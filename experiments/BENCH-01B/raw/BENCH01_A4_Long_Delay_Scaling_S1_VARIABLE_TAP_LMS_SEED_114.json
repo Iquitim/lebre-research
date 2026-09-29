@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_S1_VARIABLE_TAP_LMS_SEED_114",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.001, \"tap_leakage\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6158084073270013,
+  "mae": 0.628012901477386,
+  "nmse": 0.9999531663367499,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 544,
+  "active_params": 2,
+  "wall_time_sec": 0.08030986785888672
+}

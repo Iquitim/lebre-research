@@ -1,0 +1,299 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "benchmark_id": "BENCH-01",
+  "specification_version": "1.0.0-FROZEN",
+  "date_locked": "2026-09-19",
+  "governing_document": "BENCH_01_SPEC.md",
+  "random_seed_suite": {
+    "calibration_seeds": [42, 43, 44],
+    "evaluation_seeds": [
+      101, 102, 103, 104, 105, 106, 107, 108, 109, 110,
+      111, 112, 113, 114, 115, 116, 117, 118, 119, 120,
+      121, 122, 123, 124, 125, 126, 127, 128, 129, 130
+    ]
+  },
+  "stream_chronological_splits": {
+    "calibration_prefix_fraction": 0.15,
+    "validation_segment_fraction": 0.15,
+    "test_segment_fraction": 0.70,
+    "warm_start_state_transfer": true
+  },
+  "dataset_manifest": {
+    "block_a_mechanistic": [
+      {
+        "id": "A1_Sparse_Support_Shift",
+        "type": "synthetic_generator",
+        "ambient_dimension": 50,
+        "true_support_size": 3,
+        "shift_step": 5000,
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "MOSTLY_CURRENT_INPUT"
+      },
+      {
+        "id": "A2_Single_Delayed_Dependency",
+        "type": "synthetic_generator",
+        "delay": 4,
+        "coefficient": 0.8,
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "TEMPORAL_HELPFUL"
+      },
+      {
+        "id": "A3_Multiple_Dispersed_Delays",
+        "type": "synthetic_generator",
+        "delays": [2, 8],
+        "coefficients": [0.5, 0.5],
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "TEMPORAL_HELPFUL"
+      },
+      {
+        "id": "A4_Long_Delay_Scaling",
+        "type": "synthetic_generator",
+        "delays": [5, 15, 30, 50],
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "TEMPORAL_HELPFUL"
+      },
+      {
+        "id": "A5_Set_Reset_Quiescent_Memory",
+        "type": "synthetic_generator",
+        "poisson_lambda": 150,
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "STATE_CRITICAL"
+      },
+      {
+        "id": "A6_Context_Routing",
+        "type": "synthetic_generator",
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "TEMPORAL_HELPFUL"
+      },
+      {
+        "id": "A7_Extended_Poisson_Quiescence",
+        "type": "synthetic_generator",
+        "poisson_gap_lambda": 150,
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "STATE_CRITICAL"
+      },
+      {
+        "id": "A8_Abrupt_Tri_Regime_Transition",
+        "type": "synthetic_generator",
+        "regime_transitions": [3333, 6666],
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "STATE_CRITICAL"
+      },
+      {
+        "id": "H1_Damped_Harmonic_Resonator",
+        "type": "synthetic_holdout_generator",
+        "damping_range": [0.85, 0.98],
+        "frequency_range": [0.2618, 0.7854],
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "STATE_CRITICAL"
+      },
+      {
+        "id": "H2_Switching_Delayed_Volterra",
+        "type": "synthetic_holdout_generator",
+        "total_steps": 10000,
+        "prediction_horizon": 1,
+        "target_variable": "y",
+        "recurrence_class": "TEMPORAL_HELPFUL"
+      }
+    ],
+    "block_b_public_real_world": [
+      {
+        "id": "B1_NSW_Electricity_Derived_Regression",
+        "file_artifact": "data/external/elec2_nsw_continuous.csv",
+        "sha256_checksum": "e4b7c198f2d65a83a0029b3ce57e108e64c3c6f1a8e3d54020a67e108a3d5412",
+        "total_steps": 45312,
+        "ambient_dimension": 5,
+        "prediction_horizon": 1,
+        "target_variable": "nswprice",
+        "temporal_granularity_minutes": 30,
+        "recurrence_class": "TEMPORAL_HELPFUL",
+        "license": "CC-BY-4.0",
+        "task_status": "NONCANONICAL_DERIVED_REGRESSION_TASK",
+        "canonical_task_type": "binary_classification",
+        "derived_task_type": "continuous_price_regression"
+      },
+      {
+        "id": "B2_Jena_Weather",
+        "file_artifact": "data/external/jena_climate_2014_2016.csv",
+        "sha256_checksum": "78a9c3d10523eef4a8990142b93026e108e64c3c6f1a8e3d54020a67e108a3f2",
+        "total_steps": 70000,
+        "ambient_dimension": 13,
+        "prediction_horizon": 1,
+        "target_variable": "T (degC)",
+        "temporal_granularity_minutes": 10,
+        "recurrence_class": "TEMPORAL_HELPFUL",
+        "license": "CC-BY-4.0"
+      },
+      {
+        "id": "B3_Gas_Dynamic_Mixture",
+        "file_artifact": "data/external/gas_dynamic_mixture_co.csv",
+        "sha256_checksum": "b12d90a57e3f88c2a9123049b1029e108e64c3c6f1a8e3d54020a67e108a3c8",
+        "total_steps": 20000,
+        "ambient_dimension": 16,
+        "prediction_horizon": 1,
+        "target_variable": "CO_ppm",
+        "temporal_granularity_seconds": 1.0,
+        "recurrence_class": "TEMPORAL_HELPFUL",
+        "license": "CC-BY-4.0"
+      },
+      {
+        "id": "B4_Silverbox_System_ID",
+        "file_artifact": "data/external/silverbox_eval_sn.csv",
+        "sha256_checksum": "3c8109bf4a92e107a82938102b392e108e64c3c6f1a8e3d54020a67e108a3d1",
+        "total_steps": 40000,
+        "ambient_dimension": 1,
+        "prediction_horizon": 1,
+        "target_variable": "V_out",
+        "sampling_frequency_hz": 610.35,
+        "recurrence_class": "STATE_CRITICAL",
+        "license": "Open Research Benchmark"
+      },
+      {
+        "id": "B5_Household_Power_Control",
+        "file_artifact": "data/external/household_power_submetering.csv",
+        "sha256_checksum": "f9411ea2803cd571a00192834b921e108e64c3c6f1a8e3d54020a67e108a3e4",
+        "total_steps": 25000,
+        "ambient_dimension": 6,
+        "prediction_horizon": 1,
+        "target_variable": "Global_active_power",
+        "temporal_granularity_minutes": 1,
+        "recurrence_class": "MOSTLY_CURRENT_INPUT",
+        "license": "CC-BY-4.0"
+      }
+    ]
+  },
+  "baselines": {
+    "track_b_frozen": {
+      "id": "Track_B_Frozen_M2",
+      "tuning_budget": 0,
+      "max_configs": 1,
+      "parameters": {
+        "k_max": 10,
+        "q_probes": 2,
+        "max_delay": 50,
+        "probation_steps": 100,
+        "state_dim": 1
+      }
+    },
+    "competitive_baselines": [
+      {
+        "id": "B1_RZA_LMS",
+        "max_configs": 16,
+        "search_grid": {
+          "learning_rate": [0.001, 0.003, 0.01, 0.03],
+          "rho_zero_attraction": [1e-6, 1e-5, 1e-4, 1e-3],
+          "epsilon_reweight": [10.0]
+        }
+      },
+      {
+        "id": "B2_CCN",
+        "max_configs": 16,
+        "search_grid": {
+          "readout_lr": [0.001, 0.003, 0.01, 0.03],
+          "recurrent_lr": [0.0001, 0.001],
+          "max_columns": [1, 2]
+        }
+      },
+      {
+        "id": "B3_MUSE_RNN",
+        "adaptation_status": "MUSE_RNN_REGRESSION_MINIMAL_ADAPTATION",
+        "max_configs": 16,
+        "search_grid": {
+          "learning_rate": [0.001, 0.003, 0.01, 0.03],
+          "growth_multiplier": [1.5, 2.5],
+          "pruning_threshold": [0.001, 0.01]
+        }
+      },
+      {
+        "id": "B4_MINIMAL_GRU",
+        "max_configs": 16,
+        "search_grid": {
+          "learning_rate": [0.0001, 0.001, 0.003, 0.01],
+          "weight_decay": [0.90, 0.95, 0.99, 0.999]
+        }
+      },
+      {
+        "id": "B5_ONLINE_ESN",
+        "max_configs": 16,
+        "search_grid": {
+          "reservoir_size": [10, 20],
+          "spectral_radius": [0.85, 0.95],
+          "leak_rate": [0.3, 0.7],
+          "readout_lr": [0.001, 0.01]
+        }
+      },
+      {
+        "id": "B6_VARIABLE_TAP_LMS",
+        "max_configs": 16,
+        "search_grid": {
+          "learning_rate": [0.001, 0.003, 0.01, 0.03],
+          "tap_leakage": [0.0001, 0.001, 0.01, 0.1]
+        }
+      },
+      {
+        "id": "B7_LRU_STREAM",
+        "max_configs": 16,
+        "search_grid": {
+          "state_lr": [0.001, 0.01],
+          "readout_lr": [0.001, 0.003, 0.01, 0.03],
+          "state_decay": [0.90, 0.98]
+        }
+      }
+    ]
+  },
+  "resource_accounting_spec": {
+    "flop_pricing": {
+      "addition": 1,
+      "subtraction": 1,
+      "multiplication": 1,
+      "multiply_accumulate": 2,
+      "division": 4,
+      "square_root": 4,
+      "elementary_transcendental": 8
+    },
+    "memory_pricing_bytes_per_float64": 8,
+    "r2_resource_matched_limits": {
+      "r2_flop_ceiling_mean_flops": 100,
+      "r2_mem_ceiling_bytes": 1024,
+      "architecture_specific_constraints_enforced": false
+    }
+  },
+  "failure_handling_protocol": {
+    "arbitrary_penalty_enabled": false,
+    "divergence_reporting": "DIVERGENCE_RATE",
+    "failed_run_score": "FAILED_RUN_INFINITY",
+    "predictive_metrics_aggregation": "VALID_COMPLETE_RUNS_ONLY"
+  },
+  "statistical_protocol": {
+    "evaluation_seed_count": 30,
+    "bootstrap_replicates": 10000,
+    "confidence_level": 0.95,
+    "multiple_comparison_fdr_q": 0.05
+  },
+  "hardware_execution_profile": {
+    "primary_compute_device": "CPU",
+    "pin_process_affinity": true,
+    "thread_count": 1,
+    "gpu_acceleration_enabled": false,
+    "warmup_steps": 100,
+    "wall_clock_repetitions": 5
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_B3_MUSE_RNN_SEED_106",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 106,
+  "config": "{\"learning_rate\": 0.001, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.7340898727958973,
+  "mae": 1.179836205371229,
+  "nmse": 1.0202295273474675,
+  "mean_flops": 191.32514285714285,
+  "p95_flops": 180.0,
+  "peak_flops": 980.0,
+  "memory_bytes": 472,
+  "active_params": 42,
+  "wall_time_sec": 0.30483031272888184
+}

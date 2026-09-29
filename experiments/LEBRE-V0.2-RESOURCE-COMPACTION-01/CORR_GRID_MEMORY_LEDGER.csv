@@ -1,0 +1,12 @@
+component,code_source,c0_persistent_bytes,c1_persistent_bytes,byte_saving,percent_saving,c0_transient_bytes,c1_transient_bytes,c0_peak_bytes,c1_peak_bytes
+CausalStandardScaler,scaler.d * 16,80,80,0,0.0%,0,0,80,80
+FP16HistoryRingBuffer,D * (L_max + 1) * 2 + 2,332,332,0,0.0%,0,0,332,332
+LinearBasePredictor,base.d * 8,40,40,0,0.0%,0,0,40,40
+ShadowCorrelationGrid,corr_grid.nbytes,660,330,330,50.0%,4,8,664,338
+ActiveTapMetadata,len(active_taps) * 16,64,64,0,0.0%,0,0,64,64
+ProvisionalCandidateMetadata,len(prov_cands) * 16,48,48,0,0.0%,0,0,48,48
+ActiveRecurrentUnit,active_rec.get_memory_bytes(),48,48,0,0.0%,0,0,48,48
+ShadowRecurrentUnit,shadow_rec.get_memory_bytes(),48,48,0,0.0%,0,0,48,48
+CapacityArbitrator,arbitrator_registers,64,64,0,0.0%,0,0,64,64
+OtherPersistentMetadata,state_and_pointers,26,26,0,0.0%,0,0,26,26
+TOTAL_PERSISTENT_STATE,sum_of_components,1306,976,330,25.27%,4,8,1310,984

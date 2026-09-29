@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_Track_B_SEED_109",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "Track_B",
+  "seed": 109,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 117.9372249581874,
+  "mae": 0.9997307374184309,
+  "nmse": 0.002031678372684072,
+  "mean_flops": 79.94214285714285,
+  "p95_flops": 102.0,
+  "peak_flops": 102.0,
+  "memory_bytes": 456,
+  "active_params": 19,
+  "wall_time_sec": 0.3199906349182129
+}

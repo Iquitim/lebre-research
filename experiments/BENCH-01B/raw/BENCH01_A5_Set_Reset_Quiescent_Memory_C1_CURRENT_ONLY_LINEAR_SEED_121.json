@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_C1_CURRENT_ONLY_LINEAR_SEED_121",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 121,
+  "config": "{\"learning_rate\": 0.03}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.002304582912876,
+  "mae": 0.9963442051734681,
+  "nmse": 1.0070667762810235,
+  "mean_flops": 41.0,
+  "p95_flops": 41.0,
+  "peak_flops": 41.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.07406949996948242
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_B3_MUSE_RNN_SEED_120",
+  "task_id": "A6_Context_Routing",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 120,
+  "config": "{\"learning_rate\": 0.001, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.7374856874109815,
+  "mae": 0.554348936907281,
+  "nmse": 1.0000900473579253,
+  "mean_flops": 70.00057142857143,
+  "p95_flops": 128.0,
+  "peak_flops": 380.0,
+  "memory_bytes": 232,
+  "active_params": 12,
+  "wall_time_sec": 0.3298943042755127
+}

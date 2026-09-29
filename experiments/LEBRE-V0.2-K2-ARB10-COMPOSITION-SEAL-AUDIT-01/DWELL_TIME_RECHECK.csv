@@ -1,0 +1,3 @@
+dwell_metric,A1_value,A2_value,delta,interpretation
+Overall Mean Dwell Time (stream steps),1212.8428161722516,1087.6234219429612,-125.2193942292904,Global mean decreased by -125.22 steps
+Transition Window Dwell Time (t=3000 changepoints),350.0,480.0,130.0,Localized transition window dwell time increased by +130 steps

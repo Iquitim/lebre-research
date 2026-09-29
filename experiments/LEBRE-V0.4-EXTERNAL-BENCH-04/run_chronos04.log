@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 8975.48it/s]
+CHRONOS_BOLT_TINY    BR1_ONS_Carga_SECO       nmse=0.0120 cov=0.953 10s
+CHRONOS_BOLT_TINY    BR2_ONS_Carga_N          nmse=0.0365 cov=0.908 10s
+CHRONOS_BOLT_TINY    BR3_ONS_Eolica_NE        nmse=0.0172 cov=0.916 10s
+CHRONOS_BOLT_TINY    BR4_ONS_Solar_NE         nmse=0.0087 cov=0.925 10s
+CHRONOS_BOLT_TINY    BR5_BCB_USDBRL           nmse=0.0010 cov=0.906 3s
+CHRONOS_BOLT_TINY    R1_UCI_AirQuality_CO     nmse=0.1446 cov=0.836 5s
+CHRONOS_BOLT_TINY    R2_UCI_Tetouan_Z1        nmse=0.0128 cov=0.902 41s
+CHRONOS_BOLT_TINY    R3_UCI_BikeSharing       nmse=0.0885 cov=0.836 10s
+CHRONOS_BOLT_TINY    R4_Oikolab_Temp          nmse=0.0185 cov=0.897 28s
+CHRONOS_BOLT_TINY    R5_Oikolab_Wind          nmse=0.0537 cov=0.895 29s
+Loading weights:   0%|          | 0/143 [00:00<?, ?it/s]Loading weights: 100%|██████████| 143/143 [00:00<00:00, 1977.11it/s]
+CHRONOS_BOLT_SMALL   BR1_ONS_Carga_SECO       nmse=0.0080 cov=0.935 41s
+CHRONOS_BOLT_SMALL   BR2_ONS_Carga_N          nmse=0.0258 cov=0.899 70s
+CHRONOS_BOLT_SMALL   BR3_ONS_Eolica_NE        nmse=0.0158 cov=0.879 96s
+CHRONOS_BOLT_SMALL   BR4_ONS_Solar_NE         nmse=0.0081 cov=0.945 97s
+CHRONOS_BOLT_SMALL   BR5_BCB_USDBRL           nmse=0.0009 cov=0.839 28s
+CHRONOS_BOLT_SMALL   R1_UCI_AirQuality_CO     nmse=0.1348 cov=0.839 53s
+CHRONOS_BOLT_SMALL   R2_UCI_Tetouan_Z1        nmse=0.0063 cov=0.926 250s
+DONE

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_B1_RZA_LMS_SEED_123",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "B1_RZA_LMS",
+  "seed": 123,
+  "config": "{\"learning_rate\": 0.001, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6529562696737152,
+  "mae": 0.643342743947188,
+  "nmse": 1.0000544311748834,
+  "mean_flops": 201.0,
+  "p95_flops": 201.0,
+  "peak_flops": 201.0,
+  "memory_bytes": 224,
+  "active_params": 19,
+  "wall_time_sec": 0.09935545921325684
+}

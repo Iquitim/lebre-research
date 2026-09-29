@@ -1,0 +1,50 @@
+{
+  "experiment_id": "M2-EXP-0003",
+  "milestone": "M2",
+  "title": "Hidden State Necessity Diagnostic",
+  "description": "Evaluation of explicit lag enumeration vs compact latent state across long delays, distributed memory, finite-state memory, and context-dependent rules.",
+  "dev_seed": 5000,
+  "eval_seeds": [
+    5001, 5002, 5003, 5004, 5005, 5006, 5007, 5008, 5009, 5010,
+    5011, 5012, 5013, 5014, 5015, 5016, 5017, 5018, 5019, 5020,
+    5021, 5022, 5023, 5024, 5025, 5026, 5027, 5028, 5029, 5030
+  ],
+  "stage_a": {
+    "d_features": 10,
+    "delays": [10, 25, 50, 100, 200, 500],
+    "true_feature": 0,
+    "beta": 1.0,
+    "noise_std": 0.1,
+    "total_steps": 6000,
+    "k_max": 4
+  },
+  "stage_b": {
+    "d_features": 10,
+    "driving_feature": 0,
+    "decays": [0.5, 0.8, 0.95, 0.99],
+    "l_max_levels": [10, 25, 50, 100, 200],
+    "noise_std": 0.1,
+    "total_steps": 2500,
+    "k_max": 10
+  },
+  "stage_c": {
+    "d_features": 10,
+    "modes": ["set_reset", "xor_parity"],
+    "p_event": 0.02,
+    "l_max_levels": [10, 25, 50, 100, 200],
+    "noise_std": 0.05,
+    "total_steps": 3000,
+    "k_max": 10
+  },
+  "stage_d": {
+    "d_features": 10,
+    "delay_a": 2,
+    "delay_b": 7,
+    "signal_feature": 2,
+    "p_switch": 0.02,
+    "l_max": 10,
+    "noise_std": 0.1,
+    "total_steps": 3000,
+    "k_max": 6
+  }
+}

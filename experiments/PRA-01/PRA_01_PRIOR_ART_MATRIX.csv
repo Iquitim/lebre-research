@@ -1,0 +1,12 @@
+name,single_pass_online,no_task_labels,no_replay,sparse_support_learning,active_information_acquisition,explicit_compute_budget,feature_structure_growth,feature_structure_pruning,lag_structure,compact_recurrent_state,state_learned_online,forward_temporal_credit,state_birth,state_type_selection,state_maturation,quiescent_retention,positive_obsolescence_evidence,state_eviction,true_resource_reclamation,bounded_memory,dynamic_architecture
+Track_B_Frozen_Core,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES
+MUSE_RNN_Das2019,YES,YES,YES,NO,NO,PARTIAL,NO,NO,NO,PARTIAL,YES,PARTIAL,YES,NO,NO,NO,NO,YES,YES,YES,YES
+SkipE_RNN_Das2020,YES,YES,YES,NO,NO,PARTIAL,NO,NO,PARTIAL,PARTIAL,YES,PARTIAL,YES,NO,NO,NO,NO,YES,YES,YES,YES
+MRAN_Kadirkamanathan1993,YES,YES,YES,NO,NO,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,NO,NO,NO,PARTIAL,YES,YES,YES
+AIRE_Prune_Padhy2026,NO,YES,YES,NO,NO,PARTIAL,NO,NO,NO,YES,NO,NO,NO,NO,NO,PARTIAL,NO,YES,YES,YES,PARTIAL
+LAST_Padhy2025,NO,YES,YES,NO,NO,PARTIAL,NO,NO,NO,YES,NO,NO,NO,NO,NO,PARTIAL,NO,YES,YES,YES,PARTIAL
+Elastic_NN_KongSutton2026,YES,NO,YES,NO,NO,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,NO,NO,NO,PARTIAL,YES,YES,YES
+SMGrNN_JiaZhou2026,YES,YES,YES,NO,NO,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,NO,NO,NO,PARTIAL,YES,YES,YES
+RTRL_WilliamsZipser1989,YES,YES,YES,NO,NO,NO,NO,NO,NO,YES,YES,YES,NO,NO,NO,NO,NO,NO,NO,YES,NO
+RZA_LMS_ChenGu2009,YES,YES,YES,YES,NO,NO,PARTIAL,PARTIAL,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,YES,NO
+AFA_Guney2025,NO,YES,NO,PARTIAL,YES,PARTIAL,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,YES,NO

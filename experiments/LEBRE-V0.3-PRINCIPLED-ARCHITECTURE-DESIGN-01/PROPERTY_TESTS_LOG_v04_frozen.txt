@@ -1,0 +1,57 @@
+==================== T1_causality
+                      count        mean       std          min          25%          50%         75%
+seed                   10.0  5035.50000  3.027650  5031.000000  5033.250000  5035.500000  5037.75000
+max_abs_diff_upto_t0   10.0     0.00000  0.000000     0.000000     0.000000     0.000000     0.00000
+diff_after             10.0     7.45318  0.833123     6.160511     6.914879     7.575656     7.99261
+==================== T2_lag_alignment
+       count unique       top freq    mean       std     min
+seed    30.0    NaN       NaN  NaN  5045.5  8.803408  5031.0
+true      30     15     (0,1)    2     NaN       NaN     NaN
+found     30     15  [(0, 1)]    2     NaN       NaN     NaN
+exact     30      1      True   30     NaN       NaN     NaN
+latent    30      1     False   30     NaN       NaN     NaN
+==================== T3_type_I
+                      count unique    top freq      mean        std       min
+seed                  400.0    NaN    NaN  NaN    5105.5  52.106023    5031.0
+noise                   400      3  gauss  200       NaN        NaN       NaN
+false_promotions      400.0    NaN    NaN  NaN       0.0        0.0       0.0
+lag_episodes_opened   400.0    NaN    NaN  NaN      60.0        0.0      60.0
+futility_restarts     400.0    NaN    NaN  NaN     112.0        0.0     112.0
+bound_expected_false  400.0    NaN    NaN  NaN  0.052071        0.0  0.052071
+==================== T4_false_eviction
+                   count       mean          std      min       25%      50%       75%
+seed                40.0   5050.500    11.690452   5031.0   5040.75   5050.5   5060.25
+steps_monitored     40.0  28886.000  1175.754640  25350.0  28467.50  29410.0  29830.00
+false_evictions     40.0      0.025     0.158114      0.0      0.00      0.0      0.00
+t_first_promotion   40.0   1114.000  1175.754640    130.0    170.00    590.0   1532.50
+==================== T5_kalman
+                    count         mean           std          min          25%          50%          75%
+seed                 30.0  5045.500000  8.803408e+00  5031.000000  5038.250000  5045.500000  5052.750000
+mse_last3000         30.0     0.236502  3.498607e-02     0.198289     0.213562     0.218290     0.278929
+kalman_optimal_mse   30.0     0.184628  2.823006e-17     0.184628     0.184628     0.184628     0.184628
+excess_ratio         30.0     1.280968  1.894952e-01     1.073996     1.156719     1.182327     1.510762
+pole_selected        30.0     0.370000  2.575080e-01     0.000000     0.000000     0.500000     0.500000
+==================== T6_quiescence
+                                count unique   top freq    mean       std     min
+seed                             30.0    NaN   NaN  NaN  5045.5  8.803408  5031.0
+latent_at_1999                     30      1  True   30     NaN       NaN     NaN
+latent_at_3999                     30      1  True   30     NaN       NaN     NaN
+lifecycle_events_during_silence  30.0    NaN   NaN  NaN     0.0       0.0     0.0
+==================== T7_scale
+                   count unique   top freq      mean       std      min
+seed                10.0    NaN   NaN  NaN    5035.5   3.02765   5031.0
+nmse_scale_0.001    10.0    NaN   NaN  NaN  0.194205  0.075494  0.11624
+promos_scale_0.001  10.0    NaN   NaN  NaN       2.9  1.197219      0.0
+nmse_scale_1        10.0    NaN   NaN  NaN  0.194205  0.075494  0.11624
+promos_scale_1      10.0    NaN   NaN  NaN       2.9  1.197219      0.0
+nmse_scale_1000     10.0    NaN   NaN  NaN  0.194205  0.075494  0.11624
+promos_scale_1000   10.0    NaN   NaN  NaN       2.9  1.197219      0.0
+zero_stream_finite    10      1  True   10       NaN       NaN      NaN
+zero_stream_sigma2  10.0    NaN   NaN  NaN       0.0       0.0      0.0
+==================== T8_hidden_cost
+                                        count         mean       std          min          25%          50%          75%
+seed                                      5.0  5033.000000  1.581139  5031.000000  5032.000000  5033.000000  5034.000000
+fp_per_step                               5.0   103.626067  4.470643    97.885333   101.036833   103.133167   107.288500
+sorts                                     5.0    36.200000  9.549869    26.000000    30.000000    36.000000    38.000000
+est_float_compares_per_step_from_sorts    5.0     7.068101  1.864625     5.076537     5.857542     7.029051     7.419554
+log_calls_per_step                        5.0     0.003000  0.000289     0.002500     0.003000     0.003167     0.003167

@@ -1,0 +1,138 @@
+# ==============================================================================
+# LEBRE ARCHITECTURE SPECIFICATION v0.1 — FORMAL FREEZE MANIFEST
+# Stage: LEBRE-SPEC-FREEZE-01
+# Timestamp: 2026-09-19T21:35:00-03:00
+# ==============================================================================
+
+architecture:
+  name: LEBRE
+  expansion: Lifecycle-governed Evidence-Based Resource Evolution
+  version: "0.1"
+  status: FROZEN_WITH_SCOPE_LIMITS
+  historical_codename: Track B Single-State Organization
+
+evidence:
+  architecture_evidence: VALIDATED_WITH_SCOPE_LIMITS
+  primary_contribution: RESOURCE_GOVERNED_STRUCTURAL_LIFECYCLE
+  supporting_contributions:
+    - TWO_TIMESCALE_QUIESCENT_RETENTION
+    - POSITIVE_OBSOLESCENCE_ASYMMETRIC_EVICTION
+  car_01_status: COMPLETE
+  novelty_claim_ready: false
+  m3_status: UNOPENED
+
+benchmark:
+  bench_01b_status: SEALED
+  workloads: 15
+  seeds: 30
+  competitive_runs: 6750
+  lebre_runs: 450
+  observed_divergences: 0
+  divergence_rate_percent: 0.00
+  evaluated_tasks:
+    synthetic: [A1, A2, A3, A4, A5, A6, A7, A8]
+    real_world_streaming:
+      B1: NSW Electricity Continuous
+      B2: Jena Weather Temperature
+      B3: Gas Dynamic Mixture
+      B4: Silverbox System ID
+      B5: Household Active Power
+
+resources:
+  mean_flops_per_step: 90.44
+  persistent_model_state_bytes: 440.0
+  r2_flop_threshold_mean: 100
+  r2_mem_threshold_bytes: 1024
+  hardware_boundary: SOFTWARE_SIMULATION_ONLY
+
+implementation_scope:
+  max_recurrent_states: 1
+  max_active_features: 10
+  probation_horizon_steps: 50
+  promotion_gain_threshold: 0.05
+  maturation_age_steps: 100
+  birth_residual_threshold: 0.15
+  birth_patience_steps: 30
+  slow_relevance_decay: 0.005
+  retention_threshold: 0.02
+  obsolescence_threshold: 0.80
+  eviction_patience_steps: 30
+
+files:
+  - path: docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md
+    sha256: 088b43e74a14d2b0143eec7a41183dbeaa6ce1d5737d26879e9fda6d9e3a8cba
+    bytes: 40791
+  - path: docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md
+    sha256: 7b032604b014f95f4dea1b8a9676bfd44677e0537d10b4b88c8e00adb29a7ee4
+    bytes: 44715
+  - path: docs/architecture/LEBRE_OVERVIEW_EN.md
+    sha256: 1e458e95350f072967b559f3d943c940eb62138ae1e0c67b0848e9b339473a86
+    bytes: 6519
+  - path: docs/architecture/LEBRE_OVERVIEW_PTBR.md
+    sha256: fc4b09e1b67ecd61fc197b7696ffcede7516c663533ec29600b8047e5b68b5d1
+    bytes: 7194
+  - path: docs/architecture/LEBRE_ARCHITECTURE_DIAGRAMS.md
+    sha256: 7f962fc92f3a10520c3760e4df87037c14f6e41fd3a1c05e60ae4fae648a3f57
+    bytes: 21671
+  - path: docs/architecture/LEBRE_ARCHITECTURAL_DECISIONS.md
+    sha256: 4be84990c4c6c400af8bec7cf9a5d1557c5667ec50b41788feb7144dd1d4e440
+    bytes: 10727
+  - path: docs/architecture/LEBRE_ARCHITECTURE_MANIFEST.yaml
+    sha256: 3db70e17a959273a3155d5253e8014399ae94597fd764cb0643639ef1fd3b2ce
+    bytes: 4067
+  - path: docs/architecture/LEBRE_TRACEABILITY_MATRIX.csv
+    sha256: 67a60f6019de9503a5dcdd36a3e26bbcb545cb100f83c94169e1487893ffd42c
+    bytes: 3565
+  - path: docs/architecture/LEBRE_CONSTANT_TRACEABILITY.md
+    sha256: 614800a7c5368e2eadd27f9a3a776f9a6812dd3c37f4328e1367c26d1328011a
+    bytes: 8179
+  - path: docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf
+    sha256: 50168bcadea4ac75afe4f952c624d4a4bfdf1b8b79f252abeb6d74d152df9133
+    bytes: 1504935
+  - path: docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf
+    sha256: 3f3d6e5778d3ea24a56f23de8937c20953c672725601c89f2ed08cb2f73a8d46
+    bytes: 1515323
+  - path: docs/architecture/pdf_source/LEBRE_CONDENSED_EN.html
+    sha256: f1f8f3b57254dcf4b54bf7a9c55bbda8389f0577c5314b3463d4492eef334673
+    bytes: 758874
+  - path: docs/architecture/pdf_source/LEBRE_CONDENSED_PTBR.html
+    sha256: ffd487007cec461c2caee241cafd644d003584b77c3edd9335dcae8b01c37743
+    bytes: 761166
+  - path: logo/LEBRE Logo.png
+    sha256: bc0f818a90841cccfa659c662bf27c2b9dbbdeb90102e7163caf5cd8124b0f8b
+    bytes: 491487
+  - path: docs/architecture/assets/diagrams/lebre_high_level_architecture.svg
+    sha256: a89960f181173a4ccfc22ff48dca637edaa96c9b3f051dbe964a4688c406b9c0
+    bytes: 7371
+  - path: docs/architecture/assets/diagrams/lebre_lifecycle.svg
+    sha256: 0fb2c8d8b9cdc3c3c0e2bd15a60e59790dd9da6b80660b5a65f2b3177f075727
+    bytes: 6096
+  - path: docs/architecture/assets/diagrams/lebre_data_control_flow.svg
+    sha256: 8b9bde6e1954c2452d863a85877e472d88bed133a86d7e749e9bab9605c952ae
+    bytes: 5176
+  - path: docs/architecture/assets/diagrams/lebre_shadow_probation.svg
+    sha256: fe909b451a120983c9b5938d281f7cbe790fcf73391fc649d42fc6bf6d1bf164
+    bytes: 9425
+  - path: docs/architecture/assets/diagrams/lebre_shadow_probation_ptbr.svg
+    sha256: 5db4b97df96fe9d4d206863ca40bfd91f50c40757d150c20a0fb3475b0a9ae68
+    bytes: 9413
+  - path: docs/architecture/assets/diagrams/lebre_quiescent_retention.svg
+    sha256: 2d1af797e0106386858b810e86df7c90ca266d836a2dfddd316dce6742f453fd
+    bytes: 3699
+  - path: docs/architecture/assets/diagrams/lebre_resource_elasticity.svg
+    sha256: 7aeb9f1f23f3a69afa2a0a3f46f1dacef912110d52e09bd1dba62a8ab0ed34d7
+    bytes: 5295
+  - path: docs/architecture/assets/diagrams/lebre_v01_scope.svg
+    sha256: 2e96472e6c31d3478a1938b72b4ac66e5bcf9a588251b825a59e58bf61a16cce
+    bytes: 3634
+  - path: docs/architecture/assets/diagrams/lebre_prequential_cycle.svg
+    sha256: 124e2ee5959d87cbf0c514533bfa57d98405065bcbb88fd793884f609ca4bf26
+    bytes: 7511
+
+freeze:
+  date: "2026-09-19"
+  source_commit: "N/A (unversioned directory)"
+  git_status: "UNVERSIONED_WORKSPACE"
+  regression_tests: "124/124 PASSING"
+  freeze_stage: LEBRE-SPEC-FREEZE-01
+  immutability_status: ENFORCED

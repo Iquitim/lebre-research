@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_C1_CURRENT_ONLY_LINEAR_SEED_127",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 127,
+  "config": "{\"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2853.324624353334,
+  "mae": 14.101144852552332,
+  "nmse": 0.0491535893913123,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 160,
+  "active_params": 16,
+  "wall_time_sec": 0.15533876419067383
+}

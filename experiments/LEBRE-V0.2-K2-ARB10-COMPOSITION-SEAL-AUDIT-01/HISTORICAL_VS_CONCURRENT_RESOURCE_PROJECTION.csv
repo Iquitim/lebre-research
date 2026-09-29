@@ -1,0 +1,3 @@
+projection_type,baseline_arm,baseline_fp,direct_saving_fp,projected_a2_fp,observed_a2_fp,residual_fp,interpretation
+HISTORICAL_STATIC_PROJECTION,Historical K2 Parent (Cohort 1941..1970),101.023283,2.8,98.22328300000001,96.9578507936508,-1.2654322063492032,Residual vs historical design expectation (-1.265 FP)
+CONCURRENT_CAUSAL_PROJECTION,Concurrent Arm A1 (Cohort 1971..2000),100.67481825396825,2.8,97.87481825396826,96.9578507936508,-0.9169674603174514,True concurrent causal indirect saving (+0.917 FP below direct)

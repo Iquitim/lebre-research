@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_S1_VARIABLE_TAP_LMS_SEED_126",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 126,
+  "config": "{\"learning_rate\": 0.03, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.002819137370345265,
+  "mae": 0.042286947221973105,
+  "nmse": 0.004408101350746347,
+  "mean_flops": 38.751714285714286,
+  "p95_flops": 41.0,
+  "peak_flops": 41.0,
+  "memory_bytes": 544,
+  "active_params": 6,
+  "wall_time_sec": 0.09747314453125
+}

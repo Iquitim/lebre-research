@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_B3_MUSE_RNN_SEED_115",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 115,
+  "config": "{\"learning_rate\": 0.001, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4919702215463051,
+  "mae": 0.5331925389165968,
+  "nmse": 1.0011969860219645,
+  "mean_flops": 75.61428571428571,
+  "p95_flops": 204.0,
+  "peak_flops": 380.0,
+  "memory_bytes": 232,
+  "active_params": 12,
+  "wall_time_sec": 0.3217430114746094
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_B4_MINIMAL_GRU_SEED_118",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 118,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.004498670955965697,
+  "mae": 0.05149331320943247,
+  "nmse": 2.4129150456141604,
+  "mean_flops": 117.0,
+  "p95_flops": 117.0,
+  "peak_flops": 117.0,
+  "memory_bytes": 240,
+  "active_params": 22,
+  "wall_time_sec": 0.8431012630462646
+}

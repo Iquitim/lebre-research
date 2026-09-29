@@ -1,0 +1,68 @@
+{
+  "experiment_id": "M2-EXP-0005",
+  "milestone": "M2",
+  "title": "Adaptive State-Structure Integration",
+  "description": "Evaluating online adaptive lifecycle management (DORMANT -> PROVISIONAL -> ACTIVE -> MATURE -> EVICTED) for scalar recurrent states under strict compute and memory limits.",
+  "dev_seed": 7000,
+  "eval_seeds": [
+    7001, 7002, 7003, 7004, 7005, 7006, 7007, 7008, 7009, 7010,
+    7011, 7012, 7013, 7014, 7015, 7016, 7017, 7018, 7019, 7020,
+    7021, 7022, 7023, 7024, 7025, 7026, 7027, 7028, 7029, 7030
+  ],
+  "d_features": 10,
+  "noise_std": 0.05,
+  "primary_stream": {
+    "phases": [
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "LINEAR_USEFUL", "duration": 1500, "decay": 0.80},
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "GATED_NECESSARY", "duration": 1500, "p_event": 0.02},
+      {"type": "STATE_FREE", "duration": 1000}
+    ],
+    "total_steps": 6000
+  },
+  "second_stream": {
+    "phases": [
+      {"type": "GATED_NECESSARY", "duration": 1500, "p_event": 0.02},
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "LINEAR_USEFUL", "duration": 1500, "decay": 0.80},
+      {"type": "STATE_FREE", "duration": 1000}
+    ],
+    "total_steps": 5000
+  },
+  "holdout_stream": {
+    "phases": [
+      {"type": "STATE_FREE", "duration": 800},
+      {"type": "GATED_NECESSARY", "duration": 1200, "p_event": 0.015},
+      {"type": "LINEAR_USEFUL", "duration": 1400, "decay": 0.90},
+      {"type": "STATE_FREE", "duration": 800}
+    ],
+    "total_steps": 4200
+  },
+  "lifecycle_parameters": {
+    "probation_window": 80,
+    "maturity_window": 120,
+    "birth_threshold": 0.15,
+    "promote_threshold": 0.05,
+    "evict_threshold": 0.02,
+    "evict_patience": 40
+  },
+  "variants": [
+    "V0_No_State",
+    "V1_Fixed_Linear",
+    "V2_Fixed_Gated",
+    "V3_Adaptive_DeltaLoss",
+    "V4_Adaptive_CxO",
+    "V5_Oracle_Presence",
+    "V6_Oracle_Type"
+  ],
+  "ablations": [
+    "A0_Birth_Disabled",
+    "A1_Eviction_Disabled",
+    "A2_Maturity_Disabled",
+    "A3_Controllability_Removed",
+    "A4_Observability_Removed",
+    "A5_Sensitivity_Trace_Disabled",
+    "A6_Always_On_Gated_Ref"
+  ]
+}

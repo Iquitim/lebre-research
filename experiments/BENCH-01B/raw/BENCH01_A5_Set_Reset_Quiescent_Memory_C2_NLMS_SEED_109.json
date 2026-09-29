@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_C2_NLMS_SEED_109",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "C2_NLMS",
+  "seed": 109,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0104912709145693,
+  "mae": 1.0002844978227274,
+  "nmse": 1.0442834353538224,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.07953786849975586
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_B1_RZA_LMS_SEED_114",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "B1_RZA_LMS",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.003, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.617046139789668,
+  "mae": 0.6288693015265298,
+  "nmse": 1.0017184897059859,
+  "mean_flops": 201.0,
+  "p95_flops": 201.0,
+  "peak_flops": 201.0,
+  "memory_bytes": 224,
+  "active_params": 20,
+  "wall_time_sec": 0.10027408599853516
+}

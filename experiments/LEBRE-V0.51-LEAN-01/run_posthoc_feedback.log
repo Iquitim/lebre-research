@@ -1,0 +1,99 @@
+<site-packages>\statsmodels\tsa\statespace\mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  mlefit = super().fit(
+<site-packages>\statsmodels\tsa\exponential_smoothing\ets.py:1027: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  mlefit = super().fit(
+<site-packages>\statsmodels\tsa\exponential_smoothing\ets.py:1027: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  mlefit = super().fit(
+<site-packages>\statsmodels\tsa\exponential_smoothing\ets.py:1027: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  mlefit = super().fit(
+arm                                AIRLINE           ETS  M_ONLY       RLS5    V051
+src    task                                                                        
+held   Q10_Monash_AusElec_S5        0.0067  1.880000e-02  0.0066    50.1196  0.0066
+       Q1_ONS_Carga_SIN_2019_20     0.0080  2.280000e-02  0.0114     0.0110  0.0114
+       Q2_ONS_Hidro_SE_2019_20      0.0139  2.950000e-02  0.0161     0.0157  0.0161
+       Q3_ONS_Hidro_S_2019_20       0.0139  2.710000e-02  0.0150     0.0145  0.0150
+       Q4_ONS_Eolica_SIN_2019_20    0.0111  1.770000e-02  0.0119     0.0113  0.0119
+       Q5_BCB_GBPBRL                0.0012  1.200000e-03  0.0013     0.0012  0.0013
+       Q6_Monash_AusElec_S4         0.0039  1.381561e+08  0.0052   236.9148  0.0052
+       Q7_Monash_Pedestrian_S4      0.0326  4.490000e-02  0.0269   207.5650  0.0269
+       Q8_Monash_Solar10min_S4         NaN  9.000000e-03  0.0078   234.5723  0.0078
+       Q9_Monash_KDDCup_S4          0.1384  1.846000e-01  0.1380     0.0862  0.1008
+held05 N10_Monash_KDDCup_S3         0.1111  1.177000e-01  0.1113     0.1048  0.1116
+       N1_ONS_Carga_SECO_2021_22    0.0073  3.220000e-02  0.0103     0.0098  0.0103
+       N2_ONS_Hidro_N_2021_22       0.0049  9.700000e-03  0.0049     0.0047  0.0049
+       N3_ONS_Termica_SIN_2021_22   0.0008  1.100000e-03  0.0008     0.0007  0.0008
+       N4_ONS_Eolica_NE_2021_22     0.0124  2.020000e-02  0.0136     0.0127  0.0136
+       N5_BCB_EURBRL                0.0010  1.000000e-03  0.0012     0.0010  0.0011
+       N6_Monash_ElecDemand_VIC     0.0028  7.300000e-03  0.0043     0.0041  0.0043
+       N7_Monash_AusElec_S3         0.0029  1.230000e-02  0.0035   466.3189  0.0035
+       N8_Monash_Pedestrian_S3      0.0370  5.570000e-02  0.0274  3709.6255  0.0274
+       N9_Monash_Solar10min_S3         NaN  9.500000e-03  0.0082   183.6993  0.0082
+       src                        task      arm                                              info
+60    held    Q1_ONS_Carga_SIN_2019_20  AIRLINE                         theta=0.707, Theta=-0.697
+61    held    Q1_ONS_Carga_SIN_2019_20      ETS                          trend=None, damped=False
+62    held     Q2_ONS_Hidro_SE_2019_20  AIRLINE                         theta=0.454, Theta=-0.831
+63    held     Q2_ONS_Hidro_SE_2019_20      ETS                          trend=None, damped=False
+64    held      Q3_ONS_Hidro_S_2019_20  AIRLINE                         theta=0.430, Theta=-0.853
+65    held      Q3_ONS_Hidro_S_2019_20      ETS                          trend=None, damped=False
+66    held   Q4_ONS_Eolica_SIN_2019_20  AIRLINE                         theta=0.399, Theta=-0.923
+67    held   Q4_ONS_Eolica_SIN_2019_20      ETS                          trend=None, damped=False
+68    held               Q5_BCB_GBPBRL  AIRLINE                                       theta=0.014
+69    held               Q5_BCB_GBPBRL      ETS                          trend=None, damped=False
+70    held        Q6_Monash_AusElec_S4  AIRLINE                         theta=0.457, Theta=-0.846
+71    held        Q6_Monash_AusElec_S4      ETS                            trend=add, damped=True
+72    held     Q7_Monash_Pedestrian_S4  AIRLINE                        theta=-0.310, Theta=-0.976
+73    held     Q7_Monash_Pedestrian_S4      ETS                          trend=None, damped=False
+74    held     Q8_Monash_Solar10min_S4  AIRLINE  MemoryError((291, 291, 50002), dtype('float64'))
+75    held     Q8_Monash_Solar10min_S4      ETS                            trend=add, damped=True
+76    held         Q9_Monash_KDDCup_S4  AIRLINE                        theta=-0.491, Theta=-0.940
+77    held         Q9_Monash_KDDCup_S4      ETS                            trend=add, damped=True
+78    held       Q10_Monash_AusElec_S5  AIRLINE                         theta=0.459, Theta=-0.823
+79    held       Q10_Monash_AusElec_S5      ETS                          trend=None, damped=False
+80  held05   N1_ONS_Carga_SECO_2021_22  AIRLINE                         theta=0.696, Theta=-0.813
+81  held05   N1_ONS_Carga_SECO_2021_22      ETS                          trend=None, damped=False
+82  held05      N2_ONS_Hidro_N_2021_22  AIRLINE                         theta=0.430, Theta=-0.925
+83  held05      N2_ONS_Hidro_N_2021_22      ETS                            trend=add, damped=True
+84  held05  N3_ONS_Termica_SIN_2021_22  AIRLINE                         theta=0.443, Theta=-0.870
+85  held05  N3_ONS_Termica_SIN_2021_22      ETS                          trend=None, damped=False
+86  held05    N4_ONS_Eolica_NE_2021_22  AIRLINE                         theta=0.489, Theta=-0.849
+87  held05    N4_ONS_Eolica_NE_2021_22      ETS                            trend=add, damped=True
+88  held05               N5_BCB_EURBRL  AIRLINE                                      theta=-0.004
+89  held05               N5_BCB_EURBRL      ETS                          trend=None, damped=False
+90  held05    N6_Monash_ElecDemand_VIC  AIRLINE                         theta=0.746, Theta=-0.767
+91  held05    N6_Monash_ElecDemand_VIC      ETS                            trend=add, damped=True
+92  held05        N7_Monash_AusElec_S3  AIRLINE                         theta=0.501, Theta=-0.868
+93  held05        N7_Monash_AusElec_S3      ETS                          trend=None, damped=False
+94  held05     N8_Monash_Pedestrian_S3  AIRLINE                        theta=-0.340, Theta=-0.595
+95  held05     N8_Monash_Pedestrian_S3      ETS                          trend=None, damped=False
+96  held05     N9_Monash_Solar10min_S3  AIRLINE  MemoryError((291, 291, 50002), dtype('float64'))
+97  held05     N9_Monash_Solar10min_S3      ETS                            trend=add, damped=True
+98  held05        N10_Monash_KDDCup_S3  AIRLINE                         theta=0.189, Theta=-1.053
+99  held05        N10_Monash_KDDCup_S3      ETS                          trend=None, damped=False
+       src                        task  wS_mean  wS_max  frac_wS_gt_0.5  frac_wS_gt_0.01  wS_final
+0     held    Q1_ONS_Carga_SIN_2019_20    0.000   0.000           0.000            0.000     0.000
+1     held     Q2_ONS_Hidro_SE_2019_20    0.000   0.000           0.000            0.000     0.000
+2     held      Q3_ONS_Hidro_S_2019_20    0.000   0.000           0.000            0.000     0.000
+3     held   Q4_ONS_Eolica_SIN_2019_20    0.000   0.053           0.000            0.004     0.000
+4     held               Q5_BCB_GBPBRL    0.443   1.000           0.428            0.672     0.000
+5     held        Q6_Monash_AusElec_S4    0.000   0.000           0.000            0.000     0.000
+6     held     Q7_Monash_Pedestrian_S4    0.000   0.000           0.000            0.000     0.000
+7     held     Q8_Monash_Solar10min_S4    0.000   0.000           0.000            0.000     0.000
+8     held         Q9_Monash_KDDCup_S4    0.556   1.000           0.542            0.849     0.998
+9     held       Q10_Monash_AusElec_S5    0.000   0.000           0.000            0.000     0.000
+10  held05   N1_ONS_Carga_SECO_2021_22    0.000   0.000           0.000            0.000     0.000
+11  held05      N2_ONS_Hidro_N_2021_22    0.000   0.000           0.000            0.000     0.000
+12  held05  N3_ONS_Termica_SIN_2021_22    0.000   0.000           0.000            0.000     0.000
+13  held05    N4_ONS_Eolica_NE_2021_22    0.000   0.002           0.000            0.000     0.000
+14  held05               N5_BCB_EURBRL    0.270   1.000           0.267            0.371     0.000
+15  held05    N6_Monash_ElecDemand_VIC    0.000   0.000           0.000            0.000     0.000
+16  held05        N7_Monash_AusElec_S3    0.000   0.000           0.000            0.000     0.000
+17  held05     N8_Monash_Pedestrian_S3    0.000   0.000           0.000            0.000     0.000
+18  held05     N9_Monash_Solar10min_S3    0.000   0.000           0.000            0.000     0.000
+19  held05        N10_Monash_KDDCup_S3    0.157   1.000           0.135            0.473     0.000
+           promotions      evictions_all      evictions_true_atom     
+                  sum mean           sum mean                 sum mean
+kind                                                                  
+null_gauss          0  0.0             0  0.0                   0  0.0
+null_t3             0  0.0             0  0.0                   0  0.0
+true_atom          17  1.7             7  0.7                   7  0.7
+EXIT 0

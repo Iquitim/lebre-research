@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_B2_CCN_SEED_114",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "B2_CCN",
+  "seed": 114,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.600892529679882,
+  "mae": 1.1560985835161426,
+  "nmse": 1.0013999461303138,
+  "mean_flops": 705.0,
+  "p95_flops": 705.0,
+  "peak_flops": 705.0,
+  "memory_bytes": 1120,
+  "active_params": 124,
+  "wall_time_sec": 0.2707366943359375
+}

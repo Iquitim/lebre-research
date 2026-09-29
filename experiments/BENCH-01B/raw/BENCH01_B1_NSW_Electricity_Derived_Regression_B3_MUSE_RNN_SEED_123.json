@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_B3_MUSE_RNN_SEED_123",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 123,
+  "config": "{\"learning_rate\": 0.003, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.004571729916988096,
+  "mae": 0.052059295434975165,
+  "nmse": 2.4521010781098496,
+  "mean_flops": 54.030454932374916,
+  "p95_flops": 144.0,
+  "peak_flops": 280.0,
+  "memory_bytes": 192,
+  "active_params": 7,
+  "wall_time_sec": 1.4141809940338135
+}

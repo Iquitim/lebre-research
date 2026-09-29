@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_C1_CURRENT_ONLY_LINEAR_SEED_121",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 121,
+  "config": "{\"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0260179727705177,
+  "mae": 0.8464378203666494,
+  "nmse": 1.0026388186409045,
+  "mean_flops": 41.0,
+  "p95_flops": 41.0,
+  "peak_flops": 41.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.07468986511230469
+}

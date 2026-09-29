@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_B5_ONLINE_ESN_SEED_112",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 112,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"leak_rate\": 0.3, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.472471496551977,
+  "mae": 1.166639304935255,
+  "nmse": 0.949365266269381,
+  "mean_flops": 2681.0,
+  "p95_flops": 2681.0,
+  "peak_flops": 2681.0,
+  "memory_bytes": 10048,
+  "active_params": 20,
+  "wall_time_sec": 0.11000823974609375
+}

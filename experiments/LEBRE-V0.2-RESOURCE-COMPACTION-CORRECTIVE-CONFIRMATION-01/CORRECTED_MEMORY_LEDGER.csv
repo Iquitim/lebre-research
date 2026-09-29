@@ -1,0 +1,14 @@
+subsystem,c0_bytes,c1_bytes,reduction_bytes,description
+scaler_mean_and_var,80.0,80.0,0.0,Causal online standard scaler (5 floats mean + 5 floats var in float64/float32)
+history_ring_buffer,330.0,330.0,0.0,Circular ring buffer: 5 features x 33 lags in float16
+base_linear_predictor,20.0,20.0,0.0,5 base weights in float32
+corr_grid_persistent,660.0,330.0,330.0,"Background correlation grid: 5 x 33 matrix (FP32 in C0, FP16 in C1)"
+active_taps_pool_capacity,64.0,64.0,0.0,Up to K_max=4 active discrete taps (16 B per tap descriptor)
+provisional_cands_pool_capacity,48.0,48.0,0.0,Up to 3 provisional candidates (16 B per candidate descriptor)
+recurrent_units_capacity,128.0,128.0,0.0,Shadow recurrent unit (64 B) + active recurrent unit capacity (64 B)
+arbitrator_and_state_registers,64.0,64.0,0.0,"Conditional gain EMAs, thresholds, step counter, state flags"
+TOTAL_PERSISTENT_CAPACITY,1306.0,976.0,330.0,Preallocated static capacity ceiling (100% compliant with 1024 B ceiling for C1)
+transient_workspace_stack,4.0,8.0,-4.0,Transient scratch registers during probe update (FP16->FP32 casting stack)
+PEAK_WORKING_MEMORY,1310.0,984.0,326.0,Total persistent capacity + transient execution workspace
+MEASURED_OCCUPIED_HEAP_MEAN,1300.7591746031746,970.9146031746031,329.8445714285715,Empirically measured mean dynamic occupied bytes across 840 confirmatory runs
+MEASURED_OCCUPIED_HEAP_PEAK,1384.0,1054.0,330.0,Maximum dynamically occupied heap bytes observed across all streams

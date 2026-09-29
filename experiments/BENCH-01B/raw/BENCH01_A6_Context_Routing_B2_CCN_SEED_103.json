@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_B2_CCN_SEED_103",
+  "task_id": "A6_Context_Routing",
+  "model_id": "B2_CCN",
+  "seed": 103,
+  "config": "{\"readout_lr\": 0.01, \"recurrent_lr\": 0.001, \"max_columns\": 1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4059370876869415,
+  "mae": 0.5038005833366657,
+  "nmse": 0.5331018902160546,
+  "mean_flops": 133.0,
+  "p95_flops": 133.0,
+  "peak_flops": 133.0,
+  "memory_bytes": 280,
+  "active_params": 22,
+  "wall_time_sec": 0.18152737617492676
+}

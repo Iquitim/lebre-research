@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_S1_VARIABLE_TAP_LMS_SEED_119",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.03, \"tap_leakage\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 8.661420663440628,
+  "mae": 1.5361271798495713,
+  "nmse": 0.2518750731116769,
+  "mean_flops": 176.44485714285713,
+  "p95_flops": 185.0,
+  "peak_flops": 185.0,
+  "memory_bytes": 544,
+  "active_params": 30,
+  "wall_time_sec": 0.10039043426513672
+}

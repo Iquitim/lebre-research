@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_B1_RZA_LMS_SEED_111",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "B1_RZA_LMS",
+  "seed": 111,
+  "config": "{\"learning_rate\": 0.001, \"rho_zero_attraction\": 1e-06, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2853.3247510102524,
+  "mae": 14.101146182640527,
+  "nmse": 0.04915359157320289,
+  "mean_flops": 161.0,
+  "p95_flops": 161.0,
+  "peak_flops": 161.0,
+  "memory_bytes": 192,
+  "active_params": 16,
+  "wall_time_sec": 0.2002263069152832
+}

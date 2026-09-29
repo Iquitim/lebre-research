@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_S2_LRU_STREAM_SEED_103",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 103,
+  "config": "{\"state_lr\": 0.01, \"readout_lr\": 0.01, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003837176461735685,
+  "mae": 0.04788783023264145,
+  "nmse": 0.9955166870967059,
+  "mean_flops": 20.0,
+  "p95_flops": 20.0,
+  "peak_flops": 20.0,
+  "memory_bytes": 104,
+  "active_params": 4,
+  "wall_time_sec": 0.4158766269683838
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_C4_FIXED_LAG_LINEAR_SEED_118",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 118,
+  "config": "{\"max_lag\": 4, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.549563767964513,
+  "mae": 1.1578082947480623,
+  "nmse": 1.0117002457278614,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 96,
+  "active_params": 4,
+  "wall_time_sec": 0.08660149574279785
+}

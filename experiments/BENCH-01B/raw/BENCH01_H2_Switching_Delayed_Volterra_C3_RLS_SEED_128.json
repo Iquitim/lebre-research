@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_C3_RLS_SEED_128",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "C3_RLS",
+  "seed": 128,
+  "config": "{\"forgetting_factor\": 1.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.6078062809557756,
+  "mae": 1.151394884198207,
+  "nmse": 0.9791270104394156,
+  "mean_flops": 6725.0,
+  "p95_flops": 6725.0,
+  "peak_flops": 6725.0,
+  "memory_bytes": 13184,
+  "active_params": 40,
+  "wall_time_sec": 0.13961458206176758
+}

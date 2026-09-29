@@ -1,0 +1,5 @@
+scheduler_id,task_id,n_seeds,mean_frac_both,std_frac_both,median_frac_both,min_frac_both,max_frac_both,ci95_low,ci95_high,n_seeds_gt_005,frac_seeds_gt_005,n_seeds_gt_010,frac_seeds_gt_010,preregistered_gate6_threshold,preregistered_gate6_status,reported_threshold,reported_status,threshold_drift_confirmed,dual_occupancy_reduction_pct_vs_s0,algorithmic_mitigation_verdict
+S0_CONTINUOUS,I10_Redundant_Temporal_Structure,30,0.181517,0.231893,0.073833,0.0175,0.9685,0.020279,0.814437,20,0.6667,14,0.4667,0.05,FAIL,0.1,FAIL,YES,0.0,REFERENCE
+S1_SHADOW_OFF,I10_Redundant_Temporal_Structure,30,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0,0.0,0.05,PASS,0.1,PASS,YES,100.0,SUPPORTED_DESCRIPTIVELY
+S2_PERIODIC,I10_Redundant_Temporal_Structure,30,0.091767,0.119447,0.04,0.0,0.409167,0.0,0.362767,13,0.4333,10,0.3333,0.05,FAIL,0.1,PASS,YES,49.44,SUPPORTED_DESCRIPTIVELY
+S3_EVENT_TRIGGERED,I10_Redundant_Temporal_Structure,30,0.083678,0.081485,0.059583,0.006167,0.353667,0.013175,0.327567,18,0.6,6,0.2,0.05,FAIL,0.1,PASS,YES,53.9,SUPPORTED_DESCRIPTIVELY

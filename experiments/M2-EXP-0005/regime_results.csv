@@ -1,0 +1,6 @@
+phase,required_type,chosen_type,state_active_pct,mse,oracle_ratio,flops,memory
+Phase 1: State-Free,NONE,NONE,2.1,0.023144279663217544,1.02,24.0,80.0
+Phase 2: Linear-Integration,LINEAR,LINEAR,94.8,0.8384661763555482,1.08,42.0,136.0
+Phase 3: State-Free (Return),NONE,NONE,3.4,0.023144279663217544,1.01,24.0,80.0
+Phase 4: SET/RESET,GATED,GATED,92.6,0.3527601477338049,1.14,52.0,192.0
+Phase 5: State-Free (Final),NONE,NONE,2.8,0.023144279663217544,1.01,24.0,80.0

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_B5_ONLINE_ESN_SEED_105",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 105,
+  "config": "{\"reservoir_size\": 10, \"spectral_radius\": 0.85, \"leak_rate\": 0.3, \"readout_lr\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 21196.192967792278,
+  "mae": 64.46077088504802,
+  "nmse": 0.36514210717752027,
+  "mean_flops": 661.0,
+  "p95_flops": 661.0,
+  "peak_flops": 661.0,
+  "memory_bytes": 2368,
+  "active_params": 10,
+  "wall_time_sec": 0.22009801864624023
+}

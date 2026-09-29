@@ -1,0 +1,3 @@
+model_label,state_forward_duty_per_1000,prediction_duty_per_1000,rtrl_sensitivity_duty_per_1000,parameter_learning_duty_per_1000,evidence_duty_per_1000,arbitration_duty_per_1000
+C0_M1_PARENT,1000.0,1000.0,100.0,100.0,100.0,200.0
+C1_K5,200.0,200.0,100.0,100.0,100.0,200.0

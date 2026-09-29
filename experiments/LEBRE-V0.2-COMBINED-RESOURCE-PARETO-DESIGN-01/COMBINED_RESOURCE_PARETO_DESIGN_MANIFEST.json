@@ -1,0 +1,114 @@
+{
+  "stage": "LEBRE-V0.2-COMBINED-RESOURCE-PARETO-DESIGN-01",
+  "timestamp": "2026-09-22 19:53:07",
+  "python_version": "3.11.9",
+  "numpy_version": "2.2.5",
+  "pandas_version": "2.2.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "parent_stage": "LEBRE-V0.2-K2-CONFIRMATION-SEAL-AUDIT-01",
+  "status": "COMPLETE",
+  "primary_outcome": "K2_ARB10_COMPOSITION_DESIGN_AUTHORIZED",
+  "file_count": 25,
+  "files": {
+    "ARBITRATION_BURSTINESS_ANALYSIS.md": {
+      "sha256": "04cd6685c36d816698fc35f852390d54a4ab827da70547560f2c885c0cbd5ab6",
+      "bytes": 2381
+    },
+    "ARBITRATION_CADENCE_LINEAGE.md": {
+      "sha256": "da32e0eecd8d74ade7c95a5b2d332f75ef22749991dee4939ef70f5b53be541d",
+      "bytes": 2595
+    },
+    "ARBITRATION_CURRENT_SEMANTICS.md": {
+      "sha256": "dc46b897bdb28cb6f604e97c35c5f3b44c0b8a4b6bd2b98ee5d6f03430b5d9c5",
+      "bytes": 2657
+    },
+    "ARBITRATION_DECIMATION_LITERATURE_NOTE.md": {
+      "sha256": "f4049034d656d38fb442ed0932e8a7dbe8fbd717a1b2c2c2d749f1867af90e7d",
+      "bytes": 6117
+    },
+    "ARBITRATION_DECIMATION_RISK_REGISTER.md": {
+      "sha256": "c009a0fc1012fd4f445ab284ed4f68d99ef6d6f8a6c9f2c7530e670a46325f8e",
+      "bytes": 2065
+    },
+    "ARBITRATION_DECISION_MARGIN.csv": {
+      "sha256": "357a2c5ad6cc4eaba72b6c3a05d554cc45d0f18a2c631420b2b2c14e0cbf6605",
+      "bytes": 1836
+    },
+    "ARBITRATION_DECISION_STALENESS_ANALYSIS.md": {
+      "sha256": "33b40f01c660375c6578b9cc7010f7589e4f91a93cc113d24a91ecc0b2eef9fd",
+      "bytes": 1956
+    },
+    "ARBITRATION_K10_SKIP_MAP.csv": {
+      "sha256": "f85198893b4adf9e697dbd3cefc8d91075ce4ed3a63cbcac9e2994e35913ada1",
+      "bytes": 1904767
+    },
+    "ARBITRATION_K10_STATIC_PROJECTION.csv": {
+      "sha256": "fd3d27b17abcf9d4cf2978d144010f32d1972e5426c3e1ac6ebcaf65d28849e5",
+      "bytes": 650
+    },
+    "ARBITRATION_OPERATION_LEDGER.csv": {
+      "sha256": "c371ae2aacec0a4141ffa63bb5b9d70f63ecccf5c07acf6fd09918d212cc2fbb",
+      "bytes": 2650
+    },
+    "ARBITRATION_RESOURCE_VALUE_LINEAGE.csv": {
+      "sha256": "84e67cc4e64874222a813991a85c44330e915cb4870148dc17203f009870e3c5",
+      "bytes": 895
+    },
+    "ARBITRATION_RESOURCE_VECTOR.csv": {
+      "sha256": "8397acfcebcbcc3cd2dd1821c5cf517e4137209f80abaac19062fd0a3ab03048",
+      "bytes": 293
+    },
+    "ARBITRATION_SWITCH_OPPORTUNITY_RATE.csv": {
+      "sha256": "731049cf35e08846b6beaa2711e059a266fd47042b42c0bc0e6ba2fbc371d78f",
+      "bytes": 1415
+    },
+    "ARTIFACT_AUTHORITY_MAP.md": {
+      "sha256": "c121ed5eadb84dc4b2e470bbd75c6d881ce35e42de58636fa0c09ea67162d111",
+      "bytes": 804
+    },
+    "AUXILIARY_LEVER_REASSESSMENT.csv": {
+      "sha256": "26335b96817b0e5ec2b55f246391e0e57fb114fed3f0449f7c90159c687656f7",
+      "bytes": 610
+    },
+    "COMBINED_RESOURCE_DESIGN_DECISION.md": {
+      "sha256": "25e690ce8f647349aaabfb800f43cd27d23d3678cc28a24f0b66691821ea6f53",
+      "bytes": 977
+    },
+    "COMBINED_RESOURCE_DESIGN_PROTOCOL.md": {
+      "sha256": "20cf01f0c0667e8b4c02bc6a1d19eb4582879cfcb81aef99de62c1ea15363245",
+      "bytes": 565
+    },
+    "COMBINED_RESOURCE_PARETO_DESIGN_FINAL_REPORT.md": {
+      "sha256": "139a7bd48bcfc70cf29b189196f71381c925a3629ef488f9baa8f2ba7f8fc0f8",
+      "bytes": 10582
+    },
+    "COMBINED_RESOURCE_PARETO_PREREGISTRATION.md": {
+      "sha256": "3a8a88010349d025413c37c84bcf0f1df16c08124b2a0e608f151e475e7589c1",
+      "bytes": 3865
+    },
+    "FUTURE_A0_A1_A2_CONFIGS.json": {
+      "sha256": "14cba0c78fe45321bab9ab5cbd596a8c693b5798ac8f0b54f45ace3106ed0da7",
+      "bytes": 2633
+    },
+    "FUTURE_SUCCESS_CRITERIA.md": {
+      "sha256": "b1e285beecf7c52e2a561af45602d883ac9dd41112d34a02c92a5dba04109f83",
+      "bytes": 2506
+    },
+    "K2_COMPONENT_RESOURCE_RECONCILIATION.csv": {
+      "sha256": "6cb3892bc1eb3ef4434394f94cbafbe6fcca2b37ab86de3a8332a673178d173e",
+      "bytes": 1281
+    },
+    "PARENT_HASHES.txt": {
+      "sha256": "9f3f0066bda77986c620daf140d982b5f8fb5f9f23784ace6ae5ed64928b9c3c",
+      "bytes": 2711
+    },
+    "POST_K2_RESOURCE_MICROCORRECTION.md": {
+      "sha256": "46492d7a5dc88063503f34a619bedaa6f29c8e0347554856ffcef5f517dbae9d",
+      "bytes": 4137
+    },
+    "generate_combined_resource_pareto_design.py": {
+      "sha256": "2c37ccabba70fb52af9fa0bb4796d97b12dc3e62ea6bdcd200b1d75e938bf94f",
+      "bytes": 75313
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "bounded_history_status": "SEALED",
+  "timestamp_iso": "2026-09-20T02:30:00Z",
+  "protocol_sha256": "92935ec093fcf2a88c334fd7c29e07be37747f8e57658c57ccffe8fe8ed25a55",
+  "final_report_sha256": "11f17a567ebee7bd0aebd6d396fff62068361f39686cc1fc3fb05c7b4ce706a3",
+  "statistical_report_sha256": "62ae36b2647e321f8c99cf96d8956d06ea832f18bd89e91021a7b33cb9d283f4",
+  "integration_design_sha256": "e05b915608a4e7b44c732b8e8b14d2174d395550915cae257adca351fd717f4a",
+  "seed_results_sha256": "7ba869b4ac6025e6d1a6d1d70183c4419c8287d70bbdc75882682667dd728827",
+  "canonical_src_tree_hash": "524f5342f67b8b8c0c39e7c4004a9c9a9f6ece52987afc6a0216ec2fb7af4018",
+  "canonical_tests_tree_hash": "9735e154e7ce1e59d2fd354b1dc77bbacb7f4bc2d5bd03be72fbee99f518c844",
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.2",
+    "architecture": "AMD64"
+  },
+  "confirmatory_seed_set": [
+    1101,
+    1102,
+    1103,
+    1104,
+    1105,
+    1106,
+    1107,
+    1108,
+    1109,
+    1110,
+    1111,
+    1112,
+    1113,
+    1114,
+    1115,
+    1116,
+    1117,
+    1118,
+    1119,
+    1120,
+    1121,
+    1122,
+    1123,
+    1124,
+    1125,
+    1126,
+    1127,
+    1128,
+    1129,
+    1130
+  ],
+  "governing_status": {
+    "lebre_v0_1_status": "FROZEN_WITH_SCOPE_LIMITS",
+    "m3_status": "UNOPENED",
+    "novelty_claim_ready": "NO"
+  }
+}

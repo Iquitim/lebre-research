@@ -1,0 +1,25 @@
+item,classification,authoritative_code_value,spec_status
+NLMS epsilon (S),MISSING,absolute 1e-6 added to the normaliser,not in spec
+NLMS epsilon (M),MISSING,none; update skipped only when ||phi||^2 == 0 exactly,spec shows w <- w + mu e phi/||phi||^2 with no regulariser
+epsilon scaling rule,MISSING,"S: fixed absolute; M: none (exactly scale-invariant, numerically unguarded)",spec claims scale invariance without stating epsilon
+martingale tau,AMBIGUOUS,"tau = rho/(sigma2_hat * m_phi), rho = 1 (unit-information prior)",formula shown with tau; value and units absent
+candidate screening rule,MISSING,2 lag candidates probed per step round-robin; EMA (w=0.2) of e*x_lag; top |score| opened,not in spec
+candidate-test horizon,AMBIGUOUS,T_max = 200 test samples (1 sample per 2 steps => up to 400 steps); futility afterwards,D4 diagram says 'futility after T_max samples'; value absent
+maximum concurrent candidate tests,MISSING,"H_hot = 4 lag tests + latent candidates (one per pole, while no latent active) + drive candidates (d, after latent)",not in spec
+queue discipline,MISSING,free lag slots refilled at each decision (every 10 steps) with the highest |screen| untested candidates,not in spec
+active-set capacity,EXPLICITLY_SPECIFIED,M_max = 4 structural atoms (base current inputs not counted),parameter table
+active-set-full policy,MISSING,"promotion allowed only by replacing the victim with largest CUSUM R, and only if R >= h/2; otherwise the candidate waits",not in v0.51 spec (was in an earlier spec)
+atom replacement policy,MISSING,as above; hidden-dynamics candidates reset when a latent/drive is promoted,not in spec
+removal coupling,EXPLICITLY_SPECIFIED,evicting the latent evicts its drive,stated in lifecycle description of earlier versions; implicit in v0.51 D4
+single-latent limit,AMBIGUOUS,at most one latent state; latent candidates are not tested while one is active,not stated in v0.51 text
+input normalization,AMBIGUOUS,"environment-side EMA standardiser (alpha = 1e-4, mean 0/var 1 start) in the external benchmarks; raw inputs in the internal suite",spec says 'inputs standardised by the environment' and (wrongly) 'means and variances accumulated up to the previous instant'
+target normalization,EXPLICITLY_SPECIFIED,S: raw target; M: raw differences,stated
+initialization,AMBIGUOUS,zeros; sigma2 from first error; warm-up 20 steps; qhat = 1.645 sigma,partially stated
+seasonal-buffer initialization,MISSING,buffer of 2s+2 zeros; M predicts the last value until n >= 2s+2,not in spec
+missing-lag behavior,MISSING,as above (no forecast from features before the buffer is full),not in spec
+quantile cadence,EXPLICITLY_SPECIFIED,every 8 steps,stated
+quantile batch semantics,AMBIGUOUS,"indicator of the refresh step only, step multiplied by 8 (not the sum of the 8 indicators)",'step multiplied by 8' stated; which indicator is ambiguous
+dynamic model averaging cadence,EXPLICITLY_SPECIFIED,loss difference every step; weight (exp) every 8 steps,stated
+evidence gates,EXPLICITLY_SPECIFIED,"silence (<10% power), quarantine (|x|>8 readable), dormancy (w_S < 0.01)",stated
+sleep semantics,EXPLICITLY_SPECIFIED,"dormancy pauses evidence only; prediction, weights and sigma2 continue",stated
+computational accounting,AMBIGUOUS,counts model arithmetic only; environment standardiser (~12d/step) and memory traffic not counted,definition stated; scope (environment excluded) not stated

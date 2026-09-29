@@ -1,0 +1,8 @@
+test_id,description,underflow_count,overflow_count,update_stagnation_count,sign_flip_disagreement,threshold_crossing_disagreement,ranking_inversion_count,max_absolute_error,status
+TEST_A_NORMAL_RANGE,"Normal correlation range [-0.8, +0.8]",0,0,0,0,0,0,0.0007146000862121582,PASS
+TEST_B_SMALL_UPDATES,Very small updates near FP16 resolution (delta < 1e-4),0,0,4,0,0,0,0.0002003312110900879,PASS
+TEST_C_NEAR_ZERO_SUBNORMAL,Values approaching zero (|C| < 1e-5),0,0,0,0,0,0,5.191015119976328e-07,PASS
+TEST_D_NEAR_THRESHOLD,Values hovering near candidate threshold (theta = 0.20),0,0,0,0,0,0,5.4508447647094727e-05,PASS
+TEST_E_TIED_RANKING,Near-tied candidate rankings (delta < 1e-4),0,0,0,0,0,0,5.0008296966552734e-05,PASS
+TEST_F_SIGN_FLIPS,Rapid sign oscillations (+-0.15),0,0,0,0,0,0,3.105960786342621e-06,PASS
+TEST_G_LARGE_MAGNITUDE,Large magnitudes approaching saturation (|C| -> 1.0),0,0,0,0,0,0,0.00039952993392944336,PASS

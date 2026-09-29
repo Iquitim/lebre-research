@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_B1_RZA_LMS_SEED_123",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "B1_RZA_LMS",
+  "seed": 123,
+  "config": "{\"learning_rate\": 0.03, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4509162011382886,
+  "mae": 0.4953315769472492,
+  "nmse": 0.9636342737319143,
+  "mean_flops": 101.0,
+  "p95_flops": 101.0,
+  "peak_flops": 101.0,
+  "memory_bytes": 144,
+  "active_params": 10,
+  "wall_time_sec": 0.10184907913208008
+}

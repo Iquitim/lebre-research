@@ -1,0 +1,235 @@
+{
+  "study_id": "LEBRE-V0.2-CORRELATION-SEARCH-SPACE-COMPACTION-01",
+  "title": "Dense-to-Sparse Lag-Hypothesis Search Space Compaction",
+  "author": "Independent Skeptical Senior Researcher and Scientific Software Auditor",
+  "date": "2026-09-22",
+  "status": "CONDITIONALLY_SEALED",
+  "primary_outcome": "COMPACTED_SPARSE_FRONTIER_SUPERIOR_TO_DENSE_MULTIRATE",
+  "artifacts": {
+    "ANTI_STARVATION_AUDIT.csv": {
+      "sha256": "9a4f4d2d6dc6fd8836bfc0a1b83460b414f913a25f007595d65560dcddf73ad9",
+      "size_bytes": 24984,
+      "category": "DATASET"
+    },
+    "CORRELATION_SEARCH_DECISION.md": {
+      "sha256": "c9b815d2485d32e084928bd3947768d8da5c855ed196f13330a599fbced42cf5",
+      "size_bytes": 5137,
+      "category": "DOCUMENTATION"
+    },
+    "CORRELATION_SEARCH_FINAL_REPORT.md": {
+      "sha256": "6ff33fc96c7601b4f7d7432f297736d0874014f0b0773d3c0bb1c9f3964280a3",
+      "size_bytes": 15432,
+      "category": "DOCUMENTATION"
+    },
+    "CORRELATION_SEARCH_FINAL_RESULTS.csv": {
+      "sha256": "80cf8193ea6d69c81ccfb027ead8b3743e17aaf3dd41ef7098c4bb559f535dfd",
+      "size_bytes": 518483,
+      "category": "DATASET"
+    },
+    "CORRELATION_SEARCH_LITERATURE_NOTE.md": {
+      "sha256": "c3dfec09ae672065a2ecdca2cec1c4ddd6bf88ffe6d714e5fbb1ca20b3a1e542",
+      "size_bytes": 8891,
+      "category": "DOCUMENTATION"
+    },
+    "CORRELATION_SEARCH_PREREGISTRATION.md": {
+      "sha256": "2ad0ef49cb8c3f04f10a75ed65cd8bd8dd99e69c02169bcf88c211230581dbca",
+      "size_bytes": 4515,
+      "category": "DOCUMENTATION"
+    },
+    "CORRELATION_SEARCH_PROTOCOL.md": {
+      "sha256": "9ab865aea3727bcb3d9f82303788157e7e1bc836fc7412e9cc8894a5b9cdcc28",
+      "size_bytes": 6618,
+      "category": "DOCUMENTATION"
+    },
+    "CORRELATION_SEARCH_RESOURCE_REPORT.md": {
+      "sha256": "c3029e3fb7b62bebda5c913376a80337699ca3d9f6f46f4c4c9d54910bc7302f",
+      "size_bytes": 6827,
+      "category": "DOCUMENTATION"
+    },
+    "DENSE_CELL_PROVENANCE.csv": {
+      "sha256": "e3a142e2b42913ef25682cd689e7dbb7eb679f1054ca800a9dfe833715694982",
+      "size_bytes": 14240,
+      "category": "DATASET"
+    },
+    "DENSE_GRID_UTILIZATION_AUDIT.csv": {
+      "sha256": "2001fccc17377c74c1c765bad0ff8c45fc60e9d236a0377d9a70da0f4f912e48",
+      "size_bytes": 628,
+      "category": "DATASET"
+    },
+    "FINAL_SEARCH_CANDIDATE_FREEZE.md": {
+      "sha256": "c87f36733b43411136bdc66744cdd3e9ac3cf8e0f74051ec16a90d0822425c64",
+      "size_bytes": 5680,
+      "category": "DOCUMENTATION"
+    },
+    "HIERARCHICAL_SEARCH_DEV_RESULTS.csv": {
+      "sha256": "3511caefab4f742ad636a8a96ffaf541f72f5eb1bb728b09cc564fdc9303bbe4",
+      "size_bytes": 57903,
+      "category": "DATASET"
+    },
+    "HIERARCHICAL_SEARCH_ELIGIBILITY.md": {
+      "sha256": "9237b6aca71542b8f9d9a6cc820ed42349df8efb9b968449e9318975ba4f6b0b",
+      "size_bytes": 1441,
+      "category": "DOCUMENTATION"
+    },
+    "HIERARCHICAL_SEARCH_SPEC.md": {
+      "sha256": "087ea859b8a380f0c2e4ddcda3730f1c1a3177dbe0d41d0108bf916ad37c43b7",
+      "size_bytes": 2845,
+      "category": "DOCUMENTATION"
+    },
+    "I10_DIAGNOSTIC.csv": {
+      "sha256": "644193475fe2ee508477d4cef7233c512c39a9ccea8f091e3462d57a187d948c",
+      "size_bytes": 3204,
+      "category": "DATASET"
+    },
+    "I9_COMPLEMENTARITY.csv": {
+      "sha256": "89b8e821a61794c8931fa5754efcc6ae2e38526bbff4fe7eea84d6d8c4952579",
+      "size_bytes": 2624,
+      "category": "DATASET"
+    },
+    "LAG_SCORE_LOCALITY_AUDIT.csv": {
+      "sha256": "5be75692e4c7adef4eb2a08f089d6b12493487ea92b34220d09cb62d60f8e5a1",
+      "size_bytes": 475,
+      "category": "DATASET"
+    },
+    "LAG_SCORE_LOCALITY_REPORT.md": {
+      "sha256": "2527a8073901e043ea2073d605d61be85717a95ba6b8c2e95d53e697717af185",
+      "size_bytes": 3689,
+      "category": "DOCUMENTATION"
+    },
+    "PARENT_HASHES.txt": {
+      "sha256": "04bfe0cfff14b1a962f84013a21c069cd047e35c2376dffe5d0395b2b481c84e",
+      "size_bytes": 4461,
+      "category": "CHECKSUM"
+    },
+    "PREDICTIVE_NONINFERIORITY.csv": {
+      "sha256": "fb64c22e2edba5ba508f0a0fb48bca53a4ca03809bcee16e5393c9e2e32229e4",
+      "size_bytes": 493,
+      "category": "DATASET"
+    },
+    "PURE_LAG_PRESERVATION.csv": {
+      "sha256": "2f040890aa94f4884ac9f7b44c8c2223707e369a11474ad85459e86b35c3953d",
+      "size_bytes": 749,
+      "category": "DATASET"
+    },
+    "SEARCH_COST_CAUSAL_CHAIN.md": {
+      "sha256": "9b1bc8612ee9103ced9b3e30f7d1d90f8c260be2d951d8ecbb6bb9c1749ea0bc",
+      "size_bytes": 4716,
+      "category": "DOCUMENTATION"
+    },
+    "SEARCH_DESCENDANT_COST.csv": {
+      "sha256": "b93c6600e20f6e0ed4dae3b3c9b23962d7ca58e7eb33225ad17740080fd4c8e2",
+      "size_bytes": 779,
+      "category": "DATASET"
+    },
+    "SEARCH_FIDELITY_BY_SEED.csv": {
+      "sha256": "ca1c3a2b3fe5f714cc4a03a8976f741960cf6e92b79efe27d56406d372c33db6",
+      "size_bytes": 4894,
+      "category": "DATASET"
+    },
+    "SEARCH_POLICY_DEV_COMPARISON.csv": {
+      "sha256": "54aae8a475e8683eaba023a173d3eaf18912bdee2b08f2debb61269626cbc344",
+      "size_bytes": 2354,
+      "category": "DATASET"
+    },
+    "SEARCH_RESOURCE_BY_SEED.csv": {
+      "sha256": "3329400fece3fe55a48171a37a8580a4ca22d7c5d35fac70357645e01b2bfb6d",
+      "size_bytes": 4970,
+      "category": "DATASET"
+    },
+    "SEARCH_SPACE_COMPUTE_MODEL.md": {
+      "sha256": "5daa40a8e13bee280649527c2d2c0a244d1b8a47c0b83bf4a3434365543c8cda",
+      "size_bytes": 5535,
+      "category": "DOCUMENTATION"
+    },
+    "SEARCH_SPACE_MEMORY_MODEL.md": {
+      "sha256": "00ef8011b89734dcd6fa9e67ab30c1682ed2daf76dcfe9abd0d258fbce93b72e",
+      "size_bytes": 4747,
+      "category": "DOCUMENTATION"
+    },
+    "SEED_PROVENANCE.md": {
+      "sha256": "7fc3a0d83fe8a783d45bc0e1026aadcf1b44b3a9e0498804bb88ba6b024d60e3",
+      "size_bytes": 3120,
+      "category": "DOCUMENTATION"
+    },
+    "SPARSE_FRONTIER_DEV_RESULTS.csv": {
+      "sha256": "e613afbf9f77e239f644a64080f192ca0efa838ca157034a8a155196033479bf",
+      "size_bytes": 234244,
+      "category": "DATASET"
+    },
+    "SPARSE_FRONTIER_SPEC.md": {
+      "sha256": "80744ea687a462bd4a705869e5da65ae821a2af3c4586327cd32f43b0af611ae",
+      "size_bytes": 3972,
+      "category": "DOCUMENTATION"
+    },
+    "SWITCHING_PRESERVATION.csv": {
+      "sha256": "64d30d6a18d6e416eef42819e712b4dfd0e15bc6109e5118f1a7bcb01ecdf67e",
+      "size_bytes": 512,
+      "category": "DATASET"
+    },
+    "generate_correlation_search_outputs.py": {
+      "sha256": "4b12b5ef4b1e44866999a36c98e9eccd9ea0d745cb38da5a4c545e2801020aaf",
+      "size_bytes": 4719,
+      "category": "SCRIPT"
+    },
+    "figures/F10_probation_efficiency_spurious_suppression.png": {
+      "sha256": "15c7187935efd9f29228f766444ba969a4325157e567e79995cd0a6bd1284fde",
+      "size_bytes": 131913,
+      "category": "FIGURE"
+    },
+    "figures/F11_hybrid_complementarity_i9.png": {
+      "sha256": "c5560270e43f42821b0b3f57e416385cf2c061a6f92eb6e9047d485c6264f81a",
+      "size_bytes": 214767,
+      "category": "FIGURE"
+    },
+    "figures/F12_structural_decision_scorecard.png": {
+      "sha256": "19b04c45952a0e820e4fa0334d5fe88e634640c5a4de42a29e986b97a375d6bf",
+      "size_bytes": 455160,
+      "category": "FIGURE"
+    },
+    "figures/F1_dense_grid_spatial_utilization.png": {
+      "sha256": "eb709d38bcef77647b6aba584ff6b897fcf25d2ebad45e3ffec06440d995b5cb",
+      "size_bytes": 181936,
+      "category": "FIGURE"
+    },
+    "figures/F2_lag_score_locality_kronecker_delta.png": {
+      "sha256": "31bafa379ef7aee972d384b368587d1faba1d30b42996cee5a4b8d7f87311555",
+      "size_bytes": 180368,
+      "category": "FIGURE"
+    },
+    "figures/F3_search_cost_causal_chain.png": {
+      "sha256": "fd090b7e5e99d424538dfe18fbba83b8fbbced58e9c76f2408047fddd886d957",
+      "size_bytes": 169581,
+      "category": "FIGURE"
+    },
+    "figures/F4_candidate_dev_pareto_frontier.png": {
+      "sha256": "17da3a7d9747ddd9ee582a60e4d08fe71cfacc8beb297edd97d75bd7b760c84f",
+      "size_bytes": 214796,
+      "category": "FIGURE"
+    },
+    "figures/F5_confirmatory_nmse_by_task.png": {
+      "sha256": "5e02805fd52ffce779fbd062bf2e8e495af77d4fe1f07af5a9c3049003745e99",
+      "size_bytes": 175552,
+      "category": "FIGURE"
+    },
+    "figures/F6_pure_delay_discovery_dynamics.png": {
+      "sha256": "8112190a6f91b388434651c2bde388f35b7aeefe0a4d8dda31360cf9bace9d7a",
+      "size_bytes": 160776,
+      "category": "FIGURE"
+    },
+    "figures/F7_switching_adaptation_latency.png": {
+      "sha256": "be24be8bd490fe2766117c313c2748d98b9fdadb4e8c3eaddd30c437f0d07fe2",
+      "size_bytes": 124293,
+      "category": "FIGURE"
+    },
+    "figures/F8_anti_starvation_revisit_distributions.png": {
+      "sha256": "220829729b2d345b8d60da2b175139f16d5c8e624e0e78266e7738cb99f3610c",
+      "size_bytes": 146439,
+      "category": "FIGURE"
+    },
+    "figures/F9_dynamic_memory_compaction.png": {
+      "sha256": "109516298c88fc26096ed7a34b60f59a09af4a912a579bf0ef2d45ae1d4a34c1",
+      "size_bytes": 172154,
+      "category": "FIGURE"
+    }
+  }
+}

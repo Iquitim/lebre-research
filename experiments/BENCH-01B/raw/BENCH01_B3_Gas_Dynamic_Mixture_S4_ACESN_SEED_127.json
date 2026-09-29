@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_S4_ACESN_SEED_127",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "S4_ACESN",
+  "seed": 127,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.85, \"compression_ratio\": 0.25, \"readout_lr\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 13457.160377001355,
+  "mae": 45.425863310652,
+  "nmse": 0.2318235120877893,
+  "mean_flops": 1664.4274285714287,
+  "p95_flops": 1685.0,
+  "peak_flops": 1685.0,
+  "memory_bytes": 6208,
+  "active_params": 20,
+  "wall_time_sec": 0.20531463623046875
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_B3_MUSE_RNN_SEED_123",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 123,
+  "config": "{\"learning_rate\": 0.01, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0023196380743011,
+  "mae": 0.9999097239837809,
+  "nmse": 1.008202806000431,
+  "mean_flops": 60.37885714285714,
+  "p95_flops": 60.0,
+  "peak_flops": 128.0,
+  "memory_bytes": 232,
+  "active_params": 12,
+  "wall_time_sec": 0.30100584030151367
+}

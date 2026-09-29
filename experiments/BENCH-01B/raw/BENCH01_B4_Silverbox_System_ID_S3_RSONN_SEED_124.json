@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_S3_RSONN_SEED_124",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "S3_RSONN",
+  "seed": 124,
+  "config": "{\"learning_rate\": 0.005, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0038595734868840017,
+  "mae": 0.04801512106698255,
+  "nmse": 1.0013273691174092,
+  "mean_flops": 34.15578571428571,
+  "p95_flops": 72.0,
+  "peak_flops": 102.0,
+  "memory_bytes": 96,
+  "active_params": 3,
+  "wall_time_sec": 1.059661626815796
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_S4_ACESN_SEED_120",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "S4_ACESN",
+  "seed": 120,
+  "config": "{\"reservoir_size\": 40, \"spectral_radius\": 0.85, \"compression_ratio\": 0.5, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 18.52698731222504,
+  "mae": 2.4240032908204494,
+  "nmse": 0.2945953343306597,
+  "mean_flops": 4724.952,
+  "p95_flops": 4725.0,
+  "peak_flops": 4725.0,
+  "memory_bytes": 17728,
+  "active_params": 40,
+  "wall_time_sec": 0.8101468086242676
+}

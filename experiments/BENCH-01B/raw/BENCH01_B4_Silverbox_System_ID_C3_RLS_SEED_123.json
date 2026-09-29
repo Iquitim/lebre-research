@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_C3_RLS_SEED_123",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "C3_RLS",
+  "seed": 123,
+  "config": "{\"forgetting_factor\": 0.995}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003827974573621446,
+  "mae": 0.047790439796946374,
+  "nmse": 0.9931293501415589,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 80,
+  "active_params": 1,
+  "wall_time_sec": 0.4631474018096924
+}

@@ -1,0 +1,39 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 7682.15it/s]
+CHRONOS_BOLT_TINY    N1_ONS_Carga_SECO_2021_22    nmse=0.0118 9s
+CHRONOS_BOLT_TINY    N2_ONS_Hidro_N_2021_22       nmse=0.0058 10s
+CHRONOS_BOLT_TINY    N3_ONS_Termica_SIN_2021_22   nmse=0.0010 10s
+CHRONOS_BOLT_TINY    N4_ONS_Eolica_NE_2021_22     nmse=0.0176 10s
+CHRONOS_BOLT_TINY    N5_BCB_EURBRL                nmse=0.0013 3s
+CHRONOS_BOLT_TINY    N6_Monash_ElecDemand_VIC     nmse=0.0157 10s
+CHRONOS_BOLT_TINY    N7_Monash_AusElec_S3         nmse=0.0121 28s
+CHRONOS_BOLT_TINY    N8_Monash_Pedestrian_S3      nmse=0.0235 28s
+CHRONOS_BOLT_TINY    N9_Monash_Solar10min_S3      nmse=0.0162 27s
+CHRONOS_BOLT_TINY    N10_Monash_KDDCup_S3         nmse=0.1151 6s
+Loading weights:   0%|          | 0/143 [00:00<?, ?it/s]Loading weights: 100%|██████████| 143/143 [00:00<00:00, 1961.22it/s]
+CHRONOS_BOLT_SMALL   N1_ONS_Carga_SECO_2021_22    nmse=0.0072 3s
+CHRONOS_BOLT_SMALL   N2_ONS_Hidro_N_2021_22       nmse=0.0053 3s
+CHRONOS_BOLT_SMALL   N3_ONS_Termica_SIN_2021_22   nmse=0.0008 3s
+CHRONOS_BOLT_SMALL   N4_ONS_Eolica_NE_2021_22     nmse=0.0163 3s
+CHRONOS_BOLT_SMALL   N5_BCB_EURBRL                nmse=0.0010 3s
+CHRONOS_BOLT_SMALL   N6_Monash_ElecDemand_VIC     nmse=0.0108 3s
+CHRONOS_BOLT_SMALL   N7_Monash_AusElec_S3         nmse=0.0070 4s
+CHRONOS_BOLT_SMALL   N8_Monash_Pedestrian_S3      nmse=0.0272 3s
+CHRONOS_BOLT_SMALL   N9_Monash_Solar10min_S3      nmse=0.0110 3s
+CHRONOS_BOLT_SMALL   N10_Monash_KDDCup_S3         nmse=0.1170 3s
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 99/170 [00:00<00:00, 974.45it/s]Loading weights: 100%|██████████| 170/170 [00:00<00:00, 1051.96it/s]
+CHRONOS2             N1_ONS_Carga_SECO_2021_22    nmse=0.0046 16s
+CHRONOS2             N2_ONS_Hidro_N_2021_22       nmse=0.0047 15s
+CHRONOS2             N3_ONS_Termica_SIN_2021_22   nmse=0.0007 15s
+CHRONOS2             N4_ONS_Eolica_NE_2021_22     nmse=0.0135 16s
+CHRONOS2             N5_BCB_EURBRL                nmse=0.0010 15s
+CHRONOS2             N6_Monash_ElecDemand_VIC     nmse=0.0040 15s
+CHRONOS2             N7_Monash_AusElec_S3         nmse=0.0037 15s
+CHRONOS2             N8_Monash_Pedestrian_S3      nmse=0.0259 16s
+CHRONOS2             N9_Monash_Solar10min_S3      nmse=0.0091 15s
+CHRONOS2             N10_Monash_KDDCup_S3         nmse=0.1141 15s
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 46/170 [00:00<00:00, 453.97it/s]Loading weights: 100%|██████████| 170/170 [00:00<00:00, 899.16it/s]
+CHRONOS2_COV         N2_ONS_Hidro_N_2021_22       nmse=0.0047 25s
+CHRONOS2_COV         N3_ONS_Termica_SIN_2021_22   nmse=0.0008 26s
+CHRONOS2_COV         N4_ONS_Eolica_NE_2021_22     nmse=0.0137 26s
+ALLDONE

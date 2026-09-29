@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_C4_FIXED_LAG_LINEAR_SEED_102",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 102,
+  "config": "{\"max_lag\": 32, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.7775011347906386,
+  "mae": 0.6718843116460684,
+  "nmse": 0.9648872001343822,
+  "mean_flops": 129.0,
+  "p95_flops": 129.0,
+  "peak_flops": 129.0,
+  "memory_bytes": 544,
+  "active_params": 32,
+  "wall_time_sec": 0.08151602745056152
+}

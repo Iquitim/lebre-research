@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_B4_MINIMAL_GRU_SEED_107",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 107,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.848456538559008,
+  "mae": 1.2043976360214717,
+  "nmse": 1.028360645910505,
+  "mean_flops": 537.0,
+  "p95_flops": 537.0,
+  "peak_flops": 537.0,
+  "memory_bytes": 1080,
+  "active_params": 127,
+  "wall_time_sec": 0.19085693359375
+}

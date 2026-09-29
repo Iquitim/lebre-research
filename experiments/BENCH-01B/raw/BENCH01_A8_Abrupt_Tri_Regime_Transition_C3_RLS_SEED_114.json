@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_C3_RLS_SEED_114",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "C3_RLS",
+  "seed": 114,
+  "config": "{\"forgetting_factor\": 0.995}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 261890.19751205132,
+  "mae": 24.88954511343436,
+  "nmse": 514262.4423768734,
+  "mean_flops": 485.0,
+  "p95_flops": 485.0,
+  "peak_flops": 485.0,
+  "memory_bytes": 944,
+  "active_params": 10,
+  "wall_time_sec": 0.11425018310546875
+}

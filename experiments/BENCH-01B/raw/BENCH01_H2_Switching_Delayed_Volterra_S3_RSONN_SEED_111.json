@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_S3_RSONN_SEED_111",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "S3_RSONN",
+  "seed": 111,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.225097862572225,
+  "mae": 1.0977281636465233,
+  "nmse": 0.920301634531051,
+  "mean_flops": 1039.6617142857142,
+  "p95_flops": 1042.0,
+  "peak_flops": 1042.0,
+  "memory_bytes": 1536,
+  "active_params": 180,
+  "wall_time_sec": 0.29068875312805176
+}

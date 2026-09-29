@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_S5_CONTINUAL_BACKPROP_SEED_119",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.6437202695293274,
+  "mae": 1.172879500556465,
+  "nmse": 1.013855614557438,
+  "mean_flops": 245.0,
+  "p95_flops": 245.0,
+  "peak_flops": 245.0,
+  "memory_bytes": 1024,
+  "active_params": 40,
+  "wall_time_sec": 0.15148138999938965
+}

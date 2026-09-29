@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_Track_B_SEED_119",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "Track_B",
+  "seed": 119,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 31.826433866719,
+  "mae": 3.9475279192921593,
+  "nmse": 0.925516225173093,
+  "mean_flops": 223.99714285714285,
+  "p95_flops": 228.0,
+  "peak_flops": 228.0,
+  "memory_bytes": 728,
+  "active_params": 50,
+  "wall_time_sec": 0.19547128677368164
+}

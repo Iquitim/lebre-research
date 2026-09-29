@@ -1,0 +1,4 @@
+candidate_class,total_probation_fp_invested,post_promotion_nmse_gain,time_to_break_even_steps,cumulative_gain_per_probation_fp
+FAILED_CANDIDATE,119.34,0.0,NEVER,0.0
+TRUE_DELAY_PROMOTED,119.34,0.0825,312.0,0.000691
+SPURIOUS_PROMOTED,119.34,-0.0042,NEVER,-3.5e-05

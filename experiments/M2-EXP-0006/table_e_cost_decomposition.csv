@@ -1,0 +1,5 @@
+decision_outcome,prediction_regret,compute_overhead_flops,memory_overhead_bytes,rebirth_cost_steps
+False Eviction (Premature),9.225,4920.0,0,205.0
+False Retention (Stale State),0.001,34.0,52,0.0
+Correct Retention (Quiescent),0.0,34.0,52,0.0
+Correct Eviction (Obsolete),0.0,0.0,0,0.0

@@ -1,0 +1,37 @@
+            nmse        fp  struct
+arm                               
+CTRL_ARX  0.3376   44.0000     NaN
+V02_A0    0.3133  111.3003  0.7470
+V032      0.2151   96.9283  0.9030
+V042      0.2146   99.4932  0.9258
+V045      0.2146   99.4932  0.9258
+                                        N     mean  upper95  lower95  favourable
+G1 NI V04-V032 NMSE (upper<+0.010)   30.0 -0.00047  0.00173 -0.00267        16.0
+G3 NI V04-V032 struct (lower>-0.02)  30.0  0.02273  0.03368  0.01177        12.0
+G4 V04-V02_A0 NMSE (upper<0)         30.0 -0.09866 -0.09057 -0.10674        30.0
+info V04-CTRL_ARX NMSE               30.0 -0.12303 -0.11791 -0.12815        30.0
+{'G1': np.True_, 'G2': np.True_, 'G3': np.True_, 'G4': np.True_, 'G5': np.True_, 'G6': np.True_}
+coverage 0.9007 [0.871,0.930], faith max 0.00e+00
+      mean_struct_atoms  events_per_1000_stationary  detection_delay
+arm                                                                 
+V032              1.215                       0.168          207.400
+V042              1.204                       0.172          268.889
+V045              1.204                       0.172          268.889
+                                       i7_reactivation                                   nmse                                 switch_latency                                            
+arm                                           CTRL_ARX   V02_A0     V032  V042  V045 CTRL_ARX  V02_A0    V032    V042    V045       CTRL_ARX     V02_A0       V032       V042       V045
+task_id                                                                                                                                                                                 
+I10_Redundant_Temporal_Structure                   NaN      NaN      NaN   NaN   NaN   0.1120  0.3650  0.1490  0.1508  0.1508            NaN        NaN        NaN        NaN        NaN
+I11_Regime_Switch_Delay_To_Latent                  NaN      NaN      NaN   NaN   NaN   0.2665  0.2053  0.1434  0.1444  0.1444       141.5000   368.6333   277.9000   302.0000   302.0000
+I12_Regime_Switch_Latent_To_Delay                  NaN      NaN      NaN   NaN   NaN   0.2689  0.2245  0.1688  0.1655  0.1655      3000.0000  2119.9333  1495.2667  1439.7333  1439.7333
+I13_Regime_Switch_Hybrid_To_Memoryless             NaN      NaN      NaN   NaN   NaN   0.2520  0.2257  0.1921  0.1995  0.1995       112.3667   128.1333   134.4000   125.1000   125.1000
+I14_Intermittent_Hybrid                            NaN      NaN      NaN   NaN   NaN   0.2601  0.2165  0.2025  0.2035  0.2035      1587.5000  1001.4333  1082.5333  1087.1667  1087.1667
+I1_Memoryless_Linear                               NaN      NaN      NaN   NaN   NaN   0.1236  0.1249  0.1228  0.1233  0.1233            NaN        NaN        NaN        NaN        NaN
+I2_Static_Nonlinear_Negative_Control               NaN      NaN      NaN   NaN   NaN   0.8625  1.0654  0.8662  0.8703  0.8703            NaN        NaN        NaN        NaN        NaN
+I3_Single_Exact_Delay                              NaN      NaN      NaN   NaN   NaN   0.4392  0.2824  0.1300  0.1304  0.1304            NaN        NaN        NaN        NaN        NaN
+I4_Multi_Sparse_Delay                              NaN      NaN      NaN   NaN   NaN   0.6184  0.5228  0.2774  0.2700  0.2700            NaN        NaN        NaN        NaN        NaN
+I5_Moving_Delay_Support                            NaN      NaN      NaN   NaN   NaN   0.4398  0.3181  0.1951  0.2132  0.2132            NaN        NaN        NaN        NaN        NaN
+I6_Continuous_Latent_State                         NaN      NaN      NaN   NaN   NaN   0.1597  0.1416  0.0988  0.1002  0.1002            NaN        NaN        NaN        NaN        NaN
+I7_Quiescent_Continuous_State                     54.3  98.0667  54.2667  50.0  50.0   0.1626  0.1513  0.1172  0.1048  0.1048            NaN        NaN        NaN        NaN        NaN
+I8_Quiescent_Discrete_Delay                        NaN      NaN      NaN   NaN   NaN   0.4425  0.3001  0.1792  0.1503  0.1503            NaN        NaN        NaN        NaN        NaN
+I9_Hybrid_Delay_Plus_Latent_State                  NaN      NaN      NaN   NaN   NaN   0.3191  0.2421  0.1685  0.1783  0.1783            NaN        NaN        NaN        NaN        NaN
+2100 runs 65s

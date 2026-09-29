@@ -1,0 +1,124 @@
+# ==============================================================================
+# LEBRE v0.51 — FREEZE MANIFEST
+# Stage: LEBRE-V0.51-FREEZE-01
+# Date: 2026-09-25
+# ==============================================================================
+
+architecture:
+  name: LEBRE
+  expansion: Lifecycle-governed Evidence-Based Resource Evolution
+  version: "0.51"
+  status: FROZEN_RESEARCH_BASELINE_WITH_SCOPE_LIMITS
+  canonical_reference: "0.1"          # unchanged; v0.51 does not replace it
+  components: [structural_expert_S, memory_expert_M, dynamic_model_averaging, quantile_interval]
+
+integrity:
+  checksums_file: docs/architecture/LEBRE_v0.51_SHA256SUMS.txt
+  files_hashed: 52
+  all_verified_at_freeze: true
+  model_code_sha256:
+    lebre_v051.py: f4dcf460dedfcb583844c54b2cb27d2afe52b44e85f86762305e08ddf226cda3
+    lebre_s051.py: 3ae285b7ea3c24db00e6ece7f8af6a8ca6ca1baee14849bfe84621757b514613
+  model_code_matches_prereg_freeze: true
+  prereg_code_data_hashes_matching: 9/10
+  prereg_hash_mismatch:
+    file: experiments/LEBRE-V0.51-LEAN-01/ARQUITETURA_V051.md
+    prereg_sha256: dacc17bc084c7d3092cdc832283b3ff099d128359a37bbcd16a20f77be7423ce
+    reason: documentation-only corrections (2026-09-23..25) aligning text with frozen code
+    prereg_version_recoverable: false
+  prereg_document_sha256: b2d04e83e73e21a810f9cae28cf701a4a39b6765fdc4e1eda1e1e3bdd71f54d0
+  prereg_externally_published: false
+  spec_build_requires: "python>=3.12"
+
+constants:
+  memory: {mu: 0.05, profile_a: 0.1, mean_factor: 0.01, features: 5, epsilon: none}
+  structural:
+    mu: 0.1
+    epsilon: 1.0e-6
+    max_lag: 32
+    poles: [0.0, 0.5, 0.8, 0.95]
+    max_active_latents: 1
+    M_max: 4
+    alpha_promotion: 0.05
+    p_dict: "d*L + 4 + d"
+    rho: 1.0
+    T_max_samples: 200
+    test_every: 2
+    decide_every: 10
+    screen_probes_per_step: 2
+    screen_weight: 0.2
+    lag_test_slots: 4
+    replacement_rule: "R >= h/2"
+    arl: 6000
+    T_idle: 500
+    clip: 8
+    excitation_fraction: 0.1
+    dormancy_weight: 0.01
+  combiner: {eta: 0.5, lambda: 0.99, refresh_every: 8}
+  interval: {alpha: 0.1, gamma: 0.1, update_every: 8, operator: current_indicator_x8}
+  environment: {input_standardisation: causal_ema, factor: 1.0e-4, counted_in_fp: false}
+
+evidence_preregistered:
+  decision: PROMOTED
+  heldout_ratio_vs_nlinear: 0.84
+  heldout_ratio_vs_chronos2: 1.37
+  heldout_mean_fp: 121
+  heldout_peak_fp: 196
+  internal_max_mean_fp: 147
+  internal_peak_fp: 249
+  internal_coverage: 0.902
+  start_point_sensitivity_max: 1.076
+  divergences: 0
+
+evidence_posthoc:
+  real_data_gain_primarily_from_M: true
+  real_series_without_structural_promotion: 15/20
+  real_series_mean_wS_below_0p01: 16/20
+  airline_mle_better_by: "~5%"
+  false_promotions_null_episodes: "0/17686"
+  structural_discovery:
+    single_delay: SUPPORTED
+    multiple_delays: PARTIAL_TAU_SENSITIVE
+    input_driven_latent: NOT_SUPPORTED
+    heavy_tails: FRAGILE
+  real_structural_discovery: INSUFFICIENT_EVIDENCE
+
+known_limitations:
+  - single_latent_pole_lock
+  - search_throughput_latency_1500_3000_steps
+  - multi_lag_partial_tau_sensitive
+  - quantile_cadence_phase_aliasing
+  - memory_nlms_no_epsilon_flat_then_step
+  - state_memory_grows_196d_plus_12s_bytes
+  - standardisation_cost_not_counted
+  - no_real_input_driven_structural_evidence
+
+governance:
+  novelty_claim_ready: false
+  m3_status: UNOPENED
+  canonical_v01_modified: false
+  src_tests_modified: false
+  change_rule: "any change to a hashed file invalidates this freeze; improvements go to v0.52, one isolated change per pre-registered experiment"
+
+errata:
+  - file: docs/architecture/LEBRE_v0.51_ERRATA_01.md
+    date: 2026-09-25
+    sha256: e8308677e033861c5e8e3cbb8ae2f21452bfc26637f576d9b1e969538a671930
+    scope: text_only
+    items: [E1_promotion_guarantee_scope, E2_screening_validity, E3_memory_airline_hw_analogy_not_equivalence, E4_mean_reversion_not_ses, E5_per_episode_error_control, E6_prior_art_positioning]
+    frozen_files_modified: false
+
+documentation_revisions:
+  - revision: 1
+    date: 2026-09-25
+    basis: LEBRE_v0.51_ERRATA_01.md
+    architecture_code_parameters_results_changed: false
+    frozen_files_modified: false
+    checksums_file: docs/architecture/LEBRE_v0.51_r1_SHA256SUMS.txt
+    checksums_file_sha256: a8d88dff5e8f001f65403d6834cb4e09fcb3d9463f8cc5fb27319e6c20c5f9da
+    outputs:
+      - docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.51_SPEC_r1_PTBR.pdf
+      - docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.51_SPEC_r1_EN.pdf
+      - experiments/LEBRE-V0.51-LEAN-01/ARQUITETURA_V051_r1.md
+    extra_md_fix: "ARQUITETURA_V051_r1.md also corrects 'CUSUM alarms with controlled error rate' (contradicted spec §5.3; rent breaks the guarantee)"
+    build: "uv run --no-project --python 3.12 --with pandas --with numpy --with scipy --with pypdfium2 --with pillow python build_v051r1_spec.py"

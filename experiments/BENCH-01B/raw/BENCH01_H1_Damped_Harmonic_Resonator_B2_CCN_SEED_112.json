@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_B2_CCN_SEED_112",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "B2_CCN",
+  "seed": 112,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 30.739079867112384,
+  "mae": 3.8917289493731992,
+  "nmse": 0.9853803594829621,
+  "mean_flops": 865.0,
+  "p95_flops": 865.0,
+  "peak_flops": 865.0,
+  "memory_bytes": 1360,
+  "active_params": 154,
+  "wall_time_sec": 0.2637917995452881
+}

@@ -1,0 +1,22 @@
+{
+  "n_tasks": 25,
+  "n_models_max": 23,
+  "n_runs": 3425,
+  "failed_runs_total": 201,
+  "v032_global_position": 6,
+  "v032_mean_rank": 8.44,
+  "E3_fraction": 0.16,
+  "top3_tracks": [],
+  "decision": "NOT_JUSTIFIED_EXTERNALLY",
+  "v032_tasks_rank1": 2,
+  "v032_tasks_top3": 4,
+  "v032_tasks_pareto": 5,
+  "v032_tasks_skill_pos": 14,
+  "v032_tasks_le100flops_le1KB": 5,
+  "track_positions": {
+    "A": 6,
+    "B": 5,
+    "C": 6,
+    "D": 12
+  }
+}

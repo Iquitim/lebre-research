@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_S3_RSONN_SEED_126",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "S3_RSONN",
+  "seed": 126,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.05, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.3752618854051495,
+  "mae": 0.7871497966776858,
+  "nmse": 0.021867869184311897,
+  "mean_flops": 393.9979183673469,
+  "p95_flops": 394.0,
+  "peak_flops": 394.0,
+  "memory_bytes": 672,
+  "active_params": 72,
+  "wall_time_sec": 1.9997410774230957
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_S2_LRU_STREAM_SEED_130",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "S2_LRU_STREAM",
+  "seed": 130,
+  "config": "{\"state_lr\": 0.01, \"readout_lr\": 0.001, \"state_decay\": 0.9}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.499754796874592,
+  "mae": 0.5660612605969934,
+  "nmse": 1.0093601803667915,
+  "mean_flops": 172.0,
+  "p95_flops": 172.0,
+  "peak_flops": 172.0,
+  "memory_bytes": 408,
+  "active_params": 42,
+  "wall_time_sec": 0.07950377464294434
+}

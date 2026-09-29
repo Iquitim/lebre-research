@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_B3_MUSE_RNN_SEED_128",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 128,
+  "config": "{\"learning_rate\": 0.03, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 42.004213851760966,
+  "mae": 3.348799059905862,
+  "nmse": 0.6679038105019319,
+  "mean_flops": 398.76081632653063,
+  "p95_flops": 440.0,
+  "peak_flops": 440.0,
+  "memory_bytes": 928,
+  "active_params": 95,
+  "wall_time_sec": 2.225346565246582
+}

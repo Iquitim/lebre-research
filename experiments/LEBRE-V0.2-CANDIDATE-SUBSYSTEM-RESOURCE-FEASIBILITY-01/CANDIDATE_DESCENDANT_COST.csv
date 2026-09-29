@@ -1,0 +1,4 @@
+cell_class,cell_count,candidate_births,promotions,failed_probations,direct_probe_fp,descendant_failed_prob_fp,descendant_promoted_prob_fp,descendant_arb_fp,total_descendant_fp
+SPURIOUS_PROMOTED,87,7311,188,7123,1826720.0,498610.0,13160.0,146220.0,657990.0
+SPURIOUS_CANDIDATE_BIRTH,64,4681,0,4681,1343440.0,327670.0,0.0,93620.0,421290.0
+TRUE_SUPPORT_DISCOVERED,9,600,66,534,189840.0,37380.0,4620.0,12000.0,54000.0

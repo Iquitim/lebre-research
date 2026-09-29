@@ -1,0 +1,40 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 11740.94it/s]
+CHRONOS_BOLT_TINY    Q1_ONS_Carga_SIN_2019_20     nmse=0.0114 10s
+CHRONOS_BOLT_TINY    Q2_ONS_Hidro_SE_2019_20      nmse=0.0181 10s
+CHRONOS_BOLT_TINY    Q3_ONS_Hidro_S_2019_20       nmse=0.0150 10s
+CHRONOS_BOLT_TINY    Q4_ONS_Eolica_SIN_2019_20    nmse=0.0153 10s
+CHRONOS_BOLT_TINY    Q5_BCB_GBPBRL                nmse=0.0015 3s
+CHRONOS_BOLT_TINY    Q6_Monash_AusElec_S4         nmse=0.0152 27s
+CHRONOS_BOLT_TINY    Q7_Monash_Pedestrian_S4      nmse=0.0207 27s
+CHRONOS_BOLT_TINY    Q8_Monash_Solar10min_S4      nmse=0.0156 27s
+CHRONOS_BOLT_TINY    Q9_Monash_KDDCup_S4          nmse=0.0935 6s
+CHRONOS_BOLT_TINY    Q10_Monash_AusElec_S5        nmse=0.0122 27s
+Loading weights:   0%|          | 0/143 [00:00<?, ?it/s]Loading weights: 100%|██████████| 143/143 [00:00<00:00, 2117.89it/s]
+CHRONOS_BOLT_SMALL   Q1_ONS_Carga_SIN_2019_20     nmse=0.0074 3s
+CHRONOS_BOLT_SMALL   Q2_ONS_Hidro_SE_2019_20      nmse=0.0126 3s
+CHRONOS_BOLT_SMALL   Q3_ONS_Hidro_S_2019_20       nmse=0.0124 3s
+CHRONOS_BOLT_SMALL   Q4_ONS_Eolica_SIN_2019_20    nmse=0.0148 3s
+CHRONOS_BOLT_SMALL   Q5_BCB_GBPBRL                nmse=0.0012 3s
+CHRONOS_BOLT_SMALL   Q6_Monash_AusElec_S4         nmse=0.0091 3s
+CHRONOS_BOLT_SMALL   Q7_Monash_Pedestrian_S4      nmse=0.0176 3s
+CHRONOS_BOLT_SMALL   Q8_Monash_Solar10min_S4      nmse=0.0092 3s
+CHRONOS_BOLT_SMALL   Q9_Monash_KDDCup_S4          nmse=0.0862 3s
+CHRONOS_BOLT_SMALL   Q10_Monash_AusElec_S5        nmse=0.0111 3s
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights:  56%|█████▌    | 95/170 [00:00<00:00, 916.36it/s]Loading weights: 100%|██████████| 170/170 [00:00<00:00, 1010.68it/s]
+CHRONOS2             Q1_ONS_Carga_SIN_2019_20     nmse=0.0030 15s
+CHRONOS2             Q2_ONS_Hidro_SE_2019_20      nmse=0.0085 16s
+CHRONOS2             Q3_ONS_Hidro_S_2019_20       nmse=0.0102 15s
+CHRONOS2             Q4_ONS_Eolica_SIN_2019_20    nmse=0.0114 16s
+CHRONOS2             Q5_BCB_GBPBRL                nmse=0.0011 16s
+CHRONOS2             Q6_Monash_AusElec_S4         nmse=0.0046 16s
+CHRONOS2             Q7_Monash_Pedestrian_S4      nmse=0.0169 15s
+CHRONOS2             Q8_Monash_Solar10min_S4      nmse=0.0085 16s
+CHRONOS2             Q9_Monash_KDDCup_S4          nmse=0.0924 16s
+CHRONOS2             Q10_Monash_AusElec_S5        nmse=0.0068 16s
+Loading weights:   0%|          | 0/170 [00:00<?, ?it/s]Loading weights:  53%|█████▎    | 90/170 [00:00<00:00, 893.09it/s]Loading weights: 100%|██████████| 170/170 [00:00<00:00, 1001.57it/s]
+CHRONOS2_COV         Q1_ONS_Carga_SIN_2019_20     nmse=0.0044 26s
+CHRONOS2_COV         Q2_ONS_Hidro_SE_2019_20      nmse=0.0109 25s
+CHRONOS2_COV         Q3_ONS_Hidro_S_2019_20       nmse=0.0101 25s
+CHRONOS2_COV         Q4_ONS_Eolica_SIN_2019_20    nmse=0.0118 26s
+ALLDONE

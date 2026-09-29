@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_C2_NLMS_SEED_115",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "C2_NLMS",
+  "seed": 115,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4868352545670455,
+  "mae": 0.5555203785943863,
+  "nmse": 1.0052340046132593,
+  "mean_flops": 125.0,
+  "p95_flops": 125.0,
+  "peak_flops": 125.0,
+  "memory_bytes": 192,
+  "active_params": 20,
+  "wall_time_sec": 0.07911157608032227
+}

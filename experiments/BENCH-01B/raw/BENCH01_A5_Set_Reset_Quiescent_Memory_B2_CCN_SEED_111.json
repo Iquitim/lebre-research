@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_B2_CCN_SEED_111",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "B2_CCN",
+  "seed": 111,
+  "config": "{\"readout_lr\": 0.03, \"recurrent_lr\": 0.001, \"max_columns\": 2}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.38072421844639365,
+  "mae": 0.3962612989068435,
+  "nmse": 0.3866930999074203,
+  "mean_flops": 225.0,
+  "p95_flops": 225.0,
+  "peak_flops": 225.0,
+  "memory_bytes": 400,
+  "active_params": 34,
+  "wall_time_sec": 0.26603174209594727
+}

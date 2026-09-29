@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "supplementary_benchmark_id": "BENCH-01B-SUPPLEMENTARY",
+  "version": "1.0.0-FROZEN",
+  "date_locked": "2026-09-19",
+  "governing_document": "BENCH_01_SPEC.md",
+  "governing_sections": "Sections 11-35, 196-199 of Protocol BENCH-01B",
+  "notes": "Supplementary prior-art challengers and simplicity controls. Datasets, splits, seeds, Track B parameters, and primary baselines remain bitwise identical to bench_01_locked_config.json.",
+  "supplementary_challengers": [
+    {
+      "id": "S1_VARIABLE_TAP_LMS",
+      "name": "Variable-Tap Length LMS (Zhao et al. 2008)",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "implementation_fidelity": "FAITHFUL_REIMPLEMENTATION",
+      "max_configs": 16,
+      "search_grid": {
+        "learning_rate": [0.001, 0.003, 0.01, 0.03],
+        "tap_leakage": [0.0001, 0.001, 0.01, 0.1]
+      },
+      "applicability": "ALL_REGRESSION_STREAMS",
+      "scientific_role": "Tests whether Track B capacity adaptation exceeds classical adaptive-filter order selection on linear/delayed streams."
+    },
+    {
+      "id": "S2_LRU_STREAM",
+      "name": "Linear Recurrent Unit Streaming Adaptation (Orvieto et al. 2023)",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "implementation_fidelity": "MINIMAL_ADAPTATION",
+      "max_configs": 16,
+      "search_grid": {
+        "state_lr": [0.001, 0.01],
+        "readout_lr": [0.001, 0.003, 0.01, 0.03],
+        "state_decay": [0.90, 0.98]
+      },
+      "applicability": "ALL_REGRESSION_STREAMS",
+      "scientific_role": "Tests whether simple compact fixed learned linear recurrent state matches Track B without dynamic lifecycle."
+    },
+    {
+      "id": "S3_RSONN",
+      "name": "Recurrent Self-Organizing Neural Network (Neurocomputing 2017)",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "implementation_fidelity": "FAITHFUL_REIMPLEMENTATION",
+      "max_configs": 16,
+      "search_grid": {
+        "learning_rate": [0.001, 0.005, 0.01, 0.02],
+        "growth_threshold": [0.05, 0.10],
+        "pruning_threshold": [0.001, 0.005]
+      },
+      "applicability": "NONLINEAR_AND_SYSTEM_ID_STREAMS",
+      "scientific_role": "Direct prior-art challenge to online recurrent structural growth, pruning, and resource adaptation."
+    },
+    {
+      "id": "S4_ACESN",
+      "name": "Adaptive Compression Echo State Network (Zhang et al. 2026)",
+      "tier": "TIER_2_SUPPLEMENTARY_ADAPTIVE_CAPACITY",
+      "implementation_fidelity": "MINIMAL_ADAPTATION",
+      "max_configs": 16,
+      "search_grid": {
+        "reservoir_size": [20, 40],
+        "spectral_radius": [0.85, 0.95],
+        "compression_ratio": [0.25, 0.50],
+        "readout_lr": [0.001, 0.01]
+      },
+      "applicability": "TEMPORAL_AND_STATE_CRITICAL_STREAMS",
+      "scientific_role": "Tests whether physical state creation/destruction buys anything over exposed-dimension capacity scheduling."
+    },
+    {
+      "id": "S5_CONTINUAL_BACKPROP",
+      "name": "Continual Backpropagation (Dohare et al. Nature 2024)",
+      "tier": "SUPPLEMENTARY_MECHANISTIC_COMPARATOR",
+      "implementation_fidelity": "FAITHFUL_REIMPLEMENTATION",
+      "max_configs": 16,
+      "search_grid": {
+        "learning_rate": [0.001, 0.005, 0.01, 0.03],
+        "replacement_rate": [0.0001, 0.001],
+        "maturity_threshold": [50, 100]
+      },
+      "applicability": "OBSERVABLE_AND_LAG_EMBEDDED_TASKS",
+      "scientific_role": "Mechanistic comparator testing whether maturity + utility replacement alone explain Track-B behavior."
+    },
+    {
+      "id": "S6_SKIPE_RNN",
+      "name": "SkipE-RNN (Evolving RNN with Skip Connections)",
+      "tier": "SUPPLEMENTARY_FIDELITY_RISK",
+      "implementation_fidelity": "NOT_EXECUTED_FIDELITY_RISK",
+      "max_configs": 0,
+      "search_grid": {},
+      "applicability": "EXCLUDED_FIDELITY_RISK",
+      "scientific_role": "Excluded from execution due to absence of verified streaming regression reference implementation; documented fidelity risk."
+    }
+  ],
+  "simplicity_controls": [
+    {
+      "id": "C1_CURRENT_ONLY_LINEAR",
+      "name": "Current-Only Linear SGD",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "max_configs": 4,
+      "search_grid": {
+        "learning_rate": [0.001, 0.003, 0.01, 0.03]
+      }
+    },
+    {
+      "id": "C2_NLMS",
+      "name": "Normalized Least Mean Squares (NLMS)",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "max_configs": 4,
+      "search_grid": {
+        "step_size": [0.01, 0.05, 0.1, 0.2]
+      }
+    },
+    {
+      "id": "C3_RLS",
+      "name": "Recursive Least Squares (RLS)",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "max_configs": 4,
+      "search_grid": {
+        "forgetting_factor": [0.99, 0.995, 0.999, 1.0]
+      }
+    },
+    {
+      "id": "C4_FIXED_LAG_LINEAR",
+      "name": "Fixed-Lag Dense AR(p) Filter",
+      "tier": "TIER_1_STRICT_ONLINE_CAUSAL",
+      "max_configs": 8,
+      "search_grid": {
+        "max_lag": [4, 8, 16, 32],
+        "learning_rate": [0.001, 0.01]
+      }
+    }
+  ]
+}

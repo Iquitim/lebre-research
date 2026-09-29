@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_B4_MINIMAL_GRU_SEED_128",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 128,
+  "config": "{\"learning_rate\": 0.001, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.5039823672821389,
+  "mae": 0.5676045504471342,
+  "nmse": 1.0000873111841204,
+  "mean_flops": 297.0,
+  "p95_flops": 297.0,
+  "peak_flops": 297.0,
+  "memory_bytes": 600,
+  "active_params": 67,
+  "wall_time_sec": 0.18997788429260254
+}

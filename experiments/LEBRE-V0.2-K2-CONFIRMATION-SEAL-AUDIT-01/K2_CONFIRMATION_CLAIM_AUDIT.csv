@@ -1,0 +1,43 @@
+claim_id,claim_statement,audit_verdict,error_taxonomy,authoritative_evidence,action_status
+K2-C01,30 fresh seeds (1941..1970),CONFIRMED,NO_ERROR,SEED_PROVENANCE_RECHECK.md confirms 0 overlap with any prior stage,VALID
+K2-C02,840 raw runs across 14 tasks,CONFIRMED,NO_ERROR,"RAW_CARDINALITY_AUDIT.md confirms 840 unique keys, 0 duplicates",VALID
+K2-C03,Single intervention (K_rec_forward 1->2),CONFIRMED,NO_ERROR,C0_K2_CONFIG_DIFF_RECHECK.csv confirms all other params invariant,VALID
+K2-C04,Mean Delta NMSE = +0.002714,CONFIRMED,NO_ERROR,Recomputed mean = +0.002714041,VALID
+K2-C05,One-sided 95% upper bound = +0.003955,CONFIRMED,NO_ERROR,Recomputed upper bound = +0.003954531 <= 0.0100,VALID
+K2-C06,p_NI = 8.58e-14 reported in text,REFUTED,P_VALUE_TRANSCRIPTION_ERROR,Conflated with p_zero=8.58e-4 and typo in exponent,CORRIGENDUM_REQUIRED
+K2-C07,p_NI = 3.4621e-11 in statistical summary,CONFIRMED,NO_ERROR,"Recomputed t_NI = -9.9798, p_NI = 3.4621e-11",VALID
+K2-C08,t_zero = +3.7169 (H0: mu_Delta = 0),CONFIRMED,NO_ERROR,Recomputed t_zero = +3.7175 (slight rounding difference),VALID
+K2-C09,p_zero = 8.58e-4 two-sided,CONFIRMED,NO_ERROR,Recomputed two-sided p_zero = 8.5794e-4,VALID
+K2-C10,5 wins / 25 losses / 0 ties,CONFIRMED,NO_ERROR,Recomputed exactly 5 wins and 25 losses,VALID
+K2-C11,C0 mean compute = 111.236118 FP,CONFIRMED,NO_ERROR,Level-1 raw mean = 111.236118 FP/step,VALID
+K2-C12,K2 mean compute = 101.023283 FP,CONFIRMED,NO_ERROR,Level-1 raw mean = 101.023283 FP/step,VALID
+K2-C13,Total compute saving = 17.000 FP,REFUTED,STALE_INTERMEDIATE,Theoretical 34->17 pasted into template; true saving is 10.212835 FP,CORRIGENDUM_REQUIRED
+K2-C14,Total compute saving recomputed = 10.212835 FP,CONFIRMED,NO_ERROR,111.236118 - 101.023283 = 10.212835 FP/step,VALID
+K2-C15,Relative saving = -9.18%,CONFIRMED,NO_ERROR,10.212835 / 111.236118 = 9.1812%,VALID
+K2-C16,Strict compute <=100.000000 = FAIL,CONFIRMED,NO_ERROR,101.023283 > 100.000000 by +1.023283 FP,VALID
+K2-C17,Formal <=101 near-miss = PASS,REFUTED,ROUNDING_GOVERNANCE_ERROR,101.023283 > 101.000000; display rounding 101.0 used to pass gate,RECLASSIFICATION_REQUIRED
+K2-C18,1-decimal rounding rationale,REFUTED,ROUNDING_GOVERNANCE_ERROR,Decision rounding is forbidden without preregistration,CORRIGENDUM_REQUIRED
+K2-C19,Direct recurrent saving = 9.000000 FP,CONFIRMED,NO_ERROR,20.20 -> 11.20 FP (18.0 forward / 2),VALID
+K2-C20,Indirect live saving = 1.201151 FP,CONFIRMED,NO_ERROR,75.684417 - 74.483266 = 1.201151 FP/step,VALID
+K2-C21,No pathological structure loss,CONFIRMED,NO_ERROR,"No collapse in promotions, duty cycles, or critical gains",VALID
+K2-C22,Promotion delta = -0.488095,CONFIRMED_WITH_UNIT,UNIT_AMBIGUITY,Recomputed value exact; units are events/run,UNIT_SPECIFIED
+K2-C23,Eviction delta = -0.447619,CONFIRMED_WITH_UNIT,UNIT_AMBIGUITY,Recomputed value exact; units are events/run,UNIT_SPECIFIED
+K2-C24,Recurrent active duty delta = -0.043284,CONFIRMED_WITH_UNIT,UNIT_AMBIGUITY,Recomputed value exact; units are absolute duty fraction (-4.33 pp),UNIT_SPECIFIED
+K2-C25,I6 Delta NMSE = +0.002708 (<= +0.0100),CONFIRMED,NO_ERROR,Task I6 passes practical margin,VALID
+K2-C26,I7 Delta NMSE = +0.006712 (<= +0.0100),CONFIRMED,NO_ERROR,Task I7 passes practical margin,VALID
+K2-C27,I9 gains positive (complementarity),CONFIRMED,NO_ERROR,"G_D|B+R = 0.2458 > 0, G_R|B+D = 0.0769 > 0",VALID
+K2-C28,Regime switching latency PASS,CONFIRMED,NO_ERROR,All delta recovery latencies <= +50 steps,VALID
+K2-C29,State path overall MAE = 0.343444,CONFIRMED,NO_ERROR,Recomputed grand mean MAE = 0.343444,VALID
+K2-C30,State path P95 = 0.981762,CONFIRMED,NO_ERROR,Recomputed grand mean P95 = 0.981762,VALID
+K2-C31,Update-step MAE = 0.383609,CONFIRMED,NO_ERROR,Recomputed update-step MAE = 0.383609,VALID
+K2-C32,Hold-step MAE = 0.303278,CONFIRMED,NO_ERROR,Recomputed hold-step MAE = 0.303278,VALID
+K2-C33,Distortion ratio = 0.761,CONFIRMED_CLARIFIED,REPORTING_ERROR,0.761 is mean of per-task ratios; ratio of means is 0.791,CLARIFIED
+K2-C34,"""Matches theoretical ZOH profile""",REFUTED,UNSUPPORTED_THEORETICAL_MATCH,No theoretical derivation exists; downgrade to descriptive observation,CORRIGENDUM_REQUIRED
+K2-C35,"r = -0.5627 proves ""no coupling""",REFUTED,SIGN_INTERPRETATION_ERROR,"Corr(saving, delta) = +0.5627 indicates trade-off association",CORRIGENDUM_REQUIRED
+K2-C36,"""K >= 3 creates unrecoverable phase distortion""",REFUTED,UNSUPPORTED_INTERPOLATION,Overgeneralized statement; K=3 and K=4 were never tested,CORRIGENDUM_REQUIRED
+K2-C37,K=3 status,CORRECTED,UNSUPPORTED_INTERPOLATION,K=3 is UNTESTED in this branch,RECLASSIFIED
+K2-C38,K=4 status,CORRECTED,UNSUPPORTED_INTERPOLATION,K=4 is UNTESTED in this branch,RECLASSIFIED
+K2-C39,Early candidate rejection sufficient to close <=100,REFUTED,FUTURE_STAGE_OVERAUTHORIZATION,Retrospective saving (0.885 FP) < current deficit (1.023 FP),CORRIGENDUM_REQUIRED
+K2-C40,K2 is validated behavioral boundary,CONFIRMED,NO_ERROR,Local non-inferiority and all temporal mechanisms proven,VALID
+K2-C41,Combined-resource research justified,CONFIRMED,NO_ERROR,Justified via arbitration decimation or multi-lever design,VALID
+K2-C42,Safe for integrated validation,REFUTED,OUTCOME_TAXONOMY_DRIFT,R0 reference was not evaluated; local boundary != global validation,VALID_SAFE_NO

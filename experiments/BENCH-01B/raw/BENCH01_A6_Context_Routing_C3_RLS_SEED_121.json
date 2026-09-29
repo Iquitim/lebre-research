@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_C3_RLS_SEED_121",
+  "task_id": "A6_Context_Routing",
+  "model_id": "C3_RLS",
+  "seed": 121,
+  "config": "{\"forgetting_factor\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.3659892761239528,
+  "mae": 0.48173746400393425,
+  "nmse": 0.5359571254610442,
+  "mean_flops": 485.0,
+  "p95_flops": 485.0,
+  "peak_flops": 485.0,
+  "memory_bytes": 944,
+  "active_params": 10,
+  "wall_time_sec": 0.11588382720947266
+}

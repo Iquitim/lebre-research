@@ -1,0 +1,4 @@
+convention,LEBRE_v051_FP_B1,dense_variant_FP_B1,H9_cost_ratio_B1,static_model_only_estimate,static_environment_standardiser,replica_reported_ratio_B1,threshold
+A: original convention (model arithmetic only),132.4,892.2,0.148,167.2,60.0,0.32,0.333
+B: replica convention (+4d normaliser),152.4,912.2,0.167,167.2,60.0,0.32,0.333
+"C: orthogonal ledger (+ full environment standardiser, static count)",192.4,952.2,0.202,167.2,60.0,0.32,0.333

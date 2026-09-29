@@ -1,0 +1,5 @@
+{"meas2": {},
+ "floor": dict(scale_floor=0.1),
+ "floor_pp_psiE1": dict(scale_floor=0.1, peak_persist=True, evidence="psiE1"),
+ "floor_pp_bet": dict(scale_floor=0.1, peak_persist=True, evidence="bet"),
+ "floor_pp_mix": dict(scale_floor=0.1, peak_persist=True, evidence="mix")}

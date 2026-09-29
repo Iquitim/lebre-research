@@ -1,0 +1,138 @@
+{
+  "A0_A1_A2_CONFIG_RECHECK.csv": {
+    "size_bytes": 447,
+    "sha256": "94e9e392544095dcb0630c9c83f8ce93b5525b8e8e0afd844708158e4696d509"
+  },
+  "A0_A1_A2_ORTHOGONAL_RESOURCE_LEDGER.csv": {
+    "size_bytes": 1015,
+    "sha256": "06ec5251da9f3e19c1a0c800ac0ff73e02fe59484b27b471b749fa67cfafa9b0"
+  },
+  "A1_A0_K2_REPLICATION_RECHECK.csv": {
+    "size_bytes": 2026,
+    "sha256": "964184d2d484b2cf2af02f80cbba842d66a7546d31d2ce460ba5f7358aaab9f4"
+  },
+  "A2_A0_END_TO_END_RECHECK.csv": {
+    "size_bytes": 2018,
+    "sha256": "a6d7e19679753fc73f4cc717838ab5eaa6af3df50c286c790adff27eb196286a"
+  },
+  "A2_A1_ARBITRATION_CAUSAL_RECHECK.csv": {
+    "size_bytes": 2018,
+    "sha256": "1020979738719d1a1785842356bea6afd7492388eebeb2277f31f6c3c2ad9442"
+  },
+  "ARTIFACT_AUTHORITY_MAP.md": {
+    "size_bytes": 753,
+    "sha256": "cab9c4794ef49106be66707c2c45f9bea3c8bac951a20fed3fbb7f025a47e7a8"
+  },
+  "CHURN_METRIC_RECONCILIATION.csv": {
+    "size_bytes": 476,
+    "sha256": "745e1026556fa5320f273054e39d3a70e9d5f062fc3a2082a94872aeda34219c"
+  },
+  "DECISION_STALENESS_RECHECK.csv": {
+    "size_bytes": 398,
+    "sha256": "a699c86406359a0b6740be465bf070615f6c40551b982db3a7b8644fd936fe4b"
+  },
+  "DWELL_TIME_RECHECK.csv": {
+    "size_bytes": 322,
+    "sha256": "d5f18d05f4b50242d02b1a68dce284438016ba973d36e6f08983d02a35f9b391"
+  },
+  "EMA_THRESHOLD_CROSSING_RECHECK.csv": {
+    "size_bytes": 254,
+    "sha256": "0fbff8ae98909e589f65a0c3334571377e6d3cf6ab7077198bf0c0e8d7d7104c"
+  },
+  "EMA_TIMEBASE_RECONCILIATION.md": {
+    "size_bytes": 2165,
+    "sha256": "535570c007f66d3e74010bcc6ebfcd7a34e50afef0ad551fbd7d845400e10ea1"
+  },
+  "FUTURE_EMA_TIMESCALE_HYPOTHESIS.md": {
+    "size_bytes": 1364,
+    "sha256": "6d7ef4d802dfb932d1c4a90b3c641da9bb29e97e280aaa619a1b45ca56055641"
+  },
+  "HISTORICAL_VS_CONCURRENT_RESOURCE_PROJECTION.csv": {
+    "size_bytes": 522,
+    "sha256": "cb1a9feca644cd48a4f8a90c3038082bc1e9a85fc99d063782b1c6c18e1082e9"
+  },
+  "I10_DIAGNOSTIC_RECHECK.csv": {
+    "size_bytes": 356,
+    "sha256": "32844a400bc41c59be00397fdd2f29a43d3944d99b46a486c9aff3a0dae6b242"
+  },
+  "I9_COMPLEMENTARITY_RECHECK.csv": {
+    "size_bytes": 350,
+    "sha256": "8024d60c3dfcb455a4ab4f5cef459ccd0943329f58c93ae34bb54d1cf4262519"
+  },
+  "K2_ARB10_CLAIM_AUDIT.csv": {
+    "size_bytes": 4696,
+    "sha256": "8e51fa79cfdc67e4010a6964fa8a1dd943d2bdb3dbd06b5a0a67e60074acf3a9"
+  },
+  "K2_ARB10_CLAIM_DEPENDENCY_GRAPH.md": {
+    "size_bytes": 2149,
+    "sha256": "4289bf32c66c5c046dd64afee64cec0467b4dafd502a054a56ca90885aec2f62"
+  },
+  "K2_ARB10_SEAL_AUDIT_FINAL_REPORT.md": {
+    "size_bytes": 3959,
+    "sha256": "809cf13c95f8c19db7bd5082aa4a21aaaea93cfaf5b13c987c37b9823d722dad"
+  },
+  "K2_ARB10_SEAL_AUDIT_PROTOCOL.md": {
+    "size_bytes": 721,
+    "sha256": "24c3205938729ed77cd279574576711cc1aba66a89ae96185a954823a02ab3b3"
+  },
+  "K2_ARB10_SEAL_CORRIGENDUM.md": {
+    "size_bytes": 1675,
+    "sha256": "8733d67ce414e2b012bb335a9d6b346e5030d1b58ab2f5e0ea2214ccf4b8de8b"
+  },
+  "K2_ARB10_SEAL_ROOT_CAUSE_ANALYSIS.md": {
+    "size_bytes": 2492,
+    "sha256": "fe5c49117d94b77b92f40402e152ba92d313e559013261de8a7c4de050dece89"
+  },
+  "LIVE_FP_LINEAGE_RECONCILIATION.csv": {
+    "size_bytes": 299,
+    "sha256": "216465b961ae624a4de6225b8c41bbf563569eaa8f3ee719934b82130da81ee2"
+  },
+  "PARENT_ARTIFACT_HASHES.txt": {
+    "size_bytes": 4176,
+    "sha256": "2c1d8f743b3df3ebcc4c9d3e181a5b73e0133f552abc94dcf2b96e5a2e568f72"
+  },
+  "POST_SEAL_RESEARCH_BRANCH_DECISION.md": {
+    "size_bytes": 1159,
+    "sha256": "fbfe92ccd2245b8053c0ee74df2dc4a3da20d3188841309cc3280da27ea581ab"
+  },
+  "PRIMARY_STATISTICAL_RECONCILIATION.csv": {
+    "size_bytes": 1108,
+    "sha256": "7a0750701a6acc889aee58228a7485a5d77a0ffaf2393a16629948f8a6da481e"
+  },
+  "RAW_CARDINALITY_AUDIT.md": {
+    "size_bytes": 506,
+    "sha256": "cb5743de732079593117865cc8295c05b1ba61534a6d60100c80f7c8cc994fa3"
+  },
+  "RESOURCE_FIELD_SEMANTICS.md": {
+    "size_bytes": 1514,
+    "sha256": "5687c0a2884c21b5d0211f00d585cf7288770c593a268d935233199cd1057117"
+  },
+  "SEED_PROVENANCE_RECHECK.md": {
+    "size_bytes": 495,
+    "sha256": "323b3782edbaafb8727a62e2437d4de00ecf6886445c3f547de5908a98382021"
+  },
+  "STRUCTURAL_OCCUPANCY_RECHECK.csv": {
+    "size_bytes": 676,
+    "sha256": "176c79bc157ef8fa6042195b5a76d28197618203a5e529d67e78913bc1bd237d"
+  },
+  "SWITCHING_CONTRAST_RECONCILIATION.csv": {
+    "size_bytes": 782,
+    "sha256": "6bcead09cbe71bd6b39de6b02edcd59024de9ec9c8edc1e10781f3f50bbfd823"
+  },
+  "TASK_CONDITIONAL_UNDERMODELING_ANALYSIS.csv": {
+    "size_bytes": 898,
+    "sha256": "41080e639eddebd53ead51cc7a5a37a1bf5e0614de7af1f62fea441424ddf7db"
+  },
+  "TASK_LEVEL_BEHAVIOR_RECHECK.csv": {
+    "size_bytes": 2230,
+    "sha256": "32c060d7ead36d20a888b2e7e731a5f65357daba91e5b43600792fd374c281e3"
+  },
+  "generate_k2_arb10_seal_audit.py": {
+    "size_bytes": 67749,
+    "sha256": "3393d28dfaa010d4306f490e0a2d011892619cef8a2f18abdb3794c429050ad2"
+  },
+  "__pycache__/generate_k2_arb10_seal_audit.cpython-311.pyc": {
+    "size_bytes": 80690,
+    "sha256": "7792965d9ac879d44e30440d326bcec457aeebacabd24e4d149a7ea0efdac30a"
+  }
+}

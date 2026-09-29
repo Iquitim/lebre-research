@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_C2_NLMS_SEED_114",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "C2_NLMS",
+  "seed": 114,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6196152317060959,
+  "mae": 0.6298904667552132,
+  "nmse": 1.006134709242419,
+  "mean_flops": 125.0,
+  "p95_flops": 125.0,
+  "peak_flops": 125.0,
+  "memory_bytes": 192,
+  "active_params": 20,
+  "wall_time_sec": 0.09047818183898926
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_S4_ACESN_SEED_116",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "S4_ACESN",
+  "seed": 116,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"compression_ratio\": 0.25, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003707204578438592,
+  "mae": 0.04727949764858749,
+  "nmse": 0.9617967943667493,
+  "mean_flops": 1019.3161428571428,
+  "p95_flops": 1061.0,
+  "peak_flops": 1085.0,
+  "memory_bytes": 3808,
+  "active_params": 2,
+  "wall_time_sec": 0.4301879405975342
+}

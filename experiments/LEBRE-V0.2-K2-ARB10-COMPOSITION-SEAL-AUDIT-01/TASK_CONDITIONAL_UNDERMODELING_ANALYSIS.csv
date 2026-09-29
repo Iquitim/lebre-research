@@ -1,0 +1,5 @@
+task_id,live_fp_delta_A2_minus_A1,lag_promotions_delta,lag_duty_delta,nmse_delta_A2_minus_A0,switching_latency_delta,undermodeling_verdict
+I12_Regime_Switch_Latent_To_Delay,-0.7916666666666572,-0.2666666666666666,-0.01730555555555552,0.01727311859336389,213.63333333333344,BEHAVIORALLY_COSTLY_UNDERMODELING (Delayed delay-tap promotion)
+I10_Redundant_Temporal_Structure,-8.213666666666668,0.20000000000000018,0.004361111111111149,0.029731875861969403,0.0,BEHAVIORALLY_COSTLY_UNDERMODELING (Recurrent unit unlatched / chatter)
+I7_Quiescent_Continuous_State,1.3727777777777845,-0.033333333333333215,0.060777777777777764,0.017117538598459325,0.0,NOT_UNDERMODELING (Degradation occurred with higher live compute and spurious lag duty)
+I6_Continuous_Latent_State,-0.12050000000000693,-0.46666666666666656,0.051416666666666666,0.005276642940405141,0.0,BENIGN_PRESERVATION (Well within NI tolerance)

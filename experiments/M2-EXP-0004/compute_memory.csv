@@ -1,0 +1,7 @@
+model,state_bytes,param_bytes,sensitivity_bytes,total_bytes,flops_per_step
+R0_Explicit_Lag_L10,880,64,0,944,105.8
+R0_Explicit_Lag_L50,4080,64,0,4144,105.9
+R1_Oracle_Compact,8,0,0,8,2.0
+R2_Linear_Scalar,8,24,16,48,18.0
+R3_Gated_Scalar_NoSens,8,48,0,56,18.0
+R4_Gated_Scalar_WithSens,8,48,48,104,28.0

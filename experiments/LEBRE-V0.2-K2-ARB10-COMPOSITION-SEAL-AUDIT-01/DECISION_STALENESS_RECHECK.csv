@@ -1,0 +1,6 @@
+phenomenon,arm_A1,arm_A2,ratio,delta
+Arbitration Opportunity Cadence,Every 5 steps,Every 10 steps,2.0x sparser,
+Maximum Scheduler Staleness,4 stream steps,9 stream steps,,+5 stream steps
+Mean Scheduler Staleness,2.0 stream steps,4.5 stream steps,,+2.5 stream steps
+Mean Promotion Delay (A2 - A1),0.0,+167.97 steps,,+167.97 steps
+Mean Eviction Delay (A2 - A1),0.0,+112.30 steps,,+112.30 steps

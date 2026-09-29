@@ -1,0 +1,82 @@
+{
+  "ARTIFACT_PROVENANCE_AUDIT.md": {
+    "size_bytes": 5440,
+    "sha256": "e8c0f3023e56a5b05b35356f1964f13fae9dc08c0de0d34bd14203edf0a97355"
+  },
+  "CONFIRMATION_01_PREREGISTRATION_DRAFT.md": {
+    "size_bytes": 12136,
+    "sha256": "5bfb5b669dc9feba6c01af57840da2ee66f9ee38aa6580f0789ee3892bb87401"
+  },
+  "DESIGN_COMPUTATION_SUMMARY.json": {
+    "size_bytes": 2239,
+    "sha256": "302aeb62b2329feeda137ff4b2c62d167ce40811bd36c872242855c5ebfe0e4e"
+  },
+  "DESIGN_DECISION_REPORT.md": {
+    "size_bytes": 5162,
+    "sha256": "0bb796d0528ed09b175bce15626c754abee0b5c3d6d732d71331b712a2419c7c"
+  },
+  "EMA_OPERATING_POINT_COMPARISON.csv": {
+    "size_bytes": 856,
+    "sha256": "b725cdbe7c7906b636c09ab4a1b07863b6e7698038f5e59710a4f59c61bc7a05"
+  },
+  "EMA_TIMESCALE_PRESERVATION_LITERATURE_NOTE.md": {
+    "size_bytes": 10040,
+    "sha256": "9fd55e04645bec19d379e1a402164b3f9b88ff4dc621320e7f0140e34952c1c7"
+  },
+  "EQUIVALENCE_CERTIFICATION.md": {
+    "size_bytes": 2774,
+    "sha256": "a0a1be7f8b57550a5b699e3973d6cbcc1cd792509a9f5a8ca9a9cf3d6b5574dc"
+  },
+  "FUTURE_ARM_CONFIG_DIFF.csv": {
+    "size_bytes": 2347,
+    "sha256": "4bcf748a25ff33fdccc5241b0c00d4194399d1ae6dbbbb2d54aa42b4ae7c7bb6"
+  },
+  "MEOE_BLOCK_LEVEL.csv": {
+    "size_bytes": 66472,
+    "sha256": "a1dbd6965495cee165133255dcb211d178af6051416fe7e0d2fbfd8f16f90890"
+  },
+  "MEOE_BY_TASK_AND_WINDOW.csv": {
+    "size_bytes": 24161,
+    "sha256": "316233f2f383072e49b653ea9b3dc8f626aa4bc844202d29f3903e687e33cd69"
+  },
+  "MEOE_CHANGEPOINT_RISK.csv": {
+    "size_bytes": 482,
+    "sha256": "d50e649861250a12cbeb3a500d7cd8ea85d380ec5b619f51f60fa6b068289ad9"
+  },
+  "MEOE_DIAGNOSTIC_REPORT.md": {
+    "size_bytes": 4956,
+    "sha256": "d1ca756e6c9d134a7422ae88dd18328be56f48a3a9fcd8562e9cf2524aaffe78"
+  },
+  "MEOE_TELEMETRY_INTEGRITY.csv": {
+    "size_bytes": 1028,
+    "sha256": "94c57e9e499627b0098b38e74cd847b80692595acc57a7013c781ec167651463"
+  },
+  "OPEN_LOOP_FILTER_REPLAY.csv": {
+    "size_bytes": 2589,
+    "sha256": "1c86279d8e24c8711907fe4f463752289ee9a3ac031b76f54b5a373728bc8e37"
+  },
+  "PARENT_HASHES.txt": {
+    "size_bytes": 12673,
+    "sha256": "7bd0d3aba44a9dadee2058b09672e58f5655522cf29a2e4cb89c36216986d8fd"
+  },
+  "POLE_EQUIVALENCE_VERIFICATION.csv": {
+    "size_bytes": 764,
+    "sha256": "dc380fadf0d3066d21a132fdd285be9a585f877c13137279af3fcf4b6a871d88"
+  },
+  "SEED_BLOCK_OVERLAP_2001_2030.csv": {
+    "size_bytes": 841,
+    "sha256": "6be860532c1357f1ae1dd9c32343e5c820fc2cec02b1c7b9e92ce44530630610"
+  },
+  "TEN_STEP_MISMATCH_DERIVATION.md": {
+    "size_bytes": 3923,
+    "sha256": "8b25835ebd0f207d8d07b68e66a9a84fb7b192de8654a32db3394e40f89b84f9"
+  },
+  "generate_ema_timescale_design.py": {
+    "size_bytes": 23825,
+    "sha256": "ffbdf56b3f23acd4250e9bafeba532a91f0b8c9076b7846136d274881ea9d0e4"
+  },
+  "run_log.txt": {
+    "size_bytes": 2241,
+    "sha256": "260420310dbf08937c7cc8613ef06682e1a126877fae3216e1fdb6e479cce0ce"
+  }
+}

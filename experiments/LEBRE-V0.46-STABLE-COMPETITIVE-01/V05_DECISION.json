@@ -1,0 +1,105 @@
+{
+  "part1": {
+    "I-1_upper95_V05-V045": -0.015452639309614786,
+    "I-1": true,
+    "I-2_cov": 0.9020548654244308,
+    "I-2": true,
+    "I-3_faith_max": 2.7185347985548628e-15,
+    "I-3": true,
+    "nmse": {
+      "V032": 0.2168,
+      "V045": 0.2154,
+      "V05": 0.1976
+    },
+    "fp": {
+      "V032": 97.1,
+      "V045": 99.7,
+      "V05": 940.7
+    },
+    "struct_exact": {
+      "V032": 0.9106,
+      "V045": 0.9242,
+      "V05": 0.9242
+    },
+    "w_structural_final_mean": 0.9287902684938999
+  },
+  "part2": {
+    "C1_geo_vs_NLinear": 1.057665476726829,
+    "C2_geo_vs_best_modern_linear": 1.057665476726829,
+    "C3_geo_vs_best_chronos": 1.4867992224260829,
+    "S1_instab_median": 1.0102635833531932,
+    "S1_instab_max": 1.121446016978344,
+    "S1_other_arms_median": {
+      "NLIN": 1.002,
+      "V032": 1.089,
+      "V045": 1.758,
+      "V05": 1.01
+    },
+    "S1_other_arms_max": {
+      "NLIN": 1.025,
+      "V032": 3.806,
+      "V045": 8.584,
+      "V05": 1.121
+    },
+    "S2_frac_cov_ok": 1.0,
+    "K-c": true,
+    "faith_max": 1.1368683772161605e-13,
+    "geo_vs_V045": 0.3823813099986759,
+    "geo_vs_V032": 0.468600164764351,
+    "geo_vs_persistence": 0.495636954008539,
+    "mean_rank": 4.5,
+    "position": 5,
+    "n_models": 14,
+    "ranking": {
+      "CHRONOS2": 1.3,
+      "CHRONOS2_COV": 2.0,
+      "NLINEAR_ONLINE": 3.3,
+      "CHRONOS_BOLT_SMALL": 3.8,
+      "LEBRE_V05": 4.5,
+      "CHRONOS_BOLT_TINY": 5.9,
+      "DLINEAR_ONLINE": 6.4,
+      "CTRL_PERSISTENCE": 8.2,
+      "LEBRE_V032": 8.2,
+      "CTRL_ARX_NLMS": 9.4,
+      "LEBRE_V045": 9.5,
+      "HOLT_WINTERS": 9.6,
+      "IPNLMS": 11.3,
+      "CTRL_SEASONAL_NAIVE": 13.22
+    },
+    "C1": true,
+    "C2": true,
+    "C3_meta": true,
+    "S1": true,
+    "S2": true
+  },
+  "part3": {
+    "K-a": 0.9,
+    "K-b": 1.0,
+    "K-c": true,
+    "K-d": 1.0,
+    "K-e": 1.0,
+    "C1_geo_vs_NLinear": 1.040429414782445,
+    "C2_geo_vs_best_modern_linear": 1.0580677800698484,
+    "C3_geo_vs_best_chronos": 1.6208709451313406,
+    "S1_instab_median": 1.005624268446976,
+    "S1_instab_max": 1.029563369479614,
+    "NLIN_instab_max": 1.011658778719982,
+    "geo_vs_V045": 0.4995893195300791,
+    "mean_rank": 4.7,
+    "position": 4,
+    "n_models": 36,
+    "top10": {
+      "CHRONOS2": 2.0,
+      "CHRONOS2_COV": 2.17,
+      "NLINEAR_ONLINE": 4.2,
+      "LEBRE_V05": 4.7,
+      "CHRONOS_BOLT_SMALL": 5.1,
+      "CHRONOS_BOLT_TINY": 5.7,
+      "DLINEAR_ONLINE": 6.8,
+      "LEBRE_V045": 10.1,
+      "HOLT_WINTERS": 10.2,
+      "LEBRE_V032": 10.3
+    }
+  },
+  "PROMOTION": "PROMOVIDA_v0.5"
+}

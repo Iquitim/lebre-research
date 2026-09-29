@@ -1,0 +1,58 @@
+# ==============================================================================
+# LEBRE v0.52 — FREEZE MANIFEST
+# Stage: LEBRE-V0.52-FREEZE-01
+# Date: 2026-09-27
+# ==============================================================================
+
+architecture:
+  name: LEBRE
+  expansion: Lifecycle-governed Evidence-Based Resource Evolution
+  version: "0.52"
+  variant: gap-corrected (gap_hold + out_contract)
+  status: FROZEN_RESEARCH_VERSION_NOT_PROMOTED_WITH_SCOPE_LIMITS
+  canonical_reference: "0.1"            # unchanged
+  research_baseline: "0.51"             # unchanged; 52/52 frozen files verified
+  principle: deliver well under a minimal compute budget without catastrophic failures; large models are ceilings
+  components: [input_level_units_with_hierarchical_refinement, change_engine_one_sided_eprocess_eLOND,
+               structural_expert_S_nlms, memory_expert_M_second_cycle, dynamic_model_averaging, output_contract, quantile_interval]
+
+canonical_configuration:
+  defined_in: experiments/LEBRE-V0.52-HELDOUT-02/heldout2_run.py  (V052["V052_CORRIGIDA"])
+  class: lebre_v052h.LebreV052H
+  overrides: {scale_floor: 0.1, peak_persist: true, evidence: psiE1, lazy_halves: true, screen_skip_active: true,
+              track_groups: true, mu: 0.05, stagger: true, screen_spread: true, peak_split: true, peak_until: 200,
+              chal_warm: 250, gap_hold: true, out_contract: true}
+  declared_metadata: {season2: 168 for hourly building meters; season from the dataset (8 for ONS 3-h, 24 for BDG2)}
+  reproduction_check: bit-identical predictions on 3 reserve-2 series at freeze time
+
+integrity:
+  checksums_file: docs/architecture/LEBRE_v0.52_SHA256SUMS.txt
+  checksums_file_sha256: 285533181c1aeb493b09f5ea76bfb5a23e0785c62b8b98f5496e5f79e6224d3d
+  files_hashed: 650
+  all_verified_at_freeze: true
+  model_code_sha256:
+    lebre_v052h.py: edbaf21dfc19729ce08f114f707f8f1ff900fd55cc6a9011114fc1b48b4e9fd7
+    change_engine.py: 11bb13022e408776b2c0a222852e22d00e4c443b7a9f78471a9ce7a1b4c96e9d
+    lebre_v052.py: 212872117d795203ae4bf46382af9b95b13eb05cb6cca507fa7e4546ef530b27
+  prereg_hashes_matching: {reserve_1: 14/14, reserve_2: 13/13}
+  prereg_documents_match_devlog: {reserve_1: true, reserve_2: true}
+  prereg_externally_published: false
+  v051_frozen_files_verified: 52/52
+  freeze_record_sha256: 77b79f351147c10ab95241396056cd7d686e00d50b400563e6f8d9cec51137cb
+
+evidence:
+  reserve_2_preregistered: {series: 40, rel_mse_vs_nlinear: 0.767, ci95: [0.657, 0.858], catastrophic: 0, share_above_1_5: 0.0,
+                            rank_in_budget_class: 1, vs_sarimax_x: 0.999, vs_chronos2_cov_1000pts: 1.161,
+                            fp_mean: 407, fp_step_max: 1015, cost_contract: {mean: 400, peak: 1000, met: false, overrun: "~2%"}}
+  reserve_1_preregistered: {series: 125, version: frozen_without_gap_fix, catastrophic: 6, cause: memory_free_run_during_target_gaps}
+  prior_art: experiments/PRA-04-V052/PRA_04_REPORT.md   # closest: Amoukou, Mishra & Veloso (arXiv 2605.31239, 2026)
+
+scope_limits:
+  - condition_of_use_low_misadjustment_reference
+  - information_limit_very_smooth_inputs
+  - cost_about_2pct_over_contract_not_measured_on_mcu
+  - near_identical_inputs_reported_as_groups
+  - domains_hydrology_and_buildings_few_inputs; reserve_2_without_ONS; 40_series
+  - ultralight_and_TTM_comparators_not_evaluated
+  - core_mechanism_not_original_contribution_is_integration_and_empirical
+unused_unseen_data: {camels_br_permutation_positions: "80+", bdg2_permutation_positions: "55+", ons: exhausted}

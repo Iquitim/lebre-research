@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_S5_CONTINUAL_BACKPROP_SEED_112",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 112,
+  "config": "{\"learning_rate\": 0.005, \"replacement_rate\": 0.001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003851995187276105,
+  "mae": 0.04799332452276261,
+  "nmse": 0.9993612558060431,
+  "mean_flops": 11.0,
+  "p95_flops": 11.0,
+  "peak_flops": 11.0,
+  "memory_bytes": 88,
+  "active_params": 1,
+  "wall_time_sec": 0.4649198055267334
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_B4_MINIMAL_GRU_SEED_118",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 118,
+  "config": "{\"learning_rate\": 0.0001, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.8455852627302987,
+  "mae": 0.6961080945923452,
+  "nmse": 1.0000692691553668,
+  "mean_flops": 177.0,
+  "p95_flops": 177.0,
+  "peak_flops": 177.0,
+  "memory_bytes": 360,
+  "active_params": 37,
+  "wall_time_sec": 0.18998360633850098
+}

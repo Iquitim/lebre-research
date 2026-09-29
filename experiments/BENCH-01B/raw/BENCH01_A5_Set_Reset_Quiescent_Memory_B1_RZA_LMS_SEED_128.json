@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_B1_RZA_LMS_SEED_128",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "B1_RZA_LMS",
+  "seed": 128,
+  "config": "{\"learning_rate\": 0.03, \"rho_zero_attraction\": 0.0001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.9963708733053879,
+  "mae": 0.9929837760782747,
+  "nmse": 1.0026126902833465,
+  "mean_flops": 101.0,
+  "p95_flops": 101.0,
+  "peak_flops": 101.0,
+  "memory_bytes": 144,
+  "active_params": 10,
+  "wall_time_sec": 0.10145878791809082
+}

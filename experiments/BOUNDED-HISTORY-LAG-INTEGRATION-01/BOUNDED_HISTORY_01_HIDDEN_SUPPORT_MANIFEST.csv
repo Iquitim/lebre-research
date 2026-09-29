@@ -1,0 +1,13 @@
+task_id,regime,description,D,L_max,active_taps,temporal_dynamics,noise_variance
+BH1,Regime A,Single discrete lag on high-entropy white noise,5,32,"(d=1,tau=12,w=0.85)",Stationary,0.010000000000000002
+BH2,Regime A,Three dispersed discrete taps across channels,5,32,"(d=0,tau=4,w=0.70); (d=2,tau=11,w=-0.60); (d=3,tau=25,w=0.50)",Stationary,0.010000000000000002
+BH3,Regime A,"Widely separated boundary taps (tau=2, tau=30)",5,32,"(d=1,tau=2,w=0.65); (d=4,tau=30,w=-0.65)",Stationary,0.010000000000000002
+BH4,Regime A,Dynamic lag relocation from tau=8 to tau=22 at t=10000,5,32,"(d=2,tau=22,w=0.80)",Switching,0.010000000000000002
+BH5,Regime B,Smooth AR(1) low-pass correlated input (alpha=0.92),5,32,"(d=1,tau=14,w=0.80)",Stationary,0.010000000000000002
+BH6,Regime B,Bandlimited input filtered through low-pass IIR with 3 taps,5,32,"(d=0,tau=5,w=0.60); (d=2,tau=12,w=-0.50); (d=4,tau=19,w=0.45)",Stationary,0.010000000000000002
+BH7,Regime B,Gaussian-kernel correlated input with long delay tau=28,5,32,"(d=3,tau=28,w=0.80)",Stationary,0.010000000000000002
+BH8,Regime A,Dynamic range stress with intermittent 25x amplitude bursts,5,32,"(d=1,tau=10,w=0.75)",Stationary,0.010000000000000002
+BH9,Regime A,"Memoryless control system (tau=0 only, ground truth history empty)",5,32,None (Memoryless / Continuous),Stationary,0.010000000000000002
+BH10,Regime A,"Zero-gradient silence period t in [8000, 12000], tau=15",5,32,"(d=2,tau=15,w=0.85)",Quiescent,0.010000000000000002
+BH11,Regime B,Continuous linear state-space system sampled at dt=0.05,5,32,None (Memoryless / Continuous),Stationary,0.010000000000000002
+BH12,Regime B,Hybrid sparse discrete tap (tau=7) + continuous AR(2) tail,5,32,"(d=1,tau=7,w=0.60)",Stationary,0.010000000000000002

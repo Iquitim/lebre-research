@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_B2_CCN_SEED_118",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "B2_CCN",
+  "seed": 118,
+  "config": "{\"readout_lr\": 0.001, \"recurrent_lr\": 0.0001, \"max_columns\": 1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2264.510863950403,
+  "mae": 11.458822240431521,
+  "nmse": 0.03901022555539419,
+  "mean_flops": 193.0,
+  "p95_flops": 193.0,
+  "peak_flops": 193.0,
+  "memory_bytes": 376,
+  "active_params": 34,
+  "wall_time_sec": 0.36726832389831543
+}

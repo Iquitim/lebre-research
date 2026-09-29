@@ -1,0 +1,60 @@
+nmse
+cfg         floor  floor_pp_bet  floor_pp_mix  floor_pp_psiE1  meas2
+suite task                                                          
+semi  SS0   1.066         1.066         1.066           1.066  1.066
+      SS1   0.649         0.631         0.632           0.633  0.649
+      SS2   0.325         0.319         0.319           0.326  0.325
+      SS3   0.085         0.085         0.085           0.086  0.085
+      SS4   0.494         0.485         0.485           0.488  0.494
+synth B1    0.646         0.646         0.646           0.646  0.646
+      B2    0.467         0.467         0.467           0.467  0.467
+      B3    0.398         0.373         0.379           0.386  0.398
+      N1    1.069         1.069         1.069           1.069  1.069
+      N2    1.164         1.164         1.164           1.164  1.164
+      T1    0.650         0.650         0.650           0.650  0.650
+true_exo
+cfg         floor  floor_pp_bet  floor_pp_mix  floor_pp_psiE1  meas2
+suite task                                                          
+semi  SS0   0.000         0.000         0.000           0.000  0.000
+      SS1   0.333         0.333         0.667           0.667  0.333
+      SS2   1.333         1.667         1.667           1.333  1.333
+      SS3   1.000         1.000         1.000           1.000  1.000
+      SS4   0.000         0.000         0.000           0.000  0.000
+synth B1    1.000         1.000         1.000           1.000  1.000
+      B2    3.000         3.000         3.000           3.000  3.000
+      B3    1.333         1.667         1.667           1.667  1.333
+      N1    0.000         0.000         0.000           0.000  0.000
+      N2    0.000         0.000         0.000           0.000  0.000
+      T1    1.000         1.000         1.000           1.000  1.000
+false_exo
+cfg         floor  floor_pp_bet  floor_pp_mix  floor_pp_psiE1  meas2
+suite task                                                          
+semi  SS0       0             0             0               0      0
+      SS1       0             1             0               0      0
+      SS2       0             0             0               0      0
+      SS3       0             1             1               0      0
+      SS4       0             0             0               0      0
+synth B1        0             0             0               0      0
+      B2        0             0             0               0      0
+      B3        0             0             0               0      0
+      N1        0             0             0               0      0
+      N2        0             0             0               0      0
+      T1        0             0             0               0      0
+fp
+cfg           floor  floor_pp_bet  floor_pp_mix  floor_pp_psiE1    meas2
+suite task                                                              
+semi  SS0   408.654       408.064       408.064         408.064  408.654
+      SS1   477.994       468.697       469.488         467.390  477.994
+      SS2   571.392       559.043       555.670         552.910  571.392
+      SS3   587.632       565.851       566.813         564.211  587.632
+      SS4   596.339       590.439       587.384         565.906  596.339
+synth B1    433.287       429.354       431.008         430.520  433.287
+      B2    611.633       590.439       592.069         595.586  611.633
+      B3    601.775       599.537       578.440         567.685  601.775
+      N1    361.338       361.801       361.801         361.801  361.338
+      N2    343.692       343.475       343.475         343.475  343.692
+      T1    439.511       435.605       435.979         436.165  439.511
+ons     atom 0.579 {'floor': 0.519, 'floor_pp_bet': 0.514, 'floor_pp_mix': 0.514, 'floor_pp_psiE1': 0.515, 'meas2': 0.519} fp {'floor': 319, 'floor_pp_bet': 318, 'floor_pp_mix': 321, 'floor_pp_psiE1': 317, 'meas2': 320}
+camels  atom 0.994 {'floor': 0.924, 'floor_pp_bet': 0.912, 'floor_pp_mix': 0.913, 'floor_pp_psiE1': 0.923, 'meas2': 0.924} fp {'floor': 385, 'floor_pp_bet': 387, 'floor_pp_mix': 382, 'floor_pp_psiE1': 386, 'meas2': 385}
+bdg2    atom 0.93 {'floor': 0.927, 'floor_pp_bet': 0.934, 'floor_pp_mix': 0.927, 'floor_pp_psiE1': 0.927, 'meas2': 0.956} fp {'floor': 381, 'floor_pp_bet': 398, 'floor_pp_mix': 382, 'floor_pp_psiE1': 382, 'meas2': 389}
+ALL     atom 0.793 {'floor': 0.69, 'floor_pp_bet': 0.682, 'floor_pp_mix': 0.683, 'floor_pp_psiE1': 0.683, 'meas2': 0.693} fp {'floor': 363, 'floor_pp_bet': 365, 'floor_pp_mix': 362, 'floor_pp_psiE1': 361, 'meas2': 365}

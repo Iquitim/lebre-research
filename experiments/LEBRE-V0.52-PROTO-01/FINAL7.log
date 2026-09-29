@@ -1,0 +1,71 @@
+                    nmse       fp  true_found  n_true  false_exo
+suite task model                                                
+semi7 SW0  ATOM    1.066  198.900       0.000     0.0          0
+           PADRAO  1.034  400.783       0.000     0.0          0
+      SW1  ATOM    0.781  198.037       0.000     1.0          0
+           PADRAO  0.761  438.821       0.000     1.0          0
+      SW2  ATOM    0.808  198.250       0.000     1.0          0
+           PADRAO  0.794  446.632       0.000     1.0          0
+      SW3  ATOM    0.710  198.865       0.000     2.0          0
+           PADRAO  0.689  489.229       0.333     2.0          0
+      SW4  ATOM    0.374  201.040       0.333     1.0          0
+           PADRAO  0.323  527.496       1.000     1.0          0
+synth B1   ATOM    0.651  212.287       1.000     1.0          0
+           PADRAO  0.630  423.340       1.000     1.0          0
+      B2   ATOM    0.623  216.473       3.000     3.0          0
+           PADRAO  0.483  542.613       3.000     3.0          0
+      B3   ATOM    0.407  211.806       1.000     2.0          0
+           PADRAO  0.424  539.153       0.667     2.0          0
+      N1   ATOM    1.065  207.090       0.000     0.0          0
+           PADRAO  1.032  387.703       0.000     0.0          0
+      N2   ATOM    1.101  191.353       0.000     0.0          0
+           PADRAO  1.048  346.615       0.000     0.0          0
+      T1   ATOM    0.646  212.654       1.000     1.0          0
+           PADRAO  0.626  446.019       1.000     1.0          0
+    suite task  seed                          structure                                         groups_reported  first_acc
+0   synth   N1  9701                                 []                                                      {}        NaN
+2   synth   N1  9702                                 []                                                      {}        NaN
+4   synth   N1  9703                                 []                                                      {}        NaN
+6   synth   N2  9701                                 []                                                      {}        NaN
+8   synth   N2  9702                                 []                                                      {}        NaN
+10  synth   N2  9703                                 []                                                      {}        NaN
+12  synth   T1  9701                        [('in', 1)]                                      {"('in', 1)": [1]}      910.0
+14  synth   T1  9702                        [('in', 1)]                                      {"('in', 1)": [1]}      540.0
+16  synth   T1  9703                        [('in', 1)]                                      {"('in', 1)": [1]}      900.0
+18  synth   B1  9701                        [('in', 1)]                                      {"('in', 1)": [1]}     1830.0
+20  synth   B1  9702                        [('in', 1)]                                      {"('in', 1)": [1]}     1010.0
+22  synth   B1  9703                        [('in', 1)]                                      {"('in', 1)": [1]}     1520.0
+24  synth   B2  9701  [('in', 0), ('in', 2), ('in', 4)]  {"('in', 0)": [0], "('in', 2)": [2], "('in', 4)": [4]}     1320.0
+26  synth   B2  9702  [('in', 0), ('in', 2), ('in', 4)]  {"('in', 0)": [0], "('in', 2)": [2], "('in', 4)": [4]}      830.0
+28  synth   B2  9703  [('in', 0), ('in', 2), ('in', 4)]  {"('in', 2)": [2], "('in', 4)": [4], "('in', 0)": [0]}      980.0
+30  synth   B3  9701                                 []                                                      {}        NaN
+32  synth   B3  9702             [('in', 3), ('in', 5)]                    {"('in', 3)": [3], "('in', 5)": [5]}     1010.0
+34  synth   B3  9703             [('in', 3), ('in', 5)]                    {"('in', 3)": [3], "('in', 5)": [5]}      820.0
+36  semi7  SW0  6801                                 []                                                      {}        NaN
+38  semi7  SW0  6802                                 []                                                      {}        NaN
+40  semi7  SW0  6803                                 []                                                      {}        NaN
+42  semi7  SW1  6801                                 []                                                      {}        NaN
+44  semi7  SW1  6802                                 []                                                      {}        NaN
+46  semi7  SW1  6803                                 []                                                      {}        NaN
+48  semi7  SW2  6801                                 []                                                      {}        NaN
+50  semi7  SW2  6802                                 []                                                      {}        NaN
+52  semi7  SW2  6803                                 []                                                      {}        NaN
+54  semi7  SW3  6801                                 []                                                      {}        NaN
+56  semi7  SW3  6802                                 []                                                      {}        NaN
+58  semi7  SW3  6803                        [('in', 4)]                                      {"('in', 4)": [4]}    24200.0
+60  semi7  SW4  6801                        [('in', 3)]                                      {"('in', 3)": [3]}    14630.0
+62  semi7  SW4  6802                        [('in', 3)]                                      {"('in', 3)": [3]}    24320.0
+64  semi7  SW4  6803             [('in', 3), ('in', 5)]                    {"('in', 3)": [3], "('in', 5)": [5]}     1290.0
+Empty DataFrame
+Columns: [kind, seed, n_acc, accepted, fp]
+Index: []
+NULL BATCH: runs with any accepted change 0 of 30 (criterion 7: <= 3)
+ons     v052H 0.508 atom 0.579 fp 318 p99.9max 767 max 811
+camels  v052H 0.937 atom 0.994 fp 406 p99.9max 889 max 893
+bdg2    v052H 0.932 atom 0.93 fp 411 p99.9max 846 max 904
+ALL     v052H 0.709 atom 0.793 fp 380 p99.9max 889 max 904
+1000pts ons {'v052H': 0.46, 'CHRONOS2_COV': 0.5, 'v052': 0.535, 'CHRONOS2': 0.858, 'ARX_NLMS': 0.529, 'AIRLINE_X': 0.847}
+1000pts camels {'v052H': 0.907, 'CHRONOS2_COV': 0.838, 'v052': 0.951, 'CHRONOS2': 0.892, 'ARX_NLMS': 1.208, 'AIRLINE_X': 0.825}
+1000pts bdg2 {'v052H': 0.896, 'CHRONOS2_COV': 0.718, 'v052': 0.92, 'CHRONOS2': 0.78, 'ARX_NLMS': 2.008, 'AIRLINE_X': 0.97}
+1000pts ALL {'v052H': 0.669, 'CHRONOS2_COV': 0.701, 'v052': 0.757, 'CHRONOS2': 0.915, 'ARX_NLMS': 1.109, 'AIRLINE_X': 0.988}
+v052H beats CHRONOS2_COV in 14 of 29

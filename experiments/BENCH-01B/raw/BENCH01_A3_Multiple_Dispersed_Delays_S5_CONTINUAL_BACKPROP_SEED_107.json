@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_S5_CONTINUAL_BACKPROP_SEED_107",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 107,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.0001, \"maturity_threshold\": 100}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.5033882454258256,
+  "mae": 0.564427417566199,
+  "nmse": 1.0114894094775129,
+  "mean_flops": 125.0,
+  "p95_flops": 125.0,
+  "peak_flops": 125.0,
+  "memory_bytes": 544,
+  "active_params": 20,
+  "wall_time_sec": 0.11683368682861328
+}

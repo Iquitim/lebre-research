@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_C4_FIXED_LAG_LINEAR_SEED_115",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 115,
+  "config": "{\"max_lag\": 32, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.004152124668399004,
+  "mae": 0.04662567563377433,
+  "nmse": 2.2270408708953946,
+  "mean_flops": 129.0,
+  "p95_flops": 129.0,
+  "peak_flops": 129.0,
+  "memory_bytes": 544,
+  "active_params": 32,
+  "wall_time_sec": 0.3663523197174072
+}

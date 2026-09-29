@@ -1,0 +1,14 @@
+Model,streaming online,no task labels,no replay,single pass,sparse feature structure,lag structure,explicit probe/resource budget,recurrent state,online recurrent credit,state birth,state type selection,probation,maturation,quiescent retention,positive obsolescence,state death,physical resource reclamation,adaptive capacity,unified lifecycle,primary limitation
+Track B,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,YES,Single-state capacity limit; non-contiguous probe latency
+MUSE-RNN,YES,YES,YES,YES,NO,NO,NO,YES,PARTIAL,YES,NO,NO,NO,NO,NO,YES,YES,YES,NO,Heuristic magnitude thresholds; destroys quiescent state memory; dense inputs
+SkipE-RNN,YES,YES,YES,YES,NO,NO,NO,YES,PARTIAL,NO,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,Dynamic gating/skipping without state birth/death; no memory reclamation
+RSONN,YES,YES,YES,YES,NO,NO,NO,YES,YES,YES,NO,NO,NO,NO,NO,YES,YES,YES,NO,Newborn shock; sensitivity drops to 0 in quiescence destroying memory; dense input
+CCN,YES,YES,YES,YES,NO,NO,PARTIAL,YES,YES,YES,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,Constructive growth only; no pruning/death; memory grows monotonically
+Continual Backprop,YES,YES,YES,YES,PARTIAL,NO,NO,NO,NO,PARTIAL,NO,NO,YES,NO,NO,PARTIAL,NO,NO,NO,Feedforward only; fixed total capacity; utility destroys quiescent state memory
+MRAN,YES,YES,YES,YES,NO,NO,NO,NO,NO,YES,NO,NO,YES,NO,NO,YES,YES,YES,NO,Spatial RBF only; no recurrent temporal state; exponential scaling with dimension
+Recurrent Cascade-Correlation,NO,YES,NO,NO,NO,NO,NO,YES,NO,YES,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,Offline batch/multi-pass training; units frozen after addition; no pruning
+AIRE-Prune,NO,YES,NO,NO,NO,NO,NO,YES,NO,NO,NO,NO,NO,PARTIAL,NO,YES,YES,NO,NO,Offline post-training pruning for linear SSMs; no online birth or learning
+LAST,NO,YES,NO,NO,NO,NO,NO,YES,NO,NO,NO,NO,NO,PARTIAL,NO,YES,YES,NO,NO,Offline trajectory-based pruning; non-causal; requires full pre-collected datasets
+ACESN,YES,YES,YES,YES,NO,NO,NO,YES,NO,NO,NO,NO,NO,NO,NO,NO,NO,PARTIAL,NO,Static reservoir weights; dynamic capacity via masking; RAM statically allocated
+SOFNN / eTS,YES,YES,YES,YES,NO,NO,NO,PARTIAL,PARTIAL,YES,NO,NO,NO,NO,NO,YES,YES,YES,NO,Curse of dimensionality in fuzzy rules; no sparse probe bank; no quiescent logic
+Variable-Order LMS,YES,YES,YES,YES,PARTIAL,YES,NO,NO,NO,NO,NO,NO,NO,NO,NO,NO,YES,PARTIAL,NO,Linear FIR tap order only; no recurrent hidden state; cannot model infinite memory

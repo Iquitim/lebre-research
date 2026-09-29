@@ -1,0 +1,8 @@
+true_lag,selected_lag_0,selected_lag_1,selected_lag_2,selected_lag_3,selected_lag_4,selected_lag_5,selected_lag_6,selected_lag_7,selected_lag_8,selected_lag_9,selected_lag_10
+0,30,0,0,0,0,0,0,0,0,0,0
+1,0,30,0,0,0,0,0,0,0,0,0
+2,0,0,30,0,0,0,0,0,0,0,0
+3,0,0,0,30,0,0,0,0,0,0,0
+5,0,0,0,0,0,30,0,0,0,0,0
+7,0,0,0,0,0,0,0,30,0,0,0
+10,0,0,0,0,0,0,0,0,0,0,30

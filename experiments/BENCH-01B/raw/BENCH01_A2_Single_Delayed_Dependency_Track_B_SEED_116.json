@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_Track_B_SEED_116",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "Track_B",
+  "seed": 116,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.7078374886922245,
+  "mae": 0.6662266897904315,
+  "nmse": 1.1285429635261475,
+  "mean_flops": 98.04914285714285,
+  "p95_flops": 118.0,
+  "peak_flops": 118.0,
+  "memory_bytes": 488,
+  "active_params": 20,
+  "wall_time_sec": 0.24287128448486328
+}

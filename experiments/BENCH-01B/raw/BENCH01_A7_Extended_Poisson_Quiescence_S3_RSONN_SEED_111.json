@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_S3_RSONN_SEED_111",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "S3_RSONN",
+  "seed": 111,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.28507349095000933,
+  "mae": 0.33389186483439137,
+  "nmse": 0.30125942778546483,
+  "mean_flops": 319.552,
+  "p95_flops": 322.0,
+  "peak_flops": 322.0,
+  "memory_bytes": 576,
+  "active_params": 60,
+  "wall_time_sec": 0.2883875370025635
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_B1_RZA_LMS_SEED_106",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "B1_RZA_LMS",
+  "seed": 106,
+  "config": "{\"learning_rate\": 0.001, \"rho_zero_attraction\": 1e-06, \"epsilon_reweight\": 10.0}",
+  "status": "NUMERICAL_DIVERGENCE",
+  "failure_step": 5,
+  "fraction_completed": 7.142857142857143e-05,
+  "mse": Infinity,
+  "mae": Infinity,
+  "nmse": Infinity,
+  "mean_flops": 0.0,
+  "p95_flops": 0.0,
+  "peak_flops": 0.0,
+  "memory_bytes": 168,
+  "active_params": 13,
+  "wall_time_sec": 0.0
+}

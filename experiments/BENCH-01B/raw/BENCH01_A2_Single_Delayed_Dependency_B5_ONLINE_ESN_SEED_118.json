@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_B5_ONLINE_ESN_SEED_118",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 118,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.85, \"leak_rate\": 0.3, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6247410344986349,
+  "mae": 0.6288990540463107,
+  "nmse": 0.9692357341117046,
+  "mean_flops": 1881.0,
+  "p95_flops": 1881.0,
+  "peak_flops": 1881.0,
+  "memory_bytes": 6848,
+  "active_params": 20,
+  "wall_time_sec": 0.1015005111694336
+}

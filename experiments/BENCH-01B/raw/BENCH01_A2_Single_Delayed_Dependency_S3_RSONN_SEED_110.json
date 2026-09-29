@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_S3_RSONN_SEED_110",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "S3_RSONN",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.001, \"growth_threshold\": 0.05, \"pruning_threshold\": 0.005}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6502671234945618,
+  "mae": 0.6433694366076346,
+  "nmse": 1.0003898146405759,
+  "mean_flops": 482.6902857142857,
+  "p95_flops": 498.0,
+  "peak_flops": 498.0,
+  "memory_bytes": 664,
+  "active_params": 72,
+  "wall_time_sec": 0.4338111877441406
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_C2_NLMS_SEED_119",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "C2_NLMS",
+  "seed": 119,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.005436265555538386,
+  "mae": 0.05442989935873531,
+  "nmse": 1.4103842056769849,
+  "mean_flops": 11.0,
+  "p95_flops": 11.0,
+  "peak_flops": 11.0,
+  "memory_bytes": 40,
+  "active_params": 1,
+  "wall_time_sec": 0.36220717430114746
+}

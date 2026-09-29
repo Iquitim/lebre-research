@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A6_Context_Routing_C1_CURRENT_ONLY_LINEAR_SEED_110",
+  "task_id": "A6_Context_Routing",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4077414479693808,
+  "mae": 0.5060243381325051,
+  "nmse": 0.5315279882308757,
+  "mean_flops": 41.0,
+  "p95_flops": 41.0,
+  "peak_flops": 41.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.07725858688354492
+}

@@ -1,0 +1,4 @@
+cell_class,cell_count,fraction_of_total_cells,total_visits,direct_probe_flops,threshold_crossings,candidate_births,promotions,failed_probations,descendant_failed_probation_flops,descendant_promoted_probation_flops,total_descendant_flops,total_cell_cost_flops,descendant_to_direct_ratio,spurious_waste_fraction,mean_descendant_flops_per_cell
+SPURIOUS_PROMOTED,87,0.54375,456680,1826720.0,120079,7311,188,7123,498610.0,13160.0,511770.0,2338490.0,0.28015787860208463,0.9742853234851594,5882.413793103448
+SPURIOUS_CANDIDATE_BIRTH,64,0.4,335860,1343440.0,87322,4681,0,4681,327670.0,0.0,327670.0,1671110.0,0.2439037098791163,1.0,5119.84375
+TRUE_SUPPORT_DISCOVERED,9,0.05625,47460,189840.0,13415,600,66,534,37380.0,4620.0,42000.0,231840.0,0.22123893805309736,0.89,4666.666666666667

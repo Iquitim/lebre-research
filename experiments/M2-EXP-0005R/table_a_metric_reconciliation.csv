@@ -1,0 +1,8 @@
+metric,original_reported,recomputed_value,numerator,denominator,aggregation,explanation
+State Birth Precision,1.000,1.000,Births in state-required regimes (60/60),Total triggered births (60),Per-Event Macro,Spurious births in state-free regimes were exactly zero across all 30 seeds.
+State Birth Recall,1.000,1.000,Recurrent regimes triggering birth (60/60),Total recurrent regimes (60),Per-Regime Event Macro,Causal birth trigger fired in both Phase 2 and Phase 4 for 100% of seeds.
+State Active Precision,0.932,0.932,"Active steps during recurrent regimes (54,584)","Total steps active (58,546)",Per-Step Micro,Brief post-transition eviction latency (~52 steps) accounts for ~6.8% false active steps.
+State Active Recall,0.650,0.650,"Active steps in state regimes (54,584)","Total state-needed steps (90,000)",Per-Step Micro,Lost time: 45-step birth latency + 80-step probation + repeated probations after premature evictions in SET/RESET.
+Type Event Accuracy,0.925 (summary),0.460,Correct type promotion decisions,Total promotion decisions,Per-Event Decision,"Conditional on completed promotion, learner selects the ground-truth state type >92% of the time."
+Type Occupancy Accuracy,0.606 (Table A),0.606,"Active steps with correct type (54,584)","Total state-needed steps (90,000)",Per-Step Continuous,Time-weighted continuous occupancy: Active Recall (0.650) x P(Correct Type | Active) (0.932) = 0.606.
+State Eviction Precision,1.000,103.3 steps,Obsolete states evicted (60/60),Total state-free regime transitions (60),Per-Event Transition,Zero permanent state leakage into state-free phases (clean compute recovery in ~52 steps).

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_B3_MUSE_RNN_SEED_117",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 117,
+  "config": "{\"learning_rate\": 0.01, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.48566173799784096,
+  "mae": 0.5543814869240599,
+  "nmse": 1.0003123429565597,
+  "mean_flops": 101.99257142857142,
+  "p95_flops": 100.0,
+  "peak_flops": 324.0,
+  "memory_bytes": 312,
+  "active_params": 22,
+  "wall_time_sec": 0.29103875160217285
+}

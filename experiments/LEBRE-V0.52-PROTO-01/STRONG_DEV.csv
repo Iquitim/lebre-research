@@ -1,0 +1,59 @@
+task,model,fp,ok,cfg
+ons:ITUTINGA,ARX_RLS_PLS,11268.0,True,
+ons:ITUTINGA,LASSO_ONLINE,408.0,True,"(0.2, 0.001)"
+ons:FUNIL-MG,ARX_RLS_PLS,11268.0,True,
+ons:FUNIL-MG,LASSO_ONLINE,408.0,True,"(0.05, 0.0001)"
+ons:FURNAS,ARX_RLS_PLS,11268.0,True,
+ons:FURNAS,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:M. MORAES,ARX_RLS_PLS,11268.0,True,
+ons:M. MORAES,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:L. C. BARRETO,ARX_RLS_PLS,11268.0,True,
+ons:L. C. BARRETO,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:JAGUARA,ARX_RLS_PLS,11268.0,True,
+ons:JAGUARA,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:IGARAPAVA,ARX_RLS_PLS,11268.0,True,
+ons:IGARAPAVA,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:VOLTA GRANDE,ARX_RLS_PLS,11268.0,True,
+ons:VOLTA GRANDE,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:P. COLOMBIA,ARX_RLS_PLS,11268.0,True,
+ons:P. COLOMBIA,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:MARIMBONDO,ARX_RLS_PLS,11268.0,True,
+ons:MARIMBONDO,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+ons:A. VERMELHA,ARX_RLS_PLS,11268.0,True,
+ons:A. VERMELHA,LASSO_ONLINE,408.0,True,"(0.01, 0.01)"
+camels:17350000,ARX_RLS_PLS,65316.0,True,
+camels:17350000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:24900000,ARX_RLS_PLS,65316.0,True,
+camels:24900000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:54110002,ARX_RLS_PLS,65316.0,True,
+camels:54110002,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:58258000,ARX_RLS_PLS,65316.0,True,
+camels:58258000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:60778000,ARX_RLS_PLS,65316.0,True,
+camels:60778000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:60940000,ARX_RLS_PLS,65316.0,True,
+camels:60940000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:61510000,ARX_RLS_PLS,65316.0,True,
+camels:61510000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:64360000,ARX_RLS_PLS,65316.0,True,
+camels:64360000,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:64477600,ARX_RLS_PLS,65316.0,True,
+camels:64477600,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+camels:71350001,ARX_RLS_PLS,65316.0,True,
+camels:71350001,LASSO_ONLINE,804.0,True,"(0.2, 0.0001)"
+bdg2:chilledwater:Bull_education_Hayley,ARX_RLS_PLS,32572.0,True,
+bdg2:chilledwater:Bull_education_Hayley,LASSO_ONLINE,606.0,True,"(0.05, 0.0001)"
+bdg2:hotwater:Moose_education_Lori,ARX_RLS_PLS,32572.0,True,
+bdg2:hotwater:Moose_education_Lori,LASSO_ONLINE,606.0,True,"(0.01, 0.0001)"
+bdg2:steam:Eagle_assembly_Herbert,ARX_RLS_PLS,32572.0,True,
+bdg2:steam:Eagle_assembly_Herbert,LASSO_ONLINE,606.0,True,"(0.01, 0.0001)"
+bdg2:steam:Hog_assembly_Colette,ARX_RLS_PLS,32572.0,True,
+bdg2:steam:Hog_assembly_Colette,LASSO_ONLINE,606.0,True,"(0.01, 0.0001)"
+bdg2:steam:Hog_education_Luvenia,ARX_RLS_PLS,32572.0,True,
+bdg2:steam:Hog_education_Luvenia,LASSO_ONLINE,606.0,True,"(0.01, 0.0001)"
+silverbox,ARX_RLS_PLS,11268.0,True,
+silverbox,LASSO_ONLINE,408.0,True,"(0.01, 0.0001)"
+tanks:est,ARX_RLS_PLS,11268.0,True,
+tanks:est,LASSO_ONLINE,408.0,True,"(0.2, 0.0001)"
+tanks:val,ARX_RLS_PLS,11268.0,True,
+tanks:val,LASSO_ONLINE,408.0,True,"(0.2, 0.0001)"

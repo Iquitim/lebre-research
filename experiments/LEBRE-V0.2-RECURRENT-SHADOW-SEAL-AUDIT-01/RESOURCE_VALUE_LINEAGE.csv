@@ -1,0 +1,4 @@
+entity,historical_value,concurrent_final_cohort_value,delta,status,explanation
+C0_PARENT_TOTAL_FP,111.013591,110.89108174603174,-0.12250925396826062,COHORT_DIFFERENCE,Concurrent C0 evaluated on seeds 1911..1940 is 110.891082 FP/step. Historical 111.013591 was from earlier parent evaluation. Causal delta must use concurrent C0.
+R0_CONTINUOUS_TOTAL_FP,128.52,169.42071984126986,40.90071984126985,ACCOUNTING_DIFFERENCE,Concurrent R0 includes full 160-pair continuous candidate descendant accounting (45.20 FP/step). Legacy 128.52 FP/step omitted full candidate descendant evaluation.
+C1_P95_SEMANTICS,97.58185,97.58184999999999,0.0,RECONCILED,97.581850 represents the 95th percentile across the 420 individual run-level mean FP values (P95_OF_RUN_MEANS). Mean of within-run P95 is 108.42 FP.

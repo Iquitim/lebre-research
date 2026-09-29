@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_S1_VARIABLE_TAP_LMS_SEED_130",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 130,
+  "config": "{\"learning_rate\": 0.01, \"tap_leakage\": 0.1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.5391061724794515,
+  "mae": 1.1392321344412721,
+  "nmse": 1.0070696125581038,
+  "mean_flops": 27.782,
+  "p95_flops": 59.0,
+  "peak_flops": 89.0,
+  "memory_bytes": 544,
+  "active_params": 7,
+  "wall_time_sec": 0.1011044979095459
+}

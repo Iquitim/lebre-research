@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_S4_ACESN_SEED_127",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "S4_ACESN",
+  "seed": 127,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"compression_ratio\": 0.5, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003865227080210546,
+  "mae": 0.047445133907285386,
+  "nmse": 2.0731599772122635,
+  "mean_flops": 1179.1164601658313,
+  "p95_flops": 1225.0,
+  "peak_flops": 1245.0,
+  "memory_bytes": 4448,
+  "active_params": 6,
+  "wall_time_sec": 0.46782636642456055
+}

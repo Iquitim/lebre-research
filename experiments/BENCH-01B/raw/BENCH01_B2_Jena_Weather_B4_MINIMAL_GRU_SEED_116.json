@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B2_Jena_Weather_B4_MINIMAL_GRU_SEED_116",
+  "task_id": "B2_Jena_Weather",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 116,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.95}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 4.519654588651781,
+  "mae": 1.0588088703315695,
+  "nmse": 0.07186646874445697,
+  "mean_flops": 213.0,
+  "p95_flops": 213.0,
+  "peak_flops": 213.0,
+  "memory_bytes": 432,
+  "active_params": 46,
+  "wall_time_sec": 1.3549859523773193
+}

@@ -1,0 +1,2 @@
+task_id,seed,stream_step,divergence_type,skipped_clock_at_t,evidence_age_m1,residual_m0,residual_m1,active_taps_m0,active_taps_m1,active_rec_m0,active_rec_m1,g_db_m0,g_db_m1,subsequent_consequence
+I3_Single_Exact_Delay,1711,15,STRUCTURAL_PROMOTION_DESYNCHRONIZATION,K_probe=2,-1,0.9986102963276939,0.9986102963276939,0,0,1,0,0.0,0.0,Delayed promotion in M1 due to decoupled observation cadence

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H2_Switching_Delayed_Volterra_S4_ACESN_SEED_114",
+  "task_id": "H2_Switching_Delayed_Volterra",
+  "model_id": "S4_ACESN",
+  "seed": 114,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"compression_ratio\": 0.5, \"readout_lr\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 2.6258683987844593,
+  "mae": 1.1747701482362634,
+  "nmse": 1.011016196586829,
+  "mean_flops": 2644.946857142857,
+  "p95_flops": 2645.0,
+  "peak_flops": 2645.0,
+  "memory_bytes": 10048,
+  "active_params": 20,
+  "wall_time_sec": 0.11167526245117188
+}

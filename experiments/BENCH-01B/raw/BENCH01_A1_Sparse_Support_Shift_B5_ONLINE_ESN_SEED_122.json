@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_B5_ONLINE_ESN_SEED_122",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 122,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.85, \"leak_rate\": 0.7, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 3.3361337853443396,
+  "mae": 1.4502716280486534,
+  "nmse": 0.7800432875326154,
+  "mean_flops": 3081.0,
+  "p95_flops": 3081.0,
+  "peak_flops": 3081.0,
+  "memory_bytes": 11648,
+  "active_params": 20,
+  "wall_time_sec": 0.10102701187133789
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_B1_RZA_LMS_SEED_120",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "B1_RZA_LMS",
+  "seed": 120,
+  "config": "{\"learning_rate\": 0.001, \"rho_zero_attraction\": 1e-06, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.1837155654784153,
+  "mae": 0.35982166436517043,
+  "nmse": 0.09123943083755495,
+  "mean_flops": 61.0,
+  "p95_flops": 61.0,
+  "peak_flops": 61.0,
+  "memory_bytes": 112,
+  "active_params": 6,
+  "wall_time_sec": 0.25406455993652344
+}

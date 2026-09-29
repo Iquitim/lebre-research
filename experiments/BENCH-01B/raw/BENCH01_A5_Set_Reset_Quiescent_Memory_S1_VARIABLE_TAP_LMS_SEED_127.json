@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_S1_VARIABLE_TAP_LMS_SEED_127",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 127,
+  "config": "{\"learning_rate\": 0.03, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.9134770243149221,
+  "mae": 0.9074788335097154,
+  "nmse": 0.9309241688860336,
+  "mean_flops": 181.98971428571429,
+  "p95_flops": 185.0,
+  "peak_flops": 185.0,
+  "memory_bytes": 544,
+  "active_params": 22,
+  "wall_time_sec": 0.09758257865905762
+}

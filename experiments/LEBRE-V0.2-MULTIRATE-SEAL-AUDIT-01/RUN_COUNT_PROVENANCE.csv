@@ -1,0 +1,5 @@
+phase,purpose,candidate,seeds,tasks,rate_configs,expected_cartesian_count,actual_artifact_rows,actual_completed_runs,duplicates,failures
+DEV_SENSITIVITY,Decoupled component sensitivity screening (D0..D9),"D0, D1_PROBE..D9_LMS",1701..1710 (10 seeds),I1..I14 (14 tasks),6 configs,840,840,840,0,0
+DEV_RATE_BOUNDARIES,"Component rate ladder characterization (K=1,2,5,10)","PROBE_K, OBS_K, LEARN_K, ARB_K, REC_FWD_K, REC_LRN_K, DYN_LMS_K",1701..1710 (10 seeds),I1..I14 (14 tasks),20 ladder configs,2800,2800,2800,0,0
+DEV_CANDIDATE_SCREENING,"Integrated candidate screening (D0, MR1_A..D, MR2, MR3)","D0, MR1_A, MR1_B, MR1_C, MR1_D, MR2, MR3",1701..1710 (10 seeds),I1..I14 (14 tasks),6 candidate configs,840,840,840,0,0
+FINAL_CONFIRMATORY,"Confirmatory evaluation (M0, M1, S2_K5)","M0 (Baseline), M1 (MR1_C Selected), S2_K5 (Periodic)",1711..1740 (30 seeds),I1..I14 (14 tasks),3 models,1260,1260,1260,0,0

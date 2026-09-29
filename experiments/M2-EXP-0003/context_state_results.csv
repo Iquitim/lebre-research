@@ -1,0 +1,2 @@
+task,delay_a,delay_b,p_switch,explicit_mse,dense_mse,oracle_mode_state_mse,both_lags_active_fraction,representation_gap,explicit_flops,oracle_flops,compute_gap,explicit_bytes,oracle_bytes,compression_ratio
+Context_Dependent_Delay_Selection,2,7,0.02,0.27532847365123253,0.5319677397284007,0.010121140819085073,0.5198777777777778,0.2652073328321475,117.92580000000001,4.0,29.481450000000002,4400,8,550.0

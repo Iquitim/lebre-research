@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_C4_FIXED_LAG_LINEAR_SEED_125",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 125,
+  "config": "{\"max_lag\": 32, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 7.6962796102066475,
+  "mae": 1.6802529514466595,
+  "nmse": 0.27438570403047513,
+  "mean_flops": 129.0,
+  "p95_flops": 129.0,
+  "peak_flops": 129.0,
+  "memory_bytes": 544,
+  "active_params": 32,
+  "wall_time_sec": 0.0838017463684082
+}

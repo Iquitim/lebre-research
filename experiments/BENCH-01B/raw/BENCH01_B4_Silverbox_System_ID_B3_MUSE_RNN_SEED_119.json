@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_B3_MUSE_RNN_SEED_119",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.03, \"growth_multiplier\": 1.5, \"pruning_threshold\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003853760126193258,
+  "mae": 0.04798465308032688,
+  "nmse": 0.9998191513866225,
+  "mean_flops": 33.626285714285714,
+  "p95_flops": 96.0,
+  "peak_flops": 200.0,
+  "memory_bytes": 160,
+  "active_params": 3,
+  "wall_time_sec": 1.2984247207641602
+}

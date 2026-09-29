@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_C1_CURRENT_ONLY_LINEAR_SEED_116",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "C1_CURRENT_ONLY_LINEAR",
+  "seed": 116,
+  "config": "{\"learning_rate\": 0.03}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.5089916951567315,
+  "mae": 0.5339557625267767,
+  "nmse": 1.0034069248912894,
+  "mean_flops": 41.0,
+  "p95_flops": 41.0,
+  "peak_flops": 41.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.07659602165222168
+}

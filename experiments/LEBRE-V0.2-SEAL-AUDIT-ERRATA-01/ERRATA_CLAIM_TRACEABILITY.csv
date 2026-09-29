@@ -1,0 +1,9 @@
+claim_id,claim_text,original_report,errata_audit_status,recomputed_value,impact
+CLM-01,T3 achieves superior aggregate prequential accuracy across benchmark,0.2876 (Confirmatory Mean),SUPPORTED,0.2876,UNCHANGED
+CLM-02,All 9 hypotheses confirmed at p < 0.001,p < 0.001 for all,OVERSTATED,"3 inferential (H1, H5, H7 descriptive), 6 non-inferential",REPORTING_SCOPED
+CLM-03,"T1 vs T1R exhibits severe order bias on I4 (diff=0.1654, p < 1e-6)",0.1654 on I4 (p < 1e-6),REFUTED_FOR_I4_DESCRIPTIVE_ON_I8,I4 diff=0.00077 (p=0.8872); I8 max_diff=0.1654,CLAIM_RESTATED_AS_DESCRIPTIVE
+CLM-04,T2 suffers 48.2% redundant dual allocation rate on I10,48.2% ± 0.112,LINEAGE_ERRATUM_TRUE_COALLOC_IS_100PCT,frac_both=1.000 (100.0%); red_dual_rate=0.0015,DOUBLE_PAYMENT_CONFIRMED_VALUE_CORRECTED
+CLM-05,T3 eliminates redundant co-allocation on I10,0.000% redundant dual rate,SUPPORTED,0.000% redundant dual rate (10.8% transient dual),UNCHANGED
+CLM-06,T3 possesses internal evaluation order invariance,Analytic proof,VERIFIED_BY_MICROTEST,"Max diff = 0.0, decisions identical",STRENGTHENED
+CLM-07,T3 satisfies Gate 11 RAM ceiling,Passes <= 2048 B,FAIL_LEGACY_PASS_PROPOSED,"1306 B (Fails 1024 B, Passes 2048 B)",CARRIED_FORWARD
+CLM-08,T3 strictly Pareto dominates all comparators,Universal strict dominance,AGGREGATE_STRICT_TASK_QUALIFIED,Dominates all on aggregate vector; non-dominated on 12.5% task pairs,CARRIED_FORWARD

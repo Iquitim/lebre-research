@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_B5_ONLINE_ESN_SEED_117",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 117,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.85, \"leak_rate\": 0.7, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.12272535861818178,
+  "mae": 0.25191091875409294,
+  "nmse": 0.06094960892670416,
+  "mean_flops": 1321.0,
+  "p95_flops": 1321.0,
+  "peak_flops": 1321.0,
+  "memory_bytes": 4608,
+  "active_params": 20,
+  "wall_time_sec": 0.2719411849975586
+}

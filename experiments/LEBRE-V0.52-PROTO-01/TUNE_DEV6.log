@@ -1,0 +1,60 @@
+nmse
+cfg         cost2_week
+suite task            
+semi  SS0        1.066
+      SS1        0.639
+      SS2        0.317
+      SS3        0.086
+      SS4        0.488
+synth B1         0.646
+      B2         0.467
+      B3         0.395
+      N1         1.069
+      N2         1.164
+      T1         0.650
+true_exo
+cfg         cost2_week
+suite task            
+semi  SS0        0.000
+      SS1        0.333
+      SS2        1.667
+      SS3        1.000
+      SS4        0.000
+synth B1         1.000
+      B2         3.000
+      B3         1.667
+      N1         0.000
+      N2         0.000
+      T1         1.000
+false_exo
+cfg         cost2_week
+suite task            
+semi  SS0            0
+      SS1            0
+      SS2            0
+      SS3            0
+      SS4            0
+synth B1             0
+      B2             0
+      B3             0
+      N1             0
+      N2             0
+      T1             0
+fp
+cfg         cost2_week
+suite task            
+semi  SS0      404.463
+      SS1      430.138
+      SS2      514.018
+      SS3      482.309
+      SS4      509.650
+synth B1       418.376
+      B2       539.914
+      B3       498.698
+      N1       368.671
+      N2       346.572
+      T1       423.888
+ons     atom 0.579 {'cost2_week': 0.515} fp {'cost2_week': 284}
+camels  atom 0.994 {'cost2_week': 0.926} fp {'cost2_week': 340}
+bdg2    atom 0.93 {'cost2_week': 0.91} fp {'cost2_week': 343}
+ALL     atom 0.793 {'cost2_week': 0.691} fp {'cost2_week': 322}

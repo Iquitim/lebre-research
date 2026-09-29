@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_Track_B_SEED_116",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "Track_B",
+  "seed": 116,
+  "config": "{}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.48134171430306233,
+  "mae": 0.5147097756649556,
+  "nmse": 0.948898801230961,
+  "mean_flops": 59.232571428571426,
+  "p95_flops": 78.0,
+  "peak_flops": 78.0,
+  "memory_bytes": 408,
+  "active_params": 10,
+  "wall_time_sec": 0.2027876377105713
+}

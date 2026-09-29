@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_B4_MINIMAL_GRU_SEED_120",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 120,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.999}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.4850561924637358,
+  "mae": 0.527557890608901,
+  "nmse": 0.9856491373049219,
+  "mean_flops": 177.0,
+  "p95_flops": 177.0,
+  "peak_flops": 177.0,
+  "memory_bytes": 360,
+  "active_params": 37,
+  "wall_time_sec": 0.19065475463867188
+}

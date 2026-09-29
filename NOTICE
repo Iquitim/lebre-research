@@ -1,0 +1,17 @@
+lebre-research — research record of the LEBRE online forecaster
+Copyright 2026 Silvano Lima
+
+Licensing of this repository:
+
+1. Source code — Apache License 2.0 (LICENSE).
+   Applies to program files: *.py, *.c, *.h, *.sh, *.ld, *.repl, *.resc and the build scripts.
+
+2. Documentation and research outputs — Creative Commons Attribution 4.0 International (LICENSE-CC-BY-4.0.txt).
+   Applies to specifications, reports, logs, pre-registrations, result tables (*.csv, *.json, *.tsv), figures,
+   PDF/HTML documents and all other non-code files, unless stated otherwise.
+
+3. Excluded from both licences:
+   - Third-party datasets and their derivatives remain under their original licences (see data/README.md and
+     experiments/LEBRE-V0.52-DATA-01/LICENSES_AND_CITATIONS.md). Raw data are not distributed in this repository.
+   - The LEBRE logo (logo/ and the embedded logo in the documents) — all rights reserved.
+   - Third-party toolchains (tools/, not distributed) remain under their own licences.

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_B1_RZA_LMS_SEED_115",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "B1_RZA_LMS",
+  "seed": 115,
+  "config": "{\"learning_rate\": 0.03, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.003851661976173562,
+  "mae": 0.04797368028389746,
+  "nmse": 0.9992748075500884,
+  "mean_flops": 11.0,
+  "p95_flops": 11.0,
+  "peak_flops": 11.0,
+  "memory_bytes": 72,
+  "active_params": 1,
+  "wall_time_sec": 0.4421710968017578
+}

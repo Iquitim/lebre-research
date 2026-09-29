@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B3_Gas_Dynamic_Mixture_C4_FIXED_LAG_LINEAR_SEED_130",
+  "task_id": "B3_Gas_Dynamic_Mixture",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 130,
+  "config": "{\"max_lag\": 4, \"learning_rate\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 10910.970656322588,
+  "mae": 42.449945132751516,
+  "nmse": 0.18796086744707,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 96,
+  "active_params": 4,
+  "wall_time_sec": 0.16600751876831055
+}

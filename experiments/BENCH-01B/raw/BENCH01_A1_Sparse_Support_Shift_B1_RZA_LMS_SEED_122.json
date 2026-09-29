@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_B1_RZA_LMS_SEED_122",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "B1_RZA_LMS",
+  "seed": 122,
+  "config": "{\"learning_rate\": 0.01, \"rho_zero_attraction\": 0.001, \"epsilon_reweight\": 10.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.07304442103235967,
+  "mae": 0.08000303633474745,
+  "nmse": 0.017078994424115212,
+  "mean_flops": 501.0,
+  "p95_flops": 501.0,
+  "peak_flops": 501.0,
+  "memory_bytes": 464,
+  "active_params": 45,
+  "wall_time_sec": 0.10000371932983398
+}

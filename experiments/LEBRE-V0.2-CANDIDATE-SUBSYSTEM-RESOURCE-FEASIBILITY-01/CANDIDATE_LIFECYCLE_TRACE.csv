@@ -1,0 +1,6 @@
+candidate_id,task_id,seed,candidate_class,birth_step,maturity_step,shadow_observations,parameter_updates,direct_fp,descendant_fp,final_utility,outcome
+C_101,I3_Single_Exact_Delay,1811,PROMOTED_TRUE_SUPPORT,12,87,15,7,115.0,42.0,0.082,PROMOTED
+C_102,I3_Single_Exact_Delay,1811,FAILED_AT_FULL_PROBATION,140,215,15,7,115.0,42.0,-0.012,DISCARDED
+C_103,I2_Static_Nonlinear_Negative_Control,1812,FAILED_AT_FULL_PROBATION,50,125,15,7,115.0,42.0,-0.025,DISCARDED
+C_104,I4_Multi_Sparse_Delay,1813,PROMOTED_TRUE_SUPPORT,4,79,15,7,115.0,42.0,0.064,PROMOTED
+C_105,I10_Redundant_Temporal_Structure,1814,PROMOTED_SPURIOUS,88,163,15,7,115.0,42.0,0.008,PROMOTED

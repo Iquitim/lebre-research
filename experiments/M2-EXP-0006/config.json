@@ -1,0 +1,55 @@
+{
+  "experiment_id": "M2-EXP-0006",
+  "milestone": "M2",
+  "title": "Quiescent State Utility & Eviction Diagnostic",
+  "description": "Distinguishing silent-but-necessary recurrent memory from truly obsolete memory under strict capacity limits (MAX_ACTIVE_STATES=1, STATE_DIM=1).",
+  "dev_seed": 8000,
+  "eval_seeds": [
+    8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010,
+    8011, 8012, 8013, 8014, 8015, 8016, 8017, 8018, 8019, 8020,
+    8021, 8022, 8023, 8024, 8025, 8026, 8027, 8028, 8029, 8030
+  ],
+  "d_features": 10,
+  "noise_std": 0.05,
+  "primary_stream": {
+    "phases": [
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "LINEAR_USEFUL", "duration": 1500, "decay": 0.80},
+      {"type": "STATE_FREE", "duration": 1000},
+      {"type": "GATED_NECESSARY", "duration": 1500, "p_event": 0.02},
+      {"type": "STATE_FREE", "duration": 1000}
+    ],
+    "total_steps": 6000
+  },
+  "quiescence_test_lengths": [10, 25, 50, 100, 250, 500, 1000],
+  "future_horizons": [10, 25, 50, 100, 250],
+  "cost_model": {
+    "c_fe": 9.225,
+    "c_fr": 0.001
+  },
+  "lifecycle_parameters": {
+    "probation_window": 80,
+    "maturity_window": 120,
+    "birth_threshold": 0.15,
+    "promote_threshold": 0.05,
+    "evict_threshold": 0.02,
+    "evict_patience": 40
+  },
+  "candidate_utility_channels": [
+    "D0_Instant_DeltaLoss",
+    "D1_Windowed_DeltaLoss",
+    "D2_Temporal_CxO",
+    "D3_Sensitivity_Persistence",
+    "D4_Reactivation_History",
+    "D5_Obsolescence_Evidence",
+    "D6_Two_Timescale_Hybrid",
+    "D7_Oracle_Future_Value",
+    "D8_Oracle_Regime_Necessity"
+  ],
+  "causal_policies": [
+    "C0_Original_Eviction",
+    "C1_Two_Timescale_Utility",
+    "C2_Temporal_CxO_Accumulator",
+    "C3_Oracle_Eviction"
+  ]
+}

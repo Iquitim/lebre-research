@@ -1,0 +1,3 @@
+group_size,code_length,code_orthogonality_error,decoded_p_at_3,decoded_p_at_5,decoded_enrichment_3,active_snr,effective_probes_per_candidate,candidates_per_probe_battery
+4,4,0.0,0.0,0.08,0.0,0.19141481813776046,1.0,4.0
+8,8,0.0,0.06666666666666667,0.12000000000000002,5.312,0.2179190756463069,1.0,8.0

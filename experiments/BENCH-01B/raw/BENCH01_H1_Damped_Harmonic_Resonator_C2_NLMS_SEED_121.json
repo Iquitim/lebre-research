@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_H1_Damped_Harmonic_Resonator_C2_NLMS_SEED_121",
+  "task_id": "H1_Damped_Harmonic_Resonator",
+  "model_id": "C2_NLMS",
+  "seed": 121,
+  "config": "{\"step_size\": 0.05}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 29.701405622843993,
+  "mae": 3.815256441820717,
+  "nmse": 0.9934811579803604,
+  "mean_flops": 305.0,
+  "p95_flops": 305.0,
+  "peak_flops": 305.0,
+  "memory_bytes": 432,
+  "active_params": 50,
+  "wall_time_sec": 0.08417534828186035
+}

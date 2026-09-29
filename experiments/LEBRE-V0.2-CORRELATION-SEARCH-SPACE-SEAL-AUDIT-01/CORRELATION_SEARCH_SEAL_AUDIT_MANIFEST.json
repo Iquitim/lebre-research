@@ -1,0 +1,206 @@
+{
+  "stage": "LEBRE-V0.2-CORRELATION-SEARCH-SEAL-AUDIT-01",
+  "target_parent_stage": "LEBRE-V0.2-CORRELATION-SEARCH-SPACE-COMPACTION-01",
+  "timestamp_utc": "2026-09-22T14:35:00Z",
+  "audit_authority_level": "Level 3 (Sealed Forensic Audit & Errata)",
+  "verdict": {
+    "GLOBAL_SEARCH_COMPACTION_VALIDATION": "FAILED",
+    "CORRELATION_SEARCH_SPACE_COMPACTION_SUPPORTED": "NO",
+    "OVERALL_STATUS": "MULTIPLE_CORRECTABLE_ISSUES",
+    "M1_STAR_CANONICAL_BASELINE": "NO",
+    "M1_STAR_DESIGNATION": "PROMISING_EXPERIMENTAL_CANDIDATE",
+    "DENSE_SEARCH_PERMANENTLY_DEPRECATED": "NO",
+    "PRIMARY_RECOMMENDED_NEXT_STAGE": "LEBRE-V0.2-CANDIDATE-PROBATION-COST-01"
+  },
+  "reconciled_metrics": {
+    "nmse_delta_m1_vs_r1": -0.011417,
+    "two_sided_p_value_vs_zero": 0.021265,
+    "one_sided_p_value_vs_zero": 0.010632,
+    "t_statistic_vs_zero": -2.435228,
+    "t_statistic_margin_0_01": -4.568218,
+    "p_value_margin_0_01_onesided": 4.2039e-05,
+    "cohens_dz": -0.44461,
+    "seed_wins": 19,
+    "seed_losses": 11,
+    "seed_win_rate_pct": 63.33,
+    "empirical_compute_m1_star_fp_per_step": 111.013591,
+    "empirical_compute_r1_fp_per_step": 106.735848,
+    "compute_delta_fp_per_step": 4.277743,
+    "compute_delta_pct": 4.008,
+    "searchable_delay_coordinates": 160,
+    "physical_buffer_cells": 165,
+    "static_table_ram_reduction_pct": -41.82,
+    "queue_revisit_period_steps": 80,
+    "candidate_births_r1": 90.22,
+    "candidate_births_m1": 92.97,
+    "failed_probation_fp_r1": 1.7107,
+    "failed_probation_fp_m1": 1.7691
+  },
+  "artifacts": [
+    {
+      "filename": "ARTIFACT_AUTHORITY_MAP.md",
+      "size_bytes": 5135,
+      "sha256": "1249254cc764b2d61e372fe41a209efb7297fc6916a0eb87476c89bc33d914c1"
+    },
+    {
+      "filename": "CHURN_MECHANISM_REPLICATION.csv",
+      "size_bytes": 760,
+      "sha256": "553ef61c82bd4e34ab038d004fedb73b126d8ecfc7a4d00376ebe52cab2092c7"
+    },
+    {
+      "filename": "COARSE_TO_FINE_MECHANISM_AUDIT.md",
+      "size_bytes": 3263,
+      "sha256": "64e6142d904ec2c695f31532e2b863077f9f9355e93b429b469cbde8e1ba01e9"
+    },
+    {
+      "filename": "COMPUTE_FLOOR_CLAIM_AUDIT.md",
+      "size_bytes": 3005,
+      "sha256": "0d7d6febfed9e5625688489568f60553c884722c9d350b0cc16860192f7aecd2"
+    },
+    {
+      "filename": "COMPUTE_VALUE_LINEAGE.csv",
+      "size_bytes": 1925,
+      "sha256": "04c8bff4e23125e5d1ec0e1ce5e3a95cd890d8c6bc797412b3072575ea985ad4"
+    },
+    {
+      "filename": "CORRELATION_GRID_GEOMETRY.md",
+      "size_bytes": 3942,
+      "sha256": "6a823c7becfb3e2bb86ccc231591499075ea26b86b0ae349583e07d85f0b8657"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_CLAIM_AUDIT.csv",
+      "size_bytes": 6969,
+      "sha256": "026775b7c62e33eb37ebf79e644e0d055d3bf115aa5193ec17bf9e9c3f870122"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_CLAIM_DEPENDENCY_GRAPH.md",
+      "size_bytes": 8605,
+      "sha256": "953640c492d02f1e8616a9f76ed8c6ee5232ecbc73bf590b25f0b031944839c8"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_COMPUTE_RECONCILIATION.csv",
+      "size_bytes": 6726,
+      "sha256": "e6231dfe1d698021a59021d2386b340d7bb8f1950d52c0eb7c527889861ccbf9"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_RUN_COUNT_PROVENANCE.csv",
+      "size_bytes": 1115,
+      "sha256": "de6f21f40d7df3a51c2f028e244f4ef13d0a8bb3db3e7926a2aac7e8e1e62c65"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_SEAL_AUDIT_FINAL_REPORT.md",
+      "size_bytes": 19938,
+      "sha256": "95f91429daa63b5cc65160c200c76249886f803bcc5a77605debdd18cbbfba0a"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_SEAL_AUDIT_PROTOCOL.md",
+      "size_bytes": 3676,
+      "sha256": "20c8e31a663bed7baa99ecad0cfd85de5dbb7192ffbf9d73240d7de6176745e4"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_SEAL_CORRIGENDUM.md",
+      "size_bytes": 9448,
+      "sha256": "9ac79126f08db37feb47fda17f02e4073771769b4b684c4ae2ef94e5a7af4fdd"
+    },
+    {
+      "filename": "CORRELATION_SEARCH_SEAL_ROOT_CAUSE_ANALYSIS.md",
+      "size_bytes": 11533,
+      "sha256": "2ff51762dbd2538cf6e75b4f7919f3e24d3bf473fe09bb05f34c2d36de7eefff"
+    },
+    {
+      "filename": "DENSE_DEPRECATION_GOVERNANCE_AUDIT.md",
+      "size_bytes": 2086,
+      "sha256": "355756c11ac2389558f05a8353b0910634b2185e88c80746118bef1f0236e5af"
+    },
+    {
+      "filename": "FINAL_RAW_CARDINALITY_AUDIT.md",
+      "size_bytes": 1965,
+      "sha256": "309c41eb3d69735a97a0ddf81a4ae24017a4fe41acd7ae595174a91edf0f38e0"
+    },
+    {
+      "filename": "FRONTIER_ANTI_STARVATION_PROOF.md",
+      "size_bytes": 3684,
+      "sha256": "f55bb9bcfe643439dd4314454baab749f2254d353e0d5d72a79efcec52854354"
+    },
+    {
+      "filename": "FRONTIER_QUEUE_IMPLEMENTATION_AUDIT.md",
+      "size_bytes": 3192,
+      "sha256": "5c1fea86b8143b6132f30ef1c61c93e726c6f2c43c71748bfe9ba61ea712348b"
+    },
+    {
+      "filename": "I10_RECHECK.csv",
+      "size_bytes": 3204,
+      "sha256": "644193475fe2ee508477d4cef7233c512c39a9ccea8f091e3462d57a187d948c"
+    },
+    {
+      "filename": "I9_COMPLEMENTARITY_RECHECK.csv",
+      "size_bytes": 2624,
+      "sha256": "89b8e821a61794c8931fa5754efcc6ae2e38526bbff4fe7eea84d6d8c4952579"
+    },
+    {
+      "filename": "LOCALITY_GATE_AUDIT.md",
+      "size_bytes": 2376,
+      "sha256": "cd19b20c75a0db83aad78c6b944fc16eee193a1efba4a8b3963accea3b239eb2"
+    },
+    {
+      "filename": "M1_VS_R1_STATISTICAL_LINEAGE.md",
+      "size_bytes": 3525,
+      "sha256": "f77a48321c844f0acf2b422ec5a32a51fcea3bf6517ce7f33b339abaeee612b4"
+    },
+    {
+      "filename": "M1_VS_R1_STATISTICAL_RECONCILIATION.csv",
+      "size_bytes": 2166,
+      "sha256": "da1ddea97881960a598263d3e3b8b3ff22bff260e9a595ab6c61636e52a8b459"
+    },
+    {
+      "filename": "MATCHING_PURSUIT_ANALOGY_AUDIT.md",
+      "size_bytes": 2767,
+      "sha256": "206cb25cfc7ca4db69845165782c2fe4d28de2ddf24dd51554e492ccc72e7edf"
+    },
+    {
+      "filename": "OUTCOME_TAXONOMY_AUDIT.md",
+      "size_bytes": 3133,
+      "sha256": "c2ec0651c35a4186fc3c09e7d0640c86a7724b1f51e481349aefa69706604fc6"
+    },
+    {
+      "filename": "PARENT_ARTIFACT_HASHES.txt",
+      "size_bytes": 4649,
+      "sha256": "8ce96613716f3170234fceb1e500025b2159970eb0b15b1120cd57529e88ee38"
+    },
+    {
+      "filename": "PURE_LAG_RECHECK.csv",
+      "size_bytes": 809,
+      "sha256": "af04033f715bb328801236775b95f02131b3ae5807c72621c8336b54d7a8f74c"
+    },
+    {
+      "filename": "SEARCH_MECHANISM_DEV_FINAL_REPLICATION.csv",
+      "size_bytes": 722,
+      "sha256": "d47df2e6a398355f26c93e178afc0fc351483c3a353ea4056d5b705edfc4b618"
+    },
+    {
+      "filename": "SEARCH_MEMORY_RECONCILIATION.csv",
+      "size_bytes": 1367,
+      "sha256": "fb36894c3d64db93d064340e5e449e3cf188e64f401e58de86dd5a6c2d9555cb"
+    },
+    {
+      "filename": "STEP_COUNT_RECONCILIATION.md",
+      "size_bytes": 2736,
+      "sha256": "5b2f1bc8760eee7664552b299660cffe115853f60960ea52a2db1c493a7c3eda"
+    },
+    {
+      "filename": "SUCCESS_CRITERIA_RECONCILIATION.md",
+      "size_bytes": 2625,
+      "sha256": "6ad06c85aa7ea12a5b5b3fa7497d9c35742e95550464882fda5bbdfd99b8f74b"
+    },
+    {
+      "filename": "SWITCHING_RECHECK.csv",
+      "size_bytes": 506,
+      "sha256": "f5fbad86e99bb23e9ec776f6ad437258ae92f516b335e2b10aa0b607d24c3995"
+    },
+    {
+      "filename": "generate_correlation_search_seal_audit.py",
+      "size_bytes": 11076,
+      "sha256": "11fa3e282a5e4c889a1c589e402a4d02d91f036145ea263f3137e3fcbaf8344a"
+    }
+  ]
+}

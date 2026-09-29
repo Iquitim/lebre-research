@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A5_Set_Reset_Quiescent_Memory_B4_MINIMAL_GRU_SEED_114",
+  "task_id": "A5_Set_Reset_Quiescent_Memory",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 114,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.99}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0011357391050573,
+  "mae": 0.9993300614681628,
+  "nmse": 1.0285012839485335,
+  "mean_flops": 177.0,
+  "p95_flops": 177.0,
+  "peak_flops": 177.0,
+  "memory_bytes": 360,
+  "active_params": 37,
+  "wall_time_sec": 0.18999838829040527
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_C3_RLS_SEED_103",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "C3_RLS",
+  "seed": 103,
+  "config": "{\"forgetting_factor\": 1.0}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6380035695232883,
+  "mae": 0.639629159180722,
+  "nmse": 1.002705133851943,
+  "mean_flops": 1765.0,
+  "p95_flops": 1765.0,
+  "peak_flops": 1765.0,
+  "memory_bytes": 3424,
+  "active_params": 20,
+  "wall_time_sec": 0.12523651123046875
+}

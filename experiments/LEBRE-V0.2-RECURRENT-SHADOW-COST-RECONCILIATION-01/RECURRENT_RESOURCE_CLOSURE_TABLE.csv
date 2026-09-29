@@ -1,0 +1,5 @@
+K_rec_state,K_rec_learn,forward_state_fp,prediction_fp,learning_sensitivity_fp,evidence_fp,total_recurrent_fp,recurrent_saving_fp,projected_total_fp,budget_deficit_fp,resource_feasible_le_100,historical_dev_delta_nmse,historical_margin_0p01_status
+1,10,12.0,6.0,1.6,0.6,20.2,0.0,111.01359114285714,11.013591142857138,NO,0.0,PASS
+2,10,6.0,3.0,1.6,0.6,11.2,9.0,102.01359114285714,2.0135911428571376,NO,0.001374,PASS
+5,10,2.4,1.2,1.6,0.6,5.800000000000001,14.399999999999999,96.61359114285713,-3.386408857142868,YES,0.002858,PASS
+10,10,1.2,0.6,1.6,0.6,4.0,16.2,94.81359114285713,-5.186408857142865,YES,0.010144,FAIL

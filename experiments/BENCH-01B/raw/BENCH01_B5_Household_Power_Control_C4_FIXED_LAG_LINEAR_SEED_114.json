@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_C4_FIXED_LAG_LINEAR_SEED_114",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 114,
+  "config": "{\"max_lag\": 32, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 3.670602705186334,
+  "mae": 1.4204053724493466,
+  "nmse": 1.822946797022152,
+  "mean_flops": 129.0,
+  "p95_flops": 129.0,
+  "peak_flops": 129.0,
+  "memory_bytes": 544,
+  "active_params": 32,
+  "wall_time_sec": 0.20773530006408691
+}

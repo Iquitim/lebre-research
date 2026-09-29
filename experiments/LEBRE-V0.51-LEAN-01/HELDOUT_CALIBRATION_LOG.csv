@@ -1,0 +1,195 @@
+task_id,model_id,config_id,config_params,mean_calibration_mse
+Q1_ONS_Carga_SIN_2019_20,IPNLMS,0,"{""mu"": 0.1}",24020952.74939711
+Q1_ONS_Carga_SIN_2019_20,IPNLMS,1,"{""mu"": 0.5}",10006379.951251907
+Q1_ONS_Carga_SIN_2019_20,DLINEAR_ONLINE,0,"{""mu"": 0.01}",23983892.493631233
+Q1_ONS_Carga_SIN_2019_20,DLINEAR_ONLINE,1,"{""mu"": 0.05}",11481581.96870842
+Q1_ONS_Carga_SIN_2019_20,DLINEAR_ONLINE,2,"{""mu"": 0.2}",6380680.211283614
+Q1_ONS_Carga_SIN_2019_20,NLINEAR_ONLINE,0,"{""mu"": 0.01}",5150505.291165029
+Q1_ONS_Carga_SIN_2019_20,NLINEAR_ONLINE,1,"{""mu"": 0.05}",4313498.923797326
+Q1_ONS_Carga_SIN_2019_20,NLINEAR_ONLINE,2,"{""mu"": 0.2}",3857140.1751491907
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",38599530.51484781
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",35927445.28207221
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",16009769.23343621
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",15711640.837956004
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",11064731.280241182
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",9623077.872760907
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",8602438.118166704
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",7188364.87278572
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",7068926.559247941
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",5468060.768790126
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",6495629.113736873
+Q1_ONS_Carga_SIN_2019_20,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",4920716.312550721
+Q2_ONS_Hidro_SE_2019_20,IPNLMS,0,"{""mu"": 0.1}",6417538.613867809
+Q2_ONS_Hidro_SE_2019_20,IPNLMS,1,"{""mu"": 0.5}",2886494.1942889937
+Q2_ONS_Hidro_SE_2019_20,DLINEAR_ONLINE,0,"{""mu"": 0.01}",6167678.148181715
+Q2_ONS_Hidro_SE_2019_20,DLINEAR_ONLINE,1,"{""mu"": 0.05}",3158466.337115222
+Q2_ONS_Hidro_SE_2019_20,DLINEAR_ONLINE,2,"{""mu"": 0.2}",1919436.856076856
+Q2_ONS_Hidro_SE_2019_20,NLINEAR_ONLINE,0,"{""mu"": 0.01}",1620220.6383227182
+Q2_ONS_Hidro_SE_2019_20,NLINEAR_ONLINE,1,"{""mu"": 0.05}",1424853.078695848
+Q2_ONS_Hidro_SE_2019_20,NLINEAR_ONLINE,2,"{""mu"": 0.2}",1310036.4014872496
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",5270998.275476516
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",4934610.283898427
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",3790691.0878969277
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",3616656.422739389
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",2571414.787444553
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",2148389.781666559
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",2435163.932782533
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",2006334.4919098208
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",2047509.5186956602
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",1559348.479363349
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",2031885.3244737627
+Q2_ONS_Hidro_SE_2019_20,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",1542538.0985071044
+Q3_ONS_Hidro_S_2019_20,IPNLMS,0,"{""mu"": 0.1}",1337992.2011539466
+Q3_ONS_Hidro_S_2019_20,IPNLMS,1,"{""mu"": 0.5}",1108476.3192780896
+Q3_ONS_Hidro_S_2019_20,DLINEAR_ONLINE,0,"{""mu"": 0.01}",3407826.8037970443
+Q3_ONS_Hidro_S_2019_20,DLINEAR_ONLINE,1,"{""mu"": 0.05}",1577550.6287509315
+Q3_ONS_Hidro_S_2019_20,DLINEAR_ONLINE,2,"{""mu"": 0.2}",869254.6573894055
+Q3_ONS_Hidro_S_2019_20,NLINEAR_ONLINE,0,"{""mu"": 0.01}",584550.5808775481
+Q3_ONS_Hidro_S_2019_20,NLINEAR_ONLINE,1,"{""mu"": 0.05}",499950.39925410895
+Q3_ONS_Hidro_S_2019_20,NLINEAR_ONLINE,2,"{""mu"": 0.2}",479532.89888976706
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",7532737.998996075
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",6619783.489816147
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",3046179.5707212626
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",2598159.1581234317
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",2523855.3071099008
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",1819179.95410208
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",2060489.1493736405
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",1345424.5534573044
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",1930740.490025339
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",1254950.2957243726
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",1839043.4981126506
+Q3_ONS_Hidro_S_2019_20,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",1176577.6077050231
+Q4_ONS_Eolica_SIN_2019_20,IPNLMS,0,"{""mu"": 0.1}",438885.15300824377
+Q4_ONS_Eolica_SIN_2019_20,IPNLMS,1,"{""mu"": 0.5}",184657.35238455553
+Q4_ONS_Eolica_SIN_2019_20,DLINEAR_ONLINE,0,"{""mu"": 0.01}",688348.0482254119
+Q4_ONS_Eolica_SIN_2019_20,DLINEAR_ONLINE,1,"{""mu"": 0.05}",299776.72522552544
+Q4_ONS_Eolica_SIN_2019_20,DLINEAR_ONLINE,2,"{""mu"": 0.2}",169782.8264008674
+Q4_ONS_Eolica_SIN_2019_20,NLINEAR_ONLINE,0,"{""mu"": 0.01}",112879.62159072755
+Q4_ONS_Eolica_SIN_2019_20,NLINEAR_ONLINE,1,"{""mu"": 0.05}",110523.86905572219
+Q4_ONS_Eolica_SIN_2019_20,NLINEAR_ONLINE,2,"{""mu"": 0.2}",114497.01885287392
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",865276.7606819146
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",805575.4744237448
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",553653.489882817
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",527023.373831958
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",321386.92698093015
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",303267.0771068486
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",289098.95680532046
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",273186.409783081
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",214654.89543266533
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",174735.3607753368
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",207980.26837572866
+Q4_ONS_Eolica_SIN_2019_20,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",167875.8092715841
+Q5_BCB_GBPBRL,IPNLMS,0,"{""mu"": 0.1}",0.18462660375192888
+Q5_BCB_GBPBRL,IPNLMS,1,"{""mu"": 0.5}",0.0477360999304858
+Q5_BCB_GBPBRL,DLINEAR_ONLINE,0,"{""mu"": 0.01}",0.06688735711455984
+Q5_BCB_GBPBRL,DLINEAR_ONLINE,1,"{""mu"": 0.05}",0.045608739476610906
+Q5_BCB_GBPBRL,DLINEAR_ONLINE,2,"{""mu"": 0.2}",0.038123573718600756
+Q5_BCB_GBPBRL,NLINEAR_ONLINE,0,"{""mu"": 0.01}",0.03553310879333112
+Q5_BCB_GBPBRL,NLINEAR_ONLINE,1,"{""mu"": 0.05}",0.03557940419260099
+Q5_BCB_GBPBRL,NLINEAR_ONLINE,2,"{""mu"": 0.2}",0.0357065400273231
+Q5_BCB_GBPBRL,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",0.2394758791267847
+Q5_BCB_GBPBRL,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",0.0565435065634711
+Q5_BCB_GBPBRL,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",0.05919659699378169
+Q5_BCB_GBPBRL,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",0.038501536762317684
+Q5_BCB_GBPBRL,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",0.04138276210678684
+Q5_BCB_GBPBRL,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",0.03618374037060994
+Q6_Monash_AusElec_S4,IPNLMS,0,"{""mu"": 0.1}",3506.7187901222205
+Q6_Monash_AusElec_S4,IPNLMS,1,"{""mu"": 0.5}",1976.98778418782
+Q6_Monash_AusElec_S4,DLINEAR_ONLINE,0,"{""mu"": 0.01}",10648.540725801236
+Q6_Monash_AusElec_S4,DLINEAR_ONLINE,1,"{""mu"": 0.05}",4149.259365621461
+Q6_Monash_AusElec_S4,DLINEAR_ONLINE,2,"{""mu"": 0.2}",1810.2078372904482
+Q6_Monash_AusElec_S4,NLINEAR_ONLINE,0,"{""mu"": 0.01}",1381.6035248981518
+Q6_Monash_AusElec_S4,NLINEAR_ONLINE,1,"{""mu"": 0.05}",1101.9912466505878
+Q6_Monash_AusElec_S4,NLINEAR_ONLINE,2,"{""mu"": 0.2}",942.7424831582379
+Q6_Monash_AusElec_S4,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",9174.899196596429
+Q6_Monash_AusElec_S4,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",8902.074121228601
+Q6_Monash_AusElec_S4,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",8655.0470427916
+Q6_Monash_AusElec_S4,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",8488.538561342802
+Q6_Monash_AusElec_S4,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",3081.4730629520286
+Q6_Monash_AusElec_S4,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",2615.1152948175913
+Q6_Monash_AusElec_S4,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",3097.2346389232994
+Q6_Monash_AusElec_S4,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",2600.701662556352
+Q6_Monash_AusElec_S4,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",1395.0378289548883
+Q6_Monash_AusElec_S4,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",1357.6169870041442
+Q6_Monash_AusElec_S4,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",1385.118436748456
+Q6_Monash_AusElec_S4,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",1372.0242170195695
+Q7_Monash_Pedestrian_S4,IPNLMS,0,"{""mu"": 0.1}",254840.7755803536
+Q7_Monash_Pedestrian_S4,IPNLMS,1,"{""mu"": 0.5}",326976.2442849225
+Q7_Monash_Pedestrian_S4,DLINEAR_ONLINE,0,"{""mu"": 0.01}",231193.7929076572
+Q7_Monash_Pedestrian_S4,DLINEAR_ONLINE,1,"{""mu"": 0.05}",140123.75830950958
+Q7_Monash_Pedestrian_S4,DLINEAR_ONLINE,2,"{""mu"": 0.2}",99351.69978003122
+Q7_Monash_Pedestrian_S4,NLINEAR_ONLINE,0,"{""mu"": 0.01}",119263.06314715075
+Q7_Monash_Pedestrian_S4,NLINEAR_ONLINE,1,"{""mu"": 0.05}",103317.60301866879
+Q7_Monash_Pedestrian_S4,NLINEAR_ONLINE,2,"{""mu"": 0.2}",96696.20191076717
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",141752.27783088156
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",150282.13967549973
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",131805.85915997595
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",142388.7038288533
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",93895.615584674
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",94328.45110584998
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",94134.30824458551
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",94693.01023685683
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",83643.90428257715
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",78050.23679785423
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",84416.65131167414
+Q7_Monash_Pedestrian_S4,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",78844.38017567899
+Q8_Monash_Solar10min_S4,IPNLMS,0,"{""mu"": 0.1}",0.6329520521146883
+Q8_Monash_Solar10min_S4,IPNLMS,1,"{""mu"": 0.5}",0.8225693207823875
+Q8_Monash_Solar10min_S4,DLINEAR_ONLINE,0,"{""mu"": 0.01}",12.80268999397848
+Q8_Monash_Solar10min_S4,DLINEAR_ONLINE,1,"{""mu"": 0.05}",6.022072342504177
+Q8_Monash_Solar10min_S4,DLINEAR_ONLINE,2,"{""mu"": 0.2}",2.898211333384308
+Q8_Monash_Solar10min_S4,NLINEAR_ONLINE,0,"{""mu"": 0.01}",0.5350535257428506
+Q8_Monash_Solar10min_S4,NLINEAR_ONLINE,1,"{""mu"": 0.05}",0.5193603285300294
+Q8_Monash_Solar10min_S4,NLINEAR_ONLINE,2,"{""mu"": 0.2}",0.5283416676341861
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",5.165480894489932
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",4.975454228976413
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",5.5036525775687855
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",5.346944098453593
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",1.9535868268926364
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",1.7668979981615511
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",1.9984891694722868
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",1.81676675133649
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",1.1690847769825439
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",0.9897312431026323
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",1.182093305856471
+Q8_Monash_Solar10min_S4,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",1.002990607322976
+Q9_Monash_KDDCup_S4,IPNLMS,0,"{""mu"": 0.1}",0.8449024978708825
+Q9_Monash_KDDCup_S4,IPNLMS,1,"{""mu"": 0.5}",0.7520970859579007
+Q9_Monash_KDDCup_S4,DLINEAR_ONLINE,0,"{""mu"": 0.01}",1.509101082856897
+Q9_Monash_KDDCup_S4,DLINEAR_ONLINE,1,"{""mu"": 0.05}",1.0600346535152798
+Q9_Monash_KDDCup_S4,DLINEAR_ONLINE,2,"{""mu"": 0.2}",0.8664612874295033
+Q9_Monash_KDDCup_S4,NLINEAR_ONLINE,0,"{""mu"": 0.01}",0.813510046071904
+Q9_Monash_KDDCup_S4,NLINEAR_ONLINE,1,"{""mu"": 0.05}",0.8172668974720301
+Q9_Monash_KDDCup_S4,NLINEAR_ONLINE,2,"{""mu"": 0.2}",0.864880473098873
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",2.2916995605490826
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",1.7453601328101538
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",1.7698379655157612
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",1.2783350186067404
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",1.8694279643964686
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",1.151019631873102
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",1.8221459018425825
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",1.1015540855936035
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",2.6610931112769514
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",1.36161461322233
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",2.6654989348962737
+Q9_Monash_KDDCup_S4,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",1.3595500586963007
+Q10_Monash_AusElec_S5,IPNLMS,0,"{""mu"": 0.1}",652.2515996336376
+Q10_Monash_AusElec_S5,IPNLMS,1,"{""mu"": 0.5}",427.61782975909347
+Q10_Monash_AusElec_S5,DLINEAR_ONLINE,0,"{""mu"": 0.01}",1112.4036189673163
+Q10_Monash_AusElec_S5,DLINEAR_ONLINE,1,"{""mu"": 0.05}",493.6052241646068
+Q10_Monash_AusElec_S5,DLINEAR_ONLINE,2,"{""mu"": 0.2}",266.45389996257137
+Q10_Monash_AusElec_S5,NLINEAR_ONLINE,0,"{""mu"": 0.01}",221.00861059283702
+Q10_Monash_AusElec_S5,NLINEAR_ONLINE,1,"{""mu"": 0.05}",180.31939299822693
+Q10_Monash_AusElec_S5,NLINEAR_ONLINE,2,"{""mu"": 0.2}",155.52990376229798
+Q10_Monash_AusElec_S5,HOLT_WINTERS,0,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.05}",937.0401793426553
+Q10_Monash_AusElec_S5,HOLT_WINTERS,1,"{""alpha"": 0.1, ""beta"": 0.0, ""gamma"": 0.2}",753.4027083105512
+Q10_Monash_AusElec_S5,HOLT_WINTERS,2,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.05}",853.9454972525042
+Q10_Monash_AusElec_S5,HOLT_WINTERS,3,"{""alpha"": 0.1, ""beta"": 0.01, ""gamma"": 0.2}",665.77249333892
+Q10_Monash_AusElec_S5,HOLT_WINTERS,4,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.05}",534.9405402137266
+Q10_Monash_AusElec_S5,HOLT_WINTERS,5,"{""alpha"": 0.3, ""beta"": 0.0, ""gamma"": 0.2}",438.43742991189475
+Q10_Monash_AusElec_S5,HOLT_WINTERS,6,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.05}",543.1475162080529
+Q10_Monash_AusElec_S5,HOLT_WINTERS,7,"{""alpha"": 0.3, ""beta"": 0.01, ""gamma"": 0.2}",447.692390722859
+Q10_Monash_AusElec_S5,HOLT_WINTERS,8,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.05}",308.41965686153276
+Q10_Monash_AusElec_S5,HOLT_WINTERS,9,"{""alpha"": 0.6, ""beta"": 0.0, ""gamma"": 0.2}",287.07448843350517
+Q10_Monash_AusElec_S5,HOLT_WINTERS,10,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.05}",310.5814726955806
+Q10_Monash_AusElec_S5,HOLT_WINTERS,11,"{""alpha"": 0.6, ""beta"": 0.01, ""gamma"": 0.2}",293.5561448395984

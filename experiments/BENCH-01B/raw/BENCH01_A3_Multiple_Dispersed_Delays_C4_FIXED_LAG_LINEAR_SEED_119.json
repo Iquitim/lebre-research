@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_C4_FIXED_LAG_LINEAR_SEED_119",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "C4_FIXED_LAG_LINEAR",
+  "seed": 119,
+  "config": "{\"max_lag\": 4, \"learning_rate\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.2580303529500196,
+  "mae": 0.40429816004744484,
+  "nmse": 0.5222772447036634,
+  "mean_flops": 17.0,
+  "p95_flops": 17.0,
+  "peak_flops": 17.0,
+  "memory_bytes": 96,
+  "active_params": 4,
+  "wall_time_sec": 0.08047652244567871
+}

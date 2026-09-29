@@ -1,0 +1,15 @@
+task,n_effective,w_statistic,alternative,zero_method,p_value,software,holm_rank,holm_alpha,holm_significant
+I1_Memoryless_Linear,11,1.0,two-sided,wilcox,0.004439092656792155,scipy.stats.wilcoxon,1,0.0035714285714285718,False
+I11_Regime_Switch_Delay_To_Latent,30,104.0,two-sided,wilcox,0.007111456245183945,scipy.stats.wilcoxon,2,0.0038461538461538464,False
+I3_Single_Exact_Delay,30,155.0,two-sided,wilcox,0.11417667381465435,scipy.stats.wilcoxon,3,0.004166666666666667,False
+I8_Quiescent_Discrete_Delay,30,158.0,two-sided,wilcox,0.12935307621955872,scipy.stats.wilcoxon,4,0.004545454545454546,False
+I14_Intermittent_Hybrid,30,163.0,two-sided,wilcox,0.15794767439365387,scipy.stats.wilcoxon,5,0.005,False
+I12_Regime_Switch_Latent_To_Delay,30,165.0,two-sided,wilcox,0.17059839516878128,scipy.stats.wilcoxon,6,0.005555555555555556,False
+I2_Static_Nonlinear_Negative_Control,30,167.0,two-sided,wilcox,0.18396909348666668,scipy.stats.wilcoxon,7,0.00625,False
+I7_Quiescent_Continuous_State,30,174.0,two-sided,wilcox,0.23665234446525574,scipy.stats.wilcoxon,8,0.0071428571428571435,False
+I5_Moving_Delay_Support,30,182.0,two-sided,wilcox,0.308520769700408,scipy.stats.wilcoxon,9,0.008333333333333333,False
+I10_Redundant_Temporal_Structure,30,189.0,two-sided,wilcox,0.3817984350025654,scipy.stats.wilcoxon,10,0.01,False
+I6_Continuous_Latent_State,30,189.0,two-sided,wilcox,0.3817984350025654,scipy.stats.wilcoxon,11,0.0125,False
+I13_Regime_Switch_Hybrid_To_Memoryless,30,190.0,two-sided,wilcox,0.39305018074810505,scipy.stats.wilcoxon,12,0.016666666666666666,False
+I9_Hybrid_Delay_Plus_Latent_State,30,207.0,two-sided,wilcox,0.6120056137442589,scipy.stats.wilcoxon,13,0.025,False
+I4_Multi_Sparse_Delay,30,225.0,two-sided,wilcox,0.8871948085725307,scipy.stats.wilcoxon,14,0.05,False

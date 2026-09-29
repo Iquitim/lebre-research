@@ -1,0 +1,13 @@
+operation_id,operation_name,role,trigger,FP_cost_per_execution,execution_rate,FP_per_stream_step,INT_ops,CAST_ops,memory_traffic,persistent_bytes,dependency,current_clock,skip_semantics,path_dependent,candidate_dependent,active_state_dependent
+R1,recurrent_hidden_state_forward,STATE_PROPAGATION,stream_step,12.0,1.0,12.0,0,0,16.0,16,"hidden_state,x_scalar,alpha,b",K_rec_fwd=1,HOLD_STATE,True,False,False
+R2,recurrent_input_projection,STATE_PROPAGATION,sub_op_R1,0.0,1.0,0.0,0,0,0.0,0,"b,x_scalar",K_rec_fwd=1,HOLD_STATE,True,False,False
+R3,recurrent_self_transition,STATE_PROPAGATION,sub_op_R1,0.0,1.0,0.0,0,0,0.0,0,"alpha,hidden_state",K_rec_fwd=1,HOLD_STATE,True,False,False
+R4,recurrent_readout_predict,PREDICTION,stream_step,6.0,1.0,6.0,0,0,8.0,8,"hidden_state,c",K_rec_fwd=1,HOLD_STATE,True,False,False
+R5,counterfactual_recurrent_prediction,PREDICTION,sub_op_R4,0.0,1.0,0.0,0,0,0.0,0,"y_base,y_rec_shadow",K_rec_fwd=1,HOLD_STATE,False,False,False
+R6,rtrl_sensitivity_propagation,SENSITIVITY_PROPAGATION,step_mod_10==0,8.0,0.1,0.8,0,0,8.0,16,"p_alpha,p_b,s,alpha,x_scalar",K_rec_learn=10,HOLD_STATE,True,False,False
+R7,input_weight_update,PARAMETER_LEARNING,step_mod_10==0,2.5,0.1,0.25,0,0,4.0,8,"e_shadow_rec,c,p_b,b",K_rec_learn=10,HOLD_STATE,True,False,False
+R8,self_recurrent_weight_update,PARAMETER_LEARNING,step_mod_10==0,2.5,0.1,0.25,0,0,4.0,8,"e_shadow_rec,c,p_alpha,alpha",K_rec_learn=10,HOLD_STATE,True,False,False
+R9,readout_weight_update,PARAMETER_LEARNING,step_mod_10==0,3.0,0.1,0.3,0,0,8.0,8,"e_shadow_rec,s,c,norm_sq,step",K_rec_learn=10,HOLD_STATE,True,False,False
+R10,recurrent_evidence_ema_update,EVIDENCE_ACCUMULATION,step_mod_10==0,6.0,0.1,0.6,0,0,4.0,8,"y_true,y_base,y_rec_shadow,rec_evidence",K_rec_learn=10,NO_NEW_EVIDENCE,False,False,False
+R11,candidate_recurrent_promotion_check,DECISION,step_mod_5==0,0.0,0.2,0.0,2,0,0.0,0,"rec_evidence,rec_obs_count",K_arbitration=5,HOLD_STATE,False,False,False
+R12,recurrent_retention_lifecycle_bookkeeping,HOUSEKEEPING,stream_step,0.0,1.0,0.0,2,0,0.0,8,"rec_obs_count,rec_param_update_count",K=1,HOLD_STATE,False,False,False

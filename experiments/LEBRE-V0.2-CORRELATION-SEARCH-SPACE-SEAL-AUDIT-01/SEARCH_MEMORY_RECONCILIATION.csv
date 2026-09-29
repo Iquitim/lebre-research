@@ -1,0 +1,16 @@
+subsystem,item_name,element_count,dtype,bytes_per_element,subtotal_bytes,scope
+DENSE_GRID,physical_correlation_accumulators,165,float16,2,330,physical_grid_storage
+DENSE_GRID,feature_energy_accumulators,165,float16,2,330,feature_energy_storage
+DENSE_GRID,residual_energy_accumulator,1,float16,2,2,shared_base_residual
+DENSE_GRID,cell_tracking_metadata,140,uint8,1,140,visit_and_age_metadata
+DENSE_GRID,TOTAL_DENSE_SEARCH_STATE,N/A,N/A,N/A,802,total_dense_volatile_ram
+SPARSE_FRONTIER_H32,frontier_slot_coordinates,32,uint8_pair,2,64,active_slot_keys
+SPARSE_FRONTIER_H32,frontier_correlation_accumulators,32,float16,2,64,active_correlations
+SPARSE_FRONTIER_H32,frontier_timestamp_metadata,32,uint16,2,64,active_timestamps
+SPARSE_FRONTIER_H32,FRONTIER_RAW_ACCUMULATORS_TOTAL,32,struct_slot,6,192,reported_192B_frontier_table
+SPARSE_FRONTIER_H32,exploration_queue_pointer,1,uint16,2,2,circular_queue_cursor
+SPARSE_FRONTIER_H32,active_slot_lookup_map,32,uint16,2,64,hash_lookup_acceleration
+SPARSE_FRONTIER_H32,shared_residual_energy,1,float16,2,2,shared_base_residual
+SPARSE_FRONTIER_H32,TOTAL_FRONTIER_SEARCH_STATE,N/A,N/A,N/A,260,reported_260B_total_search_state
+SPARSE_FRONTIER_H16,FRONTIER_RAW_ACCUMULATORS_TOTAL,16,struct_slot,6,96,extreme_compact_accumulator_table
+SPARSE_FRONTIER_H16,TOTAL_FRONTIER_SEARCH_STATE,N/A,N/A,N/A,148,extreme_compact_total_search_state

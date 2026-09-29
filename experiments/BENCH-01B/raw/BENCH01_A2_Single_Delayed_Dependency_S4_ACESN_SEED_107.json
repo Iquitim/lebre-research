@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A2_Single_Delayed_Dependency_S4_ACESN_SEED_107",
+  "task_id": "A2_Single_Delayed_Dependency",
+  "model_id": "S4_ACESN",
+  "seed": 107,
+  "config": "{\"reservoir_size\": 40, \"spectral_radius\": 0.95, \"compression_ratio\": 0.5, \"readout_lr\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6369108899253955,
+  "mae": 0.636403144290949,
+  "nmse": 0.9822574370028512,
+  "mean_flops": 5284.909142857143,
+  "p95_flops": 5285.0,
+  "peak_flops": 5285.0,
+  "memory_bytes": 19968,
+  "active_params": 40,
+  "wall_time_sec": 0.10358572006225586
+}

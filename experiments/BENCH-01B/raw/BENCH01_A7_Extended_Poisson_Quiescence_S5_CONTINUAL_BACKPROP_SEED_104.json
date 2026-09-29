@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_S5_CONTINUAL_BACKPROP_SEED_104",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "S5_CONTINUAL_BACKPROP",
+  "seed": 104,
+  "config": "{\"learning_rate\": 0.001, \"replacement_rate\": 0.0001, \"maturity_threshold\": 50}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.874493876414136,
+  "mae": 0.7377915946879235,
+  "nmse": 1.0096529871123223,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 304,
+  "active_params": 10,
+  "wall_time_sec": 0.1102142333984375
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B4_Silverbox_System_ID_B2_CCN_SEED_115",
+  "task_id": "B4_Silverbox_System_ID",
+  "model_id": "B2_CCN",
+  "seed": 115,
+  "config": "{\"readout_lr\": 0.003, \"recurrent_lr\": 0.0001, \"max_columns\": 1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0038400419375690786,
+  "mae": 0.04790809832068483,
+  "nmse": 0.9962601058675291,
+  "mean_flops": 43.0,
+  "p95_flops": 43.0,
+  "peak_flops": 43.0,
+  "memory_bytes": 136,
+  "active_params": 4,
+  "wall_time_sec": 0.7812614440917969
+}

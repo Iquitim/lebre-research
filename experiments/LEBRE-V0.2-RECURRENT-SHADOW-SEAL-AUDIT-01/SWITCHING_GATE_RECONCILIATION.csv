@@ -1,0 +1,5 @@
+task_id,c0_switch_latency,c1_switch_latency,latency_delta,preserves_50step_margin,preregistered_criterion,latency_status,gate_status
+I11_Regime_Switch_Delay_To_Latent,547.1666666666666,793.3333333333334,246.16666666666677,NO,<= +50 stream steps,DEGRADED,FAIL
+I12_Regime_Switch_Latent_To_Delay,2259.633333333333,2274.8,15.16666666666697,YES,<= +50 stream steps,DEGRADED,PASS
+I13_Regime_Switch_Hybrid_To_Memoryless,125.13333333333334,113.7,-11.433333333333335,YES,<= +50 stream steps,PRESERVED_OR_IMPROVED,PASS
+I14_Intermittent_Hybrid,1413.8,1349.1666666666667,-64.63333333333321,YES,<= +50 stream steps,PRESERVED_OR_IMPROVED,PASS

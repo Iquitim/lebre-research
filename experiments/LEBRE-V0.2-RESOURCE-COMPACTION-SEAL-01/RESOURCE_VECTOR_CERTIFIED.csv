@@ -1,0 +1,7 @@
+resource_dimension,unit,legacy_r2_ceiling,proposed_2kb_ceiling,c0_baseline_value,c1_compacted_value,c1_legacy_r2_compliant,c1_proposed_compliant,certification_status
+Persistent Memory (Mean Occupied),Bytes,1024.0,2048.0,1306.32,976.32,YES,YES,CERTIFIED_UNDER_BOTH_CEILINGS
+Persistent Memory (Max Capacity Peak),Bytes,1024.0,2048.0,1384.0,1054.0,NO (+30 B),YES,CERTIFIED_UNDER_PROPOSED_2KB
+Mean Live Compute,FP FLOPs/step,100.0,100.0,81.37,81.37,YES,YES,CERTIFIED_UNDER_BOTH_CEILINGS
+Total Online Compute (Single Regime),FP FLOPs/step,100.0,120.0,108.19,108.19,NO (+8.19),YES,TARGET_FOR_SHADOW_RENT_GOVERNANCE
+Integer Operations,Ops/step,50.0,50.0,33.26,37.18,YES,YES,CERTIFIED_UNDER_BOTH_CEILINGS
+Memory Traffic,Bytes/step,512.0,512.0,291.15,291.15,YES,YES,CERTIFIED_UNDER_BOTH_CEILINGS

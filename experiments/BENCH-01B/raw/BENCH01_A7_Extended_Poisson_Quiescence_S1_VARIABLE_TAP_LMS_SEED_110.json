@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_S1_VARIABLE_TAP_LMS_SEED_110",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "S1_VARIABLE_TAP_LMS",
+  "seed": 110,
+  "config": "{\"learning_rate\": 0.03, \"tap_leakage\": 0.0001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.0794527454729428,
+  "mae": 0.8168937431858124,
+  "nmse": 0.9672350856521129,
+  "mean_flops": 185.0,
+  "p95_flops": 185.0,
+  "peak_flops": 185.0,
+  "memory_bytes": 544,
+  "active_params": 30,
+  "wall_time_sec": 0.09805822372436523
+}

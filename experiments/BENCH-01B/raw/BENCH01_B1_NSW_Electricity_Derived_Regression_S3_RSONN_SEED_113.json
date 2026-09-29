@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_S3_RSONN_SEED_113",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "S3_RSONN",
+  "seed": 113,
+  "config": "{\"learning_rate\": 0.02, \"growth_threshold\": 0.05, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0014119406577904642,
+  "mae": 0.015204436224560403,
+  "nmse": 0.7573109680713762,
+  "mean_flops": 136.62063747280808,
+  "p95_flops": 202.0,
+  "peak_flops": 202.0,
+  "memory_bytes": 208,
+  "active_params": 16,
+  "wall_time_sec": 1.2881648540496826
+}

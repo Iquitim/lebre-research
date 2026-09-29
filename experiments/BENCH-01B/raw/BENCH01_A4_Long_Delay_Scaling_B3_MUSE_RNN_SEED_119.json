@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_B3_MUSE_RNN_SEED_119",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "B3_MUSE_RNN",
+  "seed": 119,
+  "config": "{\"learning_rate\": 0.03, \"growth_multiplier\": 2.5, \"pruning_threshold\": 0.001}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6335665301038544,
+  "mae": 0.6315091716284834,
+  "nmse": 1.0011709848093822,
+  "mean_flops": 115.83885714285714,
+  "p95_flops": 208.0,
+  "peak_flops": 448.0,
+  "memory_bytes": 312,
+  "active_params": 22,
+  "wall_time_sec": 0.3027968406677246
+}

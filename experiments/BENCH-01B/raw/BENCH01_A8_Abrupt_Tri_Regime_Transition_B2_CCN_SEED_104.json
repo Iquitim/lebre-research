@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A8_Abrupt_Tri_Regime_Transition_B2_CCN_SEED_104",
+  "task_id": "A8_Abrupt_Tri_Regime_Transition",
+  "model_id": "B2_CCN",
+  "seed": 104,
+  "config": "{\"readout_lr\": 0.03, \"recurrent_lr\": 0.001, \"max_columns\": 1}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.48065883231473355,
+  "mae": 0.511321362510256,
+  "nmse": 1.0113045345165548,
+  "mean_flops": 133.0,
+  "p95_flops": 133.0,
+  "peak_flops": 133.0,
+  "memory_bytes": 280,
+  "active_params": 22,
+  "wall_time_sec": 0.18409228324890137
+}

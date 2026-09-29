@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A4_Long_Delay_Scaling_S3_RSONN_SEED_106",
+  "task_id": "A4_Long_Delay_Scaling",
+  "model_id": "S3_RSONN",
+  "seed": 106,
+  "config": "{\"learning_rate\": 0.001, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.005}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.6437726449046165,
+  "mae": 0.6388506540632524,
+  "nmse": 1.0004135596879287,
+  "mean_flops": 472.3017142857143,
+  "p95_flops": 498.0,
+  "peak_flops": 498.0,
+  "memory_bytes": 664,
+  "active_params": 72,
+  "wall_time_sec": 0.4326045513153076
+}

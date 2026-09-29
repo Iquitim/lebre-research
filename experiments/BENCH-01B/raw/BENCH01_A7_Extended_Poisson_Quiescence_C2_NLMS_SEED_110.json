@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A7_Extended_Poisson_Quiescence_C2_NLMS_SEED_110",
+  "task_id": "A7_Extended_Poisson_Quiescence",
+  "model_id": "C2_NLMS",
+  "seed": 110,
+  "config": "{\"step_size\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 1.1292242231324967,
+  "mae": 0.8599498644324192,
+  "nmse": 1.0118324241265997,
+  "mean_flops": 65.0,
+  "p95_flops": 65.0,
+  "peak_flops": 65.0,
+  "memory_bytes": 112,
+  "active_params": 10,
+  "wall_time_sec": 0.0810701847076416
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B5_Household_Power_Control_B4_MINIMAL_GRU_SEED_105",
+  "task_id": "B5_Household_Power_Control",
+  "model_id": "B4_MINIMAL_GRU",
+  "seed": 105,
+  "config": "{\"learning_rate\": 0.01, \"weight_decay\": 0.99}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.18609715527092055,
+  "mae": 0.26123480505374425,
+  "nmse": 0.09242220975229117,
+  "mean_flops": 129.0,
+  "p95_flops": 129.0,
+  "peak_flops": 129.0,
+  "memory_bytes": 264,
+  "active_params": 25,
+  "wall_time_sec": 0.4642188549041748
+}

@@ -1,0 +1,6 @@
+task_id,total_switch_latency_steps,discovery_queue_latency_steps,probation_observation_latency_steps,probation_learning_latency_steps,arbitration_latency_steps
+I11_Regime_Switch_Delay_To_Latent,286.0,80.0,75.0,70.0,61.0
+I12_Regime_Switch_Latent_To_Delay,2736.0,80.0,75.0,70.0,2511.0
+I13_Regime_Switch_Hybrid_To_Memoryless,118.0,80.0,0.0,0.0,38.0
+I14_Intermittent_Hybrid,401.0,80.0,75.0,70.0,176.0
+I5_Moving_Delay_Support,600.0,80.0,75.0,70.0,375.0

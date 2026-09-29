@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_B1_NSW_Electricity_Derived_Regression_B5_ONLINE_ESN_SEED_109",
+  "task_id": "B1_NSW_Electricity_Derived_Regression",
+  "model_id": "B5_ONLINE_ESN",
+  "seed": 109,
+  "config": "{\"reservoir_size\": 20, \"spectral_radius\": 0.95, \"leak_rate\": 0.7, \"readout_lr\": 0.01}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.0024697640030143173,
+  "mae": 0.029095641698277483,
+  "nmse": 1.3246869531737637,
+  "mean_flops": 1281.0,
+  "p95_flops": 1281.0,
+  "peak_flops": 1281.0,
+  "memory_bytes": 4448,
+  "active_params": 20,
+  "wall_time_sec": 0.4941728115081787
+}

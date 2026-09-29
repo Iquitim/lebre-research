@@ -1,0 +1,7 @@
+dimension,k5_baseline_rate,k10_projected_rate,delta,unit
+FLOATING_POINT_OPS,5.6,2.8,-2.8,ops/step
+INTEGER_OPS,4.6,2.8,-1.8,ops/step
+CAST_OPS,0.0,0.0,0.0,ops/step
+MEMORY_TRAFFIC_BYTES,27.2,13.6,-13.6,bytes/step
+PERSISTENT_BYTES,36.0,36.0,0.0,bytes
+PEAK_WORKING_BYTES,48.0,48.0,0.0,bytes

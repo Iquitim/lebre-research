@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A3_Multiple_Dispersed_Delays_S3_RSONN_SEED_123",
+  "task_id": "A3_Multiple_Dispersed_Delays",
+  "model_id": "S3_RSONN",
+  "seed": 123,
+  "config": "{\"learning_rate\": 0.001, \"growth_threshold\": 0.1, \"pruning_threshold\": 0.005}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 0.509467166895002,
+  "mae": 0.5682625766650153,
+  "nmse": 1.0000485009210394,
+  "mean_flops": 470.69142857142856,
+  "p95_flops": 498.0,
+  "peak_flops": 498.0,
+  "memory_bytes": 448,
+  "active_params": 46,
+  "wall_time_sec": 0.43048882484436035
+}

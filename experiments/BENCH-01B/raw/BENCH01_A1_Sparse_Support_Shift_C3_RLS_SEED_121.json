@@ -1,0 +1,19 @@
+{
+  "run_id": "BENCH01_A1_Sparse_Support_Shift_C3_RLS_SEED_121",
+  "task_id": "A1_Sparse_Support_Shift",
+  "model_id": "C3_RLS",
+  "seed": 121,
+  "config": "{\"forgetting_factor\": 0.995}",
+  "status": "SUCCESS",
+  "failure_step": null,
+  "fraction_completed": 1.0,
+  "mse": 38076.13558829591,
+  "mae": 6.807254148773659,
+  "nmse": 8996.675181036007,
+  "mean_flops": 10405.0,
+  "p95_flops": 10405.0,
+  "peak_flops": 10405.0,
+  "memory_bytes": 20464,
+  "active_params": 50,
+  "wall_time_sec": 0.14608407020568848
+}

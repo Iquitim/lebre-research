@@ -1,0 +1,6 @@
+component,delta_FP,notes
+LIVE_LINEAR_DELTA,-0.9197420634920661,Change in live tap and base execution
+SEARCH_PROBE_DELTA,-0.0030301587301586608,Change in search probing
+CANDIDATE_DIRECT_DELTA,0.00580476190476209,Change in candidate observation and learning
+RECURRENT_SHADOW_DELTA,0.0,Invariant (HOLD_STATE K=2)
+TOTAL_INDIRECT_SAVING,0.9169674603174487,Sum of indirect changes (fewer live taps held)

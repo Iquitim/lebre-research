@@ -1,0 +1,254 @@
+#!/usr/bin/env python3
+"""
+Cleanly replaces D4 English and PTBR in scratch/generate_diagrams.py by exact line slicing.
+"""
+from pathlib import Path
+
+GEN_FILE = Path("scratch/generate_diagrams.py")
+
+with open(GEN_FILE, "r", encoding="utf-8") as f:
+    lines = f.readlines()
+
+d4_start = None
+d5_start = None
+
+for i, l in enumerate(lines):
+    if l.startswith("d4_svg = "):
+        d4_start = i
+    elif l.startswith("d5_svg = "):
+        d5_start = i
+
+assert d4_start is not None and d5_start is not None, "Could not find markers"
+
+replacement = '''d4_svg = """<svg width="800" height="390" viewBox="0 0 800 390" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <filter id="card-shadow" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="390" fill="#FFFFFF" rx="8" />
+  
+  <!-- Title & Subtitle -->
+  <text x="30" y="30" font-size="15" font-weight="700" fill="#0F172A">D4: Non-Interfering Shadow Mode Probation &amp; Promotion Protocol</text>
+  <text x="30" y="48" font-size="11" fill="#64748B">Provisional candidate learns counterfactually in isolation without injecting transient disruption into live inference</text>
+
+  <!-- Left Card: Live Active Predictor -->
+  <g transform="translate(30, 68)" filter="url(#card-shadow)">
+    <rect width="325" height="180" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5" rx="6" />
+    <rect x="0" y="0" width="325" height="32" fill="#DCFCE7" rx="6" />
+    <text x="15" y="21" font-size="12" font-weight="700" fill="#166534">LIVE PREDICTOR</text>
+    <text x="130" y="21" font-size="10" font-weight="500" fill="#15803D">(Active Causal Model)</text>
+    
+    <text x="15" y="56" font-size="10.5" font-weight="600" fill="#0F172A">Sparse Base Model:</text>
+    <text x="145" y="56" font-size="10.5" fill="#334155"><tspan font-style="italic">w</tspan><tspan font-size="8" dy="3">base</tspan><tspan dy="-3"> &#x2208; &#x211D;</tspan><tspan font-size="8" dy="-4">D</tspan></text>
+    
+    <text x="15" y="78" font-size="10.5" font-weight="600" fill="#0F172A">Causal Output:</text>
+    <text x="145" y="78" font-size="10.5" font-weight="700" fill="#15803D">&#375;<tspan font-size="8" dy="3">t</tspan><tspan dy="-3"> = </tspan><tspan font-style="italic">w</tspan><tspan font-size="8" dy="3">base</tspan><tspan font-size="7.5" dy="-5">T</tspan><tspan dy="2" font-style="italic"> x</tspan><tspan font-size="8" dy="3">t</tspan><tspan dy="-3"> + </tspan><tspan font-style="italic">w</tspan><tspan font-size="8" dy="3">s</tspan><tspan dy="-3"> </tspan><tspan font-style="italic">s</tspan><tspan font-size="8" dy="3">t</tspan></text>
+
+    <text x="15" y="100" font-size="10.5" font-weight="600" fill="#0F172A">Operational Role:</text>
+    <text x="145" y="100" font-size="10" fill="#334155">Drives immediate system actions</text>
+
+    <rect x="15" y="120" width="295" height="46" fill="#FFFFFF" stroke="#86EFAC" rx="4" />
+    <text x="162" y="139" font-size="10" font-weight="700" text-anchor="middle" fill="#166534">Protected Inference Path</text>
+    <text x="162" y="153" font-size="9" text-anchor="middle" fill="#64748B">Zero coupling to unvalidated shadow parameters</text>
+  </g>
+
+  <!-- Center: Non-Interference Barrier Column -->
+  <g transform="translate(365, 68)">
+    <rect width="70" height="180" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" rx="6" />
+    
+    <!-- Top Horizontal Header Pill -->
+    <rect x="-10" y="-8" width="90" height="24" fill="#1E293B" rx="12" />
+    <text x="35" y="8" font-size="8" font-weight="700" text-anchor="middle" fill="#FFFFFF" letter-spacing="0.04em">BARRIER</text>
+    
+    <!-- Upper Vertical Dashed Line Segment -->
+    <line x1="35" y1="22" x2="35" y2="68" stroke="#64748B" stroke-dasharray="4,3" stroke-width="2" />
+    
+    <!-- Middle Gate Badge Card -->
+    <rect x="4" y="70" width="62" height="42" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5" rx="4" />
+    <text x="35" y="87" font-size="11" font-weight="800" text-anchor="middle" fill="#0F172A"><tspan font-style="italic">g</tspan><tspan font-size="8" dy="2">p</tspan><tspan dy="-2"> = 0.0</tspan></text>
+    <text x="35" y="102" font-size="7.5" font-weight="700" text-anchor="middle" fill="#0284C7">HARD GATE</text>
+
+    <!-- Lower Vertical Dashed Line Segment -->
+    <line x1="35" y1="114" x2="35" y2="128" stroke="#64748B" stroke-dasharray="4,3" stroke-width="2" />
+
+    <!-- Bottom Isolation Pill Card -->
+    <rect x="3" y="130" width="64" height="42" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" rx="4" />
+    <text x="35" y="145" font-size="8" font-weight="700" text-anchor="middle" fill="#334155">Strict</text>
+    <text x="35" y="156" font-size="8" font-weight="700" text-anchor="middle" fill="#334155">Isolation</text>
+    <text x="35" y="167" font-size="7" font-weight="600" text-anchor="middle" fill="#64748B"><tspan font-style="italic">g</tspan><tspan font-size="6" dy="2">p</tspan><tspan dy="-2">&#183;</tspan><tspan font-style="italic">s</tspan><tspan font-size="6" dy="2">p</tspan><tspan dy="-2"> = 0</tspan></text>
+  </g>
+
+  <!-- Right Card: Shadow Provisional Candidate -->
+  <g transform="translate(445, 68)" filter="url(#card-shadow)">
+    <rect width="325" height="180" fill="#FAF5FF" stroke="#D8B4FE" stroke-width="1.5" rx="6" />
+    <rect x="0" y="0" width="325" height="32" fill="#F3E8FF" rx="6" />
+    <text x="15" y="21" font-size="12" font-weight="700" fill="#7E22CE">SHADOW CANDIDATE</text>
+    <text x="165" y="21" font-size="10" font-weight="500" fill="#6B21A8">(Provisional State <tspan font-style="italic">s</tspan><tspan font-size="8" dy="2">p,t</tspan>)</text>
+    
+    <text x="15" y="56" font-size="10.5" font-weight="600" fill="#0F172A">Candidate State:</text>
+    <text x="145" y="56" font-size="10.5" fill="#334155"><tspan font-style="italic">s</tspan><tspan font-size="8" dy="2">p,t</tspan><tspan dy="-2"> (Scalar Recurrent)</tspan></text>
+    
+    <text x="15" y="78" font-size="10.5" font-weight="600" fill="#0F172A">Shadow Output:</text>
+    <text x="145" y="78" font-size="10.5" font-weight="700" fill="#7E22CE"><tspan font-style="italic">y</tspan><tspan font-size="8" dy="2">prov,t</tspan><tspan dy="-2"> = </tspan><tspan font-style="italic">y</tspan><tspan font-size="8" dy="2">base,t</tspan><tspan dy="-2"> + </tspan><tspan font-style="italic">w</tspan><tspan font-size="8" dy="2">p</tspan><tspan dy="-2"> </tspan><tspan font-style="italic">s</tspan><tspan font-size="8" dy="2">p,t</tspan></text>
+
+    <text x="15" y="100" font-size="10.5" font-weight="600" fill="#0F172A">Parallel Learning:</text>
+    <text x="145" y="100" font-size="10" fill="#334155">Local RTRL on candidate weights</text>
+
+    <rect x="15" y="120" width="295" height="46" fill="#FFFFFF" stroke="#D8B4FE" rx="4" />
+    <text x="162" y="138" font-size="10" font-weight="700" text-anchor="middle" fill="#7E22CE">Counterfactual Evidence Tracking</text>
+    <text x="162" y="153" font-size="9" text-anchor="middle" fill="#64748B">&#916;&#8466;<tspan font-size="7" dy="2">t</tspan><tspan dy="-2"> = </tspan><tspan font-style="italic">e</tspan><tspan font-size="7" dy="2">base,t</tspan><tspan font-size="7" dy="-4">2</tspan><tspan dy="2"> &#x2212; (</tspan><tspan font-style="italic">y</tspan><tspan font-size="7" dy="2">t</tspan><tspan dy="-2"> &#x2212; </tspan><tspan font-style="italic">y</tspan><tspan font-size="7" dy="2">prov,t</tspan><tspan dy="-2">)</tspan><tspan font-size="7" dy="-4">2</tspan></text>
+  </g>
+
+  <!-- Bottom: Probation Decision Gate -->
+  <g transform="translate(30, 262)" filter="url(#card-shadow)">
+    <rect width="740" height="112" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" rx="6" />
+    
+    <!-- Gate Header -->
+    <text x="20" y="24" font-size="12" font-weight="700" fill="#0F172A">PROBATION DECISION GATE</text>
+    <rect x="220" y="10" width="230" height="20" fill="#E0F2FE" rx="10" />
+    <text x="335" y="24" font-size="9" font-weight="600" text-anchor="middle" fill="#0369A1">Evaluated at Horizon <tspan font-style="italic">T</tspan><tspan font-size="7.5" dy="2">prob</tspan><tspan dy="-2"> = 50 steps</tspan></text>
+    
+    <!-- Promotion Branch (Left) -->
+    <g transform="translate(20, 36)">
+      <rect width="340" height="64" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.2" rx="4" />
+      <text x="12" y="20" font-size="10.5" font-weight="700" fill="#15803D">PROMOTE (Candidate Validated)</text>
+      <text x="12" y="38" font-size="9.5" fill="#166534">Condition: Relative MSE Gain &gt; <tspan font-style="italic">&#952;</tspan><tspan font-size="7.5" dy="2">promote</tspan><tspan dy="-2"> (0.05 / &gt;5%)</tspan></text>
+      <text x="12" y="53" font-size="9" fill="#475569">Action: <tspan font-style="italic">g</tspan><tspan font-size="7" dy="2">p</tspan><tspan dy="-2"> &#x2192; 1.0 (Coupled to live output), enters ACTIVE state</tspan></text>
+    </g>
+
+    <!-- Discard Branch (Right) -->
+    <g transform="translate(380, 36)">
+      <rect width="340" height="64" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.2" rx="4" />
+      <text x="12" y="20" font-size="10.5" font-weight="700" fill="#B91C1C">DISCARD (Candidate Insufficient)</text>
+      <text x="12" y="38" font-size="9.5" fill="#991B1B">Condition: Relative MSE Gain &#x2264; <tspan font-style="italic">&#952;</tspan><tspan font-size="7.5" dy="2">promote</tspan><tspan dy="-2"> (&#x2264; 5%)</tspan></text>
+      <text x="12" y="53" font-size="9" fill="#475569">Action: Candidate buffers excised, slot returns to DORMANT</text>
+    </g>
+  </g>
+</svg>"""
+
+# -------------------------------------------------------------
+# D4: Non-Interfering Shadow Probation (PT-BR Version)
+# -------------------------------------------------------------
+d4_ptbr_svg = """<svg width="800" height="390" viewBox="0 0 800 390" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr4-pt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <filter id="card-shadow-pt" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="390" fill="#FFFFFF" rx="8" />
+  
+  <!-- Title & Subtitle -->
+  <text x="30" y="30" font-size="15" font-weight="700" fill="#0F172A">D4: Estágio Probatório em Sombra Não Interferente</text>
+  <text x="30" y="48" font-size="11" fill="#64748B">Candidato provisório aprende contrafactualmente em isolamento sem injetar choque na inferência ativa</text>
+
+  <!-- Left Card: Live Active Predictor -->
+  <g transform="translate(30, 68)" filter="url(#card-shadow-pt)">
+    <rect width="325" height="180" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5" rx="6" />
+    <rect x="0" y="0" width="325" height="32" fill="#DCFCE7" rx="6" />
+    <text x="15" y="21" font-size="12" font-weight="700" fill="#166534">PREDITOR ATIVO</text>
+    <text x="135" y="21" font-size="10" font-weight="500" fill="#15803D">(Modelo Causal em Produção)</text>
+    
+    <text x="15" y="56" font-size="10.5" font-weight="600" fill="#0F172A">Modelo Linear Base:</text>
+    <text x="150" y="56" font-size="10.5" fill="#334155"><tspan font-style="italic">w</tspan><tspan font-size="8" dy="3">base</tspan><tspan dy="-3"> &#x2208; &#x211D;</tspan><tspan font-size="8" dy="-4">D</tspan></text>
+    
+    <text x="15" y="78" font-size="10.5" font-weight="600" fill="#0F172A">Saída Causal:</text>
+    <text x="150" y="78" font-size="10.5" font-weight="700" fill="#15803D">&#375;<tspan font-size="8" dy="3">t</tspan><tspan dy="-3"> = </tspan><tspan font-style="italic">w</tspan><tspan font-size="8" dy="3">base</tspan><tspan font-size="7.5" dy="-5">T</tspan><tspan dy="2" font-style="italic"> x</tspan><tspan font-size="8" dy="3">t</tspan><tspan dy="-3"> + </tspan><tspan font-style="italic">w</tspan><tspan font-size="8" dy="3">s</tspan><tspan dy="-3"> </tspan><tspan font-style="italic">s</tspan><tspan font-size="8" dy="3">t</tspan></text>
+
+    <text x="15" y="100" font-size="10.5" font-weight="600" fill="#0F172A">Papel Operacional:</text>
+    <text x="150" y="100" font-size="10" fill="#334155">Conduz ações imediatas no fluxo</text>
+
+    <rect x="15" y="120" width="295" height="46" fill="#FFFFFF" stroke="#86EFAC" rx="4" />
+    <text x="162" y="139" font-size="10" font-weight="700" text-anchor="middle" fill="#166534">Caminho de Inferência Protegido</text>
+    <text x="162" y="153" font-size="9" text-anchor="middle" fill="#64748B">Acoplamento nulo a parâmetros em teste</text>
+  </g>
+
+  <!-- Center: Non-Interference Barrier Column -->
+  <g transform="translate(365, 68)">
+    <rect width="70" height="180" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" rx="6" />
+    
+    <!-- Top Horizontal Header Pill -->
+    <rect x="-10" y="-8" width="90" height="24" fill="#1E293B" rx="12" />
+    <text x="35" y="8" font-size="8" font-weight="700" text-anchor="middle" fill="#FFFFFF" letter-spacing="0.04em">BARREIRA</text>
+    
+    <!-- Upper Vertical Dashed Line Segment -->
+    <line x1="35" y1="22" x2="35" y2="68" stroke="#64748B" stroke-dasharray="4,3" stroke-width="2" />
+    
+    <!-- Middle Gate Badge Card -->
+    <rect x="4" y="70" width="62" height="42" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5" rx="4" />
+    <text x="35" y="87" font-size="11" font-weight="800" text-anchor="middle" fill="#0F172A"><tspan font-style="italic">g</tspan><tspan font-size="8" dy="2">p</tspan><tspan dy="-2"> = 0,0</tspan></text>
+    <text x="35" y="102" font-size="7.5" font-weight="700" text-anchor="middle" fill="#0284C7">PORTÃO</text>
+
+    <!-- Lower Vertical Dashed Line Segment -->
+    <line x1="35" y1="114" x2="35" y2="128" stroke="#64748B" stroke-dasharray="4,3" stroke-width="2" />
+
+    <!-- Bottom Isolation Pill Card -->
+    <rect x="3" y="130" width="64" height="42" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" rx="4" />
+    <text x="35" y="145" font-size="8" font-weight="700" text-anchor="middle" fill="#334155">Isolamento</text>
+    <text x="35" y="156" font-size="8" font-weight="700" text-anchor="middle" fill="#334155">Estrito</text>
+    <text x="35" y="167" font-size="7" font-weight="600" text-anchor="middle" fill="#64748B"><tspan font-style="italic">g</tspan><tspan font-size="6" dy="2">p</tspan><tspan dy="-2">&#183;</tspan><tspan font-style="italic">s</tspan><tspan font-size="6" dy="2">p</tspan><tspan dy="-2"> = 0</tspan></text>
+  </g>
+
+  <!-- Right Card: Shadow Provisional Candidate -->
+  <g transform="translate(445, 68)" filter="url(#card-shadow-pt)">
+    <rect width="325" height="180" fill="#FAF5FF" stroke="#D8B4FE" stroke-width="1.5" rx="6" />
+    <rect x="0" y="0" width="325" height="32" fill="#F3E8FF" rx="6" />
+    <text x="15" y="21" font-size="12" font-weight="700" fill="#7E22CE">CANDIDATO EM SOMBRA</text>
+    <text x="185" y="21" font-size="10" font-weight="500" fill="#6B21A8">(Estado <tspan font-style="italic">s</tspan><tspan font-size="8" dy="2">p,t</tspan>)</text>
+    
+    <text x="15" y="56" font-size="10.5" font-weight="600" fill="#0F172A">Estado Candidato:</text>
+    <text x="150" y="56" font-size="10.5" fill="#334155"><tspan font-style="italic">s</tspan><tspan font-size="8" dy="2">p,t</tspan><tspan dy="-2"> (Recorrente Escalar)</tspan></text>
+    
+    <text x="15" y="78" font-size="10.5" font-weight="600" fill="#0F172A">Saída em Sombra:</text>
+    <text x="150" y="78" font-size="10.5" font-weight="700" fill="#7E22CE"><tspan font-style="italic">y</tspan><tspan font-size="8" dy="2">prov,t</tspan><tspan dy="-2"> = </tspan><tspan font-style="italic">y</tspan><tspan font-size="8" dy="2">base,t</tspan><tspan dy="-2"> + </tspan><tspan font-style="italic">w</tspan><tspan font-size="8" dy="2">p</tspan><tspan dy="-2"> </tspan><tspan font-style="italic">s</tspan><tspan font-size="8" dy="2">p,t</tspan></text>
+
+    <text x="15" y="100" font-size="10.5" font-weight="600" fill="#0F172A">Treinamento Local:</text>
+    <text x="150" y="100" font-size="10" fill="#334155">RTRL exato em paralelo</text>
+
+    <rect x="15" y="120" width="295" height="46" fill="#FFFFFF" stroke="#D8B4FE" rx="4" />
+    <text x="162" y="138" font-size="10" font-weight="700" text-anchor="middle" fill="#7E22CE">Acumulação Contrafactual de Evidência</text>
+    <text x="162" y="153" font-size="9" text-anchor="middle" fill="#64748B">&#916;&#8466;<tspan font-size="7" dy="2">t</tspan><tspan dy="-2"> = </tspan><tspan font-style="italic">e</tspan><tspan font-size="7" dy="2">base,t</tspan><tspan font-size="7" dy="-4">2</tspan><tspan dy="2"> &#x2212; (</tspan><tspan font-style="italic">y</tspan><tspan font-size="7" dy="2">t</tspan><tspan dy="-2"> &#x2212; </tspan><tspan font-style="italic">y</tspan><tspan font-size="7" dy="2">prov,t</tspan><tspan dy="-2">)</tspan><tspan font-size="7" dy="-4">2</tspan></text>
+  </g>
+
+  <!-- Bottom: Probation Decision Gate -->
+  <g transform="translate(30, 262)" filter="url(#card-shadow-pt)">
+    <rect width="740" height="112" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" rx="6" />
+    
+    <!-- Gate Header -->
+    <text x="20" y="24" font-size="12" font-weight="700" fill="#0F172A">PORTÃO DE PROVAÇÃO</text>
+    <rect x="220" y="10" width="240" height="20" fill="#E0F2FE" rx="10" />
+    <text x="340" y="24" font-size="9" font-weight="600" text-anchor="middle" fill="#0369A1">Avaliado no horizonte <tspan font-style="italic">T</tspan><tspan font-size="7.5" dy="2">prob</tspan><tspan dy="-2"> = 50 passos</tspan></text>
+    
+    <!-- Promotion Branch (Left) -->
+    <g transform="translate(20, 36)">
+      <rect width="340" height="64" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.2" rx="4" />
+      <text x="12" y="20" font-size="10.5" font-weight="700" fill="#15803D">PROMOVER (Candidato Validado)</text>
+      <text x="12" y="38" font-size="9.5" fill="#166534">Condição: Ganho Relativo &gt; <tspan font-style="italic">&#952;</tspan><tspan font-size="7.5" dy="2">promote</tspan><tspan dy="-2"> (0,05 / &gt;5%)</tspan></text>
+      <text x="12" y="53" font-size="9" fill="#475569">Ação: <tspan font-style="italic">g</tspan><tspan font-size="7" dy="2">p</tspan><tspan dy="-2"> &#x2192; 1,0 (Acoplado à predição ativa), entra em ATIVO</tspan></text>
+    </g>
+
+    <!-- Discard Branch (Right) -->
+    <g transform="translate(380, 36)">
+      <rect width="340" height="64" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.2" rx="4" />
+      <text x="12" y="20" font-size="10.5" font-weight="700" fill="#B91C1C">DESCARTAR (Ganho Insuficiente)</text>
+      <text x="12" y="38" font-size="9.5" fill="#991B1B">Condição: Ganho Relativo &#x2264; <tspan font-style="italic">&#952;</tspan><tspan font-size="7.5" dy="2">promote</tspan><tspan dy="-2"> (&#x2264; 5%)</tspan></text>
+      <text x="12" y="53" font-size="9" fill="#475569">Ação: Buffers eliminados, slot retorna para DORMENTE</text>
+    </g>
+  </g>
+</svg>"""
+'''
+
+new_lines = lines[:d4_start] + [replacement] + lines[d5_start:]
+
+with open(GEN_FILE, "w", encoding="utf-8") as f:
+    f.writelines(new_lines)
+
+print(f"Direct line slice replacement successful in {GEN_FILE}.")

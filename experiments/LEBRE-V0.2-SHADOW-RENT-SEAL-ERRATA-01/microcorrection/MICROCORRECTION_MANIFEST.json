@@ -1,0 +1,48 @@
+{
+  "stage": "LEBRE-V0.2-SHADOW-RENT-SEAL-ERRATA-01-MICROCORRECTION",
+  "parent_study": "LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01",
+  "errata_study": "LEBRE-V0.2-SHADOW-RENT-SEAL-ERRATA-01",
+  "timestamp_utc": "2026-09-22T09:50:00Z",
+  "governance_invariants": {
+    "CANONICAL_VERSION": "0.1",
+    "LEBRE_V0_1_STATUS": "FROZEN_WITH_SCOPE_LIMITS",
+    "M3_STATUS": "UNOPENED",
+    "NOVELTY_CLAIM_READY": "NO",
+    "CANONICAL_SRC_CHANGED": "NO",
+    "CANONICAL_TESTS_CHANGED": "NO"
+  },
+  "test_audit": {
+    "test_files_discovered": 20,
+    "pytest_items_collected": 124,
+    "pytest_items_executed": 124,
+    "pytest_items_passed": 124,
+    "pytest_items_failed": 0,
+    "pytest_items_skipped": 0,
+    "unittest_items_discovered": 57
+  },
+  "memory_reconciliation": {
+    "S0_PEAK_WORKING_SRAM_BYTES": 1064,
+    "S1_PEAK_WORKING_SRAM_BYTES": 904,
+    "S2_PEAK_WORKING_SRAM_BYTES": 1068,
+    "S3_PEAK_WORKING_SRAM_BYTES": 1080,
+    "S0_PEAK_WORKING_SRAM_STACK_ALLOCATED_BYTES": 1072,
+    "S1_PEAK_WORKING_SRAM_STACK_ALLOCATED_BYTES": 904,
+    "S2_PEAK_WORKING_SRAM_STACK_ALLOCATED_BYTES": 1076,
+    "S3_PEAK_WORKING_SRAM_STACK_ALLOCATED_BYTES": 1088,
+    "HISTORICAL_R2_PERSISTENT_MEMORY_STATUS": "FAIL",
+    "SHADOW_RENT_GATE3_PEAK_STATUS": "FAIL"
+  },
+  "unit_reconciliation": {
+    "SWITCHING_LATENCY_UNITS": "stream_steps",
+    "PREVIOUS_LABEL_ERROR": "seconds",
+    "STATUS": "RECONCILED"
+  },
+  "artifact_hashes_sha256": {
+    "MEMORY_LIFETIME_AUDIT.md": "a14745e42e1a25d52902f7bacc88566991dd64650a220544341c5d95b490dfdd",
+    "MICROCORRECTED_MEMORY_LEDGER.csv": "a6ef693f946c5e6fbcc2dbc96fd81c9c4b419751e262e6534185c576a999c5a8",
+    "TEST_COUNT_AUDIT.md": "dc178456fd3f2d761043e33e29617c3645e9938be988dc0a9f3b4045aae2a03c",
+    "SWITCH_LATENCY_UNIT_AUDIT.md": "1962839491b8be6acfa60e4ea70025615585389e10cca0342ef200a90ccd4902",
+    "MICROCORRECTION_CORRIGENDUM.md": "8a893f75418247f5a645abfc9ead2ca0498e968fe7ec7b22076fbaf75fbaa800",
+    "generate_microcorrection.py": "b81d6d1d5ea012a2a87df5fa4f9ea86a617a720ae615875dd702175747e76b82"
+  }
+}

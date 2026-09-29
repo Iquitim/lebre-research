@@ -1,0 +1,11 @@
+task_id,n_active_final,n_struct_final,n_events
+BR1_ONS_Carga_SECO,3.0,3.0,9.0
+BR2_ONS_Carga_N,4.0,4.0,40.0
+BR3_ONS_Eolica_NE,1.0,1.0,25.0
+BR4_ONS_Solar_NE,3.0,3.0,7.0
+BR5_BCB_USDBRL,1.0,1.0,1.0
+R1_UCI_AirQuality_CO,0.0,0.0,2.0
+R2_UCI_Tetouan_Z1,3.0,3.0,25.0
+R3_UCI_BikeSharing,4.0,4.0,12.0
+R4_Oikolab_Temp,0.0,0.0,74.0
+R5_Oikolab_Wind,2.0,2.0,50.0

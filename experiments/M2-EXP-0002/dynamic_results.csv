@@ -1,0 +1,5 @@
+task_key,task_type,r1_delays,r2_delays,retained_recall_pct,obsolete_eviction_latency,new_pair_acquisition_latency,transition_mse,post_shift_mse,compute_flops
+D1_lags_change,lags_change,"[2, 5]","[1, 8]",0.0,85.0,210.0,2.9996099562233836,2.144086856618689,105.8
+D2_feats_change,feats_change,"[2, 5]","[2, 5]",0.0,85.0,210.0,2.823566558874862,1.7536999174712247,105.8
+D3_joint_change,joint_change,"[2, 5]","[1, 8]",0.0,85.0,210.0,2.925856083988565,1.7390168027913926,105.8
+D4_retention,overlapping_retention,"[2, 5]","[2, 8]",100.0,85.0,210.0,2.7088910702433853,1.8013463761584239,105.8

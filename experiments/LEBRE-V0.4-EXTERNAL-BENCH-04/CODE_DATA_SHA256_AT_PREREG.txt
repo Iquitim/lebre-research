@@ -1,0 +1,10 @@
+96abc2124e555ce197b1f65089cdbce1180a29392395f939af4139996b5e4a72 *bench04.py
+b88dfd9e18b22f59a9cf9997d325db53d6d89ae2b23c092644ca9fc02c928d25 *chronos04.py
+7c8ca093cdad869492b51657403c9772ca0f6c598f382b92c6a292a89b915a71 *newmodels.py
+aa2473b2fb6f96338806026b231cf2cf6c47afd2396c129b7920cafc2c2b279e *../../data/external_bench04/load04.py
+806dd64d049af8e1fb6df55be5f74efebc1ae01d90b6258830765ff69feb38d2 *../../data/external_bench04/BALANCO_2023.csv
+cb63c58aa9b0d45e5099471e6c91da3147dd511f2f9950f129f92a4354ca62bb *../../data/external_bench04/BALANCO_2024.csv
+3a7e07005bd991ade3cccf402b21737564713230f777e1bcda06b9c6e9a78096 *../../data/external_bench04/CURVA_CARGA_2023.csv
+0c7e02591887591ec0a1e758eeb744dcd24c69e91c09e032ce7772838676cc32 *../../data/external_bench04/CURVA_CARGA_2024.csv
+fde588fbfe43e6c7b533c0473777634edd668b318c87a4957ffe970a820cdecf *../../data/external_bench04/bcb_usd_1.json
+2ac8a4df66df2d607d179fba31e8b9fcf4229c4aef9912c35e39860e6d104994 *../../data/external_bench04/bcb_usd_2.json

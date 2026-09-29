@@ -1,0 +1,5 @@
+outcome_class,candidate_count,fraction_of_candidates,mean_lifetime_steps,median_lifetime_steps,p90_lifetime_steps,mean_shadow_observations,mean_param_updates,mean_fp_per_candidate,total_fp_stream,mean_fp_per_step,memory_traffic_bytes,promotion_probability
+FAILED_AT_FULL_PROBATION,37400,0.957771005659556,75.0,75.0,75.0,15.0,7.0,119.34,4463316.0,1.7690833333333333,182,0.0
+PROMOTED_TRUE_SUPPORT,1250,0.03201106302338088,75.0,75.0,75.0,15.0,7.0,119.34,149175.0,0.03003749999999999,182,1.0
+PROMOTED_SPURIOUS,399,0.010217931317063177,75.0,75.0,75.0,15.0,7.0,119.34,47616.0,0.010012499999999997,182,1.0
+TOTAL_ALL_CANDIDATES,39049,1.0,75.0,75.0,75.0,15.0,7.0,119.34,4660107.0,1.8091333333333333,182,0.04222899434044406
