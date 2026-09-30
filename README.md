@@ -1,5 +1,7 @@
 # lebre-research — research record of the LEBRE online forecaster
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23049102.svg)](https://doi.org/10.5281/zenodo.23049102)
+
 This repository answers one question: **how were the LEBRE results obtained?** It holds the complete research record: implementations, experiment scripts, pre-registrations, results, frozen versions with SHA-256 manifests, documents and the tools needed to re-run them.
 
 > **LEBRE** (*Lifecycle-governed Evidence-Based Resource Evolution*) is an online, one-step-ahead forecaster for time series with inputs. It runs within a budget of a few hundred floating-point operations per step. Each structural change is accepted by an anytime-valid sequential test (e-process) of predictive improvement.
@@ -72,7 +74,12 @@ Details are in `NOTICE`.
 
 ## Citation
 
-`CITATION.cff` and an archive DOI will be added with the first public release.
+Lima, S. (2026). *LEBRE research record — v0.52-r1* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23049103
+
+- `10.5281/zenodo.23049103`: this version (v0.52-r1).
+- `10.5281/zenodo.23049102`: all versions; resolves to the latest.
+
+See also `CITATION.cff`.
 
 ---
 

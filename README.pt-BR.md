@@ -1,5 +1,7 @@
 # lebre-research — registro de pesquisa do previsor online LEBRE
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23049102.svg)](https://doi.org/10.5281/zenodo.23049102)
+
 Este repositório responde a uma pergunta: **como os resultados da LEBRE foram obtidos?** Ele guarda o registro completo:
 - implementações;
 - scripts de experimento;
@@ -46,3 +48,9 @@ Eles devem ir para um arquivo permanente (por exemplo, Zenodo). A cópia restaur
 - **Exceções:** dados de terceiros mantêm as licenças originais; o logo fica fora das duas licenças.
 
 Detalhes em `NOTICE`.
+
+## Citação
+
+Lima, S. (2026). *LEBRE research record — v0.52-r1* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23049103
+
+O DOI `10.5281/zenodo.23049102` reúne todas as versões e aponta sempre para a mais recente.
