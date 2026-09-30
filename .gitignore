@@ -4,7 +4,7 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 
-# ---- Large or third-party material kept OUT of git (listed with SHA-256 in ARTIFACTS_MANIFEST.tsv)
+# ---- Large or third-party material kept OUT of git (listed with SHA-256 in docs/research/ARTIFACTS_MANIFEST.tsv)
 # Toolchains (download sources in tools/README.md)
 /tools/*
 !/tools/README.md

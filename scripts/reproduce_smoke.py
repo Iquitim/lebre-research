@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """reproduce_smoke.py — fast end-to-end check that the v0.52-r1 results can still be regenerated from this repository.
 
-Stages (each reports PASS / FAIL / SKIP; SKIP means a required artifact outside git is absent — see ARTIFACTS_MANIFEST.tsv):
+Stages (each reports PASS / FAIL / SKIP; SKIP means a required artifact outside git is absent — see docs/research/ARTIFACTS_MANIFEST.tsv):
   1 config    configs/lebre_v052_canonical.json equals the frozen canonical configuration.
   2 model     the frozen LEBRE v0.52 re-run on reserve-3 series reproduces the saved predictions BIT FOR BIT
               (needs data/external_v052 and experiments/LEBRE-V0.52-HELDOUT-03/preds/*.npz).

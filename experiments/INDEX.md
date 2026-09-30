@@ -1,6 +1,6 @@
 # Experiment index
 
-The 85 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
+The 86 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
 
 **Status legend:**
 - **F**: covered by a frozen SHA-256 manifest in `docs/architecture/`;
@@ -55,6 +55,6 @@ The v0.1 specification remains the project's canonical reference; its freeze is 
 - **Benchmark protocol:** `BENCH-01A`, `BENCH-01A-R`, `BENCH-01B`, `CAR-01`, `PRA-01`, `PRA-01R`.
 - **Architecture specification and seal:** `ARCH-NAME-01`, `ARCH-SPEC-01`, `…-01R`, `…-01R2`, `…-01R2a`, `AUDIT-SEAL-01`, `LEBRE-SPEC-FREEZE-01`.
 - **Mechanism studies:** `CAPACITY-DECOMPOSITION-01`, `BOUNDED-HISTORY-LAG-INTEGRATION-01`, `DYNAMIC-LAG-LIFECYCLE-01`, `DYNAMIC-LAG-LIFECYCLE-01A`, `PROMOTION-POLICY-01`.
-- **Shared benchmark code:** `bench01/`, imported as `experiments.bench01` by later lines, e.g. the causal input scaler. `run_exp_0001.py` is the first experiment runner.
+- **Shared benchmark code:** `bench01/`, imported as `experiments.bench01` by later lines, e.g. the causal input scaler. `EXP-0001/` holds the first experiment runner with its configuration and results.
 
-Early-phase documents at the repository root (`BENCH_01_SPEC.md`, `M1_SPEC.md`, `M2_*.md`, `PROJECT_STATE.md`, `FAILURE_LOG.md`, …) and the packages `src/`, `tests/`, `configs/exp_0001.json`, `results/` belong to this phase. They are referenced by name from many reports and are therefore left in place.
+Early-phase documents (`BENCH_01_SPEC.md`, `M1_SPEC.md`, `M2_*.md`, `PROJECT_STATE.md`, `FAILURE_LOG.md`, …) are in `docs/history/phase-v0.1/`; reports of this phase still cite them by file name. The packages `src/` and `tests/` also belong to this phase; they stay at the root because 43 early scripts import `src`.

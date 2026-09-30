@@ -20,7 +20,7 @@ O estado documentado atual é a **LEBRE v0.52, especificação revisão 1 ("v0.5
 | Entender a LEBRE v0.52 e o que foi medido | `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.52_SPEC_r1_PTBR.pdf` |
 | Saber como cada número foi produzido | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) (em inglês) |
 | Navegar pelas pastas de experimentos | [`experiments/INDEX.md`](experiments/INDEX.md) |
-| Sementes e divisões de dados | [`SEEDS.md`](SEEDS.md) |
+| Sementes e divisões de dados | [`docs/research/SEEDS.md`](docs/research/SEEDS.md) |
 | Configuração canônica | [`configs/lebre_v052_canonical.json`](configs/lebre_v052_canonical.json) |
 | Ambiente, ferramentas e dados | [`environment/`](environment/), [`tools/README.md`](tools/README.md), [`data/README.md`](data/README.md) |
 | Conferir a integridade dos congelamentos | `python scripts/verify_integrity.py` |
@@ -32,7 +32,7 @@ Os congelamentos são conferidos por manifestos SHA-256 com caminhos relativos, 
 
 ## O que fica fora do git
 
-Os arquivos abaixo estão listados com tamanho e SHA-256 em `ARTIFACTS_MANIFEST.tsv` (802 arquivos, cerca de 3 GB):
+Os arquivos abaixo estão listados com tamanho e SHA-256 em `docs/research/ARTIFACTS_MANIFEST.tsv` (802 arquivos, cerca de 3 GB):
 - dados brutos;
 - previsões por série (`*.npz`);
 - pacotes de ferramentas;

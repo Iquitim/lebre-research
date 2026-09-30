@@ -18,11 +18,11 @@ from src.policies.round_robin import RoundRobinProbePolicy
 from src.metrics.tracker import ExperimentTracker
 
 def run_experiment():
-    config_path = os.path.join("configs", "exp_0001.json")
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "exp_0001.json")
     with open(config_path, "r") as f:
         config = json.load(f)
         
-    results_dir = os.path.join("results", "exp_0001")
+    results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
     os.makedirs(results_dir, exist_ok=True)
     
     seeds = config["seeds"]

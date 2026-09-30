@@ -8,7 +8,7 @@ Every number in the v0.52 specification, revision 1 (`docs/architecture/pdf/LEBR
    - Python 3.11 with `environment/requirements-research.txt`;
    - **pandas must be 2.2.3**: pandas ≥ 3 makes `to_numpy()` arrays read-only and breaks the frozen data loader;
    - toolchains as in `environment/TOOLCHAIN.md`.
-2. **Restore the artifacts kept out of git** (`ARTIFACTS_MANIFEST.tsv`: data, predictions, toolchain archives). Then run `python scripts/make_artifact_manifest.py --check`.
+2. **Restore the artifacts kept out of git** (`docs/research/ARTIFACTS_MANIFEST.tsv`: data, predictions, toolchain archives). Then run `python scripts/make_artifact_manifest.py --check`.
 3. `python scripts/verify_integrity.py` checks all frozen SHA-256 manifests. It must report `PASS`.
 4. `python scripts/reproduce_smoke.py` runs four checks:
    - configuration;

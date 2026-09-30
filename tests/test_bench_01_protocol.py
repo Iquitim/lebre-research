@@ -10,7 +10,7 @@ import numpy as np
 import pytest
 
 CONFIG_PATH = Path("experiments/BENCH-01A/bench_01_locked_config.json")
-SPEC_PATH = Path("BENCH_01_SPEC.md")
+SPEC_PATH = Path("docs/history/phase-v0.1/BENCH_01_SPEC.md")
 
 # Reconciled cryptographic hashes (BENCH-01A-R)
 EXPECTED_SPEC_SHA256 = "f516914da4d511e9ed58c2eb575d628bf3e01ebaab9f8bf63f9da0ebfe0e0c28"

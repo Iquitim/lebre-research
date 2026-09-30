@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """make_artifact_manifest.py — lists every file kept OUT of git (per .gitignore) that belongs to the research record,
-with size and SHA-256, into ARTIFACTS_MANIFEST.tsv. Caches (__pycache__, .pytest_cache) and QA renders are excluded.
+with size and SHA-256, into docs/research/ARTIFACTS_MANIFEST.tsv. Caches (__pycache__, .pytest_cache) and QA renders are excluded.
 These files must be restored from the artifact archive (e.g. a Zenodo deposit) for a full re-run; checkout + restore is
 then verified with:  python scripts/make_artifact_manifest.py --check
 The toolchain archives (tools/*.zip) are listed too, so their exact bytes can be checked after download."""
@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "ARTIFACTS_MANIFEST.tsv"
+OUT = ROOT / "docs" / "research" / "ARTIFACTS_MANIFEST.tsv"
 SKIP = ("__pycache__", ".pytest_cache", "scratch/pdf_qa", ".png", ".pdb")   # .pdb debug symbols embed local paths
 KEEP_TOOLS = ("tools/gcc.zip", "tools/renode.zip")
 

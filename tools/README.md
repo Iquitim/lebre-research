@@ -1,6 +1,6 @@
 # tools/ (not in git)
 
-Toolchains for the simulated-microcontroller measurements. The archives are kept out of git. Their exact SHA-256 values are in `ARTIFACTS_MANIFEST.tsv`.
+Toolchains for the simulated-microcontroller measurements. The archives are kept out of git. Their exact SHA-256 values are in `docs/research/ARTIFACTS_MANIFEST.tsv`.
 
 | Archive | Unpacked to | Upstream |
 |---|---|---|

@@ -1,6 +1,6 @@
 # data/ (raw data not in git)
 
-Only loaders, checksum lists and manifests are tracked. The raw public datasets are listed with SHA-256 in `ARTIFACTS_MANIFEST.tsv` and must be downloaded (or restored from the artifact archive) before re-running.
+Only loaders, checksum lists and manifests are tracked. The raw public datasets are listed with SHA-256 in `docs/research/ARTIFACTS_MANIFEST.tsv` and must be downloaded (or restored from the artifact archive) before re-running.
 
 | Folder | Content | How to obtain | Licence |
 |---|---|---|---|

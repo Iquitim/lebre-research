@@ -2,7 +2,7 @@
 """verify_integrity.py — checks every SHA-256 manifest of the project (frozen versions and published documents).
 
 Each line is reported as OK, MISMATCH (file present, different bytes) or MISSING (not present in this checkout; files
-kept out of git are listed in ARTIFACTS_MANIFEST.tsv and must be restored from the artifact archive). Known, documented
+kept out of git are listed in docs/research/ARTIFACTS_MANIFEST.tsv and must be restored from the artifact archive). Known, documented
 supersessions are reported separately. Exit code 1 only on MISMATCH that is not a documented supersession.
 Usage: python scripts/verify_integrity.py [--quiet]"""
 import hashlib

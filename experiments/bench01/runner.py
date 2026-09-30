@@ -27,7 +27,7 @@ from experiments.bench01.baselines import (
     CurrentOnlyLinear, NLMS, RLS, FixedLagLinear
 )
 
-SPEC_PATH = ROOT / "BENCH_01_SPEC.md"
+SPEC_PATH = ROOT / "docs" / "history" / "phase-v0.1" / "BENCH_01_SPEC.md"
 PRIMARY_CFG_PATH = ROOT / "experiments/BENCH-01A/bench_01_locked_config.json"
 SUPP_CFG_PATH = ROOT / "experiments/BENCH-01B/BENCH_01B_SUPPLEMENTARY_PRIOR_ART_CONFIG.json"
 OUT_DIR = ROOT / "experiments/BENCH-01B"
