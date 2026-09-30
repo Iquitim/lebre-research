@@ -3,7 +3,10 @@
   "title": "LEBRE research record — v0.52-r1",
   "version": "v0.52-r1",
   "creators": [
-    {"name": "Lima, Silvano"}
+    {
+      "name": "Lima, Silvano",
+      "orcid": "0009-0000-3868-6747"
+    }
   ],
   "description": "<p>Research record of <strong>LEBRE</strong> (Lifecycle-governed Evidence-Based Resource Evolution), an online one-step-ahead forecaster for time series with inputs, designed for a budget of a few hundred floating-point operations per step. Each structural change (adding, removing, swapping or refining the response to a whole input) is accepted by an anytime-valid sequential test (e-process) of predictive improvement, within an online multiple-testing procedure.</p><p>This archive contains the complete record behind the LEBRE v0.52 specification, revision 1: the Python reference implementation, a C99 port, firmware and scripts for a simulated Cortex-M4F microcontroller (Renode), experiment scripts, pre-registrations, result tables, reports, frozen versions with SHA-256 manifests, the specification documents (English and Portuguese), and scripts to verify integrity and to reproduce results. Raw third-party data, per-series prediction arrays and toolchains are not included; they are listed with SHA-256 in ARTIFACTS_MANIFEST.tsv.</p><p><strong>Scope and limits.</strong> The results cover hydrology (ONS, CAMELS-BR) and building energy (BDG2) series with 1–5 inputs and one-step forecasting. v0.52 is a frozen research version, not promoted. The e-values are valid under the stated assumptions, and false-change control was verified empirically. The declared cost contract was narrowly not met (+3.7% mean, +2.0% peak). Microcontroller costs come from a simulator, not a board. The testing mechanism did not improve accuracy over an all-inputs-on ablation. The core mechanism is not original. See the specification, section 19.</p><p>Licences: code under Apache-2.0; documents, reports, figures and result tables under CC-BY-4.0; third-party data under their original licences (see NOTICE).</p>",
   "license": "Apache-2.0",

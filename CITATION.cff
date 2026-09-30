@@ -6,6 +6,7 @@ version: "v0.52-r1"
 authors:
   - family-names: "Lima"
     given-names: "Silvano"
+    orcid: "https://orcid.org/0009-0000-3868-6747"
 repository-code: "https://github.com/Iquitim/lebre-research"
 license:
   - Apache-2.0
