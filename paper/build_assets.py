@@ -20,9 +20,14 @@ import matplotlib.ticker as mt  # noqa: E402
 
 GEN, FIG = HERE / "generated", HERE / "figures"
 GEN.mkdir(exist_ok=True); FIG.mkdir(exist_ok=True)
-plt.rcParams.update({"font.family": "serif", "font.serif": ["DejaVu Serif"], "font.size": 8, "axes.spines.top": False,
-                     "axes.spines.right": False, "pdf.fonttype": 42, "axes.titlesize": 8.5, "legend.frameon": False,
-                     "legend.fontsize": 7, "savefig.bbox": "tight", "savefig.pad_inches": 0.02})
+# Figures are drawn at their final printed size (text width 6.5 in) with the document font (Computer Modern),
+# so that no scaling happens in LaTeX and figure text matches the body text.
+plt.rcParams.update({"font.family": "serif", "font.serif": ["cmr10"], "mathtext.fontset": "cm", "axes.unicode_minus": False,
+                     "axes.formatter.use_mathtext": True, "font.size": 8.5, "axes.labelsize": 8.5, "xtick.labelsize": 8,
+                     "ytick.labelsize": 8, "legend.fontsize": 7.5, "axes.titlesize": 9, "axes.spines.top": False,
+                     "axes.spines.right": False, "axes.linewidth": 0.6, "xtick.major.width": 0.6, "ytick.major.width": 0.6,
+                     "pdf.fonttype": 42, "legend.frameon": False, "figure.constrained_layout.use": True,
+                     "savefig.bbox": "standard"})
 C_LEB, C_BUD, C_REF, C_FM, C_RED = "#1f5fa8", "#9aa0a6", "#e0702a", "#1a9c6e", "#c0392b"
 NAME = {"V052_PY": "LEBRE", "NLINEAR_ONLINE": "Online NLinear", "DLINEAR_ONLINE": "Online DLinear", "HOLT_WINTERS": "Online Holt-Winters",
         "FITS": "FITS", "SPARSETSF": "SparseTSF", "ARX_NLMS": "Dense ARX (NLMS)", "LASSO_ONLINE": "Online LASSO", "V051": "LEBRE v0.51",
@@ -140,72 +145,76 @@ for name, fn in (("tab_reserve3", tab_reserve3), ("tab_fm", tab_fm), ("tab_mcu",
 
 
 # ------------------------------------------------------------------ figures
-def fig_accuracy():
+def fig_reserve3():
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.5, 2.75), gridspec_kw={"width_ratios": [1.05, 1]})
     models = [m for m in t3.sort_values("ALL").index if m != "V052_C32"]
-    fig, ax = plt.subplots(figsize=(3.4, 2.7))
     y = np.arange(len(models))[::-1]
     for yy, m in zip(y, models):
-        v = t3.loc[m, "ALL"]; lo_, hi_ = ci(t3.loc[m, "CI95"]); r = ROLE.get(m, "bud")
-        ax.barh(yy, v, color=COL[r], height=0.62)
-        ax.plot([lo_, hi_], [yy, yy], color="k", lw=0.8)
-    ax.axvline(1, color=C_RED, ls="--", lw=0.7)
-    ax.set_yticks(y); ax.set_yticklabels([NAME[m] for m in models])
-    ax.get_yticklabels()[[NAME[m] for m in models].index("LEBRE")].set_fontweight("bold")
-    ax.set_xlabel("MSE relative to online NLinear (geometric mean, 60 series)")
-    fig.savefig(FIG / "reserve3_accuracy.pdf"); plt.close(fig)
-
-
-def fig_frontier():
+        v = t3.loc[m, "ALL"]; lo_, hi_ = ci(t3.loc[m, "CI95"])
+        a1.barh(yy, v, color=COL[ROLE.get(m, "bud")], height=0.64)
+        a1.plot([lo_, hi_], [yy, yy], color="k", lw=0.7)
+    a1.axvline(1, color=C_RED, ls="--", lw=0.7)
+    a1.set_yticks(y); a1.set_yticklabels([NAME[m] for m in models])
+    a1.get_yticklabels()[[NAME[m] for m in models].index("LEBRE")].set_fontname("cmb10")
+    a1.set_xlabel("MSE relative to online NLinear"); a1.set_title("(a) accuracy, 60 series (95% CI)", loc="left")
     fl = {m: float(meta3[f"flops_{m}"].astype(float).mean()) for m in ["V052_PY", "NLINEAR_ONLINE", "DLINEAR_ONLINE", "HOLT_WINTERS",
                                                                        "FITS", "SPARSETSF", "ARX_NLMS", "LASSO_ONLINE", "V051", "ARX_RLS_PLS"]}
     fl["TTM_ZS"], fl["TTM_FT_EXOG"] = N["ttm_flops"]; fl["CHRONOS2_COV"] = 3e9
     short = {"V052_PY": "LEBRE", "NLINEAR_ONLINE": "NLinear", "DLINEAR_ONLINE": "DLinear", "HOLT_WINTERS": "Holt-W.", "FITS": "FITS",
              "SPARSETSF": "SparseTSF", "ARX_NLMS": "ARX", "LASSO_ONLINE": "LASSO", "V051": "v0.51", "ARX_RLS_PLS": "LS-ARX",
              "TTM_ZS": "TTM-ZS", "TTM_FT_EXOG": "TTM-FT", "CHRONOS2_COV": "Chronos-2"}
-    off = {"V052_PY": (5, -6), "NLINEAR_ONLINE": (4, 5), "DLINEAR_ONLINE": (4, -6), "ARX_NLMS": (-4, 5), "TTM_FT_EXOG": (4, -6), "CHRONOS2_COV": (-5, 0)}
-    fig, ax = plt.subplots(figsize=(3.4, 2.4))
-    ax.axvspan(10, 1e4, color="#eef1f4", zorder=0)
+    off = {"V052_PY": (6, -7), "NLINEAR_ONLINE": (-5, 6), "DLINEAR_ONLINE": (5, -7), "ARX_NLMS": (-5, 0), "LASSO_ONLINE": (5, 3),
+           "TTM_ZS": (2, 9), "TTM_FT_EXOG": (4, -9), "CHRONOS2_COV": (-6, 0), "HOLT_WINTERS": (5, 5), "FITS": (5, -3)}
+    a2.axvspan(10, 1e4, color="#eef1f4", zorder=0)
     for m, x in fl.items():
-        r = ROLE.get(m, "bud"); v = g1[m]["ALL"]
-        ax.scatter(x, v, s=28 if m == "V052_PY" else 14, color=COL[r], marker="D" if m == "CHRONOS2_COV" else "o", zorder=3)
-        dx, dy = off.get(m, (4, 0))
-        ax.annotate(short[m], (x, v), xytext=(dx, dy), textcoords="offset points", fontsize=6.5, ha="left" if dx >= 0 else "right", va="center",
-                    fontweight="bold" if m == "V052_PY" else "normal")
-    ax.axhline(1, color=C_RED, ls="--", lw=0.7); ax.set_xscale("log"); ax.set_xlim(10, 3e10)
-    ax.set_xlabel("floating-point operations per forecast (log)"); ax.set_ylabel("MSE rel. to NLinear (1,000 points)")
-    ax.text(12, 3.0, "budget class", fontsize=6.5, color="#555")
-    fig.savefig(FIG / "frontier.pdf"); plt.close(fig)
+        v = g1[m]["ALL"]
+        a2.scatter(x, v, s=30 if m == "V052_PY" else 16, color=COL[ROLE.get(m, "bud")], marker="D" if m == "CHRONOS2_COV" else "o",
+                   zorder=3, edgecolor="white", linewidth=0.4)
+        dx, dy = off.get(m, (5, 0))
+        a2.annotate(short[m], (x, v), xytext=(dx, dy), textcoords="offset points", fontsize=7.5, va="center",
+                    ha="left" if dx >= 0 else "right", fontname="cmb10" if m == "V052_PY" else "cmr10")
+    a2.axhline(1, color=C_RED, ls="--", lw=0.7); a2.set_xscale("log"); a2.set_xlim(10, 3e10); a2.set_ylim(0.5, 3.25)
+    a2.text(14, 3.12, "budget class", fontsize=7.5, color="#555", va="top")
+    a2.set_xlabel("operations per forecast (log scale)"); a2.set_ylabel("MSE relative to NLinear")
+    a2.set_title("(b) accuracy vs. cost, 1,000-point protocol", loc="left")
+    fig.savefig(FIG / "reserve3.pdf"); plt.close(fig)
 
 
 def fig_misadj():
-    fig, ax = plt.subplots(figsize=(3.2, 2.2)); rng = np.random.default_rng(2)
+    fig, ax = plt.subplots(figsize=(3.6, 2.3)); rng = np.random.default_rng(2)
     for i, mu in enumerate((0.1, 0.05, 0.03)):
         d = ma[ma.mu == mu]; v = np.maximum(d[orc].max(axis=1).values, 0.02); acc = (d.accepted != "[]").values
         xs = i + rng.uniform(-0.18, 0.18, len(v))
-        ax.scatter(xs[~acc], v[~acc], s=7, color=C_BUD); ax.scatter(xs[acc], v[acc], s=12, color=C_RED, marker="D")
-        ax.text(i, 80, f"{int(acc.sum())}/{len(d)} accepted", ha="center", fontsize=6.5)
+        ax.scatter(xs[~acc], v[~acc], s=8, color=C_BUD, label="no acceptance" if i == 0 else None)
+        ax.scatter(xs[acc], v[acc], s=14, color=C_RED, marker="D", label="change accepted" if i == 0 else None)
+        ax.text(i, 60, f"{int(acc.sum())}/{len(d)}", ha="center", fontsize=8)
     ax.axhline(float(ma.log_thr.iloc[0]), color=C_RED, ls="--", lw=0.7)
-    ax.set_yscale("log"); ax.set_ylim(0.01, 150); ax.set_xticks(range(3)); ax.set_xticklabels([r"$\mu=0.10$", r"$\mu=0.05$", r"$\mu=0.03$"])
-    ax.set_ylabel("oracle log-evidence")
+    ax.set_yscale("log"); ax.set_ylim(0.01, 150); ax.set_xlim(-0.5, 2.5); ax.set_xticks(range(3))
+    ax.set_xticklabels([r"$\mu=0.10$", r"$\mu=0.05$", r"$\mu=0.03$"])
+    ax.set_ylabel("oracle log-evidence"); ax.legend(loc="lower left")
     fig.savefig(FIG / "misadjustment.pdf"); plt.close(fig)
 
 
 def fig_fdr():
-    cells = [(s, r) for s in ["N1", "N2", "N3", "N4", "P1", "P2", "P3"] for r in (0.5, 0.95)]
-    fig, ax = plt.subplots(figsize=(3.4, 1.9)); x = np.arange(len(cells))
-    for i, (s, r) in enumerate(cells):
-        c = cell(s, r); g = fr[(fr.scen == s) & (fr.rho == r)]
-        ax.bar(i, c["frac_V>0"], color=C_LEB if s.startswith("N") else C_REF, width=0.7)
-        ax.plot([i, i], [c.cp_lo, c.cp_hi], color="k", lw=0.7)
-        ax.scatter(i, g.final_false.mean(), marker="_", s=60, color="k", zorder=3)
-    ax.axhline(0.05, color=C_RED, ls="--", lw=0.7)
-    ax.set_xticks(x); ax.set_xticklabels([f"{s}\n{r}" for s, r in cells], fontsize=5.8)
-    ax.set_ylabel("runs with a false change")
+    scen = ["N1", "N2", "N3", "N4", "P1", "P2", "P3"]
+    fig, ax = plt.subplots(figsize=(5.0, 2.2))
+    for j, (r, mk, c) in enumerate(((0.5, "o", C_LEB), (0.95, "s", C_REF))):
+        for i, sc in enumerate(scen):
+            row = cell(sc, r); g = fr[(fr.scen == sc) & (fr.rho == r)]; x = i + (j - 0.5) * 0.3
+            ax.plot([x, x], [row.cp_lo, row.cp_hi], color=c, lw=0.9)
+            ax.scatter(x, row["frac_V>0"], marker=mk, s=18, color=c, zorder=3, label=f"input persistence {r}" if i == 0 else None)
+            ax.scatter(x, g.final_false.mean(), marker="x", s=16, color="k", zorder=4, linewidth=0.8,
+                       label="still in the final model" if (i == 0 and j == 0) else None)
+    ax.axhline(0.05, color=C_RED, ls="--", lw=0.7); ax.text(-0.45, 0.056,r"$\alpha=0.05$", color=C_RED, fontsize=7.5, ha="left", va="bottom")
+    ax.axvline(3.5, color="#999", lw=0.5, ls=":")
+    ax.text(1.5, 0.37, "null scenarios", ha="center", fontsize=8, color="#444"); ax.text(5, 0.37, "one true input", ha="center", fontsize=8, color="#444")
+    ax.set_xticks(range(len(scen))); ax.set_xticklabels(scen); ax.set_ylim(-0.01, 0.4); ax.set_xlim(-0.5, 6.5)
+    ax.set_ylabel("fraction of runs with\na false change"); ax.legend(loc="upper left", bbox_to_anchor=(0.0, 0.88))
     fig.savefig(FIG / "false_changes.pdf"); plt.close(fig)
 
 
 def fig_mcu():
-    fig, ax = plt.subplots(figsize=(3.4, 2.0))
+    fig, ax = plt.subplots(figsize=(3.8, 2.3))
     prof = N["prof"]
     for tag, lab, c in (("ons_vg", "ONS (1 input)", C_LEB), ("camels", "CAMELS (3 inputs)", C_REF), ("bdg2", "BDG2 (2 inputs)", C_FM)):
         h = prof[tag]["hist"]; T = prof[tag]["T"]
@@ -213,10 +222,12 @@ def fig_mcu():
     ax.set_xscale("log"); ax.set_xlim(1000, 6e4); ax.set_ylim(0, 1.01)
     ax.xaxis.set_major_locator(mt.FixedLocator([1e3, 2e3, 5e3, 1e4, 2e4, 5e4]))
     ax.xaxis.set_major_formatter(mt.FuncFormatter(lambda v, _: f"{v / 1000:g}k")); ax.xaxis.set_minor_formatter(mt.NullFormatter())
-    ax.set_xlabel("instructions per step (simulated Cortex-M4F, log)"); ax.set_ylabel("fraction of steps"); ax.legend(loc="lower right")
+    ax.set_xlabel("instructions per step (log scale)"); ax.set_ylabel("fraction of steps"); ax.legend(loc="lower right")
     fig.savefig(FIG / "mcu_cdf.pdf"); plt.close(fig)
 
 
-for fn in (fig_accuracy, fig_frontier, fig_misadj, fig_fdr, fig_mcu):
+for old in ("reserve3_accuracy.pdf", "frontier.pdf"):
+    (FIG / old).unlink(missing_ok=True)
+for fn in (fig_reserve3, fig_misadj, fig_fdr, fig_mcu):
     fn()
-print(f"{len(macros)} macros, 3 tables, 5 figures")
+print(f"{len(macros)} macros, 3 tables, 4 figure files")

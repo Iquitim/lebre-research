@@ -32,7 +32,7 @@
 \newcommand{\F}{\mathcal{F}}
 
 \title{LEBRE: Online Forecasting with Evidence-Gated Structural Changes under a Budget of a Few Hundred Operations per Step}
-\author{Silvano Lima\thanks{ORCID \href{https://orcid.org/0009-0000-3868-6747}{0009-0000-3868-6747}. Research record: \href{https://doi.org/10.5281/zenodo.23049103}{doi:10.5281/zenodo.23049103}.}}
+\author{Silvano Lima\\[2pt]{\normalsize Independent researcher}\\{\normalsize\texttt{silvano.limadebarros@gmail.com}}\thanks{ORCID \href{https://orcid.org/0009-0000-3868-6747}{0009-0000-3868-6747}. Research record: \href{https://doi.org/10.5281/zenodo.23049103}{doi:10.5281/zenodo.23049103}.}}
 \date{September 2026}
 
 \begin{document}
@@ -168,8 +168,8 @@ For NLMS with misadjustment $M\approx\mu/(2-\mu)$ and $B_t\approx 2\hat\sigma$, 
 A challenger with a coefficient that is constant over a window can capture at most the part $D_u$ of $\eta^2/B^2$ projected on its features. As an approximation, the log-evidence grows like $nD_u^2/(2\sigma_d^2)$. False acceptances are therefore unlikely within a series of length $T$ when $D_u<\sigma_d\sqrt{2\log(1/\alpha_k)/T}$ (\emph{practical regime}). This is not a guarantee.
 
 \begin{figure}[t]
-\centering\includegraphics[width=0.62\linewidth]{figures/misadjustment.pdf}
-\caption{Structureless targets with real inputs (development, 120 runs). Log-evidence of the best fixed-coefficient challenger (projection oracle) versus the threshold (dashed); red: runs where the model actually accepted a change. The median oracle crosses the threshold at $\mu=0.1$ (\misOrcMedA) and stays below it at $\mu=0.05$ (maximum \misOrcMaxB).}
+\centering\includegraphics{figures/misadjustment.pdf}
+\caption{Structureless targets with real inputs (development, 120 runs). Log-evidence of the best fixed-coefficient challenger (projection oracle) versus the acceptance threshold (dashed); red diamonds: runs where the model actually accepted a change (for those, the oracle was measured after the acceptance and can sit at the floor); numbers: accepted runs. The median oracle crosses the threshold at $\mu=0.1$ (\misOrcMedA) and stays below it at $\mu=0.05$ (maximum \misOrcMaxB).}
 \label{fig:misadj}
 \end{figure}
 
@@ -203,9 +203,8 @@ The version evaluated in reserve 1 had no output safeguards, and 6 of 125 series
 \subsection{Reserves 2 and 3}
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.49\linewidth]{figures/reserve3_accuracy.pdf}\hfill
-\includegraphics[width=0.49\linewidth]{figures/frontier.pdf}
-\caption{Reserve 3 (60 never-seen series). Left: MSE relative to online NLinear with 95\% CIs (blue: LEBRE; grey: budget class; orange: classical references). Right: error on the 1{,}000-point protocol versus operations per forecast; the grey band is the budget class. SARIMAX is omitted on the right because its per-forecast cost was not counted. The Chronos-2 cost (diamond) is an order-of-magnitude estimate.}
+\includegraphics{figures/reserve3.pdf}
+\caption{Reserve 3 (60 never-seen series). (a) MSE relative to online NLinear on the full test region, geometric mean with 95\% CIs (blue: LEBRE; grey: budget class; orange: classical references). (b) Error on the 1{,}000-point protocol versus operations per forecast (green: foundation models); the shaded band is the budget class. SARIMAX is omitted on the right because its per-forecast cost was not counted. The Chronos-2 cost (diamond) is an order-of-magnitude estimate.}
 \label{fig:res3}
 \end{figure}
 
@@ -244,7 +243,7 @@ The float64 C build reproduced the Python decision sequences on \eqDevD/29 devel
 \end{table}
 
 \begin{figure}[t]
-\centering\includegraphics[width=0.6\linewidth]{figures/mcu_cdf.pdf}
+\centering\includegraphics{figures/mcu_cdf.pdf}
 \caption{Cumulative distribution of instructions per step on three development series (simulated Cortex-M4F). The cheapest steps have a missing target.}
 \label{fig:mcu}
 \end{figure}
@@ -258,8 +257,8 @@ We ran the frozen model on \simRuns{} synthetic runs of 30{,}000 steps (plan and
 In all \simAffected{} affected runs, the false change was an input \emph{correlated} with the true one and accepted before it. While the true input is absent, such a substitute does improve the reference forecast: the test answers its own question correctly, but the answer is not structural. The periodic removal test took the substitute out in \simRemoved{} of \simAffected{} cases; in \simFinal{} of \simRuns{} runs it stayed in the final model. An accepted input therefore means ``improved the forecast of the current model, with evidence'', not ``is the cause''.
 
 \begin{figure}[t]
-\centering\includegraphics[width=0.62\linewidth]{figures/false_changes.pdf}
-\caption{Fraction of runs with at least one false change (Clopper--Pearson 95\% CI) per scenario and input persistence; dash: fraction where it remained at the end. Blue: nulls; orange: one true input.}
+\centering\includegraphics{figures/false_changes.pdf}
+\caption{False-change simulation (700 runs; 50 per scenario and input persistence). Markers: fraction of runs with at least one false change, with Clopper--Pearson 95\% intervals; crosses: fraction where the false change was still in the final model.}
 \label{fig:fdr}
 \end{figure}
 
