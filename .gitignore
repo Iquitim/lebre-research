@@ -43,3 +43,5 @@ experiments/PROMOTION-POLICY-01/PROMOTION_POLICY_01_EVENTS.csv
 /scratch/pdf_qa*/
 /scratch/**/*.png
 !/data/external_v052/MANIFEST.csv
+# Regression fixtures of the lebre package (small, generated from the frozen code)
+!packages/lebre/tests/fixtures/*.npz

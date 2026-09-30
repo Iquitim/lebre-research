@@ -22,6 +22,7 @@ A reusable library (`lebre`) and a paper are separate, later deliverables. They 
 | Set up the environment and toolchains | [`environment/`](environment/), [`tools/README.md`](tools/README.md), [`data/README.md`](data/README.md) |
 | Check integrity of the frozen versions | `python scripts/verify_integrity.py` |
 | Check that results still regenerate | `python scripts/reproduce_smoke.py` |
+| Check the library against published predictions | `python scripts/check_lebre_package.py` |
 
 ## Repository layout
 
@@ -39,6 +40,7 @@ Moving files would break both. Organisation is therefore provided by the indexes
 | `docs/research/` | Seed registry and the manifest of artifacts kept out of git. |
 | `docs/architecture/` | Specifications (v0.1, v0.3.2, v0.51, v0.52 and its r1), freeze records, SHA-256 manifests, PDF builders (`pdf_source/`). |
 | `configs/` | Canonical configuration(s), machine-readable. |
+| `packages/lebre/` | The installable library `lebre` 0.1.0 (implements v0.52-r1 bit for bit); prepared to become its own repository. |
 | `scripts/` | Repository-level tools: integrity check, smoke reproduction, artifact manifest. |
 | `data/` | Loaders and checksum lists of the public datasets. Raw data are **not** in git (see `data/README.md`). |
 | `src/`, `tests/`, `docs/history/phase-v0.1/` | Early-phase code and documents (v0.1 era), kept as the historical record. |
