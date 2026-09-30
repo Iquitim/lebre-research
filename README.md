@@ -42,7 +42,7 @@ Moving files would break both. Organisation is therefore provided by the indexes
 | `docs/architecture/` | Specifications (v0.1, v0.3.2, v0.51, v0.52 and its r1), freeze records, SHA-256 manifests, PDF builders (`pdf_source/`). |
 | `configs/` | Canonical configuration(s), machine-readable. |
 | `paper/` | The preprint (LaTeX), with its asset generator and arXiv package. |
-| `packages/lebre/` | The installable library `lebre` 0.1.0 (implements v0.52-r1 bit for bit); prepared to become its own repository. |
+| `packages/lebre/` | Snapshot of the installable library `lebre` 0.1.0 (implements v0.52-r1; bit for bit in the reference environment). Developed at https://github.com/Iquitim/lebre. |
 | `scripts/` | Repository-level tools: integrity check, smoke reproduction, artifact manifest. |
 | `data/` | Loaders and checksum lists of the public datasets. Raw data are **not** in git (see `data/README.md`). |
 | `src/`, `tests/`, `docs/history/phase-v0.1/` | Early-phase code and documents (v0.1 era), kept as the historical record. |
