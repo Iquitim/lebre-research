@@ -45,3 +45,11 @@ experiments/PROMOTION-POLICY-01/PROMOTION_POLICY_01_EVENTS.csv
 !/data/external_v052/MANIFEST.csv
 # Regression fixtures of the lebre package (small, generated from the frozen code)
 !packages/lebre/tests/fixtures/*.npz
+# LaTeX build by-products of the paper
+/paper/*.aux
+/paper/*.log
+/paper/*.out
+/paper/*.blg
+/paper/*.bbl
+/paper/arxiv/
+/scratch/pdf_qa_paper/

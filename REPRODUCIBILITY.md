@@ -80,6 +80,7 @@ The plan and script hashes were recorded before these runs (`HASHES_BEFORE_RUN.t
 | Document | Builder | Notes |
 |---|---|---|
 | v0.52 spec r1 (EN, PT-BR) | `docs/architecture/pdf_source/build_v052_spec.py` (+ `v052_text.py`, `v052_charts.py`, `v052_diagrams.py`, `v052_data.py`) | Needs Microsoft Edge (headless print) and internet access for KaTeX. **Byte-level** output is not reproducible, because the charts embed their generation timestamp; content and numbers are. Revision 0 is kept only as PDF/HTML with hashes (its builder was updated in place). |
+| Paper (English, arXiv) | `paper/build.sh` (runs `paper/build_assets.py`, `pdflatex`, `bibtex`) | Every number, table and data figure is generated from the result files; `paper/arxiv_source.tar.gz` is the arXiv upload. |
 | Earlier specs (v0.1, v0.3.2, v0.51, v0.51-r1) | `docs/architecture/pdf_source/build_*.py` | Frozen with their manifests. |
 
 ## 7. Known reproducibility caveats

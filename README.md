@@ -15,6 +15,7 @@ A reusable library (`lebre`) and a paper are separate, later deliverables. They 
 | You want to… | Go to |
 |---|---|
 | Read what LEBRE v0.52 is and what was measured | `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.52_SPEC_r1_EN.pdf` (PT-BR: `…_r1_PTBR.pdf`) |
+| Read the paper (English, arXiv format) | `paper/main.pdf` (source and build in `paper/`) |
 | Know how each reported number was produced | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 | Browse the experiment folders | [`experiments/INDEX.md`](experiments/INDEX.md) |
 | See every random seed and data split used | [`docs/research/SEEDS.md`](docs/research/SEEDS.md) |
@@ -40,6 +41,7 @@ Moving files would break both. Organisation is therefore provided by the indexes
 | `docs/research/` | Seed registry and the manifest of artifacts kept out of git. |
 | `docs/architecture/` | Specifications (v0.1, v0.3.2, v0.51, v0.52 and its r1), freeze records, SHA-256 manifests, PDF builders (`pdf_source/`). |
 | `configs/` | Canonical configuration(s), machine-readable. |
+| `paper/` | The preprint (LaTeX), with its asset generator and arXiv package. |
 | `packages/lebre/` | The installable library `lebre` 0.1.0 (implements v0.52-r1 bit for bit); prepared to become its own repository. |
 | `scripts/` | Repository-level tools: integrity check, smoke reproduction, artifact manifest. |
 | `data/` | Loaders and checksum lists of the public datasets. Raw data are **not** in git (see `data/README.md`). |
