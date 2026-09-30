@@ -14,7 +14,7 @@
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,fit}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
 \usepackage[capitalise,noabbrev]{cleveref}
 
@@ -71,24 +71,32 @@ We do \emph{not} claim that LEBRE is the most accurate or the most economical fo
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}[font=\footnotesize, node distance=4mm and 7mm,
-  box/.style={draw, rounded corners=2pt, align=center, minimum height=9mm, inner sep=3pt},
-  arr/.style={-{Stealth[length=2mm]}}]
-\node[box, fill=blue!6] (in) {inputs $x_t$\\+ own past};
-\node[box, fill=green!8, above right=1mm and 8mm of in] (M) {memory $M$\\(own past, cycles)};
-\node[box, fill=violet!8, below right=1mm and 8mm of in] (S) {structural expert $S$\\(base + accepted blocks)};
-\node[box, fill=orange!10, right=10mm of in, xshift=32mm] (C) {dynamic model\\averaging};
-\node[box, fill=red!6, right=of C] (O) {output\\envelope};
-\node[box, fill=blue!6, right=of O] (Y) {$\hat y_t$ + 90\%\\interval};
+\begin{tikzpicture}[font=\footnotesize, node distance=4mm and 6mm,
+  box/.style={draw, line width=0.4pt, align=center, minimum height=9mm, inner sep=3pt, fill=white},
+  arr/.style={-{Stealth[length=1.8mm]}, line width=0.4pt},
+  plane/.style={draw, dashed, line width=0.3pt, gray, inner sep=2.5mm},
+  lbl/.style={font=\scriptsize\itshape, text=black!60}]
+\node[box] (in) {inputs $x_t$\\+ own past};
+\node[box, above right=1mm and 8mm of in] (M) {memory $M$\\(own past, cycles)};
+\node[box, below right=1mm and 8mm of in] (S) {structural expert $S$\\(base + accepted blocks)};
+\node[box, right=10mm of in, xshift=32mm] (C) {dynamic model\\averaging};
+\node[box, right=of C] (O) {output\\envelope};
+\node[box, right=of O] (Y) {$\hat y_t$ + 90\%\\interval};
 \draw[arr] (in) -- (M); \draw[arr] (in) -- (S); \draw[arr] (M) -- (C); \draw[arr] (S) -- (C); \draw[arr] (C) -- (O); \draw[arr] (O) -- (Y);
-\node[box, fill=gray!8, below=14mm of in, xshift=6mm] (sc) {screen\\(prewhitened)};
-\node[box, fill=violet!5, right=of sc] (ch) {2 shadow challengers\\$G = S + g$ (RLS)};
-\node[box, fill=red!5, right=of ch] (ep) {e-process of\\improvement};
-\node[box, fill=orange!8, right=of ep] (dec) {e-LOND-type\\levels};
+\node[box, below=27mm of in, xshift=6mm] (sc) {screen\\(prewhitened)};
+\node[box, right=of sc] (ch) {2 shadow challengers\\$G = S + g$ (RLS)};
+\node[box, right=of ch] (ep) {e-process of\\improvement};
+\node[box, right=of ep] (dec) {e-LOND-type\\levels};
 \draw[arr] (sc) -- (ch); \draw[arr] (ch) -- (ep); \draw[arr] (ep) -- (dec);
-\draw[arr, dashed, green!40!black] (dec.north) |- node[pos=0.25, right, font=\scriptsize] {accept: $S$ changes} ([yshift=-2mm]S.south east);
+\begin{scope}[on background layer]
+\node[plane, fit=(in)(M)(S)(C)(O)(Y)] (fp) {};
+\node[plane, fit=(sc)(ch)(ep)(dec)] (cp) {};
+\end{scope}
+\node[lbl, anchor=south west] at (fp.north west) {forecast path (every step)};
+\node[lbl, anchor=north west] at (cp.south west) {change plane (shadow experiments)};
+\draw[arr, densely dashed] (dec.north) |- node[pos=0.75, above, font=\scriptsize] {accepted change updates $S$} ([yshift=-8mm]S.south) -- (S.south);
 \end{tikzpicture}
-\caption{LEBRE. The forecast path (top) is always active and cheap. The change plane (bottom) proposes, tests and decides structural changes; only an accepted change alters $S$.}
+\caption{Architecture of LEBRE. The forecast path (top) runs at every step and is cheap. The change plane (bottom) proposes, tests and decides structural changes in shadow; only an accepted change alters $S$.}
 \label{fig:arch}
 \end{figure}
 
