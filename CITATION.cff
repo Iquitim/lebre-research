@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this research record, please cite it as below."
+type: software
+title: "LEBRE research record — v0.52-r1"
+version: "v0.52-r1"
+authors:
+  - family-names: "Lima"
+    given-names: "Silvano"
+repository-code: "https://github.com/Iquitim/lebre-research"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+abstract: >-
+  Research record of LEBRE, an online one-step-ahead forecaster for time series
+  with inputs, designed for a budget of a few hundred floating-point operations
+  per step, in which each structural change is accepted by an anytime-valid
+  sequential test (e-process) of predictive improvement. Contains the Python
+  reference implementation, a C99 port with simulated Cortex-M4F measurements,
+  experiment scripts, pre-registrations, results, frozen versions with SHA-256
+  manifests and the v0.52 specification (revision 1).
+keywords:
+  - online forecasting
+  - anytime-valid inference
+  - e-process
+  - online multiple testing
+  - TinyML
+  - reproducibility
