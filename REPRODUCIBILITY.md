@@ -8,7 +8,12 @@ Every number in the v0.52 specification, revision 1 (`docs/architecture/pdf/LEBR
    - Python 3.11 with `environment/requirements-research.txt`;
    - **pandas must be 2.2.3**: pandas ≥ 3 makes `to_numpy()` arrays read-only and breaks the frozen data loader;
    - toolchains as in `environment/TOOLCHAIN.md`.
-2. **Restore the artifacts kept out of git** (`docs/research/ARTIFACTS_MANIFEST.tsv`: data, predictions, toolchain archives). Then run `python scripts/make_artifact_manifest.py --check`.
+2. **Restore the artifacts kept out of git** (`docs/research/ARTIFACTS_MANIFEST.tsv`):
+   - experiment outputs: unzip the public archive `lebre-research-v0.52-r1-artifacts.zip` (Zenodo) at the repository root. It is built by `scripts/make_artifact_archive.py`; `docs/research/ARCHIVE_CONTENTS.tsv` lists every file as IDENTICAL, FILTERED (entries of Silverbox and Cascaded Tanks removed, since their licences do not allow redistribution under CC-BY-4.0) or EXCLUDED (firmware build outputs, rebuilt from source);
+   - raw data: `python experiments/LEBRE-V0.52-DATA-01/download_v052.py`, then `git checkout -- data/external_v052/MANIFEST.csv data/external_v052/SHA256SUMS.txt` (the download script rewrites these two frozen records with the hashes of the day; the frozen manifests then check the downloaded files). ONS keeps updating the files of the current period; the loaders read 2015-2025 only;
+   - toolchains: `environment/TOOLCHAIN.md`.
+
+   Tested on 2026-10-01 from a clean clone, the archive and a fresh download: 235 of the 237 frozen data files were byte-identical (the 2 others are 2026 ONS files, outside the evaluation window), `verify_integrity.py` reported PASS and `reproduce_smoke.py` passed all four checks.
 3. `python scripts/verify_integrity.py` checks all frozen SHA-256 manifests. It must report `PASS`.
 4. `python scripts/reproduce_smoke.py` runs four checks:
    - configuration;

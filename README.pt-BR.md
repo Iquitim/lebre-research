@@ -40,7 +40,7 @@ Os arquivos abaixo estão listados com tamanho e SHA-256 em `docs/research/ARTIF
 - binários de firmware e de compilação;
 - quatro registros de eventos muito grandes.
 
-Eles devem ir para um arquivo permanente (por exemplo, Zenodo). A cópia restaurada é conferida com `python scripts/make_artifact_manifest.py --check`.
+As saídas dos experimentos são publicadas num arquivo separado (`lebre-research-v0.52-r1-artifacts.zip`, gerado por `scripts/make_artifact_archive.py`; conteúdo em `docs/research/ARCHIVE_CONTENTS.tsv`). Os dados brutos são baixados das fontes originais e as ferramentas são instaladas conforme `environment/TOOLCHAIN.md`. Passo a passo em `REPRODUCIBILITY.md`, seção 0 (em inglês).
 
 ## Licença
 

@@ -58,7 +58,7 @@ The following are listed with size and SHA-256 in [`docs/research/ARTIFACTS_MANI
 - firmware and build binaries;
 - four very large early event logs.
 
-In total, 802 files and about 3 GB. They are meant to be deposited in an archival service (e.g. Zenodo) and restored before a full re-run; `python scripts/make_artifact_manifest.py --check` verifies a restored copy.
+In total, 802 files and about 3 GB. The experiment outputs are published as a separate archive (`lebre-research-v0.52-r1-artifacts.zip`, built by `scripts/make_artifact_archive.py`; contents in [`docs/research/ARCHIVE_CONTENTS.tsv`](docs/research/ARCHIVE_CONTENTS.tsv)). Raw data are downloaded from the original publishers, and toolchains are installed as in `environment/TOOLCHAIN.md`. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), section 0.
 
 ## Status and honesty notes
 

@@ -3,7 +3,9 @@
 
 Each line is reported as OK, MISMATCH (file present, different bytes) or MISSING (not present in this checkout; files
 kept out of git are listed in docs/research/ARTIFACTS_MANIFEST.tsv and must be restored from the artifact archive). Known, documented
-supersessions are reported separately. Exit code 1 only on MISMATCH that is not a documented supersession.
+supersessions are reported separately, as are files whose local paths were removed (SANITIZED,
+docs/architecture/SANITIZATION_RECORD.tsv) and archive copies without non-redistributable datasets (FILTERED,
+docs/research/ARCHIVE_CONTENTS.tsv). Exit code 1 only on MISMATCH that is not one of these documented cases.
 Usage: python scripts/verify_integrity.py [--quiet]"""
 import hashlib
 import sys
@@ -26,6 +28,15 @@ if _rec.exists():
     for _ln in _rec.read_text(encoding="utf-8").splitlines()[1:]:
         _p, _before, _after, _m = _ln.split("	")
         SANITIZED[(_p, _before)] = _after
+# Files restored from the public artifact archive (scripts/make_artifact_archive.py) whose entries of non-redistributable
+# datasets were removed: accepted when both hashes match the archive record.
+FILTERED = {}
+_arc = ROOT / "docs" / "research" / "ARCHIVE_CONTENTS.tsv"
+if _arc.exists():
+    for _ln in _arc.read_text(encoding="utf-8").splitlines()[1:]:
+        _p, _orig, _arch, _st = _ln.split("	")
+        if _st == "FILTERED":
+            FILTERED[(_p, _orig)] = _arch
 
 
 def sha(p):
@@ -40,7 +51,7 @@ def main():
     quiet = "--quiet" in sys.argv
     bad = 0
     for m in MANIFESTS:
-        c = {"OK": 0, "MISSING": 0, "MISMATCH": 0, "SUPERSEDED": 0, "SANITIZED": 0}
+        c = {"OK": 0, "MISSING": 0, "MISMATCH": 0, "SUPERSEDED": 0, "SANITIZED": 0, "FILTERED": 0}
         for ln in m.read_text(encoding="utf-8", errors="replace").splitlines():
             ln = ln.strip()
             if not ln or ln.startswith("#"):
@@ -55,12 +66,14 @@ def main():
                 st = "OK"
             elif SANITIZED.get((rel, h.lower())) == hp:
                 st = "SANITIZED"
+            elif FILTERED.get((rel, h.lower())) == hp:
+                st = "FILTERED"
             elif (m.name, rel) in SUPERSEDED:
                 st = "SUPERSEDED"
             else:
                 st = "MISMATCH"; bad += 1
             c[st] += 1
-            if st not in ("OK", "SANITIZED") and not quiet:
+            if st not in ("OK", "SANITIZED", "FILTERED") and not quiet:
                 print(f"  {st:10s} {rel}")
         print(f"{m.name}: " + ", ".join(f"{k} {v}" for k, v in c.items() if v))
     print("RESULT:", "FAIL" if bad else "PASS (no unexpected mismatch)")
