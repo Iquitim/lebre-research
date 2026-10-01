@@ -1,0 +1,33 @@
+# Light checks that run on a clean clone. Third-party data and per-series predictions are kept out of git
+# (docs/research/ARTIFACTS_MANIFEST.tsv), so the full reproduction stays manual; here the smoke test runs only the
+# stages whose inputs are in the repository and reports the others as SKIP.
+name: checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install the minimal environment (versions from environment/requirements-research.txt)
+        run: |
+          python -m pip install numpy==2.2.5 pandas==2.2.3
+          python -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Frozen manifests are intact
+        run: python scripts/verify_integrity.py --quiet
+      - name: Smoke test (the configuration stage must PASS)
+        run: |
+          python scripts/reproduce_smoke.py | tee smoke.log
+          grep -q "^\[PASS\] 1 config" smoke.log
+      - name: arXiv metadata is ASCII and the abstract fits the form
+        run: |
+          python - <<'EOF'
+          import re
+          s = open("paper/arxiv_metadata.txt", encoding="utf-8").read()
+          assert s.isascii(), "non-ASCII characters in paper/arxiv_metadata.txt"
+          a = re.search(r"Abstract \((\d+) characters[^\n]*\n(.*?)\n\n", s, re.S)
+          assert a and len(a.group(2)) == int(a.group(1)) <= 1920, "abstract length check failed"
+          print("abstract:", len(a.group(2)), "characters")
+          EOF
