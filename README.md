@@ -24,6 +24,7 @@ A reusable library (`lebre`) and a paper are separate, later deliverables. They 
 | Check integrity of the frozen versions | `python scripts/verify_integrity.py` |
 | Check that results still regenerate | `python scripts/reproduce_smoke.py` |
 | Check the library against published predictions | `python scripts/check_lebre_package.py` |
+| Use the installable library | `pip install lebre` ([repository](https://github.com/Iquitim/lebre), [doi:10.5281/zenodo.23073983](https://doi.org/10.5281/zenodo.23073983)) |
 
 ## Repository layout
 

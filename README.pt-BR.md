@@ -25,6 +25,7 @@ O estado documentado atual é a **LEBRE v0.52, especificação revisão 1 ("v0.5
 | Ambiente, ferramentas e dados | [`environment/`](environment/), [`tools/README.md`](tools/README.md), [`data/README.md`](data/README.md) |
 | Conferir a integridade dos congelamentos | `python scripts/verify_integrity.py` |
 | Conferir que os resultados ainda se regeneram | `python scripts/reproduce_smoke.py` |
+| Usar a biblioteca instalável | `pip install lebre` ([repositório](https://github.com/Iquitim/lebre), [doi:10.5281/zenodo.23073983](https://doi.org/10.5281/zenodo.23073983)) |
 
 ## Por que os arquivos não foram movidos
 
