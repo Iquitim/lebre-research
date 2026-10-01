@@ -10,7 +10,7 @@ Every number in the v0.52 specification, revision 1 (`docs/architecture/pdf/LEBR
    - toolchains as in `environment/TOOLCHAIN.md`.
 2. **Restore the artifacts kept out of git** (`docs/research/ARTIFACTS_MANIFEST.tsv`):
    - experiment outputs: unzip the public archive `lebre-research-v0.52-r1-artifacts.zip` (Zenodo) at the repository root. It is built by `scripts/make_artifact_archive.py`; `docs/research/ARCHIVE_CONTENTS.tsv` lists every file as IDENTICAL, FILTERED (entries of Silverbox and Cascaded Tanks removed, since their licences do not allow redistribution under CC-BY-4.0) or EXCLUDED (firmware build outputs, rebuilt from source);
-   - raw data: `python experiments/LEBRE-V0.52-DATA-01/download_v052.py`, then `git checkout -- data/external_v052/MANIFEST.csv data/external_v052/SHA256SUMS.txt` (the download script rewrites these two frozen records with the hashes of the day; the frozen manifests then check the downloaded files). ONS keeps updating the files of the current period; the loaders read 2015-2025 only;
+   - raw data: `python scripts/download_data.py`. It runs the frozen download script, restores the two frozen records that script rewrites (`data/external_v052/MANIFEST.csv`, `SHA256SUMS.txt`) and compares every downloaded file with its frozen hash. ONS keeps updating the files of the current period; the check fails only if a file read by the loaders (ONS hourly 2015-2025, CAMELS-BR, BDG2) differs;
    - toolchains: `environment/TOOLCHAIN.md`.
 
    Tested on 2026-10-01 from a clean clone, the archive and a fresh download: 235 of the 237 frozen data files were byte-identical (the 2 others are 2026 ONS files, outside the evaluation window), `verify_integrity.py` reported PASS and `reproduce_smoke.py` passed all four checks.

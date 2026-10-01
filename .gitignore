@@ -53,3 +53,4 @@ experiments/PROMOTION-POLICY-01/PROMOTION_POLICY_01_EVENTS.csv
 /paper/*.bbl
 /paper/arxiv/
 /scratch/pdf_qa_paper/
+/data/external_v052/DOWNLOADED_SHA256SUMS.txt

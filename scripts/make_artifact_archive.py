@@ -59,8 +59,8 @@ documentation examples and event logs of earlier phases.
 1. Clone the research repository (main branch) and unzip this archive at its root; files land at the paths listed
    in docs/research/ARTIFACTS_MANIFEST.tsv. Use a checkout that contains docs/research/ARCHIVE_CONTENTS.tsv: support
    for this archive was added after tag v0.52-r1; the model, results and frozen manifests are unchanged.
-2. Download the raw public data with `python experiments/LEBRE-V0.52-DATA-01/download_v052.py` (not redistributed
-   here; sources, licences and SHA-256 in data/README.md).
+2. Download the raw public data with `python scripts/download_data.py` (not redistributed here; sources, licences
+   and SHA-256 in data/README.md). It checks every file against the frozen hashes.
 3. Run `python scripts/verify_integrity.py` and `python scripts/reproduce_smoke.py` (REPRODUCIBILITY.md).
 
 ## What is not here, and why
