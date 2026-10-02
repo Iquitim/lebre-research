@@ -11,7 +11,7 @@ toolchains under tools/ are never included):
 - excluded: firmware build outputs (.elf, .o, .dll, .lib, .map). They link third-party runtime code and the linker
   maps hold local paths; they are rebuilt from the sources in git with the pinned toolchain (environment/TOOLCHAIN.md).
 
-Writes to <out> seven zip parts of at most ~200 MB each (so that each can be uploaded on its own), plus ARCHIVE_README.md,
+Writes to <out> eight zip parts of at most ~200 MB each (so that each can be uploaded on its own), plus ARCHIVE_README.md,
 ARCHIVE_CONTENTS.tsv and ARCHIVE_SHA256SUMS.txt as separate files; every part unzips at the repository root. Also
 writes docs/research/ARCHIVE_CONTENTS.tsv (path, original SHA-256, archived SHA-256, status).
 scripts/verify_integrity.py accepts a FILTERED file whose hashes match that record.
@@ -32,7 +32,7 @@ NOT_REDISTRIBUTABLE = {"silverbox", "tanks"}        # see experiments/LEBRE-V0.5
 
 
 PARTS = ["part1-reserve3", "part2-reserve2-and-early-logs", "part3-reserve1-ons", "part4a-reserve1-camels",
-         "part4b-reserve1-bdg2", "part5-development-a", "part6-development-b"]
+         "part4b-reserve1-bdg2", "part5-development-a", "part6a-development-tuning-1-4", "part6b-development-tuning-5-14"]
 
 
 def part_of(path):
@@ -44,7 +44,10 @@ def part_of(path):
             return "part3-reserve1-ons"
         return "part4a-reserve1-camels" if e[2] == "preds" and e[3].startswith("camels__") else "part4b-reserve1-bdg2"
     if e[1] == "LEBRE-V0.52-PROTO-01":
-        return "part6-development-b" if e[2].startswith("TUNE_") else "part5-development-a"
+        if e[2].startswith("TUNE_DEV"):
+            rnd = int(e[2][len("TUNE_DEV"):].split("_")[0])
+            return "part6a-development-tuning-1-4" if rnd <= 4 else "part6b-development-tuning-5-14"
+        return "part5-development-a"
     return "part2-reserve2-and-early-logs"           # reserve 2 and the event logs of earlier phases
 
 
@@ -110,7 +113,8 @@ Parts (all unzip at the repository root):
 - part2-reserve2-and-early-logs: reserve 2 and event logs of earlier phases;
 - part3-reserve1-ons, part4a-reserve1-camels, part4b-reserve1-bdg2: reserve 1 (part4b also holds the
   Chronos outputs of reserve 1);
-- part5-development-a, part6-development-b: development-phase prediction files.
+- part5-development-a, part6a-development-tuning-1-4, part6b-development-tuning-5-14: development-phase prediction
+  files.
 The smoke reproduction of the paper results needs part1 only.
 
 Integrity: ARCHIVE_SHA256SUMS.txt lists every file in the archive and every zip part.
