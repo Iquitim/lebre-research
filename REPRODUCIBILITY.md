@@ -9,7 +9,7 @@ Every number in the v0.52 specification, revision 1 (`docs/architecture/pdf/LEBR
    - **pandas must be 2.2.3**: pandas ≥ 3 makes `to_numpy()` arrays read-only and breaks the frozen data loader;
    - toolchains as in `environment/TOOLCHAIN.md`.
 2. **Restore the artifacts kept out of git** (`docs/research/ARTIFACTS_MANIFEST.tsv`):
-   - experiment outputs: unzip the public archive `lebre-research-v0.52-r1-artifacts.zip` (Zenodo) at the repository root. It is built by `scripts/make_artifact_archive.py`; `docs/research/ARCHIVE_CONTENTS.tsv` lists every file as IDENTICAL, FILTERED (entries of Silverbox and Cascaded Tanks removed, since their licences do not allow redistribution under CC-BY-4.0) or EXCLUDED (firmware build outputs, rebuilt from source);
+   - experiment outputs: unzip the parts of the public archive `lebre-research-v0.52-r1-artifacts-part*.zip` (Zenodo) at the repository root; part 1 (reserve 3) is enough for the smoke reproduction. The archive is built by `scripts/make_artifact_archive.py`; `docs/research/ARCHIVE_CONTENTS.tsv` lists every file as IDENTICAL, FILTERED (entries of Silverbox and Cascaded Tanks removed, since their licences do not allow redistribution under CC-BY-4.0) or EXCLUDED (firmware build outputs, rebuilt from source);
    - raw data: `python scripts/download_data.py`. It runs the frozen download script, restores the two frozen records that script rewrites (`data/external_v052/MANIFEST.csv`, `SHA256SUMS.txt`) and compares every downloaded file with its frozen hash. ONS keeps updating the files of the current period; the check fails only if a file read by the loaders (ONS hourly 2015-2025, CAMELS-BR, BDG2) differs;
    - toolchains: `environment/TOOLCHAIN.md`.
 
