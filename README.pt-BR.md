@@ -40,7 +40,7 @@ Os arquivos abaixo estão listados com tamanho e SHA-256 em `docs/research/ARTIF
 - binários de firmware e de compilação;
 - quatro registros de eventos muito grandes.
 
-As saídas dos experimentos são publicadas num arquivo separado (oito partes `lebre-research-v0.52-r1-artifacts-part*.zip`, geradas por `scripts/make_artifact_archive.py`; conteúdo em `docs/research/ARCHIVE_CONTENTS.tsv`). Os dados brutos são baixados das fontes originais e as ferramentas são instaladas conforme `environment/TOOLCHAIN.md`. Passo a passo em `REPRODUCIBILITY.md`, seção 0 (em inglês).
+As saídas dos experimentos são publicadas num arquivo separado, [doi:10.5281/zenodo.23082357](https://doi.org/10.5281/zenodo.23082357) (oito partes `lebre-research-v0.52-r1-artifacts-part*.zip`, geradas por `scripts/make_artifact_archive.py`; conteúdo em `docs/research/ARCHIVE_CONTENTS.tsv`). Os dados brutos são baixados das fontes originais e as ferramentas são instaladas conforme `environment/TOOLCHAIN.md`. Passo a passo em `REPRODUCIBILITY.md`, seção 0 (em inglês).
 
 ## Licença
 
@@ -55,3 +55,5 @@ Detalhes em `NOTICE`.
 Lima, S. (2026). *LEBRE research record — v0.52-r1* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23049103
 
 O DOI `10.5281/zenodo.23049102` reúne todas as versões e aponta sempre para a mais recente.
+
+Artefatos dos experimentos (conjunto de dados): Lima, S. (2026). *LEBRE research record v0.52-r1: experiment artifacts* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23082357
