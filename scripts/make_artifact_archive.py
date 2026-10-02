@@ -11,7 +11,7 @@ toolchains under tools/ are never included):
 - excluded: firmware build outputs (.elf, .o, .dll, .lib, .map). They link third-party runtime code and the linker
   maps hold local paths; they are rebuilt from the sources in git with the pinned toolchain (environment/TOOLCHAIN.md).
 
-Writes to <out> six zip parts of at most ~200 MB each (so that each can be uploaded on its own), plus ARCHIVE_README.md,
+Writes to <out> seven zip parts of at most ~200 MB each (so that each can be uploaded on its own), plus ARCHIVE_README.md,
 ARCHIVE_CONTENTS.tsv and ARCHIVE_SHA256SUMS.txt as separate files; every part unzips at the repository root. Also
 writes docs/research/ARCHIVE_CONTENTS.tsv (path, original SHA-256, archived SHA-256, status).
 scripts/verify_integrity.py accepts a FILTERED file whose hashes match that record.
@@ -31,19 +31,21 @@ EXCLUDE_EXT = {".elf", ".o", ".dll", ".lib", ".map"}
 NOT_REDISTRIBUTABLE = {"silverbox", "tanks"}        # see experiments/LEBRE-V0.52-DATA-01/LICENSES_AND_CITATIONS.md
 
 
-PARTS = ["part1-reserve3", "part2-reserve2-and-early-logs", "part3-reserve1-ons", "part4-reserve1-camels-bdg2",
-         "part5-development-a", "part6-development-b"]
+PARTS = ["part1-reserve3", "part2-reserve2-and-early-logs", "part3-reserve1-ons", "part4a-reserve1-camels",
+         "part4b-reserve1-bdg2", "part5-development-a", "part6-development-b"]
 
 
 def part_of(path):
     e = path.split("/")
     if e[1] in ("LEBRE-V0.52-HELDOUT-03", "LEBRE-V0.52-DOC-01", "LEBRE-V0.52-EXT-01"):
-        return PARTS[0]
+        return "part1-reserve3"
     if e[1] == "LEBRE-V0.52-HELDOUT-01":
-        return PARTS[2] if e[2] == "preds" and e[3].startswith("ons__") else PARTS[3]
+        if e[2] == "preds" and e[3].startswith("ons__"):
+            return "part3-reserve1-ons"
+        return "part4a-reserve1-camels" if e[2] == "preds" and e[3].startswith("camels__") else "part4b-reserve1-bdg2"
     if e[1] == "LEBRE-V0.52-PROTO-01":
-        return PARTS[5] if e[2].startswith("TUNE_") else PARTS[4]
-    return PARTS[1]                                  # reserve 2 and the event logs of earlier phases
+        return "part6-development-b" if e[2].startswith("TUNE_") else "part5-development-a"
+    return "part2-reserve2-and-early-logs"           # reserve 2 and the event logs of earlier phases
 
 
 def sha(b):
@@ -106,7 +108,8 @@ Foundation-model outputs were produced with Chronos-2 / Chronos-Bolt (Amazon, Ap
 Parts (all unzip at the repository root):
 - part1-reserve3: reserve 3 (the evaluation reported in the paper), documentation examples, development comparators;
 - part2-reserve2-and-early-logs: reserve 2 and event logs of earlier phases;
-- part3-reserve1-ons, part4-reserve1-camels-bdg2: reserve 1;
+- part3-reserve1-ons, part4a-reserve1-camels, part4b-reserve1-bdg2: reserve 1 (part4b also holds the
+  Chronos outputs of reserve 1);
 - part5-development-a, part6-development-b: development-phase prediction files.
 The smoke reproduction of the paper results needs part1 only.
 

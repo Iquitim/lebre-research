@@ -58,7 +58,7 @@ The following are listed with size and SHA-256 in [`docs/research/ARTIFACTS_MANI
 - firmware and build binaries;
 - four very large early event logs.
 
-In total, 802 files and about 3 GB. The experiment outputs are published as a separate archive (six zip parts `lebre-research-v0.52-r1-artifacts-part*.zip`, built by `scripts/make_artifact_archive.py`; contents in [`docs/research/ARCHIVE_CONTENTS.tsv`](docs/research/ARCHIVE_CONTENTS.tsv)). Raw data are downloaded from the original publishers, and toolchains are installed as in `environment/TOOLCHAIN.md`. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), section 0.
+In total, 802 files and about 3 GB. The experiment outputs are published as a separate archive (seven zip parts `lebre-research-v0.52-r1-artifacts-part*.zip`, built by `scripts/make_artifact_archive.py`; contents in [`docs/research/ARCHIVE_CONTENTS.tsv`](docs/research/ARCHIVE_CONTENTS.tsv)). Raw data are downloaded from the original publishers, and toolchains are installed as in `environment/TOOLCHAIN.md`. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), section 0.
 
 ## Status and honesty notes
 
