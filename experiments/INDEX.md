@@ -1,6 +1,6 @@
 # Experiment index
 
-The 86 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
+The 87 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
 
 **Status legend:**
 - **F**: covered by a frozen SHA-256 manifest in `docs/architecture/`;
@@ -8,7 +8,13 @@ The 86 folders are grouped by research phase. Each folder is self-contained: scr
 - **R**: pre-registered evaluation;
 - **H**: historical, superseded by later versions (kept as record and as ablation source).
 
-## Current line — LEBRE v0.52 (25–29 Sep 2026)
+## Next line — LEBRE v0.53 (proposal, from 5 Oct 2026)
+
+| Folder | Role | Status |
+|---|---|---|
+| `LEBRE-V0.53-DESIGN-NOTE-01` | Design note 01: consolidate the base before expanding; changes M1–M6 motivated by the exploratory LEBRE Lab failures F1–F9 (in Portuguese) | proposal |
+
+## LEBRE v0.52 (25–29 Sep 2026)
 
 | Folder | Role | Status |
 |---|---|---|
