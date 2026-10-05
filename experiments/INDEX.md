@@ -1,6 +1,6 @@
 # Experiment index
 
-The 87 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
+The 86 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
 
 **Status legend:**
 - **F**: covered by a frozen SHA-256 manifest in `docs/architecture/`;
