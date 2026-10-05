@@ -22,7 +22,7 @@ OUT = ROOT / "data" / "external_v053"
 SUMS = HERE / "SNAPSHOT_SHA256SUMS.txt"
 # Opcional: pasta com os arquivos mensais já baixados pelo LEBRE Lab em 04/10/2026 (evita baixar de novo).
 LAB_CACHE = Path(os.environ["LEBRE_LAB_ONS_CACHE"]) if os.environ.get("LEBRE_LAB_ONS_CACHE") else None
-UA = {"User-Agent": "lebre-research (pesquisa sem fins comerciais)"}
+UA = {"User-Agent": "lebre-research (pesquisa sem fins comerciais; github.com/Iquitim/lebre-research)"}
 FX = ["DEXUSUK", "DEXSZUS", "DEXCAUS", "DEXUSAL", "DEXMXUS", "DEXKOUS", "DEXSDUS", "DEXNOUS"]
 JUROS = ["DGS2", "DGS10"]
 CAPITAIS = {"SUDESTE": (-23.55, -46.63), "SUL": (-30.03, -51.23), "NORDESTE": (-8.05, -34.90), "NORTE": (-1.46, -48.50)}

@@ -1,0 +1,262 @@
+{
+ "criado": "2026-10-05T07:01:51",
+ "snapshot_base_sha256": "6e07728676d349bf9cfb895eeb7f4b210adb45746a2dcd601c725e9bacf604a6",
+ "camels_br": {
+  "semente": 5202,
+  "n_elegiveis": 237,
+  "posicoes": "110-139",
+  "reservadas": [
+   12370000,
+   13870000,
+   24050000,
+   24200000,
+   24700000,
+   33450000,
+   34060000,
+   34130000,
+   55340000,
+   55380000,
+   56460000,
+   56775000,
+   56983000,
+   58030000,
+   58500000,
+   58710000,
+   58730001,
+   61024000,
+   61045000,
+   61343000,
+   64362000,
+   65010000,
+   70100000,
+   70300000,
+   70500000,
+   71383000,
+   74900000,
+   84095000,
+   84520000,
+   86420000
+  ],
+  "substituidas_por_ausencia": [],
+  "conferencia": "posições 0-109 = SPLIT_V052 + RESERVA2 + RESERVA3"
+ },
+ "bdg2": {
+  "semente": 5203,
+  "n_elegiveis": 766,
+  "posicoes": "85-114",
+  "reservadas": [
+   "chilledwater:Bull_education_Antonia",
+   "chilledwater:Bull_education_Stewart",
+   "chilledwater:Bull_lodging_Danielle",
+   "chilledwater:Fox_education_Carleen",
+   "chilledwater:Fox_education_Janina",
+   "chilledwater:Fox_education_Sterling",
+   "chilledwater:Fox_lodging_Angla",
+   "chilledwater:Fox_office_Israel",
+   "chilledwater:Fox_office_Margarita",
+   "chilledwater:Fox_public_Martin",
+   "chilledwater:Hog_education_Mathilda",
+   "chilledwater:Hog_office_Rolando",
+   "chilledwater:Panther_education_Quintin",
+   "hotwater:Eagle_assembly_Latrina",
+   "hotwater:Eagle_education_Lino",
+   "hotwater:Eagle_public_Minnie",
+   "hotwater:Fox_assembly_Renna",
+   "hotwater:Fox_education_Claude",
+   "steam:Bull_assembly_Vanessa",
+   "steam:Bull_education_Mervin",
+   "steam:Bull_education_Racheal",
+   "steam:Bull_education_Sebastian",
+   "steam:Bull_lodging_Caren",
+   "steam:Cockatoo_education_Brendan",
+   "steam:Cockatoo_education_Minh",
+   "steam:Eagle_education_Raul",
+   "steam:Hog_education_Haywood",
+   "steam:Hog_industrial_Jay",
+   "steam:Hog_office_Rolando",
+   "steam:Moose_education_Abbie"
+  ],
+  "sites_compartilhados_com_series_ja_usadas": [
+   "Bull",
+   "Cockatoo",
+   "Eagle",
+   "Fox",
+   "Hog",
+   "Moose",
+   "Panther"
+  ],
+  "conferencia": "posições 0-84 = SPLIT_V052 + RESERVA2 + RESERVA3"
+ },
+ "solar": {
+  "semente": 5311,
+  "n_elegiveis_sem_as_do_lab": 21,
+  "excluidas_usadas_no_lab": [
+   "Conj. Janaúba",
+   "Conj. Arinos 2 500 kV",
+   "Conj. Futura",
+   "Conj. Sol do Cerrado",
+   "Conj. Helio Valgas",
+   "Conj. Lar do Sol"
+  ],
+  "elegibilidade": "coordenadas; geração verificada em >= 95% das horas de 2024-2025; capacidade >= 100 MW",
+  "reservadas": [
+   {
+    "nome": "Conj. Alex",
+    "cap": 278.4,
+    "lat": -5.269671,
+    "lon": -37.967945,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Lavras",
+    "cap": 201.0,
+    "lat": -3.791728,
+    "lon": -38.932812,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Calcário",
+    "cap": 132.0,
+    "lat": -5.0347,
+    "lon": -37.785,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Pereira Barreto",
+    "cap": 458.0,
+    "lat": -20.62,
+    "lon": -51.3,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Sol do Sertão",
+    "cap": 415.0,
+    "lat": -12.23913,
+    "lon": -42.610434,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Banabuiú",
+    "cap": 230.0,
+    "lat": -5.3231,
+    "lon": -38.83,
+    "completude": 0.9959
+   },
+   {
+    "nome": "Conj. Luzia",
+    "cap": 117.9,
+    "lat": -6.840796,
+    "lon": -36.93287,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Belmonte",
+    "cap": 455.0,
+    "lat": -7.870061,
+    "lon": -38.83471,
+    "completude": 1.0
+   }
+  ]
+ },
+ "eolica": {
+  "semente": 5312,
+  "n_elegiveis_sem_as_do_lab": 86,
+  "excluidas_usadas_no_lab": [
+   "Conj. São Roque",
+   "Conj. Lagoa dos Ventos",
+   "Conj. Caju",
+   "Conj. Monte Verde",
+   "Conj. Serra do Mel A",
+   "Conj. Santa Vitória do Palmar"
+  ],
+  "elegibilidade": "coordenadas; geração verificada em >= 95% das horas de 2024-2025; capacidade >= 100 MW",
+  "reservadas": [
+   {
+    "nome": "Conj. Quinta 138 kV",
+    "cap": 108.0,
+    "lat": -32.07527778,
+    "lon": -52.26722222,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Serra do Mato",
+    "cap": 121.8,
+    "lat": -3.302,
+    "lon": -39.349,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Folha Larga Sul",
+    "cap": 151.2,
+    "lat": -10.45815,
+    "lon": -40.517163,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Marmeleiro 2",
+    "cap": 207.0,
+    "lat": -33.1395,
+    "lon": -52.99,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Caetés II",
+    "cap": 181.9,
+    "lat": -8.843286,
+    "lon": -36.76005,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Ventos de São Vitor",
+    "cap": 480.0,
+    "lat": -10.956667,
+    "lon": -42.538016,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Santa Rosália",
+    "cap": 141.0,
+    "lat": -3.86925,
+    "lon": -41.18235,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Morrão",
+    "cap": 117.6,
+    "lat": -14.128731,
+    "lon": -42.681442,
+    "completude": 1.0
+   }
+  ]
+ },
+ "carga": {
+  "subsistemas": [
+   "SUDESTE",
+   "SUL",
+   "NORDESTE",
+   "NORTE"
+  ],
+  "periodo": [
+   "2026-01-01",
+   "2026-09-30"
+  ],
+  "observacao": "separação no tempo: o LEBRE Lab usou 2022-2025 dos mesmos subsistemas"
+ },
+ "cambio": {
+  "pares": {
+   "DEXUSUK": "libra (US$ por libra)",
+   "DEXSZUS": "franco suíço por US$",
+   "DEXCAUS": "dólar canadense por US$",
+   "DEXUSAL": "US$ por dólar australiano",
+   "DEXMXUS": "peso mexicano por US$",
+   "DEXKOUS": "won por US$",
+   "DEXSDUS": "coroa sueca por US$",
+   "DEXNOUS": "coroa norueguesa por US$"
+  },
+  "periodo": [
+   "2010-01-01",
+   "2025-12-31"
+  ],
+  "fonte": "Fed H.10 via FRED, domínio público"
+ }
+}

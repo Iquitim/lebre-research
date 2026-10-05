@@ -4,7 +4,9 @@
 **Gerado por:** `make_split_v053.py`. Usa só metadados, cobertura (fração de valores não faltantes) e sementes; os valores
 das séries reservadas não são inspecionados.
 **Cópia dos dados:** `snapshot_v053.py` grava os arquivos brutos em `data/external_v053/` (fora do git) e os SHA-256 em
-`SNAPSHOT_SHA256SUMS.txt`. A avaliação final usa exatamente esses arquivos.
+`SNAPSHOT_SHA256SUMS.txt` (todos os 55 arquivos). A avaliação final usa exatamente esses arquivos. O sorteio foi feito
+depois da fase base (35 arquivos), cujo hash está em `SPLIT_V053.json`; essa lista está em
+`SNAPSHOT_BASE_SHA256SUMS.txt` e é idêntica às linhas correspondentes da lista completa.
 **Sementes novas:** 5311 (solar) e 5312 (eólica), conferidas contra `docs/research/SEEDS.md` e contra as sementes do
 LEBRE Lab.
 

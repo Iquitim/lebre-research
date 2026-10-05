@@ -12,7 +12,9 @@ Rule followed throughout: every measurement set is declared (seeds included) **b
 | (same permutations) | **Reserve 1** = held-out of `SPLIT_V052.json` (ONS 45, CAMELS-BR 50 [positions 10–59], BDG2 30 [positions 5–34]) — **consumed** | `LEBRE-V0.52-HELDOUT-01` |
 | (same permutations) | **Reserve 2** = CAMELS-BR positions 60–79, BDG2 35–54 — **consumed** | `LEBRE-V0.52-HELDOUT-02/select_reserve2.py` |
 | (same permutations) | **Reserve 3** = CAMELS-BR positions 80–109, BDG2 55–84 — **consumed** | `LEBRE-V0.52-HELDOUT-03/select_reserve3.py` |
-| — | **Still unused:** CAMELS-BR positions 110+, BDG2 positions 85+. Eligible ONS rivers are exhausted. | — |
+| (same permutations) | **v0.53 final reserve** = CAMELS-BR positions 110–139, BDG2 85–114 — **reserved, not yet used** | `experiments/LEBRE-V0.53-DATA-01/make_split_v053.py` |
+| 5311 / 5312 | Draw of 8 solar / 8 wind ONS plants for the **v0.53 final reserve** (excluding the 12 plants used in the LEBRE Lab) | same |
+| — | **Still unused:** CAMELS-BR positions 140+, BDG2 positions 115+. Eligible ONS rivers are exhausted. | — |
 
 ## v0.52 development and checks
 
