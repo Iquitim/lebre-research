@@ -78,6 +78,8 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 ### M3. Não estacionariedade (F9) — prioridade 3, começa por diagnóstico
 
+> **Atualização 06/10/2026 (diagnóstico, `experiments/LEBRE-V0.53-DIAG-F9-01/RESUMO.md`):** as entradas espúrias mudaram o erro em menos de 1%, e a LEBRE sem entradas perde para o passeio aleatório na mesma medida. Em precisão, F9 é o mesmo problema de F8 e fica com M2; M3 cai de prioridade e trata só da interpretação das entradas aceitas.
+
 - **Primeiro, entender:** nos níveis de preço, a melhora que levou às aceitações foi real e passageira (tendências comuns
   por um tempo) ou um artefato? O e-process mede melhora preditiva no fluxo; ele pode estar certo sobre o que mede e a
   melhora não durar.
