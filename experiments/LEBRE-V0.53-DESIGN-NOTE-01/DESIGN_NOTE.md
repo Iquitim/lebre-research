@@ -100,8 +100,9 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 ### M5. Custo proporcional ao uso e à surpresa (F1) — prioridade 5
 
 - **Ideia:** entradas nunca aceitas deixam de entrar no modelo base e passam a ser triadas com frequência reduzida;
-  aprendizado e evidência podem pausar em trechos sem surpresa, por uma regra previsível (pausas por regra previsível
-  preservam a validade do e-process; a referência a conferir é Choe e Ramdas, apêndice F.1).
+  aprendizado e evidência podem pausar em trechos sem surpresa, por uma regra previsível (pausar por uma regra que só
+  usa o passado equivale a apostar zero e preserva a validade do e-process; ver PRA-06, que substitui a indicação
+  anterior, não verificada, a um apêndice de Choe e Ramdas).
 - **Encaixe:** muda a lei de custo de "cresce com d" para "cresce com o que está em uso", e mantém o perfil embarcado.
 - **Critério:** em A01 e A12, custo com 50 entradas no máximo 1,5 vez o custo com 5, sem perda de recall.
 
@@ -142,7 +143,8 @@ Nenhum componente é novo: especialistas RLS e combinação dinâmica de modelos
 referência, diferenciação de séries não estacionárias, triagem com frequência reduzida e cálculo adaptativo existem
 separadamente. A contribuição continua sendo de **integração**: o mesmo regime de evidência sempre válida e de custo
 declarado governando também a parte adaptativa. Antes de afirmar qualquer ineditismo, repetir a busca de trabalhos
-anteriores feita para a v0.52 (`experiments/LEBRE-V0.52-DESIGN-NOTE-01/DESIGN_NOTE_02_COMPUTE_BOUNDED.md`).
+anteriores feita para a v0.52 (`experiments/LEBRE-V0.52-DESIGN-NOTE-01/DESIGN_NOTE_02_COMPUTE_BOUNDED.md`). Uma busca
+rápida e dirigida para M1, M2 e M5 está em `PRA_06_V053.md` (06/10/2026): as três têm antecedentes diretos.
 
 ## 7. Próximos passos
 
