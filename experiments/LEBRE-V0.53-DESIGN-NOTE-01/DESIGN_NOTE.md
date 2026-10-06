@@ -69,6 +69,8 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 ### M2. Referência trivial como ponto de partida (F8) — prioridade 2
 
+> **Atualização 06/10/2026 (protótipo no LEBRE Lab, D04, `20261006-063405_D04`):** uma porta simples (média exponencial da diferença de perda, alfa = 0,01) reduziu a perda contra a referência de 6,9% para 1,5% (retornos), de 6,8% para 3,8% (níveis) e de 5,2% para 0,3% (juros), sem perda na carga e na solar (1,000 contra a LEBRE). Não atingiu a margem declarada de 1% em retornos e níveis. Direção para a especificação: trocar a média exponencial por uma decisão governada pelo mesmo e-process das mudanças estruturais.
+
 - **Ideia:** a previsão começa na referência mais simples declarada (zero para variações; persistência ou sazonal ingênuo
   para níveis) e a parte adaptativa só ganha peso com evidência de melhora sobre ela.
 - **Encaixe:** é o mesmo princípio das mudanças estruturais aplicado à própria previsão: a LEBRE como um todo vira um
