@@ -59,3 +59,23 @@ aprende pesos, só compara duas previsões já feitas.
   escolhida e as falhas são declaradas.
 - **Reprodutibilidade do rascunho 0:** o protótipo mantém as opções do rascunho 0 (motor compartilhado e sem observar na
   quarentena por entradas) para que os resultados de `M2_DEV_RESULTADO.md` possam ser reproduzidos.
+
+## 5. Resultado no banco de desenvolvimento (08/10/2026)
+
+Medição no LEBRE Lab (`M2_DEV_R1_PLANO.md`, `M2_DEV_R1_RESULTADO.md`; protótipo `9bfdd0d`):
+
+- **Nas 21 famílias que não são C05, as duas configurações atendem aos 6 critérios:** nas negativas a saída fica na
+  referência (razão 1,000); onde a v0.52 vence, o pior limite superior de M2 ÷ v0.52 é 1,001; no máximo 0,48 troca por
+  2.000 passos; acréscimo de custo de no máximo 18,4 FP por passo; caminho estrutural idêntico ao da v0.52 em todas as
+  séries.
+- **C05 falha nas duas** (critérios 2 e 3). Pela regra do plano, **nenhuma configuração é escolhida**, e C05 vira
+  limitação declarada: em séries de poucas centenas de passos a porta pode promover a LEBRE tarde demais (ali, entre os
+  passos 200 e 260 de 360); recomendação: `porta=False` nesses casos.
+- **α_porta = 0,01 e 0,05** diferem só na velocidade da primeira promoção e na garantia global (0,06 contra 0,10).
+
+## 6. Decisão de projeto (não é resultado de medição)
+
+Como a medição não distingue as duas configurações fora de C05, a escolha de α_porta é uma decisão de projeto:
+**proposta α_porta = 0,01**, pela garantia global mais forte (taxa de descobertas falsas da união <= 0,06), aceitando
+promoções um pouco mais lentas. A decisão é do responsável pelo projeto e será testada, como tudo, na avaliação final
+pré-registrada na reserva.
