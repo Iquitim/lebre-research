@@ -32,3 +32,16 @@ possível, mais fraco porque o compartilhamento é menor. Custo igual ao do rasc
 
 Banco de desenvolvimento (23 famílias, critérios 1, 2 com C05, 4, 5, 6, 7) **e** base de validação, com plano próprio
 commitado antes de rodar. Escolha só se passar nos dois.
+
+## 4. Resultado (08/10/2026)
+
+Medição completa no LEBRE Lab (`M2_DEV_R6_PLANO.md`, `M2_DEV_R6_RESULTADO.md`; protótipo `6a007d2`): 23 famílias do
+desenvolvimento e 10 da validação (usada uma única vez). Reprodução da v0.52 e do rascunho 2 exatas.
+
+- **Passa** em C05 (1,0008, limite superior 1,002), B01/Arinos (1,0003), séries curtas do desenvolvimento (1,009) e da
+  validação (1,014), em todas as famílias sintéticas e horárias das duas bases, e nos critérios 4, 5 e 6.
+- **Falha** em C04 (critério 1: limite superior 1,0145 > 1,01; uma série, juros de 2 anos, 1,0175) e em VC05 (critério
+  2: limite superior 1,063 > 1,02, embora nenhuma série fique pior que a v0.52 no ponto; a incerteza vem de IPCA
+  serviços, com 288 meses avaliados).
+- **Pela regra pré-registrada: não escolhido; a M2 não é resolvida na v0.53 por este caminho e não há rascunho 7 neste
+  banco.**
