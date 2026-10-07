@@ -35,3 +35,14 @@ tratam todo o passado igualmente levam centenas de passos para recuperá-lo. Dua
    declarada (previsão gaussiana com variância por média exponencial), não um resultado.
 3. **Limite honesto:** a garantia é sobre a perda logarítmica da mistura de densidades. A saída pontual é a média da
    mistura (Σ peso × previsão); para ela não há garantia de perda quadrática equivalente. A medição no Lab decide.
+
+## 4. Adendo (08/10/2026, para o rascunho 5): taxas variáveis no Fixed Share
+
+| Referência | Lido | O que diz |
+|---|---|---|
+| Cesa-Bianchi, Gaillard, Lugosi e Stoltz (2012). Mirror descent meets fixed share (and feels no regret). *NeurIPS* 25:989–997 (arXiv:1202.3323v2) | PDF, seções 1–7 | Algoritmo 1 (compartilhamento generalizado) para perdas em [0, 1]. **Seção 7.3, equação (13) e Teorema 4:** com taxas η_t e α_t variáveis, v_{t+1} ∝ p_t^{η_t/η_{t−1}} e^{−η_t ℓ_t} e p_{t+1} = α_t/d + (1 − α_t) v_{t+1} (η_0 = η_1); se η_t e α_t são não crescentes, vale uma cota de arrependimento contra **qualquer** sequência de comparação u_1, ..., u_T (inclui arrependimento adaptativo em intervalos), com termos em ln d / η, m(u)/η_T × ln(d(1−α_T)/α_T), Σ ln(1/(1−α_t))/η_{t−1} e Σ η_{t−1}/8. |
+
+**Uso no rascunho 5:** a regra do AdaHedge (η_t = ln 2 / Δ_{t−1}, Δ = soma dos "mixability gaps") é não crescente, logo
+admissível no Teorema 4; α_t vem do Corolário 6 de Adamskiy et al. (2016) convertido para a parametrização deste artigo
+(para d = 2, α_t = 2/(t + 1)). **A combinação dos dois é nossa;** a garantia formal é a do Teorema 4 avaliada nas taxas
+efetivamente usadas, não uma cota nova.
