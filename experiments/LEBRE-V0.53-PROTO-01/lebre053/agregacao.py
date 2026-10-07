@@ -95,3 +95,56 @@ class FixedShare:
 # AdaHedge (classe Agregador) sobre a perda recortada da v0.52, min(e^2 / B^2, 1). Acréscimo ao rascunho 2, com a regra de
 # FP da v0.52: B^2 = CLIP_K^2 * max(min(s2_R, s2_L), piso^2) (3), duas divisões e dois mínimos (4), B^2 uma vez (1).
 FP_RECORTE_PASSO = 8
+
+
+# ---------------------------------------------------------------------------------------------- rascunho 5
+# Cesa-Bianchi, Gaillard, Lugosi e Stoltz (2012), "Mirror descent meets fixed share (and feels no regret)", NeurIPS 25,
+# seção 7.3, equação (13): v_{t+1} ∝ p_t^(eta_t/eta_{t-1}) exp(-eta_t l_t); p_{t+1} = alpha_t/d + (1 - alpha_t) v_{t+1};
+# eta_0 = eta_1. Por padrão: alpha_t = 2/(t+1) (Corolário 6 de Adamskiy et al., 2016, nesta parametrização) e eta_t pela
+# regra do AdaHedge (ln d / Delta_{t-1}) aplicada ao próprio previsor compartilhado. A combinação é nossa (ver PRA-08).
+# Contagem com a regra da v0.52, K = 2, incluindo saída ponderada (3) e perdas recortadas (11): perda de mistura (13),
+# pesos (11), produto h (3), incremento e acúmulo (3), taxas (4), compartilhamento (6). Total 54.
+FP_COMPARTILHADA_PASSO = 54
+
+
+class FixedShareAdaptativo:
+    """Fixed Share com taxas variáveis (equação 13 de Cesa-Bianchi et al., 2012) para perdas em [0, 1].
+
+    eta_fn, alpha_fn: funções do índice da rodada t (1, 2, ...); None usa a regra do AdaHedge e alpha_t = 2/(t+1).
+    """
+
+    def __init__(self, d=2, eta_fn=None, alpha_fn=None):
+        self.d = int(d)
+        self.p = np.full(self.d, 1.0 / self.d)
+        self.eta_fn, self.alpha_fn = eta_fn, alpha_fn
+        self.Delta = 0.0; self.eta_ant = None; self.t = 0; self.trocas_regime = 0
+        self.etas = []; self.alphas = []                      # taxas usadas em cada rodada (para auditoria e testes)
+
+    def pesos(self):
+        return self.p
+
+    def eta(self):
+        if self.eta_fn is not None:
+            return float(self.eta_fn(self.t + 1))
+        return math.inf if self.Delta == 0.0 else math.log(self.d) / self.Delta
+
+    def atualizar(self, perdas):
+        l = np.asarray(perdas, float); p = self.p
+        eta = self.eta()
+        eta_ant = eta if self.eta_ant is None else self.eta_ant              # eta_0 = eta_1
+        h = float(p @ l); mn = l.min()
+        if math.isinf(eta):
+            m = mn
+            v = p * (l == mn)                                                # limite de p exp(-eta l)
+        else:
+            e = np.exp(-eta * (l - mn))
+            m = mn - math.log(float(p @ e)) / eta
+            r = 0.0 if math.isinf(eta_ant) else eta / eta_ant
+            v = np.exp(r * np.log(p)) * e
+        v = v / v.sum()
+        self.Delta += max(0.0, h - m)
+        self.t += 1
+        a = float(self.alpha_fn(self.t)) if self.alpha_fn is not None else 2.0 / (self.t + 1)
+        self.p = a / self.d + (1.0 - a) * v
+        self.eta_ant = eta
+        self.etas.append(eta); self.alphas.append(a)

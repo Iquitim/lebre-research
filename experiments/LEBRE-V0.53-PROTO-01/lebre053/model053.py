@@ -5,7 +5,8 @@ continuam disponíveis para reproduzir os resultados dele: alpha_porta=None e ob
 ALGORITHM_SPEC_DRAFT_M2_r2.md (rascunho 2: saida="adahedge" ou "flipflop"; a saída passa a ser a média ponderada de R e L
 e a porta vira só auditoria, registrando eventos sem decidir a saída) e ALGORITHM_SPEC_DRAFT_M2_r3.md (rascunho 3:
 saida="fixedshare", Fixed Share com alpha_t = 1/t sobre previsões gaussianas de R e L) e ALGORITHM_SPEC_DRAFT_M2_r4.md
-(rascunho 4: saida="adahedge_recortada", AdaHedge sobre a perda recortada da v0.52).
+(rascunho 4: saida="adahedge_recortada", AdaHedge sobre a perda recortada da v0.52) e ALGORITHM_SPEC_DRAFT_M2_r5.md
+(rascunho 5: saida="adahedge_compartilhada", Fixed Share com taxas variáveis sobre a perda recortada).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
 qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
@@ -19,10 +20,11 @@ import numpy as np
 from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, SCALE_FLOOR, T_MAX
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
-from .agregacao import FP_AGREGACAO_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO, Agregador, FixedShare
+from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO, Agregador,
+                        FixedShare, FixedShareAdaptativo)
 
 REFERENCIAS = ("zero", "persistencia", "sazonal")
-SAIDAS = ("porta", "adahedge", "flipflop", "fixedshare", "adahedge_recortada")
+SAIDAS = ("porta", "adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada")
 FP_PORTA_PASSO = 16           # perdas recortadas, incremento e médias exponenciais da porta (contagem aproximada)
 
 
@@ -42,7 +44,8 @@ class Lebre053:
         R e L com pesos do algoritmo, sobre a perda quadrática, nos mesmos passos que a porta observa; a porta continua
         rodando só como auditoria); "fixedshare" (rascunho 3: pesos do Fixed Share com alpha_t = 1/t sobre a perda
         logarítmica de N(previsão, sigma^2), sigma^2 = média exponencial dos erros quadráticos do próprio previsor);
-        "adahedge_recortada" (rascunho 4: AdaHedge sobre min(e^2 / B^2, 1), B = CLIP_K * max(menor sigma dos dois, piso)).
+        "adahedge_recortada" (rascunho 4: AdaHedge sobre min(e^2 / B^2, 1), B = CLIP_K * max(menor sigma dos dois, piso));
+        "adahedge_compartilhada" (rascunho 5: a mesma perda recortada, pesos do Fixed Share com taxas variáveis).
     """
 
     def __init__(self, n_inputs, season=None, season2=None, standardize=True, referencia=None, porta=True,
@@ -70,9 +73,11 @@ class Lebre053:
         self.saida = saida
         if saida == "fixedshare":
             self.agregador = FixedShare(2)
+        elif saida == "adahedge_compartilhada":
+            self.agregador = FixedShareAdaptativo(2)
         else:
             self.agregador = Agregador(2, flipflop=saida == "flipflop") if saida != "porta" else None
-        self._recortada = saida == "adahedge_recortada"
+        self._recortada = saida in ("adahedge_recortada", "adahedge_compartilhada")
         self.pesos = None                                               # [peso de R, peso de L] na última previsão
         # intervalo da saída (mesma regra adaptativa da v0.52, aplicada ao erro da saída)
         self.e2o = None; self.sigo = 1.0; self.qhat = None; self.qacc = 0.0; self.hits_obs = 0; self.hits_ok = 0
@@ -164,7 +169,8 @@ class Lebre053:
             if self._recortada and self.e2["REF"] is not None:              # escalas só do passado (antes deste erro)
                 B2 = CLIP_K * CLIP_K * max(min(self.e2["REF"], self.e2["LEBRE"]), piso * piso, 1e-300)
                 self.agregador.atualizar((min((y - R) ** 2 / B2, 1.0), min((y - L) ** 2 / B2, 1.0)))
-                self.fp_porta += FP_AGREGACAO_PASSO + FP_RECORTE_PASSO
+                self.fp_porta += (FP_COMPARTILHADA_PASSO if self.saida == "adahedge_compartilhada"
+                                  else FP_AGREGACAO_PASSO + FP_RECORTE_PASSO)
             for k, v in (("REF", R), ("LEBRE", L)):                    # erro de cada lado, para a escala do vigente
                 e2 = (y - v) ** 2
                 self.e2[k] = e2 if self.e2[k] is None else self.e2[k] + (1 - LAM) * (e2 - self.e2[k])

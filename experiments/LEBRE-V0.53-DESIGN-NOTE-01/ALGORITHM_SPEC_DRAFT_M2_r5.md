@@ -27,7 +27,10 @@ Nenhuma constante nova.
   usadas, contra qualquer sequência de comparação, inclusive "o melhor previsor em cada intervalo". **A combinação com a
   regra do AdaHedge é nossa**; não há cota nova provada, e a cota do Teorema 4 fica fraca quando η_t é grande.
 - Como no rascunho 4, a garantia é sobre a perda recortada, não sobre a perda quadrática da média ponderada.
-- **Custo estimado:** ~50 FP por passo para os pesos (incluindo o recorte) mais ~18 da auditoria: ~68.
+- **Custo:** recontado na implementação, 54 FP por passo (pesos, recorte e saída) mais ~18 da auditoria: ~72.
+- **Observado no teste do protótipo, antes da medição:** numa série sintética em que a LEBRE é claramente melhor, o peso
+  dela fica em ~0,94 no passo 400 (η efetivo ~0,3 e piso α_t/2 no outro previsor), contra ~1,00 no rascunho 4. Risco
+  declarado para o critério 2.
 
 ## 3. Medição
 

@@ -12,7 +12,7 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
-from lebre053.agregacao import Agregador, FixedShare                      # noqa: E402
+from lebre053.agregacao import Agregador, FixedShare, FixedShareAdaptativo  # noqa: E402
 
 
 def _jogar(ag, perdas):
@@ -89,7 +89,7 @@ def _rodar(m, X, y, q):
                      for t in range(len(y))])
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -100,7 +100,7 @@ def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     assert m.base.cost_per_step == ref.cost_per_step
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada"])
 def test_saida_e_a_media_ponderada(saida):
     X, y, q = _serie()
     m = Lebre053(3, referencia="persistencia", saida=saida)
@@ -115,13 +115,15 @@ def test_saida_e_a_media_ponderada(saida):
 
 @pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
 def test_sinal_forte_concentra_na_lebre_cedo(saida):
+    """Não se aplica ao rascunho 5: o compartilhamento mantém peso >= alpha_t/2 no outro previsor e, com o eta efetivo
+    observado (~0,3), o peso de L fica em ~0,94 no passo 400 nesta série (registrado antes da medição; a medição decide)."""
     X, y, q = _serie()
     m = Lebre053(3, referencia="persistencia", saida=saida)
     _rodar(m, X[:400], y[:400], np.zeros(400, bool))
     assert m.pesos[1] > 0.99
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada"])
 def test_ruido_puro_concentra_na_referencia_zero(saida):
     rng = np.random.default_rng(11); T = 8000
     X = rng.standard_normal((T, 2)); y = rng.standard_normal(T)
@@ -190,3 +192,59 @@ def test_recortada_limita_o_deficit_de_partida():
     for t in range(T):
         m.predict(X[t]); m.observe(float(y[t]))
     assert np.all(m.agregador.L <= m.agregador.n + 1e-12)                  # perdas em [0, 1]
+
+
+# ------------------------------------------------------------------------------------------- rascunho 5
+def _cota_teorema_4(etas, alphas, t1, t2, d):
+    """Lado direito do Teorema 4 de Cesa-Bianchi et al. (2012) para u_t = e_k em [t1, t2] e 0 fora (rodadas 1..T)."""
+    T = len(etas); eta = lambda t: etas[t - 1]; alpha = lambda t: alphas[t - 1]
+    eta_ant = lambda t: eta(1) if t == 1 else eta(t - 1)
+    u = lambda t: 1.0 if t1 <= t <= t2 else 0.0
+    A = (u(1) / eta(1) + sum(u(t) * (1 / eta(t) - 1 / eta(t - 1)) for t in range(2, T + 1))) * math.log(d)
+    m = 1.0 if t1 >= 2 else 0.0
+    B = m / eta(T) * math.log(d * (1 - alpha(T)) / alpha(T))
+    C = sum(u(t) / eta(t - 1) * math.log(1 / (1 - alpha(t))) for t in range(2, T + 1))
+    D = sum(eta_ant(t) / 8 * u(t) for t in range(1, T + 1))
+    return A + B + C + D
+
+
+@pytest.mark.parametrize("c", [0.3, 1.0, 3.0])
+@pytest.mark.parametrize("d", [2, 3])
+def test_compartilhada_respeita_o_teorema_4_em_todo_intervalo(c, d):
+    rng = np.random.default_rng(int(10 * c) + d); T = 60
+    perdas = rng.random((T, d)) * (rng.random((T, 1)) < 0.8)
+    perdas[T // 2:, 0] *= 0.2                                            # o melhor muda no meio
+    fs = FixedShareAdaptativo(d, eta_fn=lambda t: c / math.sqrt(t))
+    jog = []
+    for l in perdas:
+        jog.append(float(fs.pesos() @ l)); fs.atualizar(l)
+    jog = np.array(jog)
+    for t1 in range(1, T + 1):
+        for t2 in range(t1, T + 1):
+            for k in range(d):
+                reg = jog[t1 - 1:t2].sum() - perdas[t1 - 1:t2, k].sum()
+                assert reg <= _cota_teorema_4(fs.etas, fs.alphas, t1, t2, d) + 1e-9
+
+
+def test_compartilhada_sem_troca_e_taxa_fixa_e_hedge():
+    """Com alpha_t = 0 e eta constante, a equação (13) é o Hedge de pesos exponenciais."""
+    rng = np.random.default_rng(2); perdas = rng.random((50, 2))
+    fs = FixedShareAdaptativo(2, eta_fn=lambda t: 0.7, alpha_fn=lambda t: 0.0)
+    L = np.zeros(2)
+    for l in perdas:
+        w = np.exp(-0.7 * (L - L.min())); w /= w.sum()
+        assert np.allclose(fs.pesos(), w, rtol=1e-12)
+        fs.atualizar(l); L += l
+
+
+def test_compartilhada_taxas_nao_crescentes_e_esquece_deficit():
+    fs = FixedShareAdaptativo(2)
+    for _ in range(200):
+        fs.atualizar([0.0, 1.0])                                         # L muito pior por 200 rodadas
+    for k in range(1, 400):
+        fs.atualizar([0.6, 0.1])                                         # depois L melhor
+        if fs.pesos()[1] > 0.9:
+            break
+    assert all(a >= b for a, b in zip(fs.etas, fs.etas[1:]))
+    assert all(a >= b for a, b in zip(fs.alphas, fs.alphas[1:]))
+    assert k < 200                                                       # recupera antes de igualar o déficit
