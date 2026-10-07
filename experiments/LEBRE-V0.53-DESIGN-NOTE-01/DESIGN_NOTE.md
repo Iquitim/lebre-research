@@ -71,6 +71,8 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 > **Atualização 06/10/2026 (protótipo no LEBRE Lab, D04, `20261006-063405_D04`):** uma porta simples (média exponencial da diferença de perda, alfa = 0,01) reduziu a perda contra a referência de 6,9% para 1,5% (retornos), de 6,8% para 3,8% (níveis) e de 5,2% para 0,3% (juros), sem perda na carga e na solar (1,000 contra a LEBRE). Não atingiu a margem declarada de 1% em retornos e níveis. Direção para a especificação: trocar a média exponencial por uma decisão governada pelo mesmo e-process das mudanças estruturais.
 
+> **Atualização 07/10/2026 (teste amplo D05 e incerteza, LEBRE Lab `analises/INCERTEZA_RESULTADO.md`):** em 20 famílias onde a LEBRE vence a referência, a porta não piorou mais que 0,7% (limite superior do intervalo de 95% de no máximo 1,015 nas famílias reais). Nos testes negativos, a porta ainda é pior que a referência em retornos (1,015; IC 1,004–1,031) e níveis (1,038; IC 1,009–1,057); em juros, inconclusivo (1,003; IC 0,991–1,016). O MSE recalculado reproduziu exatamente as execuções originais. Requisito da literatura (PRA-06): a comparação por e-process exige perda limitada (o recorte da v0.52) ou os métodos para escores não limitados.
+
 - **Ideia:** a previsão começa na referência mais simples declarada (zero para variações; persistência ou sazonal ingênuo
   para níveis) e a parte adaptativa só ganha peso com evidência de melhora sobre ela.
 - **Encaixe:** é o mesmo princípio das mudanças estruturais aplicado à própria previsão: a LEBRE como um todo vira um
