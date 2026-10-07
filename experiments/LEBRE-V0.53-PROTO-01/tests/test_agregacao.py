@@ -12,7 +12,7 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
-from lebre053.agregacao import Agregador                                  # noqa: E402
+from lebre053.agregacao import Agregador, FixedShare                      # noqa: E402
 
 
 def _jogar(ag, perdas):
@@ -89,7 +89,7 @@ def _rodar(m, X, y, q):
                      for t in range(len(y))])
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -100,7 +100,7 @@ def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     assert m.base.cost_per_step == ref.cost_per_step
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
 def test_saida_e_a_media_ponderada(saida):
     X, y, q = _serie()
     m = Lebre053(3, referencia="persistencia", saida=saida)
@@ -113,7 +113,7 @@ def test_saida_e_a_media_ponderada(saida):
         m.observe(None if not math.isfinite(y[t]) else float(y[t]), quarantine=bool(q[t]))
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
 def test_sinal_forte_concentra_na_lebre_cedo(saida):
     X, y, q = _serie()
     m = Lebre053(3, referencia="persistencia", saida=saida)
@@ -121,7 +121,7 @@ def test_sinal_forte_concentra_na_lebre_cedo(saida):
     assert m.pesos[1] > 0.99
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
 def test_ruido_puro_concentra_na_referencia_zero(saida):
     rng = np.random.default_rng(11); T = 8000
     X = rng.standard_normal((T, 2)); y = rng.standard_normal(T)
@@ -133,3 +133,49 @@ def test_ruido_puro_concentra_na_referencia_zero(saida):
 def test_saida_invalida():
     with pytest.raises(ValueError):
         Lebre053(2, saida="media")
+
+
+# ------------------------------------------------------------------------------------------- rascunho 3
+def _perdas_mistura(fs, perdas):
+    """Perda de mistura por rodada: -ln sum_n u_t^n exp(-l_t^n) (Protocolo 1 de Adamskiy et al., 2016)."""
+    out = []
+    for l in perdas:
+        u = fs.pesos(); m = l.min()
+        out.append(m - math.log(float(u @ np.exp(-(l - m)))))
+        fs.atualizar(l)
+    return np.array(out)
+
+
+@pytest.mark.parametrize("N", [2, 3])
+@pytest.mark.parametrize("seed", [0, 1])
+def test_fixed_share_respeita_o_corolario_6_em_todo_intervalo(N, seed):
+    rng = np.random.default_rng(seed); T = 150
+    perdas = rng.standard_exponential((T, N)) * rng.choice([0.1, 1.0, 30.0], size=(T, 1))
+    h = _perdas_mistura(FixedShare(N), perdas)
+    H = np.r_[0, np.cumsum(h)]; Lc = np.vstack([np.zeros(N), np.cumsum(perdas, 0)])
+    for t1 in range(1, T + 1):
+        for t2 in range(t1, T + 1):
+            reg = H[t2] - H[t1 - 1] - (Lc[t2] - Lc[t1 - 1]).min()
+            lim = (math.log(N) if t1 == 1 else math.log(N - 1)) + math.log(t2)
+            assert reg <= lim + 1e-9
+
+
+def test_fixed_share_atinge_o_pior_caso_do_teorema_4():
+    """Um bom especialista no intervalo [t1, t2], perda 'infinita' do bom na rodada anterior: regret = ln t2 (N = 2)."""
+    t1, t2, M = 40, 120, 800.0
+    perdas = np.array([[0.0, M]] * (t1 - 2) + [[M, 0.0]] + [[0.0, M]] * (t2 - t1 + 1))
+    h = _perdas_mistura(FixedShare(2), perdas)
+    reg = h[t1 - 1:t2].sum() - perdas[t1 - 1:t2].sum(0).min()
+    assert reg == pytest.approx(math.log(t2), abs=1e-6)
+
+
+def test_fixed_share_esquece_deficit_inicial():
+    """Cenário de B02: L muito pior no início, depois muito melhor; o peso de L recupera em poucos passos."""
+    fs = FixedShare(2)
+    for _ in range(24):
+        fs.atualizar([0.0, 1e6])
+    for k in range(1, 30):
+        fs.atualizar([1.0, 0.0])
+        if fs.pesos()[1] > 0.9:
+            break
+    assert k <= 10

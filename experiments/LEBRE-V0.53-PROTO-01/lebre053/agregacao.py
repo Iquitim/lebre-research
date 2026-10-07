@@ -62,3 +62,30 @@ class Agregador:
         if self.flipflop and self.Delta[self.regime] > self.escala[self.regime] * self.Delta[1 - self.regime]:
             self.regime = 1 - self.regime; self.trocas_regime += 1
         self.n += 1
+
+
+# ---------------------------------------------------------------------------------------------- rascunho 3
+# Adamskiy, Koolen, Chernov e Vovk (2016), "A closer look at adaptive regret", JMLR 17(23): Fixed Share, equação (5),
+# com taxa de troca alpha_t = 1/t (Corolário 6; alpha_1 = (N-1)/N, convenção (7)), sobre a perda de mistura.
+# Contagem com a regra da v0.52, K = 2: perdas gaussianas (escalas 2, perdas 14), posterior (10), troca (8), saída (3).
+FP_FIXED_SHARE_PASSO = 37
+
+
+class FixedShare:
+    """Fixed Share com alpha_t = 1/t para N especialistas; perdas são perdas logarítmicas (podem ser qualquer real)."""
+
+    def __init__(self, N=2):
+        self.N = int(N)
+        self.u = np.full(self.N, 1.0 / self.N)
+        self.n = 0; self.trocas_regime = 0
+
+    def pesos(self):
+        return self.u
+
+    def atualizar(self, perdas):
+        l = np.asarray(perdas, float)
+        p = self.u * np.exp(-(l - l.min()))
+        p = p / p.sum()
+        self.n += 1
+        a = 1.0 / (self.n + 1)                                   # alpha_{t+1}, t = rodadas concluídas
+        self.u = a / (self.N - 1) + (1.0 - self.N / (self.N - 1) * a) * p
