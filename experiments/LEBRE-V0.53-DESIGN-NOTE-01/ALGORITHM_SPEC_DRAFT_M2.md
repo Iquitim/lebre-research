@@ -159,3 +159,25 @@ Se 1 falhar com 2 atendido, a porta por evidência é mais conservadora que a he
 - A porta deveria ver também a referência `sazonal` quando o ciclo declarado está errado? Fica para M6.
 - Interação com M1 (especialista de precisão): M1 muda a previsão L, e a porta compara L com R; a ordem de
   implementação proposta é M2 primeiro, M1 depois, medindo de novo os critérios de M2.
+
+## 9. Resultado do rascunho 0 no banco de desenvolvimento (07-08/10/2026)
+
+Medição completa no LEBRE Lab (`analises/M2_DEV_PLANO.md` e `M2_DEV_RESULTADO.md`; protótipo `da200a1`): 22 famílias,
+as 6 configurações da seção 6, bootstrap de blocos. **Nenhuma configuração atende aos 5 critérios; nenhuma é
+escolhida.**
+
+- **Critério 1 (negativas): atendido**, com a saída na referência o tempo todo (razão 1,000) em C01, C03 e C04.
+- **Critério 2 (positivas): falha só em C05** (360 meses): a porta nunca promove; a quarentena de entradas bloqueia a
+  observação e o recorte deixa a evidência lenta.
+- **Critério 5 (custo): falha só em B06**: compartilhar a sequência e-LOND desloca os níveis estruturais e muda as
+  entradas aceitas; o custo da porta em si é ~18 FP por passo.
+- Margem e recriação quase não mudam os resultados.
+
+**Mudanças propostas para o rascunho 1 (cada uma com novo plano antes de testar):**
+1. **Orçamento de erro separado** para a porta (α dividido entre porta e estrutura), mantendo o controle global pela soma
+   e deixando o caminho estrutural igual ao da v0.52.
+2. **Observação durante a quarentena:** decidir com argumento de validade se a porta pode observar quando só as entradas
+   estão fora do contrato (o alvo não está em quarentena).
+3. **Séries curtas:** tratar explicitamente (dados mínimos, ou porta desligada por declaração), com o custo de cada opção.
+4. **Margem e recriação:** fixar a opção mais simples (ε = 0,002 e hipóteses recriadas), já que não fazem diferença no
+   banco; registrar como decisão, não como resultado.
