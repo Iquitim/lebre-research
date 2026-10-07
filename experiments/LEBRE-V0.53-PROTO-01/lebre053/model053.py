@@ -1,7 +1,9 @@
 """LEBRE v0.53 (protótipo de desenvolvimento): v0.52-r1 inalterada + M2, a porta da referência trivial.
 
 Especificação: experiments/LEBRE-V0.53-DESIGN-NOTE-01/ALGORITHM_SPEC_DRAFT_M2_r1.md (rascunho 1; as opções do rascunho 0
-continuam disponíveis para reproduzir os resultados dele: alpha_porta=None e observar_quarentena_entradas=False).
+continuam disponíveis para reproduzir os resultados dele: alpha_porta=None e observar_quarentena_entradas=False) e
+ALGORITHM_SPEC_DRAFT_M2_r2.md (rascunho 2: saida="adahedge" ou "flipflop"; a saída passa a ser a média ponderada de R e L
+e a porta vira só auditoria, registrando eventos sem decidir a saída).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
 qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
@@ -15,8 +17,10 @@ import numpy as np
 from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, SCALE_FLOOR, T_MAX
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
+from .agregacao import FP_AGREGACAO_PASSO, Agregador
 
 REFERENCIAS = ("zero", "persistencia", "sazonal")
+SAIDAS = ("porta", "adahedge", "flipflop")
 FP_PORTA_PASSO = 16           # perdas recortadas, incremento e médias exponenciais da porta (contagem aproximada)
 
 
@@ -32,10 +36,15 @@ class Lebre053:
         (rascunho 0).
     observar_quarentena_entradas: True (rascunho 1) faz a porta observar também os passos em quarentena por entradas
         fora do contrato; a marcação do próprio alvo (quarantine=True) continua excluindo o passo.
+    saida: "porta" (rascunhos 0 e 1: a porta decide a saída); "adahedge" ou "flipflop" (rascunho 2: média ponderada de
+        R e L com pesos do algoritmo, sobre a perda quadrática, nos mesmos passos que a porta observa; a porta continua
+        rodando só como auditoria).
     """
 
     def __init__(self, n_inputs, season=None, season2=None, standardize=True, referencia=None, porta=True,
-                 eps_porta=0.002, recriar=True, alpha_porta=0.01, observar_quarentena_entradas=True):
+                 eps_porta=0.002, recriar=True, alpha_porta=0.01, observar_quarentena_entradas=True, saida="porta"):
+        if saida not in SAIDAS:
+            raise ValueError(f"saida deve ser uma de {SAIDAS}")
         self.base = Lebre052(n_inputs, season=season, season2=season2, standardize=standardize)
         if referencia is None:
             referencia = "sazonal" if season else "persistencia"
@@ -54,6 +63,9 @@ class Lebre053:
         self._hyp = None; self._hkey = None; self._inst = 0; self._ep_n = 0; self._ep_S = 0.0
         self.eventos_porta = []; self.trocas = 0; self.fp_porta = 0.0
         self._out = None; self._R = None; self._L = None
+        self.saida = saida
+        self.agregador = Agregador(2, flipflop=saida == "flipflop") if saida != "porta" else None
+        self.pesos = None                                               # [peso de R, peso de L] na última previsão
         # intervalo da saída (mesma regra adaptativa da v0.52, aplicada ao erro da saída)
         self.e2o = None; self.sigo = 1.0; self.qhat = None; self.qacc = 0.0; self.hits_obs = 0; self.hits_ok = 0
         if self.porta:
@@ -103,7 +115,14 @@ class Lebre053:
             self._out = fb.value
             return fb
         self._L = fb.value; self._R = self._referencia()
-        out = self._R if (self.modo == "REF" and math.isfinite(self._R)) else self._L
+        if self.agregador is not None:
+            if math.isfinite(self._R):
+                self.pesos = self.agregador.pesos()
+                out = float(self.pesos[0] * self._R + self.pesos[1] * self._L)
+            else:
+                self.pesos = None; out = self._L
+        else:
+            out = self._R if (self.modo == "REF" and math.isfinite(self._R)) else self._L
         self._out = out
         q = self.qhat
         lo, hi = (out - q, out + q) if q is not None else (math.nan, math.nan)
@@ -133,6 +152,9 @@ class Lebre053:
                 for k in ("REF", "LEBRE"):
                     self.sig[k] = math.sqrt(max(self.e2[k], 1e-300))
             self.fp_porta += FP_PORTA_PASSO
+            if self.agregador is not None:
+                self.agregador.atualizar(((y - R) ** 2, (y - L) ** 2))
+                self.fp_porta += FP_AGREGACAO_PASSO
         if y_ok:                                                        # intervalo da saída
             e = y - self._out
             self.e2o = e * e if self.e2o is None else self.e2o + (1 - LAM) * (e * e - self.e2o)

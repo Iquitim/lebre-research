@@ -6,7 +6,11 @@ Não é uma versão publicada. Implementa a v0.52-r1 inalterada mais as mudança
   `lebre==0.1.0` (hashes em `SHA256_COPIAS.txt`, conferidos nos testes). Nunca são editadas.
 - `lebre053/model053.py`: M2, a porta da referência trivial (especificação:
   `../LEBRE-V0.53-DESIGN-NOTE-01/ALGORITHM_SPEC_DRAFT_M2.md`).
-- `tests/`: com a porta desligada, a saída é idêntica bit a bit à da v0.52; comportamento básico da porta.
+- `lebre053/agregacao.py`: M2, rascunho 2 (`../LEBRE-V0.53-DESIGN-NOTE-01/ALGORITHM_SPEC_DRAFT_M2_r2.md`): AdaHedge e
+  FlipFlop transcritos das Figuras 1 e 2 de de Rooij et al. (2014), parâmetros do Corolário 16. Ativado com
+  `saida="adahedge"` ou `saida="flipflop"`; o padrão (`saida="porta"`) mantém o rascunho 1 reproduzível.
+- `tests/`: com a porta desligada, a saída é idêntica bit a bit à da v0.52; comportamento básico da porta; garantias do artigo (Corolários 9 e 16) e
+  exemplo da seção 3.1 para a agregação.
 
 Desenvolvimento só com o LEBRE Lab e os dados de desenvolvimento da v0.52; a reserva da v0.53 (`LEBRE-V0.53-DATA-01`)
 não é usada.
