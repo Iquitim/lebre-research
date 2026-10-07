@@ -89,7 +89,8 @@ def _rodar(m, X, y, q):
                      for t in range(len(y))])
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
+                                   "adahedge_compartilhada_rapida"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -208,13 +209,15 @@ def _cota_teorema_4(etas, alphas, t1, t2, d):
     return A + B + C + D
 
 
+@pytest.mark.parametrize("taxa", ["1/t", "1/t2"])
 @pytest.mark.parametrize("c", [0.3, 1.0, 3.0])
 @pytest.mark.parametrize("d", [2, 3])
-def test_compartilhada_respeita_o_teorema_4_em_todo_intervalo(c, d):
+def test_compartilhada_respeita_o_teorema_4_em_todo_intervalo(c, d, taxa):
     rng = np.random.default_rng(int(10 * c) + d); T = 60
     perdas = rng.random((T, d)) * (rng.random((T, 1)) < 0.8)
     perdas[T // 2:, 0] *= 0.2                                            # o melhor muda no meio
-    fs = FixedShareAdaptativo(d, eta_fn=lambda t: c / math.sqrt(t))
+    afn = None if taxa == "1/t" else (lambda t: 2.0 / (t + 1) ** 2)
+    fs = FixedShareAdaptativo(d, eta_fn=lambda t: c / math.sqrt(t), alpha_fn=afn)
     jog = []
     for l in perdas:
         jog.append(float(fs.pesos() @ l)); fs.atualizar(l)

@@ -16,6 +16,7 @@ Não é uma versão publicada. Implementa a v0.52-r1 inalterada mais as mudança
   v0.52.
 - M2, rascunho 5 (`ALGORITHM_SPEC_DRAFT_M2_r5.md`): `saida="adahedge_compartilhada"`, Fixed Share com taxas variáveis
   (Cesa-Bianchi et al., 2012, eq. 13) sobre a perda recortada; testes conferem o Teorema 4 em todos os intervalos.
+- M2, rascunho 6 (`ALGORITHM_SPEC_DRAFT_M2_r6.md`): `saida="adahedge_compartilhada_rapida"`, taxa de troca 2/(t+1)².
 - `tests/`: com a porta desligada, a saída é idêntica bit a bit à da v0.52; comportamento básico da porta; garantias do artigo (Corolários 9 e 16) e
   exemplo da seção 3.1 para a agregação.
 
