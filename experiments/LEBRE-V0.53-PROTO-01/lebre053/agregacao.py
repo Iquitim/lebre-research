@@ -11,7 +11,10 @@ import math
 import numpy as np
 
 PHI_FF, ALPHA_FF = 2.37, 1.243          # Corolário 16
-FP_AGREGACAO_PASSO = 30                 # duas avaliações de mix (exponenciais, somas, log) e o incremento (aproximado)
+# Contagem com a regra da v0.52 (1 FP por operação elementar, exp e log incluídos), K = 2: pesos na previsão (mix, 14),
+# saída ponderada (3), perdas quadráticas (4), atualização (produto 3, soma 2, mix 14, incremento 3, acúmulo 1,
+# comparação de regime 2, taxa 2). Total 48, tomado como teto também nos passos em que se segue o líder (mais baratos).
+FP_AGREGACAO_PASSO = 48
 
 
 def _mix(eta, L):
