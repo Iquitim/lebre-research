@@ -158,5 +158,6 @@ rápida e dirigida para M1, M2 e M5 está em `PRA_06_V053.md` (06/10/2026): as t
 2. ~~Reserva dos dados finais~~: feita em 05/10/2026.
 3. ~~Diagnóstico de F9 e busca de trabalhos anteriores~~: feitos em 06 e 07/10/2026 (`LEBRE-V0.53-DIAG-F9-01`,
    `PRA_06_V053.md`); protótipo de M2 testado no Lab (D04, D05) com incerteza medida.
-4. Rascunho da especificação do algoritmo, mudança por mudança, começando por M2. Limites a levar em conta:
+4. Rascunho da especificação do algoritmo, mudança por mudança, começando por M2 (rascunho 0 de M2 em
+   `ALGORITHM_SPEC_DRAFT_M2.md`, 07/10/2026). Limites a levar em conta:
    `REVISAO_2026-10-07.md`, seções 4 e 5.
