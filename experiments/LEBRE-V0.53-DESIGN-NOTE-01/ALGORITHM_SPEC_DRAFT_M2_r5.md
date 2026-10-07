@@ -36,3 +36,12 @@ Nenhuma constante nova.
 
 Mesmo plano dos rascunhos 2 a 4 (23 famílias, critérios 1, 2 com C05, 4, 5, 6, 7), uma configuração, sem parâmetros
 livres, plano próprio commitado antes de rodar.
+
+## 4. Resultado no banco de desenvolvimento (08/10/2026)
+
+Medição no LEBRE Lab (`M2_DEV_R5_PLANO.md`, `M2_DEV_R5_RESULTADO.md`; protótipo `244f7b3`), interrompida com a regra já
+decidida (7 de 23 famílias). **Não escolhida:** falha o critério 2 em C05 (1,060, limite superior 1,132) e o critério 1
+em C03 e C04 (limites superiores 1,019 e 1,018). **Resolve** a série Arinos (B01: 1,002) e as séries curtas (0,991). O
+risco declarado antes da medição se confirmou: com compartilhamento os pesos não concentram (peso de L 0,86 em C05; 0,20
+a 0,29 nas negativas), agravado pela realimentação entre o "mixability gap" e o η do AdaHedge. Os rascunhos 4 e 5 ficam
+nos dois lados da troca entre memória e adaptação.
