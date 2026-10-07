@@ -28,3 +28,13 @@ estrutura idêntica à v0.52; mesmos passos observados).
 Mesmo plano do rascunho 2 (23 famílias, mesmos critérios 1, 2, 4, 5, 6 e 7, mesmo bootstrap), com plano próprio
 commitado antes de rodar. Uma única configuração, sem parâmetros livres. Se falhar, as falhas são declaradas e nada é
 ajustado.
+
+## 4. Resultado no banco de desenvolvimento (08/10/2026)
+
+Medição no LEBRE Lab (`M2_DEV_R3_PLANO.md`, `M2_DEV_R3_RESULTADO.md`; protótipo `bda07f4`), interrompida depois que a
+regra já estava decidida (8 das 23 famílias medidas). **Não escolhida:** falha o critério 2 em C05 (1,108, IC 95%
+1,02–1,21), B01, B02 e C02; o critério 1 em C01, C03 e C04; e o critério 7 nas séries curtas (1,115). Diagnóstico: com
+a perda logarítmica da gaussiana de escala própria, a vantagem por passo do melhor previsor é só ~½ ln(razão dos erros
+quadráticos médios); o Fixed Share, pronto para trocar, segue sequências de sorte (em C05 o peso da LEBRE oscila entre
+0,03 e 0,93). O rascunho 2 (AdaHedge) continua sendo o único que resolve C05; o problema em aberto é só o déficit inicial
+em séries curtas (B02).
