@@ -37,3 +37,13 @@ Nenhuma constante nova: CLIP_K, LAM, SCALE_FLOOR e o teto 1 já existem na v0.52
 
 Mesmo plano do rascunho 2 (23 famílias, critérios 1, 2 com C05, 4, 5, 6, 7), uma configuração, sem parâmetros livres,
 plano próprio commitado antes de rodar.
+
+## 5. Resultado no banco de desenvolvimento (08/10/2026)
+
+Medição completa no LEBRE Lab (`M2_DEV_R4_PLANO.md`, `M2_DEV_R4_RESULTADO.md`; protótipo `432ef71`). Reprodução da v0.52
+e do rascunho 2 exatas. **Atende aos critérios 1, 4, 5 (acréscimo de 64 a 74 FP por passo), 6 e 7 (séries curtas: M2 ÷
+melhor 1,013, limite superior 1,023), e C05 (1,0007, limite superior 1,003).** **Falha o critério 2 só em B01** (1,024,
+limite superior 1,043), por uma única série (Arinos, 1,154): a usina começa a gerar no passo 720, a LEBRE leva milhares
+de passos para aprendê-la, e com a perda recortada a vantagem por passo dela fica pequena; os pesos só passam para a
+LEBRE por volta do passo 6.500. **Não escolhida.** A raiz comum às falhas dos rascunhos 2 e 4 é a memória total dos
+pesos.
