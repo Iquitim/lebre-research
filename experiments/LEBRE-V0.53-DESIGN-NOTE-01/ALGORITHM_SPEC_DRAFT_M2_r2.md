@@ -44,3 +44,22 @@ acumulada da saída fica perto da do melhor entre R e L, para qualquer sequênci
   <= 1,02, obrigatório**; e, na família curta, M2 ÷ melhor entre v0.52 e referência com limite superior <= 1,05. O
   critério 3 (alternância) não se aplica a pesos contínuos.
 - **Se nenhum candidato atender:** voltar à literatura (Fixed Share para tracking; Squint), sem ajustar parâmetros.
+
+## 5. Resultado no banco de desenvolvimento (08/10/2026)
+
+Medição no LEBRE Lab (`M2_DEV_R2_PLANO.md` com o adendo 1, `M2_DEV_R2_RESULTADO.md`; protótipo `82e7b16`). Reprodução da
+v0.52 e do rascunho 1 exatas.
+
+- **C05 resolvida nas duas configurações:** M2 ÷ v0.52 = 1,000 (IC 95% 1,000–1,000), contra 2,07 no rascunho 1; o peso
+  da LEBRE passa de 0,9 entre os passos 2 e 33 (antes, promoção entre 200 e 260).
+- **AdaHedge atende aos critérios 1, 2, 4, 5 e 6** nas 22 famílias; em B07 a combinação supera os dois previsores (0,92
+  contra a referência, 0,98 contra a v0.52, intervalos excluindo 1).
+- **As duas falham o critério 7 (séries curtas):** limite superior 1,115 (AdaHedge) e 1,129 (FlipFlop), contra 1,05. A
+  falha vem só de B02 (carga elétrica): nos primeiros passos a LEBRE ainda não aprendeu o nível e acumula um déficit de
+  perda que os pesos, por tratarem todo o passado igualmente, demoram centenas de passos para recuperar (ou não
+  recuperam em 360). FlipFlop também falha o critério 1 em C04 (1,012).
+- **Custo:** acréscimo de ~66 FP por passo (agregação 48, auditoria ~18), dentro do limite revisado de 75 declarado no
+  plano antes de rodar; o limite antigo de 25 não seria atendido. A aceitação do limite revisado é do responsável pelo
+  projeto.
+- **Pela regra do plano, nenhuma configuração é escolhida.** O próximo passo é a literatura de acompanhamento do melhor
+  especialista que muda (Fixed Share; arrependimento adaptativo a intervalos), sem ajustar parâmetros.
