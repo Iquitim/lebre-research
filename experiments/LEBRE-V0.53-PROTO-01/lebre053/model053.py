@@ -1,9 +1,11 @@
 """LEBRE v0.53 (protótipo de desenvolvimento): v0.52-r1 inalterada + M2, a porta da referência trivial.
 
-Especificação: experiments/LEBRE-V0.53-DESIGN-NOTE-01/ALGORITHM_SPEC_DRAFT_M2.md (rascunho 0).
+Especificação: experiments/LEBRE-V0.53-DESIGN-NOTE-01/ALGORITHM_SPEC_DRAFT_M2_r1.md (rascunho 1; as opções do rascunho 0
+continuam disponíveis para reproduzir os resultados dele: alpha_porta=None e observar_quarentena_entradas=False).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
-qual previsão sai. A porta usa o mesmo motor de evidência (e a mesma sequência de níveis e-LOND) da v0.52.
+qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
+fica idêntico ao da v0.52.
 """
 import math
 from collections import deque
@@ -11,6 +13,7 @@ from collections import deque
 import numpy as np
 
 from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, SCALE_FLOOR, T_MAX
+from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
 
 REFERENCIAS = ("zero", "persistencia", "sazonal")
@@ -25,10 +28,14 @@ class Lebre053:
     porta: False desliga M2; a saída é então idêntica, bit a bit, à da v0.52 (teste em tests/).
     eps_porta: margem das duas hipóteses da porta.
     recriar: True aposenta e recria a hipótese da porta ao fim de um episódio sem avanço; False a mantém persistente.
+    alpha_porta: orçamento de erro próprio da porta (rascunho 1); None usa o motor e a sequência e-LOND da estrutura
+        (rascunho 0).
+    observar_quarentena_entradas: True (rascunho 1) faz a porta observar também os passos em quarentena por entradas
+        fora do contrato; a marcação do próprio alvo (quarantine=True) continua excluindo o passo.
     """
 
     def __init__(self, n_inputs, season=None, season2=None, standardize=True, referencia=None, porta=True,
-                 eps_porta=0.002, recriar=True):
+                 eps_porta=0.002, recriar=True, alpha_porta=0.01, observar_quarentena_entradas=True):
         self.base = Lebre052(n_inputs, season=season, season2=season2, standardize=standardize)
         if referencia is None:
             referencia = "sazonal" if season else "persistencia"
@@ -38,6 +45,8 @@ class Lebre053:
             raise ValueError("referencia 'sazonal' exige um ciclo declarado (season)")
         self.referencia, self.porta, self.eps, self.recriar = referencia, bool(porta), float(eps_porta), bool(recriar)
         self.season = season
+        self.alpha_porta, self.obs_quar = alpha_porta, bool(observar_quarentena_entradas)
+        self._motor_porta = ChangeEngine(alpha_porta, 2, 1, N_MIN, T_MAX) if alpha_porta is not None else None
         self.hist = deque(maxlen=season) if referencia == "sazonal" else None
         self.ultimo = None
         self.modo = "REF" if self.porta else "LEBRE"
@@ -53,7 +62,7 @@ class Lebre053:
     # ------------------------------------------------------------------ porta
     @property
     def _engine(self):
-        return self.base._core.engine
+        return self._motor_porta if self._motor_porta is not None else self.base._core.engine
 
     def _nova_hipotese(self):
         self._inst += 1
@@ -107,7 +116,7 @@ class Lebre053:
         c = self.base._core
         t0, quar, ysv = c.t, c.quar_until, c.y_sv
         y_ok = y is not None and math.isfinite(y)
-        aprende = y_ok and not quarantine and not (t0 <= quar)
+        aprende = y_ok and not quarantine and (self.obs_quar or not (t0 <= quar))
         piso = SCALE_FLOOR * math.sqrt(max(ysv, 0.0)) if t0 >= 200 else 0.0     # só passado (antes de ver y)
         self.base.observe(y, quarantine)
         R, L = self._R, self._L

@@ -85,3 +85,22 @@ def test_argumentos_invalidos():
         Lebre053(2, referencia="sazonal")
     with pytest.raises(ValueError):
         Lebre053(2, referencia="media")
+
+
+@pytest.mark.parametrize("season", [None, 24])
+def test_rascunho1_mantem_o_caminho_estrutural_da_v052(season):
+    """Com orçamento próprio, a porta não altera eventos estruturais nem o custo da parte v0.52."""
+    X, y, q = _serie(T=8000)
+    ref = lebre052.Lebre(3, season=season); _rodar(ref, X, y, q)
+    m = Lebre053(3, season=season, referencia="persistencia", alpha_porta=0.01, observar_quarentena_entradas=True)
+    _rodar(m, X, y, q)
+    estr = [(e.t, e.outcome, e.change, e.added, e.removed) for e in m.events if e.change != "gate"]
+    assert estr == [(e.t, e.outcome, e.change, e.added, e.removed) for e in ref.events]
+    assert m.base.cost_per_step == ref.cost_per_step
+
+
+def test_rascunho0_continua_disponivel_e_compartilha_a_sequencia():
+    X, y, q = _serie(T=4000)
+    m = Lebre053(3, referencia="persistencia", alpha_porta=None, observar_quarentena_entradas=False)
+    _rodar(m, X, y, q)
+    assert m._engine is m.base._core.engine and any(k[0] == "porta" for k in m.base._core.engine.hyps)
