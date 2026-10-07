@@ -89,7 +89,7 @@ def _rodar(m, X, y, q):
                      for t in range(len(y))])
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -100,7 +100,7 @@ def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     assert m.base.cost_per_step == ref.cost_per_step
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
 def test_saida_e_a_media_ponderada(saida):
     X, y, q = _serie()
     m = Lebre053(3, referencia="persistencia", saida=saida)
@@ -113,7 +113,7 @@ def test_saida_e_a_media_ponderada(saida):
         m.observe(None if not math.isfinite(y[t]) else float(y[t]), quarantine=bool(q[t]))
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
 def test_sinal_forte_concentra_na_lebre_cedo(saida):
     X, y, q = _serie()
     m = Lebre053(3, referencia="persistencia", saida=saida)
@@ -121,7 +121,7 @@ def test_sinal_forte_concentra_na_lebre_cedo(saida):
     assert m.pesos[1] > 0.99
 
 
-@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare"])
+@pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada"])
 def test_ruido_puro_concentra_na_referencia_zero(saida):
     rng = np.random.default_rng(11); T = 8000
     X = rng.standard_normal((T, 2)); y = rng.standard_normal(T)
@@ -179,3 +179,14 @@ def test_fixed_share_esquece_deficit_inicial():
         if fs.pesos()[1] > 0.9:
             break
     assert k <= 10
+
+
+# ------------------------------------------------------------------------------------------- rascunho 4
+def test_recortada_limita_o_deficit_de_partida():
+    """Erros gigantes de L no início contam no máximo 1 por passo (perdas recortadas em [0, 1])."""
+    rng = np.random.default_rng(5); T = 400
+    X = rng.standard_normal((T, 1)); y = 3e4 + 50 * rng.standard_normal(T)
+    m = Lebre053(1, referencia="persistencia", saida="adahedge_recortada")
+    for t in range(T):
+        m.predict(X[t]); m.observe(float(y[t]))
+    assert np.all(m.agregador.L <= m.agregador.n + 1e-12)                  # perdas em [0, 1]

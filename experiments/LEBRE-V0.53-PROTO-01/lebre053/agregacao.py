@@ -89,3 +89,9 @@ class FixedShare:
         self.n += 1
         a = 1.0 / (self.n + 1)                                   # alpha_{t+1}, t = rodadas concluídas
         self.u = a / (self.N - 1) + (1.0 - self.N / (self.N - 1) * a) * p
+
+
+# ---------------------------------------------------------------------------------------------- rascunho 4
+# AdaHedge (classe Agregador) sobre a perda recortada da v0.52, min(e^2 / B^2, 1). Acréscimo ao rascunho 2, com a regra de
+# FP da v0.52: B^2 = CLIP_K^2 * max(min(s2_R, s2_L), piso^2) (3), duas divisões e dois mínimos (4), B^2 uma vez (1).
+FP_RECORTE_PASSO = 8

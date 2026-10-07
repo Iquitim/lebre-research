@@ -12,6 +12,8 @@ Não é uma versão publicada. Implementa a v0.52-r1 inalterada mais as mudança
 - M2, rascunho 3 (`ALGORITHM_SPEC_DRAFT_M2_r3.md`): `saida="fixedshare"`, Fixed Share com α_t = 1/t
   (Adamskiy et al., 2016) sobre previsões gaussianas de R e L; testes conferem o Corolário 6 em todos os intervalos e o
   pior caso do Teorema 4.
+- M2, rascunho 4 (`ALGORITHM_SPEC_DRAFT_M2_r4.md`): `saida="adahedge_recortada"`, AdaHedge sobre a perda recortada da
+  v0.52.
 - `tests/`: com a porta desligada, a saída é idêntica bit a bit à da v0.52; comportamento básico da porta; garantias do artigo (Corolários 9 e 16) e
   exemplo da seção 3.1 para a agregação.
 
