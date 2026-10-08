@@ -178,3 +178,35 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
     def observar(self, y, L52, aprende, piso):
         super().observar(y, L52, aprende, piso)
         self.yobs.append(float(y))
+
+
+# ------------------------------------------------------------------------------------------ rascunho 2 da M1
+# ALGORITHM_SPEC_DRAFT_M1_r2.md: m = min(d, 5) (do teto de custo total) e previsão do especialista recortada para
+# [L - B, L + B], B = CLIP_K * max(sigma_L, piso), sigma_L do erro recente da v0.52 (só passado).
+M_MAX_M1_R2 = 5
+
+
+class EspecialistaDefasagensR2(EspecialistaDefasagens):
+    def __init__(self, d):
+        super().__init__(d)
+        self._piso = 0.0
+
+    def _k_sel(self):
+        return min(M_MAX_M1_R2, self.d)
+
+    def prever(self, x, L):
+        out = super().prever(x, L)
+        if self.e is None:
+            return out
+        if self.e2_52 is None:                                   # sem escala ainda: o especialista não entra
+            self.e = None
+            return L
+        B = CLIP_K * max(math.sqrt(self.e2_52), self._piso)
+        self.e = min(max(self.e, L - B), L + B)
+        self.fp += 4
+        s = self.prod.s()
+        return s * self.e + (1.0 - s) * L
+
+    def observar(self, y, L52, aprende, piso):
+        super().observar(y, L52, aprende, piso)
+        self._piso = piso

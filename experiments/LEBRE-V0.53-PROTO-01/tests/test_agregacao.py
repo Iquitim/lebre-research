@@ -480,3 +480,19 @@ def test_m1_r1_aprende_defasagens_conjuntas():
     assert e1 <= 1.02 * e2
     estr = [(e.t, e.outcome, e.change, e.added, e.removed) for e in m.events if e.change != "gate"]
     assert estr == [(e.t, e.outcome, e.change, e.added, e.removed) for e in ref.events]
+
+
+def test_m1_r2_limita_o_especialista_e_usa_ate_5_entradas():
+    """Em séries com muitas entradas, m <= 5; a previsão usada fica dentro de L +- B; a saída é sempre finita."""
+    rng = np.random.default_rng(13); T = 4000
+    X = rng.standard_normal((T, 7)) * 1e4; y = 3e4 + X[:, 2] + 0.5 * np.r_[0, X[:-1, 4]] + 100 * rng.standard_normal(T)
+    m = Lebre053(7, referencia="persistencia", saida="prod", precisao="r2")
+    for t in range(T):
+        f = m.predict(X[t]).value
+        assert math.isfinite(f)
+        p = m.precisao
+        if p.e is not None:
+            B = 2.0 * max(math.sqrt(p.e2_52), p._piso)
+            assert abs(p.e - m._L52) <= B * (1 + 1e-12)
+        m.observe(float(y[t]))
+    assert len(m.precisao.sel) == 5 and len(m.precisao.w) == 28

@@ -14,7 +14,8 @@ M2_CANDIDATA_S.md: saida="switch", switch distribution (van Erven et al., 2012) 
 M2_CANDIDATA_M.md: saida="switch_mono", a mesma restrita a trocas num só sentido (referência -> LEBRE); e
 M2_CANDIDATA_P.md: saida="prod", (A,B)-Prod anytime com a candidata D como referência de confiança e a M como oportunista.
 M1 (ALGORITHM_SPEC_DRAFT_M1.md): precisao=True troca L pela combinação da v0.52 com o especialista de precisão (precisao.py);
-precisao="r1" usa o especialista de defasagens conjuntas (ALGORITHM_SPEC_DRAFT_M1_r1.md).
+precisao="r1" usa o especialista de defasagens conjuntas (ALGORITHM_SPEC_DRAFT_M1_r1.md); precisao="r2", o mesmo com
+m <= 5 e previsão recortada (ALGORITHM_SPEC_DRAFT_M1_r2.md).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
 qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
@@ -28,7 +29,7 @@ import numpy as np
 from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, SCALE_FLOOR, T_MAX
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
-from .precisao import EspecialistaDefasagens, EspecialistaPrecisao
+from .precisao import EspecialistaDefasagens, EspecialistaDefasagensR2, EspecialistaPrecisao
 from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO,
                         FP_SWITCH_MONO_PASSO, FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo,
                         SwitchDistribution, SwitchMonotono, SwitchMonotonoExato, SwitchMonotonoJeffreys,
@@ -74,7 +75,8 @@ class Lebre053:
         self.base = Lebre052(n_inputs, season=season, season2=season2, standardize=standardize)
         if precisao and not porta:
             raise ValueError("precisao=True exige porta=True (a M1 alimenta a M2)")
-        self.precisao = (EspecialistaDefasagens(n_inputs) if precisao == "r1"
+        self.precisao = (EspecialistaDefasagensR2(n_inputs) if precisao == "r2"
+                         else EspecialistaDefasagens(n_inputs) if precisao == "r1"
                          else EspecialistaPrecisao(n_inputs) if precisao else None)
         self._L52 = None
         if referencia is None:
@@ -226,11 +228,12 @@ class Lebre053:
                 self.agregador.atualizar(perdas)
                 self.fp_porta += FP_FIXED_SHARE_PASSO
             if self.saida == "prod" and self._R_def:
-                self._subD.atualizar(((y - R) ** 2, (y - L) ** 2))      # D: exatamente como "adahedge_ref_definida"
+                fin = lambda v: v if math.isfinite(v) else 1e300           # rascunho 2 da M1: não propagar NaN
+                self._subD.atualizar((fin((y - R) ** 2), fin((y - L) ** 2)))  # D: como "adahedge_ref_definida"
                 self.fp_porta += FP_AGREGACAO_PASSO
                 if self.e2["REF"] is not None:                          # M e Prod: escalas só do passado
                     s2 = max(min(self.e2["REF"], self.e2["LEBRE"]), piso * piso, 1e-300)
-                    self._subM.atualizar(((y - R) ** 2 / (2.0 * s2), (y - L) ** 2 / (2.0 * s2)))
+                    self._subM.atualizar((fin((y - R) ** 2 / (2.0 * s2)), fin((y - L) ** 2 / (2.0 * s2))))
                     B2 = CLIP_K * CLIP_K * s2
                     self.agregador.atualizar(min((y - self._d) ** 2 / B2, 1.0), min((y - self._m) ** 2 / B2, 1.0))
                     self.fp_porta += FP_SWITCH_MONO_PASSO + FP_PROD_PASSO
