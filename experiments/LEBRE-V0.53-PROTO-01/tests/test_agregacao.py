@@ -427,3 +427,37 @@ def test_prod_d_interna_igual_a_d_isolada():
             assert a._d == pytest.approx(fb.value, rel=1e-12, abs=1e-12)
         yy = None if not math.isfinite(y[t]) else float(y[t])
         a.observe(yy, quarantine=bool(q[t])); b.observe(yy, quarantine=bool(q[t]))
+
+
+# ------------------------------------------------------------------------------- M1 (especialista de precisão)
+def test_m1_aprende_relacao_exata_e_mantem_estrutura():
+    """Alvo = 2 x0 no mesmo instante: E aprende o coeficiente, L' não fica pior que a v0.52 e a estrutura não muda.
+    (Aqui a própria v0.52 já chega ao nível do ruído; F6 é medida nos dados reais de B03.)"""
+    rng = np.random.default_rng(3); T = 6000
+    X = rng.standard_normal((T, 4)); y = 2.0 * X[:, 0] + 0.01 * rng.standard_normal(T)
+    m = Lebre053(4, referencia="persistencia", saida="prod", precisao=True)
+    ref = lebre052.Lebre(4)
+    e1 = e2 = 0.0
+    for t in range(T):
+        m.predict(X[t]); f = ref.predict(X[t]).value
+        if t > 3000:
+            e1 += (y[t] - m._L) ** 2; e2 += (y[t] - f) ** 2
+        m.observe(float(y[t])); ref.observe(float(y[t]))
+    assert e1 <= 1.05 * e2
+    p = m.precisao
+    assert 0 in p.sel
+    j = list(p.sel).index(0)
+    assert abs(p.w[1 + j] - 2.0 * p.sd[j]) < 0.05 * 2.0 * p.sd[j]
+    estr = [(e.t, e.outcome, e.change, e.added, e.removed) for e in m.events if e.change != "gate"]
+    assert estr == [(e.t, e.outcome, e.change, e.added, e.removed) for e in ref.events]
+
+
+def test_m1_desligada_nao_muda_nada():
+    X, y, q = _serie(T=2000)
+    a = Lebre053(3, referencia="persistencia", saida="prod"); b = Lebre053(3, referencia="persistencia", saida="prod", precisao=False)
+    assert np.array_equal(_rodar(a, X, y, q), _rodar(b, X, y, q), equal_nan=True)
+
+
+def test_m1_exige_porta():
+    with pytest.raises(ValueError):
+        Lebre053(2, porta=False, precisao=True)

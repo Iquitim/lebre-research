@@ -13,6 +13,7 @@ passos em que a referência declarada está definida (a sazonal só depois de um
 M2_CANDIDATA_S.md: saida="switch", switch distribution (van Erven et al., 2012) sobre gaussianas de variância comum; e
 M2_CANDIDATA_M.md: saida="switch_mono", a mesma restrita a trocas num só sentido (referência -> LEBRE); e
 M2_CANDIDATA_P.md: saida="prod", (A,B)-Prod anytime com a candidata D como referência de confiança e a M como oportunista.
+M1 (ALGORITHM_SPEC_DRAFT_M1.md): precisao=True troca L pela combinação da v0.52 com o especialista de precisão (precisao.py).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
 qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
@@ -26,6 +27,7 @@ import numpy as np
 from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, SCALE_FLOOR, T_MAX
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
+from .precisao import EspecialistaPrecisao
 from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO,
                         FP_SWITCH_MONO_PASSO, FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo,
                         SwitchDistribution, SwitchMonotono, SwitchMonotonoExato, SwitchMonotonoJeffreys,
@@ -64,10 +66,15 @@ class Lebre053:
     """
 
     def __init__(self, n_inputs, season=None, season2=None, standardize=True, referencia=None, porta=True,
-                 eps_porta=0.002, recriar=True, alpha_porta=0.01, observar_quarentena_entradas=True, saida="porta"):
+                 eps_porta=0.002, recriar=True, alpha_porta=0.01, observar_quarentena_entradas=True, saida="porta",
+                 precisao=False):
         if saida not in SAIDAS:
             raise ValueError(f"saida deve ser uma de {SAIDAS}")
         self.base = Lebre052(n_inputs, season=season, season2=season2, standardize=standardize)
+        if precisao and not porta:
+            raise ValueError("precisao=True exige porta=True (a M1 alimenta a M2)")
+        self.precisao = EspecialistaPrecisao(n_inputs) if precisao else None
+        self._L52 = None
         if referencia is None:
             referencia = "sazonal" if season else "persistencia"
         if referencia not in REFERENCIAS:
@@ -156,7 +163,9 @@ class Lebre053:
         if not self.porta:
             self._out = fb.value
             return fb
-        self._L = fb.value; self._R = self._referencia()
+        self._L52 = fb.value
+        self._L = self.precisao.prever(x, fb.value) if self.precisao is not None else fb.value
+        self._R = self._referencia()
         self._R_def = math.isfinite(self._R) and (self.referencia != "sazonal" or (
             len(self.hist) == self.season and math.isfinite(self.hist[0])))
         if self.saida == "prod":
@@ -197,6 +206,8 @@ class Lebre053:
         aprende = y_ok and not quarantine and (self.obs_quar or not (t0 <= quar))
         piso = SCALE_FLOOR * math.sqrt(max(ysv, 0.0)) if t0 >= 200 else 0.0     # só passado (antes de ver y)
         self.base.observe(y, quarantine)
+        if self.precisao is not None and y_ok:
+            self.precisao.observar(float(y), self._L52, (not quarantine) and not (t0 <= quar), piso)
         R, L = self._R, self._L
         if aprende and math.isfinite(R) and math.isfinite(L):
             vig, des = (R, L) if self.modo == "REF" else (L, R)
@@ -283,7 +294,8 @@ class Lebre053:
     @property
     def cost_per_step(self):
         t = self.base.n_steps
-        return self.base.cost_per_step + (self.fp_porta / t if t else 0.0)
+        extra = self.fp_porta + (self.precisao.fp if self.precisao is not None else 0.0)
+        return self.base.cost_per_step + (extra / t if t else 0.0)
 
     def unit_name(self, key):
         return self.base.unit_name(key)

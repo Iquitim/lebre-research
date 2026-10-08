@@ -32,6 +32,9 @@ fica a uma constante da v0.52 e só migra para o especialista quando ele acumula
 - **Combinação:** L' = s × E + (1 − s) × L, com s do (A,B)-Prod anytime (A = E, B = L = v0.52), perdas recortadas da
   v0.52 com a escala do erro recente de L (CLIP_K, LAM, piso da porta). Entradas faltantes: último valor visto (como o
   comparador). Enquanto E não tem seleção, L' = L.
+- **Entrada no Prod:** E só participa depois de a RLS ter recebido pelo menos tantas atualizações quanto variáveis (4),
+  o mínimo para o sistema estar determinado; se o conjunto de entradas mudar, a RLS e o Prod recomeçam (especialista
+  novo). Acrescentado antes do código, na revisão da especificação.
 - **Encaixe com a M2:** a M2 (candidata P, congelada) passa a combinar R com L' em vez de R com L.
 
 ## 4. Custo (regra de FP da v0.52, contado antes de medir)
