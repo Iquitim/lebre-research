@@ -58,7 +58,7 @@ Medição única, pré-registrada (LEBRE Lab: `VALIDACAO3_PLANO.md`, `VALIDACAO3
 a 134 FP por passo. **A M2 fica resolvida no desenvolvimento e na validação.** A reserva final avalia a v0.53 completa
 (M1 a M6), uma vez, com a régua por decidibilidade e o limite de 150 FP para a M2.
 
-**Histórico declarado (para o relatório final):** 12 configurações da M2 medidas (rascunhos 0 a 6, D, S, M, P e a variante
-H/D do E2), 2 oráculos de diagnóstico (E5, E6), três bases de validação (a 1 gasta pelo rascunho 6, a 2 pela candidata
+**Histórico declarado (para o relatório final):** 11 desenhos da M2 (rascunhos 0 a 6 e candidatas D, S, M, P), somando 18
+configurações medidas (o rascunho 0 teve 6, o 1 teve 2 e o 2 teve 2), mais 2 oráculos de diagnóstico (E5, E6), três bases de validação (a 1 gasta pelo rascunho 6, a 2 pela candidata
 D, a 3 pela candidata P), régua por decidibilidade decidida pelo responsável pelo projeto depois do rascunho 6 e antes da
 validação 2, limite de custo de 150 FP decidido antes do E7.
