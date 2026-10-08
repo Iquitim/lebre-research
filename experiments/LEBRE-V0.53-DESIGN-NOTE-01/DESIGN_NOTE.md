@@ -60,6 +60,12 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 ### M1. Especialista de precisão (F6) — prioridade 1
 
+> **Atualização 08/10/2026 (validação 4, LEBRE Lab `analises/M1_VAL4_RESULTADO.md`):** o rascunho 2
+> (`ALGORITHM_SPEC_DRAFT_M1_r2.md`), aprovado no desenvolvimento (E12), **não é confirmado**. Em Y-B03 (qualidade do ar de
+> Pequim, dados novos) a meta de fronteira é atendida pela regra, mas sem contribuição da M1 (1,221 contra 1,225 da v0.52
+> sozinha, que já atenderia), com custo de 1,94 vez a v0.52. Em Y-B01 a M1 piora uma série solar em 19,5% (família 1,030;
+> limite 1,02). Evidência atual: o ganho da M1 em B03 não se reproduziu em dados novos.
+
 > **Atualização 08/10/2026:** custo recontado (~160-190 FP por passo na versão completa, não 30-40). Decisão do responsável
 > pelo projeto: **M1 enxuta**, com atualizações a cada 8 passos (~70 + d FP); entra pelo (A,B)-Prod, como a M2, em vez de
 > um teste. Especificação: `ALGORITHM_SPEC_DRAFT_M1.md`.
@@ -74,7 +80,12 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 ### M2. Referência trivial como ponto de partida (F8) — prioridade 2
 
-> **Atualização 08/10/2026 (resolvida no desenvolvimento e na validação):** depois de 11 desenhos (18 configurações), a
+> **Atualização 08/10/2026 (validação 4: deixa de estar resolvida):** sem a M1, a candidata P falha no critério 1 em
+> Y-C01 (câmbio 1990-1999: 1,007, limite superior 1,016 > 1,01; baht 1,024) e em Y-B07 (uma série, Portland: limite
+> superior 1,020). A aprovação na validação 3 não se generalizou (LEBRE Lab,
+> `diagnosticos/M1_VAL4_ATRIBUICAO_RESULTADO.md`). A atualização abaixo fica como registro histórico.
+
+> **Atualização 08/10/2026 (resolvida no desenvolvimento e na validação 3):** depois de 11 desenhos (18 configurações), a
 > candidata P (`M2_CANDIDATA_P.md`: (A,B)-Prod anytime com AdaHedge sobre o erro quadrático como referência de confiança e
 > switch distribution num só sentido como oportunista) passou em todos os critérios nas 43 famílias de desenvolvimento e na
 > validação 3, com a régua por decidibilidade e custo de 129-134 FP por passo (limite de 150 decidido pelo responsável pelo

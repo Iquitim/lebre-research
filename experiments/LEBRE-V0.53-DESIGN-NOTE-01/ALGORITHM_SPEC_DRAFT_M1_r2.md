@@ -32,3 +32,10 @@ Custo do especialista com m = 5: ~690 FP por passo, mais Prod (~31), recorte (~4
 Atende aos três critérios (LEBRE Lab, `M1_E12_RESULTADO.md`): F6 em B03 1,392 do comparador completo, com custo de 1,95
 vez a v0.52 (meta pela regra registrada: 1,653); B01 e B02 1,000; critérios da M2 nas 43 famílias, C05 incluída. Não é
 evidência de seleção (três desenhos sobre os mesmos dados). Acréscimo de custo de M1 + M2: 156 a 878 FP por passo.
+
+## 4. Validação 4 (08/10/2026): não confirmado
+
+LEBRE Lab, `M1_VAL4_RESULTADO.md` e `diagnosticos/M1_VAL4_ATRIBUICAO_RESULTADO.md`. F6 em Y-B03 atendido pela regra
+(1,221 <= 1,466; custo 1,94 vez a v0.52), mas a v0.52 sozinha dá 1,225: a M1 não contribuiu. Critério 2 da M2 falha em
+Y-B01 por causa da M1 (série Horizonte 1,195 contra a v0.52) e em Y-C01 e Y-B07 por causa da M2 (falham também sem a M1).
+Nada ajustado.
