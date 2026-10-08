@@ -45,3 +45,8 @@ saída pode ser a mistura s_t a_t + (1 − s_t) b_t (nota de rodapé 1 do artigo
 
 E7 (desenvolvimento) nas 43 famílias, régua por decidibilidade, plano commitado antes; se atender a todos os critérios
 (5 com 150 FP), **validação 3** nova, congelada, usada uma vez; depois a reserva (v0.53 completa).
+
+## 5. Resultado no desenvolvimento (E7, 08/10/2026)
+
+Atende a todos os critérios nas 43 famílias de desenvolvimento (régua por decidibilidade, custo 114 a 134 FP por passo).
+Não é evidência de seleção: os dados já foram usados no desenho. Próximo passo: validação 3.
