@@ -52,3 +52,14 @@ As soluções de D1 e de D2 puxam em direções opostas quando o algoritmo trata
 - A evidência de seleção virá de uma **validação 2 nova**, montada e congelada antes da escolha, usada uma vez; depois, a
   reserva final, uma vez.
 - Toda tentativa é registrada e o relatório final declara o número total (seis até aqui).
+
+## 6. Resultado dos experimentos de desenvolvimento E1 e E2 (08/10/2026)
+
+- **E1 (diagnóstico):** a falha do rascunho 6 em C04 vem de um ciclo entre compartilhamento e η (η cai de 15 para 0,56);
+  em VC05 serviços, a perda recortada ordena R e L ao contrário do erro quadrático, que é a régua dos critérios.
+- **E2:** o rascunho 2 (AdaHedge sobre o erro quadrático) comparando **só os passos em que a referência declarada está
+  definida** (configuração D, sétima tentativa) atende a todos os critérios nas 23 famílias de desenvolvimento e falha só
+  em VC05 na validação 1, por uma série (IPCA serviços) em que **a própria comparação v0.52 ÷ referência é indecidível**
+  (0,932, IC 95% 0,72 a 1,23).
+- **Próximo passo depende de uma decisão de régua** (seção 4, saída 3): como tratar séries em que os dados não decidem
+  entre v0.52 e referência. A proposta está em `M2_CANDIDATA_D.md` (a escrever após a decisão).
