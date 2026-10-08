@@ -148,3 +148,38 @@ class FixedShareAdaptativo:
         self.p = a / self.d + (1.0 - a) * v
         self.eta_ant = eta
         self.etas.append(eta); self.alphas.append(a)
+
+
+# ------------------------------------------------------------------------------------- candidata S (switch distribution)
+# van Erven, Grünwald e de Rooij (2012), "Catching up faster by switching sooner", JRSS-B 74(3), seções 2.2-2.3: mistura
+# bayesiana sobre sequências de previsores, prioridade (11): mu(m) = 2^-m (cada trecho é o último com chance 1/2),
+# tau(t) = 1/(t(t-1)) (o trecho atual acaba antes do passo t com chance 1/t), kappa e lambda uniformes. Algoritmo forward
+# de um modelo oculto de Markov com estado (previsor, trecho final?). Perdas: -log-verossimilhança de cada previsor.
+# Contagem com a regra da v0.52, K = 2: escala comum (3), perdas (8), verossimilhanças (8), atualização (4),
+# transição (13), normalização (5), pesos (4), saída ponderada (3). Total 48.
+FP_SWITCH_PASSO = 48
+
+
+class SwitchDistribution:
+    """Posterior da switch distribution sobre K previsores; atualizar(perdas) recebe -log-verossimilhanças."""
+
+    def __init__(self, K=2):
+        self.K = int(K)
+        self.w = np.full((self.K, 2), 0.5 / self.K)          # [previsor, 0 = trecho não final / 1 = final]
+        self.n = 0; self.trocas_regime = 0
+
+    def pesos(self):
+        p = self.w.sum(1)
+        return p / p.sum()
+
+    def atualizar(self, perdas):
+        l = np.asarray(perdas, float)
+        v = np.exp(-(l - l.min()))
+        w = self.w * v[:, None]
+        w = w / w.sum()
+        self.n += 1
+        h = 1.0 / (self.n + 1)                                # chance de um trecho não final acabar antes do próximo passo
+        s = h * w[:, 0].sum()
+        w[:, 0] *= 1.0 - h
+        w += s * 0.5 / self.K                                 # novo trecho: final ou não com 1/2, previsor uniforme
+        self.w = w

@@ -12,7 +12,7 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
-from lebre053.agregacao import Agregador, FixedShare, FixedShareAdaptativo  # noqa: E402
+from lebre053.agregacao import Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution  # noqa: E402
 
 
 def _jogar(ag, perdas):
@@ -90,7 +90,8 @@ def _rodar(m, X, y, q):
 
 
 @pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
-                                   "adahedge_compartilhada_rapida", "adahedge_ref_definida"])
+                                   "adahedge_compartilhada_rapida", "adahedge_ref_definida",
+                                   "switch"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -264,3 +265,64 @@ def test_ref_definida_espera_um_ciclo_completo():
             assert m.pesos is None and f.value == m._L and m.agregador.n == 0
         m.observe(float(y[t]))
     assert m.agregador.n == T - 24
+
+
+# ------------------------------------------------------------------------------------- candidata S (switch distribution)
+def _enumeracao(perdas, K):
+    """Pesos preditivos da switch distribution por enumeração de todos os prefixos de sequências de troca, com a
+    prioridade das equações (10)-(11) de van Erven et al. (2012): mu(m) = 2^-m, tau(t) = 1/(t(t-1)), kappa e lambda
+    uniformes. Independente do algoritmo forward: usa P(Z > T | Z > t_j) = t_j / T e tau(t | Z > t_j) = t_j/(t(t-1))."""
+    import itertools
+    T = len(perdas)
+    out = np.zeros((T, K))
+    for nsw in range(T):                                     # número de trocas dentro do horizonte
+        for tempos in itertools.combinations(range(2, T + 1), nsw):
+            ts = (1,) + tempos
+            for ks in itertools.product(range(K), repeat=nsw + 1):
+                pri = 1.0
+                for j in range(nsw):                         # trechos não finais que terminam dentro do horizonte
+                    pri *= 0.5 / K * ts[j] / (ts[j + 1] * (ts[j + 1] - 1))
+                tj = ts[-1]                                  # último trecho começado: final, ou não final que acaba depois de T
+                pri *= 0.5 / K + 0.5 / K * tj / T
+                caminho = [ks[max(j for j in range(nsw + 1) if ts[j] <= t)] for t in range(1, T + 1)]
+                verossim = 1.0
+                for t in range(T):
+                    out[t, caminho[t]] += pri * verossim
+                    verossim *= math.exp(-perdas[t][caminho[t]])
+    return out / out.sum(1, keepdims=True)
+
+
+@pytest.mark.parametrize("K", [2, 3])
+def test_switch_igual_a_enumeracao_direta(K):
+    rng = np.random.default_rng(K); T = 7
+    perdas = rng.exponential(1.0, (T, K)) * 2
+    sw = SwitchDistribution(K); fw = []
+    for l in perdas:
+        fw.append(sw.pesos().copy()); sw.atualizar(l)
+    assert np.allclose(np.array(fw), _enumeracao(perdas, K), rtol=1e-10, atol=1e-12)
+
+
+def test_switch_domina_cada_sequencia_pela_prioridade():
+    """Perda logarítmica acumulada da mistura <= perda de uma sequência com uma troca em t + custo -ln pi."""
+    rng = np.random.default_rng(9); T = 400
+    perdas = np.column_stack([rng.exponential(1.0, T), rng.exponential(1.0, T)])
+    perdas[:150, 1] += 3.0; perdas[150:, 0] += 3.0                      # o melhor muda em t = 151
+    sw = SwitchDistribution(2); mix = 0.0
+    for l in perdas:
+        mix += -math.log(float(sw.pesos() @ np.exp(-l))); sw.atualizar(l)
+    seq = perdas[:150, 0].sum() + perdas[150:, 1].sum()
+    t2 = 151
+    custo = -math.log(0.5 / 2 * 1.0 / (t2 * (t2 - 1)) * 0.5 / 2)     # 2 trechos: 1o não final, troca em t2, 2o final
+    assert mix <= seq + custo + 1e-9
+
+
+def test_switch_esquece_fase_de_aprendizado():
+    """Cenário de Abaiara: L muito pior por 800 passos, depois bem melhor; o peso de L passa de 0,9 logo depois."""
+    sw = SwitchDistribution(2)
+    for _ in range(800):
+        sw.atualizar([0.5, 20.0])
+    for k in range(1, 200):
+        sw.atualizar([2.0, 0.5])
+        if sw.pesos()[1] > 0.9:
+            break
+    assert k <= 20

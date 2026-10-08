@@ -14,7 +14,7 @@ número de trechos μ(m) = 2^{−m}, instantes de troca τ(t) = 1/(t(t − 1)), 
 em tempo linear como algoritmo forward de um modelo oculto de Markov (seção 2.3). Domina a média bayesiana por um fator
 constante μ(1) = ½ (seção 2.4).
 
-**Conta própria (a conferir nos testes):** com τ(t) = 1/(t(t − 1)), a chance de o trecho atual acabar e um novo começar
+**Conta própria (conferida nos testes contra a enumeração direta das sequências, eq. 10-11):** com τ(t) = 1/(t(t − 1)), a chance de o trecho atual acabar e um novo começar
 no passo t, dado que não acabou antes, é exatamente 1/t; com μ geométrico, cada trecho é o último com chance ½.
 
 ## 2. A candidata S
