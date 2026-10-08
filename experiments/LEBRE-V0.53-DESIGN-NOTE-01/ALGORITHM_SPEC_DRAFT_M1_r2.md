@@ -26,3 +26,9 @@ no rascunho 1.
 ## 2. Critérios (os do rascunho 1, seção 3) e custo
 
 Custo do especialista com m = 5: ~690 FP por passo, mais Prod (~31), recorte (~4) e triagem (~d).
+
+## 3. Resultado no desenvolvimento (E12, 08/10/2026)
+
+Atende aos três critérios (LEBRE Lab, `M1_E12_RESULTADO.md`): F6 em B03 1,392 do comparador completo, com custo de 1,95
+vez a v0.52 (meta pela regra registrada: 1,653); B01 e B02 1,000; critérios da M2 nas 43 famílias, C05 incluída. Não é
+evidência de seleção (três desenhos sobre os mesmos dados). Acréscimo de custo de M1 + M2: 156 a 878 FP por passo.
