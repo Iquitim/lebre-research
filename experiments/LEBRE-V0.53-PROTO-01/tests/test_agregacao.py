@@ -461,3 +461,22 @@ def test_m1_desligada_nao_muda_nada():
 def test_m1_exige_porta():
     with pytest.raises(ValueError):
         Lebre053(2, porta=False, precisao=True)
+
+
+def test_m1_r1_aprende_defasagens_conjuntas():
+    """Alvo = 0,8 y_{t-1} + 1,5 x0_{t-3} + ruído: o especialista de defasagens é montado com k = 3 + 5m variáveis e L' não fica pior que a v0.52."""
+    rng = np.random.default_rng(8); T = 8000
+    X = rng.standard_normal((T, 3)); y = np.zeros(T)
+    for t in range(3, T):
+        y[t] = 0.8 * y[t - 1] + 1.5 * X[t - 3, 0] + 0.1 * rng.standard_normal()
+    m = Lebre053(3, referencia="persistencia", saida="prod", precisao="r1"); ref = lebre052.Lebre(3)
+    e1 = e2 = 0.0
+    for t in range(T):
+        m.predict(X[t]); f = ref.predict(X[t]).value
+        if t > 5000:
+            e1 += (y[t] - m._L) ** 2; e2 += (y[t] - f) ** 2
+        m.observe(float(y[t])); ref.observe(float(y[t]))
+    assert len(m.precisao.w) == 3 + 5 * 3
+    assert e1 <= 1.02 * e2
+    estr = [(e.t, e.outcome, e.change, e.added, e.removed) for e in m.events if e.change != "gate"]
+    assert estr == [(e.t, e.outcome, e.change, e.added, e.removed) for e in ref.events]

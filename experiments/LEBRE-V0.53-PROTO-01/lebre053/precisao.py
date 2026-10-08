@@ -111,3 +111,70 @@ class EspecialistaPrecisao:
                 self._rls(self.z, y)
         if self.n_obs >= N_MIN and (self.sel is None or self.n_obs - self.n_sel >= T_MAX):
             self._selecionar()
+
+
+# ------------------------------------------------------------------------------------------ rascunho 1 da M1
+# ALGORITHM_SPEC_DRAFT_M1_r1.md: z = [1, y_{t-1}, y_{t-2}, bandas (t; 1; 2-3; 4-7; 8-15) das m = min(d, 8) entradas de maior
+# correlação], padronizados pela triagem; RLS a cada EVERY passos; entra no Prod depois de k atualizações.
+from collections import deque  # noqa: E402
+
+BANDAS_M1 = ((0, 0), (1, 1), (2, 3), (4, 7), (8, 15))
+M_MAX_M1 = 8
+
+
+class EspecialistaDefasagens(EspecialistaPrecisao):
+    def __init__(self, d):
+        super().__init__(d)
+        self.buf = deque(maxlen=16)
+        self.yobs = deque(maxlen=2)
+
+    def _k_sel(self):
+        return min(M_MAX_M1, self.d)
+
+    def _selecionar(self):
+        vx = np.maximum(self.m[1] - self.m[0] ** 2, 0.0)
+        vy = max(self.my2 - self.my ** 2, 0.0)
+        cov = self.m[2] - self.m[0] * self.my
+        with np.errstate(divide="ignore", invalid="ignore"):
+            r = np.where((vx > 0) & (vy > 0), np.abs(cov) / np.sqrt(vx * vy), 0.0)
+        sel = np.sort(np.argsort(-r, kind="stable")[:self._k_sel()])
+        if self.sel is None or not np.array_equal(sel, self.sel):
+            self.sel = sel
+            self.mu = self.m[0][sel].copy(); self.sd = np.sqrt(np.maximum(vx[sel], 1e-24))
+            self.muy = self.my; self.sdy = math.sqrt(max(vy, 1e-24))
+            k = 3 + len(BANDAS_M1) * len(sel)
+            self.w = np.zeros(k); self.P = np.eye(k) * DELTA_RLS; self.n_rls = 0
+            self.prod = ProdAnytime()
+        self.n_sel = self.n_obs
+        self.fp += 6 * self.d
+
+    def prever(self, x, L):
+        x = self._preencher(x)
+        self._x = x
+        self.buf.append(x)
+        if self.sel is None:
+            self.z = None; self.e = None
+            return L
+        H = np.array(self.buf)[::-1][:, self.sel]
+        H = (H - self.mu) / self.sd
+        bandas = [H[a:b + 1].mean(0) if len(H) > a else np.zeros(len(self.sel)) for a, b in BANDAS_M1]
+        ys = list(self.yobs)[::-1] + [self.muy] * (2 - len(self.yobs))
+        z = np.concatenate([[1.0], (np.array(ys[:2]) - self.muy) / self.sdy, np.ravel(np.array(bandas).T)])
+        self.z = z
+        k = len(z)
+        self.fp += 2 * k + 10 * len(self.sel)
+        if self.n_rls < k:
+            self.e = None
+            return L
+        self.e = float(self.w @ z)
+        s = self.prod.s()
+        return s * self.e + (1.0 - s) * L
+
+    def _rls(self, z, y):
+        k = len(z)
+        super()._rls(z, y)
+        self.fp += 6 * k * k + 4 * k - FP_RLS_ATUALIZACAO     # custo real da RLS com k variáveis
+
+    def observar(self, y, L52, aprende, piso):
+        super().observar(y, L52, aprende, piso)
+        self.yobs.append(float(y))
