@@ -13,7 +13,7 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
 from lebre053.agregacao import (Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution,  # noqa: E402
-                                SwitchMonotono)
+                                SwitchMonotono, SwitchMonotonoExato)
 
 
 def _jogar(ag, perdas):
@@ -362,3 +362,14 @@ def test_switch_mono_esquece_aprendizado_e_nao_volta_por_erro_isolado():
         sw.atualizar([2.0, 0.5])
     sw.atualizar([0.5, 30.0])                                      # um erro isolado enorme de L
     assert sw.pesos()[1] > 0.99
+
+
+def test_oraculo_exato_igual_a_m_com_escala_constante():
+    """Com a escala constante, o oráculo (evidência toda na escala atual) coincide com a candidata M."""
+    rng = np.random.default_rng(21); T = 60; s2 = 0.7
+    sq = rng.exponential(1.0, (T, 2))
+    m = SwitchMonotono(); o = SwitchMonotonoExato()
+    for l in sq:
+        o.calcular(s2)
+        assert np.allclose(o.pesos(), m.pesos(), rtol=1e-9, atol=1e-12)
+        m.atualizar(l / (2 * s2)); o.atualizar(l)

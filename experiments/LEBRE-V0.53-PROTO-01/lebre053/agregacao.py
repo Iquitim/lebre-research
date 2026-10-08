@@ -216,3 +216,39 @@ class SwitchMonotono:
         mov = h * w[2]
         w[2] -= mov; w[3] += mov
         self.w = w
+
+
+class SwitchMonotonoExato:
+    """Oráculo de diagnóstico (não é candidata: custo O(t) por passo). A posterior da candidata M calculada a cada passo
+    com a escala atual aplicada a TODA a evidência acumulada (verossimilhança gaussiana de variância s2 sobre todos os
+    dados), em vez do produto de verossimilhanças de um passo com escalas diferentes. Recebe erros quadráticos brutos."""
+
+    def __init__(self):
+        self.CR = 0.0; self.CL = 0.0; self.D = []; self.n = 0; self.trocas_regime = 0
+        self._p = np.array([2.0 / 3.0, 1.0 / 3.0])
+
+    def calcular(self, s2):
+        """Pesos (R, L) para a próxima rodada, com a escala s2 (só passado)."""
+        n = self.n
+        if n == 0:
+            self._p = np.array([2.0 / 3.0, 1.0 / 3.0])
+            return self._p
+        eta = 1.0 / (2.0 * s2)
+        s = np.arange(2, n + 2)                                   # trocas em s = 2..n+1 (rodadas s.. usam L)
+        Ds = np.array(self.D)                                     # D[s-2] = C_R(s-1) - C_L(s-1)
+        logs = [math.log(1 / 3) - eta * self.CR + math.log(1.0 / (n + 1)),   # troca ainda pendente: prevê R
+                math.log(1 / 3) - eta * self.CR]                                  # sempre R
+        logl = np.concatenate([[math.log(1 / 3) - eta * self.CL],               # sempre L
+                               math.log(1 / 3) - np.log(s * (s - 1.0)) - eta * (Ds + self.CL)])
+        a = np.logaddexp.reduce(logs); b = np.logaddexp.reduce(logl)
+        m = max(a, b)
+        p = np.array([math.exp(a - m), math.exp(b - m)])
+        self._p = p / p.sum()
+        return self._p
+
+    def pesos(self):
+        return self._p
+
+    def atualizar(self, sq):
+        self.CR += float(sq[0]); self.CL += float(sq[1]); self.n += 1
+        self.D.append(self.CR - self.CL)                          # D[k-1] = C_R(k) - C_L(k), usado pela troca em s = k + 1
