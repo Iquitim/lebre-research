@@ -50,3 +50,12 @@ por uma escolha que os próprios dados não sustentam (PRA-09). A classificaçã
    régua acima. Se D falhar: falhas declaradas, nada ajustado.
 2. Se D passar: a M2 fica resolvida no desenvolvimento e na validação. A reserva final avalia a v0.53 completa (M1 a M6),
    uma vez, com esta régua para a M2.
+
+## 4. Resultado na validação 2 (08/10/2026)
+
+Medição única no LEBRE Lab (`M2_VAL2_PLANO.md`, `M2_VAL2_RESULTADO.md`). **D não passa**: falha o critério 2 em W-B01,
+por uma série (Abaiara 230 kV, M2 ÷ v0.52 = 1,46), uma usina que começa a gerar no meio da série; a LEBRE leva ~800 passos
+para aprendê-la e o déficit dessa fase prende os pesos na referência até ~2.500 passos dentro da janela de avaliação
+(dificuldade D1). **Passa em todas as outras 9 famílias**, inclusive W-C05 (grupos do IPCA, análoga a C05: 1,004, limite
+superior 1,019), as negativas (1,000) e as séries curtas (1,000, limite superior 1,005). Pela regra: falha declarada,
+nada ajustado; a validação 2 está gasta.
