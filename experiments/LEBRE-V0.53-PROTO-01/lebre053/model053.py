@@ -7,7 +7,9 @@ e a porta vira só auditoria, registrando eventos sem decidir a saída) e ALGORI
 saida="fixedshare", Fixed Share com alpha_t = 1/t sobre previsões gaussianas de R e L) e ALGORITHM_SPEC_DRAFT_M2_r4.md
 (rascunho 4: saida="adahedge_recortada", AdaHedge sobre a perda recortada da v0.52) e ALGORITHM_SPEC_DRAFT_M2_r5.md
 (rascunho 5: saida="adahedge_compartilhada", Fixed Share com taxas variáveis sobre a perda recortada) e
-ALGORITHM_SPEC_DRAFT_M2_r6.md (rascunho 6: saida="adahedge_compartilhada_rapida", taxa de troca 2/(t+1)^2).
+ALGORITHM_SPEC_DRAFT_M2_r6.md (rascunho 6: saida="adahedge_compartilhada_rapida", taxa de troca 2/(t+1)^2). Em
+desenvolvimento depois do rascunho 6 (REFLEXAO_M2.md): saida="adahedge_ref_definida", o rascunho 2 comparando só os
+passos em que a referência declarada está definida (a sazonal só depois de um ciclo completo).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
 qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
@@ -26,7 +28,7 @@ from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHA
 
 REFERENCIAS = ("zero", "persistencia", "sazonal")
 SAIDAS = ("porta", "adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
-          "adahedge_compartilhada_rapida")
+          "adahedge_compartilhada_rapida", "adahedge_ref_definida")
 FP_PORTA_PASSO = 16           # perdas recortadas, incremento e médias exponenciais da porta (contagem aproximada)
 
 
@@ -48,7 +50,9 @@ class Lebre053:
         logarítmica de N(previsão, sigma^2), sigma^2 = média exponencial dos erros quadráticos do próprio previsor);
         "adahedge_recortada" (rascunho 4: AdaHedge sobre min(e^2 / B^2, 1), B = CLIP_K * max(menor sigma dos dois, piso));
         "adahedge_compartilhada" (rascunho 5: a mesma perda recortada, pesos do Fixed Share com taxas variáveis);
-        "adahedge_compartilhada_rapida" (rascunho 6: idem, com taxa de troca 2/(t+1)^2, Adamskiy et al. 2016, 4.1.3).
+        "adahedge_compartilhada_rapida" (rascunho 6: idem, com taxa de troca 2/(t+1)^2, Adamskiy et al. 2016, 4.1.3);
+        "adahedge_ref_definida" (desenvolvimento: como "adahedge", mas enquanto a referência declarada não está definida
+        a saída é L e os pesos não aprendem; a sazonal fica definida com um ciclo completo de alvos).
     """
 
     def __init__(self, n_inputs, season=None, season2=None, standardize=True, referencia=None, porta=True,
@@ -72,7 +76,7 @@ class Lebre053:
         self.e2 = {"REF": None, "LEBRE": None}; self.sig = {"REF": 1.0, "LEBRE": 1.0}
         self._hyp = None; self._hkey = None; self._inst = 0; self._ep_n = 0; self._ep_S = 0.0
         self.eventos_porta = []; self.trocas = 0; self.fp_porta = 0.0
-        self._out = None; self._R = None; self._L = None
+        self._out = None; self._R = None; self._L = None; self._R_def = False
         self.saida = saida
         if saida == "fixedshare":
             self.agregador = FixedShare(2)
@@ -133,8 +137,10 @@ class Lebre053:
             self._out = fb.value
             return fb
         self._L = fb.value; self._R = self._referencia()
+        self._R_def = math.isfinite(self._R) and (self.referencia != "sazonal" or (
+            len(self.hist) == self.season and math.isfinite(self.hist[0])))
         if self.agregador is not None:
-            if math.isfinite(self._R):
+            if math.isfinite(self._R) and (self._R_def or self.saida != "adahedge_ref_definida"):
                 self.pesos = self.agregador.pesos()
                 out = float(self.pesos[0] * self._R + self.pesos[1] * self._L)
             else:
@@ -183,7 +189,8 @@ class Lebre053:
                 for k in ("REF", "LEBRE"):
                     self.sig[k] = math.sqrt(max(self.e2[k], 1e-300))
             self.fp_porta += FP_PORTA_PASSO
-            if self.agregador is not None and self.saida in ("adahedge", "flipflop"):
+            if self.agregador is not None and (self.saida in ("adahedge", "flipflop") or (
+                    self.saida == "adahedge_ref_definida" and self._R_def)):
                 self.agregador.atualizar(((y - R) ** 2, (y - L) ** 2))
                 self.fp_porta += FP_AGREGACAO_PASSO
         if y_ok:                                                        # intervalo da saída

@@ -90,7 +90,7 @@ def _rodar(m, X, y, q):
 
 
 @pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
-                                   "adahedge_compartilhada_rapida"])
+                                   "adahedge_compartilhada_rapida", "adahedge_ref_definida"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -251,3 +251,16 @@ def test_compartilhada_taxas_nao_crescentes_e_esquece_deficit():
     assert all(a >= b for a, b in zip(fs.etas, fs.etas[1:]))
     assert all(a >= b for a, b in zip(fs.alphas, fs.alphas[1:]))
     assert k < 200                                                       # recupera antes de igualar o déficit
+
+
+# ------------------------------------------------------------------------------- desenvolvimento pós-rascunho 6
+def test_ref_definida_espera_um_ciclo_completo():
+    rng = np.random.default_rng(4); T = 200
+    X = rng.standard_normal((T, 1)); y = np.sin(np.arange(T) * 2 * np.pi / 24) + 0.1 * rng.standard_normal(T)
+    m = Lebre053(1, season=24, referencia="sazonal", saida="adahedge_ref_definida")
+    for t in range(T):
+        f = m.predict(X[t])
+        if t < 24:
+            assert m.pesos is None and f.value == m._L and m.agregador.n == 0
+        m.observe(float(y[t]))
+    assert m.agregador.n == T - 24
