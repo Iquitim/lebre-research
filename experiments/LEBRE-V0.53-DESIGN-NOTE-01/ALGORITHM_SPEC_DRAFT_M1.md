@@ -50,3 +50,14 @@ passo; previsão de E ~13; Prod ~31; mistura 3. **Total ~70 + d FP por passo** (
 3. Todos os critérios da M2 (régua por decidibilidade) continuam valendo nas 43 famílias, agora com M1; o critério de custo
    passa a valer para as duas juntas: acréscimo sobre a v0.52 <= 150 + 70 + d FP por passo.
 4. Custo de M1 medido e reportado (meta: <= 70 + d FP por passo).
+
+## 6. Resultado (E8, E9; 08/10/2026)
+
+- **E8 (desenvolvimento):** a M1 enxuta **não fica**. Critério 1 falha: em B03, M1 + M2 ÷ linear online = 1,899 (v0.52:
+  2,076). Critério 3 falha: C05 (1,014, limite superior 1,033) e VB02 (1,010, limite superior 1,020); em várias séries
+  horárias e curtas a M1 piora a M2 em 0,1% a 0,7%. Em B01 e B02 o critério 2 passa.
+- **E9 (diagnóstico de F6):** a vantagem do comparador linear em B03 vem da estrutura conjunta de defasagens (alvo
+  defasado e 8 defasagens de todas as entradas, 75 variáveis), não da relação no mesmo instante; o especialista de 3
+  entradas no instante t é o pior desenho para esses dados. O diagnóstico de F6 na nota de desenho estava errado.
+- **Consequência:** resolver F6 exigiria uma regressão conjunta com dezenas de variáveis (custo O(k²) com k ~ 75), fora do
+  orçamento de custo da v0.53; a decisão sobre a M1 é do responsável pelo projeto.
