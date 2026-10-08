@@ -13,7 +13,7 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
 from lebre053.agregacao import (Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution,  # noqa: E402
-                                SwitchMonotono, SwitchMonotonoExato)
+                                SwitchMonotono, SwitchMonotonoExato, SwitchMonotonoJeffreys)
 
 
 def _jogar(ag, perdas):
@@ -373,3 +373,22 @@ def test_oraculo_exato_igual_a_m_com_escala_constante():
         o.calcular(s2)
         assert np.allclose(o.pesos(), m.pesos(), rtol=1e-9, atol=1e-12)
         m.atualizar(l / (2 * s2)); o.atualizar(l)
+
+
+def test_oraculo_jeffreys_por_enumeracao_e_invariante_a_escala():
+    """Pesos = soma, sobre as hipóteses, de prioridade * C_h^(-n/2); multiplicar os erros por uma constante não muda nada."""
+    rng = np.random.default_rng(31); T = 12
+    sq = rng.exponential(1.0, (T, 2))
+    hip = [(1 / 3, [0] * T), (1 / 3, [1] * T), (1 / (3 * T), [0] * T)]
+    hip += [(1 / (3 * t * (t - 1)), [0] * (t - 1) + [1] * (T - t + 1)) for t in range(2, T + 1)]
+    a, b = SwitchMonotonoJeffreys(), SwitchMonotonoJeffreys()
+    for n in range(T):
+        pa = a.calcular(); pb = b.calcular()
+        if n > 0:
+            w = np.zeros(2)
+            for pri, cam in hip:
+                C = sum(sq[k][cam[k]] for k in range(n))
+                w[cam[n]] += pri * C ** (-n / 2)
+            assert np.allclose(pa, w / w.sum(), rtol=1e-9)
+        assert np.allclose(pa, pb, rtol=1e-9)
+        a.atualizar(sq[n]); b.atualizar(1e6 * sq[n])

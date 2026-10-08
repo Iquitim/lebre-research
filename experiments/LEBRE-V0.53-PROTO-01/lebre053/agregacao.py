@@ -252,3 +252,29 @@ class SwitchMonotonoExato:
     def atualizar(self, sq):
         self.CR += float(sq[0]); self.CL += float(sq[1]); self.n += 1
         self.D.append(self.CR - self.CL)                          # D[k-1] = C_R(k) - C_L(k), usado pela troca em s = k + 1
+
+
+class SwitchMonotonoJeffreys(SwitchMonotonoExato):
+    """Oráculo de diagnóstico (custo O(t)): como SwitchMonotonoExato, mas a variância do ruído é integrada com a
+    prioridade de Jeffreys (1/sigma) em vez de estimada: a verossimilhança marginal de uma hipótese com erro quadrático
+    acumulado C em n rodadas é proporcional a C^(-n/2) (Gamma(n/2) (C/2)^(-n/2), igual para todas). Sem escala nem
+    parâmetro."""
+
+    def calcular(self, s2=None):
+        n = self.n
+        if n == 0:
+            self._p = np.array([2.0 / 3.0, 1.0 / 3.0])
+            return self._p
+        h = n / 2.0
+        lg = lambda c: np.log(np.maximum(c, 1e-300))
+        s = np.arange(2, n + 2)
+        Ds = np.array(self.D)
+        logs = [math.log(1 / 3) + math.log(1.0 / (n + 1)) - h * lg(self.CR),
+                math.log(1 / 3) - h * lg(self.CR)]
+        logl = np.concatenate([[math.log(1 / 3) - h * lg(self.CL)],
+                               math.log(1 / 3) - np.log(s * (s - 1.0)) - h * lg(Ds + self.CL)])
+        a = np.logaddexp.reduce(logs); b = np.logaddexp.reduce(logl)
+        m = max(a, b)
+        p = np.array([math.exp(a - m), math.exp(b - m)])
+        self._p = p / p.sum()
+        return self._p

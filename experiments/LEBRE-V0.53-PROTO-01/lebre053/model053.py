@@ -27,11 +27,12 @@ from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
 from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO,
                         FP_SWITCH_MONO_PASSO, FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo,
-                        SwitchDistribution, SwitchMonotono, SwitchMonotonoExato)
+                        SwitchDistribution, SwitchMonotono, SwitchMonotonoExato, SwitchMonotonoJeffreys)
 
 REFERENCIAS = ("zero", "persistencia", "sazonal")
 SAIDAS = ("porta", "adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
-          "adahedge_compartilhada_rapida", "adahedge_ref_definida", "switch", "switch_mono", "switch_mono_exato")
+          "adahedge_compartilhada_rapida", "adahedge_ref_definida", "switch", "switch_mono", "switch_mono_exato",
+          "switch_mono_jeffreys")
 FP_PORTA_PASSO = 16           # perdas recortadas, incremento e médias exponenciais da porta (contagem aproximada)
 
 
@@ -93,6 +94,8 @@ class Lebre053:
             self.agregador = SwitchMonotono()
         elif saida == "switch_mono_exato":                        # oráculo de diagnóstico, custo O(t)
             self.agregador = SwitchMonotonoExato()
+        elif saida == "switch_mono_jeffreys":                     # oráculo de diagnóstico, custo O(t)
+            self.agregador = SwitchMonotonoJeffreys()
         elif saida == "adahedge_compartilhada_rapida":
             self.agregador = FixedShareAdaptativo(2, alpha_fn=lambda t: 2.0 / (t + 1) ** 2)
         else:
@@ -152,8 +155,8 @@ class Lebre053:
             len(self.hist) == self.season and math.isfinite(self.hist[0])))
         if self.agregador is not None:
             if math.isfinite(self._R) and (self._R_def or self.saida not in ("adahedge_ref_definida", "switch", "switch_mono",
-                                                                       "switch_mono_exato")):
-                if self.saida == "switch_mono_exato":
+                                                                       "switch_mono_exato", "switch_mono_jeffreys")):
+                if self.saida in ("switch_mono_exato", "switch_mono_jeffreys"):
                     c = self.base._core
                     piso = SCALE_FLOOR * math.sqrt(max(c.y_sv, 0.0)) if c.t >= 200 else 0.0
                     s2 = max(min(self.e2["REF"], self.e2["LEBRE"]), piso * piso, 1e-300) if self.e2["REF"] is not None else 1.0
@@ -194,7 +197,7 @@ class Lebre053:
                     perdas.append((y - v) ** 2 / (2.0 * s2) + 0.5 * math.log(s2))
                 self.agregador.atualizar(perdas)
                 self.fp_porta += FP_FIXED_SHARE_PASSO
-            if self.saida == "switch_mono_exato" and self.e2["REF"] is not None and self._R_def:
+            if self.saida in ("switch_mono_exato", "switch_mono_jeffreys") and self.e2["REF"] is not None and self._R_def:
                 self.agregador.atualizar(((y - R) ** 2, (y - L) ** 2))
                 self.fp_porta += 5 * self.agregador.n                  # O(t): oráculo, não candidata
             if self.saida in ("switch", "switch_mono") and self.e2["REF"] is not None and self._R_def:
