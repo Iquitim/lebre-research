@@ -12,7 +12,8 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
-from lebre053.agregacao import Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution  # noqa: E402
+from lebre053.agregacao import (Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution,  # noqa: E402
+                                SwitchMonotono)
 
 
 def _jogar(ag, perdas):
@@ -91,7 +92,7 @@ def _rodar(m, X, y, q):
 
 @pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
                                    "adahedge_compartilhada_rapida", "adahedge_ref_definida",
-                                   "switch"])
+                                   "switch", "switch_mono"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -326,3 +327,38 @@ def test_switch_esquece_fase_de_aprendizado():
         if sw.pesos()[1] > 0.9:
             break
     assert k <= 20
+
+
+# ------------------------------------------------------------------------------- candidata M (troca num só sentido)
+def test_switch_mono_igual_a_enumeracao_direta():
+    """Prioridade: 1/3 sempre R, 1/3 sempre L, 1/3 * 1/(t(t-1)) para trocar em t >= 2; trocas depois de T somam 1/(3T)."""
+    rng = np.random.default_rng(12); T = 9
+    perdas = rng.exponential(1.0, (T, 2)) * 2
+    hip = [(1 / 3, [0] * T), (1 / 3, [1] * T), (1 / (3 * T), [0] * T)]
+    hip += [(1 / (3 * t * (t - 1)), [0] * (t - 1) + [1] * (T - t + 1)) for t in range(2, T + 1)]
+    esperado = np.zeros((T, 2))
+    for pri, cam in hip:
+        v = pri
+        for t in range(T):
+            esperado[t, cam[t]] += v
+            v *= math.exp(-perdas[t][cam[t]])
+    esperado /= esperado.sum(1, keepdims=True)
+    sw = SwitchMonotono(); fw = []
+    for l in perdas:
+        fw.append(sw.pesos().copy()); sw.atualizar(l)
+    assert np.allclose(np.array(fw), esperado, rtol=1e-10, atol=1e-12)
+
+
+def test_switch_mono_esquece_aprendizado_e_nao_volta_por_erro_isolado():
+    sw = SwitchMonotono()
+    for _ in range(800):
+        sw.atualizar([0.5, 20.0])                                  # L muito pior (aprendendo)
+    for k in range(1, 200):
+        sw.atualizar([2.0, 0.5])                                   # L melhor
+        if sw.pesos()[1] > 0.9:
+            break
+    assert k <= 20
+    for _ in range(300):
+        sw.atualizar([2.0, 0.5])
+    sw.atualizar([0.5, 30.0])                                      # um erro isolado enorme de L
+    assert sw.pesos()[1] > 0.99

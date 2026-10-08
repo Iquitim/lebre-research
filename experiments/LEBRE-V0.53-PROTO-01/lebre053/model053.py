@@ -10,7 +10,8 @@ saida="fixedshare", Fixed Share com alpha_t = 1/t sobre previsões gaussianas de
 ALGORITHM_SPEC_DRAFT_M2_r6.md (rascunho 6: saida="adahedge_compartilhada_rapida", taxa de troca 2/(t+1)^2). Em
 desenvolvimento depois do rascunho 6 (REFLEXAO_M2.md): saida="adahedge_ref_definida", o rascunho 2 comparando só os
 passos em que a referência declarada está definida (a sazonal só depois de um ciclo completo); e
-M2_CANDIDATA_S.md: saida="switch", switch distribution (van Erven et al., 2012) sobre gaussianas de variância comum.
+M2_CANDIDATA_S.md: saida="switch", switch distribution (van Erven et al., 2012) sobre gaussianas de variância comum; e
+M2_CANDIDATA_M.md: saida="switch_mono", a mesma restrita a trocas num só sentido (referência -> LEBRE).
 Os arquivos _core.py, _engine.py, _memory.py e _model052.py são cópias byte a byte da biblioteca congelada lebre==0.1.0
 (hashes em SHA256_COPIAS.txt) e não são editados. A porta fica por fora: a v0.52 roda inteira por baixo e a porta decide
 qual previsão sai. No rascunho 1 a porta tem motor de evidência próprio (orçamento alpha_porta), e o caminho estrutural
@@ -25,11 +26,12 @@ from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, 
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
 from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO,
-                        FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution)
+                        FP_SWITCH_MONO_PASSO, FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo,
+                        SwitchDistribution, SwitchMonotono)
 
 REFERENCIAS = ("zero", "persistencia", "sazonal")
 SAIDAS = ("porta", "adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
-          "adahedge_compartilhada_rapida", "adahedge_ref_definida", "switch")
+          "adahedge_compartilhada_rapida", "adahedge_ref_definida", "switch", "switch_mono")
 FP_PORTA_PASSO = 16           # perdas recortadas, incremento e médias exponenciais da porta (contagem aproximada)
 
 
@@ -55,7 +57,7 @@ class Lebre053:
         "adahedge_ref_definida" (desenvolvimento: como "adahedge", mas enquanto a referência declarada não está definida
         a saída é L e os pesos não aprendem; a sazonal fica definida com um ciclo completo de alvos);
         "switch" (candidata S: switch distribution sobre N(previsão, s2) com s2 comum = max(min(s2_R, s2_L), piso^2),
-        mesma regra da referência definida).
+        mesma regra da referência definida); "switch_mono" (candidata M: idem, trocas só da referência para a LEBRE).
     """
 
     def __init__(self, n_inputs, season=None, season2=None, standardize=True, referencia=None, porta=True,
@@ -87,6 +89,8 @@ class Lebre053:
             self.agregador = FixedShareAdaptativo(2)
         elif saida == "switch":
             self.agregador = SwitchDistribution(2)
+        elif saida == "switch_mono":
+            self.agregador = SwitchMonotono()
         elif saida == "adahedge_compartilhada_rapida":
             self.agregador = FixedShareAdaptativo(2, alpha_fn=lambda t: 2.0 / (t + 1) ** 2)
         else:
@@ -145,7 +149,7 @@ class Lebre053:
         self._R_def = math.isfinite(self._R) and (self.referencia != "sazonal" or (
             len(self.hist) == self.season and math.isfinite(self.hist[0])))
         if self.agregador is not None:
-            if math.isfinite(self._R) and (self._R_def or self.saida not in ("adahedge_ref_definida", "switch")):
+            if math.isfinite(self._R) and (self._R_def or self.saida not in ("adahedge_ref_definida", "switch", "switch_mono")):
                 self.pesos = self.agregador.pesos()
                 out = float(self.pesos[0] * self._R + self.pesos[1] * self._L)
             else:
@@ -182,10 +186,10 @@ class Lebre053:
                     perdas.append((y - v) ** 2 / (2.0 * s2) + 0.5 * math.log(s2))
                 self.agregador.atualizar(perdas)
                 self.fp_porta += FP_FIXED_SHARE_PASSO
-            if self.saida == "switch" and self.e2["REF"] is not None and self._R_def:
+            if self.saida in ("switch", "switch_mono") and self.e2["REF"] is not None and self._R_def:
                 s2 = max(min(self.e2["REF"], self.e2["LEBRE"]), piso * piso, 1e-300)
                 self.agregador.atualizar(((y - R) ** 2 / (2.0 * s2), (y - L) ** 2 / (2.0 * s2)))
-                self.fp_porta += FP_SWITCH_PASSO
+                self.fp_porta += FP_SWITCH_PASSO if self.saida == "switch" else FP_SWITCH_MONO_PASSO
             if self._recortada and self.e2["REF"] is not None:              # escalas só do passado (antes deste erro)
                 B2 = CLIP_K * CLIP_K * max(min(self.e2["REF"], self.e2["LEBRE"]), piso * piso, 1e-300)
                 self.agregador.atualizar((min((y - R) ** 2 / B2, 1.0), min((y - L) ** 2 / B2, 1.0)))

@@ -183,3 +183,36 @@ class SwitchDistribution:
         w[:, 0] *= 1.0 - h
         w += s * 0.5 / self.K                                 # novo trecho: final ou não com 1/2, previsor uniforme
         self.w = w
+
+
+# ------------------------------------------------------------------------------- candidata M (troca num só sentido)
+# A switch distribution acima restrita às sequências "sempre R", "sempre L" e "R até t, L a partir de t" (M2_CANDIDATA_M.md):
+# prioridade (11) do artigo restrita e renormalizada: 1/3 para cada forma, instante da troca com tau(t) = 1/(t(t-1)).
+# Contagem com a regra da v0.52: escala comum (3), perdas (8), verossimilhanças (8), atualização (4), transição (3),
+# normalização (5), pesos (3), saída ponderada (3). Total 37.
+FP_SWITCH_MONO_PASSO = 37
+
+
+class SwitchMonotono:
+    """Posterior sobre "sempre R", "sempre L" e "R até t, L depois"; atualizar recebe -log-verossimilhanças (R, L)."""
+
+    def __init__(self):
+        self.w = np.array([1.0, 1.0, 1.0, 0.0]) / 3.0          # [sempre R, sempre L, R com troca pendente, já trocou]
+        self.n = 0; self.trocas_regime = 0
+
+    def pesos(self):
+        w = self.w
+        p = np.array([w[0] + w[2], w[1] + w[3]])
+        return p / p.sum()
+
+    def atualizar(self, perdas):
+        lr, ll = float(perdas[0]), float(perdas[1])
+        m = min(lr, ll)
+        vr, vl = math.exp(-(lr - m)), math.exp(-(ll - m))
+        w = self.w * np.array([vr, vl, vr, vl])
+        w = w / w.sum()
+        self.n += 1
+        h = 1.0 / (self.n + 1)                                 # chance de a troca ocorrer no próximo instante
+        mov = h * w[2]
+        w[2] -= mov; w[3] += mov
+        self.w = w
