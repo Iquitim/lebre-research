@@ -60,6 +60,10 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 ### M1. Especialista de precisão (F6) — prioridade 1
 
+> **Atualização 08/10/2026:** custo recontado (~160-190 FP por passo na versão completa, não 30-40). Decisão do responsável
+> pelo projeto: **M1 enxuta**, com atualizações a cada 8 passos (~70 + d FP); entra pelo (A,B)-Prod, como a M2, em vez de
+> um teste. Especificação: `ALGORITHM_SPEC_DRAFT_M1.md`.
+
 - **Ideia:** um terceiro especialista na combinação que a LEBRE já faz (hoje memória e modelo estrutural): uma regressão
   recursiva (RLS) **só nas k entradas de maior correlação** atual, com k pequeno e fixo (custo O(k²)).
 - **Regime de evidência:** o especialista entra em sombra e só passa a pesar na previsão quando o e-process mostrar melhora
@@ -69,6 +73,13 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
   B01 e B02.
 
 ### M2. Referência trivial como ponto de partida (F8) — prioridade 2
+
+> **Atualização 08/10/2026 (resolvida no desenvolvimento e na validação):** depois de 11 desenhos (18 configurações), a
+> candidata P (`M2_CANDIDATA_P.md`: (A,B)-Prod anytime com AdaHedge sobre o erro quadrático como referência de confiança e
+> switch distribution num só sentido como oportunista) passou em todos os critérios nas 43 famílias de desenvolvimento e na
+> validação 3, com a régua por decidibilidade e custo de 129-134 FP por passo (limite de 150 decidido pelo responsável pelo
+> projeto). **Tensão declarada:** a seção 5 pede custo médio da v0.53 <= 1,25 vez o da v0.52; só a M2 já pode levar séries
+> baratas a ~1,7 vez. A M5 (redução de custo) passa a ser necessária, e o limite final será decidido no pré-registro.
 
 > **Atualização 06/10/2026 (protótipo no LEBRE Lab, D04, `20261006-063405_D04`):** uma porta simples (média exponencial da diferença de perda, alfa = 0,01) reduziu a perda contra a referência de 6,9% para 1,5% (retornos), de 6,8% para 3,8% (níveis) e de 5,2% para 0,3% (juros), sem perda na carga e na solar (1,000 contra a LEBRE). Não atingiu a margem declarada de 1% em retornos e níveis. Direção para a especificação: trocar a média exponencial por uma decisão governada pelo mesmo e-process das mudanças estruturais.
 
