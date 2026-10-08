@@ -278,3 +278,34 @@ class SwitchMonotonoJeffreys(SwitchMonotonoExato):
         p = np.array([math.exp(a - m), math.exp(b - m)])
         self._p = p / p.sum()
         return self._p
+
+
+# ------------------------------------------------------------------------------- candidata P ((A,B)-Prod "anytime")
+# Sani, Neu e Lazaric (2014), NeurIPS 27, material suplementar, apêndice B, Algoritmo 1 (Teorema 6): w_B = 1/2 fixo,
+# w_A começa em 1/2; s_t = eta_t w_A / (eta_t w_A + w_B / 2); depois da rodada, com delta = f(b) - f(a) em [-1, 1]:
+# w_A <- w_A (1 + eta_r delta)^(eta_novo / eta_r), eta = min(1/2, sqrt(1 / (1 + soma de delta^2))) (eta_1 = 1/2; ver
+# M2_CANDIDATA_P.md sobre o mínimo com 1/2). Contagem com a regra da v0.52: taxa (6), s (4), saída misturada (3), perdas
+# recortadas das duas saídas (11), atualização (7). Total 31 (D e M contados à parte).
+FP_PROD_PASSO = 31
+
+
+class ProdAnytime:
+    """(A,B)-Prod anytime para perdas em [0, 1]; s() é a fração dada a A."""
+
+    def __init__(self):
+        self.wA = 0.5; self.wB = 0.5; self.S2 = 0.0; self.n = 0; self.trocas_regime = 0
+
+    def eta(self):
+        return min(0.5, math.sqrt(1.0 / (1.0 + self.S2)))
+
+    def s(self):
+        e = self.eta()
+        return e * self.wA / (e * self.wA + self.wB / 2.0)
+
+    def atualizar(self, fB, fA):
+        d = float(fB) - float(fA)
+        er = self.eta()
+        self.S2 += d * d
+        en = self.eta()
+        self.wA *= (1.0 + er * d) ** (en / er)
+        self.n += 1

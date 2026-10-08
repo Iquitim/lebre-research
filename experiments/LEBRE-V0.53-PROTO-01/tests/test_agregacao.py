@@ -13,7 +13,7 @@ sys.path.insert(0, str(AQUI.parents[1] / "packages" / "lebre" / "src"))      # c
 import lebre as lebre052                                                  # noqa: E402
 from lebre053 import Lebre053                                             # noqa: E402
 from lebre053.agregacao import (Agregador, FixedShare, FixedShareAdaptativo, SwitchDistribution,  # noqa: E402
-                                SwitchMonotono, SwitchMonotonoExato, SwitchMonotonoJeffreys)
+                                SwitchMonotono, SwitchMonotonoExato, SwitchMonotonoJeffreys, ProdAnytime)
 
 
 def _jogar(ag, perdas):
@@ -92,7 +92,7 @@ def _rodar(m, X, y, q):
 
 @pytest.mark.parametrize("saida", ["adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
                                    "adahedge_compartilhada_rapida", "adahedge_ref_definida",
-                                   "switch", "switch_mono"])
+                                   "switch", "switch_mono", "prod"])
 @pytest.mark.parametrize("season", [None, 24])
 def test_rascunho2_mantem_o_caminho_estrutural_da_v052(saida, season):
     X, y, q = _serie(T=8000)
@@ -392,3 +392,38 @@ def test_oraculo_jeffreys_por_enumeracao_e_invariante_a_escala():
             assert np.allclose(pa, w / w.sum(), rtol=1e-9)
         assert np.allclose(pa, pb, rtol=1e-9)
         a.atualizar(sq[n]); b.atualizar(1e6 * sq[n])
+
+
+# ------------------------------------------------------------------------------- candidata P ((A,B)-Prod anytime)
+def _jogar_prod(fA, fB):
+    pr = ProdAnytime(); tot = 0.0
+    for a, b in zip(fA, fB):
+        sp = pr.s(); tot += sp * a + (1 - sp) * b                      # perda esperada da jogada aleatorizada
+        pr.atualizar(b, a)
+    return tot, pr
+
+
+@pytest.mark.parametrize("seed", range(4))
+def test_prod_fica_perto_de_b_quando_b_e_melhor(seed):
+    rng = np.random.default_rng(seed); T = 5000
+    fB = rng.random(T) * 0.6; fA = np.clip(fB + 0.2 + 0.3 * rng.standard_normal(T), 0, 1)
+    tot, _ = _jogar_prod(fA, fB)
+    assert tot - fB.sum() <= 2 * math.log(2) + 2.0
+
+
+def test_prod_migra_para_a_quando_a_e_muito_melhor():
+    rng = np.random.default_rng(7); T = 4000
+    fB = np.full(T, 0.8); fA = np.full(T, 0.2); fA[:300] = 1.0          # A pior no começo, depois bem melhor
+    tot, pr = _jogar_prod(fA, fB)
+    assert pr.s() > 0.95 and tot < fB.sum() - 1000
+
+
+def test_prod_d_interna_igual_a_d_isolada():
+    X, y, q = _serie(T=3000)
+    a = Lebre053(3, referencia="persistencia", saida="prod"); b = Lebre053(3, referencia="persistencia", saida="adahedge_ref_definida")
+    for t in range(3000):
+        a.predict(X[t]); fb = b.predict(X[t])
+        if a._R_def:
+            assert a._d == pytest.approx(fb.value, rel=1e-12, abs=1e-12)
+        yy = None if not math.isfinite(y[t]) else float(y[t])
+        a.observe(yy, quarantine=bool(q[t])); b.observe(yy, quarantine=bool(q[t]))
