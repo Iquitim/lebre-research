@@ -42,3 +42,8 @@ LEBRE Lab, `analises/M1_VAL5_RESULTADO.md` e `M1_VAL5_ALVO_RESULTADO.md` (43 sé
 `bca5dac` numa cópia fixa). F6: Z-B03 (Pequim, Changping) 1,118 contra meta 1,410 (v0.52 1,169); Z-B07 (6 marés novas) 0,925
 contra 1,068 (v0.52 1,017). Critérios da M2 com M1 + M2: atende em todas as famílias, Z-C05 incluída; nenhum NaN. Custo por
 série: mediana 2,13 vezes a v0.52 (1,39 a 3,24), questão do pré-registro.
+
+**Errata (09/10/2026):** nas validações 4 e 5, as famílias solar, eólica e carga foram montadas com ciclo de 30 h em vez
+de 24 h (erro de construção; LEBRE Lab, `analises/ERRATA_SEASON_VALIDACOES_4_5.md`). A confirmação da seção 4 vale para F6
+(Z-B03, Z-B07) e para as famílias de câmbio, juros e inflação; para solar, eólica e carga com o ciclo certo, a evidência
+fresca virá da avaliação final na reserva.
