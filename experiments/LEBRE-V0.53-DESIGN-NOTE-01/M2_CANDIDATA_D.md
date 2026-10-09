@@ -71,3 +71,13 @@ referência.
 avaliação que vem do maior passo isolado. Se for **maior que 5%**, a série é **"indecidível" no critério 1**: reportada,
 sem aprovar nem reprovar. Os critérios 2, 4, 6 e 7 não mudam. No desenvolvimento e nas validações 1 a 4, a regra atinge 32
 séries (LEBRE Lab, `diagnosticos/E15_RESULTADO.md`).
+
+## Adendo 2, de 09/10/2026: a regra do choque vale também no critério 2 (decisão do responsável pelo projeto)
+
+Decidido **depois** de ver o E16 (LEBRE Lab, `analises/E16_RESULTADO.md`), em que a candidata Q falhou só em Y-C02, por uma
+série de choque (abs_baht_1990, maior passo 21,6% do erro da referência). Base: o argumento do PRA-10, seção 3, é
+simétrico: num choque imprevisível, nenhum combinador online garante ficar a uma margem fixa de nenhum dos dois
+previsores. **Regra:** a mesma medida e o mesmo limite do adendo 1 (fração do erro quadrático da referência vinda do maior
+passo isolado > 5%, calculada antes de rodar a LEBRE); a série "v0.52 melhor" nessa condição fica "indecidível (choque)" no
+critério 2: reportada, sem aprovar nem reprovar. Vale para medições futuras (validação 5 e reserva final); a releitura do
+E16 com esta regra é só desenvolvimento.
