@@ -81,3 +81,16 @@ previsores. **Regra:** a mesma medida e o mesmo limite do adendo 1 (fração do 
 passo isolado > 5%, calculada antes de rodar a LEBRE); a série "v0.52 melhor" nessa condição fica "indecidível (choque)" no
 critério 2: reportada, sem aprovar nem reprovar. Vale para medições futuras (validação 5 e reserva final); a releitura do
 E16 com esta regra é só desenvolvimento.
+
+## Adendo 3, de 09/10/2026: limite do choque dependente do tamanho do trecho avaliado (decisão do responsável pelo projeto)
+
+Decidido **depois** de ver o E18b (LEBRE Lab, `analises/E18B_RESULTADO.md`), em que o limite fixo de 5% tornava
+"indecidíveis" ~35% das séries curtas sem choque real: com n passos avaliados e erros sem choque, o maior passo pesa cerca
+de 2 ln(n)/n do total (~3,9% com n = 288). **Regra (substitui o limite dos adendos 1 e 2):** com n = número de passos do
+período de avaliação com erro da referência finito, a série é "indecidível (choque)" nos critérios 1 e 2 se a fração do
+erro quadrático da referência vinda do maior passo isolado for **> máx(5%, 5 × 2 ln(n)/n)** (~20% com n = 288; 5% com
+n >= ~1.300). O fator 5 é margem de julgamento para caudas mais pesadas que a normal, não um teorema.
+
+Esclarecimento: a régua é de **avaliação** (aplicada a um trecho já observado, cujo tamanho é sempre conhecido; num uso
+real, o trecho observado até o momento); o modelo não a usa e não precisa conhecer o tamanho da série. Vale para medições
+futuras (validação 5 e reserva final); releituras do desenvolvimento com esta regra são só desenvolvimento.
