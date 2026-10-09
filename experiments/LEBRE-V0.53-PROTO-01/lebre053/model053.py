@@ -32,6 +32,7 @@ from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, 
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
 from .precisao import (EspecialistaConjuntoR3, EspecialistaDefasagens, EspecialistaDefasagensR2, EspecialistaDefasagensR4,
+                       EspecialistaDefasagensR5,
                        EspecialistaPrecisao)
 from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO,
                         FP_SWITCH_MONO_PASSO, FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo,
@@ -79,7 +80,8 @@ class Lebre053:
         self.base = Lebre052(n_inputs, season=season, season2=season2, standardize=standardize)
         if precisao and not porta:
             raise ValueError("precisao=True exige porta=True (a M1 alimenta a M2)")
-        self.precisao = (EspecialistaDefasagensR4(n_inputs) if precisao == "r4"
+        self.precisao = (EspecialistaDefasagensR5(n_inputs) if precisao == "r5"
+                         else EspecialistaDefasagensR4(n_inputs) if precisao == "r4"
                          else EspecialistaConjuntoR3(n_inputs) if precisao == "r3"
                          else EspecialistaDefasagensR2(n_inputs) if precisao == "r2"
                          else EspecialistaDefasagens(n_inputs) if precisao == "r1"

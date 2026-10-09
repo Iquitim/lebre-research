@@ -592,3 +592,26 @@ def test_switch_monotono_sem_nan_quando_um_lado_some():
     a.atualizar((0.0, 5000.0))                                  # agora L (o lado que sobrou) perde por margem enorme
     p = a.pesos()
     assert np.all(np.isfinite(p)) and abs(p.sum() - 1) < 1e-12 and a.recuperacoes >= 1
+
+
+def test_m1_r5_adahedge_no_erro_quadratico_com_sombra():
+    """Rascunho 5: mesmas previsões do especialista do rascunho 2; L' = L até N_MIN atualizações do AdaHedge; depois,
+    mistura convexa de L e E com os pesos do AdaHedge sobre o erro quadrático bruto."""
+    rng = np.random.default_rng(33); T = 4000
+    X = rng.standard_normal((T, 4)); y = np.zeros(T)
+    for t in range(2, T):
+        y[t] = 0.5 * y[t - 1] + X[t, 0] + 0.7 * X[t - 3, 1] + 0.2 * rng.standard_normal()
+    a = Lebre053(4, referencia="persistencia", saida="prod_q", precisao="r5")
+    b = Lebre053(4, referencia="persistencia", saida="prod_q", precisao="r2")
+    viu_sombra = viu_uso = False
+    for t in range(T):
+        a.predict(X[t]); b.predict(X[t])
+        pa, pb = a.precisao, b.precisao
+        assert (pa.e is None) == (pb.e is None) and (pa.e is None or pa.e == pb.e)
+        if pa.e is not None and pa.ag.n < 100:
+            assert a._L == a._L52; viu_sombra = True
+        elif pa.e is not None:
+            w = pa.ag.pesos()
+            assert abs(a._L - (w[0] * a._L52 + w[1] * pa.e)) < 1e-9 * max(1.0, abs(a._L)); viu_uso = True
+        a.observe(float(y[t])); b.observe(float(y[t]))
+    assert viu_sombra and viu_uso and 0.0 <= a.precisao.peso() <= 1.0

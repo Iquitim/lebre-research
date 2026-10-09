@@ -9,7 +9,7 @@ import math
 import numpy as np
 
 from ._core import CLIP_K, EVERY, LAM, N_MIN, T_MAX
-from .agregacao import FP_PROD_PASSO, ProdAnytime
+from .agregacao import FP_AGREGACAO_PASSO, FP_PROD_PASSO, Agregador, ProdAnytime
 
 K_PRECISAO = 3
 LAMBDA_RLS, DELTA_RLS = 0.999, 100.0          # os do comparador linear online do LEBRE Lab (declarados, não derivados)
@@ -286,6 +286,50 @@ class EspecialistaDefasagensR4(EspecialistaDefasagensR2):
                 if self.N > 0:
                     self.prod.atualizar(e52 / self.N, le / self.N)
             self.fp += FP_PROD_PASSO + FP_NORMALIZACAO_R3
+        self.e2_52 = e52 if self.e2_52 is None else self.e2_52 + (1 - LAM) * (e52 - self.e2_52)
+        self._piso = piso
+        if aprende:
+            self.n_obs += 1
+            if self.n_obs % EVERY == 0:
+                self._triagem(self._x, y)
+                if self.z is not None:
+                    self._rls(self.z, y)
+            if self.n_obs >= N_MIN and (self.sel is None or self.n_obs - self.n_sel >= T_MAX):
+                self._selecionar()
+        self.yobs.append(float(y))
+
+
+# ------------------------------------------------------------------------------------------ rascunho 5 da M1
+# ALGORITHM_SPEC_DRAFT_M1_r5.md: o especialista do rascunho 2 sem mudança; combinação com a v0.52 por AdaHedge (Agregador)
+# sobre o erro quadrático sem recorte nem normalização; entrada em sombra (L' = L até N_MIN atualizações do AdaHedge).
+class EspecialistaDefasagensR5(EspecialistaDefasagensR2):
+    def __init__(self, d):
+        super().__init__(d)
+        self.ag = Agregador(2)                                    # [v0.52, especialista]
+
+    def _selecionar(self):
+        antigo = self.prod
+        super()._selecionar()
+        if self.prod is not antigo:                              # especialista novo: a combinação recomeça
+            self.ag = Agregador(2)
+
+    def prever(self, x, L):
+        super().prever(x, L)
+        if self.e is None or self.ag.n < N_MIN:                   # sombra: o AdaHedge aprende, a saída ainda não usa
+            return L
+        w = self.ag.pesos()
+        return float(w[0] * L + w[1] * self.e)
+
+    def peso(self):
+        return float(self.ag.pesos()[1])
+
+    def observar(self, y, L52, aprende, piso):
+        e52 = (y - L52) ** 2
+        if self.e is not None:
+            le = (y - self.e) ** 2
+            if math.isfinite(e52) and math.isfinite(le):
+                self.ag.atualizar((e52, le))
+            self.fp += FP_AGREGACAO_PASSO
         self.e2_52 = e52 if self.e2_52 is None else self.e2_52 + (1 - LAM) * (e52 - self.e2_52)
         self._piso = piso
         if aprende:
