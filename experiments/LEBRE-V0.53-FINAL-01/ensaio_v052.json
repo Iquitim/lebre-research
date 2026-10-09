@@ -1,0 +1,552 @@
+[
+ {
+  "origem": "dev",
+  "tarefa": "camels:17350000",
+  "T": 16284,
+  "nan": 0,
+  "razao": 0.7990825545282326,
+  "acrescimo": 462.7427536231884,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:24900000",
+  "T": 15979,
+  "nan": 0,
+  "razao": 0.8438704264960593,
+  "acrescimo": 470.7637524250578,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:54110002",
+  "T": 16376,
+  "nan": 0,
+  "razao": 0.8294548229715062,
+  "acrescimo": 470.39032730825596,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:58258000",
+  "T": 14184,
+  "nan": 0,
+  "razao": 0.969163994909615,
+  "acrescimo": 485.44409193457415,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:60778000",
+  "T": 16345,
+  "nan": 0,
+  "razao": 0.8437710522316316,
+  "acrescimo": 465.38256347506876,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:60940000",
+  "T": 16345,
+  "nan": 0,
+  "razao": 0.8757511840751926,
+  "acrescimo": 470.194187825023,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:61510000",
+  "T": 15796,
+  "nan": 0,
+  "razao": 0.7347601745917479,
+  "acrescimo": 483.63123575588764,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:64360000",
+  "T": 16192,
+  "nan": 0,
+  "razao": 0.6946243383387615,
+  "acrescimo": 457.63963685770756,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:64477600",
+  "T": 13727,
+  "nan": 0,
+  "razao": 0.732499470216819,
+  "acrescimo": 476.12333357616376,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "camels:71350001",
+  "T": 16253,
+  "nan": 0,
+  "razao": 0.8393870735805129,
+  "acrescimo": 427.63108349227826,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "bdg2:chilledwater:Bull_education_Hayley",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0000000197241468,
+  "acrescimo": 372.69140446876423,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "bdg2:hotwater:Moose_education_Lori",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 367.8938098495212,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "bdg2:steam:Eagle_assembly_Herbert",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 368.44949840401273,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "bdg2:steam:Hog_assembly_Colette",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 382.9369585043319,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "dev",
+  "tarefa": "bdg2:steam:Hog_education_Luvenia",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 378.53414272685825,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:12520000",
+  "T": 16315,
+  "nan": 0,
+  "razao": 0.8367455935962683,
+  "acrescimo": 449.43266932270916,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:61267000",
+  "T": 15737,
+  "nan": 0,
+  "razao": 1.0174652568666784,
+  "acrescimo": 465.9973311304569,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:73820000",
+  "T": 15634,
+  "nan": 0,
+  "razao": 0.9249487097961514,
+  "acrescimo": 453.296916975822,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:26720000",
+  "T": 16345,
+  "nan": 0,
+  "razao": 0.6454074745716082,
+  "acrescimo": 409.30474151116545,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:71300000",
+  "T": 16253,
+  "nan": 0,
+  "razao": 0.7685139326388235,
+  "acrescimo": 459.34350581431124,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:56055000",
+  "T": 16345,
+  "nan": 0,
+  "razao": 0.916076220718994,
+  "acrescimo": 459.9928418476599,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:51750000",
+  "T": 14245,
+  "nan": 0,
+  "razao": 0.7679431240478434,
+  "acrescimo": 485.81263601263606,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:86160000",
+  "T": 16253,
+  "nan": 0,
+  "razao": 0.8921977200340286,
+  "acrescimo": 442.442379868332,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:13710001",
+  "T": 16376,
+  "nan": 0,
+  "razao": 0.7601907686961165,
+  "acrescimo": 476.4855276013678,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:82270050",
+  "T": 16284,
+  "nan": 0,
+  "razao": 0.9972839318655959,
+  "acrescimo": 382.64535740604276,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:84300000",
+  "T": 16376,
+  "nan": 0,
+  "razao": 0.932359403214593,
+  "acrescimo": 393.6113214460185,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:86100000",
+  "T": 16223,
+  "nan": 0,
+  "razao": 0.9096119769328699,
+  "acrescimo": 447.48831905319605,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:61105000",
+  "T": 15857,
+  "nan": 0,
+  "razao": 0.8890034135015684,
+  "acrescimo": 472.12436148073414,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:21750000",
+  "T": 16345,
+  "nan": 0,
+  "razao": 0.8123216436175985,
+  "acrescimo": 470.66772713368005,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:58530000",
+  "T": 16284,
+  "nan": 0,
+  "razao": 0.8049671063675523,
+  "acrescimo": 471.75178088921643,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:86480000",
+  "T": 16251,
+  "nan": 0,
+  "razao": 0.8638098403562727,
+  "acrescimo": 438.56882653375175,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:57740000",
+  "T": 16376,
+  "nan": 0,
+  "razao": 0.943017268474119,
+  "acrescimo": 457.0065950170983,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:64785000",
+  "T": 15796,
+  "nan": 0,
+  "razao": 0.9621248259148957,
+  "acrescimo": 458.84135224107365,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:58560000",
+  "T": 14373,
+  "nan": 0,
+  "razao": 0.8498574389904786,
+  "acrescimo": 489.75120016697974,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "camels:10500000",
+  "T": 16284,
+  "nan": 0,
+  "razao": 0.8858907905824192,
+  "acrescimo": 462.840518300172,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Moose_education_Omar",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 367.71682626538995,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:steam:Hog_office_Guadalupe",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 384.34792521659824,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Fox_education_Yolande",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 377.8690720474236,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Moose_education_Marlon",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.001969288747822,
+  "acrescimo": 361.2664728682171,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:steam:Bull_education_Magaret",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 376.67453260373924,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Panther_office_Lavinia",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 350.6211810305517,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Panther_education_Jerome",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0000000000000002,
+  "acrescimo": 351.0058709530324,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Peacock_education_Lucie",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 355.8085955312358,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:steam:Cockatoo_office_Laila",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 351.68678750569995,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Bull_assembly_Maren",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 379.75820793433655,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Hog_office_Guadalupe",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0000321139615493,
+  "acrescimo": 373.9029297765618,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Eagle_assembly_Lacy",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 380.53613771089823,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Eagle_education_Will",
+  "T": 17544,
+  "nan": 0,
+  "razao": 0.9823283816798244,
+  "acrescimo": 384.82905836753304,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:steam:Eagle_office_Chauncey",
+  "T": 17544,
+  "nan": 0,
+  "razao": 0.9999999999691213,
+  "acrescimo": 383.12562699498403,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Fox_lodging_Isabell",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 384.8671910624714,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Fox_education_Geoffrey",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0000000000000002,
+  "acrescimo": 383.72355221158233,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Fox_office_Yong",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 378.6349749202006,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Bull_office_Chantel",
+  "T": 17544,
+  "nan": 0,
+  "razao": 0.9998799479415308,
+  "acrescimo": 380.515503875969,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Bull_lodging_Lettie",
+  "T": 17544,
+  "nan": 0,
+  "razao": 0.9386101464380117,
+  "acrescimo": 379.25746694026446,
+  "estrutura": true,
+  "erro": null
+ },
+ {
+  "origem": "reserva2_v052",
+  "tarefa": "bdg2:chilledwater:Hog_office_Almeda",
+  "T": 17544,
+  "nan": 0,
+  "razao": 1.0,
+  "acrescimo": 375.80363657090743,
+  "estrutura": true,
+  "erro": null
+ }
+]

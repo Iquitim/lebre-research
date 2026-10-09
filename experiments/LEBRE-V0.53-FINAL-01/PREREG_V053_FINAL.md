@@ -94,6 +94,10 @@ v0.52 ÷ Chronos-2 nos 1.000 pontos, custo por série, peso final da M1.
 - **B é incerto:** o ganho deve vir sobretudo do câmbio (24 das 104 séries); um IC inteiro abaixo de 1 no conjunto não está
   garantido mesmo com a v0.53 funcionando como desenhada;
 - custo: acréscimo de ~400 a 970 FP por passo; memória estimada ~83-85 KB.
+- **Adendo, depois do ensaio em dados já gastos (`ENSAIO_RESULTADO.md`), antes de qualquer acesso à reserva:** nas 30
+  bacias e 25 medidores já usados pela v0.52, a v0.53 ficou em 0,847 da v0.52 nas bacias (não ~1,00, como esperado
+  acima) e 0,997 nos prédios, sem erro, NaN ou custo acima do limite. A expectativa para as bacias passa a ser de ganho; os
+  critérios não mudam.
 
 ## 7. Testes feitos antes, sem a reserva
 
@@ -122,5 +126,5 @@ v0.52 ÷ Chronos-2 nos 1.000 pontos, custo por série, peso final da M1.
 | `LEBRE-V0.52-PROTO-01/comp_dev.py` | `0bc9d773364ac130acfec1e1f688d2eb14b8a2eecc0a90569de51b7a6c9af40f` |
 | `LEBRE-V0.52-PROTO-01/chronos_dev.py` | `33deb6e80521b6941e47934ad8f738fc88b42070aa441590fa03549a307122b0` |
 
-Os SHA-256 dos scripts desta pasta (`final_*.py`, `teste_*.py`) estão em `SHA256SUMS.txt`, gerado no mesmo commit deste
-documento.
+Os SHA-256 dos scripts desta pasta (`final_*.py`, `teste_*.py`, `ensaio_*.py`) estão em `SHA256SUMS.txt`, gerado no mesmo
+commit deste documento.
