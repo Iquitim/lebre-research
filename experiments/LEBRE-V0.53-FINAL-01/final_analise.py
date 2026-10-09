@@ -109,6 +109,14 @@ def main(base=FD.AQUI, lista=None):
             ok = np.isfinite(cy) & np.isfinite(c52) & np.isfinite(cr)
             ok[:ci] = False
             melhor = c52 if np.sum((cy[ok] - c52[ok]) ** 2) <= np.sum((cy[ok] - cr[ok]) ** 2) else cr
+            # RUN_NOTAS.md, item 2: erro zero do comparador deixa a razão indefinida (0/0) e contamina todas as réplicas
+            ok53 = ok & np.isfinite(c53)
+            if np.sum((cy[ok53] - melhor[ok53]) ** 2) == 0:
+                if np.sum((cy[ok53] - c53[ok53]) ** 2) == 0:
+                    curtas.setdefault("empates_exatos", []).append(meta["nome"])     # sem informação: fora do agregado
+                else:
+                    curtas.setdefault("falhas_comparador_perfeito", []).append(meta["nome"])  # v0.53 pior: falha
+                continue
             pcm, repc = R.par_bootstrap(cy, c53, melhor, ci, BLOCO_CURTA[fam], np.random.default_rng([SEMENTE, 10_000 + k]))
             curtas["reps"].append(repc); curtas["pontos"].append(pcm)
             curtas["series"].append(dict(familia=fam, serie=meta["nome"], v053_sobre_melhor=pcm,
@@ -142,6 +150,7 @@ def main(base=FD.AQUI, lista=None):
     c7 = _agregado(curtas["reps"], curtas["pontos"])
     if c7 and c7["ic95"][1] > 1.05:
         falhas["7"].append("CURTAS")
+    falhas["7"] += [f"comparador perfeito e v0.53 pior: {n}" for n in curtas.get("falhas_comparador_perfeito", [])]
     if any(s["nan"] for s in curtas["series"]):
         falhas["NaN"].append("CURTAS")
     geral = _agregado(tot_reps, tot_pontos)
@@ -150,7 +159,7 @@ def main(base=FD.AQUI, lista=None):
     ram, ram_info = ram_estimada(d_max)
     sem_piora = not faltam and not any(falhas.values())
     promovida = sem_piora and melhora and ram <= RAM_LIMITE
-    out = dict(faltam=faltam, falhas=falhas, resumo=resumo, curtas=c7, geral_v053_sobre_v052=geral, melhora_clara=melhora,
+    out = dict(faltam=faltam, falhas=falhas, resumo=resumo, curtas=c7, curtas_empates_exatos=curtas.get("empates_exatos", []), geral_v053_sobre_v052=geral, melhora_clara=melhora,
                ram_estimada_bytes=ram, ram_info=ram_info, sem_piora=sem_piora, promovida=promovida, series=linhas,
                series_curtas=curtas["series"])
     json.dump(out, open(os.path.join(base, "final_resultado.json"), "w", encoding="utf-8"), indent=1,
@@ -162,7 +171,8 @@ def main(base=FD.AQUI, lista=None):
          f"**Melhora geral (v0.53 ÷ v0.52, todas as séries): {fmt(geral)} → {'atende' if melhora else 'não atende'} "
          f"(limite superior < 1).**", "",
          "| Critério | Falhas |", "|---|---|"] + [f"| {k} | {', '.join(v) or '-'} |" for k, v in falhas.items()] + [
-         "", f"Critério 7 (curtas, contra o melhor): {fmt(c7)}.",
+         "", f"Critério 7 (curtas, contra o melhor): {fmt(c7)}. Empates exatos fora do agregado (alvo e as três previsões "
+         f"iguais no trecho; RUN_NOTAS.md, item 2): {', '.join(curtas.get('empates_exatos', [])) or 'nenhum'}.",
          f"Memória estimada (não medida): {ram:,} B de {RAM_LIMITE:,} B ({'cabe' if ram <= RAM_LIMITE else 'não cabe'}).", "",
          f"**Decisão: {'v0.53 PROMOVIDA' if promovida else 'v0.53 NÃO promovida'}** (sem piora: {sem_piora}; melhora clara: "
          f"{melhora}; memória: {ram <= RAM_LIMITE}).", "",
