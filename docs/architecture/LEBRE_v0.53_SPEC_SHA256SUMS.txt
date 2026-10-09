@@ -1,0 +1,10 @@
+# LEBRE v0.53 specification, revision 0 (2026-10-09): PDFs, HTMLs and builder. Inputs: this repository (v0.53 final evaluation) and the public LEBRE Lab at commit 6f328bb.
+3121fa05f7ee00e936e30b7e8956fb6a80495f6c3a790a41f7ad94d53bf6a5c8 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_PTBR.pdf
+c5064790db08f72dd85d2ab3fbcfed9146832b71db3df8ef017764ee06da84d1 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_EN.pdf
+4398d547707d399bb81a9f83132bbb68b97c9967724dea1d5b70bf22c9cfdad8 *docs/architecture/pdf_source/LEBRE_v0.53_SPEC_PTBR.html
+0f885c0fe4e2c487efbe17f990d28c8b903fccc1858ea539dca19dab80273a65 *docs/architecture/pdf_source/LEBRE_v0.53_SPEC_EN.html
+65386957dfefb6c4e3b1377b5ae4fc4b182dde46f8bb8fdf56369523b1b53556 *docs/architecture/pdf_source/build_v053_spec.py
+fdf500896b4e14e07cd464fa20a1a3fc6986396b402902b6d857d141cd4f63f7 *docs/architecture/pdf_source/v053_text.py
+dfa0ddfcf226dae899793f11f9e1aef68dd02d916f3387f6f6182116008d740a *docs/architecture/pdf_source/v053_charts.py
+2a5cdb27a902554f255a10ea0b3fbe9a98d4aeec8d36be9f24d4009e91c4b24e *docs/architecture/pdf_source/v053_diagrams.py
+c1277d4401c3c625aef5dc8cd13bea4688ceb1bbf992827d56a0692f69aabd88 *docs/architecture/pdf_source/v053_data.py

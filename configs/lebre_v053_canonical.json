@@ -1,0 +1,24 @@
+{
+  "_description": "Canonical configuration of LEBRE v0.53 (promoted 2026-10-09 by the pre-registered final evaluation; freeze record docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md). Keyword arguments to Lebre053(d, season, season2, referencia, **config); every other constructor argument keeps its default in experiments/LEBRE-V0.53-PROTO-01/lebre053/model053.py (commit 4a2620e). The base v0.52 inside is lebre==0.1.0, unchanged.",
+  "_source": "experiments/LEBRE-V0.53-FINAL-01/final_run.py (KW), the configuration run in the final evaluation",
+  "model_class": "lebre053.model053.Lebre053",
+  "config": {
+    "porta": true,
+    "eps_porta": 0.002,
+    "recriar": true,
+    "alpha_porta": 0.01,
+    "observar_quarentena_entradas": true,
+    "saida": "prod_q2",
+    "precisao": "r5"
+  },
+  "referencia_rule": {
+    "financial_returns": "zero",
+    "declared_cycle": "sazonal",
+    "default": "persistencia"
+  },
+  "season_rule": {
+    "hourly": 24,
+    "bdg2_and_load_season2": 168,
+    "default": null
+  }
+}

@@ -1,4 +1,6 @@
-# Reproducibility map — LEBRE v0.52-r1
+# Reproducibility map — LEBRE v0.52-r1 and v0.53
+
+Sections 0 to 7 cover v0.52-r1; section 8 covers v0.53.
 
 Every number in the v0.52 specification, revision 1 (`docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.52_SPEC_r1_{EN,PTBR}.pdf`), traces to a script, its inputs and its outputs listed here. All paths are relative to the repository root. The spec builder reads the numbers from the output files at build time (`docs/architecture/pdf_source/v052_data.py`); no number is typed by hand.
 
@@ -86,6 +88,7 @@ The plan and script hashes were recorded before these runs (`HASHES_BEFORE_RUN.t
 |---|---|---|
 | v0.52 spec r1 (EN, PT-BR) | `docs/architecture/pdf_source/build_v052_spec.py` (+ `v052_text.py`, `v052_charts.py`, `v052_diagrams.py`, `v052_data.py`) | Needs Microsoft Edge (headless print) and internet access for KaTeX. **Byte-level** output is not reproducible, because the charts embed their generation timestamp; content and numbers are. Revision 0 is kept only as PDF/HTML with hashes (its builder was updated in place). |
 | Paper (English, arXiv) | `paper/build.sh` (runs `paper/build_assets.py`, `pdflatex`, `bibtex`) | Every number, table and data figure is generated from the result files; `paper/arxiv_source.tar.gz` is the arXiv upload. |
+| v0.53 spec (EN, PT-BR) | `docs/architecture/pdf_source/build_v053_spec.py` (+ `v053_text.py`, `v053_charts.py`, `v053_diagrams.py`, `v053_data.py`; imports the v0.52 template without changing it) | Same requirements as v0.52. Reads this repository and a checkout of the public LEBRE Lab (environment variable `LEBRE_LAB`, default a sibling folder `lebre-lab`); the document states the Lab commit it read. |
 | Earlier specs (v0.1, v0.3.2, v0.51, v0.51-r1) | `docs/architecture/pdf_source/build_*.py` | Frozen with their manifests. |
 
 ## 7. Known reproducibility caveats
@@ -93,3 +96,20 @@ The plan and script hashes were recorded before these runs (`HASHES_BEFORE_RUN.t
 - The C float32 build reproduces the Python decision sequence on 90–97% of the series; elsewhere a decision near the threshold shifts by a few steps (rounding). The float64 build is exact.
 - Foundation models (Chronos-2, TTM) were run on CPU with the package versions in `environment/requirements-research.txt`. Other versions or hardware may change their numbers slightly.
 - Before publication, absolute paths of the original workstation were removed from 34 tracked files (`scripts/sanitize_local_paths.py`). Hard-coded directories in scripts became portable (`os.path.expanduser("~")`, the system temp dir, `/tmp` in Git Bash); logs show `<HOME>`. Ten of these files are listed in hash manifests; `docs/architecture/SANITIZATION_RECORD.tsv` maps their original to their sanitized SHA-256, and `scripts/verify_integrity.py` reports them as SANITIZED. No frozen model, analysis or result file was affected.
+
+## 8. LEBRE v0.53
+
+v0.53 was developed in the public **LEBRE Lab** ([github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab)) and promoted here by a pre-registered final evaluation.
+
+| Step | Where | Output |
+|---|---|---|
+| Final-evaluation reserve (drawn 2026-10-05, before any v0.53 code; seeds 5311/5312 and the v0.52 permutations) | `experiments/LEBRE-V0.53-DATA-01/` (`make_split_v053.py`, `snapshot_v053.py`) | `SPLIT_V053.json` (+ SHA-256), `SNAPSHOT_SHA256SUMS.txt` (55 raw files in `data/external_v053/`, out of git) |
+| Promoted code | `experiments/LEBRE-V0.53-PROTO-01/` at commit `4a2620e`; configuration `configs/lebre_v053_canonical.json` | tests: `python -m pytest experiments/LEBRE-V0.53-PROTO-01/tests` (104) |
+| Development, validations 1 to 5, diagnostics (plans committed before each run) | LEBRE Lab: `analises/`, `diagnosticos/`, `scenarios/` (needs `LEBRE053_PROTO` pointing to a checkout of the prototype, ideally a git worktree at the commit recorded in each result) | `*_RESULTADO.md` and JSON per family |
+| Tests without the reserve (loaders reproduce the Lab series value by value; mechanism reproduces a recorded MSE) | `experiments/LEBRE-V0.53-FINAL-01/teste_final_*.py` (need `LEBRE_LAB` and `LEBRE053_PROTO`) | printed checks |
+| Final run (single, pre-registered) | `final_run.py` (v0.53, v0.52, reference, SARIMAX-X), `final_chronos.py` (Chronos-2) | `preds/`, `chronos/` |
+| Analysis | `final_analise.py` | `FINAL_RESULTADO.md`, `final_resultado.json` |
+| Reference addendum (after the result) | `adendo_sarimax_fx.py` | `ADENDO_SARIMAX_FX_RESULTADO.md` |
+| Integrity | `docs/architecture/LEBRE_v0.53_SHA256SUMS.txt` (177 files), `LEBRE_v0.53_SPEC_SHA256SUMS.txt` | `python scripts/verify_integrity.py` |
+
+**Caveats.** The reserve is consumed: re-running reproduces the published result, but it is not a new evaluation. Two fixes made during the run (reading the 2026 load by subsystem code; an exact-tie degenerate short series) are in `experiments/LEBRE-V0.53-FINAL-01/RUN_NOTAS.md`. Validations 4 and 5 of the Lab built the solar, wind and load families with a 30 h cycle instead of 24 h (errata in the Lab, `analises/ERRATA_SEASON_VALIDACOES_4_5.md`).

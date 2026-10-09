@@ -1,6 +1,6 @@
 # Experiment index
 
-The 89 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
+The 90 folders are grouped by research phase. Each folder is self-contained: scripts, logs, result tables and a report (mostly in Portuguese from v0.3 on).
 
 **Status legend:**
 - **F**: covered by a frozen SHA-256 manifest in `docs/architecture/`;
@@ -8,14 +8,17 @@ The 89 folders are grouped by research phase. Each folder is self-contained: scr
 - **R**: pre-registered evaluation;
 - **H**: historical, superseded by later versions (kept as record and as ablation source).
 
-## Next line — LEBRE v0.53 (proposal, from 5 Oct 2026)
+## LEBRE v0.53 (5–9 Oct 2026) — promoted
+
+Promoted on 9 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`; spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_{EN,PTBR}.pdf`). Development, validations 1 to 5 and diagnostics are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).
 
 | Folder | Role | Status |
 |---|---|---|
-| `LEBRE-V0.53-DESIGN-NOTE-01` | Design note 01: consolidate the base before expanding; changes M1–M6 motivated by the exploratory LEBRE Lab failures F1–F9 (in Portuguese) | proposal |
-| `LEBRE-V0.53-DATA-01` | Final-evaluation reserve (drawn 5 Oct 2026, before any v0.53 code), raw-data snapshot hashes, guard | reserve |
+| `LEBRE-V0.53-DESIGN-NOTE-01` | Design note, specification drafts of M1 (drafts 0–5) and M2 (drafts and candidates D, S, M, P, Q, Q2), decidability ruler and its addenda, literature audits PRA-06 to PRA-10 (in Portuguese) | F |
+| `LEBRE-V0.53-DATA-01` | Final-evaluation reserve (drawn 5 Oct 2026, before any v0.53 code), raw-data snapshot hashes, guard | F |
 | `LEBRE-V0.53-DIAG-F9-01` | Diagnosis of F9 (spurious inputs on price levels) | exploratory |
-| `LEBRE-V0.53-PROTO-01` | v0.53 development prototype: frozen v0.52 core copied byte for byte + M2 gate | development |
+| `LEBRE-V0.53-PROTO-01` | **v0.53 implementation** (promoted code: commit `4a2620e`): frozen v0.52 core copied byte for byte + M1 (`precisao.py`) + M2 (`agregacao.py`, `model053.py`); tests | F |
+| `LEBRE-V0.53-FINAL-01` | Final evaluation (104 reserved series): pre-registration, loaders, run and analysis scripts, tests without the reserve, rehearsal, run notes, results, SARIMAX addendum | F, R |
 
 ## LEBRE v0.52 (25–29 Sep 2026)
 

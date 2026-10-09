@@ -12,7 +12,7 @@ Rule followed throughout: every measurement set is declared (seeds included) **b
 | (same permutations) | **Reserve 1** = held-out of `SPLIT_V052.json` (ONS 45, CAMELS-BR 50 [positions 10–59], BDG2 30 [positions 5–34]) — **consumed** | `LEBRE-V0.52-HELDOUT-01` |
 | (same permutations) | **Reserve 2** = CAMELS-BR positions 60–79, BDG2 35–54 — **consumed** | `LEBRE-V0.52-HELDOUT-02/select_reserve2.py` |
 | (same permutations) | **Reserve 3** = CAMELS-BR positions 80–109, BDG2 55–84 — **consumed** | `LEBRE-V0.52-HELDOUT-03/select_reserve3.py` |
-| (same permutations) | **v0.53 final reserve** = CAMELS-BR positions 110–139, BDG2 85–114 — **reserved, not yet used** | `experiments/LEBRE-V0.53-DATA-01/make_split_v053.py` |
+| (same permutations) | **v0.53 final reserve** = CAMELS-BR positions 110–139, BDG2 85–114 — **consumed** by the final evaluation of 2026-10-09 | `experiments/LEBRE-V0.53-DATA-01/make_split_v053.py` |
 | 5311 / 5312 | Draw of 8 solar / 8 wind ONS plants for the **v0.53 final reserve** (excluding the 12 plants used in the LEBRE Lab) | same |
 | — | **Still unused:** CAMELS-BR positions 140+, BDG2 positions 115+. Eligible ONS rivers are exhausted. | — |
 
@@ -41,6 +41,13 @@ Rule followed throughout: every measurement set is declared (seeds included) **b
 | 8001 | Reserve 1 analysis |
 | 8002 | Reserve 2 analysis |
 | 8003 | Reserve 3 analysis; EXT-02 summaries; spec builder paired statistics |
+
+## v0.53 line (LEBRE Lab and final evaluation)
+
+| Seeds | Use | Where |
+|---|---|---|
+| 20261007–20261052 | Bootstrap and classification seeds of the v0.53 development measurements, validations 1 to 5 and diagnostics, each declared in the plan of its measurement | LEBRE Lab, [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab) (`analises/*_PLANO.md`, `diagnosticos/*_PLANO.md`) |
+| 20261053 / 20261054 | Classification / measurement bootstrap of the v0.53 final evaluation | `experiments/LEBRE-V0.53-FINAL-01/final_analise.py` |
 
 ## Earlier lines (v0.3–v0.51), for collision avoidance
 

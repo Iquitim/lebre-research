@@ -6,7 +6,7 @@ This repository answers one question: **how were the LEBRE results obtained?** I
 
 > **LEBRE** (*Lifecycle-governed Evidence-Based Resource Evolution*) is an online, one-step-ahead forecaster for time series with inputs. It runs within a budget of a few hundred floating-point operations per step. Each structural change is accepted by an anytime-valid sequential test (e-process) of predictive improvement.
 >
-> The current state is **LEBRE v0.53**, **promoted** on 2026-10-09 by a pre-registered binding rule in a single evaluation on data reserved before any v0.53 code (no harm in any family; v0.53/v0.52 = 0.955, 95% CI 0.951–0.960, on 104 reserved series). It has declared scope limits: see `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`. The specification documents below still describe **v0.52-r1** (frozen, not promoted); v0.53 adds two components on top of it, unchanged.
+> The current state is **LEBRE v0.53**, **promoted** on 2026-10-09 by a pre-registered binding rule in a single evaluation on data reserved before any v0.53 code (no harm in any family; v0.53/v0.52 = 0.955, 95% CI 0.951–0.960, on 104 reserved series). It has declared scope limits: see `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`. Its specification and technical report is `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_{EN,PTBR}.pdf`; the v0.52-r1 specification (frozen, not promoted) still describes the unchanged base.
 
 A reusable library (`lebre`) and a paper are separate, later deliverables. They will point back to this repository.
 
@@ -14,12 +14,13 @@ A reusable library (`lebre`) and a paper are separate, later deliverables. They 
 
 | You want to… | Go to |
 |---|---|
+| Read what LEBRE v0.53 is and how it was evaluated | `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_EN.pdf` (PT-BR: `…_v0.53_SPEC_PTBR.pdf`) |
 | Read what LEBRE v0.52 is and what was measured | `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.52_SPEC_r1_EN.pdf` (PT-BR: `…_r1_PTBR.pdf`) |
 | Read the paper (English, arXiv format) | `paper/main.pdf` (source and build in `paper/`) |
 | Know how each reported number was produced | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) |
 | Browse the experiment folders | [`experiments/INDEX.md`](experiments/INDEX.md) |
 | See every random seed and data split used | [`docs/research/SEEDS.md`](docs/research/SEEDS.md) |
-| Get the canonical model configuration | [`configs/lebre_v052_canonical.json`](configs/lebre_v052_canonical.json) |
+| Get the canonical model configuration | v0.53: [`configs/lebre_v053_canonical.json`](configs/lebre_v053_canonical.json); v0.52: [`configs/lebre_v052_canonical.json`](configs/lebre_v052_canonical.json) |
 | Set up the environment and toolchains | [`environment/`](environment/), [`tools/README.md`](tools/README.md), [`data/README.md`](data/README.md) |
 | Check integrity of the frozen versions | `python scripts/verify_integrity.py` |
 | Check that results still regenerate | `python scripts/reproduce_smoke.py` |
