@@ -1,0 +1,104 @@
+CHRONOS2_COV camels:12370000    59s
+CHRONOS2_COV camels:13870000    59s
+CHRONOS2_COV camels:24050000    60s
+CHRONOS2_COV camels:24200000    61s
+CHRONOS2_COV camels:24700000    59s
+CHRONOS2_COV camels:33450000    60s
+CHRONOS2_COV camels:34060000    60s
+CHRONOS2_COV camels:34130000    59s
+CHRONOS2_COV camels:55340000    59s
+CHRONOS2_COV camels:55380000    59s
+CHRONOS2_COV camels:56460000    59s
+CHRONOS2_COV camels:56775000    59s
+CHRONOS2_COV camels:56983000    59s
+CHRONOS2_COV camels:58030000    59s
+CHRONOS2_COV camels:58500000    60s
+CHRONOS2_COV camels:58710000    59s
+CHRONOS2_COV camels:58730001    59s
+CHRONOS2_COV camels:61024000    59s
+CHRONOS2_COV camels:61045000    59s
+CHRONOS2_COV camels:61343000    60s
+CHRONOS2_COV camels:64362000    59s
+CHRONOS2_COV camels:65010000    59s
+CHRONOS2_COV camels:70100000    61s
+CHRONOS2_COV camels:70300000    60s
+CHRONOS2_COV camels:70500000    60s
+CHRONOS2_COV camels:71383000    60s
+CHRONOS2_COV camels:74900000    60s
+CHRONOS2_COV camels:84095000    61s
+CHRONOS2_COV camels:84520000    61s
+CHRONOS2_COV camels:86420000    59s
+CHRONOS2_COV bdg2:chilledwater:Bull_education_Antonia    44s
+CHRONOS2_COV bdg2:chilledwater:Bull_education_Stewart    43s
+CHRONOS2_COV bdg2:chilledwater:Bull_lodging_Danielle    43s
+CHRONOS2_COV bdg2:chilledwater:Fox_education_Carleen    43s
+CHRONOS2_COV bdg2:chilledwater:Fox_education_Janina    45s
+CHRONOS2_COV bdg2:chilledwater:Fox_education_Sterling    46s
+CHRONOS2_COV bdg2:chilledwater:Fox_lodging_Angla    45s
+CHRONOS2_COV bdg2:chilledwater:Fox_office_Israel    46s
+CHRONOS2_COV bdg2:chilledwater:Fox_office_Margarita    45s
+CHRONOS2_COV bdg2:chilledwater:Fox_public_Martin    45s
+CHRONOS2_COV bdg2:chilledwater:Hog_education_Mathilda    45s
+CHRONOS2_COV bdg2:chilledwater:Hog_office_Rolando    46s
+CHRONOS2_COV bdg2:chilledwater:Panther_education_Quintin    45s
+CHRONOS2_COV bdg2:hotwater:Eagle_assembly_Latrina    46s
+CHRONOS2_COV bdg2:hotwater:Eagle_education_Lino    45s
+CHRONOS2_COV bdg2:hotwater:Eagle_public_Minnie    45s
+CHRONOS2_COV bdg2:hotwater:Fox_assembly_Renna    43s
+CHRONOS2_COV bdg2:hotwater:Fox_education_Claude    43s
+CHRONOS2_COV bdg2:steam:Bull_assembly_Vanessa    44s
+CHRONOS2_COV bdg2:steam:Bull_education_Mervin    43s
+CHRONOS2_COV bdg2:steam:Bull_education_Racheal    43s
+CHRONOS2_COV bdg2:steam:Bull_education_Sebastian    44s
+CHRONOS2_COV bdg2:steam:Bull_lodging_Caren    44s
+CHRONOS2_COV bdg2:steam:Cockatoo_education_Brendan    43s
+CHRONOS2_COV bdg2:steam:Cockatoo_education_Minh    46s
+CHRONOS2_COV bdg2:steam:Eagle_education_Raul    46s
+CHRONOS2_COV bdg2:steam:Hog_education_Haywood    45s
+CHRONOS2_COV bdg2:steam:Hog_industrial_Jay    45s
+CHRONOS2_COV bdg2:steam:Hog_office_Rolando    45s
+CHRONOS2_COV bdg2:steam:Moose_education_Abbie    44s
+CHRONOS2_COV solar:Conj. Alex    81s
+CHRONOS2_COV solar:Conj. Lavras    72s
+CHRONOS2_COV solar:Conj. Calcário    75s
+CHRONOS2_COV solar:Conj. Pereira Barreto    74s
+CHRONOS2_COV solar:Conj. Sol do Sertão    74s
+CHRONOS2_COV solar:Conj. Banabuiú    72s
+CHRONOS2_COV solar:Conj. Luzia    72s
+CHRONOS2_COV solar:Conj. Belmonte    72s
+CHRONOS2_COV eolica:Conj. Quinta 138 kV    89s
+CHRONOS2_COV eolica:Conj. Serra do Mato    91s
+CHRONOS2_COV eolica:Conj. Folha Larga Sul    91s
+CHRONOS2_COV eolica:Conj. Marmeleiro 2    91s
+CHRONOS2_COV eolica:Conj. Caetés II    91s
+CHRONOS2_COV eolica:Conj. Ventos de São Vitor    91s
+CHRONOS2_COV eolica:Conj. Santa Rosália    91s
+CHRONOS2_COV eolica:Conj. Morrão    92s
+CHRONOS2_COV carga:SUDESTE    92s
+CHRONOS2_COV carga:SUL    92s
+CHRONOS2_COV carga:NORDESTE    87s
+CHRONOS2_COV carga:NORTE    88s
+CHRONOS2_COV fx_ret:DEXUSUK    92s
+CHRONOS2_COV fx_ret:DEXSZUS    91s
+CHRONOS2_COV fx_ret:DEXCAUS    89s
+CHRONOS2_COV fx_ret:DEXUSAL    87s
+CHRONOS2_COV fx_ret:DEXMXUS    91s
+CHRONOS2_COV fx_ret:DEXKOUS    91s
+CHRONOS2_COV fx_ret:DEXSDUS    91s
+CHRONOS2_COV fx_ret:DEXNOUS    91s
+CHRONOS2_COV fx_abs:DEXUSUK    91s
+CHRONOS2_COV fx_abs:DEXSZUS    87s
+CHRONOS2_COV fx_abs:DEXCAUS    87s
+CHRONOS2_COV fx_abs:DEXUSAL    89s
+CHRONOS2_COV fx_abs:DEXMXUS    89s
+CHRONOS2_COV fx_abs:DEXKOUS    92s
+CHRONOS2_COV fx_abs:DEXSDUS    91s
+CHRONOS2_COV fx_abs:DEXNOUS    93s
+CHRONOS2_COV fx_niv:DEXUSUK    93s
+CHRONOS2_COV fx_niv:DEXSZUS    90s
+CHRONOS2_COV fx_niv:DEXCAUS    90s
+CHRONOS2_COV fx_niv:DEXUSAL    92s
+CHRONOS2_COV fx_niv:DEXMXUS    91s
+CHRONOS2_COV fx_niv:DEXKOUS    91s
+CHRONOS2_COV fx_niv:DEXSDUS    92s
+CHRONOS2_COV fx_niv:DEXNOUS    92s

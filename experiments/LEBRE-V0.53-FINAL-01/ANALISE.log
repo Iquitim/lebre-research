@@ -1,0 +1,24 @@
+# Avaliação final da v0.53 na reserva: resultado
+
+Pré-registro `PREREG_V053_FINAL.md`.
+
+Séries: 104 de 104; faltam: nenhuma.
+
+**Melhora geral (v0.53 ÷ v0.52, todas as séries): 0.955 (0.951–0.960; n = 104) → atende (limite superior < 1).**
+
+| Critério | Falhas |
+|---|---|
+| 1 | - |
+| 2 | - |
+| 4 | - |
+| 6 | - |
+| 7 | - |
+| NaN | - |
+| custo | - |
+
+Critério 7 (curtas, contra o melhor): 1.007 (0.995–1.017; n = 101). Empates exatos fora do agregado (alvo e as três previsões iguais no trecho; RUN_NOTAS.md, item 2): bdg2:chilledwater:Hog_education_Mathilda.
+Memória estimada (não medida): 85,092 B de 131,072 B (cabe).
+
+**Decisão: v0.53 PROMOVIDA** (sem piora: True; melhora clara: True; memória: True).
+
+| Família | séries (v0.52 melhor / ref. melhor / indecidível / choque) | 1 | 2 | v0.53 ÷ v0.52 (todas) | +custo máx | externas v0.53 (v0.52) |

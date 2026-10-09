@@ -1,0 +1,116 @@
+104 séries da reserva
+('camels', '12370000') ok 18s
+('camels', '13870000') ok 19s
+('camels', '24050000') ok 13s
+('camels', '24200000') ok 12s
+('camels', '24700000') ok 14s
+('camels', '33450000') ok 15s
+('camels', '34060000') ok 14s
+('camels', '34130000') ok 15s
+('camels', '55340000') ok 17s
+('camels', '55380000') ok 16s
+('camels', '56460000') ok 13s
+('camels', '56775000') ok 15s
+('camels', '56983000') ok 16s
+('camels', '58030000') ok 12s
+('camels', '58500000') ok 13s
+('camels', '58710000') ok 12s
+('camels', '58730001') ok 12s
+('camels', '61024000') ok 12s
+('camels', '61045000') ok 11s
+('camels', '61343000') ok 12s
+('camels', '64362000') ok 12s
+('camels', '65010000') ok 12s
+('camels', '70100000') ok 12s
+('camels', '70300000') ok 12s
+('camels', '70500000') ok 10s
+('camels', '71383000') ok 11s
+('camels', '74900000') ok 10s
+('camels', '84095000') ok 10s
+('camels', '84520000') ok 12s
+('camels', '86420000') ok 11s
+('bdg2', 'chilledwater:Bull_education_Antonia') ok 91s
+('bdg2', 'chilledwater:Bull_education_Stewart') ok 151s
+('bdg2', 'chilledwater:Bull_lodging_Danielle') ok 184s
+('bdg2', 'chilledwater:Fox_education_Carleen') ok 166s
+('bdg2', 'chilledwater:Fox_education_Janina') ok 86s
+('bdg2', 'chilledwater:Fox_education_Sterling') ok 147s
+('bdg2', 'chilledwater:Fox_lodging_Angla') ok 96s
+('bdg2', 'chilledwater:Fox_office_Israel') ok 98s
+('bdg2', 'chilledwater:Fox_office_Margarita') ok 167s
+('bdg2', 'chilledwater:Fox_public_Martin') ok 149s
+('bdg2', 'chilledwater:Hog_education_Mathilda') ok 104s
+('bdg2', 'chilledwater:Hog_office_Rolando') ok 125s
+('bdg2', 'chilledwater:Panther_education_Quintin') ok 151s
+('bdg2', 'hotwater:Eagle_assembly_Latrina') ok 64s
+('bdg2', 'hotwater:Eagle_education_Lino') ok 87s
+('bdg2', 'hotwater:Eagle_public_Minnie') ok 90s
+('bdg2', 'hotwater:Fox_assembly_Renna') ok 86s
+('bdg2', 'hotwater:Fox_education_Claude') ok 77s
+('bdg2', 'steam:Bull_assembly_Vanessa') ok 139s
+('bdg2', 'steam:Bull_education_Mervin') ok 138s
+('bdg2', 'steam:Bull_education_Racheal') ok 184s
+('bdg2', 'steam:Bull_education_Sebastian') ok 103s
+('bdg2', 'steam:Bull_lodging_Caren') ok 300s
+('bdg2', 'steam:Cockatoo_education_Brendan') ok 128s
+('bdg2', 'steam:Cockatoo_education_Minh') ok 218s
+('bdg2', 'steam:Eagle_education_Raul') ok 221s
+('bdg2', 'steam:Hog_education_Haywood') ok 152s
+('bdg2', 'steam:Hog_industrial_Jay') ok 130s
+('bdg2', 'steam:Hog_office_Rolando') ok 108s
+('bdg2', 'steam:Moose_education_Abbie') ok 86s
+('solar', 'Conj. Alex') ok 514s
+('solar', 'Conj. Lavras') ok 509s
+('solar', 'Conj. Calcário') ok 514s
+('solar', 'Conj. Pereira Barreto') ok 332s
+('solar', 'Conj. Sol do Sertão') ok 510s
+('solar', 'Conj. Banabuiú') ok 511s
+('solar', 'Conj. Luzia') ok 390s
+('solar', 'Conj. Belmonte') ok 521s
+('eolica', 'Conj. Quinta 138 kV') ok 536s
+('eolica', 'Conj. Serra do Mato') ok 584s
+('eolica', 'Conj. Folha Larga Sul') ok 550s
+('eolica', 'Conj. Marmeleiro 2') ok 563s
+('eolica', 'Conj. Caetés II') ok 567s
+('eolica', 'Conj. Ventos de São Vitor') ok 558s
+('eolica', 'Conj. Santa Rosália') ok 489s
+('eolica', 'Conj. Morrão') ok 450s
+('carga', 'SUDESTE') ERRO os.path.join(SNAP, "ons_carga", "CURVA_CARGA_2026.csv"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<lebre-research>\experiments\LEBRE-V0.53-FINAL-01\final_dados.py", line 98, in carga
+    c = df.pivot_table(index="din_instante", columns="nom_subsistema", values="val_cargaenergiahomwmed")[sub]
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<lebre-lab>\.venv\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<lebre-lab>\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'SUDESTE'
+
+('carga', 'SUL') ok 209s
+('carga', 'NORDESTE') ok 162s
+('carga', 'NORTE') ok 194s
+('fx_ret', 'DEXUSUK') ok 4s
+('fx_ret', 'DEXSZUS') ok 4s
+('fx_ret', 'DEXCAUS') ok 4s
+('fx_ret', 'DEXUSAL') ok 3s
+('fx_ret', 'DEXMXUS') ok 3s
+('fx_ret', 'DEXKOUS') ok 4s
+('fx_ret', 'DEXSDUS') ok 3s
+('fx_ret', 'DEXNOUS') ok 4s
+('fx_abs', 'DEXUSUK') ok 3s
+('fx_abs', 'DEXSZUS') ok 4s
+('fx_abs', 'DEXCAUS') ok 3s
+('fx_abs', 'DEXUSAL') ok 4s
+('fx_abs', 'DEXMXUS') ok 4s
+('fx_abs', 'DEXKOUS') ok 4s
+('fx_abs', 'DEXSDUS') ok 4s
+('fx_abs', 'DEXNOUS') ok 4s
+('fx_niv', 'DEXUSUK') ok 4s
+('fx_niv', 'DEXSZUS') ok 4s
+('fx_niv', 'DEXCAUS') ok 4s
+('fx_niv', 'DEXUSAL') ok 4s
+('fx_niv', 'DEXMXUS') ok 4s
+('fx_niv', 'DEXKOUS') ok 4s
+('fx_niv', 'DEXSDUS') ok 4s
+('fx_niv', 'DEXNOUS') ok 4s
