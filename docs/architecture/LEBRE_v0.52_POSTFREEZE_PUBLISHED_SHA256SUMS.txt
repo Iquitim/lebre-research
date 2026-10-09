@@ -3,11 +3,11 @@
 # (commit 5d69f3b): only lines containing the developer's home-folder path were changed (to <HOME> or /tmp); the line
 # counts are identical. The frozen manifest records the private originals; the hashes below are of the published copies.
 # Verified on 2026-10-09 against the private originals (kept offline). See docs/SECURITY_NOTE_LOCAL_PATHS.md.
-6d23b0987eaf95c6553b3f574de916ce49db7a9d9593714b18fc4d106b802c4a experiments/LEBRE-V0.52-EXT-01/mcu/build_run.sh
-ce6a987319ad00c308e6141c55f45a1c27fb74d6c5df53a2a9a9b668920d57c5 experiments/LEBRE-V0.52-EXT-01/mcu/renode_bdg2.log
-932bab128bb9279fd753430690de2fc73b57172d97d0835d5ceab36ed4b48b51 experiments/LEBRE-V0.52-EXT-01/mcu/renode_camels.log
-533182b6dd6a55cde7ac4e0c2c74743a87fed337067a03f6d56dd920cf460aba experiments/LEBRE-V0.52-EXT-01/mcu/renode_ons_vg.log
-814a6795c69e38ba7e5ff1b594458a6f6d3bbadfcf4859f8f0cc9c6fc4b36c6f experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_1.log
-0e9b246cf861ef8623b8d8c1d5929b21dc6a1677da6b543fa366c68c6b894436 experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_2.log
-1def3854f730fc0f68955e9a00413bfbb1e11c597f5d280939b0f3d5e6cfea91 experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_3.log
-b13065f7150ee22cc4d23542c2f1bda0c3023ad092473a8ad1fbcc8cae85cfbe experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_4.log
+6d23b0987eaf95c6553b3f574de916ce49db7a9d9593714b18fc4d106b802c4a *experiments/LEBRE-V0.52-EXT-01/mcu/build_run.sh
+ce6a987319ad00c308e6141c55f45a1c27fb74d6c5df53a2a9a9b668920d57c5 *experiments/LEBRE-V0.52-EXT-01/mcu/renode_bdg2.log
+932bab128bb9279fd753430690de2fc73b57172d97d0835d5ceab36ed4b48b51 *experiments/LEBRE-V0.52-EXT-01/mcu/renode_camels.log
+533182b6dd6a55cde7ac4e0c2c74743a87fed337067a03f6d56dd920cf460aba *experiments/LEBRE-V0.52-EXT-01/mcu/renode_ons_vg.log
+814a6795c69e38ba7e5ff1b594458a6f6d3bbadfcf4859f8f0cc9c6fc4b36c6f *experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_1.log
+0e9b246cf861ef8623b8d8c1d5929b21dc6a1677da6b543fa366c68c6b894436 *experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_2.log
+1def3854f730fc0f68955e9a00413bfbb1e11c597f5d280939b0f3d5e6cfea91 *experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_3.log
+b13065f7150ee22cc4d23542c2f1bda0c3023ad092473a8ad1fbcc8cae85cfbe *experiments/LEBRE-V0.52-EXT-01/mcu/renode_r3_4.log
