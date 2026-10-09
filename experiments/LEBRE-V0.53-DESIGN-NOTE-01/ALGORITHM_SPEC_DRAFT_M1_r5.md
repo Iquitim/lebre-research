@@ -28,3 +28,10 @@
 1. F6 em B03, B07, VB07 e XB07 (fronteira do E14, teto 2,5 vezes), com a M2 escolhida na releitura E16c.
 2. Critérios da M2 (régua por decidibilidade com o adendo 3) com M1 + M2 em todas as famílias, C05 incluída; NaN = falha.
 3. Custo reportado.
+
+## 3. Resultado (E20, 09/10/2026): atende
+
+LEBRE Lab, `analises/E20_RESULTADO.md` e `E20_ALVO_RESULTADO.md`, com a M2 Q2 e a régua do adendo 3. F6: B03 1,365 (meta
+1,652), B07 1,020 (1,054), VB07 1,053 (1,056; margem pequena), XB07 1,044 (1,061); custo 2,0-2,2 vezes a v0.52 nessas
+famílias. Critérios da M2 com M1 + M2: atende nas 64 famílias, C05 incluída; nenhum NaN. **Segue para a validação 5 com a
+Q2.** Custo da v0.53 por série: mediana 2,28 e máximo 3,78 vezes a v0.52 (tensão para o pré-registro e a M5).
