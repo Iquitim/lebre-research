@@ -496,3 +496,54 @@ def test_m1_r2_limita_o_especialista_e_usa_ate_5_entradas():
             assert abs(p.e - m._L52) <= B * (1 + 1e-12)
         m.observe(float(y[t]))
     assert len(m.precisao.sel) == 5 and len(m.precisao.w) == 28
+
+
+def test_q_normaliza_pelo_maior_erro_e_aguenta_um_pico():
+    """Candidata Q: perdas do Prod em [0, 1] (normalizadas pelo maior erro já visto); um pico isolado não gera NaN."""
+    rng = np.random.default_rng(21); T = 3000
+    X = rng.standard_normal((T, 2)); y = np.cumsum(0.1 * rng.standard_normal(T)) + X[:, 0]
+    y[1500] = 1e6                                                     # valor impossível isolado
+    m = Lebre053(2, referencia="persistencia", saida="prod_q")
+    vistos = []
+    orig = m.agregador.atualizar
+    m.agregador.atualizar = lambda fb, fa: (vistos.append((fb, fa)), orig(fb, fa))[1]
+    for t in range(T):
+        assert math.isfinite(m.predict(X[t]).value)
+        m.observe(float(y[t]))
+    assert vistos and all(0.0 <= a <= 1.0 and 0.0 <= b <= 1.0 for a, b in vistos)
+    assert m._Nq >= (1e6 - 100) ** 2 * 0.5
+
+
+def test_q_igual_a_p_fora_do_prod():
+    """Q e P têm a mesma v0.52, a mesma referência e os mesmos subagregadores D e M (só o Prod muda)."""
+    rng = np.random.default_rng(22); T = 1500
+    X = rng.standard_normal((T, 2)); y = np.cumsum(rng.standard_normal(T)) + 0.5 * X[:, 1]
+    p = Lebre053(2, referencia="persistencia", saida="prod"); q = Lebre053(2, referencia="persistencia", saida="prod_q")
+    for t in range(T):
+        p.predict(X[t]); q.predict(X[t])
+        ig = lambda u, v: (u == v) or (u != u and v != v)
+        assert ig(p._L, q._L) and ig(p._R, q._R) and (p._d is None or (p._d == q._d and p._m == q._m))
+        p.observe(float(y[t])); q.observe(float(y[t]))
+
+
+def test_m1_r3_regressao_conjunta_a_cada_passo():
+    """Rascunho 3: k = 3 + min(d, 5) sem bandas; RLS atualizada a cada alvo observado; num ARX com entrada atual o
+    especialista ganha peso e a combinação L' não piora a v0.52 (que aqui já chega perto do ruído); custo do Prod contado."""
+    rng = np.random.default_rng(23); T = 8000
+    X = rng.standard_normal((T, 3)); y = np.zeros(T)
+    for t in range(2, T):
+        y[t] = 0.7 * y[t - 1] - 0.3 * y[t - 2] + 1.2 * X[t, 0] - 0.8 * X[t, 2] + 0.1 * rng.standard_normal()
+    m = Lebre053(3, referencia="persistencia", saida="prod_q", precisao="r3"); ref = lebre052.Lebre(3)
+    e1 = e2 = 0.0; n0 = None
+    for t in range(T):
+        m.predict(X[t]); f = ref.predict(X[t]).value
+        if t > 4000:
+            e1 += (y[t] - m._L) ** 2; e2 += (y[t] - f) ** 2
+        if t == 3000:
+            n0 = m.precisao.n_rls
+        m.observe(float(y[t])); ref.observe(float(y[t]))
+    p = m.precisao
+    assert len(p.w) == 3 + 3 and p.BANDAS == ((0, 0),)
+    assert p.n_rls - n0 >= 4990                                       # uma atualização por passo (sem trocas de conjunto)
+    assert p.prod.s() > 0.5 and e1 <= 1.0 * e2
+    assert p.fp > 0 and p.N > 0

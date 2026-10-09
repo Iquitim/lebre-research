@@ -33,3 +33,9 @@ estrago em Y-B01 Horizonte) e diagnósticos do LEBRE Lab:
 3. **Custo** reportado; teto da v0.53 como um todo no pré-registro final.
 
 Se atender, a M1 r3 e a M2 Q vão juntas para a validação 5.
+
+## 3. Falha de contagem encontrada ao implementar (09/10/2026)
+
+Nos rascunhos 1 e 2, o custo do Prod do especialista (~31 FP por passo) não era somado em `precisao.py`; os custos
+reportados no E11, no E12 e na validação 4 estão subestimados nesse valor. A conclusão de F6 em Y-B03 não muda (1,94 vez
+passaria a ~1,98, abaixo de 2,5). No rascunho 3 o custo do Prod e o da normalização são somados.

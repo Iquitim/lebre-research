@@ -9,7 +9,7 @@ import math
 import numpy as np
 
 from ._core import CLIP_K, EVERY, LAM, N_MIN, T_MAX
-from .agregacao import ProdAnytime
+from .agregacao import FP_PROD_PASSO, ProdAnytime
 
 K_PRECISAO = 3
 LAMBDA_RLS, DELTA_RLS = 0.999, 100.0          # os do comparador linear online do LEBRE Lab (declarados, não derivados)
@@ -123,6 +123,8 @@ M_MAX_M1 = 8
 
 
 class EspecialistaDefasagens(EspecialistaPrecisao):
+    BANDAS = BANDAS_M1
+
     def __init__(self, d):
         super().__init__(d)
         self.buf = deque(maxlen=16)
@@ -142,7 +144,7 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
             self.sel = sel
             self.mu = self.m[0][sel].copy(); self.sd = np.sqrt(np.maximum(vx[sel], 1e-24))
             self.muy = self.my; self.sdy = math.sqrt(max(vy, 1e-24))
-            k = 3 + len(BANDAS_M1) * len(sel)
+            k = 3 + len(self.BANDAS) * len(sel)
             self.w = np.zeros(k); self.P = np.eye(k) * DELTA_RLS; self.n_rls = 0
             self.prod = ProdAnytime()
         self.n_sel = self.n_obs
@@ -157,7 +159,7 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
             return L
         H = np.array(self.buf)[::-1][:, self.sel]
         H = (H - self.mu) / self.sd
-        bandas = [H[a:b + 1].mean(0) if len(H) > a else np.zeros(len(self.sel)) for a, b in BANDAS_M1]
+        bandas = [H[a:b + 1].mean(0) if len(H) > a else np.zeros(len(self.sel)) for a, b in self.BANDAS]
         ys = list(self.yobs)[::-1] + [self.muy] * (2 - len(self.yobs))
         z = np.concatenate([[1.0], (np.array(ys[:2]) - self.muy) / self.sdy, np.ravel(np.array(bandas).T)])
         self.z = z
@@ -210,3 +212,46 @@ class EspecialistaDefasagensR2(EspecialistaDefasagens):
     def observar(self, y, L52, aprende, piso):
         super().observar(y, L52, aprende, piso)
         self._piso = piso
+
+
+# ------------------------------------------------------------------------------------------ rascunho 3 da M1
+# ALGORITHM_SPEC_DRAFT_M1_r3.md: z = [1, y_{t-1}, y_{t-2}, x_t das m = min(d, 5) entradas escolhidas] (sem bandas), RLS a
+# cada passo com alvo observado; previsão recortada como no rascunho 2; Prod com as perdas normalizadas pelo maior erro
+# quadrático já visto (a mesma mudança da candidata Q da M2), em vez do recorte em 2σ. Custo do Prod contado (os rascunhos
+# 1 e 2 não o somavam: falha de contagem declarada na especificação do rascunho 3).
+FP_NORMALIZACAO_R3 = 3
+
+
+class EspecialistaConjuntoR3(EspecialistaDefasagensR2):
+    BANDAS = ((0, 0),)
+
+    def __init__(self, d):
+        super().__init__(d)
+        self.N = 0.0
+
+    def _selecionar(self):
+        antigo = self.prod
+        super()._selecionar()
+        if self.prod is not antigo:                              # especialista novo: o Prod e a escala recomeçam
+            self.N = 0.0
+
+    def observar(self, y, L52, aprende, piso):
+        e52 = (y - L52) ** 2
+        if self.e is not None:
+            le = (y - self.e) ** 2
+            if math.isfinite(e52) and math.isfinite(le):
+                self.N = max(self.N, e52, le)
+                if self.N > 0:
+                    self.prod.atualizar(e52 / self.N, le / self.N)
+            self.fp += FP_PROD_PASSO + FP_NORMALIZACAO_R3
+        self.e2_52 = e52 if self.e2_52 is None else self.e2_52 + (1 - LAM) * (e52 - self.e2_52)
+        self._piso = piso
+        if aprende:
+            self.n_obs += 1
+            if self.n_obs % EVERY == 0:
+                self._triagem(self._x, y)
+            if self.z is not None:
+                self._rls(self.z, y)
+            if self.n_obs >= N_MIN and (self.sel is None or self.n_obs - self.n_sel >= T_MAX):
+                self._selecionar()
+        self.yobs.append(float(y))
