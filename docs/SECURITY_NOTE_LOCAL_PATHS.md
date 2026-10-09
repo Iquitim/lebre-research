@@ -30,3 +30,19 @@ consta de manifesto de congelamento (v0.1, v0.51, v0.51-r1 e v0.52 conferem inte
 `LEBRE_v0.52_POSTFREEZE_SHA256SUMS.txt` desde o commit inicial do repositório** (`5d69f3b`): o conteúdo publicado é igual
 ao do git, mas diferente do registrado no manifesto. O manifesto da especificação v0.3.2 usa caminhos relativos a outra
 pasta (`pdf/...`) e não pode ser conferido a partir da raiz. Os dois casos ficam para investigação separada.
+
+## Resolução dos dois achados (09/10/2026, investigação pedida pelo responsável pelo projeto)
+
+1. **Os 8 arquivos da v0.52 que não conferiam com o manifesto pós-congelamento: explicado, sem perda de integridade.** Antes
+   da primeira publicação (commit `5d69f3b`), 34 arquivos foram sanitizados para retirar o caminho da pasta de usuário do
+   desenvolvedor (trocado por `<HOME>`, `/tmp`, `<site-packages>` ou `os.path.expanduser("~")`); os originais ficaram
+   guardados fora do repositório. O manifesto `LEBRE_v0.52_POSTFREEZE_SHA256SUMS.txt` registrou os **originais**; os 8 que
+   constam dele foram publicados sanitizados. Verificação de 09/10, contra os originais guardados: (a) os 8 originais
+   conferem exatamente com o manifesto congelado; (b) nos 34 arquivos sanitizados, o número de linhas é idêntico e **toda
+   linha alterada continha, no original, o caminho da pasta de usuário**; nenhuma outra mudança. Os hashes das cópias
+   publicadas estão em `docs/architecture/LEBRE_v0.52_POSTFREEZE_PUBLISHED_SHA256SUMS.txt` (complemento; o manifesto
+   congelado não foi alterado).
+2. **O manifesto da especificação v0.3.2: íntegro.** Os caminhos são relativos a `docs/architecture/`; conferido a partir
+   dessa pasta (`cd docs/architecture && sha256sum -c LEBRE_v0.3.2_RESEARCH_SPEC_SHA256SUMS.txt`), os 7 arquivos conferem.
+   A afirmação anterior desta nota ("não pode ser conferido a partir da raiz") estava certa, mas incompleta: bastava rodar
+   da pasta certa.
