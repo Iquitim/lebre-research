@@ -48,3 +48,10 @@ robusta a caudas pesadas, sabendo que isso reduz o ganho nas séries em que L é
    tipo Catoni, Wang e Ramdas), em vez do recorte. Prever no desenho o custo dessa robustez nas séries em que L é melhor.
 3. **Critério 1 da M2 nas séries dominadas por choques:** decisão do responsável pelo projeto, **antes** de qualquer nova
    medição (ver seção 3).
+
+## 5. Decisão (09/10/2026)
+
+O responsável pelo projeto escolheu a saída por decidibilidade para o critério 1: séries em que o maior passo isolado é
+mais de 5% do erro total da referência ficam "indecidíveis" no critério 1, só em medições futuras (adendo em
+`M2_CANDIDATA_D.md`). As direções 1 e 2 da seção 4 continuam necessárias: Portland (maior passo 0,26%) falhou sem choque
+nenhum.

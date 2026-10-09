@@ -59,3 +59,15 @@ para aprendê-la e o déficit dessa fase prende os pesos na referência até ~2.
 (dificuldade D1). **Passa em todas as outras 9 famílias**, inclusive W-C05 (grupos do IPCA, análoga a C05: 1,004, limite
 superior 1,019), as negativas (1,000) e as séries curtas (1,000, limite superior 1,005). Pela regra: falha declarada,
 nada ajustado; a validação 2 está gasta.
+
+## Adendo de 09/10/2026: séries dominadas por um choque (decisão do responsável pelo projeto)
+
+Vale **só para medições futuras** (validação 5 e reserva final), e foi decidido **depois** de ver a validação 4 (em que a
+regra teria retirado o baht e o dólar de Singapura de Y-C01). Base: PRA-10 (`PRA_10_ESCALA.md`, seção 3): com um choque
+imprevisível que responde por grande parte do erro, nenhum combinador online tem garantia de excesso <= 1% contra a
+referência.
+
+**Regra:** antes de rodar a LEBRE, calcula-se, só com a referência R, a fração do erro quadrático total de R no período de
+avaliação que vem do maior passo isolado. Se for **maior que 5%**, a série é **"indecidível" no critério 1**: reportada,
+sem aprovar nem reprovar. Os critérios 2, 4, 6 e 7 não mudam. No desenvolvimento e nas validações 1 a 4, a regra atinge 32
+séries (LEBRE Lab, `diagnosticos/E15_RESULTADO.md`).
