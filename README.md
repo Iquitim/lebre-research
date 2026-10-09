@@ -6,7 +6,7 @@ This repository answers one question: **how were the LEBRE results obtained?** I
 
 > **LEBRE** (*Lifecycle-governed Evidence-Based Resource Evolution*) is an online, one-step-ahead forecaster for time series with inputs. It runs within a budget of a few hundred floating-point operations per step. Each structural change is accepted by an anytime-valid sequential test (e-process) of predictive improvement.
 >
-> The current documented state is **LEBRE v0.52, specification revision 1 ("v0.52-r1")**. It is a frozen research version, **not promoted**, with declared scope limits.
+> The current state is **LEBRE v0.53**, **promoted** on 2026-10-09 by a pre-registered binding rule in a single evaluation on data reserved before any v0.53 code (no harm in any family; v0.53/v0.52 = 0.955, 95% CI 0.951–0.960, on 104 reserved series). It has declared scope limits: see `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`. The specification documents below still describe **v0.52-r1** (frozen, not promoted); v0.53 adds two components on top of it, unchanged.
 
 A reusable library (`lebre`) and a paper are separate, later deliverables. They will point back to this repository.
 
@@ -36,7 +36,7 @@ Moving files would break both. Organisation is therefore provided by the indexes
 
 | Path | Content |
 |---|---|
-| `experiments/<STAGE-ID>/` | One folder per experiment or stage (86). Each has its scripts, pre-registration (when applicable), logs, result tables and a report. The v0.52 line is `LEBRE-V0.52-*` and `PRA-0[45]`. |
+| `experiments/<STAGE-ID>/` | One folder per experiment or stage (86). Each has its scripts, pre-registration (when applicable), logs, result tables and a report. The v0.52 line is `LEBRE-V0.52-*` and `PRA-0[45]`; the v0.53 line is `LEBRE-V0.53-*` (prototype, design notes and literature audits PRA-06 to PRA-10, reserve, final evaluation). |
 | `experiments/LEBRE-V0.52-PROTO-01/` | **Python reference implementation** of v0.52 (`lebre_v052h.py`, `change_engine.py`, `lebre_v052.py`), plus data loader, comparators and development log. Frozen. |
 | `experiments/LEBRE-V0.52-EXT-01/lebre_c/` | **C99 port** (float64/float32) and its host build. `mcu/` holds the Cortex-M4F firmware and the Renode simulation scripts. |
 | `docs/research/` | Seed registry and the manifest of artifacts kept out of git. |
@@ -61,6 +61,10 @@ The following are listed with size and SHA-256 in [`docs/research/ARTIFACTS_MANI
 In total, 802 files and about 3 GB. The experiment outputs are published as a separate archive, [doi:10.5281/zenodo.23082357](https://doi.org/10.5281/zenodo.23082357) (eight zip parts `lebre-research-v0.52-r1-artifacts-part*.zip`, built by `scripts/make_artifact_archive.py`; contents in [`docs/research/ARCHIVE_CONTENTS.tsv`](docs/research/ARCHIVE_CONTENTS.tsv)). Raw data are downloaded from the original publishers, and toolchains are installed as in `environment/TOOLCHAIN.md`. See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), section 0.
 
 ## Status and honesty notes
+
+**v0.53** (freeze record, §5): it costs more than v0.52 in every series (median ~+540 FP per step, ~2.3×) and is identical to v0.52 in solar, wind and load; F6 evidence on new data comes from one validation; the memory figure is an estimate; development and validations were run in a local laboratory repository not yet published; no component is original.
+
+**v0.52-r1:**
 
 - Results cover two domains (hydrology, buildings) with 1–5 inputs and one-step forecasting.
 - The declared cost contract was **not met** (+3.7% mean, +2.0% peak).

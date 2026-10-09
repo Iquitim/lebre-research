@@ -1,0 +1,83 @@
+# ==============================================================================
+# LEBRE v0.53 — FREEZE MANIFEST
+# Stage: LEBRE-V0.53-FREEZE-01
+# Date: 2026-10-09
+# ==============================================================================
+
+architecture:
+  name: LEBRE
+  expansion: Lifecycle-governed Evidence-Based Resource Evolution
+  version: "0.53"
+  variant: consolidation (M1 draft 5 + M2 candidate Q2 over unchanged v0.52)
+  status: PROMOTED_RESEARCH_VERSION_WITH_SCOPE_LIMITS
+  promoted_by: pre-registered binding rule (experiments/LEBRE-V0.53-FINAL-01/PREREG_V053_FINAL.md), single run on the v0.53 reserve
+  canonical_reference: "0.1"            # unchanged; 23/23 frozen files verified 2026-10-09
+  frozen_research_versions: {"0.51": 52/52 verified, "0.52": 650/650 verified}
+  principle: deliver well under a minimal compute budget without catastrophic failures; large models are ceilings
+  components: [v052_base_lebre_0_1_0_unchanged, m1_lag_band_rls_expert_adahedge_squared_error_shadow_entry,
+               m2_trivial_reference_prod_anytime_D_adahedge_M_one_way_switch_forgetting_max_normalization]
+
+promoted_code:
+  repository: lebre-research
+  commit: 4a2620e
+  folder: experiments/LEBRE-V0.53-PROTO-01   # unchanged since 4a2620e
+  base_copies_of_lebre_0_1_0: lebre053/{_core,_engine,_memory,_model052}.py   # verified against SHA256_COPIAS.txt
+  tests: 104 passing
+  readme_note: the prototype README is a development log and does not list the final choices; this manifest and the freeze record do
+
+canonical_configuration:
+  call: Lebre053(d, season, season2, referencia, porta=True, eps_porta=0.002, recriar=True, alpha_porta=0.01, observar_quarentena_entradas=True, saida="prod_q2", precisao="r5")
+  reference_rule: {zero: financial returns, sazonal: declared cycle, persistencia: no cycle}
+  m1: {spec: ALGORITHM_SPEC_DRAFT_M1_r5.md, inputs: "min(d, 5) by abs correlation", bands: "[0],[1],[2-3],[4-7],[8-15]",
+       k: "3 + 5m", rls: {lambda: 0.999, delta: 100, every: 8}, clip: "L +- 2 max(sigma_L, floor)",
+       combination: AdaHedge on raw squared error, shadow_updates: 100, reselection: {first_after: 100, every: 5000}}
+  m2: {spec: M2_CANDIDATA_Q2.md, D: AdaHedge on squared error (reference defined), M: one-way switch R->L hazard 1/t,
+       combiner: anytime (A,B)-Prod, loss_normalization: "N_t = max(losses, 0.99 N_{t-1})", M_underflow_fallback: log scale}
+  reproduction_check: identical MSE on 813/813 development and validation-5 series (E22) and in the final run
+
+integrity:
+  checksums_file: docs/architecture/LEBRE_v0.53_SHA256SUMS.txt
+  checksums_file_sha256: 412ab60edee92e8aa116ef7c76296b616ca0a08636693b464e89495cafb8175b
+  files_hashed: 177
+  all_verified_at_freeze: true
+  scope_of_checksums: all tracked files in experiments/LEBRE-V0.53-{PROTO-01,DESIGN-NOTE-01,DATA-01,FINAL-01}
+  model_code_sha256:
+    model053.py: 509eae52c663bd2316d5c0a807a4c5b89399845a5c860b476d4edc773951464d
+    precisao.py: 6106a03d75e8d15ecf464819507f8095cd3823c1f40fe6e655161c031156ffe1
+    agregacao.py: 532cbdfb6307e5d444a44846c50e679a28651c6c71a60d17e4e781a0478b06bd
+  reserve_split_sha256: c2e983c6c1628764ffcd76592c88ce52fbc2ae9788442445f9f3eaf546012935   # SPLIT_V053.json, fixed 2026-10-05
+  reserve_snapshot_files_verified: 55/55
+  prereg_final_sha256: 8db2bdab8928a0452f39fccfc741c9a53259f07badfeee673040922dbca2093b   # as approved (approval line included)
+  freeze_record_sha256: e526a0e511325d10a72bf443db4ab53936832682491a1019cbd67903c69d2e32
+
+evidence:
+  final_preregistered: {series: 104, families: [camels_br, bdg2, solar, wind, load_2026, fx_returns, fx_abs, fx_levels],
+                        no_harm_any_family: true, v053_over_v052: 0.955, ci95: [0.951, 0.960],
+                        by_family: {camels: 0.879, bdg2: 0.993, solar: 1.000, wind: 1.000, load: 1.000,
+                                    fx_returns: 0.966, fx_abs: 1.000, fx_levels: 0.952},
+                        short_series_vs_best: [1.007, 0.995, 1.017], nan_forecasts: 0, max_cost_increment_fp: 918,
+                        memory_estimate_bytes: 85092, memory_measured: false,
+                        chronos2_ratio_v053: {camels: 0.885, bdg2: 1.248, solar: 1.237, wind: 1.051, load: 1.433,
+                                              fx_returns: 0.954, fx_abs: 0.983, fx_levels: 0.881},
+                        sarimax_x_over_v053: {camels: 1.134, bdg2: 1.034, solar: 1.096, wind: 1.049, load: 0.968,
+                                              fx_returns_addendum: 1.123, fx_abs_addendum: 1.058, fx_levels_addendum: 1.065},
+                        run_notes: [ons_2026_subsystem_renamed_read_by_code, degenerate_exact_tie_short_series]}
+  validation_5: {series: 43, f6: {beijing_air_quality: [1.118, meta_1.410], tides: [0.925, meta_1.068]}, m2_criteria: met,
+                 errata: solar_wind_load_built_with_30h_cycle_scope_restricted}
+  development: {families: 64, m1_designs: 6, m2_configurations: 14, cost_identity_check: 813/813}
+  cost_audited: {increment_fp_median: 538, increment_fp_max: 974, ratio_median: 2.32, ratio_max: 3.93,
+                 ceiling: "increment <= 1100 FP per series (decided before the final run)"}
+
+scope_limits:
+  - extra_cost_without_gain_in_solar_wind_load (M1 weight 0; v0.53 identical to v0.52 there)
+  - preliminary_1_25x_cost_target_incompatible_replaced_by_absolute_1100fp_increment
+  - no_F6_family_in_final_reserve; F6_fresh_evidence_from_validation_5_only
+  - ruler_addenda_1_to_3_decided_during_development
+  - season_errata_validations_4_5; two_documented_run_fixes
+  - memory_estimated_not_measured; no_C_port
+  - ci_assumes_independent_series
+  - no_component_original_contribution_is_integration_and_preregistered_evidence
+  - development_chain_in_LEBRE_Lab_local_unpublished
+deferred_to_v054: [M4_removals_that_happen, M5_cost_proportional_to_use_and_surprise, M6_cycle_as_hypothesis]
+unused_unseen_data: {camels_br_permutation_positions: "140+", bdg2_permutation_positions: "115+", ons_plants: "eligible not yet used",
+                     noaa_and_beijing_stations: "not yet used", ons_load: "from 2026-10", fx_floating_outside_reserve: nearly_exhausted}

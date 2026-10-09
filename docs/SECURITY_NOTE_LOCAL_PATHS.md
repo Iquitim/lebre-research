@@ -46,3 +46,13 @@ pasta (`pdf/...`) e não pode ser conferido a partir da raiz. Os dois casos fica
    dessa pasta (`cd docs/architecture && sha256sum -c LEBRE_v0.3.2_RESEARCH_SPEC_SHA256SUMS.txt`), os 7 arquivos conferem.
    A afirmação anterior desta nota ("não pode ser conferido a partir da raiz") estava certa, mas incompleta: bastava rodar
    da pasta certa.
+
+## Correção desta nota (09/10/2026, no mesmo dia)
+
+A sanitização da publicação **já estava documentada e verificável** desde o primeiro commit:
+`docs/architecture/SANITIZATION_RECORD.tsv` liga o hash original ao sanitizado de cada arquivo, e
+`scripts/verify_integrity.py` (o verificador oficial do repositório) aceita esses casos como `SANITIZED`. Os "achados"
+acima vieram de uma conferência com `sha256sum -c` puro, que não conhece esse registro; não eram pendências. O manifesto
+complementar `LEBRE_v0.52_POSTFREEZE_PUBLISHED_SHA256SUMS.txt`, criado mais cedo, era redundante e foi removido. Estado
+verificado com o verificador oficial: **PASS**, sem nenhuma diferença inesperada (v0.1, v0.3.2, v0.51, v0.51-r1, v0.52,
+v0.52 pós-congelamento com 8 `SANITIZED`, especificações da v0.52 e v0.53).
