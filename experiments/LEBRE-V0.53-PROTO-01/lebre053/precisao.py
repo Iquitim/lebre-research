@@ -89,7 +89,11 @@ class EspecialistaPrecisao:
         g = Pz / (LAMBDA_RLS + z @ Pz)
         self.w = self.w + g * (y - self.w @ z)
         P = (self.P - np.outer(g, Pz)) / LAMBDA_RLS
-        self.P = (P + P.T) / 2
+        iu = np.triu_indices(len(z), 1)                       # M5: cada par (i, j) somado uma vez; a + b == b + a em ponto
+        s = (P[iu] + P.T[iu]) / 2                             # flutuante e (a + a)/2 == a, então é igual a (P + P.T)/2 bit a bit
+        P[iu] = s
+        P[(iu[1], iu[0])] = s
+        self.P = P
         if not np.isfinite(self.P).all() or np.diag(self.P).min() <= 0:
             self.P = np.eye(len(z)) * DELTA_RLS
         self.n_rls += 1
@@ -128,6 +132,7 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
     def __init__(self, d):
         super().__init__(d)
         self.buf = deque(maxlen=16)
+        self.bufz = deque(maxlen=16)                          # M5: as mesmas linhas, já padronizadas (só as entradas escolhidas)
         self.yobs = deque(maxlen=2)
 
     def _k_sel(self):
@@ -147,6 +152,8 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
             k = 3 + len(self.BANDAS) * len(sel)
             self.w = np.zeros(k); self.P = np.eye(k) * DELTA_RLS; self.n_rls = 0
             self.prod = ProdAnytime()
+            self.bufz = deque(((r[sel] - self.mu) / self.sd for r in self.buf), maxlen=16)
+            self.fp += 2 * len(self.buf) * len(sel)            # padronização do buffer com o novo conjunto
         self.n_sel = self.n_obs
         self.fp += 6 * self.d
 
@@ -157,14 +164,16 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
         if self.sel is None:
             self.z = None; self.e = None
             return L
-        H = np.array(self.buf)[::-1][:, self.sel]
-        H = (H - self.mu) / self.sd
+        self.bufz.append((x[self.sel] - self.mu) / self.sd)   # M5: só a linha nova (os mesmos valores que padronizar tudo)
+        H = np.asfortranarray(list(reversed(self.bufz)))     # mais nova primeiro, em ordem de coluna como o array de antes
+                                                              # (a ordem de soma das médias depende do arranjo na memória)
         bandas = [H[a:b + 1].mean(0) if len(H) > a else np.zeros(len(self.sel)) for a, b in self.BANDAS]
         ys = list(self.yobs)[::-1] + [self.muy] * (2 - len(self.yobs))
         z = np.concatenate([[1.0], (np.array(ys[:2]) - self.muy) / self.sdy, np.ravel(np.array(bandas).T)])
         self.z = z
         k = len(z)
-        self.fp += 2 * k + 10 * len(self.sel)
+        self.fp += 2 * k + 18 * len(self.sel) + 4             # M5 (auditoria): previsão 2k; linha nova 2m; médias das bandas
+                                                              # 16m (11m somas e 5m divisões); defasagens do alvo 4
         if self.n_rls < k:
             self.e = None
             return L
@@ -175,7 +184,8 @@ class EspecialistaDefasagens(EspecialistaPrecisao):
     def _rls(self, z, y):
         k = len(z)
         super()._rls(z, y)
-        self.fp += 6 * k * k + 4 * k - FP_RLS_ATUALIZACAO     # custo real da RLS com k variáveis
+        self.fp += 6 * k * k + 5 * k - FP_RLS_ATUALIZACAO     # M5 (auditoria): Pz 2k² - k; z·Pz, ganho e pesos ~7k;
+                                                              # P - g Pzᵀ e divisão 3k²; simetria (k² - k)
 
     def observar(self, y, L52, aprende, piso):
         super().observar(y, L52, aprende, piso)
