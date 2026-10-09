@@ -62,7 +62,7 @@ In total, 802 files and about 3 GB. The experiment outputs are published as a se
 
 ## Status and honesty notes
 
-**v0.53** (freeze record, §5): it costs more than v0.52 in every series (median ~+540 FP per step, ~2.3×) and is identical to v0.52 in solar, wind and load; F6 evidence on new data comes from one validation; the memory figure is an estimate; development and validations were run in a local laboratory repository not yet published; no component is original.
+**v0.53** (freeze record, §5): it costs more than v0.52 in every series (median ~+540 FP per step, ~2.3×) and is identical to v0.52 in solar, wind and load; F6 evidence on new data comes from one validation; the memory figure is an estimate; development and validations were run in the LEBRE Lab, published at https://github.com/Iquitim/lebre-lab (freeze addendum 01); no component is original.
 
 **v0.52-r1:**
 
