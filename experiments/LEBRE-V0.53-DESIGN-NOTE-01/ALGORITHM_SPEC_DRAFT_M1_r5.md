@@ -35,3 +35,10 @@ LEBRE Lab, `analises/E20_RESULTADO.md` e `E20_ALVO_RESULTADO.md`, com a M2 Q2 e 
 1,652), B07 1,020 (1,054), VB07 1,053 (1,056; margem pequena), XB07 1,044 (1,061); custo 2,0-2,2 vezes a v0.52 nessas
 famílias. Critérios da M2 com M1 + M2: atende nas 64 famílias, C05 incluída; nenhum NaN. **Segue para a validação 5 com a
 Q2.** Custo da v0.53 por série: mediana 2,28 e máximo 3,78 vezes a v0.52 (tensão para o pré-registro e a M5).
+
+## 4. Validação 5 (09/10/2026): confirmado
+
+LEBRE Lab, `analises/M1_VAL5_RESULTADO.md` e `M1_VAL5_ALVO_RESULTADO.md` (43 séries novas, congeladas; medição única; código
+`bca5dac` numa cópia fixa). F6: Z-B03 (Pequim, Changping) 1,118 contra meta 1,410 (v0.52 1,169); Z-B07 (6 marés novas) 0,925
+contra 1,068 (v0.52 1,017). Critérios da M2 com M1 + M2: atende em todas as famílias, Z-C05 incluída; nenhum NaN. Custo por
+série: mediana 2,13 vezes a v0.52 (1,39 a 3,24), questão do pré-registro.

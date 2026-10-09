@@ -27,3 +27,8 @@ commit `fc71880` diz "104 tests"; são 103.)
 LEBRE Lab, `analises/E16C_RESULTADO.md`. Com o limite do choque dependente do tamanho do trecho (adendo 3), **Q e Q2 atendem
 a todos os critérios nas 64 famílias**. Pela regra da seção 2, **a candidata da M2 passa a ser a Q2**. Vai para a validação
 5 junto com a M1 que ficar.
+
+## 5. Validação 5 (09/10/2026): confirmada com a M1 rascunho 5
+
+LEBRE Lab, `analises/M1_VAL5_RESULTADO.md`: todos os critérios da M2 (régua com o adendo 3) em todas as famílias Z, Z-C05
+incluída, sem NaN.

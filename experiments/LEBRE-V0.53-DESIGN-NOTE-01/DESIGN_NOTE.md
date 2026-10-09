@@ -60,6 +60,12 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
 
 ### M1. Especialista de precisão (F6) — prioridade 1
 
+> **Atualização 09/10/2026 (confirmada na validação 5, junto com a M2):** depois do diagnóstico das falhas da validação 4
+> (E13 a E19, LEBRE Lab), a M1 ficou como o especialista do rascunho 2 (AR2 + bandas de defasagem de até 5 entradas, RLS a
+> cada 8 passos) combinado com a v0.52 por **AdaHedge no erro quadrático** (rascunho 5, `ALGORITHM_SPEC_DRAFT_M1_r5.md`).
+> F6 acontece fora de B03 (as três famílias de maré, E14) e foi atendida nas quatro famílias de desenvolvimento e nas duas
+> da validação 5. Custo por série: mediana ~2,1-2,3 vezes a v0.52 (tensão para o pré-registro e a M5).
+
 > **Atualização 08/10/2026 (validação 4, LEBRE Lab `analises/M1_VAL4_RESULTADO.md`):** o rascunho 2
 > (`ALGORITHM_SPEC_DRAFT_M1_r2.md`), aprovado no desenvolvimento (E12), **não é confirmado**. Em Y-B03 (qualidade do ar de
 > Pequim, dados novos) a meta de fronteira é atendida pela regra, mas sem contribuição da M1 (1,221 contra 1,225 da v0.52
@@ -79,6 +85,12 @@ novos isoladamente (ver seção 6); o que se propõe é integrá-los ao mesmo re
   B01 e B02.
 
 ### M2. Referência trivial como ponto de partida (F8) — prioridade 2
+
+> **Atualização 09/10/2026 (confirmada na validação 5):** candidata **Q2** (`M2_CANDIDATA_Q2.md`): a P com as perdas do
+> Prod normalizadas pelo maior erro com esquecimento, sem o recorte em 2σ. Régua por decidibilidade com três adendos
+> decididos pelo responsável pelo projeto depois de ver dados (séries dominadas por um choque, com limite dependente do
+> tamanho do trecho, ficam indecidíveis nos critérios 1 e 2; `M2_CANDIDATA_D.md`). Correção de um NaN no subagregador M
+> (nunca disparado em medições registradas; auditoria E18).
 
 > **Atualização 08/10/2026 (validação 4: deixa de estar resolvida):** sem a M1, a candidata P falha no critério 1 em
 > Y-C01 (câmbio 1990-1999: 1,007, limite superior 1,016 > 1,01; baht 1,024) e em Y-B07 (uma série, Portland: limite
