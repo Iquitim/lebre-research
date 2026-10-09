@@ -175,10 +175,10 @@ The failure is NOT due to a sub-optimal threshold or decision rule. Univariate s
 ---
 
 ## 7. Artifact Manifest
-- Configuration: [`config.json`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/config.json)
-- Master Runner: [`run_separability_diagnostic.py`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/run_separability_diagnostic.py)
-- Diagnostic Library: [`src/diagnostics/candidate_separability.py`](file:///d:/Projetos/Codinome%20Lebre/src/diagnostics/candidate_separability.py)
-- Unit Tests: [`tests/test_exp_0007.py`](file:///d:/Projetos/Codinome%20Lebre/tests/test_exp_0007.py) (5/5 passed, 52/52 repo-wide passed)
-- Raw Snapshots: [`candidate_snapshots.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/candidate_snapshots.csv) (17,990 rows)
-- Metrics CSVs: [`separability_by_n.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/separability_by_n.csv), [`precision_at_k.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/precision_at_k.csv), [`temporal_stratification.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/temporal_stratification.csv), [`residual_stratification.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/residual_stratification.csv), [`rank_stability.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/rank_stability.csv), [`counterfactual_elevated_precision.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/counterfactual_elevated_precision.csv)
-- Publication Figure: [`figures.png`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0007/figures.png)
+- Configuration: [`config.json`](<lebre-research>/experiments/EXP-0007/config.json)
+- Master Runner: [`run_separability_diagnostic.py`](<lebre-research>/experiments/EXP-0007/run_separability_diagnostic.py)
+- Diagnostic Library: [`src/diagnostics/candidate_separability.py`](<lebre-research>/src/diagnostics/candidate_separability.py)
+- Unit Tests: [`tests/test_exp_0007.py`](<lebre-research>/tests/test_exp_0007.py) (5/5 passed, 52/52 repo-wide passed)
+- Raw Snapshots: [`candidate_snapshots.csv`](<lebre-research>/experiments/EXP-0007/candidate_snapshots.csv) (17,990 rows)
+- Metrics CSVs: [`separability_by_n.csv`](<lebre-research>/experiments/EXP-0007/separability_by_n.csv), [`precision_at_k.csv`](<lebre-research>/experiments/EXP-0007/precision_at_k.csv), [`temporal_stratification.csv`](<lebre-research>/experiments/EXP-0007/temporal_stratification.csv), [`residual_stratification.csv`](<lebre-research>/experiments/EXP-0007/residual_stratification.csv), [`rank_stability.csv`](<lebre-research>/experiments/EXP-0007/rank_stability.csv), [`counterfactual_elevated_precision.csv`](<lebre-research>/experiments/EXP-0007/counterfactual_elevated_precision.csv)
+- Publication Figure: [`figures.png`](<lebre-research>/experiments/EXP-0007/figures.png)

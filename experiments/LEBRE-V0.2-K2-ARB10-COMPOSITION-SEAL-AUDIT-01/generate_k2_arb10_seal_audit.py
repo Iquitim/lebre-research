@@ -28,7 +28,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-ROOT_DIR = r"d:\Projetos\Codinome Lebre"
+ROOT_DIR = r"."
 PARENT_DIR = os.path.join(ROOT_DIR, "experiments", "LEBRE-V0.2-K2-ARBITRATION-COMPOSITION-01")
 STAGE_DIR = os.path.join(ROOT_DIR, "experiments", "LEBRE-V0.2-K2-ARB10-COMPOSITION-SEAL-AUDIT-01")
 

@@ -1,36 +1,36 @@
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: overflow encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
-D:\Projetos\Codinome Lebre\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
+<lebre-research>\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
   k = Px / denom
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: invalid value encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: overflow encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
-D:\Projetos\Codinome Lebre\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
+<lebre-research>\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
   k = Px / denom
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: invalid value encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: overflow encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
-D:\Projetos\Codinome Lebre\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
+<lebre-research>\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
   k = Px / denom
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: invalid value encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: overflow encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
-D:\Projetos\Codinome Lebre\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
+<lebre-research>\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
   k = Px / denom
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: invalid value encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: overflow encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
-D:\Projetos\Codinome Lebre\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
+<lebre-research>\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
   k = Px / denom
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: invalid value encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: overflow encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)
-D:\Projetos\Codinome Lebre\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
+<lebre-research>\experiments\bench01\baselines.py:846: RuntimeWarning: invalid value encountered in divide
   k = Px / denom
 <site-packages>\numpy\_core\numeric.py:961: RuntimeWarning: invalid value encountered in multiply
   return multiply(a.ravel()[:, newaxis], b.ravel()[newaxis, :], out)

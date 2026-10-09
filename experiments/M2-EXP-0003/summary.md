@@ -111,7 +111,7 @@ Following the strict diagnostic mandate, **zero trainable recurrent architecture
 
 ## 3. Publication Figure & Critical Phase Diagram
 
-The 15-panel publication figure has been generated at [`experiments/M2-EXP-0003/figures.png`](file:///d:/Projetos/Codinome%20Lebre/experiments/M2-EXP-0003/figures.png) and copied to [`figures_m2_exp_0003.png`](file:///<assistant-workspace>/figures_m2_exp_0003.png).
+The 15-panel publication figure has been generated at [`experiments/M2-EXP-0003/figures.png`](<lebre-research>/experiments/M2-EXP-0003/figures.png) and copied to [`figures_m2_exp_0003.png`](file:///<assistant-workspace>/figures_m2_exp_0003.png).
 
 Critical Panel 15 establishes the **Phase Diagram of Temporal Representations**:
 - **EXPLICIT EFFICIENT**: Short horizons ($H \le 25$), compact candidate space ($N \le 260$), state size $\le 10\text{ KB}$.

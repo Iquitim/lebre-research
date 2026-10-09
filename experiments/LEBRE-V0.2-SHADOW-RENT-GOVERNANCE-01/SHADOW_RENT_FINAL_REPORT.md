@@ -2,7 +2,7 @@
 
 **Study Identification:** `LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01`  
 **Evaluation Standard:** Independent Skeptical Senior Review  
-**Preregistration Protocol:** Sealed Protocol v1.0 ([SHADOW_RENT_PROTOCOL.md](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_RENT_PROTOCOL.md))  
+**Preregistration Protocol:** Sealed Protocol v1.0 ([SHADOW_RENT_PROTOCOL.md](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_RENT_PROTOCOL.md))  
 **Target Candidate Architecture:** $T_3$ Resource-Aware Conditional Arbitration with Governed Shadow Scheduling  
 **Memory Architecture:** FP16 Persistent Correlation Grid ($C_1$) with Transient FP32 Operations  
 **Date of Audit Seal:** September 21, 2026  
@@ -68,7 +68,7 @@ The experimental design adheres strictly to established standards in machine lea
 
 ## 4. Operational Decomposition & Theoretical Feasibility
 
-The canonical execution graph was forensically audited line-by-line in [SHADOW_DEPENDENCY_AUDIT.md](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_DEPENDENCY_AUDIT.md) and partitioned across 31 discrete operations in [SHADOW_OPERATION_LEDGER.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_OPERATION_LEDGER.csv).
+The canonical execution graph was forensically audited line-by-line in [SHADOW_DEPENDENCY_AUDIT.md](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_DEPENDENCY_AUDIT.md) and partitioned across 31 discrete operations in [SHADOW_OPERATION_LEDGER.csv](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_OPERATION_LEDGER.csv).
 
 $$\begin{aligned}
 F_{\text{live}} &= 81.165 \text{ FP FLOPs/step} \\
@@ -118,31 +118,31 @@ The complete suite of 12 generated forensic figures documents the specific opera
 ### 6.1 Figure F1 — Compute Breakdown
 The stacked bar chart confirms that live path compute remains steady across configurations ($58.0$ to $82.6\text{ FLOPs}$), while $S_2$ successfully compresses shadow compute to $16.93\text{ FLOPs/step}$, bringing total online compute to $89.53\text{ FLOPs/step}$, comfortably under the $100\text{-FLOP}$ ceiling.
 
-![Figure F1](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F1_compute_breakdown_by_scheduler.png)
+![Figure F1](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F1_compute_breakdown_by_scheduler.png)
 
 ---
 
 ### 6.2 Figure F2 & F3 — Predictive NMSE and Duty Cycle Distribution Across Tasks
 On pure discrete delay streams ($I_3, I_4, I_5$), $S_2$ exhibits minimal NMSE degradation ($+0.005$ to $+0.012$), whereas on complex switching tasks ($I_{11}, I_{12}, I_{14}$), periodic dilution causes noticeable error inflation. In contrast, $S_3$ dynamically modulates its duty cycle: sleeping at $< 1.5\%$ on memoryless noise ($I_1$), but waking up to $64\%$ on nonlinear mismatch ($I_2$).
 
-![Figure F2](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F2_predictive_nmse_by_scheduler_and_task.png)
-![Figure F3](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F3_duty_cycle_distribution_across_tasks.png)
+![Figure F2](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F2_predictive_nmse_by_scheduler_and_task.png)
+![Figure F3](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F3_duty_cycle_distribution_across_tasks.png)
 
 ---
 
 ### 6.3 Figure F4 — Multi-Objective Pareto Front
 The scatter plot of Mean Total FP vs. Aggregate NMSE maps the empirical Pareto frontier across the four architectures. No single candidate dominates all dimensions: $S_1$ occupies the extreme low-compute/high-error corner, $S_2$ achieves budget compliance with moderate error, $S_3$ offers high predictive fidelity with slight compute excess, and $S_0$ delivers unconstrained performance at $169.1\text{ FLOPs}$.
 
-![Figure F4](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F4_event_vs_periodic_pareto_front.png)
+![Figure F4](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F4_event_vs_periodic_pareto_front.png)
 
 ---
 
 ### 6.4 Figure F5, F6 & F7 — Dynamic Tracking, Latency, and Regret
 Figure F5 plots the microsecond-level trace of $S_3$ around the $t=3000$ regime transition on task $I_{11}$. Within 7 steps of the switch, the cumulative sum $U_t$ breaches $\lambda = 8.0$, waking the shadow pipeline for a continuous 50-step discovery burst. As quantified in Figure F6, $S_3$ achieves a median discovery latency of $148.0\text{ steps}$ on $I_{12}$ (faster than continuous $S_0$ at $163.5\text{ steps}$), whereas periodic $S_2$ requires $926.5\text{ steps}$ to identify the new delay taps.
 
-![Figure F5](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F5_page_hinkley_trace_regime_switch.png)
-![Figure F6](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F6_switching_latency_comparison.png)
-![Figure F7](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F7_post_switch_regret_comparison.png)
+![Figure F5](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F5_page_hinkley_trace_regime_switch.png)
+![Figure F6](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F6_switching_latency_comparison.png)
+![Figure F7](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F7_post_switch_regret_comparison.png)
 
 ---
 
@@ -152,23 +152,23 @@ Figure F5 plots the microsecond-level trace of $S_3$ around the $t=3000$ regime 
 - **Redundancy (F10):** Duty-cycling resolves the legacy Gate 6 failure on $I_{10}$. Under $S_0$, redundant co-activation occupied $18.2\%$ of steps; under $S_2$ and $S_3$, occupancy drops to $9.2\%$ and $8.4\%$ ($\le 10.0\%$, **PASS Gate 6**).
 - **False Wakes (F11):** Reveals the architectural root of the compute excess in $S_3$: on static nonlinear stream $I_2$, unmodeled cross-terms generate persistent residual error, triggering $77.7$ alarms and inflating duty cycle to $64.3\%$.
 
-![Figure F8](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F8_quiescent_sleep_efficiency.png)
-![Figure F9](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F9_i9_complementarity_preservation.png)
-![Figure F10](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F10_i10_redundancy_mitigation.png)
-![Figure F11](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F11_false_wake_rate_negative_controls.png)
+![Figure F8](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F8_quiescent_sleep_efficiency.png)
+![Figure F9](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F9_i9_complementarity_preservation.png)
+![Figure F10](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F10_i10_redundancy_mitigation.png)
+![Figure F11](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F11_false_wake_rate_negative_controls.png)
 
 ---
 
 ### 6.6 Figure F12 — Comprehensive Decision Matrix
 Figure F12 provides the definitive side-by-side compliance matrix summarizing all evaluations.
 
-![Figure F12](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F12_scheduler_decision_matrix.png)
+![Figure F12](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/figures/F12_scheduler_decision_matrix.png)
 
 ---
 
 ## 7. Multi-Objective Pareto Analysis & Candidate Selection
 
-Evaluating the multi-objective Pareto matrix in [SCHEDULER_PARETO_ANALYSIS.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SCHEDULER_PARETO_ANALYSIS.csv) across the 5-dimensional vector:
+Evaluating the multi-objective Pareto matrix in [SCHEDULER_PARETO_ANALYSIS.csv](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SCHEDULER_PARETO_ANALYSIS.csv) across the 5-dimensional vector:
 $$\mathbf{v} = \left[\text{NMSE}, \text{Total FP}, \text{Int Ops}, \text{Bytes Moved}, \text{Peak RAM}\right]$$
 
 1. **$S_2$ vs $S_0$:** Forms a non-dominated trade-off. $S_2$ dominates compute ($89.53$ vs $169.06\text{ FLOPs}$) and memory traffic ($318.1$ vs $373.0\text{ Bytes}$), while $S_0$ dominates accuracy ($0.3087$ vs $0.3654\text{ NMSE}$).

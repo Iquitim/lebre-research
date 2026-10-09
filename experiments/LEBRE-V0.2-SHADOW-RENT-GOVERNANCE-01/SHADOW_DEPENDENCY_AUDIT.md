@@ -21,7 +21,7 @@ In accordance with Sections 6, 7, and 8 of the study charter, this audit perform
 
 ## 2. Operational Breakdown & Classification Matrix
 
-The complete execution graph is partitioned in [SHADOW_OPERATION_LEDGER.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_OPERATION_LEDGER.csv) across 31 discrete operations. The summary by functional category is:
+The complete execution graph is partitioned in [SHADOW_OPERATION_LEDGER.csv](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/SHADOW_OPERATION_LEDGER.csv) across 31 discrete operations. The summary by functional category is:
 
 | Category | Operation Count | Per-Step FP FLOP Range | Mean Benchmark FP FLOPs | Primary Computational Components |
 | :--- | :--- | :--- | :--- | :--- |

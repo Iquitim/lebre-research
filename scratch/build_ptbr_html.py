@@ -7,7 +7,7 @@ Uses \\( ... \\) for inline math and $$ ... $$ for block math to avoid any confl
 import base64
 from pathlib import Path
 
-WORKSPACE = Path(r"d:\Projetos\Codinome Lebre")
+WORKSPACE = Path(r".")
 LOGO_PATH = WORKSPACE / "logo" / "LEBRE Logo.png"
 DIAGRAMS_DIR = WORKSPACE / "docs" / "architecture" / "assets" / "diagrams"
 OUT_FILE = WORKSPACE / "docs" / "architecture" / "pdf_source" / "LEBRE_CONDENSED_PTBR.html"

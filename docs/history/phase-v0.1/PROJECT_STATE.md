@@ -37,7 +37,7 @@
   - **Statistical Significance**: Track B achieved statistically significant superiority in **53.3%** (40/75) of all competitive paired tests across the suite ($p_{\text{FDR}} < 0.05$).
   - **Stability Manifest**: 319 divergences recorded (S2: 109, S5: 60, B1/B2/S1/C1/C4: 30 each); Track B: **0 divergences**.
 - **Milestone M2 Status**:
-  - **Specification Frozen**: Milestone M2 formally frozen under [`M2_SINGLE_STATE_SPEC.md`](file:///d:/Projetos/Codinome%20Lebre/M2_SINGLE_STATE_SPEC.md). Track B code in `src/` remains 100% bitwise immutable.
+  - **Specification Frozen**: Milestone M2 formally frozen under [`M2_SINGLE_STATE_SPEC.md`](<lebre-research>/M2_SINGLE_STATE_SPEC.md). Track B code in `src/` remains 100% bitwise immutable.
 - **Milestone M3 Status**: `UNOPENED` (Multi-State Capacity is NOT yet opened).
 - **Novelty Claim Readiness**: `NO` (FROZEN).
 - **Section 144 Hard Stop**: `ENFORCED` — Architecture unnamed; M3 unopened; novelty claims withheld; CAR-01 completed and awaiting human review.

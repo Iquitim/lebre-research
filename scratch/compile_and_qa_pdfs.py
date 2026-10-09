@@ -8,7 +8,7 @@ import sys
 import subprocess
 from pathlib import Path
 
-WORKSPACE = Path(r"d:\Projetos\Codinome Lebre")
+WORKSPACE = Path(r".")
 HTML_DIR = WORKSPACE / "docs" / "architecture" / "pdf_source"
 PDF_DIR = WORKSPACE / "docs" / "architecture" / "pdf"
 QA_DIR = WORKSPACE / "scratch" / "pdf_qa"

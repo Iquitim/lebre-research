@@ -172,10 +172,10 @@ On the natural passive data stream, single-step or few-step predictive gain is s
 ---
 
 ## 7. Artifact Manifest
-- Configuration: [`config.json`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/config.json)
-- Master Runner: [`run_information_diagnostic.py`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/run_information_diagnostic.py)
-- Diagnostic Module: [`src/diagnostics/candidate_microtest.py`](file:///d:/Projetos/Codinome%20Lebre/src/diagnostics/candidate_microtest.py)
-- Unit Tests: [`tests/test_exp_0008.py`](file:///d:/Projetos/Codinome%20Lebre/tests/test_exp_0008.py) (4/4 passing, 56/56 repo-wide passing)
-- Raw Events: [`microtest_events.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/microtest_events.csv) (48,934 rows)
-- Metrics CSVs: [`information_channels.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/information_channels.csv), [`precision_at_k.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/precision_at_k.csv), [`temporal_stratification.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/temporal_stratification.csv), [`residual_stratification.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/residual_stratification.csv), [`causal_controls.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/causal_controls.csv), [`counterfactual_queue.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/counterfactual_queue.csv), [`information_efficiency.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/information_efficiency.csv)
-- 12-Panel Publication Figure: [`figures.png`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0008/figures.png)
+- Configuration: [`config.json`](<lebre-research>/experiments/EXP-0008/config.json)
+- Master Runner: [`run_information_diagnostic.py`](<lebre-research>/experiments/EXP-0008/run_information_diagnostic.py)
+- Diagnostic Module: [`src/diagnostics/candidate_microtest.py`](<lebre-research>/src/diagnostics/candidate_microtest.py)
+- Unit Tests: [`tests/test_exp_0008.py`](<lebre-research>/tests/test_exp_0008.py) (4/4 passing, 56/56 repo-wide passing)
+- Raw Events: [`microtest_events.csv`](<lebre-research>/experiments/EXP-0008/microtest_events.csv) (48,934 rows)
+- Metrics CSVs: [`information_channels.csv`](<lebre-research>/experiments/EXP-0008/information_channels.csv), [`precision_at_k.csv`](<lebre-research>/experiments/EXP-0008/precision_at_k.csv), [`temporal_stratification.csv`](<lebre-research>/experiments/EXP-0008/temporal_stratification.csv), [`residual_stratification.csv`](<lebre-research>/experiments/EXP-0008/residual_stratification.csv), [`causal_controls.csv`](<lebre-research>/experiments/EXP-0008/causal_controls.csv), [`counterfactual_queue.csv`](<lebre-research>/experiments/EXP-0008/counterfactual_queue.csv), [`information_efficiency.csv`](<lebre-research>/experiments/EXP-0008/information_efficiency.csv)
+- 12-Panel Publication Figure: [`figures.png`](<lebre-research>/experiments/EXP-0008/figures.png)

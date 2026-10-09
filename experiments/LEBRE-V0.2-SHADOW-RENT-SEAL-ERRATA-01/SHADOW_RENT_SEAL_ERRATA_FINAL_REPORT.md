@@ -240,7 +240,7 @@ The visual presentation in the parent study's Figure F10 was audited. In the ori
 
 We have re-rendered the forensic audit figure (`figures/F10_i10_redundancy_audited.png`), overlaying both the **$5.0\%$ binding preregistered ceiling** and the **$10.0\%$ unpreregistered post-hoc ceiling**:
 
-![Figure F10 Audited](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-SEAL-ERRATA-01/figures/F10_i10_redundancy_audited.png)
+![Figure F10 Audited](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-SEAL-ERRATA-01/figures/F10_i10_redundancy_audited.png)
 
 ### Forensic Commentary on Figure F10
 - When evaluated against the true $5.0\%$ solid red line, both $S_2$ ($9.2\%$) and $S_3$ ($8.4\%$) are clearly shown to breach the ceiling.

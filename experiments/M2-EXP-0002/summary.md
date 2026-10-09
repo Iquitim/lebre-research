@@ -107,6 +107,6 @@ The entire study comprised **780 simulation runs** across **30 strictly fresh ev
 
 ## 3. Publication Figure
 
-The 15-panel publication figure has been generated at [`figures.png`](file:///d:/Projetos/Codinome%20Lebre/experiments/M2-EXP-0002/figures.png) and copied to [`figures_m2_exp_0002.png`](file:///<assistant-workspace>/figures_m2_exp_0002.png).
+The 15-panel publication figure has been generated at [`figures.png`](<lebre-research>/experiments/M2-EXP-0002/figures.png) and copied to [`figures_m2_exp_0002.png`](file:///<assistant-workspace>/figures_m2_exp_0002.png).
 
 Critical Panel 15 clearly displays the decoupling of exact structural identification from predictive sufficiency under high autocorrelation $\rho=0.90$.

@@ -39,7 +39,7 @@ Crucially, this audit made **zero modifications to the core architecture**, **ze
 - **Resolution Applied:** Corrected across all tables in `LEBRE_OVERVIEW_EN.md`, `LEBRE_OVERVIEW_PTBR.md`, `LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md`, `LEBRE_ARCHITECTURE_SPEC_v0.1_PTBR.md`, and the condensed reference guides.
 
 ### Correction D: Path Standardization to Relative Markdown Links
-- **Issue Identified:** Documents contained machine-specific absolute file URIs (`file:///D:/...` or `d:\Projetos\...`) which break in external publication environments.
+- **Issue Identified:** Documents contained machine-specific absolute file URIs (`file:///<drive>:/...` or `<drive>:\<folder>\...`) which break in external publication environments.
 - **Audited Truth:** Portable documentation suites must rely strictly on repository-relative Markdown links.
 - **Resolution Applied:** All cross-document links converted to relative paths (e.g. `docs/architecture/LEBRE_ARCHITECTURE_SPEC_v0.1_EN.md`).
 

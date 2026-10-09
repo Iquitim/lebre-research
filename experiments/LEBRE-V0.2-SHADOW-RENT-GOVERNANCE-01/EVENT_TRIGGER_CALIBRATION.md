@@ -32,7 +32,7 @@ In accordance with Sections 15, 16, and 43 of the audit charter:
 
 ## 2. Empirical Grid Evaluation Results
 
-The complete experimental output is preserved in [EVENT_TRIGGER_GRID.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/EVENT_TRIGGER_GRID.csv):
+The complete experimental output is preserved in [EVENT_TRIGGER_GRID.csv](<lebre-research>/experiments/LEBRE-V0.2-SHADOW-RENT-GOVERNANCE-01/EVENT_TRIGGER_GRID.csv):
 
 | Config ID | Slack $\delta$ | Threshold $\lambda$ | Heartbeat $H$ | Mean Duty Cycle | Mean Total Online FP | Aggregate NMSE | Switch Delay | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

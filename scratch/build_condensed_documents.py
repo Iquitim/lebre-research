@@ -10,7 +10,7 @@ import base64
 import subprocess
 from pathlib import Path
 
-WORKSPACE = Path(r"d:\Projetos\Codinome Lebre")
+WORKSPACE = Path(r".")
 LOGO_PATH = WORKSPACE / "logo" / "LEBRE Logo.png"
 DIAGRAMS_DIR = WORKSPACE / "docs" / "architecture" / "assets" / "diagrams"
 HTML_DIR = WORKSPACE / "docs" / "architecture" / "pdf_source"

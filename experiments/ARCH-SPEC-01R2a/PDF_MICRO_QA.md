@@ -4,8 +4,8 @@
 **Evaluation Date:** 2026-09-19  
 **Auditor:** Scientific Documentation Auditor and Technical Editor  
 **Target Documents:**
-1. [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf`](file:///d:/Projetos/Codinome%20Lebre/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf)
-2. [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf`](file:///d:/Projetos/Codinome%20Lebre/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf)
+1. [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf`](<lebre-research>/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf)
+2. [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf`](<lebre-research>/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf)
 
 ---
 
@@ -106,4 +106,4 @@ Both Condensed Reference PDFs were regenerated directly from their updated HTML 
 
 ## 4. Final QA Conclusion
 
-The derived PDF publications [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf`](file:///d:/Projetos/Codinome%20Lebre/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf) and [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf`](file:///d:/Projetos/Codinome%20Lebre/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf) are completely regenerated, visually validated, and aligned with all editorial micro-corrections. They are certified ready for specification freeze.
+The derived PDF publications [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf`](<lebre-research>/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_EN.pdf) and [`LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf`](<lebre-research>/docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.1_CONDENSED_PTBR.pdf) are completely regenerated, visually validated, and aligned with all editorial micro-corrections. They are certified ready for specification freeze.

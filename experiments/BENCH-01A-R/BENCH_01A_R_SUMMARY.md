@@ -117,7 +117,7 @@ The arbitrary $1.5\times$ penalty is completely excised. Algorithmic reliability
 - **Encoded in Config (`bench_01_locked_config.json`):** `0.15` / `0.15` / `0.70`.
 - **Methodological Selection:** Reconciled and confirmed at **`15 / 15 / 70`**. 15% calibration provides sufficient excitation cycles on short synthetic streams ($T=10{,}000$) to screen 16 baseline candidates without noisy selection transients; 15% validation provides adequate stability confirmation; and 70% test quarantines the majority of the stream for out-of-sample evaluation.
 - **Automated Tests:** `tests/test_bench_01_protocol.py` explicitly asserts exact fractions `0.15`, `0.15`, and `0.70`.
-- **Audit Reference:** [`experiments/BENCH-01A-R/SPLIT_RECONCILIATION_AUDIT.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/BENCH-01A-R/SPLIT_RECONCILIATION_AUDIT.md).
+- **Audit Reference:** [`experiments/BENCH-01A-R/SPLIT_RECONCILIATION_AUDIT.md`](<lebre-research>/experiments/BENCH-01A-R/SPLIT_RECONCILIATION_AUDIT.md).
 
 ---
 

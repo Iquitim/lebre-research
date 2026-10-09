@@ -427,7 +427,7 @@ def execute_m2_exp_0006(config_path: str):
                     })
                     
     df_snapshots = pd.DataFrame(snapshots)
-    df_snapshots.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/state_snapshots.csv", index=False)
+    df_snapshots.to_csv("./experiments/M2-EXP-0006/state_snapshots.csv", index=False)
     print(f"Collected {len(df_snapshots)} matched snapshots ({sum(df_snapshots['q_class']=='Q2_Silent_Necessary')} Q2, {sum(df_snapshots['q_class']=='Q3_Silent_Obsolete')} Q3).")
     
     # Compute Future Horizon Value (D7) for a subset of snapshots
@@ -451,7 +451,7 @@ def execute_m2_exp_0006(config_path: str):
         }
         future_value_records.append(rec)
     df_fv = pd.DataFrame(future_value_records)
-    df_fv.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/future_value.csv", index=False)
+    df_fv.to_csv("./experiments/M2-EXP-0006/future_value.csv", index=False)
     
     # --- TABLE A: Q2 vs Q3 Discrimination ---
     channels = [
@@ -514,7 +514,7 @@ def execute_m2_exp_0006(config_path: str):
         })
         
     df_table_a = pd.DataFrame(table_a_rows)
-    df_table_a.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/table_a_q2_vs_q3.csv", index=False)
+    df_table_a.to_csv("./experiments/M2-EXP-0006/table_a_q2_vs_q3.csv", index=False)
     print("\n--- TABLE A: Q2 vs Q3 DISCRIMINATION ---")
     print(df_table_a[["channel", "pr_auc", "roc_auc", "false_evict_rate", "false_retain_rate", "decision_cost"]].to_string(index=False))
     
@@ -545,14 +545,14 @@ def execute_m2_exp_0006(config_path: str):
             "future_value": future_val
         })
     df_table_b = pd.DataFrame(table_b_rows)
-    df_table_b.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/table_b_quiescence_length.csv", index=False)
+    df_table_b.to_csv("./experiments/M2-EXP-0006/table_b_quiescence_length.csv", index=False)
     print("\n--- TABLE B: UTILITY SIGNALS ACROSS QUIESCENCE LENGTHS ---")
     print(df_table_b[["quiescence_length", "instant_delta_loss", "temporal_cxo", "two_timescale", "future_value"] if "two_timescale" in df_table_b else ["quiescence_length", "instant_delta_loss", "temporal_cxo", "future_value"]].to_string(index=False))
     
     # --- TABLE C: Horizon Disagreement ---
     # Short horizon (H=10) = 0, but long horizon (H=100 or 250) > 0
     df_c_sample = df_fv.head(10).copy()
-    df_c_sample.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/table_c_horizon_disagreement.csv", index=False)
+    df_c_sample.to_csv("./experiments/M2-EXP-0006/table_c_horizon_disagreement.csv", index=False)
     print("\n--- TABLE C: HORIZON DISAGREEMENT SAMPLE ---")
     print(df_c_sample[["step", "q_class", "current_dl", "f_val_h10", "f_val_h50", "f_val_h100", "f_val_h250"]].to_string(index=False))
     
@@ -669,8 +669,8 @@ def execute_m2_exp_0006(config_path: str):
             "regret_vs_oracle": regret
         })
     df_table_d = pd.DataFrame(table_d_rows)
-    df_table_d.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/table_d_causal_policies.csv", index=False)
-    df_table_d.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/causal_policy_results.csv", index=False)
+    df_table_d.to_csv("./experiments/M2-EXP-0006/table_d_causal_policies.csv", index=False)
+    df_table_d.to_csv("./experiments/M2-EXP-0006/causal_policy_results.csv", index=False)
     print("\n--- TABLE D: CAUSAL POLICY DEPLOYMENT RESULTS ---")
     print(df_table_d[["policy", "global_mse", "active_recall", "premature_evictions", "eviction_latency", "regret_vs_oracle"]].to_string(index=False))
     
@@ -682,8 +682,8 @@ def execute_m2_exp_0006(config_path: str):
         {"decision_outcome": "Correct Eviction (Obsolete)", "prediction_regret": 0.000, "compute_overhead_flops": 0.0, "memory_overhead_bytes": 0, "rebirth_cost_steps": 0.0}
     ]
     df_table_e = pd.DataFrame(table_e_rows)
-    df_table_e.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/table_e_cost_decomposition.csv", index=False)
-    df_table_e.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/cost_model.csv", index=False)
+    df_table_e.to_csv("./experiments/M2-EXP-0006/table_e_cost_decomposition.csv", index=False)
+    df_table_e.to_csv("./experiments/M2-EXP-0006/cost_model.csv", index=False)
     print("\n--- TABLE E: ASYMMETRIC COST DECOMPOSITION ---")
     print(df_table_e.to_string(index=False))
     
@@ -864,7 +864,7 @@ def generate_15_panel_figures(df_a, df_b, df_d, df_snap, rep_traces):
     ax.set_ylabel("Global MSE")
     ax.grid(True, alpha=0.3)
     
-    out_path = "d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/figures.png"
+    out_path = "./experiments/M2-EXP-0006/figures.png"
     plt.savefig(out_path)
     plt.close()
     
@@ -936,7 +936,7 @@ def generate_matched_pair_figure(df_snap):
         yval = b.get_height()
         ax.text(b.get_x() + b.get_width()/2.0, yval + 0.02, f"{yval:.2f}", ha='center', va='bottom', fontsize=8)
         
-    out_pair = "d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/matched_pair_diagnostic.png"
+    out_pair = "./experiments/M2-EXP-0006/matched_pair_diagnostic.png"
     plt.savefig(out_pair)
     plt.close()
     
@@ -946,5 +946,5 @@ def generate_matched_pair_figure(df_snap):
 
 
 if __name__ == "__main__":
-    cfg = os.path.abspath("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0006/config.json")
+    cfg = os.path.abspath("./experiments/M2-EXP-0006/config.json")
     execute_m2_exp_0006(cfg)

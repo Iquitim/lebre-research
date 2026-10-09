@@ -332,7 +332,7 @@ def execute_full_diagnostic(config_path: str):
             "memory": float(np.mean([r["mean_memory"] for r in runs]))
         })
     df_table_c = pd.DataFrame(table_c_rows)
-    df_table_c.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_c_oracle_contrasts.csv", index=False)
+    df_table_c.to_csv("./experiments/M2-EXP-0005R/table_c_oracle_contrasts.csv", index=False)
     print("\n--- TABLE C: ORACLE COMPONENT CONTRASTS ---")
     print(df_table_c[["variant", "mse", "regret", "regret_closed_pct", "active_recall", "type_time_acc"]].to_string(index=False))
     
@@ -404,7 +404,7 @@ def execute_full_diagnostic(config_path: str):
         }
     ]
     df_table_a = pd.DataFrame(table_a_rows)
-    df_table_a.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_a_metric_reconciliation.csv", index=False)
+    df_table_a.to_csv("./experiments/M2-EXP-0005R/table_a_metric_reconciliation.csv", index=False)
     print("\n--- TABLE A: METRIC RECONCILIATION TABLE ---")
     print(df_table_a[["metric", "original_reported", "recomputed_value", "aggregation"]].to_string(index=False))
     
@@ -488,7 +488,7 @@ def execute_full_diagnostic(config_path: str):
         {"component": "Residual / Post-Eviction", "excess_loss": float(np.mean(regret_unexplained)), "fraction_regret": float(np.mean(regret_unexplained)/mean_tot), "mean_steps": 104.0, "seed_std": float(np.std(regret_unexplained))}
     ]
     df_table_b = pd.DataFrame(table_b_rows)
-    df_table_b.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_b_regret_decomposition.csv", index=False)
+    df_table_b.to_csv("./experiments/M2-EXP-0005R/table_b_regret_decomposition.csv", index=False)
     print("\n--- TABLE B: REGRET DECOMPOSITION ---")
     print(df_table_b[["component", "excess_loss", "fraction_regret", "mean_steps"]].to_string(index=False))
     
@@ -523,8 +523,8 @@ def execute_full_diagnostic(config_path: str):
     df_conf_time = pd.DataFrame(conf_time_norm, index=["True_NONE", "True_LINEAR", "True_GATED"], columns=["Chosen_NONE", "Chosen_LINEAR", "Chosen_GATED"])
     df_conf_event = pd.DataFrame(conf_event, index=["True_NONE", "True_LINEAR", "True_GATED"], columns=["Chosen_NONE", "Chosen_LINEAR", "Chosen_GATED"])
     
-    df_conf_time.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_d_type_confusion_time.csv")
-    df_conf_event.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_d_type_confusion_event.csv")
+    df_conf_time.to_csv("./experiments/M2-EXP-0005R/table_d_type_confusion_time.csv")
+    df_conf_event.to_csv("./experiments/M2-EXP-0005R/table_d_type_confusion_event.csv")
     print("\n--- TABLE D: TYPE CONFUSION (TIME-WEIGHTED) ---")
     print(df_conf_time.to_string())
     print("\n--- TABLE D: TYPE CONFUSION (EVENT-LEVEL) ---")
@@ -565,7 +565,7 @@ def execute_full_diagnostic(config_path: str):
             "survival_rate": 1.0 if bl in ["0-10", "11-25", "26-50"] else (0.88 if bl == "51-100" else 0.72)
         })
     df_table_e = pd.DataFrame(table_e_rows)
-    df_table_e.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_e_maturation.csv", index=False)
+    df_table_e.to_csv("./experiments/M2-EXP-0005R/table_e_maturation.csv", index=False)
     print("\n--- TABLE E: MATURATION AUDIT ---")
     print(df_table_e.to_string(index=False))
     
@@ -589,7 +589,7 @@ def execute_full_diagnostic(config_path: str):
                 "rebirth_latency": 45 if is_premature else 0
             })
     df_table_f = pd.DataFrame(eviction_rows)
-    df_table_f.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/table_f_eviction_analysis.csv", index=False)
+    df_table_f.to_csv("./experiments/M2-EXP-0005R/table_f_eviction_analysis.csv", index=False)
     print("\n--- TABLE F: EVICTION ANALYSIS (SAMPLE) ---")
     print(df_table_f.head(10).to_string(index=False))
     
@@ -611,7 +611,7 @@ def execute_full_diagnostic(config_path: str):
             "churn": r_fresh["state_churn"]
         })
     df_fresh = pd.DataFrame(fresh_results)
-    df_fresh.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/fresh_seed_confirmation.csv", index=False)
+    df_fresh.to_csv("./experiments/M2-EXP-0005R/fresh_seed_confirmation.csv", index=False)
     print(f"Fresh Seeds Mean MSE: {df_fresh['global_mse'].mean():.4f} +/- {df_fresh['global_mse'].std():.4f}")
     print(f"Fresh Seeds Mean Active Recall: {df_fresh['active_recall'].mean():.4f} (Eval was {q0_runs[0]['active_recall']:.4f})")
     print(f"Fresh Seeds Mean Type Time Accuracy: {df_fresh['type_time_acc'].mean():.4f}")
@@ -772,7 +772,7 @@ def generate_diagnostic_figures(df_a, df_b, df_c, df_conf, df_e, rep_traces):
     ax.set_ylabel("Global MSE")
     ax.grid(True, alpha=0.3)
     
-    out_path = "d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/figures.png"
+    out_path = "./experiments/M2-EXP-0005R/figures.png"
     plt.savefig(out_path)
     plt.close()
     
@@ -857,7 +857,7 @@ def generate_stacked_timeline(trace):
         for t_mark in [1000, 2500, 3500, 5000]:
             a.axvline(t_mark, color='gray', ls='--', alpha=0.6)
             
-    out_tl = "d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/stacked_timeline.png"
+    out_tl = "./experiments/M2-EXP-0005R/stacked_timeline.png"
     plt.savefig(out_tl)
     plt.close()
     
@@ -867,5 +867,5 @@ def generate_stacked_timeline(trace):
 
 
 if __name__ == "__main__":
-    cfg = os.path.abspath("d:/Projetos/Codinome Lebre/experiments/M2-EXP-0005R/config.json")
+    cfg = os.path.abspath("./experiments/M2-EXP-0005R/config.json")
     execute_full_diagnostic(cfg)

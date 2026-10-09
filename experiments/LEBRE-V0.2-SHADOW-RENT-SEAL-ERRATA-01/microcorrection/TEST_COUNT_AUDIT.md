@@ -103,7 +103,7 @@ Execution of the canonical regression suite on September 22, 2026 yielded:
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.11.9, pytest-9.0.2, pluggy-1.6.0
-rootdir: D:\Projetos\Codinome Lebre
+rootdir: <lebre-research>
 plugins: asyncio-1.3.0, cov-7.0.0
 asyncio: mode=Mode.STRICT
 collected 124 items

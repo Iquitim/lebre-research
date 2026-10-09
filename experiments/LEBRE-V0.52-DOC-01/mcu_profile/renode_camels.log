@@ -1,4 +1,4 @@
-[21:55:07.3834] [INFO] Loaded monitor commands from: D:\Projetos\Codinome Lebre\tools\renode\renode_1.17.0-portable\scripts/monitor.py
+[21:55:07.3834] [INFO] Loaded monitor commands from: <lebre-research>\tools\renode\renode_1.17.0-portable\scripts/monitor.py
 [0mRenode, version 1.17.0 (1.17.0+20260906gitf1dd1b4af)
 
 [91m(monitor) [0minclude @<HOME>\AppData\Local\Temp\claude\lebre_doc\run_camels.resc

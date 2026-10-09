@@ -43,20 +43,20 @@ $$\mathbf{PRIMARY \ OUTCOME: \ FP16\_COMPACTION\_VALIDATED}$$
 
 ## 2. Methodological Foundation & Literature Context
 
-The theoretical justification and risk analysis for this intervention are documented in detail in [RESOURCE_COMPACTION_LITERATURE_NOTE.md](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_LITERATURE_NOTE.md).
+The theoretical justification and risk analysis for this intervention are documented in detail in [RESOURCE_COMPACTION_LITERATURE_NOTE.md](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_LITERATURE_NOTE.md).
 
 1. **Decoupled Mixed-Precision Storage (Micikevicius et al., ICLR 2018):**  
    Micikevicius et al. established that floating-point storage can be halved by maintaining low precision (FP16) in memory while performing accumulation and non-linear evaluations in higher precision (FP32). In LEBRE, this pattern is adapted to embedded TinyML: **zero persistent FP32 master grid is maintained**. FP32 precision exists strictly as a temporary scalar workspace ($\le 8$ Bytes) in CPU registers during probe updates.
 2. **Finite-Precision Adaptive Filtering (Cioffi, 1987; Yousef & Sayed, 2000, 2003):**  
    Quantization of internal recursive state in adaptive filtering carries risks of update stagnation (digital deadbands), threshold crossing jitter, and excess mean-square error (EMSE). For the LEBRE correlation grid ($\lambda = 0.05, \theta = 0.20$), the IEEE 754 half-precision machine epsilon ($\epsilon_{\text{mach}} \approx 9.77 \times 10^{-4}$) provides an effective stagnation deadband of $\pm 0.00244$. Because innovation updates for active signals are on the order of $10^{-2}$ to $10^{-1}$, active discovery is theoretically immune to stagnation.
 3. **Equivalence Testing Framework (Lakens, 2017):**  
-   In compliance with Lakens (2017), behavioral preservation cannot be inferred from a failure to reject $H_0$ in an ordinary $t$-test. Pre-frozen practical equivalence bounds ($\Delta_{\text{equiv}}$) were locked in [RESOURCE_COMPACTION_PREREGISTRATION.md](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_PREREGISTRATION.md) prior to inspecting confirmatory data.
+   In compliance with Lakens (2017), behavioral preservation cannot be inferred from a failure to reject $H_0$ in an ordinary $t$-test. Pre-frozen practical equivalence bounds ($\Delta_{\text{equiv}}$) were locked in [RESOURCE_COMPACTION_PREREGISTRATION.md](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_PREREGISTRATION.md) prior to inspecting confirmatory data.
 
 ---
 
 ## 3. Certified Memory Ledger & 1-KiB Recovery
 
-The physical memory footprint of C0 and C1 was audited item-by-item in [CORR_GRID_MEMORY_LEDGER.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/CORR_GRID_MEMORY_LEDGER.csv) and synthesized in [RESOURCE_COMPACTION_RESOURCE_REPORT.md](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_RESOURCE_REPORT.md):
+The physical memory footprint of C0 and C1 was audited item-by-item in [CORR_GRID_MEMORY_LEDGER.csv](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/CORR_GRID_MEMORY_LEDGER.csv) and synthesized in [RESOURCE_COMPACTION_RESOURCE_REPORT.md](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_RESOURCE_REPORT.md):
 
 | Component | Code Source | C0 Bytes (FP32) | C1 Bytes (FP16) | Net Savings | Invariant State |
 |:---|:---|:---:|:---:|:---:|:---|
@@ -72,13 +72,13 @@ The physical memory footprint of C0 and C1 was audited item-by-item in [CORR_GRI
 | `AlgorithmicMetadata` | State & counters | $26$ B | $26$ B | $0$ B | Circular pointers, counters |
 | **TOTAL PERSISTENT STATE** | | **$1,306$ B** | **$976$ B** | **$-330$ B ($-25.27\%$)** | **$976 \le 1,024$ B (PASS)** |
 
-![Memory Breakdown C0 vs C1](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F1_memory_breakdown_C0_vs_C1.png)
+![Memory Breakdown C0 vs C1](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F1_memory_breakdown_C0_vs_C1.png)
 
 ---
 
 ## 4. Confirmatory Equivalence Results (All 14 Tasks)
 
-The table below summarizes the confirmatory findings across all 14 benchmark tasks from [RESOURCE_COMPACTION_FINAL_RESULTS.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_FINAL_RESULTS.csv):
+The table below summarizes the confirmatory findings across all 14 benchmark tasks from [RESOURCE_COMPACTION_FINAL_RESULTS.csv](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/RESOURCE_COMPACTION_FINAL_RESULTS.csv):
 
 | Task ID | Structural Category | C0 NMSE | C1 NMSE | Paired Delta | 90% CI | TOST Bound | Status |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -98,13 +98,13 @@ The table below summarizes the confirmatory findings across all 14 benchmark tas
 | **$I_{14}$** | Intermittent Hybrid | $0.2125$ | $0.2125$ | $+0.000000$ | $[0.000000, 0.000000]$ | $\pm 0.0100$ | **PASS** |
 | **ALL** | **Overall Aggregate Benchmark** | **$0.3282$** | **$0.3282$** | **$+0.000009$** | **$[-0.000004, +0.000021]$** | **$\pm 0.0100$** | **PASS** |
 
-![NMSE Delta by Task](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F6_nmse_delta_by_task.png)
+![NMSE Delta by Task](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F6_nmse_delta_by_task.png)
 
 ---
 
 ## 5. Candidate Ranking & Structural Dynamics Parity
 
-Evaluation of candidate selection and arbitration parity from [CANDIDATE_RANKING_PARITY.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/CANDIDATE_RANKING_PARITY.csv) and [STRUCTURAL_EVENT_PARITY.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/STRUCTURAL_EVENT_PARITY.csv):
+Evaluation of candidate selection and arbitration parity from [CANDIDATE_RANKING_PARITY.csv](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/CANDIDATE_RANKING_PARITY.csv) and [STRUCTURAL_EVENT_PARITY.csv](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/STRUCTURAL_EVENT_PARITY.csv):
 
 - **Candidate Top-1 Cell Selection Agreement:** **$99.73\%$**
 - **Candidate Top-3 Set Agreement (Jaccard):** **$99.62\%$**
@@ -112,24 +112,24 @@ Evaluation of candidate selection and arbitration parity from [CANDIDATE_RANKING
 - **Structural Decision Agreement Rate:** **$99.95\%$**
 - **Modal Structural Classification Parity:** **$100.0\%$ ($420/420$ runs identical)**
 
-![Candidate Ranking Agreement](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F4_candidate_ranking_agreement.png)
+![Candidate Ranking Agreement](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F4_candidate_ranking_agreement.png)
 
-![Structural Confusion Matrix](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F5_structural_decision_confusion_matrix.png)
+![Structural Confusion Matrix](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F5_structural_decision_confusion_matrix.png)
 
 ---
 
 ## 6. Numerical Stability & Quantization Dynamics
 
-Detailed microtrace and stress testing results from [NUMERICAL_MICROTRACE.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/NUMERICAL_MICROTRACE.csv) and [NUMERICAL_STRESS_RESULTS.csv](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/NUMERICAL_STRESS_RESULTS.csv):
+Detailed microtrace and stress testing results from [NUMERICAL_MICROTRACE.csv](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/NUMERICAL_MICROTRACE.csv) and [NUMERICAL_STRESS_RESULTS.csv](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/NUMERICAL_STRESS_RESULTS.csv):
 
 - **Mean Microtrace Absolute Error:** $7.98 \times 10^{-6}$
 - **Maximum Microtrace Absolute Error:** $8.90 \times 10^{-5}$
 - **Full Confirmatory Mean Grid Error:** $2.27 \times 10^{-4}$ ($\approx 0.23 \text{ ULP}$)
 - **Overflows / Underflows / NaNs:** **$0$ occurrences**
 
-![Quantization Error Distribution](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F2_corr_grid_quantization_error_distribution.png)
+![Quantization Error Distribution](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F2_corr_grid_quantization_error_distribution.png)
 
-![Error Over Time](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F3_corr_grid_error_over_time.png)
+![Error Over Time](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F3_corr_grid_error_over_time.png)
 
 ---
 
@@ -142,13 +142,13 @@ Detailed microtrace and stress testing results from [NUMERICAL_MICROTRACE.csv](f
 3. **Lag Specificity on $I_3$ and $I_4$:**  
    Support F1 is identical between C0 and C1 ($0.2133$ on $I_3$, $0.1143$ on $I_4$). Precision compaction introduces zero hyperparameter tuning. Status remains **PARTIAL**.
 
-![I10 Dual Occupancy Parity](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F9_I10_frac_both_parity.png)
+![I10 Dual Occupancy Parity](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F9_I10_frac_both_parity.png)
 
-![Support F1 Parity](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F7_support_F1_C0_vs_C1.png)
+![Support F1 Parity](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F7_support_F1_C0_vs_C1.png)
 
-![I9 Conditional Gains](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F8_I9_conditional_gain_parity.png)
+![I9 Conditional Gains](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F8_I9_conditional_gain_parity.png)
 
-![Resource Vector Comparison](file:///d:/Projetos/Codinome%20Lebre/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F10_resource_vector_C0_vs_C1.png)
+![Resource Vector Comparison](<lebre-research>/experiments/LEBRE-V0.2-RESOURCE-COMPACTION-01/figures/F10_resource_vector_C0_vs_C1.png)
 
 ---
 

@@ -101,18 +101,18 @@ To test the true causal contribution of the two-timescale quiescence gate, the i
 ## 5. Artifacts and Diagnostic Figures Generated
 
 ### 5.1 Written Artifacts
-- Methodological Note: [`DYNAMIC_LAG_LIFECYCLE_01A_METHOD_NOTE.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_METHOD_NOTE.md)
-- Audit Protocol: [`DYNAMIC_LAG_LIFECYCLE_01A_PROTOCOL.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_PROTOCOL.md)
-- Evidence Hashes: [`DYNAMIC_LAG_LIFECYCLE_01A_ORIGINAL_ARTIFACT_HASHES.txt`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_ORIGINAL_ARTIFACT_HASHES.txt)
-- Static Config Diff: [`B7_B7E0_CONFIG_DIFF.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_CONFIG_DIFF.md)
-- Execution Trace: [`B7_B7E0_EXECUTION_TRACE.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_EXECUTION_TRACE.md)
-- Micro-Trace CSV: [`B7_B7E0_MICROTRACE.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_MICROTRACE.csv)
-- Re-Audit Results CSV: [`B7_B7E0_SEED_RESULTS.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_SEED_RESULTS.csv)
-- Tap Events CSV: [`B7_B7E0_TAP_EVENTS.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_TAP_EVENTS.csv)
-- H1 Paired Differences CSV: [`H1_PAIRED_DIFFERENCES.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/H1_PAIRED_DIFFERENCES.csv)
-- Claim Traceability CSV: [`STATISTICAL_CLAIM_TRACEABILITY.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/STATISTICAL_CLAIM_TRACEABILITY.csv)
-- Statistical Re-Audit Report: [`DYNAMIC_LAG_LIFECYCLE_01A_STATISTICAL_REAUDIT.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_STATISTICAL_REAUDIT.md)
-- Formal Corrigendum: [`DYNAMIC_LAG_LIFECYCLE_01A_CORRIGENDUM.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_CORRIGENDUM.md)
+- Methodological Note: [`DYNAMIC_LAG_LIFECYCLE_01A_METHOD_NOTE.md`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_METHOD_NOTE.md)
+- Audit Protocol: [`DYNAMIC_LAG_LIFECYCLE_01A_PROTOCOL.md`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_PROTOCOL.md)
+- Evidence Hashes: [`DYNAMIC_LAG_LIFECYCLE_01A_ORIGINAL_ARTIFACT_HASHES.txt`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_ORIGINAL_ARTIFACT_HASHES.txt)
+- Static Config Diff: [`B7_B7E0_CONFIG_DIFF.md`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_CONFIG_DIFF.md)
+- Execution Trace: [`B7_B7E0_EXECUTION_TRACE.md`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_EXECUTION_TRACE.md)
+- Micro-Trace CSV: [`B7_B7E0_MICROTRACE.csv`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_MICROTRACE.csv)
+- Re-Audit Results CSV: [`B7_B7E0_SEED_RESULTS.csv`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_SEED_RESULTS.csv)
+- Tap Events CSV: [`B7_B7E0_TAP_EVENTS.csv`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/B7_B7E0_TAP_EVENTS.csv)
+- H1 Paired Differences CSV: [`H1_PAIRED_DIFFERENCES.csv`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/H1_PAIRED_DIFFERENCES.csv)
+- Claim Traceability CSV: [`STATISTICAL_CLAIM_TRACEABILITY.csv`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/STATISTICAL_CLAIM_TRACEABILITY.csv)
+- Statistical Re-Audit Report: [`DYNAMIC_LAG_LIFECYCLE_01A_STATISTICAL_REAUDIT.md`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_STATISTICAL_REAUDIT.md)
+- Formal Corrigendum: [`DYNAMIC_LAG_LIFECYCLE_01A_CORRIGENDUM.md`](<lebre-research>/experiments/DYNAMIC-LAG-LIFECYCLE-01A/DYNAMIC_LAG_LIFECYCLE_01A_CORRIGENDUM.md)
 
 ### 5.2 Diagnostic Figures (`experiments/DYNAMIC-LAG-LIFECYCLE-01A/figures/`)
 - `F1_B7_vs_B7E0_survival_D7.png`: Kaplan-Meier survival curves showing 86.7% tap survival in B7 vs 0.0% in corrected ungated B7_E0.

@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-ROOT_DIR = "d:/Projetos/Codinome Lebre"
+ROOT_DIR = "."
 AUDIT_DIR = os.path.join(ROOT_DIR, "experiments/LEBRE-V0.2-MULTIRATE-SEAL-AUDIT-01")
 PARENT_EXP_DIR = os.path.join(ROOT_DIR, "experiments/LEBRE-V0.2-SHADOW-MULTIRATE-DECOMPOSITION-01")
 

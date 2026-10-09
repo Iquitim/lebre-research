@@ -30,7 +30,7 @@ To prevent misinterpretation and scientific inflation:
 
 ## 3. Frozen Track-B Version (Section 0 & 1)
 
-The evaluation target is strictly frozen under [`M2_SINGLE_STATE_SPEC.md`](file:///d:/Projetos/Codinome%20Lebre/M2_SINGLE_STATE_SPEC.md):
+The evaluation target is strictly frozen under [`M2_SINGLE_STATE_SPEC.md`](<lebre-research>/M2_SINGLE_STATE_SPEC.md):
 - **Predictive Core:** Sparse linear filter with up to $K_{\max} = 10$ active features, probing $Q = 2$ candidates per step.
 - **Temporal Lag Bank:** Probing arbitrary non-contiguous lags $x_{j, t-d}$ up to $D_{\max} = 50$.
 - **Recurrent Core:** Minimal 1D scalar state ($N=1$) trained via exact online forward sensitivity RTRL.

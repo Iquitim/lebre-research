@@ -610,7 +610,7 @@ if __name__ == "__main__":
     # Save policy grid
     policy_grid = build_policy_grid()
     df_grid = pd.DataFrame(policy_grid)
-    df_grid.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/policy_grid.csv", index=False)
+    df_grid.to_csv("./experiments/M2-R1/policy_grid.csv", index=False)
     print(f"Preregistered Policy Grid: {len(policy_grid)} policies defined.")
     
     # -------------------------------------------------------------------------
@@ -635,7 +635,7 @@ if __name__ == "__main__":
         
     df_cal = pd.DataFrame(cal_rows)
     df_cal["is_pareto"] = compute_pareto_dominance(df_cal)
-    df_cal.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/calibration_results.csv", index=False)
+    df_cal.to_csv("./experiments/M2-R1/calibration_results.csv", index=False)
     print(f"Calibration complete: {sum(df_cal['is_pareto'])} policies on empirical Pareto frontier.")
     
     # -------------------------------------------------------------------------
@@ -658,11 +658,11 @@ if __name__ == "__main__":
         
     df_val = pd.DataFrame(val_rows)
     df_val["is_pareto"] = compute_pareto_dominance(df_val)
-    df_val.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/validation_results.csv", index=False)
+    df_val.to_csv("./experiments/M2-R1/validation_results.csv", index=False)
     
     # Save Pareto frontier table
     df_pareto = df_val[df_val["is_pareto"]].copy()
-    df_pareto.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/pareto_frontier.csv", index=False)
+    df_pareto.to_csv("./experiments/M2-R1/pareto_frontier.csv", index=False)
     print(f"\nValidation complete: {len(df_pareto)} policies on Validation Pareto frontier.")
     
     # -------------------------------------------------------------------------
@@ -683,7 +683,7 @@ if __name__ == "__main__":
         
     df_hold = pd.DataFrame(hold_rows)
     df_hold["is_pareto"] = compute_pareto_dominance(df_hold)
-    df_hold.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/holdout_results.csv", index=False)
+    df_hold.to_csv("./experiments/M2-R1/holdout_results.csv", index=False)
     print("Holdout evaluation complete.")
     
     # -------------------------------------------------------------------------
@@ -750,7 +750,7 @@ if __name__ == "__main__":
         })
         
     df_cost = pd.DataFrame(cost_rows)
-    df_cost.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/cost_asymmetry.csv", index=False)
+    df_cost.to_csv("./experiments/M2-R1/cost_asymmetry.csv", index=False)
     print("\n--- TABLE C: STREAM FAMILY ROBUSTNESS & COST ASYMMETRY ---")
     print(df_cost[["stream_family", "false_evictions_per_seed", "stale_retention_pct", "active_recall", "global_mse", "cost_asymmetry_ratio"]].to_string(index=False))
     
@@ -791,7 +791,7 @@ if __name__ == "__main__":
             "corr_oracle_necessity": corr_oracle
         })
     df_diag = pd.DataFrame(diag_rows)
-    df_diag.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/energy_diagnostics.csv", index=False)
+    df_diag.to_csv("./experiments/M2-R1/energy_diagnostics.csv", index=False)
     print("\n--- TABLE D: DIAGNOSTIC CONTROLS ---")
     print(df_diag.to_string(index=False))
     
@@ -821,7 +821,7 @@ if __name__ == "__main__":
             "status": "PASS" if g_pass else "FAIL"
         })
     df_gate = pd.DataFrame(gate_rows)
-    df_gate.to_csv("d:/Projetos/Codinome Lebre/experiments/M2-R1/freeze_gate_audit.csv", index=False)
+    df_gate.to_csv("./experiments/M2-R1/freeze_gate_audit.csv", index=False)
     print("\n--- TABLE E: FREEZE GATE AUDIT ---")
     print(df_gate.to_string(index=False))
     
@@ -897,7 +897,7 @@ if __name__ == "__main__":
     plt.ylim(-0.1, 2.6)
     plt.tight_layout()
     
-    bubble_path = "d:/Projetos/Codinome Lebre/experiments/M2-R1/pareto_bubble_chart.png"
+    bubble_path = "./experiments/M2-R1/pareto_bubble_chart.png"
     plt.savefig(bubble_path)
     plt.close()
     
@@ -1067,7 +1067,7 @@ if __name__ == "__main__":
     ax.grid(False)
     
     plt.tight_layout()
-    fig_path = "d:/Projetos/Codinome Lebre/experiments/M2-R1/figures.png"
+    fig_path = "./experiments/M2-R1/figures.png"
     plt.savefig(fig_path)
     plt.close()
     

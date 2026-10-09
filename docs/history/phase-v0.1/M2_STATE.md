@@ -44,9 +44,9 @@ The baseline learner deployed in M2 is the frozen Track B causal learner establi
 
 ### 3.1 Bounded Representational Memory
 Rather than using large recurrent neural networks, temporal history is retained in a minimal, explicit ring buffer or a 1D scalar recurrent state:
-- **Explicit Component**: [`TemporalRingBuffer`](file:///d:/Projetos/Codinome%20Lebre/src/utils/temporal_buffer.py) ($D \times (L_{\max} + 1) \times 8$ bytes).
-- **Minimal Learned State Component**: [`LinearScalarState`](file:///d:/Projetos/Codinome%20Lebre/src/models/minimal_state.py) ($48\text{ bytes}$, $18\text{ FLOPs}$), [`GatedScalarState`](file:///d:/Projetos/Codinome%20Lebre/src/models/minimal_state.py) ($104\text{ bytes}$, $28\text{ FLOPs}$).
-- **Autonomous Lifecycle Component**: [`AdaptiveStateLifecycleManager`](file:///d:/Projetos/Codinome%20Lebre/src/models/state_lifecycle.py) controlling `DORMANT`, `PROVISIONAL`, `ACTIVE`, `MATURE`, and `EVICTED` transitions with decoupled Normalized LMS readout updates.
+- **Explicit Component**: [`TemporalRingBuffer`](<lebre-research>/src/utils/temporal_buffer.py) ($D \times (L_{\max} + 1) \times 8$ bytes).
+- **Minimal Learned State Component**: [`LinearScalarState`](<lebre-research>/src/models/minimal_state.py) ($48\text{ bytes}$, $18\text{ FLOPs}$), [`GatedScalarState`](<lebre-research>/src/models/minimal_state.py) ($104\text{ bytes}$, $28\text{ FLOPs}$).
+- **Autonomous Lifecycle Component**: [`AdaptiveStateLifecycleManager`](<lebre-research>/src/models/state_lifecycle.py) controlling `DORMANT`, `PROVISIONAL`, `ACTIVE`, `MATURE`, and `EVICTED` transitions with decoupled Normalized LMS readout updates.
 - **Causality Guarantee**: Zero future leakage. Read pointer strictly restricts candidates at lag $\ell$ to historical steps $\le t - \ell$. Online forward sensitivity propagates gradient credit causally forward.
 
 ---
@@ -97,7 +97,7 @@ Rather than using large recurrent neural networks, temporal history is retained 
   - **Empirical Pareto Frontier**: Mapped the complete non-dominated trade-off curve across 12 causal policies between Premature Eviction, Stale Retention, Global MSE, and Compute.
   - **Information-Theoretic Bound Isolated**: Proved mathematically and empirically that causal detection delay (150-300 steps) creates a fundamental trade-off: distinguishing silent Poisson gaps from true state-free regimes mechanically requires 15-35% retention during 1,000-step phases, which collapses to 5.72% on 4,000-step phases.
   - **Cost Asymmetry Robustness**: Empirically confirmed $C_{\text{FE}} / C_{\text{FR}} > 300 : 1$ across all 6 stream families (up to $235,454 : 1$ under frequent switching).
-  - **Freeze Decision**: Formal certification of `M2_SINGLE_STATE_CORE = FROZEN_WITH_SCOPE_LIMITS` under specification [`M2_SINGLE_STATE_SPEC.md`](file:///d:/Projetos/Codinome%20Lebre/M2_SINGLE_STATE_SPEC.md).
+  - **Freeze Decision**: Formal certification of `M2_SINGLE_STATE_CORE = FROZEN_WITH_SCOPE_LIMITS` under specification [`M2_SINGLE_STATE_SPEC.md`](<lebre-research>/M2_SINGLE_STATE_SPEC.md).
 
 ---
 
@@ -117,5 +117,5 @@ Rather than using large recurrent neural networks, temporal history is retained 
 ---
 
 ## 6. Current Gate: Section 131 Hard Stop Enforced
-Under Section 131 of the M2-R1 specification, execution is halted immediately upon completion of the freeze review. The canonical single-state core is frozen in [`M2_SINGLE_STATE_SPEC.md`](file:///d:/Projetos/Codinome%20Lebre/M2_SINGLE_STATE_SPEC.md). No further tuning or unrequested changes are executed.
+Under Section 131 of the M2-R1 specification, execution is halted immediately upon completion of the freeze review. The canonical single-state core is frozen in [`M2_SINGLE_STATE_SPEC.md`](<lebre-research>/M2_SINGLE_STATE_SPEC.md). No further tuning or unrequested changes are executed.
 

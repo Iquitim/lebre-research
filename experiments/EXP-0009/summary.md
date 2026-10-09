@@ -158,11 +158,11 @@ While A1 fits comfortably under the compute ceiling ($148.8$ FLOPs/step, $24.7\%
 ---
 
 ## 6. Artifact Manifest
-- Pre-Audit: [`ACTIVE_PROBE_SEMANTICS_AUDIT.md`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/ACTIVE_PROBE_SEMANTICS_AUDIT.md)
-- Configuration: [`config.json`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/config.json)
-- Master Runner: [`run_active_diagnostic.py`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/run_active_diagnostic.py)
-- Diagnostic Module: [`src/diagnostics/active_probe_diagnostic.py`](file:///d:/Projetos/Codinome%20Lebre/src/diagnostics/active_probe_diagnostic.py)
-- Unit Tests: [`tests/test_exp_0009.py`](file:///d:/Projetos/Codinome%20Lebre/tests/test_exp_0009.py) (4/4 passing, 60/60 repo-wide passing)
-- Raw Events: [`active_probe_events.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/active_probe_events.csv) (56,265 rows)
-- Metrics CSVs: [`channel_metrics.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/channel_metrics.csv), [`precision_at_k.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/precision_at_k.csv), [`group_probe_metrics.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/group_probe_metrics.csv), [`residual_stratification.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/residual_stratification.csv), [`temporal_stratification.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/temporal_stratification.csv), [`causal_controls.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/causal_controls.csv), [`compute_projection.csv`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/compute_projection.csv)
-- 12-Panel Publication Figure: [`figures.png`](file:///d:/Projetos/Codinome%20Lebre/experiments/EXP-0009/figures.png)
+- Pre-Audit: [`ACTIVE_PROBE_SEMANTICS_AUDIT.md`](<lebre-research>/experiments/EXP-0009/ACTIVE_PROBE_SEMANTICS_AUDIT.md)
+- Configuration: [`config.json`](<lebre-research>/experiments/EXP-0009/config.json)
+- Master Runner: [`run_active_diagnostic.py`](<lebre-research>/experiments/EXP-0009/run_active_diagnostic.py)
+- Diagnostic Module: [`src/diagnostics/active_probe_diagnostic.py`](<lebre-research>/src/diagnostics/active_probe_diagnostic.py)
+- Unit Tests: [`tests/test_exp_0009.py`](<lebre-research>/tests/test_exp_0009.py) (4/4 passing, 60/60 repo-wide passing)
+- Raw Events: [`active_probe_events.csv`](<lebre-research>/experiments/EXP-0009/active_probe_events.csv) (56,265 rows)
+- Metrics CSVs: [`channel_metrics.csv`](<lebre-research>/experiments/EXP-0009/channel_metrics.csv), [`precision_at_k.csv`](<lebre-research>/experiments/EXP-0009/precision_at_k.csv), [`group_probe_metrics.csv`](<lebre-research>/experiments/EXP-0009/group_probe_metrics.csv), [`residual_stratification.csv`](<lebre-research>/experiments/EXP-0009/residual_stratification.csv), [`temporal_stratification.csv`](<lebre-research>/experiments/EXP-0009/temporal_stratification.csv), [`causal_controls.csv`](<lebre-research>/experiments/EXP-0009/causal_controls.csv), [`compute_projection.csv`](<lebre-research>/experiments/EXP-0009/compute_projection.csv)
+- 12-Panel Publication Figure: [`figures.png`](<lebre-research>/experiments/EXP-0009/figures.png)
