@@ -61,3 +61,6 @@ Memória estimada (não medida): 85,092 B de 131,072 B (cabe).
   prédios, solar e carga (1,24 a 1,43) e pior nas bacias e no câmbio.
 - **Limites:** a memória é estimativa, não medição; o IC do conjunto trata as séries como independentes; os adendos da
   régua (choque) foram decididos no desenvolvimento, antes desta execução.
+
+**Adendo (09/10/2026, só referência):** o SARIMAX com entradas foi rodado de novo no câmbio com as entradas preenchidas pela
+regra da v0.52 (`ADENDO_SARIMAX_FX_RESULTADO.md`): SARIMAX-X ÷ v0.53 = 1,123 (fx_ret), 1,058 (fx_abs), 1,065 (fx_niv).
