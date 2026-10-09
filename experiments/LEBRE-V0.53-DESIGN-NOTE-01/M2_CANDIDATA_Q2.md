@@ -21,3 +21,9 @@ declaradas.
 LEBRE Lab, `analises/E18B_RESULTADO.md`. Q2 falha no critério 1 em CURTAS (limite superior 1,0107 > 1,01; Boston curta
 1,021). A Q atende a tudo no E16b (mesma régua). **Pela regra da seção 2, fica a candidata Q.** (Correção de registro: o
 commit `fc71880` diz "104 tests"; são 103.)
+
+## 4. Releitura com o adendo 3 da régua (E16c, 09/10/2026)
+
+LEBRE Lab, `analises/E16C_RESULTADO.md`. Com o limite do choque dependente do tamanho do trecho (adendo 3), **Q e Q2 atendem
+a todos os critérios nas 64 famílias**. Pela regra da seção 2, **a candidata da M2 passa a ser a Q2**. Vai para a validação
+5 junto com a M1 que ficar.
