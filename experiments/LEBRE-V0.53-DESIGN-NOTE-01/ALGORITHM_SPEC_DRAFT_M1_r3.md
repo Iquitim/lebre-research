@@ -39,3 +39,9 @@ Se atender, a M1 r3 e a M2 Q vão juntas para a validação 5.
 Nos rascunhos 1 e 2, o custo do Prod do especialista (~31 FP por passo) não era somado em `precisao.py`; os custos
 reportados no E11, no E12 e na validação 4 estão subestimados nesse valor. A conclusão de F6 em Y-B03 não muda (1,94 vez
 passaria a ~1,98, abaixo de 2,5). No rascunho 3 o custo do Prod e o da normalização são somados.
+
+## 4. Resultado no desenvolvimento ampliado (E16, 09/10/2026): não atende
+
+LEBRE Lab, `analises/E16_RESULTADO.md` e `E16_ALVO_RESULTADO.md`. F6: atende em B07 (0,975) e XB07 (1,048); não em B03
+(1,851; meta 1,652; o rascunho 2, com bandas, dava 1,392) nem em VB07 (1,084; meta 1,056); melhora a v0.52 nas quatro. Critério
+2 da M2: falha em B01 (Arinos 2 500 kV 1,421), C05 (1,026), WC05 e YC05 (inflação mensal). Nada ajustado.

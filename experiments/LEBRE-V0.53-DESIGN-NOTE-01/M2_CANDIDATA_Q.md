@@ -30,3 +30,10 @@ na P.
 E16 (desenvolvimento ampliado: as 59 famílias do desenvolvimento e das validações 1 a 4, todas já gastas, mais as cinco
 famílias curtas), régua por decidibilidade **com o adendo de 09/10** (choque > 5% → indecidível no critério 1), limite de
 150 FP. Se atender, validação 5 nova, congelada, usada uma vez, junto com a M1 rascunho 3.
+
+## 4. Resultado no desenvolvimento ampliado (E16, 09/10/2026)
+
+LEBRE Lab, `analises/E16_RESULTADO.md`. **Não atende pela regra**, por uma única família: Y-C02 no critério 2 (1,011,
+limite superior 1,021 > 1,02), vindo de uma série (abs_baht_1990, 1,046) cujo maior passo é 21,6% do erro da referência,
+o mesmo tipo de choque do adendo de 09/10, que vale só para o critério 1. As outras 63 famílias atendem; as falhas da P
+na validação 4 (critério 1 em Y-C01 e Y-B07) não aparecem (Y-B07: 0,976). Custo 118-137 FP por passo.
