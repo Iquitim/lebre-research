@@ -4,7 +4,7 @@
 fixada em 05/10/2026, antes de qualquer código da v0.53 (`experiments/LEBRE-V0.53-DATA-01/`, `SPLIT_V053.json`,
 SHA-256 `c2e983c6…aaff0d2d` no arquivo `SPLIT_V053_SHA256.txt`); a cópia dos 55 arquivos brutos confere com
 `SNAPSHOT_SHA256SUMS.txt` (verificado em 09/10, só os hashes). O código foi testado apenas com séries **não reservadas** no
-mesmo formato (seção 7). **A execução só começa depois da aprovação deste documento pelo responsável pelo projeto.**
+mesmo formato (seção 7). **A execução só começa depois da aprovação deste documento pelo responsável pelo projeto.** **Aprovado pelo responsável pelo projeto em 09/10/2026, depois das verificações de `ENSAIO_RESULTADO.md`.**
 
 ## 1. Pergunta
 
