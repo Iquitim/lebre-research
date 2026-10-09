@@ -92,10 +92,15 @@ def usina(tipo, nome, arquivos_ons, arq_tempo):
 
 
 # ------------------------------------------------------------------ ONS: carga
+CODIGO_SUB = {"SUDESTE": "SE", "SUL": "S", "NORDESTE": "NE", "NORTE": "N"}
+
+
 def carga(sub, arq_carga, arq_tempo, horas=HORAS_CARGA):
     df = pd.read_csv(arq_carga, sep=";", decimal=".")
     df["din_instante"] = pd.to_datetime(df["din_instante"])
-    c = df.pivot_table(index="din_instante", columns="nom_subsistema", values="val_cargaenergiahomwmed")[sub]
+    # pelo código do subsistema: em 2026 o ONS renomeou "SUDESTE" para "SUDESTE/CENTRO-OESTE" (o código SE não mudou);
+    # falha de infraestrutura na execução final, corrigida e documentada em RUN_NOTAS.md
+    c = df.pivot_table(index="din_instante", columns="id_subsistema", values="val_cargaenergiahomwmed")[CODIGO_SUB[sub]]
     c = c[(c.index >= horas[0]) & (c.index <= horas[-1])]
     return serie(f"{sub}_{horas[0].year}", c, tempo(arq_tempo, VARS_CARGA), season=24, season2=168)
 
