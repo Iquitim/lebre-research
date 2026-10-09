@@ -3,6 +3,8 @@
   lebre-research (this repository): the final pre-registered evaluation (experiments/LEBRE-V0.53-FINAL-01/);
   lebre-lab (github.com/Iquitim/lebre-lab): development, validations 1 to 5 and diagnostics. Its checkout is located by
   the environment variable LEBRE_LAB, or by default as a sibling folder "lebre-lab" of this repository.
+The evidence about the structural core (development, reserves 1 to 3, microcontroller) is read by v052_data.py from the
+frozen v0.52 result folders of this repository (key "base").
 Only reads; nothing is written to either repository."""
 import glob
 import json
@@ -59,7 +61,8 @@ def final():
     ens_ok = [e for e in ens if not e["erro"]]
     return dict(R=R, fam=fam, overall=R["geral_v053_sobre_v052"], short=R["curtas"], ties=R["curtas_empates_exatos"],
                 ram=R["ram_estimada_bytes"], ram_info=R["ram_info"], n=len(S), promoted=R["promovida"],
-                inc_all=[x["acrescimo_custo"] for x in S],
+                inc_all=[x["acrescimo_custo"] for x in S], cost_all=[x["custo_v053"] for x in S],
+                core_cost_all=[x["custo_v052"] for x in S],
                 rehearsal=dict(n=len(ens), errors=len(ens) - len(ens_ok),
                                camels=gm([e["razao"] for e in ens_ok if e["tarefa"].startswith("camels")]),
                                bdg2=gm([e["razao"] for e in ens_ok if e["tarefa"].startswith("bdg2")])))
@@ -136,7 +139,9 @@ def shocks():
 
 
 def load():
-    return dict(final=final(), f6=f6(), val=validations(), dev=development(), shocks=shocks(), lab_commit=lab_commit())
+    import v052_data
+    return dict(final=final(), f6=f6(), val=validations(), dev=development(), shocks=shocks(), lab_commit=lab_commit(),
+                base=v052_data.load())
 
 
 if __name__ == "__main__":

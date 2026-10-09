@@ -1,0 +1,10 @@
+# LEBRE v0.53 specification, revision 1 (2026-10-09): self-contained document (structural core + M1 + M2). PDFs, HTMLs and builder. Inputs: this repository (v0.53 final evaluation; core evidence from the frozen v0.52 result folders) and the public LEBRE Lab at commit 6f328bb.
+5482807a30fad7297ce23489e545954f20f5c21c92f178a2bd81461438b04eec *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_r1_PTBR.pdf
+c899ac43e62d20171a1ab58291b0d0123557f3f725347a1e8fcd9ce5114ba949 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_r1_EN.pdf
+1fa16ca21c9e09dc109192e49c18e15530944f6e0408eef819bf3b405f84bdd5 *docs/architecture/pdf_source/LEBRE_v0.53r1_SPEC_PTBR.html
+20c56520ec91f3787331f87acd5b2dee3453d52884af937bb5464aa86b5a9036 *docs/architecture/pdf_source/LEBRE_v0.53r1_SPEC_EN.html
+361e3fdfd86520c643d96f4a1429a029e51327f640d0a5c9d21e0f41902e776a *docs/architecture/pdf_source/build_v053_spec.py
+0ea2476f995ce974982bb13c21b897a8e75e775f9bc9cb4da97c7f89579fb6b3 *docs/architecture/pdf_source/v053_text.py
+dfa0ddfcf226dae899793f11f9e1aef68dd02d916f3387f6f6182116008d740a *docs/architecture/pdf_source/v053_charts.py
+4964c8c3634274090a0a9456a52115bcf5d15cbbd74891a9915b7a5f02739c30 *docs/architecture/pdf_source/v053_diagrams.py
+5ee84e04848cc1df1415f23b95d09a5affddb7093e60e5f725ff774158f82511 *docs/architecture/pdf_source/v053_data.py

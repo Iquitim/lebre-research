@@ -10,7 +10,7 @@ The 90 folders are grouped by research phase. Each folder is self-contained: scr
 
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
-Promoted on 9 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`; spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_{EN,PTBR}.pdf`). Development, validations 1 to 5 and diagnostics are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).
+Promoted on 9 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`; self-contained spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_r1_{EN,PTBR}.pdf`). Development, validations 1 to 5 and diagnostics are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).
 
 | Folder | Role | Status |
 |---|---|---|

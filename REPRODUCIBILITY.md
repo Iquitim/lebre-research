@@ -110,6 +110,6 @@ v0.53 was developed in the public **LEBRE Lab** ([github.com/Iquitim/lebre-lab](
 | Final run (single, pre-registered) | `final_run.py` (v0.53, v0.52, reference, SARIMAX-X), `final_chronos.py` (Chronos-2) | `preds/`, `chronos/` |
 | Analysis | `final_analise.py` | `FINAL_RESULTADO.md`, `final_resultado.json` |
 | Reference addendum (after the result) | `adendo_sarimax_fx.py` | `ADENDO_SARIMAX_FX_RESULTADO.md` |
-| Integrity | `docs/architecture/LEBRE_v0.53_SHA256SUMS.txt` (177 files), `LEBRE_v0.53_SPEC_SHA256SUMS.txt` | `python scripts/verify_integrity.py` |
+| Integrity | `docs/architecture/LEBRE_v0.53_SHA256SUMS.txt` (177 files), `LEBRE_v0.53_SPEC_r1_SHA256SUMS.txt` (specification, revision 1) | `python scripts/verify_integrity.py` |
 
 **Caveats.** The reserve is consumed: re-running reproduces the published result, but it is not a new evaluation. Two fixes made during the run (reading the 2026 load by subsystem code; an exact-tie degenerate short series) are in `experiments/LEBRE-V0.53-FINAL-01/RUN_NOTAS.md`. Validations 4 and 5 of the Lab built the solar, wind and load families with a 30 h cycle instead of 24 h (errata in the Lab, `analises/ERRATA_SEASON_VALIDACOES_4_5.md`).

@@ -18,6 +18,11 @@ MANIFESTS = sorted((ROOT / "docs" / "architecture").glob("*SHA256SUMS*.txt"))
 SUPERSEDED = {("LEBRE_v0.52_SPEC_SHA256SUMS.txt", p) for p in (
     "docs/architecture/pdf_source/build_v052_spec.py", "docs/architecture/pdf_source/v052_text.py",
     "docs/architecture/pdf_source/v052_charts.py", "docs/architecture/pdf_source/v052_data.py")}
+# The same for the v0.53 spec: revision-0 build sources updated in place to build the self-contained revision 1
+# (LEBRE_v0.53_RELEASE_NOTES.md); the revision-0 PDFs/HTML are unchanged and verified.
+SUPERSEDED |= {("LEBRE_v0.53_SPEC_SHA256SUMS.txt", p) for p in (
+    "docs/architecture/pdf_source/build_v053_spec.py", "docs/architecture/pdf_source/v053_text.py",
+    "docs/architecture/pdf_source/v053_diagrams.py", "docs/architecture/pdf_source/v053_data.py")}
 
 
 # Files whose local absolute paths were removed before publication (scripts/sanitize_local_paths.py): the manifest keeps

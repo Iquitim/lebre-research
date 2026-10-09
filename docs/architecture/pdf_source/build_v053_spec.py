@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
-"""build_v053_spec.py — builds the LEBRE v0.53 specification and technical report (PT-BR and EN): the same visual
-template, CSS, logo and PDF pipeline as build_v052_spec.py (imported, not changed), inline SVG diagrams and matplotlib
-charts, KaTeX math, PDF via Edge headless, page renders for visual QA. Every empirical number is read from the result
-files at build time (v053_data.py: this repository and the public LEBRE Lab); the documents never refer to local paths.
+"""build_v053_spec.py — builds the self-contained LEBRE v0.53 specification and technical report, revision 1 (PT-BR and
+EN): the same visual template, CSS, logo and PDF pipeline as build_v052_spec.py (imported, not changed), inline SVG
+diagrams and matplotlib charts, KaTeX math, PDF via Edge headless, page renders for visual QA. The document describes the
+whole LEBRE (structural core + M1 + M2); the charts about the core come from build_v052_spec.charts (imported, not
+changed). Every empirical number is read from the result files at build time (v053_data.py: this repository and the
+public LEBRE Lab); the documents never refer to local paths.
 Usage: python build_v053_spec.py [pt|en] [--qa <folder for page renders>]"""
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+import numpy as np
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -23,12 +27,19 @@ PDF_DIR = ROOT / "docs" / "architecture" / "pdf"
 def charts(lang, N):
     T = lambda a, b: a if lang == "pt" else b
     F = CH.Fmt(lang); fam = N["final"]["fam"]; FN = FAM[lang]
-    G = {"fam_ratio": CH.fam_ratio([(FN[k], k, fam[k]["ratios"], fam[k]["ratio"]) for k in FAMS], F,
-                                   T("v0.53 ÷ v0.52 (MSE, escala log)", "v0.53 ÷ v0.52 (MSE, log scale)"), "v0.52 = 1",
+    mn52 = B52.MN[lang]; keep = dict(mn52)   # core charts: the core is labelled as such, v0.51 as the previous architecture
+    mn52.update(V052_PY=T("LEBRE: núcleo", "LEBRE: core"), V051=T("arquitetura anterior (v0.51)", "previous architecture (v0.51)"))
+    try:
+        G = {k: v for k, v in B52.charts(lang, N["base"]).items()
+             if k in ("eproc", "misadj", "ev_trace", "response", "stress", "fdr", "forecast", "bar_r3", "mcu_steps", "mcu_mem")}
+    finally:
+        mn52.clear(); mn52.update(keep)
+    G |= {"fam_ratio": CH.fam_ratio([(FN[k], k, fam[k]["ratios"], fam[k]["ratio"]) for k in FAMS], F,
+                                   T("LEBRE ÷ núcleo (MSE, escala log)", "LEBRE ÷ core (MSE, log scale)"), T("núcleo = 1", "core = 1"),
                                    T("média geométrica da família", "family geometric mean")),
          "cost_gain": CH.cost_gain([(x["acrescimo_custo"], x["v053_sobre_v052"], x["familia"]) for x in N["final"]["R"]["series"]], F,
-                                   T("acréscimo de custo sobre a v0.52 (FP por passo)", "cost increment over v0.52 (FP per step)"),
-                                   T("v0.53 ÷ v0.52 (MSE, log)", "v0.53 ÷ v0.52 (MSE, log)"), {k: FN[k] for k in FAMS})}
+                                   T("acréscimo de custo de M1 + M2 (FP por passo)", "cost increment of M1 + M2 (FP per step)"),
+                                   T("LEBRE ÷ núcleo (MSE, log)", "LEBRE ÷ core (MSE, log)"), {k: FN[k] for k in FAMS})}
     return G
 
 
@@ -36,16 +47,16 @@ def cover(L, N, lang):
     P = lang == "pt"; T = lambda a, b: a if P else b
     n = lambda x, d: (f"{x:,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".") if P else f"{x:,.{d}f}")
     F = N["final"]; ov = F["overall"]
-    import numpy as np
     inc = float(np.median(F["inc_all"]))
-    meta = [("Status", T("versão de pesquisa promovida por regra pré-registrada (09/10/2026); a v0.52 continua congelada e inalterada",
-                         "research version promoted by a pre-registered rule (2026-10-09); v0.52 remains frozen and unchanged")),
-            (T("Avaliação final", "Final evaluation"), T(f"{F['n']} séries reservadas; v0.53 ÷ v0.52 = {n(ov['geo'], 3)} [IC 95% {n(ov['ic95'][0], 3)}; {n(ov['ic95'][1], 3)}]; nenhuma piora por família",
-                                                         f"{F['n']} reserved series; v0.53 ÷ v0.52 = {n(ov['geo'], 3)} [95% CI {n(ov['ic95'][0], 3)}; {n(ov['ic95'][1], 3)}]; no harm per family")),
-            (T("Custo", "Cost"), T(f"acréscimo mediano de {n(inc, 0)} operações por passo sobre a v0.52 na avaliação final (limite de 1.100); memória estimada {n(F['ram'] / 1024, 1)} KB",
-                                   f"median increment of {n(inc, 0)} operations per step over v0.52 in the final evaluation (limit 1,100); estimated memory {n(F['ram'] / 1024, 1)} KB")),
-            (T("Escopo", "Scope"), T("ganho em bacias e câmbio; idêntica à v0.52 em solar, eólica e carga; um passo à frente",
-                                     "gain in basins and FX; identical to v0.52 in solar, wind and load; one step ahead"))]
+    c_med = float(np.median(F["cost_all"]))
+    meta = [("Status", T("versão de pesquisa promovida por regra pré-registrada (09/10/2026); escopo: previsão de um passo à frente com entradas",
+                         "research version promoted by a pre-registered rule (2026-10-09); scope: one-step-ahead forecasting with inputs")),
+            (T("Avaliação final", "Final evaluation"), T(f"{F['n']} séries reservadas; LEBRE ÷ núcleo sozinho = {n(ov['geo'], 3)} [IC 95% {n(ov['ic95'][0], 3)}; {n(ov['ic95'][1], 3)}]; nenhuma piora por família",
+                                                         f"{F['n']} reserved series; LEBRE ÷ core alone = {n(ov['geo'], 3)} [95% CI {n(ov['ic95'][0], 3)}; {n(ov['ic95'][1], 3)}]; no harm per family")),
+            (T("Custo", "Cost"), T(f"mediana de {n(c_med, 0)} operações por passo (M1 + M2: +{n(inc, 0)}, teto de 1.100); memória estimada {n(F['ram'] / 1024, 1)} KB",
+                                   f"median of {n(c_med, 0)} operations per step (M1 + M2: +{n(inc, 0)}, ceiling 1,100); estimated memory {n(F['ram'] / 1024, 1)} KB")),
+            (T("Escopo da evidência", "Scope of the evidence"), T("ganho de M1 + M2 em bacias e câmbio; idêntica ao núcleo em solar, eólica e carga; núcleo avaliado na classe de orçamento em hidrologia e prédios",
+                                     "M1 + M2 gain in basins and FX; identical to the core in solar, wind and load; core evaluated in the budget class on hydrology and buildings"))]
     return f"""<div class="cover-page">
 <div class="cover-header"><div class="cover-logo-panel"><img class="cover-logo" src="{B52.LOGO}" alt="LEBRE"></div>
 <div class="cover-badge">{L['badge']}</div></div>
@@ -77,14 +88,15 @@ def main():
     qa = Path(args[args.index("--qa") + 1]) if "--qa" in args else None
     langs = [a for a in args if a in ("pt", "en")] or ["pt", "en"]
     N = load()
-    jobs = {"pt": ("LEBRE_v0.53_SPEC_PTBR.html", "LEBRE_ARCHITECTURE_v0.53_SPEC_PTBR.pdf"),
-            "en": ("LEBRE_v0.53_SPEC_EN.html", "LEBRE_ARCHITECTURE_v0.53_SPEC_EN.pdf")}
+    jobs = {"pt": ("LEBRE_v0.53r1_SPEC_PTBR.html", "LEBRE_ARCHITECTURE_v0.53_SPEC_r1_PTBR.pdf"),
+            "en": ("LEBRE_v0.53r1_SPEC_EN.html", "LEBRE_ARCHITECTURE_v0.53_SPEC_r1_EN.pdf")}
     for lang in langs:
         hname, pname = jobs[lang]
         html = build(lang, N)
         clean = re.sub(r"<(script|style)[^>]*>.*?</\1>|<link[^>]*>|data:image[^\"]+|<svg.*?</svg>", "", html, flags=re.S)
         assert not re.search(r"\{[a-zA-Z_]+\(|ab\[|\{n\(", clean), (lang, "unformatted expression")
-        for bad in ("experiments/", "experiments\\", "D:\\", "D:/", "C:\\", ".csv", ".py", "scratch", "PROTO", "Users", "¤"):
+        for bad in ("experiments/", "experiments\\", "D:\\", "D:/", "C:\\", ".csv", ".py", "scratch", "PROTO", "Users", "¤",
+                    "especificação v0.52", "v0.52 specification", "revisão 1, §", "revision 1, §"):
             assert bad not in clean, (lang, bad)
         (HERE / hname).write_text(html, encoding="utf-8")
         pdf = PDF_DIR / pname
