@@ -23,3 +23,10 @@ no mesmo dia (o commit foi substituído).
   todos os hashes de commit citados em documentos, no artigo e nas releases).
 
 **Prevenção:** logs com mensagens de erro do Python contêm caminhos absolutos; são sanitizados antes de qualquer commit.
+
+**Achado ao conferir os manifestos depois da limpeza (preexistente, não causado por ela):** nenhum dos 33 arquivos limpos
+consta de manifesto de congelamento (v0.1, v0.51, v0.51-r1 e v0.52 conferem integralmente). Mas 8 dos 9 arquivos mantidos
+(`experiments/LEBRE-V0.52-EXT-01/mcu/build_run.sh` e os 7 `renode_*.log`) **não conferem com o
+`LEBRE_v0.52_POSTFREEZE_SHA256SUMS.txt` desde o commit inicial do repositório** (`5d69f3b`): o conteúdo publicado é igual
+ao do git, mas diferente do registrado no manifesto. O manifesto da especificação v0.3.2 usa caminhos relativos a outra
+pasta (`pdf/...`) e não pode ser conferido a partir da raiz. Os dois casos ficam para investigação separada.
