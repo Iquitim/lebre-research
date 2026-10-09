@@ -198,7 +198,7 @@ class SwitchMonotono:
 
     def __init__(self):
         self.w = np.array([1.0, 1.0, 1.0, 0.0]) / 3.0          # [sempre R, sempre L, R com troca pendente, já trocou]
-        self.n = 0; self.trocas_regime = 0
+        self.n = 0; self.trocas_regime = 0; self.recuperacoes = 0
 
     def pesos(self):
         w = self.w
@@ -210,7 +210,15 @@ class SwitchMonotono:
         m = min(lr, ll)
         vr, vl = math.exp(-(lr - m)), math.exp(-(ll - m))
         w = self.w * np.array([vr, vl, vr, vl])
-        w = w / w.sum()
+        tot = w.sum()
+        if tot > 0 and math.isfinite(tot):
+            w = w / tot
+        else:                                                  # underflow (0/0): mesma conta em escala logarítmica
+            with np.errstate(divide="ignore"):
+                lw = np.log(self.w) - np.array([lr - m, ll - m, lr - m, ll - m])
+            w = np.exp(lw - lw.max())
+            w = w / w.sum()
+            self.recuperacoes += 1
         self.n += 1
         h = 1.0 / (self.n + 1)                                 # chance de a troca ocorrer no próximo instante
         mov = h * w[2]

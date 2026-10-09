@@ -547,3 +547,48 @@ def test_m1_r3_regressao_conjunta_a_cada_passo():
     assert p.n_rls - n0 >= 4990                                       # uma atualização por passo (sem trocas de conjunto)
     assert p.prod.s() > 0.5 and e1 <= 1.0 * e2
     assert p.fp > 0 and p.N > 0
+
+
+def test_q2_escala_volta_depois_de_um_pico():
+    """Q2: depois de um valor impossível isolado, a escala do Prod volta ao nível típico (com a Q ela fica presa)."""
+    rng = np.random.default_rng(31); T = 3000
+    X = rng.standard_normal((T, 2)); y = np.cumsum(0.1 * rng.standard_normal(T)) + X[:, 0]
+    y[1000] = 1e6
+    q = Lebre053(2, referencia="persistencia", saida="prod_q"); q2 = Lebre053(2, referencia="persistencia", saida="prod_q2")
+    for t in range(T):
+        assert math.isfinite(q.predict(X[t]).value) and math.isfinite(q2.predict(X[t]).value)
+        q.observe(float(y[t])); q2.observe(float(y[t]))
+    assert q._Nq > 1e11 and q2._Nq <= max(q._Nq * 0.99 ** 1990, 1e4)          # decai a 1% por passo depois do pico
+
+
+def test_m1_r4_mesmo_especialista_do_r2_e_sombra_na_entrada():
+    """Rascunho 4: as previsões do especialista são as do rascunho 2 (mesma RLS e recorte); L' = L até N_MIN atualizações
+    do Prod."""
+    rng = np.random.default_rng(32); T = 4000
+    X = rng.standard_normal((T, 4)); y = np.zeros(T)
+    for t in range(2, T):
+        y[t] = 0.5 * y[t - 1] + X[t, 0] + 0.7 * X[t - 3, 1] + 0.2 * rng.standard_normal()
+    a = Lebre053(4, referencia="persistencia", saida="prod_q2", precisao="r4")
+    b = Lebre053(4, referencia="persistencia", saida="prod_q2", precisao="r2")
+    viu_sombra = viu_uso = False
+    for t in range(T):
+        a.predict(X[t]); b.predict(X[t])
+        pa, pb = a.precisao, b.precisao
+        assert (pa.e is None) == (pb.e is None) and (pa.e is None or pa.e == pb.e)
+        if pa.e is not None and pa.prod.n < 100:
+            assert a._L == a._L52; viu_sombra = True
+        elif pa.e is not None:
+            viu_uso = True
+        a.observe(float(y[t])); b.observe(float(y[t]))
+    assert viu_sombra and viu_uso and 0.0 <= a.precisao.N
+
+
+def test_switch_monotono_sem_nan_quando_um_lado_some():
+    """Toda a massa num lado e esse lado perde por margem enorme: antes dava 0/0 (NaN); agora a conta vai para a escala
+    logarítmica, a posterior continua válida e a recuperação é contada."""
+    a = SwitchMonotono()
+    for _ in range(50):
+        a.atualizar((400.0, 0.0))                               # R perde muito: a massa de R some e a troca acontece
+    a.atualizar((0.0, 5000.0))                                  # agora L (o lado que sobrou) perde por margem enorme
+    p = a.pesos()
+    assert np.all(np.isfinite(p)) and abs(p.sum() - 1) < 1e-12 and a.recuperacoes >= 1

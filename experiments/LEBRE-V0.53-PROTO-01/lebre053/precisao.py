@@ -255,3 +255,45 @@ class EspecialistaConjuntoR3(EspecialistaDefasagensR2):
             if self.n_obs >= N_MIN and (self.sel is None or self.n_obs - self.n_sel >= T_MAX):
                 self._selecionar()
         self.yobs.append(float(y))
+
+
+# ------------------------------------------------------------------------------------------ rascunho 4 da M1
+# ALGORITHM_SPEC_DRAFT_M1_r4.md: o especialista do rascunho 2 sem mudança; Prod com as perdas normalizadas pelo maior erro
+# com esquecimento (N = max(perdas, LAM * N)) e entrada em sombra (L' = L até N_MIN atualizações do Prod).
+class EspecialistaDefasagensR4(EspecialistaDefasagensR2):
+    def __init__(self, d):
+        super().__init__(d)
+        self.N = 0.0
+
+    def _selecionar(self):
+        antigo = self.prod
+        super()._selecionar()
+        if self.prod is not antigo:                              # especialista novo: o Prod e a escala recomeçam
+            self.N = 0.0
+
+    def prever(self, x, L):
+        out = super().prever(x, L)
+        if self.e is None or self.prod.n < N_MIN:                 # sombra: o Prod aprende, a saída ainda não usa
+            return L
+        return out
+
+    def observar(self, y, L52, aprende, piso):
+        e52 = (y - L52) ** 2
+        if self.e is not None:
+            le = (y - self.e) ** 2
+            if math.isfinite(e52) and math.isfinite(le):
+                self.N = max(LAM * self.N, e52, le)
+                if self.N > 0:
+                    self.prod.atualizar(e52 / self.N, le / self.N)
+            self.fp += FP_PROD_PASSO + FP_NORMALIZACAO_R3
+        self.e2_52 = e52 if self.e2_52 is None else self.e2_52 + (1 - LAM) * (e52 - self.e2_52)
+        self._piso = piso
+        if aprende:
+            self.n_obs += 1
+            if self.n_obs % EVERY == 0:
+                self._triagem(self._x, y)
+                if self.z is not None:
+                    self._rls(self.z, y)
+            if self.n_obs >= N_MIN and (self.sel is None or self.n_obs - self.n_sel >= T_MAX):
+                self._selecionar()
+        self.yobs.append(float(y))

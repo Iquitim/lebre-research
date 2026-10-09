@@ -12,6 +12,7 @@ desenvolvimento depois do rascunho 6 (REFLEXAO_M2.md): saida="adahedge_ref_defin
 passos em que a referência declarada está definida (a sazonal só depois de um ciclo completo); e
 M2_CANDIDATA_S.md: saida="switch", switch distribution (van Erven et al., 2012) sobre gaussianas de variância comum; e
 M2_CANDIDATA_M.md: saida="switch_mono", a mesma restrita a trocas num só sentido (referência -> LEBRE); e
+M2_CANDIDATA_Q2.md: saida="prod_q2", a Q com o maior erro com esquecimento (LAM).
 M2_CANDIDATA_Q.md: saida="prod_q", a P com as perdas do Prod normalizadas pelo maior erro já visto (sem o recorte em 2σ).
 M2_CANDIDATA_P.md: saida="prod", (A,B)-Prod anytime com a candidata D como referência de confiança e a M como oportunista.
 M1 (ALGORITHM_SPEC_DRAFT_M1.md): precisao=True troca L pela combinação da v0.52 com o especialista de precisão (precisao.py);
@@ -30,7 +31,7 @@ import numpy as np
 from ._core import ALPHA_COV, CLIP_K, DECIDE_EVERY, EVERY, GAMMA_Q, LAM, N_MIN, SCALE_FLOOR, T_MAX
 from ._engine import ChangeEngine
 from ._model052 import Event, Forecast, Lebre as Lebre052
-from .precisao import (EspecialistaConjuntoR3, EspecialistaDefasagens, EspecialistaDefasagensR2,
+from .precisao import (EspecialistaConjuntoR3, EspecialistaDefasagens, EspecialistaDefasagensR2, EspecialistaDefasagensR4,
                        EspecialistaPrecisao)
 from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHARE_PASSO, FP_RECORTE_PASSO,
                         FP_SWITCH_MONO_PASSO, FP_SWITCH_PASSO, Agregador, FixedShare, FixedShareAdaptativo,
@@ -40,7 +41,7 @@ from .agregacao import (FP_AGREGACAO_PASSO, FP_COMPARTILHADA_PASSO, FP_FIXED_SHA
 REFERENCIAS = ("zero", "persistencia", "sazonal")
 SAIDAS = ("porta", "adahedge", "flipflop", "fixedshare", "adahedge_recortada", "adahedge_compartilhada",
           "adahedge_compartilhada_rapida", "adahedge_ref_definida", "switch", "switch_mono", "switch_mono_exato",
-          "switch_mono_jeffreys", "prod", "prod_q")
+          "switch_mono_jeffreys", "prod", "prod_q", "prod_q2")
 FP_NORMALIZACAO_Q = 3        # candidata Q: dois máximos e a normalização (as divisões substituem as do recorte)
 FP_PORTA_PASSO = 16           # perdas recortadas, incremento e médias exponenciais da porta (contagem aproximada)
 
@@ -78,7 +79,8 @@ class Lebre053:
         self.base = Lebre052(n_inputs, season=season, season2=season2, standardize=standardize)
         if precisao and not porta:
             raise ValueError("precisao=True exige porta=True (a M1 alimenta a M2)")
-        self.precisao = (EspecialistaConjuntoR3(n_inputs) if precisao == "r3"
+        self.precisao = (EspecialistaDefasagensR4(n_inputs) if precisao == "r4"
+                         else EspecialistaConjuntoR3(n_inputs) if precisao == "r3"
                          else EspecialistaDefasagensR2(n_inputs) if precisao == "r2"
                          else EspecialistaDefasagens(n_inputs) if precisao == "r1"
                          else EspecialistaPrecisao(n_inputs) if precisao else None)
@@ -113,7 +115,7 @@ class Lebre053:
             self.agregador = SwitchMonotonoExato()
         elif saida == "switch_mono_jeffreys":                     # oráculo de diagnóstico, custo O(t)
             self.agregador = SwitchMonotonoJeffreys()
-        elif saida in ("prod", "prod_q"):                         # candidatas P e Q: D (B) e M (A) combinadas pelo Prod
+        elif saida in ("prod", "prod_q", "prod_q2"):              # candidatas P, Q e Q2: D (B) e M (A) combinadas pelo Prod
             self.agregador = ProdAnytime()
             self._subD = Agregador(2); self._subM = SwitchMonotono()
             self._d = None; self._m = None; self._Nq = 0.0
@@ -176,7 +178,7 @@ class Lebre053:
         self._R = self._referencia()
         self._R_def = math.isfinite(self._R) and (self.referencia != "sazonal" or (
             len(self.hist) == self.season and math.isfinite(self.hist[0])))
-        if self.saida in ("prod", "prod_q"):
+        if self.saida in ("prod", "prod_q", "prod_q2"):
             if self._R_def:
                 wd, wm, sp = self._subD.pesos(), self._subM.pesos(), self.agregador.s()
                 self._d = float(wd[0] * self._R + wd[1] * self._L)
@@ -231,7 +233,7 @@ class Lebre053:
                     perdas.append((y - v) ** 2 / (2.0 * s2) + 0.5 * math.log(s2))
                 self.agregador.atualizar(perdas)
                 self.fp_porta += FP_FIXED_SHARE_PASSO
-            if self.saida in ("prod", "prod_q") and self._R_def:
+            if self.saida in ("prod", "prod_q", "prod_q2") and self._R_def:
                 fin = lambda v: v if math.isfinite(v) else 1e300           # rascunho 2 da M1: não propagar NaN
                 self._subD.atualizar((fin((y - R) ** 2), fin((y - L) ** 2)))  # D: como "adahedge_ref_definida"
                 self.fp_porta += FP_AGREGACAO_PASSO
@@ -243,7 +245,7 @@ class Lebre053:
                         self.agregador.atualizar(min((y - self._d) ** 2 / B2, 1.0), min((y - self._m) ** 2 / B2, 1.0))
                     else:                                               # candidata Q: normalizado pelo maior erro já visto
                         ld, lm = fin((y - self._d) ** 2), fin((y - self._m) ** 2)
-                        self._Nq = max(self._Nq, ld, lm)
+                        self._Nq = max(self._Nq * (LAM if self.saida == "prod_q2" else 1.0), ld, lm)   # Q2: com esquecimento
                         if self._Nq > 0:
                             self.agregador.atualizar(ld / self._Nq, lm / self._Nq)
                         self.fp_porta += FP_NORMALIZACAO_Q
