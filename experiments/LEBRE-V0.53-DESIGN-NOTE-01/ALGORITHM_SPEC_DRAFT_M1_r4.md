@@ -27,3 +27,10 @@
 1. F6 em B03, B07, VB07 e XB07 (fronteira do E14, teto 2,5 vezes).
 2. Critérios da M2 (régua por decidibilidade com os adendos 1 e 2) com M1 + M2 em todas as famílias, C05 incluída.
 3. Custo reportado.
+
+## 3. Resultado (E18b, 09/10/2026): não atende
+
+LEBRE Lab, `analises/E18B_RESULTADO.md` e `E18B_ALVO_RESULTADO.md`. F6: B03 1,404 (meta 1,652) e B07 1,040 (meta 1,054)
+atendem; VB07 1,120 (meta 1,056) e XB07 1,087 (meta 1,061) não. Custo 2,0-2,2 vezes a v0.52. Critérios da M2 com a M1:
+nenhuma falha causada pela M1 (as pioras do rascunho 3 em Arinos e na inflação mensal e a de Horizonte do rascunho 2 não
+aparecem). Nada ajustado.

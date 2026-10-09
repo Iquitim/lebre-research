@@ -15,3 +15,9 @@ passado. Custo: +1 FP por passo.
 Q2 e Q no mesmo desenvolvimento ampliado (E18 e releitura E16b), com a régua com os adendos 1 e 2. Se as duas atenderem,
 **fica a Q2** (sem o mecanismo de congelamento conhecido). Se só uma atender, fica ela. Se nenhuma, as falhas são
 declaradas.
+
+## 3. Resultado (E18b, 09/10/2026)
+
+LEBRE Lab, `analises/E18B_RESULTADO.md`. Q2 falha no critério 1 em CURTAS (limite superior 1,0107 > 1,01; Boston curta
+1,021). A Q atende a tudo no E16b (mesma régua). **Pela regra da seção 2, fica a candidata Q.** (Correção de registro: o
+commit `fc71880` diz "104 tests"; são 103.)
