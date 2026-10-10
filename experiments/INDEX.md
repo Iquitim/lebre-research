@@ -8,6 +8,15 @@ The 90 folders are grouped by research phase. Each folder is self-contained: scr
 - **R**: pre-registered evaluation;
 - **H**: historical, superseded by later versions (kept as record and as ablation source).
 
+## LEBRE v0.54 (from 10 Oct 2026) — in design
+
+Scope (project owner, 10 Oct 2026): finish the consolidation — cost proportional to use (M5a layers, M5b core), removals and non-stationary interpretation (M4 + M3), cycle as hypothesis (M6). Baseline in the LEBRE Lab (`diagnosticos/E23_RESULTADO.md`).
+
+| Folder | Role | Status |
+|---|---|---|
+| `LEBRE-V0.54-DESIGN-NOTE-01` | Design note 01: failures, measured baseline, changes, criteria, process, reserve decisions | design |
+| `LEBRE-V0.54-DATA-01` | Final-evaluation reserve (drawn 10 Oct 2026, before any v0.54 code): CAMELS-BR 140–169, BDG2 115–144, 8 wind plants (seed 5421), 8 solar plants Jan–Sep 2026 (seed 5422, time split), 17 non-stationary level series (EIA, US Treasury); raw-data snapshot hashes, guard | F |
+
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
 Promoted on 9 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`; self-contained spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_r1_{EN,PTBR}.pdf`). Development, validations 1 to 5 and diagnostics are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).

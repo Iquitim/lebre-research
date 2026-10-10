@@ -1,0 +1,366 @@
+{
+ "criado": "2026-10-10T13:14:39",
+ "snapshot_base_sha256": "aa021ab95473c828c38171bdb9ddb66b679921790d01290eb410f34d7d0341c7",
+ "camels_br": {
+  "semente": 5202,
+  "n_elegiveis": 237,
+  "posicoes": "140-169",
+  "reservadas": [
+   25130000,
+   31520000,
+   33215000,
+   33330000,
+   33530000,
+   55330000,
+   56028000,
+   56570000,
+   56845000,
+   57770000,
+   58142200,
+   58658000,
+   58934000,
+   59240000,
+   59370000,
+   60774000,
+   61285000,
+   61390000,
+   61460000,
+   61473000,
+   61500000,
+   64700000,
+   64723000,
+   64767000,
+   65100000,
+   65135000,
+   73765000,
+   73780000,
+   86700000,
+   87160000
+  ],
+  "substituidas_por_ausencia": [],
+  "conferencia": "posições 0-139 = SPLIT_V052 + RESERVA2 + RESERVA3 + reserva da v0.53"
+ },
+ "bdg2": {
+  "semente": 5203,
+  "n_elegiveis": 766,
+  "posicoes": "115-144",
+  "reservadas": [
+   "chilledwater:Bull_education_Barry",
+   "chilledwater:Bull_education_Nichole",
+   "chilledwater:Cockatoo_office_Giovanni",
+   "chilledwater:Fox_assembly_Johnnie",
+   "chilledwater:Fox_education_Elizabeth",
+   "chilledwater:Fox_education_Long",
+   "chilledwater:Fox_education_Rosie",
+   "chilledwater:Fox_education_Shaun",
+   "chilledwater:Fox_office_Bernard",
+   "chilledwater:Hog_education_Beth",
+   "chilledwater:Hog_education_Cathleen",
+   "chilledwater:Panther_office_Christian",
+   "chilledwater:Peacock_lodging_Matthew",
+   "hotwater:Crow_education_Omer",
+   "hotwater:Eagle_office_Donovan",
+   "hotwater:Eagle_office_Nereida",
+   "hotwater:Eagle_office_Ryan",
+   "hotwater:Fox_education_Louie",
+   "hotwater:Fox_education_Virgil",
+   "steam:Bull_assembly_Maren",
+   "steam:Cockatoo_education_Evangeline",
+   "steam:Cockatoo_education_Janet",
+   "steam:Cockatoo_education_Tyler",
+   "steam:Cockatoo_public_Valerie",
+   "steam:Eagle_education_Teresa",
+   "steam:Eagle_health_Vincenza",
+   "steam:Hog_education_George",
+   "steam:Hog_office_Denita",
+   "steam:Hog_office_Roger",
+   "steam:Moose_education_Florence"
+  ],
+  "sites_compartilhados_com_series_ja_usadas": [
+   "Bull",
+   "Cockatoo",
+   "Eagle",
+   "Fox",
+   "Hog",
+   "Moose",
+   "Panther",
+   "Peacock"
+  ],
+  "conferencia": "posições 0-114 = SPLIT_V052 + RESERVA2 + RESERVA3 + reserva da v0.53"
+ },
+ "eolica": {
+  "semente": 5421,
+  "periodo": [
+   "2024-01-01",
+   "2025-12-31"
+  ],
+  "n_elegiveis": 48,
+  "excluidas_lab": [
+   "Conj. São Roque",
+   "Conj. Lagoa dos Ventos",
+   "Conj. Caju",
+   "Conj. Monte Verde",
+   "Conj. Serra do Mel A",
+   "Conj. Santa Vitória do Palmar",
+   "Conj. Oitis",
+   "Conj. Ourolândia II",
+   "Conj. Rio do Vento Expansão",
+   "Conj. Laranjeiras",
+   "Conj. Rio do Vento",
+   "Conj. Serra do Seridó",
+   "Conj. Serra do Mel B",
+   "Conj. Santo Agostinho",
+   "Conj. Paulino Neves",
+   "Conj. Novo Horizonte",
+   "Conj. Serra da Babilônia",
+   "Conj. Umburanas",
+   "Conj. Babilônia Sul",
+   "Conj. Morro do Chapéu Sul II",
+   "Conj. Folha Larga",
+   "Conj. Tucano",
+   "Conj. Lagoa dos Barros",
+   "Conj. Cutia",
+   "Conj. Gentio do Ouro I",
+   "Conj. Ventos da Bahia",
+   "Conj. Lagoa do Barro I",
+   "Conj. Igaporã II",
+   "Conj. Jerusalém",
+   "Conj. Monte do Ronca",
+   "Conj. Pedra Branca",
+   "Conj. Oeste Seridó",
+   "Conj. Arizona",
+   "Conj. União dos Ventos",
+   "Conj. São Clemente",
+   "Conj. Chapada III"
+  ],
+  "excluidas_reserva_v053": [
+   "Conj. Caetés II",
+   "Conj. Folha Larga Sul",
+   "Conj. Marmeleiro 2",
+   "Conj. Morrão",
+   "Conj. Quinta 138 kV",
+   "Conj. Santa Rosália",
+   "Conj. Serra do Mato",
+   "Conj. Ventos de São Vitor"
+  ],
+  "elegibilidade": "coordenadas; geração verificada em >= 95% das horas de 2024-2025; capacidade >= 100 MW",
+  "reservadas": [
+   {
+    "nome": "Conj. Cerro Chato",
+    "cap": 163.2,
+    "lat": -30.814751,
+    "lon": -55.705452,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Campo dos Ventos",
+    "cap": 105.6,
+    "lat": -5.332889,
+    "lon": -35.9455,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Icaraí",
+    "cap": 140.7,
+    "lat": -3.095934,
+    "lon": -39.601742,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Chapada II",
+    "cap": 205.1,
+    "lat": -7.476417,
+    "lon": -40.758264,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Mangue Seco",
+    "cap": 104.0,
+    "lat": -5.172742,
+    "lon": -36.359399,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Campo Formoso",
+    "cap": 180.0,
+    "lat": -10.584231,
+    "lon": -40.613231,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Renascença",
+    "cap": 150.0,
+    "lat": -5.292111,
+    "lon": -35.886385,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Tanque Novo",
+    "cap": 180.0,
+    "lat": -13.6895183,
+    "lon": -42.5829281,
+    "completude": 1.0
+   }
+  ]
+ },
+ "solar": {
+  "semente": 5422,
+  "periodo": [
+   "2026-01-01",
+   "2026-09-30"
+  ],
+  "n_elegiveis": 27,
+  "elegibilidade": "coordenadas; geração verificada em >= 95% das horas de 2024-2025 e de jan-set/2026; capacidade >= 100 MW",
+  "observacao": "separação no tempo: as usinas solares elegíveis de 2024-2025 foram todas usadas (Lab e reserva da v0.53)",
+  "reservadas": [
+   {
+    "nome": "Conj. Brígida",
+    "cap": 163.0,
+    "lat": -8.565919,
+    "lon": -39.591642,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Janaúba",
+    "cap": 1357.1,
+    "lat": -15.94656,
+    "lon": -43.508374,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Belmonte",
+    "cap": 455.0,
+    "lat": -7.870061,
+    "lon": -38.83471,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Ciranda",
+    "cap": 244.5,
+    "lat": -7.963652,
+    "lon": -38.627376,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Helio Valgas",
+    "cap": 500.0,
+    "lat": -17.5781981,
+    "lon": -44.6445659,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Luzia",
+    "cap": 117.9,
+    "lat": -6.840796,
+    "lon": -36.93287,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Calcário",
+    "cap": 132.0,
+    "lat": -5.0347,
+    "lon": -37.785,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Alex",
+    "cap": 278.4,
+    "lat": -5.269671,
+    "lon": -37.967945,
+    "completude_2026": 1.0
+   }
+  ]
+ },
+ "niveis": {
+  "periodo": [
+   "2010-01-01",
+   "2025-12-31"
+  ],
+  "cobertura_minima": 0.9,
+  "reservadas": {
+   "eia:RNGWHHD": {
+    "nome": "gás natural Henry Hub (US$/MMBtu)",
+    "cobertura": 0.9633
+   },
+   "eia:EER_EPMRU_PF4_Y35NY_DPG": {
+    "nome": "gasolina convencional, porto de Nova York (US$/galão)",
+    "cobertura": 0.9593
+   },
+   "eia:EER_EPMRU_PF4_RGC_DPG": {
+    "nome": "gasolina convencional, Costa do Golfo (US$/galão)",
+    "cobertura": 0.959
+   },
+   "eia:EER_EPD2F_PF4_Y35NY_DPG": {
+    "nome": "óleo de aquecimento nº 2, porto de Nova York (US$/galão)",
+    "cobertura": 0.9602
+   },
+   "eia:EER_EPD2DXL0_PF4_Y35NY_DPG": {
+    "nome": "diesel de ultrabaixo enxofre, porto de Nova York (US$/galão)",
+    "cobertura": 0.9605
+   },
+   "eia:EER_EPD2DXL0_PF4_RGC_DPG": {
+    "nome": "diesel de ultrabaixo enxofre, Costa do Golfo (US$/galão)",
+    "cobertura": 0.96
+   },
+   "eia:EER_EPD2DC_PF4_Y05LA_DPG": {
+    "nome": "diesel CARB de ultrabaixo enxofre, Los Angeles (US$/galão)",
+    "cobertura": 0.9588
+   },
+   "eia:EER_EPJK_PF4_RGC_DPG": {
+    "nome": "querosene de aviação, Costa do Golfo (US$/galão)",
+    "cobertura": 0.9581
+   },
+   "eia:EER_EPLLPA_PF4_Y44MB_DPG": {
+    "nome": "propano, Mont Belvieu (US$/galão)",
+    "cobertura": 0.9595
+   },
+   "eia:EER_EPMRR_PF4_Y05LA_DPG": {
+    "nome": "gasolina RBOB, Los Angeles (US$/galão)",
+    "cobertura": 0.9602
+   },
+   "tesouro:nominal:1 Mo": {
+    "nome": "Tesouro nominal 1 mês",
+    "cobertura": 0.9586
+   },
+   "tesouro:nominal:6 Mo": {
+    "nome": "Tesouro nominal 6 meses",
+    "cobertura": 0.9586
+   },
+   "tesouro:real:5 YR": {
+    "nome": "Tesouro real 5 anos",
+    "cobertura": 0.9586
+   },
+   "tesouro:real:7 YR": {
+    "nome": "Tesouro real 7 anos",
+    "cobertura": 0.9586
+   },
+   "tesouro:real:10 YR": {
+    "nome": "Tesouro real 10 anos",
+    "cobertura": 0.9586
+   },
+   "tesouro:real:20 YR": {
+    "nome": "Tesouro real 20 anos",
+    "cobertura": 0.9586
+   },
+   "tesouro:real:30 YR": {
+    "nome": "Tesouro real 30 anos",
+    "cobertura": 0.9506
+   }
+  },
+  "fora_por_cobertura": {},
+  "excluidas": {
+   "eia_RWTC": "WTI: alvo no desenvolvimento do LEBRE Lab (C01-C03)",
+   "eia_RBRTE": "Brent: quase idêntico ao WTI",
+   "tesouro_nominal": "1, 2, 3, 5, 7, 10, 20 e 30 anos e 3 meses: usados no LEBRE Lab (C04 e validações 2 a 5)"
+  },
+  "entradas_disponiveis": [
+   "eia:RWTC",
+   "eia:RBRTE"
+  ],
+  "fonte": "EIA (preços à vista diários) e Departamento do Tesouro dos EUA (curvas diárias); domínio público"
+ },
+ "fora_da_reserva": {
+  "carga": "decisão do responsável pelo projeto (10/10/2026): a carga de 2026 até setembro foi usada na v0.53",
+  "cambio": "moedas flutuantes do H.10 praticamente esgotadas"
+ }
+}

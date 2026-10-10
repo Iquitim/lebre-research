@@ -122,7 +122,10 @@ com período fixo (OneShotSTL); atualização seletiva e filtragem seletiva de d
 combinação convexa. Não achar não prova originalidade: antes do rascunho da especificação, fazer uma busca formal
 (**PRA-11**), com afirmações e consultas fixadas antes, como a PRA-05 da v0.52.
 
-## 6. Reserva dos dados finais — proposta para decisão do responsável pelo projeto
+## 6. Reserva dos dados finais
+
+> **Atualização 10/10/2026 (feita, antes de qualquer código):** `experiments/LEBRE-V0.54-DATA-01/` (`SPLIT_RULES.md`). Decisões do responsável pelo projeto: níveis da EIA e do Tesouro dos EUA; carga fora; evidência da M4 do desenvolvimento e das validações; solar por separação no tempo (as usinas solares elegíveis de 2024-2025 estavam esgotadas). Reservadas: 30 bacias, 30 prédios, 8 eólicas, 8 solares (jan-set/2026) e 17 séries de níveis (10 da EIA, 7 do Tesouro: as nominais de 1 a 30 anos já tinham sido usadas no Lab). Travas nos dois repositórios. A proposta original fica abaixo como registro.
+
 
 Fazer antes de qualquer código, com hashes e travas nos dois repositórios, como em `LEBRE-V0.53-DATA-01`.
 
@@ -143,6 +146,6 @@ Fazer antes de qualquer código, com hashes e travas nos dois repositórios, com
 
 ## 7. Próximos passos
 
-1. Decisão sobre a reserva (seção 6) e reserva dos dados finais, antes de qualquer código.
+1. ~~Decisão sobre a reserva e reserva dos dados finais~~: feitas em 10/10/2026 (`LEBRE-V0.54-DATA-01`).
 2. PRA-11 (busca formal de trabalhos anteriores para M5a, M5b, M4, M3 e M6).
 3. Rascunho da especificação, começando pela M5a, com os critérios numéricos que faltam fixados antes de medir.

@@ -14,7 +14,9 @@ Rule followed throughout: every measurement set is declared (seeds included) **b
 | (same permutations) | **Reserve 3** = CAMELS-BR positions 80–109, BDG2 55–84 — **consumed** | `LEBRE-V0.52-HELDOUT-03/select_reserve3.py` |
 | (same permutations) | **v0.53 final reserve** = CAMELS-BR positions 110–139, BDG2 85–114 — **consumed** by the final evaluation of 2026-10-09 | `experiments/LEBRE-V0.53-DATA-01/make_split_v053.py` |
 | 5311 / 5312 | Draw of 8 solar / 8 wind ONS plants for the **v0.53 final reserve** (excluding the 12 plants used in the LEBRE Lab) | same |
-| — | **Still unused:** CAMELS-BR positions 140+, BDG2 positions 115+. Eligible ONS rivers are exhausted. | — |
+| (same permutations) | **v0.54 final reserve** = CAMELS-BR positions 140–169, BDG2 115–144 | `experiments/LEBRE-V0.54-DATA-01/make_split_v054.py` |
+| 5421 / 5422 | Draw of 8 wind ONS plants (2024–2025, excluding the 36 used in the LEBRE Lab and the 8 of the v0.53 reserve) / 8 solar ONS plants (Jan–Sep 2026, time split) for the **v0.54 final reserve** | same |
+| — | **Still unused:** CAMELS-BR positions 170+, BDG2 positions 145+; 40 eligible wind plants of 2024–2025. Eligible ONS rivers and solar plants of 2024–2025 are exhausted. | — |
 
 ## v0.52 development and checks
 

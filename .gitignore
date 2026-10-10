@@ -22,6 +22,8 @@ __pycache__/
 /data/external_bench04/oikolab/
 /data/external_bench04/tetouan/
 /data/external_v052/*/
+# Raw snapshot of the v0.54 final reserve (hashes in experiments/LEBRE-V0.54-DATA-01/SNAPSHOT_SHA256SUMS.txt)
+/data/external_v054/
 # Per-series predictions and other large result arrays (archived externally)
 *.npz
 # Build products of the C99 port / firmware (rebuildable; firmware images embed series data)
