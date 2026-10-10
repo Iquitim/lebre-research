@@ -108,3 +108,12 @@ Causa provável: a regressão do especialista tem memória longa (esquecimento 0
   trecho), a M1 da v0.54 desperta em pelo menos 90% delas; o MSE do último trecho fica no máximo 1,02 vez o da v0.53.
 
 O teste de sanidade foi trocado por um teste do mecanismo de despertar isolado (`tests/test_m5a.py`).
+
+## 8. Decisão (10/10/2026, antes da medição): revisão a do rascunho 0
+
+O responsável pelo projeto aprovou a revisão do critério 3 proposta na seção 7. **Critérios vigentes da M5a:** 1 (custo),
+2 (sem piora nas 64 famílias), **3a** (sem piora depois da troca de regime), **3b** (despertar condicional no cenário
+útil → inútil → útil) e 4 (identidade). As constantes da regra (seção 4) não mudam. Sementes da medição, conferidas como
+não usadas no código e nos documentos dos três repositórios: 20261070 a 20261089 (3a), 20261090 a 20261109 (3b) e
+20261060 (bootstrap); as sementes 5600 a 5604 ficam só nos testes unitários do protótipo. Detalhes dos cenários no plano
+`analises/M5A_E1_PLANO.md` do LEBRE Lab.
