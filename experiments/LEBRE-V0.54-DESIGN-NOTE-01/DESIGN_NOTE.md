@@ -114,6 +114,8 @@ não inteiro (F7).
 
 ## 5. Literatura e originalidade
 
+> **Atualização 10/10/2026 (PRA-11 feita, `PRA_11_RELATORIO.md`):** nenhum trabalho encontrado antecipa as seis afirmações; há parciais próximos para M5a (M-LCB, Latypov et al. 2025), M5b e integração (ADOWIP, Wang 2026) e M4 (seleção online de variáveis com RLS, Souza e Araújo 2012). A contribuição continua sendo de integração.
+
 Nenhum componente deve ser presumido novo. Busca rápida (10/10/2026, não sistemática): seleção de variáveis online
 existe com penalização ou métodos bayesianos, sem remoção com teste sempre válido; há monitoramento sequencial de raiz
 unitária (Steland; Wang), mas não o tratamento de regressão espúria no fluxo; detecção de período é em geral em lote ou
@@ -147,5 +149,5 @@ Fazer antes de qualquer código, com hashes e travas nos dois repositórios, com
 ## 7. Próximos passos
 
 1. ~~Decisão sobre a reserva e reserva dos dados finais~~: feitas em 10/10/2026 (`LEBRE-V0.54-DATA-01`).
-2. PRA-11 (busca formal de trabalhos anteriores para M5a, M5b, M4, M3 e M6).
+2. ~~PRA-11~~: feita em 10/10/2026 (`PRA_11_RELATORIO.md`).
 3. Rascunho da especificação, começando pela M5a, com os critérios numéricos que faltam fixados antes de medir.
