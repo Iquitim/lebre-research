@@ -52,7 +52,9 @@ Detalhes em `NOTICE`.
 
 ## Citação
 
-Lima, S. (2026). *LEBRE research record — v0.52-r1* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23049103
+Lima, S. (2026). *LEBRE research record — v0.53* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23282527
+
+DOIs por versão: v0.53 (promovida) `10.5281/zenodo.23282527`; v0.52-r1 `10.5281/zenodo.23049103`.
 
 O DOI `10.5281/zenodo.23049102` reúne todas as versões e aponta sempre para a mais recente.
 

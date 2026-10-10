@@ -85,9 +85,10 @@ Details are in `NOTICE`.
 
 ## Citation
 
-Lima, S. (2026). *LEBRE research record — v0.52-r1* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23049103
+Lima, S. (2026). *LEBRE research record — v0.53* [Software]. Zenodo. https://doi.org/10.5281/zenodo.23282527
 
-- `10.5281/zenodo.23049103`: this version (v0.52-r1).
+- `10.5281/zenodo.23282527`: version v0.53 (promoted).
+- `10.5281/zenodo.23049103`: version v0.52-r1.
 - `10.5281/zenodo.23049102`: all versions; resolves to the latest.
 
 Experiment artifacts (dataset): Lima, S. (2026). *LEBRE research record v0.52-r1: experiment artifacts* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23082357
