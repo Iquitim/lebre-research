@@ -1,14 +1,14 @@
 {
   "upload_type": "software",
-  "title": "LEBRE research record — v0.52-r1",
-  "version": "v0.52-r1",
+  "title": "LEBRE research record — v0.53",
+  "version": "v0.53",
   "creators": [
     {
       "name": "Lima, Silvano",
       "orcid": "0009-0000-3868-6747"
     }
   ],
-  "description": "<p>Research record of <strong>LEBRE</strong> (Lifecycle-governed Evidence-Based Resource Evolution), an online one-step-ahead forecaster for time series with inputs, designed for a budget of a few hundred floating-point operations per step. Each structural change (adding, removing, swapping or refining the response to a whole input) is accepted by an anytime-valid sequential test (e-process) of predictive improvement, within an online multiple-testing procedure.</p><p>This archive contains the complete record behind the LEBRE v0.52 specification, revision 1: the Python reference implementation, a C99 port, firmware and scripts for a simulated Cortex-M4F microcontroller (Renode), experiment scripts, pre-registrations, result tables, reports, frozen versions with SHA-256 manifests, the specification documents (English and Portuguese), and scripts to verify integrity and to reproduce results. Raw third-party data, per-series prediction arrays and toolchains are not included; they are listed with SHA-256 in docs/research/ARTIFACTS_MANIFEST.tsv.</p><p><strong>Scope and limits.</strong> The results cover hydrology (ONS, CAMELS-BR) and building energy (BDG2) series with 1–5 inputs and one-step forecasting. v0.52 is a frozen research version, not promoted. The e-values are valid under the stated assumptions, and false-change control was verified empirically. The declared cost contract was narrowly not met (+3.7% mean, +2.0% peak). Microcontroller costs come from a simulator, not a board. The testing mechanism did not improve accuracy over an all-inputs-on ablation. The core mechanism is not original. See the specification, section 19.</p><p>Licences: code under Apache-2.0; documents, reports, figures and result tables under CC-BY-4.0; third-party data under their original licences (see NOTICE).</p>",
+  "description": "<p>Research record of <strong>LEBRE</strong> (Lifecycle-governed Evidence-Based Resource Evolution), an online one-step-ahead forecaster for time series with inputs, at a fixed cost per step. Its structural core accepts each structural change (adding, removing, swapping or refining the response to a whole input) by an anytime-valid sequential test (e-process) of predictive improvement, within an online multiple-testing procedure. Layer M1 adds a precision expert combined with the core by AdaHedge; layer M2 starts the forecast from a declared trivial reference (zero, persistence or seasonal naive) and combines two paths by an (A,B)-Prod.</p><p><strong>Version v0.53</strong> was promoted on 2026-10-09 by a pre-registered rule: on 104 series reserved before any v0.53 code (basins, buildings, solar and wind plants, electric load, FX), its mean squared error was 0.955 of the core's (95% CI 0.951-0.960), with no harm in any family. This archive contains the Python reference implementation, a C99 port of the core with firmware and scripts for a simulated Cortex-M4F microcontroller (Renode), experiment scripts, pre-registrations, result tables, reports, frozen versions with SHA-256 manifests (v0.1, v0.51, v0.52, v0.53), the self-contained v0.53 specification (revision 1, English and Portuguese) and scripts to verify integrity and reproduce results. Development and validations of M1 and M2 are in the public LEBRE Lab (https://github.com/Iquitim/lebre-lab). Raw third-party data, per-series prediction arrays and toolchains are not included; they are listed with SHA-256 in docs/research/ARTIFACTS_MANIFEST.tsv.</p><p><strong>Scope and limits.</strong> One-step forecasting; the gain of v0.53 came from basins and FX, with no gain in solar, wind and load; about twice the cost of the core (median 919 operations per step); no formal error guarantee in the original scale for M1 and M2; microcontroller costs only for the core and from a simulator; the core's testing mechanism did not improve accuracy over an all-inputs-on ablation; no component is original. See the specification, section 22.</p><p>Licences: code under Apache-2.0; documents, reports, figures and result tables under CC-BY-4.0; third-party data under their original licences (see NOTICE).</p>",
   "license": "Apache-2.0",
   "keywords": [
     "online forecasting",
@@ -23,5 +23,19 @@
     "pre-registration"
   ],
   "language": "eng",
-  "notes": "Documents and research outputs in this archive are licensed under CC-BY-4.0; see NOTICE and LICENSE-CC-BY-4.0.txt. Most internal experiment logs are written in Portuguese."
+  "notes": "Documents and research outputs in this archive are licensed under CC-BY-4.0; see NOTICE and LICENSE-CC-BY-4.0.txt. Most internal experiment logs are written in Portuguese.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Iquitim/lebre-lab",
+      "relation": "isSupplementedBy",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23082357",
+      "relation": "isSupplementedBy",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ]
 }

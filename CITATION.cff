@@ -1,10 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this research record, please cite it as below."
 type: software
-title: "LEBRE research record — v0.52-r1"
-version: "v0.52-r1"
-doi: "10.5281/zenodo.23049103"
-date-released: "2026-09-30"
+title: "LEBRE research record — v0.53"
+version: "v0.53"
+date-released: "2026-10-10"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23049102"
@@ -22,12 +21,15 @@ license:
   - CC-BY-4.0
 abstract: >-
   Research record of LEBRE, an online one-step-ahead forecaster for time series
-  with inputs, designed for a budget of a few hundred floating-point operations
-  per step, in which each structural change is accepted by an anytime-valid
-  sequential test (e-process) of predictive improvement. Contains the Python
-  reference implementation, a C99 port with simulated Cortex-M4F measurements,
-  experiment scripts, pre-registrations, results, frozen versions with SHA-256
-  manifests and the v0.52 specification (revision 1).
+  with inputs, at a fixed cost per step. Its structural core accepts each
+  structural change by an anytime-valid sequential test (e-process) of
+  predictive improvement; layer M1 adds a precision expert combined by
+  AdaHedge, and layer M2 starts the forecast from a declared trivial reference.
+  Version v0.53 was promoted by a pre-registered rule on 104 reserved series.
+  Contains the Python reference implementation, a C99 port of the core with
+  simulated Cortex-M4F measurements, experiment scripts, pre-registrations,
+  results, frozen versions with SHA-256 manifests and the self-contained v0.53
+  specification (revision 1).
 keywords:
   - online forecasting
   - anytime-valid inference
