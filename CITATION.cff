@@ -3,6 +3,7 @@ message: "If you use this research record, please cite it as below."
 type: software
 title: "LEBRE research record — v0.53"
 version: "v0.53"
+doi: "10.5281/zenodo.23282527"
 date-released: "2026-10-10"
 identifiers:
   - type: doi
@@ -11,6 +12,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23049103"
     description: "Version v0.52-r1"
+  - type: doi
+    value: "10.5281/zenodo.23282527"
+    description: "Version v0.53"
 authors:
   - family-names: "Lima"
     given-names: "Silvano"
