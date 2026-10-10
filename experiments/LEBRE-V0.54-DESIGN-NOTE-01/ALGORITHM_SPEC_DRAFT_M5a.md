@@ -83,3 +83,28 @@ ativa. A contagem da implementação será auditada como na v0.53 (E21/E22).
 Plano no LEBRE Lab (`analises/M5A_E1_PLANO.md`), commitado antes de rodar: protótipo da v0.54 contra a `lebre==0.2.0`
 nos itens 1 a 4. Protótipo em `experiments/LEBRE-V0.54-PROTO-01/` (lebre-research), partindo dos arquivos da biblioteca
 0.2.0 (hashes registrados); os arquivos do núcleo continuam intocados.
+
+## 7. Achado no protótipo, antes da medição (10/10/2026)
+
+O protótipo (`experiments/LEBRE-V0.54-PROTO-01/`) passou nos testes de identidade (onde a M1 nunca dorme, previsões
+idênticas às da `lebre==0.2.0`), de `m5a=False` e de economia de custo. Um teste de sanidade de despertar, montado como o
+cenário do critério 3 (sem dinâmica conjunta até t = 12.000, com ela depois; semente 5603), falhou: a M1 dormiu e não
+despertou. O diagnóstico mostrou que **o cenário não cria utilidade para a M1 nem na v0.53**:
+
+- depois da troca, o especialista E da v0.53, **ativo**, errou 2,6, 2,8 e 2,0 vezes mais que o núcleo nas janelas de
+  2, 3 e 3 mil passos seguintes; o peso da M1 na v0.53 terminou em 6·10⁻¹⁴⁷; partindo do zero no mesmo regime, E erra
+  0,52 a 0,80 vez o núcleo;
+- a v0.54 e a v0.53 tiveram o mesmo erro depois da troca (razão 1,000).
+
+Causa provável: a regressão do especialista tem memória longa (esquecimento 0,999 por atualização, uma atualização a cada
+8 alvos) e fica presa ao regime anterior; o conjunto de entradas escolhidas não muda, então nada reinicia a M1. Isso é uma
+**limitação da v0.53**, ligada à prioridade 2 (trocas de regime), não da M5a.
+
+**Revisão proposta do critério 3 (pendente de decisão do responsável pelo projeto; a medição não foi feita):**
+- (3a) **sem piora:** no cenário de troca de regime acima (20 séries), MSE da v0.54 no trecho depois da troca no máximo
+  1,02 vez o da v0.53;
+- (3b) **despertar condicional:** num segundo cenário, em que a M1 é útil, deixa de ser e volta a ser (regime A, depois B,
+  depois A de novo, com a mesma relação), nas séries em que a M1 da v0.53 volta a pesar (ω > 0,5 em algum ponto do último
+  trecho), a M1 da v0.54 desperta em pelo menos 90% delas; o MSE do último trecho fica no máximo 1,02 vez o da v0.53.
+
+O teste de sanidade foi trocado por um teste do mecanismo de despertar isolado (`tests/test_m5a.py`).
