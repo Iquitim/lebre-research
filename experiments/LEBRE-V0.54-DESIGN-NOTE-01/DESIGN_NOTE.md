@@ -42,6 +42,8 @@ novos isoladamente (seção 5); o que se propõe é governá-los pelo mesmo regi
 
 ### M5. Custo proporcional ao uso (F10 e F1) — prioridade 1
 
+> **Atualização 11/10/2026 (M5a aceita):** depois de três desenhos medidos no LEBRE Lab (M5A_E1 a M5A_E3) e da revisão da meta de custo pelo responsável pelo projeto (corte ≥ 60% da M1), o rascunho 2 (`ALGORITHM_SPEC_DRAFT_M5a_r2.md`: M1 dormente enquanto não pesa, com teste curto quando a seleção de entradas muda) foi aceito na validação 6 (24 séries reais novas e 50 sintéticas): custo da M1 com razão 0,377 e 0,229 nos cenários de custo, nenhuma piora. Próximo: M5b.
+
 Duas partes, medidas separadamente (ablação):
 
 - **M5a — camadas.** Quando o peso de uma camada fica abaixo de um limiar por um período declarado, ela passa a ser

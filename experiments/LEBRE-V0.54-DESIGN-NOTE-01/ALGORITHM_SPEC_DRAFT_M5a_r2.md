@@ -44,3 +44,13 @@ se conhecer o custo dos períodos ativos (sombra, 2.000 alvos antes de dormir e 
 ser **corte de pelo menos 60% do custo da M1 (razão ≤ 0,40) em A01 e A05**. Esta revisão foi decidida **depois** de três
 medições no banco de desenvolvimento e por isso não serve como evidência de aprovação: o rascunho 2 vira **candidato**, e
 a aceitação depende de uma validação em dados novos, com plano e critérios fixados antes, usada uma única vez.
+
+## Aceite na validação 6 (11/10/2026)
+
+Validação 6 do LEBRE Lab (regras `analises/VALIDACAO6_PLANO.md`, commit `ba1a01e`, antes de qualquer download;
+congelamento `VALIDACAO6_CONGELADA.md`, commit `b5480f8`; resultado `VALIDACAO6_RESULTADO.md`), em 24 séries reais nunca
+vistas (carga do ONS de 2000-2001, uma estação nova de Pequim, 6 eólicas, 6 estações de maré) e 50 sintéticas com sementes
+novas, usada uma única vez: **a M5a (rascunho 2) é aceita**. Custo da M1: razão 0,377 (U-A01) e 0,229 (U-A05), ≤ 0,40;
+nenhuma família com limite superior acima de 1,01 (pior: U-B03, 1,0059; U-B07, 0,995, com IC todo abaixo de 1);
+identidade atendida. A M5a entra na v0.54 nesta forma. Ressalva mantida: a meta de custo foi revista depois do
+desenvolvimento; a evidência vinculante continua sendo a avaliação final pré-registrada da v0.54.
