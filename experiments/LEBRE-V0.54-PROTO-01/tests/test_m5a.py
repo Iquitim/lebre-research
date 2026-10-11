@@ -100,8 +100,8 @@ def test_finite_and_interface(ref):
     assert np.all(np.isfinite(f)) and m.layer_weights is not None and m.cost_per_step > 0
 
 
-def test_reselection_while_dormant_does_not_wake():
-    """Rascunho 1: troca da seleção de entradas durante o sono não desperta; AdaHedge e estatística recomeçam."""
+def test_reselection_while_dormant_starts_a_trial():
+    """Rascunho 2: troca da seleção de entradas durante o sono desperta a M1 em teste (AdaHedge reiniciado, sombra)."""
     X, y = joint(5603, 3000)
     X = np.c_[X, np.random.default_rng(5604).standard_normal((len(y), 3))]     # 7 entradas: a seleção (5) pode mudar
     m = Lebre054(7); run(m, X, y)
@@ -112,4 +112,4 @@ def test_reselection_while_dormant_does_not_wake():
     ex.n_sel = ex.n_obs - 10 ** 6                                 # força a nova seleção agora
     ex._select()
     assert tuple(ex.sel) != sel_antes
-    assert ex.dormant and ex.wakes == 0 and ex.n_samples == 0 and ex.ema_g is None and ex.ag.n == 0
+    assert not ex.dormant and ex.trial and ex.trials == 1 and ex.wakes == 1 and ex.ag.n == 0

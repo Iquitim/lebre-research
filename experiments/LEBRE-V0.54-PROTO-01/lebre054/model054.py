@@ -5,7 +5,7 @@ são editados; as mudanças da v0.54 ficam em arquivos novos.
 from .dormancy import DormantPrecisionExpert
 from .full import Lebre
 
-ALGORITHM_VERSION = "LEBRE v0.54 (protótipo: M5a rascunho 0)"
+ALGORITHM_VERSION = "LEBRE v0.54 (protótipo: M5a rascunho 2)"
 
 
 class Lebre054(Lebre):
@@ -24,5 +24,5 @@ class Lebre054(Lebre):
         if not self.m5a:
             return None
         m = self._m1
-        return dict(dormant=m.dormant, sleeps=m.sleeps, wakes=m.wakes, dormant_steps=m.dormant_steps,
+        return dict(dormant=m.dormant, sleeps=m.sleeps, wakes=m.wakes, trials=getattr(m, "trials", 0), dormant_steps=m.dormant_steps,
                     m1_fp_per_step=m.fp / self.n_steps if self.n_steps else float("nan"))

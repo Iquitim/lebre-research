@@ -12,6 +12,10 @@ só o passado.
 Rascunho 1 (ALGORITHM_SPEC_DRAFT_M5a_r1.md): uma troca das entradas escolhidas durante o sono reinicia o AdaHedge (como na
 v0.53) e a estatística de despertar, mas **não** desperta a M1 (o protótipo do rascunho 0 despertava, desvio declarado no
 resultado do M5A_E1).
+
+Rascunho 2 (ALGORITHM_SPEC_DRAFT_M5a_r2.md): uma troca das entradas escolhidas durante o sono desperta a M1 em **teste**
+(AdaHedge reiniciado com sombra); no teste, ela volta a dormir depois de D_TESTE alvos aprendidos seguidos com ω < OMEGA_MIN;
+se, depois da sombra, ω chegar a OMEGA_MIN, o teste termina e vale D_SLEEP.
 """
 import math
 
@@ -20,6 +24,7 @@ from ._core import EVERY, LAM, N_MIN, T_MAX
 from ._precision import PrecisionExpert
 
 OMEGA_MIN, D_SLEEP, J, J_RLS = 1e-3, 2000, 8, 64
+D_TESTE = 500                # rascunho 2: limiar de sono no teste de um especialista novo
 RATE, G_MIN, N_WAKE = 0.01, 0.05, 100
 FP_WEIGHT_CHECK = 15        # pesos depois da atualização (mistura, 14) e comparação (1)
 FP_WAKE_SAMPLE = 11         # perda de E (2), melhora (1), duas médias exponenciais (6), razão e comparação (2)
@@ -29,6 +34,8 @@ class DormantPrecisionExpert(PrecisionExpert):
     def __init__(self, d):
         super().__init__(d)
         self.dormant = False
+        self.trial = False
+        self.trials = 0
         self.low = 0
         self.sleeps = 0; self.wakes = 0; self.dormant_steps = 0
         self._sampled = False; self._last_sample = -1
@@ -67,8 +74,9 @@ class DormantPrecisionExpert(PrecisionExpert):
         super()._select()
         if antes is not None and tuple(self.sel) != antes:
             self.low = 0
-            if self.dormant:                                        # rascunho 1: continua dormindo, estatística recomeça
-                self.ema_g = None; self.ema_s = None; self.n_samples = 0
+            if self.dormant:                                        # rascunho 2: desperta em teste
+                self._wake()
+                self.trial = True; self.trials += 1
 
     def observe(self, y, L_core, learn, floor):
         if not self.dormant:
@@ -77,11 +85,11 @@ class DormantPrecisionExpert(PrecisionExpert):
                 self.fp += FP_WEIGHT_CHECK
                 if self.ag.weights()[1] < OMEGA_MIN:
                     self.low += 1
-                    if self.low >= D_SLEEP:
-                        self.dormant = True; self.sleeps += 1; self.low = 0
+                    if self.low >= (D_TESTE if self.trial else D_SLEEP):
+                        self.dormant = True; self.sleeps += 1; self.low = 0; self.trial = False
                         self.ema_g = None; self.ema_s = None; self.n_samples = 0
                 else:
-                    self.low = 0
+                    self.low = 0; self.trial = False
             return
         e_core = (y - L_core) ** 2
         if self._sampled and self.e is not None:
