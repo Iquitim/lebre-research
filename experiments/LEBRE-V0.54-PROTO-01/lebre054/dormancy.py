@@ -6,8 +6,12 @@ Modo ativo = exatamente a M1 da v0.53 (PrecisionExpert, copiado sem alteração 
 num passo de amostra a cada J alvos aprendidos; a regressão é atualizada a cada J_RLS alvos aprendidos (num passo de
 amostra); a triagem e a nova seleção seguem como na v0.53; o AdaHedge fica congelado. Ela desperta quando a média
 exponencial (taxa RATE) da melhora de E sobre L nas amostras, normalizada pela média exponencial de (y − L)², passa de
-G_MIN com pelo menos N_WAKE amostras; ao despertar, o AdaHedge recomeça com nova sombra de N_MIN atualizações. Uma troca
-das entradas escolhidas também desperta (o especialista novo entra em sombra, como na v0.53). Tudo usa só o passado.
+G_MIN com pelo menos N_WAKE amostras; ao despertar, o AdaHedge recomeça com nova sombra de N_MIN atualizações. Tudo usa
+só o passado.
+
+Rascunho 1 (ALGORITHM_SPEC_DRAFT_M5a_r1.md): uma troca das entradas escolhidas durante o sono reinicia o AdaHedge (como na
+v0.53) e a estatística de despertar, mas **não** desperta a M1 (o protótipo do rascunho 0 despertava, desvio declarado no
+resultado do M5A_E1).
 """
 import math
 
@@ -63,8 +67,8 @@ class DormantPrecisionExpert(PrecisionExpert):
         super()._select()
         if antes is not None and tuple(self.sel) != antes:
             self.low = 0
-            if self.dormant:
-                self._wake()
+            if self.dormant:                                        # rascunho 1: continua dormindo, estatística recomeça
+                self.ema_g = None; self.ema_s = None; self.n_samples = 0
 
     def observe(self, y, L_core, learn, floor):
         if not self.dormant:

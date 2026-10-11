@@ -98,3 +98,18 @@ def test_finite_and_interface(ref):
     m = Lebre054(4, reference=ref)
     f = run(m, X, y)
     assert np.all(np.isfinite(f)) and m.layer_weights is not None and m.cost_per_step > 0
+
+
+def test_reselection_while_dormant_does_not_wake():
+    """Rascunho 1: troca da seleção de entradas durante o sono não desperta; AdaHedge e estatística recomeçam."""
+    X, y = joint(5603, 3000)
+    X = np.c_[X, np.random.default_rng(5604).standard_normal((len(y), 3))]     # 7 entradas: a seleção (5) pode mudar
+    m = Lebre054(7); run(m, X, y)
+    ex = m._m1
+    ex.dormant = True; ex.ema_g = 1.0; ex.ema_s = 1.0; ex.n_samples = 50
+    sel_antes = tuple(ex.sel)
+    ex.m[2][:] = 0.0; ex.m[2][2:] = 10.0                          # força a correlação a favorecer as entradas 2 a 6
+    ex.n_sel = ex.n_obs - 10 ** 6                                 # força a nova seleção agora
+    ex._select()
+    assert tuple(ex.sel) != sel_antes
+    assert ex.dormant and ex.wakes == 0 and ex.n_samples == 0 and ex.ema_g is None and ex.ag.n == 0
