@@ -34,3 +34,13 @@ reiniciado e sombra. A constante nova, D_TESTE = 500, é declarada aqui, antes d
 5. **Identidade:** onde a M1 nunca dormiu, previsões idênticas às da v0.53.
 
 Bootstrap: semente 20261062. Sementes conferidas como não usadas no código e nos documentos dos três repositórios.
+
+## Decisão depois da medição M5A_E3 (10/10/2026)
+
+Resultado (LEBRE Lab, `analises/M5A_E3_RESULTADO.md`, commit `d4f6cac`): o rascunho 2 reprovou só no critério 1, em A01
+(razão 0,373; meta ≤ 0,25), e atendeu a todos os critérios de precisão e identidade (pior família: YB03, limite superior
+1,0043), ao 3a e ao 3b. **Decisão do responsável pelo projeto:** a meta de 75% de corte foi uma estimativa feita antes de
+se conhecer o custo dos períodos ativos (sombra, 2.000 alvos antes de dormir e testes curtos na reseleção); ela passa a
+ser **corte de pelo menos 60% do custo da M1 (razão ≤ 0,40) em A01 e A05**. Esta revisão foi decidida **depois** de três
+medições no banco de desenvolvimento e por isso não serve como evidência de aprovação: o rascunho 2 vira **candidato**, e
+a aceitação depende de uma validação em dados novos, com plano e critérios fixados antes, usada uma única vez.
