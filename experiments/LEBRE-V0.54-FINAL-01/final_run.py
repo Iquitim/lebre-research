@@ -5,6 +5,7 @@ cópia fixa (git worktree) no commit declarado; a v0.53 é a biblioteca publicad
 
 Uso: LEBRE054_PROTO=<worktree>/experiments/LEBRE-V0.54-PROTO-01 python final_run.py [pasta_saida]
 """
+import importlib.util
 import json
 import math
 import os
@@ -18,8 +19,11 @@ import numpy as np
 
 import final_dados as FD
 
-sys.path.insert(0, os.path.join(FD.RAIZ, "experiments", "LEBRE-V0.53-FINAL-01"))
-import final_regua as R  # noqa: E402
+# RUN_NOTAS.md, item 1: carregar por caminho, sem pôr a pasta da v0.53 no sys.path (os processos filhos herdavam esse
+# sys.path e importavam o final_dados da v0.53 no lugar deste)
+_sr = importlib.util.spec_from_file_location("final_regua_v053",
+                                             os.path.join(FD.RAIZ, "experiments", "LEBRE-V0.53-FINAL-01", "final_regua.py"))
+R = importlib.util.module_from_spec(_sr); _sr.loader.exec_module(R)
 
 COMMIT = "cfe72ce"
 KW054 = dict(m5a=True, m5b=True, m4=True)
