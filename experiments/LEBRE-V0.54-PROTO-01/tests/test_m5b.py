@@ -1,4 +1,4 @@
-"""Testes do protótipo da v0.54 (M5b: grupos de equivalentes atualizados a cada 32 passos). Precisam de lebre==0.2.0.
+"""Testes do protótipo da v0.54 (M5b: grupos de equivalentes atualizados a cada 31 passos). Precisam de lebre==0.2.0.
 Rodar da pasta experiments/LEBRE-V0.54-PROTO-01:  python -m pytest -q tests
 Séries sintéticas com sementes 20261300 a 20261304 (conferidas como livres no código e nos documentos dos três repositórios).
 """
@@ -57,3 +57,9 @@ def test_equivalent_inputs_still_found():
     assert "x0" in a.structure and a.structure == b.structure
     assert set(a.equivalent_inputs("x0")) == set(b.equivalent_inputs("x0"))
     assert "x5" in b.equivalent_inputs("x0")
+
+
+def test_stride_visits_every_phase_of_common_cycles():
+    from lebre054.screening import SE_EQ
+    for c in (7, 12, 24, 168):
+        assert len({(k * SE_EQ) % c for k in range(c)}) == c

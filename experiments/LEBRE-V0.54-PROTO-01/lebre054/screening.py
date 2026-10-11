@@ -8,12 +8,15 @@ decisões são idênticas às do núcleo original; só o relatório de equivalen
 Desenho explorado e descartado antes de qualquer medição: dormência de entradas inativas na triagem. Com o limiar de sono
 abaixo do de candidatura quase nenhuma entrada dormia; no limiar de candidatura, a entrada relevante de sinal fraco
 dormia antes de ser descoberta e a detecção atrasava ou falhava (triar menos é detectar mais devagar).
+
+Rascunho 1 (depois da medição M5B_E1): passo 31 em vez de 32. Com 32 e ciclo diário de 24 passos (mdc 8), a covariância
+era estimada em só 3 das 24 fases do dia e as correlações mudavam de forma sistemática em séries solares (aliasing).
 """
 import numpy as np
 
 from ._core import BANDS, POLES, SCREEN_EVERY, SCREEN_W, Core, halves
 
-SE_EQ = 32
+SE_EQ = 31                   # primo: as atualizações percorrem todas as fases de ciclos como 24, 168, 7 e 12 (rascunho 1)
 
 
 class Core054(Core):
