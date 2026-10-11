@@ -72,3 +72,32 @@ Reportados: custo por passo, ciclos aceitos por família e passo da aceitação.
 
 **Regra:** a M6 (rascunho 0) segue para validação em dados novos se atender a 1, 2 e 3; se não, as falhas são declaradas
 e nada é ajustado.
+
+## Decisão depois da medição M6_E1 (11/10/2026)
+
+Resultado (LEBRE Lab, `analises/M6_E1_RESULTADO.md`, commits `c1ad4c4` e `9dfcef8`): **não segue**. Atendeu ao critério 1
+(sem piora com o ciclo declarado; ganhos na maré) e ao 3 (nenhum ciclo falso em 311 séries sintéticas sem ciclo). Falhou
+no 2: sem declarar, B01 1,23 e B02 1,41 (limite 1,05). Sem a M6, esses valores eram 1,44 e 2,87 no E23. Causas vistas:
+na carga, o harmônico de 12 passos era aceito primeiro e a memória virava (12, 24); na solar, o múltiplo 168 vencia a
+triagem, e as aceitações saíam tarde.
+
+## Rascunho 1 (11/10/2026, depois da M6_E1)
+
+- **Candidatos 7, 24 e 168**, sem o 12 (harmônico de 24 em dados horários). Ciclos mensais (12) ficam fora da M6, o que é
+  declarado; as séries mensais do banco têm 300 a 360 passos, curtas demais para a M6 agir.
+- **Parcimônia:** entre os candidatos que passam na triagem, testa-se o de menor período.
+- **Perfil na sua constante de tempo:** um candidato só abre teste depois de 10 visitas por fase (1/0,1), ou seja, 240
+  passos para 24 e 1.680 para 168. Antes disso, o perfil ainda não representa o ciclo, e um teste aberto cedo demais
+  fecha e espera 2.000 passos.
+- Explorado e descartado: perfis do resíduo da memória em vez dos incrementos.
+
+Exploração (sementes 20261335 a 20261339):
+
+- **Tipo carga:** o ciclo diário foi aceito em 5 de 5 séries. A razão contra a versão declarada ficou entre 1,005 e
+  1,199 em 4 delas. Na quinta, o teste do 24 fechou cedo, o 168 entrou sozinho, e a razão foi 1,91.
+- **Nulos:** nenhum ciclo aceito em 10 séries.
+- **Limitações declaradas:** o ciclo semanal quase nunca entra depois do diário, e quando um teste do ciclo diário fecha
+  cedo, o 168 pode entrar sozinho.
+
+Critérios da medição M6_E2 no banco: os da M6_E1, sem mudança. O rascunho 1 só é aceito se também atender a eles numa
+validação em dados novos.
