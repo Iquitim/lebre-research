@@ -1,5 +1,5 @@
-"""Testes do protótipo da v0.54 (M4: remoções com evidência por episódio, orçamento próprio, abertura por queda da
-contribuição e episódio de até T_MAX_REM passos). Precisam de lebre==0.2.0.
+"""Testes do protótipo da v0.54 (M4 rascunho 1: teste de remoção disparado pela queda da contribuição, acrescentado ao
+calendário original, com evidência por episódio, orçamento próprio e duração mínima para aceitar). Precisam de lebre==0.2.0.
 Rodar da pasta experiments/LEBRE-V0.54-PROTO-01:  python -m pytest -q tests
 Séries sintéticas com sementes 20261300 a 20261304 (faixa dos testes do protótipo, conferida como livre).
 """
@@ -53,14 +53,22 @@ def test_old_input_removed_after_regime_change_and_budgets_separate():
     assert "x0" not in m.structure and "x1" in m.structure
     adds = sum(e[1] == "accepted" and e[2] != "rem" for e in c.events)
     assert c.engine.n_accepted == adds and c.n_acc_rem == 1
+    assert rem[0][0] >= 15000 + 5000                                  # duração mínima de evidência
 
 
-def test_no_removal_of_true_inputs_when_stationary():
+def test_identical_and_no_removal_when_stationary():
     rng = np.random.default_rng(20261302); T = 20000; X = ar1(rng, T, 6)
     y = 0.7 * lag(X[:, 0], 3) + 0.5 * lag(X[:, 1], 10) + 0.7 * rng.standard_normal(T)
-    m = Lebre054(6, m4=True); run(m, X, y)
-    assert removidas(m) == []
-    assert {"x0", "x1"} <= set(m.structure)
+    a, m = Lebre054(6), Lebre054(6, m4=True)
+    assert np.array_equal(run(a, X, y), run(m, X, y))
+    assert removidas(m) == [] and {"x0", "x1"} <= set(m.structure)
+
+
+def test_intermittent_input_is_kept():
+    rng = np.random.default_rng(20261304); T = 30000; X = ar1(rng, T, 2)
+    y = np.where((np.arange(T) // 5000) % 2 == 0, 0.9 * lag(X[:, 0], 3), 0.0) + 0.6 * rng.standard_normal(T)
+    m = Lebre054(2, m4=True); run(m, X, y)
+    assert removidas(m) == [] and "x0" in m.structure
 
 
 def test_combines_with_m5b():
