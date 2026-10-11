@@ -78,3 +78,33 @@ família e custo.
 
 **Regra:** a M4 (rascunho 0) segue para validação em dados novos se atender a 1 a 4; se não, as falhas são declaradas e
 nada é ajustado.
+
+## Decisão depois da medição M4_E1 (11/10/2026)
+
+Resultado (LEBRE Lab, `analises/M4_E1_RESULTADO.md`, commit `6e30c47`): **não segue**. Atendeu ao critério 1 (A05: 17 de
+20 no prazo), ao 2 (nenhuma remoção falsa) e ao 4 (identidade). Falhou no 3:
+
+- **A07** (relação que liga e desliga em blocos de 5.000 passos): +14%. A M4 removia a entrada nos blocos desligados e
+  precisava redetectá-la depois.
+- **B03:** limite superior 1,0214 **sem nenhuma remoção**, só porque o calendário de testes mudou.
+
+## Rascunho 1 (11/10/2026, depois da M4_E1)
+
+- **O teste disparado é acrescentado ao calendário original, não o substitui.** Os testes periódicos com hipótese
+  persistente continuam como no núcleo; enquanto nenhum disparo acontece, as previsões são idênticas às do núcleo.
+- **Prioridade do disparado:** se o disparo vale e a unidade só está ocupada por um teste periódico de remoção, esse teste
+  é encerrado (a hipótese persistente fica guardada; encerrar um episódio é sempre válido) e o disparado assume. Sem
+  isso, os testes periódicos de 5.000 passos, sem chance de aceitar, bloqueavam o disparado (visto num teste do
+  protótipo).
+- **Duração mínima para aceitar:** a remoção disparada só é aceita depois de pelo menos **N_REM_MIN = 5.000** passos de
+  evidência no episódio, o mesmo limite de duração de um episódio de adição. A remoção passa a exigir pelo menos o tempo
+  que uma adição pode usar. Aceitar só depois de um mínimo de amostras é um tempo de parada válido.
+
+Exploração (as mesmas sementes de antes, fora do banco):
+
+- **Tipo A05:** x0 removida em 10 de 10 séries, todas até 7.600 passos depois da troca; média geométrica do MSE 0,9997.
+- **Tipo A07:** nenhuma remoção, previsões idênticas.
+- **Tipo A01:** previsões idênticas.
+
+Critérios da medição M4_E2 no banco: os da M4_E1, sem mudança. Como o banco já foi visto pela M4, o rascunho 1 só é
+aceito se também atender aos mesmos critérios numa validação em dados novos, com plano fixado antes e usada uma única vez.
