@@ -108,3 +108,12 @@ Exploração (as mesmas sementes de antes, fora do banco):
 
 Critérios da medição M4_E2 no banco: os da M4_E1, sem mudança. Como o banco já foi visto pela M4, o rascunho 1 só é
 aceito se também atender aos mesmos critérios numa validação em dados novos, com plano fixado antes e usada uma única vez.
+
+## Aceite na validação 7 (11/10/2026)
+
+Validação 7 do LEBRE Lab (plano `analises/VALIDACAO7_PLANO.md`, commit `1b78d47`; resultado `VALIDACAO7_RESULTADO.md`),
+usada uma única vez: **a M4 (rascunho 1) é aceita**. T-A05: x0 removida em 20 de 20 séries até 10.000 passos depois da
+troca; nenhuma remoção falsa (T-A01, T-A02); pior limite superior 1,0048 (T-A07); identidade onde nada foi aceito.
+**Ressalva declarada:** em 2 de 20 séries de T-A07, a remoção aconteceu no retorno da relação intermitente (a duração
+mínima de 5.000 passos coincide com o bloco desligado do gerador). A M4 não resolve a interpretação em níveis (M3), e a
+evidência vinculante continua sendo a avaliação final pré-registrada da v0.54.

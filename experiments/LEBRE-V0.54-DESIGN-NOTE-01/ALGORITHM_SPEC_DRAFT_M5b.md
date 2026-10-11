@@ -97,3 +97,12 @@ reescrito depois da M5B_E1 e declarado como tal):
 
 Como o banco já foi visto pela M5b, o rascunho 1 só é aceito se também atender aos mesmos critérios numa validação em
 dados novos, com plano fixado antes e usada uma única vez.
+
+## Aceite na validação 7 (11/10/2026)
+
+Validação 7 do LEBRE Lab (plano `analises/VALIDACAO7_PLANO.md`, commit `1b78d47`, antes de qualquer download; resultado
+`VALIDACAO7_RESULTADO.md`), em 100 séries nunca vistas (90 sintéticas com sementes novas, 4 de qualidade do ar de uma
+estação nova de Pequim, 6 eólicas nunca usadas), usada uma única vez: **a M5b (rascunho 1) é aceita**. Identidade em
+todas as séries, custo do núcleo com razão 0,719 no grupo d = 50, nenhuma discordância no relatório de equivalentes.
+Ressalva mantida: a meta original de custo (≤ 1,5 ou 2,0 vezes o custo com 5 entradas) não foi atingida; a M5b corta só a
+parte quadrática do relatório.
