@@ -101,3 +101,11 @@ Exploração (sementes 20261335 a 20261339):
 
 Critérios da medição M6_E2 no banco: os da M6_E1, sem mudança. O rascunho 1 só é aceito se também atender a eles numa
 validação em dados novos.
+
+## Decisão depois da medição M6_E2 (11/10/2026): a M6 fica fora da v0.54
+
+Resultado (LEBRE Lab, `analises/M6_E2_RESULTADO.md`, commit acima): **não segue**. Sem declarar, a carga ficou em 1,038
+(atende), mas a solar em 1,199 (limite 1,05): o ciclo diário é o escolhido, mas é aceito tarde ou não é aceito. Critérios
+1 e 3 atendidos de novo. Pela regra do processo (dois desenhos medidos, nenhum atendeu), a M6 **não entra na v0.54**. O
+ciclo continua precisando ser declarado, e isso fica declarado como limitação. A continuação (por que a aceitação é lenta
+na solar; o ciclo semanal depois do diário) passa para a v0.55, partindo do rascunho 1.
