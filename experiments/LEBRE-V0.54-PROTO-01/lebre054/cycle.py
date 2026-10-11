@@ -8,7 +8,7 @@ séries AR(1) quando a evidência era memória sazonal completa contra memória 
 
 - Triagem: correlação, em média exponencial, entre o resíduo da memória (y − m, com os ciclos já aceitos) e G_s[fase],
   feita como a triagem das entradas (peso SCREEN_W, um candidato a cada SCREEN_EVERY passos; ~χ²(1) sem ciclo); limiar
-  CYC_Q.
+  CYC_Q. Entre os candidatos que passam, testa-se o de menor período (parcimônia; rascunho 1).
 - Teste (um por vez): desafiante m + c·G_s[fase], com c aprendido por NLMS no resíduo da memória a partir de zero, contra a
   memória m, na perda recortada com a escala do próprio resíduo da memória (2 × raiz da média exponencial, taxa 0,01, de
   (y − m)², só passado). E-process do núcleo, hipótese persistente ("cycle", s) no orçamento e-LOND das adições,
@@ -21,8 +21,14 @@ séries AR(1) quando a evidência era memória sazonal completa contra memória 
 
 Na Lebre054, se o usuário não declarou ciclo nem escolheu a referência, a referência da M2 passa a ser a sazonal do
 menor ciclo aceito (como acontece quando o ciclo é declarado). A memória do núcleo é envolvida (CycleMemory) antes do
-primeiro passo; o núcleo não muda. Sem ciclo aceito e sem teste
-aberto, a previsão é a da memória original, mas a triagem custa ~3 operações por candidato por passo.
+primeiro passo; o núcleo não muda. Sem ciclo aceito e sem teste aberto, a previsão é a da memória original, mas a
+triagem custa ~3 operações por candidato por passo.
+
+Rascunho 1 (depois da medição M6_E1): candidatos 7, 24 e 168 (sem 12); entre os que passam na triagem, o de menor
+período primeiro; um candidato só abre teste depois de 1/A_PROF = 10 visitas por fase (o perfil na sua constante de
+tempo). No rascunho 0, o harmônico 12 era aceito no lugar do ciclo diário na carga, e o múltiplo 168 no lugar dele na
+solar. Perfis do resíduo da memória, em vez dos incrementos, foram explorados e descartados (pioraram uma série
+sintética e não fizeram o ciclo semanal entrar).
 """
 import math
 
@@ -31,7 +37,7 @@ import numpy as np
 from ._memory import Memory, MemoryW
 from ._core import CHAL_WARM, CLIP_K, COOLDOWN, EPS, N_MIN, SCREEN_EVERY, SCREEN_W, T_MAX
 
-CANDIDATOS = (7, 12, 24, 168)
+CANDIDATOS = (7, 24, 168)        # rascunho 1: sem 12 (harmônico de 24 em dados horários; aceito no lugar do dia na M6_E1)
 CYC_Q, A_PROF, MU_C = 6.63, 0.1, 0.05
 LB = 2 * max(CANDIDATOS) + 2
 
@@ -146,13 +152,14 @@ class CycleMixin:
                 C.fp_extra += tx["M"].fp; C.test = None
                 self.events.append((self.t, "closed", "cycle", ("cycle", tx["s"]), None, round(le, 2), tx["n"]))
         if C.test is None:
-            cands = [s for s in C.open_cands() if self.t - self.c_last.get(s, -10 ** 9) >= COOLDOWN and C.n >= 3 * s]
+            cands = [s for s in C.open_cands() if self.t - self.c_last.get(s, -10 ** 9) >= COOLDOWN
+                     and C.n >= s / A_PROF]                          # rascunho 1: perfil já na sua constante de tempo
+            cands = [s for s in cands if C.stat(s) >= CYC_Q]
             if cands:
-                s = max(cands, key=C.stat)
-                if C.stat(s) >= CYC_Q:
-                    C.test = dict(s=s, c=0.0, hyp=self.engine.hypothesis(("cycle", s), EPS["add"]), k=0, n=0, S=0.0,
-                                  M=C.shadow(s))
-                    self.c_last[s] = self.t
+                s = min(cands)                                       # rascunho 1: o menor período que passa na triagem
+                C.test = dict(s=s, c=0.0, hyp=self.engine.hypothesis(("cycle", s), EPS["add"]), k=0, n=0, S=0.0,
+                              M=C.shadow(s))
+                self.c_last[s] = self.t
 
     @property
     def cycles(self):
