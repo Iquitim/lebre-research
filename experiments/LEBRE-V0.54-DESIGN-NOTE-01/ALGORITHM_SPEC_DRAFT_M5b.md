@@ -73,3 +73,27 @@ Banco: as 64 famílias do E20 do LEBRE Lab, todas as séries. Comparação: prot
 no banco inteiro. O custo segue uma fórmula. Só o relatório varia, e o critério 3 foi fixado antes de qualquer medição no
 banco, que não foi usado para escolher nada da M5b. A evidência vinculante continua sendo a avaliação final
 pré-registrada da v0.54.
+
+## Decisão depois da medição M5B_E1 (11/10/2026)
+
+Resultado (LEBRE Lab, `analises/M5B_E1_RESULTADO.md`, commit `452f7ea`): **não aceito**. A identidade valeu em todas as
+séries das 64 famílias. A redução de custo foi a prevista pela fórmula (A01 d = 50 e A12: razão 0,718). Falhas:
+
+- **Critério 2, pela redação:** em 70 séries curtas (360 passos) a triagem nunca chega a rodar e o custo fica igual nos
+  dois, não menor.
+- **Critério 3:** 2 discordâncias fora da faixa em duas séries solares, por aliasing. Com ciclo de 24 passos e atualização
+  a cada 32 (mdc 8), a covariância era estimada em só 3 das 24 fases do dia.
+
+## Rascunho 1 (11/10/2026, depois da M5B_E1)
+
+Passo **SE_EQ = 31** (primo), com o peso 1e-3 × 31. As atualizações percorrem todas as fases de ciclos de 7, 12, 24 e 168
+passos. Economia: (3·d(d+1)/2 + 2d) × (1/4 − 1/31). Critérios da medição M5B_E2 no banco (os da M5B_E1, com o critério 2
+reescrito depois da M5B_E1 e declarado como tal):
+
+1. **Identidade:** como antes.
+2. **Custo:** custo do núcleo nunca maior. Menor em toda série em que a triagem roda (custo de triagem do original > 0).
+   Razão ≤ 0,80 na média do grupo d = 50 de A01 e em A12.
+3. **Relatório de equivalentes:** como antes (faixa 0,90 a 0,98).
+
+Como o banco já foi visto pela M5b, o rascunho 1 só é aceito se também atender aos mesmos critérios numa validação em
+dados novos, com plano fixado antes e usada uma única vez.
