@@ -1,0 +1,4124 @@
+{
+ "faltam": [],
+ "falhas": {
+  "A1": [],
+  "A2": [],
+  "A3": [],
+  "A4": [],
+  "A5 NaN": []
+ },
+ "resumo": {
+  "camels": {
+   "c1": null,
+   "c2": {
+    "geo": 0.9917689167768977,
+    "ic95": [
+     0.9893799839821258,
+     0.9938147116161863
+    ],
+    "n": 16
+   },
+   "classes": {
+    "v0.53 melhor": 16,
+    "referência melhor": 0,
+    "indecidível": 3,
+    "indecidível (choque)": 11
+   },
+   "todas_v054_sobre_v053": 0.9887605405742288,
+   "razao_custo_mediana": 1.005723498293932,
+   "remocoes": 0,
+   "externas": [
+    10,
+    10
+   ]
+  },
+  "bdg2": {
+   "c1": null,
+   "c2": {
+    "geo": 0.9946300152669071,
+    "ic95": [
+     0.9925588681861154,
+     0.9973537110888165
+    ],
+    "n": 30
+   },
+   "classes": {
+    "v0.53 melhor": 30,
+    "referência melhor": 0,
+    "indecidível": 0,
+    "indecidível (choque)": 0
+   },
+   "todas_v054_sobre_v053": 0.9946300152669071,
+   "razao_custo_mediana": 0.8467132283257068,
+   "remocoes": 1,
+   "externas": [
+    16,
+    16
+   ]
+  },
+  "eolica": {
+   "c1": null,
+   "c2": {
+    "geo": 0.9985914361523565,
+    "ic95": [
+     0.9974009413428628,
+     0.9997205675130405
+    ],
+    "n": 8
+   },
+   "classes": {
+    "v0.53 melhor": 8,
+    "referência melhor": 0,
+    "indecidível": 0,
+    "indecidível (choque)": 0
+   },
+   "todas_v054_sobre_v053": 0.9985914361523565,
+   "razao_custo_mediana": 0.752781169844096,
+   "remocoes": 0,
+   "externas": [
+    2,
+    2
+   ]
+  },
+  "solar": {
+   "c1": null,
+   "c2": {
+    "geo": 0.9999999958740917,
+    "ic95": [
+     0.999999988359717,
+     1.0000000007825585
+    ],
+    "n": 8
+   },
+   "classes": {
+    "v0.53 melhor": 8,
+    "referência melhor": 0,
+    "indecidível": 0,
+    "indecidível (choque)": 0
+   },
+   "todas_v054_sobre_v053": 0.9999999958740917,
+   "razao_custo_mediana": 0.9169499272392938,
+   "remocoes": 0,
+   "externas": [
+    3,
+    3
+   ]
+  },
+  "niveis": {
+   "c1": {
+    "geo": 1.0000647439531596,
+    "ic95": [
+     1.0000139370817398,
+     1.0001160257091
+    ],
+    "n": 2
+   },
+   "c2": null,
+   "classes": {
+    "v0.53 melhor": 0,
+    "referência melhor": 2,
+    "indecidível": 15,
+    "indecidível (choque)": 0
+   },
+   "todas_v054_sobre_v053": 0.9999999974273908,
+   "razao_custo_mediana": 0.8790605753864524,
+   "remocoes": 0,
+   "externas": [
+    3,
+    3
+   ]
+  }
+ },
+ "curtas": {
+  "geo": 1.007203577623674,
+  "ic95": [
+   0.9975835450051218,
+   1.0081559819249963
+  ],
+  "n": 86
+ },
+ "curtas_empates_exatos": [
+  "bdg2:steam:Hog_office_Roger"
+ ],
+ "custo_razao_mediana": 0.9046105133694188,
+ "custo_razao_mediana_ic95": [
+  0.8573927735514885,
+  0.9316264613899162
+ ],
+ "custo_ok": true,
+ "ram_estimada_bytes": 85268,
+ "ram_info": {
+  "k": 28,
+  "numeros_m1": 1056,
+  "numeros_m2": 207,
+  "numeros_v054": 22
+ },
+ "sem_piora": true,
+ "promovida": true,
+ "series": [
+  {
+   "familia": "camels",
+   "serie": "camels:25130000",
+   "T": 16345,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.9568895133192704,
+   "v053_sobre_ref_ic95": [
+    0.9438994361172349,
+    0.9692195352585727
+   ],
+   "choque": 0.012601660416985896,
+   "v054_sobre_ref": 0.8383583242113399,
+   "v054_sobre_v053": 0.8761286570099739,
+   "v054_sobre_v053_ic95": [
+    0.8429657304852067,
+    0.9054964298368442
+   ],
+   "nan": 0,
+   "custo_v054": 816.7089629856225,
+   "custo_v053": 830.8987457938208,
+   "razao_custo": 0.9829223682427854,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 959,
+    "m1_fp_per_step": 333.90535331905784
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0348540716113364,
+   "v054_sobre_chronos_1000": 1.112607093466415,
+   "v053_sobre_chronos_1000": 1.2933964882076876
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:31520000",
+   "T": 16345,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.8490893715291825,
+   "v053_sobre_ref_ic95": [
+    0.8051002617392423,
+    0.911151684849806
+   ],
+   "choque": 0.023444664918562116,
+   "v054_sobre_ref": 0.8490893715291825,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 1025.3160599571734,
+   "custo_v053": 1020.127011318446,
+   "razao_custo": 1.00508666919036,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 362.29262771489755
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0650792391686497,
+   "v054_sobre_chronos_1000": 0.800594298718248,
+   "v053_sobre_chronos_1000": 0.800594298718248
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:33215000",
+   "T": 16376,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0091563378211907,
+   "v053_sobre_ref_ic95": [
+    0.9678209554941078,
+    1.042789910740079
+   ],
+   "choque": 0.10779087240424873,
+   "v054_sobre_ref": 0.9391681952299599,
+   "v054_sobre_v053": 0.9306468780225489,
+   "v054_sobre_v053_ic95": [
+    0.8855658184351931,
+    0.968128694532576
+   ],
+   "nan": 0,
+   "custo_v054": 926.636938202248,
+   "custo_v053": 989.6787677088422,
+   "razao_custo": 0.9363007153800628,
+   "externas_v054": 2,
+   "externas_v053": 3,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 893,
+    "m1_fp_per_step": 321.39844894968246
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.047278808400301,
+   "v054_sobre_chronos_1000": 0.9408323151973127,
+   "v053_sobre_chronos_1000": 1.0240245473746608
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:33330000",
+   "T": 16376,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.89801554692626,
+   "v053_sobre_ref_ic95": [
+    0.840587485873063,
+    0.95095115527278
+   ],
+   "choque": 0.05991868577962734,
+   "v054_sobre_ref": 0.89801554692626,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 804.814423546653,
+   "custo_v053": 799.7802882266732,
+   "razao_custo": 1.0062943978416146,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 339.68826331216417
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.9137181533613636,
+   "v054_sobre_chronos_1000": 1.1436675372839298,
+   "v053_sobre_chronos_1000": 1.1436675372839298
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:33530000",
+   "T": 16376,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.7472629185173129,
+   "v053_sobre_ref_ic95": [
+    0.6450446988110597,
+    0.8845722381163552
+   ],
+   "choque": 0.06161543718081259,
+   "v054_sobre_ref": 0.6665330568196143,
+   "v054_sobre_v053": 0.8919659202976653,
+   "v054_sobre_v053_ic95": [
+    0.7835116542157773,
+    0.9839467427449387
+   ],
+   "nan": 0,
+   "custo_v054": 831.6812652662445,
+   "custo_v053": 916.6803004396679,
+   "razao_custo": 0.9072751589265579,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 4240,
+    "m1_fp_per_step": 268.528334147533
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0649957966169397,
+   "v054_sobre_chronos_1000": 0.5340525416692697,
+   "v053_sobre_chronos_1000": 0.744190066250382
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:55330000",
+   "T": 16376,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.9632057715912273,
+   "v053_sobre_ref_ic95": [
+    0.9390540774496351,
+    0.9857081443106476
+   ],
+   "choque": 0.05180178110126231,
+   "v054_sobre_ref": 0.9632057715912273,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 829.8737115290669,
+   "custo_v053": 821.9505495847582,
+   "razao_custo": 1.0096394630410692,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 340.51990718124085
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.9944010342328021,
+   "v054_sobre_chronos_1000": 1.0427038071560224,
+   "v053_sobre_chronos_1000": 1.0427038071560224
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:56028000",
+   "T": 16315,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.7212128819665088,
+   "v053_sobre_ref_ic95": [
+    0.6685501648278647,
+    0.7755476548158494
+   ],
+   "choque": 0.031133355933309573,
+   "v054_sobre_ref": 0.7212128819665088,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 863.4523138216358,
+   "custo_v053": 858.2185779957094,
+   "razao_custo": 1.0060983716271317,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 352.59626110940854
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1846571100770722,
+   "v054_sobre_chronos_1000": 1.0502188564650579,
+   "v053_sobre_chronos_1000": 1.0502188564650579
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:56570000",
+   "T": 16376,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.8964939867308356,
+   "v053_sobre_ref_ic95": [
+    0.8183814513156806,
+    0.9612388501408329
+   ],
+   "choque": 0.04462680984733328,
+   "v054_sobre_ref": 0.8964939867308356,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 805.8600146555932,
+   "custo_v053": 789.5281265266244,
+   "razao_custo": 1.02068563181,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 321.6841719589643
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0166616652347575,
+   "v054_sobre_chronos_1000": 1.2663161029343672,
+   "v053_sobre_chronos_1000": 1.2663161029343672
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:56845000",
+   "T": 13950,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.7201261616535752,
+   "v053_sobre_ref_ic95": [
+    0.6230879824105467,
+    0.7577756353537984
+   ],
+   "choque": 0.09415633190900737,
+   "v054_sobre_ref": 0.7201261616535752,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 890.5274623655919,
+   "custo_v053": 886.2957060931899,
+   "razao_custo": 1.0047746550539611,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 360.20021505376343
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1925095274027602,
+   "v054_sobre_chronos_1000": 0.7429779879253764,
+   "v053_sobre_chronos_1000": 0.7429779879253764
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:57770000",
+   "T": 16345,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.7242416934982908,
+   "v053_sobre_ref_ic95": [
+    0.6598317972326407,
+    0.8071834861095143
+   ],
+   "choque": 0.04759706153595684,
+   "v054_sobre_ref": 0.7242416934982908,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 776.5888956867543,
+   "custo_v053": 771.9173141633527,
+   "razao_custo": 1.006051919600307,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 340.75815234016517
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0333094281852662,
+   "v054_sobre_chronos_1000": 1.0347159556268442,
+   "v053_sobre_chronos_1000": 1.0347159556268442
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:58142200",
+   "T": 15772,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.7696917202211431,
+   "v053_sobre_ref_ic95": [
+    0.7248890867024287,
+    0.8234787001816358
+   ],
+   "choque": 0.01393935582994823,
+   "v054_sobre_ref": 0.7696917202211431,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 951.0477998985544,
+   "custo_v053": 946.0420935835658,
+   "razao_custo": 1.0052912088679133,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 352.7263504945473
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.2530451935975584,
+   "v054_sobre_chronos_1000": 0.9891667635726447,
+   "v053_sobre_chronos_1000": 0.9891667635726447
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:58658000",
+   "T": 14245,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.7770850102713426,
+   "v053_sobre_ref_ic95": [
+    0.7171028325948464,
+    0.8546808632175482
+   ],
+   "choque": 0.0355579714131259,
+   "v054_sobre_ref": 0.7770850102713426,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 892.0611793611794,
+   "custo_v053": 887.1593190593192,
+   "razao_custo": 1.0055253438661478,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 346.45587925587927
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.097599218678453,
+   "v054_sobre_chronos_1000": 1.1930372570048857,
+   "v053_sobre_chronos_1000": 1.1930372570048857
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:58934000",
+   "T": 16406,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.7997017931323777,
+   "v053_sobre_ref_ic95": [
+    0.7148632389220235,
+    0.8835038516632078
+   ],
+   "choque": 0.15604473644711536,
+   "v054_sobre_ref": 0.7997017931323777,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 894.3664512983055,
+   "custo_v053": 889.6370839936609,
+   "razao_custo": 1.0053160635833818,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 342.1748140924052
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.292359230024394,
+   "v054_sobre_chronos_1000": 0.8297619611578692,
+   "v053_sobre_chronos_1000": 0.8297619611578692
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:59240000",
+   "T": 14304,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.6945523812152856,
+   "v053_sobre_ref_ic95": [
+    0.6661518652132645,
+    0.7272671482084555
+   ],
+   "choque": 0.05214787002573017,
+   "v054_sobre_ref": 0.6803583527770042,
+   "v054_sobre_v053": 0.9795637754298019,
+   "v054_sobre_v053_ic95": [
+    0.9594749198455399,
+    0.9979034368613083
+   ],
+   "nan": 0,
+   "custo_v054": 753.7678271812081,
+   "custo_v053": 804.4184144295302,
+   "razao_custo": 0.9370345253915625,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 2469,
+    "m1_fp_per_step": 283.72294463087246
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0113123077512698,
+   "v054_sobre_chronos_1000": 1.117097151241025,
+   "v053_sobre_chronos_1000": 1.149685983958826
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:59370000",
+   "T": 16284,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.6417883168155135,
+   "v053_sobre_ref_ic95": [
+    0.6001750158866218,
+    0.6992514204076582
+   ],
+   "choque": 0.05914729689477423,
+   "v054_sobre_ref": 0.6417883168155135,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 869.6878838123312,
+   "custo_v053": 864.661170474085,
+   "razao_custo": 1.0058135065039293,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 350.85869565217394
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.022561673752496,
+   "v054_sobre_chronos_1000": 1.23198014156842,
+   "v053_sobre_chronos_1000": 1.23198014156842
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:60774000",
+   "T": 16345,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0206970927723642,
+   "v053_sobre_ref_ic95": [
+    0.8941460476447606,
+    1.194788041895418
+   ],
+   "choque": 0.08919682430515044,
+   "v054_sobre_ref": 1.0206970927723642,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 890.7416335270725,
+   "custo_v053": 885.8091159375956,
+   "razao_custo": 1.0055683752861992,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 348.41700825940654
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.9207120934719969,
+   "v054_sobre_chronos_1000": 0.7510437149651183,
+   "v053_sobre_chronos_1000": 0.7510437149651183
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61285000",
+   "T": 15857,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.6999693922648195,
+   "v053_sobre_ref_ic95": [
+    0.6551835181728813,
+    0.7505484118396162
+   ],
+   "choque": 0.027751793461319865,
+   "v054_sobre_ref": 0.6999693922648195,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 931.2128082234975,
+   "custo_v053": 926.1388976477266,
+   "razao_custo": 1.0054785633004488,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 354.64255533833636
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0294118182292402,
+   "v054_sobre_chronos_1000": 0.9255187254271547,
+   "v053_sobre_chronos_1000": 0.9255187254271547
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61390000",
+   "T": 15887,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.7758610992931193,
+   "v053_sobre_ref_ic95": [
+    0.730686091410686,
+    0.8197513498770603
+   ],
+   "choque": 0.031232318383013824,
+   "v054_sobre_ref": 0.7758610992931193,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 916.6577390319128,
+   "custo_v053": 911.3423868571788,
+   "razao_custo": 1.0058324426158476,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 362.81853087429977
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1287295385422764,
+   "v054_sobre_chronos_1000": 0.8488488864716955,
+   "v053_sobre_chronos_1000": 0.8488488864716955
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61460000",
+   "T": 15887,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.6509316365600297,
+   "v053_sobre_ref_ic95": [
+    0.6127649943994197,
+    0.6909788375773293
+   ],
+   "choque": 0.07093200510349834,
+   "v054_sobre_ref": 0.6509316365600297,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 987.6880090640141,
+   "custo_v053": 982.1258890917102,
+   "razao_custo": 1.0056633472695113,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 366.3315289230188
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.200024669589667,
+   "v054_sobre_chronos_1000": 0.789493452018427,
+   "v053_sobre_chronos_1000": 0.789493452018427
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61473000",
+   "T": 15887,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.8201712874777161,
+   "v053_sobre_ref_ic95": [
+    0.7724320732253405,
+    0.8697882098975767
+   ],
+   "choque": 0.02822111036400777,
+   "v054_sobre_ref": 0.8201712874777161,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 936.8217410461382,
+   "custo_v053": 941.0414301000818,
+   "razao_custo": 0.9955159370045006,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 358.08925536602254
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0346603522394782,
+   "v054_sobre_chronos_1000": 0.8898018081866995,
+   "v053_sobre_chronos_1000": 0.8898018081866995
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61500000",
+   "T": 15887,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.6933618383696982,
+   "v053_sobre_ref_ic95": [
+    0.653730999436608,
+    0.73082403745866
+   ],
+   "choque": 0.0484768565970898,
+   "v054_sobre_ref": 0.6933618383696982,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 881.3844904639011,
+   "custo_v053": 875.929917542645,
+   "razao_custo": 1.0062271796087963,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 358.2795367281425
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0901516573710004,
+   "v054_sobre_chronos_1000": 0.8077348717747941,
+   "v053_sobre_chronos_1000": 0.8077348717747941
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:64700000",
+   "T": 16142,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.7263351703716624,
+   "v053_sobre_ref_ic95": [
+    0.6891075165828309,
+    0.7656522854541873
+   ],
+   "choque": 0.04377801624655583,
+   "v054_sobre_ref": 0.7263351703716624,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 867.1363647627306,
+   "custo_v053": 852.8076446536984,
+   "razao_custo": 1.0168018194945365,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 315.0602775368604
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.9565210294018456,
+   "v054_sobre_chronos_1000": 1.1599134370066224,
+   "v053_sobre_chronos_1000": 1.1599134370066224
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:64723000",
+   "T": 16345,
+   "classe": "indecidível",
+   "v053_sobre_ref": 0.9166953106323426,
+   "v053_sobre_ref_ic95": [
+    0.6975310811151837,
+    1.0983372356083267
+   ],
+   "choque": 0.06877713551607967,
+   "v054_sobre_ref": 0.9166953106323426,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 831.309593147751,
+   "custo_v053": 826.8336433159989,
+   "razao_custo": 1.0054133620081078,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 315.8191495870297
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.9163446396762941,
+   "v054_sobre_chronos_1000": 1.019546870927491,
+   "v053_sobre_chronos_1000": 1.019546870927491
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:64767000",
+   "T": 16192,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.7180473595467077,
+   "v053_sobre_ref_ic95": [
+    0.6572217809547958,
+    0.8011988299862632
+   ],
+   "choque": 0.16228034732788707,
+   "v054_sobre_ref": 0.7180473595467077,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 783.5094799901185,
+   "custo_v053": 778.9419775197628,
+   "razao_custo": 1.0058637261852277,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 329.04601037549406
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0241093610908085,
+   "v054_sobre_chronos_1000": 1.2052043816725038,
+   "v053_sobre_chronos_1000": 1.2052043816725038
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:65100000",
+   "T": 13696,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.39218127955527626,
+   "v053_sobre_ref_ic95": [
+    0.3158272420498598,
+    0.5121535452911665
+   ],
+   "choque": 0.026472644722882435,
+   "v054_sobre_ref": 0.39218127955527626,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 911.5134345794406,
+   "custo_v053": 905.3895589953272,
+   "razao_custo": 1.006763801861056,
+   "externas_v054": 2,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 355.2387558411215
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.2451221132293542,
+   "v054_sobre_chronos_1000": 0.5928867118411826,
+   "v053_sobre_chronos_1000": 0.5928867118411826
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:65135000",
+   "T": 15826,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.531503153050444,
+   "v053_sobre_ref_ic95": [
+    0.49925091657951187,
+    0.5687775231661327
+   ],
+   "choque": 0.013677560970033505,
+   "v054_sobre_ref": 0.531503153050444,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 867.7741754075587,
+   "custo_v053": 861.6974409200051,
+   "razao_custo": 1.0070520512177288,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 347.3079742196386
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.3372445438815646,
+   "v054_sobre_chronos_1000": 0.694011950924326,
+   "v053_sobre_chronos_1000": 0.694011950924326
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:73765000",
+   "T": 16223,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.6749623547132836,
+   "v053_sobre_ref_ic95": [
+    0.6367713200642324,
+    0.7199050059795263
+   ],
+   "choque": 0.03884488881565449,
+   "v054_sobre_ref": 0.6749623547132836,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 727.2252357763668,
+   "custo_v053": 722.9536460580657,
+   "razao_custo": 1.0059085250369677,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 318.768353572089
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1479038671261907,
+   "v054_sobre_chronos_1000": 1.1509534185700188,
+   "v053_sobre_chronos_1000": 1.1509534185700188
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:73780000",
+   "T": 14339,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.5800634208342369,
+   "v053_sobre_ref_ic95": [
+    0.5516401990592212,
+    0.6100317425399543
+   ],
+   "choque": 0.017014084258224905,
+   "v054_sobre_ref": 0.5800634208342369,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 831.176895180975,
+   "custo_v053": 826.6691191854384,
+   "razao_custo": 1.0054529386557687,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 328.85508054955017
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.2945085882838545,
+   "v054_sobre_chronos_1000": 0.9066461493287052,
+   "v053_sobre_chronos_1000": 0.9066461493287052
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:86700000",
+   "T": 12855,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.7268163506837432,
+   "v053_sobre_ref_ic95": [
+    0.6952768029897494,
+    0.7657411272857001
+   ],
+   "choque": 0.06291899628426505,
+   "v054_sobre_ref": 0.7268163506837432,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 782.0887592376507,
+   "custo_v053": 777.5914430182809,
+   "razao_custo": 1.005783649318353,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 329.0311162971606
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1931831182074435,
+   "v054_sobre_chronos_1000": 1.0688726732036509,
+   "v053_sobre_chronos_1000": 1.0688726732036509
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:87160000",
+   "T": 16192,
+   "classe": "indecidível (choque)",
+   "v053_sobre_ref": 0.6995637215567472,
+   "v053_sobre_ref_ic95": [
+    0.651035597594898,
+    0.7241822815438393
+   ],
+   "choque": 0.05852004248101121,
+   "v054_sobre_ref": 0.6995637215567472,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 756.5582386363636,
+   "custo_v053": 751.9824604743083,
+   "razao_custo": 1.0060849533101732,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 332.3177495059289
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1140039681365068,
+   "v054_sobre_chronos_1000": 1.0722162207899568,
+   "v053_sobre_chronos_1000": 1.0722162207899568
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Bull_education_Barry",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.0573325454716607,
+   "v053_sobre_ref_ic95": [
+    0.03398506007215486,
+    0.09192300200443576
+   ],
+   "choque": 0.003225896728067664,
+   "v054_sobre_ref": 0.05679390015524924,
+   "v054_sobre_v053": 0.9906048944455517,
+   "v054_sobre_v053_ic95": [
+    0.9773259390706047,
+    1.0006682745974593
+   ],
+   "nan": 0,
+   "custo_v054": 805.6678636570923,
+   "custo_v053": 837.182090743274,
+   "razao_custo": 0.9623567830288839,
+   "externas_v054": 1,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 255.76328089375286
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.1580544298326632,
+   "v054_sobre_chronos_1000": 1.1746690128942534,
+   "v053_sobre_chronos_1000": 1.176899346214779
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Bull_education_Nichole",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.09799626928552944,
+   "v053_sobre_ref_ic95": [
+    0.07957827462919015,
+    0.12509126150286148
+   ],
+   "choque": 0.003631422801784278,
+   "v054_sobre_ref": 0.09642301848745165,
+   "v054_sobre_v053": 0.9839458092685769,
+   "v054_sobre_v053_ic95": [
+    0.9726125145154272,
+    0.9921136440680979
+   ],
+   "nan": 0,
+   "custo_v054": 835.2411194710428,
+   "custo_v053": 894.5718080255358,
+   "razao_custo": 0.9336769971709198,
+   "externas_v054": 2,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 2,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 4578,
+    "m1_fp_per_step": 194.1997834017328
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.2697185879948574,
+   "v054_sobre_chronos_1000": 1.348447685506839,
+   "v053_sobre_chronos_1000": 1.390400783312352
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Cockatoo_office_Giovanni",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.2528487534578756,
+   "v053_sobre_ref_ic95": [
+    0.21228360497728388,
+    0.3079195713863645
+   ],
+   "choque": 0.005187178284480571,
+   "v054_sobre_ref": 0.2528487534578756,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 573.8789443684449,
+   "custo_v053": 731.8216142270862,
+   "razao_custo": 0.7841787304609026,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 12854,
+    "m1_fp_per_step": 63.70297537619699
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.036689562415121,
+   "v054_sobre_chronos_1000": 1.8630059628056994,
+   "v053_sobre_chronos_1000": 1.8630059628056994
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_assembly_Johnnie",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.17913412496879605,
+   "v053_sobre_ref_ic95": [
+    0.13736454247935423,
+    0.24154556592098866
+   ],
+   "choque": 0.0054052201463356524,
+   "v054_sobre_ref": 0.17913412496879605,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 727.4882979936153,
+   "custo_v053": 890.2061844505245,
+   "razao_custo": 0.8172132599175932,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 12723,
+    "m1_fp_per_step": 89.7281121751026
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0830591353394243,
+   "v054_sobre_chronos_1000": 1.1536575767451833,
+   "v053_sobre_chronos_1000": 1.1536575767451833
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Elizabeth",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.24377349603986673,
+   "v053_sobre_ref_ic95": [
+    0.19690138961258777,
+    0.2950932613468467
+   ],
+   "choque": 0.005517791357423066,
+   "v054_sobre_ref": 0.2445417343059912,
+   "v054_sobre_v053": 1.0031514429525958,
+   "v054_sobre_v053_ic95": [
+    0.988326597439377,
+    1.0174926787872294
+   ],
+   "nan": 0,
+   "custo_v054": 745.8063098495197,
+   "custo_v053": 844.2533059735522,
+   "razao_custo": 0.8833916368138965,
+   "externas_v054": 3,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 3,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 9164,
+    "m1_fp_per_step": 134.5112859097127
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.1056851493138746,
+   "v054_sobre_chronos_1000": 0.9430037706208678,
+   "v053_sobre_chronos_1000": 0.9242863472697908
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Long",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.14168857000895396,
+   "v053_sobre_ref_ic95": [
+    0.12340929671414844,
+    0.16509914971492823
+   ],
+   "choque": 0.002706868140522739,
+   "v054_sobre_ref": 0.14226582613637492,
+   "v054_sobre_v053": 1.0040741192277154,
+   "v054_sobre_v053_ic95": [
+    0.999589912987884,
+    1.0116603024014235
+   ],
+   "nan": 0,
+   "custo_v054": 672.5560989512096,
+   "custo_v053": 863.2807341541268,
+   "razao_custo": 0.7790699738135637,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 11946,
+    "m1_fp_per_step": 95.76299589603283
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.2382312975982404,
+   "v054_sobre_chronos_1000": 1.967568764015512,
+   "v053_sobre_chronos_1000": 1.967568765773391
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Rosie",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.29658408719932694,
+   "v053_sobre_ref_ic95": [
+    0.23693842125606887,
+    0.36306202050161923
+   ],
+   "choque": 0.008992851500953832,
+   "v054_sobre_ref": 0.29539255118778296,
+   "v054_sobre_v053": 0.9959824681667995,
+   "v054_sobre_v053_ic95": [
+    0.9840933877970934,
+    1.0066158962775056
+   ],
+   "nan": 0,
+   "custo_v054": 800.8930175558581,
+   "custo_v053": 886.5784199726403,
+   "razao_custo": 0.9033527091496019,
+   "externas_v054": 2,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 7034,
+    "m1_fp_per_step": 163.73016415868673
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.963558513601121,
+   "v054_sobre_chronos_1000": 1.3153940470771082,
+   "v053_sobre_chronos_1000": 1.3184598889845986
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Shaun",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.07619947975143768,
+   "v053_sobre_ref_ic95": [
+    0.06787971901773926,
+    0.08582124010833035
+   ],
+   "choque": 0.0019717383677638448,
+   "v054_sobre_ref": 0.07619947975143768,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 673.0652131782961,
+   "custo_v053": 853.0552667578661,
+   "razao_custo": 0.7890054014159683,
+   "externas_v054": 2,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 13211,
+    "m1_fp_per_step": 71.62938896488828
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0386269178803036,
+   "v054_sobre_chronos_1000": 2.128807174585114,
+   "v053_sobre_chronos_1000": 2.128807174585114
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_office_Bernard",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1496979507248974,
+   "v053_sobre_ref_ic95": [
+    0.11076959239165315,
+    0.22616696634241468
+   ],
+   "choque": 0.006524713151250032,
+   "v054_sobre_ref": 0.14969794553561847,
+   "v054_sobre_v053": 0.9999999653350036,
+   "v054_sobre_v053_ic95": [
+    0.9999996403432427,
+    1.000000265848135
+   ],
+   "nan": 0,
+   "custo_v054": 747.7305061559521,
+   "custo_v053": 873.9274965800273,
+   "razao_custo": 0.8555978717709117,
+   "externas_v054": 4,
+   "externas_v053": 4,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 3,
+    "wakes": 3,
+    "trials": 0,
+    "dormant_steps": 9971,
+    "m1_fp_per_step": 126.37072503419972
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0612620354084754,
+   "v054_sobre_chronos_1000": 1.0242328396655915,
+   "v053_sobre_chronos_1000": 1.0242334309381873
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Hog_education_Beth",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.22486202482434042,
+   "v053_sobre_ref_ic95": [
+    0.19901576433968288,
+    0.2556255436831864
+   ],
+   "choque": 0.004073226598633865,
+   "v054_sobre_ref": 0.2250975517786725,
+   "v054_sobre_v053": 1.0010474287711144,
+   "v054_sobre_v053_ic95": [
+    0.9960878895810664,
+    1.005855316296669
+   ],
+   "nan": 0,
+   "custo_v054": 629.2524794801636,
+   "custo_v053": 807.741301869585,
+   "razao_custo": 0.7790272430340085,
+   "externas_v054": 2,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14213,
+    "m1_fp_per_step": 61.893239854081166
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.1709110057153025,
+   "v054_sobre_chronos_1000": 1.484952560645519,
+   "v053_sobre_chronos_1000": 1.4851452129429137
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Hog_education_Cathleen",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.04747275104402903,
+   "v053_sobre_ref_ic95": [
+    0.04029181747917062,
+    0.05689830535125439
+   ],
+   "choque": 0.0023052883161430006,
+   "v054_sobre_ref": 0.0474556409011474,
+   "v054_sobre_v053": 0.99963957970614,
+   "v054_sobre_v053_ic95": [
+    0.9993251282502643,
+    0.999871314289387
+   ],
+   "nan": 0,
+   "custo_v054": 817.4484667122663,
+   "custo_v053": 807.8375227998176,
+   "razao_custo": 1.0118971249059328,
+   "externas_v054": 3,
+   "externas_v053": 3,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 257.078203374373
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0142640436090904,
+   "v054_sobre_chronos_1000": 1.3216100607900498,
+   "v053_sobre_chronos_1000": 1.3220382417943386
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Panther_office_Christian",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.29076913038760005,
+   "v053_sobre_ref_ic95": [
+    0.25428177346863684,
+    0.33736453420697204
+   ],
+   "choque": 0.004014886863408021,
+   "v054_sobre_ref": 0.28782101741062943,
+   "v054_sobre_v053": 0.989860983615968,
+   "v054_sobre_v053_ic95": [
+    0.9768060747242716,
+    1.000410215827371
+   ],
+   "nan": 0,
+   "custo_v054": 666.1209188326492,
+   "custo_v053": 776.3641016871865,
+   "razao_custo": 0.8580006692543384,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 3,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 9104,
+    "m1_fp_per_step": 114.75581395348837
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.9809672517329827,
+   "v054_sobre_chronos_1000": 1.2119628877952575,
+   "v053_sobre_chronos_1000": 1.2126026868100865
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Peacock_lodging_Matthew",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.20663780998207976,
+   "v053_sobre_ref_ic95": [
+    0.17175491176920152,
+    0.24695737745341673
+   ],
+   "choque": 0.003274023913951176,
+   "v054_sobre_ref": 0.20595016706207536,
+   "v054_sobre_v053": 0.9966722308948976,
+   "v054_sobre_v053_ic95": [
+    0.9830720879431911,
+    1.0089965555726144
+   ],
+   "nan": 0,
+   "custo_v054": 671.4671796625627,
+   "custo_v053": 704.5070223438213,
+   "razao_custo": 0.9531021811942505,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 3212,
+    "m1_fp_per_step": 207.04485864113087
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.9769470727322168,
+   "v054_sobre_chronos_1000": 1.1438722900015255,
+   "v053_sobre_chronos_1000": 1.1495082691212055
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Crow_education_Omer",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.2196565240840906,
+   "v053_sobre_ref_ic95": [
+    0.1536223781918435,
+    0.3017731841347403
+   ],
+   "choque": 0.011706527893064776,
+   "v054_sobre_ref": 0.2196565240840906,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 606.0865595075254,
+   "custo_v053": 774.4401846785225,
+   "razao_custo": 0.7826124877018329,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14790,
+    "m1_fp_per_step": 58.95998632010944
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.991961789685486,
+   "v054_sobre_chronos_1000": 1.5521595455598163,
+   "v053_sobre_chronos_1000": 1.5521595455598163
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Eagle_office_Donovan",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.4703161053764192,
+   "v053_sobre_ref_ic95": [
+    0.42384982962122775,
+    0.5095618506766589
+   ],
+   "choque": 0.0021492433402369475,
+   "v054_sobre_ref": 0.4703161053764192,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 659.2150478796169,
+   "custo_v053": 845.5104765161879,
+   "razao_custo": 0.7796651445359066,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14589,
+    "m1_fp_per_step": 60.79936160510716
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.1647258638420577,
+   "v054_sobre_chronos_1000": 1.3755197966795958,
+   "v053_sobre_chronos_1000": 1.3755197966795958
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Eagle_office_Nereida",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.4076569928551324,
+   "v053_sobre_ref_ic95": [
+    0.34494849719578163,
+    0.4381602342667413
+   ],
+   "choque": 0.0039050731045715214,
+   "v054_sobre_ref": 0.401782764828378,
+   "v054_sobre_v053": 0.9855902679710883,
+   "v054_sobre_v053_ic95": [
+    0.9811278823089209,
+    1.0223766059577708
+   ],
+   "nan": 0,
+   "custo_v054": 678.8544915640668,
+   "custo_v053": 803.9154126766986,
+   "razao_custo": 0.8444352239793094,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 2,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 10012,
+    "m1_fp_per_step": 122.73364113087095
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.9381889045991121,
+   "v054_sobre_chronos_1000": 1.1228487597622414,
+   "v053_sobre_chronos_1000": 1.2245582159207038
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Eagle_office_Ryan",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.5336202975261013,
+   "v053_sobre_ref_ic95": [
+    0.49757646936797534,
+    0.5755428167994119
+   ],
+   "choque": 0.0024244251418628054,
+   "v054_sobre_ref": 0.5336202975261013,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 677.6451322389421,
+   "custo_v053": 864.3286137710897,
+   "razao_custo": 0.7840133040168109,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14580,
+    "m1_fp_per_step": 60.74082307341541
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0112780292872547,
+   "v054_sobre_chronos_1000": 1.1223865428715227,
+   "v053_sobre_chronos_1000": 1.1223865428715227
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Fox_education_Louie",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.14773669396911102,
+   "v053_sobre_ref_ic95": [
+    0.12181179761823588,
+    0.17285889436686197
+   ],
+   "choque": 0.002730357189137771,
+   "v054_sobre_ref": 0.13943761894999657,
+   "v054_sobre_v053": 0.9438252285457963,
+   "v054_sobre_v053_ic95": [
+    0.9107599456950842,
+    0.9709367037902131
+   ],
+   "nan": 0,
+   "custo_v054": 856.9822959416338,
+   "custo_v053": 864.0687528499772,
+   "razao_custo": 0.9917987348981548,
+   "externas_v054": 3,
+   "externas_v053": 4,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 799,
+    "m1_fp_per_step": 251.92401960784315
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0836185200759143,
+   "v054_sobre_chronos_1000": 1.2115980284775856,
+   "v053_sobre_chronos_1000": 1.1664316858069703
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Fox_education_Virgil",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.4887960696679641,
+   "v053_sobre_ref_ic95": [
+    0.41584070273455487,
+    0.5721272944866289
+   ],
+   "choque": 0.003323786016349823,
+   "v054_sobre_ref": 0.4887960696679641,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 604.6905950752393,
+   "custo_v053": 793.5799589603282,
+   "razao_custo": 0.761978157648344,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14770,
+    "m1_fp_per_step": 60.372093023255815
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0321492776916705,
+   "v054_sobre_chronos_1000": 1.0351392614976915,
+   "v053_sobre_chronos_1000": 1.0351392614976915
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Bull_assembly_Maren",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.21723179103208518,
+   "v053_sobre_ref_ic95": [
+    0.1826081531484855,
+    0.26905844805940404
+   ],
+   "choque": 0.004531011413773807,
+   "v054_sobre_ref": 0.21739594323933273,
+   "v054_sobre_v053": 1.0007556546234215,
+   "v054_sobre_v053_ic95": [
+    0.9969104997420456,
+    1.005038555583463
+   ],
+   "nan": 0,
+   "custo_v054": 657.7051755585951,
+   "custo_v053": 767.0990424076607,
+   "razao_custo": 0.8573927735514885,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 2,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 8827,
+    "m1_fp_per_step": 135.74583903328772
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.1377753014407421,
+   "v054_sobre_chronos_1000": 1.1662045477713903,
+   "v053_sobre_chronos_1000": 1.1751670375394188
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_education_Evangeline",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.28586403068012334,
+   "v053_sobre_ref_ic95": [
+    0.25514111874798695,
+    0.3216677546489942
+   ],
+   "choque": 0.005385302951241323,
+   "v054_sobre_ref": 0.28397592251849474,
+   "v054_sobre_v053": 0.9933950831199839,
+   "v054_sobre_v053_ic95": [
+    0.9843663918340582,
+    1.0030089145735193
+   ],
+   "nan": 0,
+   "custo_v054": 715.7578887368895,
+   "custo_v053": 791.2332193342453,
+   "razao_custo": 0.9046105133694188,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 6341,
+    "m1_fp_per_step": 158.33025535795713
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.947215733584002,
+   "v054_sobre_chronos_1000": 1.2025860900067578,
+   "v053_sobre_chronos_1000": 1.2207664264910407
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_education_Janet",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.15738556165303771,
+   "v053_sobre_ref_ic95": [
+    0.13664883746079265,
+    0.1866318181562458
+   ],
+   "choque": 0.003632717752099046,
+   "v054_sobre_ref": 0.15738556165303771,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 555.9274281805738,
+   "custo_v053": 725.1873803009576,
+   "razao_custo": 0.7665983210433974,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 13617,
+    "m1_fp_per_step": 62.1390788873689
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.9993146492292971,
+   "v054_sobre_chronos_1000": 1.7999655262034593,
+   "v053_sobre_chronos_1000": 1.7999655262034593
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_education_Tyler",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.3209265730236867,
+   "v053_sobre_ref_ic95": [
+    0.27821388604676733,
+    0.36064471122808983
+   ],
+   "choque": 0.002358919902137996,
+   "v054_sobre_ref": 0.3222942617932428,
+   "v054_sobre_v053": 1.004261687515216,
+   "v054_sobre_v053_ic95": [
+    0.986395349513904,
+    1.02261926610832
+   ],
+   "nan": 0,
+   "custo_v054": 683.8051755585968,
+   "custo_v053": 775.9650250797994,
+   "razao_custo": 0.8812319543503588,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [
+    [
+     4800,
+     "('in', 2)"
+    ]
+   ],
+   "m1": {
+    "dormant": true,
+    "sleeps": 3,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 7260,
+    "m1_fp_per_step": 145.1830825353397
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.2360933284236877,
+   "v054_sobre_chronos_1000": 1.4959211779905839,
+   "v053_sobre_chronos_1000": 1.5242488708476094
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_public_Valerie",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.08168396124413951,
+   "v053_sobre_ref_ic95": [
+    0.06460351476223654,
+    0.10458700628017054
+   ],
+   "choque": 0.002479137732218694,
+   "v054_sobre_ref": 0.07952705730042439,
+   "v054_sobre_v053": 0.9735945231981528,
+   "v054_sobre_v053_ic95": [
+    0.9474327899507153,
+    0.9972586186623411
+   ],
+   "nan": 0,
+   "custo_v054": 833.496317829457,
+   "custo_v053": 836.2038531691746,
+   "razao_custo": 0.9967621109021966,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 813,
+    "m1_fp_per_step": 231.4736662106703
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0390956935231557,
+   "v054_sobre_chronos_1000": 1.2292006208034658,
+   "v053_sobre_chronos_1000": 1.2300620248956804
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Eagle_education_Teresa",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.5266434733004497,
+   "v053_sobre_ref_ic95": [
+    0.46354600112225325,
+    0.5971324588414249
+   ],
+   "choque": 0.006777436397045134,
+   "v054_sobre_ref": 0.5266434733004497,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 575.5064751481983,
+   "custo_v053": 761.2900592795257,
+   "razao_custo": 0.7559621567800971,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14502,
+    "m1_fp_per_step": 61.36935704514364
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.875877700717376,
+   "v054_sobre_chronos_1000": 1.2592034608280789,
+   "v053_sobre_chronos_1000": 1.2592034608280789
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Eagle_health_Vincenza",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.40743313735161757,
+   "v053_sobre_ref_ic95": [
+    0.3485301661025437,
+    0.4946951796838894
+   ],
+   "choque": 0.0052861333428000585,
+   "v054_sobre_ref": 0.40743313735161757,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 607.6819083447325,
+   "custo_v053": 796.6044003647971,
+   "razao_custo": 0.7628402605690485,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 14712,
+    "m1_fp_per_step": 61.06999544003648
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 0.8845743080072656,
+   "v054_sobre_chronos_1000": 1.6267242255183563,
+   "v053_sobre_chronos_1000": 1.6267242255183563
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Hog_education_George",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.050024237244216736,
+   "v053_sobre_ref_ic95": [
+    0.03970126513799427,
+    0.06344698065669818
+   ],
+   "choque": 0.0026470221211479295,
+   "v054_sobre_ref": 0.05002298614727628,
+   "v054_sobre_v053": 0.999974990184571,
+   "v054_sobre_v053_ic95": [
+    0.9991757061073187,
+    1.0006891846977166
+   ],
+   "nan": 0,
+   "custo_v054": 706.3913474692217,
+   "custo_v053": 832.0360921112631,
+   "razao_custo": 0.8489912326721043,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 3,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 9904,
+    "m1_fp_per_step": 127.5389876880985
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.9206979236171883,
+   "v054_sobre_chronos_1000": 1.3023035612892644,
+   "v053_sobre_chronos_1000": 1.3068471920124152
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Hog_office_Denita",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.2597561637265716,
+   "v053_sobre_ref_ic95": [
+    0.23798027477407876,
+    0.28013424575283247
+   ],
+   "choque": 0.005276698030365635,
+   "v054_sobre_ref": 0.25977145710577726,
+   "v054_sobre_v053": 1.0000588759049494,
+   "v054_sobre_v053_ic95": [
+    0.9999106306632055,
+    1.000279918604343
+   ],
+   "nan": 0,
+   "custo_v054": 650.3631896944825,
+   "custo_v053": 809.6762881896944,
+   "razao_custo": 0.8032385277684118,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 12507,
+    "m1_fp_per_step": 90.76288189694482
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 0.9610189705241892,
+   "v054_sobre_chronos_1000": 1.733246796066332,
+   "v053_sobre_chronos_1000": 1.7333763288924702
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Hog_office_Roger",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.11835487178493503,
+   "v053_sobre_ref_ic95": [
+    0.08743873504881576,
+    0.1526559095990032
+   ],
+   "choque": 0.0035223071762236296,
+   "v054_sobre_ref": 0.11537014924182334,
+   "v054_sobre_v053": 0.9747815827257598,
+   "v054_sobre_v053_ic95": [
+    0.9243440153963767,
+    1.0108338272135367
+   ],
+   "nan": 0,
+   "custo_v054": 777.97005243958,
+   "custo_v053": 831.2957250341998,
+   "razao_custo": 0.9358523435298238,
+   "externas_v054": 4,
+   "externas_v053": 4,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 2,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 4521,
+    "m1_fp_per_step": 197.2938326493388
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.05029282194136,
+   "v054_sobre_chronos_1000": 1.2236804333995697,
+   "v053_sobre_chronos_1000": 1.2077804386477264
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Moose_education_Florence",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.15663605279154666,
+   "v053_sobre_ref_ic95": [
+    0.13770469998076074,
+    0.17929279185973057
+   ],
+   "choque": 0.003629814081274625,
+   "v054_sobre_ref": 0.1566293718942344,
+   "v054_sobre_v053": 0.9999573476400025,
+   "v054_sobre_v053_ic95": [
+    0.9984410997140996,
+    1.0012227466268249
+   ],
+   "nan": 0,
+   "custo_v054": 641.4357843137248,
+   "custo_v053": 806.7355848153214,
+   "razao_custo": 0.7951003976855227,
+   "externas_v054": 2,
+   "externas_v053": 2,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 13135,
+    "m1_fp_per_step": 78.37921796625626
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0178252181173515,
+   "v054_sobre_chronos_1000": 1.4105440031655858,
+   "v053_sobre_chronos_1000": 1.4104596354316683
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Cerro Chato",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.08006033691566748,
+   "v053_sobre_ref_ic95": [
+    0.07194449522197276,
+    0.08985931062375811
+   ],
+   "choque": 0.0005542508369033065,
+   "v054_sobre_ref": 0.08008025845696407,
+   "v054_sobre_v053": 1.0002488315945708,
+   "v054_sobre_v053_ic95": [
+    0.994498060632495,
+    1.0065709392964401
+   ],
+   "nan": 0,
+   "custo_v054": 1234.8887539899674,
+   "custo_v053": 1499.3736149110807,
+   "razao_custo": 0.8236030977930752,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 3,
+    "wakes": 3,
+    "trials": 0,
+    "dormant_steps": 6632,
+    "m1_fp_per_step": 517.5585385316917
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0596589047963445,
+   "v054_sobre_chronos_1000": 1.04208100817359,
+   "v053_sobre_chronos_1000": 1.0414013360117635
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Campo dos Ventos",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1478205960454728,
+   "v053_sobre_ref_ic95": [
+    0.13674891909374343,
+    0.159805119802024
+   ],
+   "choque": 0.0025509477486281677,
+   "v054_sobre_ref": 0.14782296564262581,
+   "v054_sobre_v053": 1.000016030223233,
+   "v054_sobre_v053_ic95": [
+    0.9999999778690395,
+    1.0000576985229932
+   ],
+   "nan": 0,
+   "custo_v054": 1187.5642270861827,
+   "custo_v053": 1555.4290127678978,
+   "razao_custo": 0.7634962555911845,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 3,
+    "wakes": 3,
+    "trials": 0,
+    "dormant_steps": 8949,
+    "m1_fp_per_step": 412.4974920200638
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0672945607726292,
+   "v054_sobre_chronos_1000": 1.0755081859171465,
+   "v053_sobre_chronos_1000": 1.075518306751178
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Icaraí",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1531919574148212,
+   "v053_sobre_ref_ic95": [
+    0.14002197025159246,
+    0.16811382084966425
+   ],
+   "choque": 0.00139966130199884,
+   "v054_sobre_ref": 0.1530242949101602,
+   "v054_sobre_v053": 0.9989055397718629,
+   "v054_sobre_v053_ic95": [
+    0.9973628065737169,
+    1.0000914913310401
+   ],
+   "nan": 0,
+   "custo_v054": 1185.6093137254893,
+   "custo_v053": 1554.1735066119472,
+   "razao_custo": 0.7628551823084946,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 3,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 8963,
+    "m1_fp_per_step": 422.7018923848609
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0724716520044277,
+   "v054_sobre_chronos_1000": 1.1396601834870261,
+   "v053_sobre_chronos_1000": 1.139786437269131
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Chapada II",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1433428905647301,
+   "v053_sobre_ref_ic95": [
+    0.13293880638317238,
+    0.1536709272600386
+   ],
+   "choque": 0.0013979887137174122,
+   "v054_sobre_ref": 0.14334288993537114,
+   "v054_sobre_v053": 0.9999999956094164,
+   "v054_sobre_v053_ic95": [
+    0.9999999485229772,
+    1.0000000363381392
+   ],
+   "nan": 0,
+   "custo_v054": 1072.8038474692216,
+   "custo_v053": 1499.8112403100774,
+   "razao_custo": 0.7152925772495381,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 3,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 9933,
+    "m1_fp_per_step": 368.6967624259006
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0559811379198916,
+   "v054_sobre_chronos_1000": 1.0583496112284132,
+   "v053_sobre_chronos_1000": 1.0583498387547097
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Mangue Seco",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.19895361851960333,
+   "v053_sobre_ref_ic95": [
+    0.18459847972023022,
+    0.21300218797928722
+   ],
+   "choque": 0.0021555263087742753,
+   "v054_sobre_ref": 0.19877559596334593,
+   "v054_sobre_v053": 0.9991052057379902,
+   "v054_sobre_v053_ic95": [
+    0.9980099343509917,
+    0.9997760122746686
+   ],
+   "nan": 0,
+   "custo_v054": 1236.5483641130859,
+   "custo_v053": 1524.6795314637484,
+   "razao_custo": 0.8110218171066769,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 3,
+    "wakes": 3,
+    "trials": 0,
+    "dormant_steps": 6992,
+    "m1_fp_per_step": 494.32826037391703
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0670855530283594,
+   "v054_sobre_chronos_1000": 1.0557901178787876,
+   "v053_sobre_chronos_1000": 1.0578704086681496
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Campo Formoso",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.13505768442552438,
+   "v053_sobre_ref_ic95": [
+    0.12118120345439837,
+    0.14910950083177343
+   ],
+   "choque": 0.001511508281716572,
+   "v054_sobre_ref": 0.13396644521614295,
+   "v054_sobre_v053": 0.9919201990318207,
+   "v054_sobre_v053_ic95": [
+    0.9851986946389116,
+    0.9966465550219549
+   ],
+   "nan": 0,
+   "custo_v054": 1087.9759233926125,
+   "custo_v053": 1493.4432569539445,
+   "razao_custo": 0.7285016811496869,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 9821,
+    "m1_fp_per_step": 386.000341997264
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0323622709086322,
+   "v054_sobre_chronos_1000": 1.0167812537684984,
+   "v053_sobre_chronos_1000": 1.032123570457978
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Renascença",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1391484381732546,
+   "v053_sobre_ref_ic95": [
+    0.12713355177889285,
+    0.1515113387473719
+   ],
+   "choque": 0.0014604852032832378,
+   "v054_sobre_ref": 0.13894508118654128,
+   "v054_sobre_v053": 0.9985385607673145,
+   "v054_sobre_v053_ic95": [
+    0.9949178730342089,
+    1.0015370875815197
+   ],
+   "nan": 0,
+   "custo_v054": 1202.4309792521665,
+   "custo_v053": 1618.9839660282719,
+   "razao_custo": 0.7427071573796975,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 10157,
+    "m1_fp_per_step": 366.3010715914273
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.056258058337838,
+   "v054_sobre_chronos_1000": 1.0305791578943004,
+   "v053_sobre_chronos_1000": 1.0169657682480293
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Tanque Novo",
+   "T": 17544,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1535390445230988,
+   "v053_sobre_ref_ic95": [
+    0.1380228874632904,
+    0.16893093168101625
+   ],
+   "choque": 0.0009324323387960513,
+   "v054_sobre_ref": 0.15354274505140397,
+   "v054_sobre_v053": 1.0000241015457447,
+   "v054_sobre_v053_ic95": [
+    0.9999962716091325,
+    1.0000803807118104
+   ],
+   "nan": 0,
+   "custo_v054": 1114.9886570907427,
+   "custo_v053": 1517.5081395348836,
+   "razao_custo": 0.7347497044941629,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 2,
+    "wakes": 2,
+    "trials": 0,
+    "dormant_steps": 9813,
+    "m1_fp_per_step": 383.55677154582764
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0486699321942161,
+   "v054_sobre_chronos_1000": 1.0697361173611724,
+   "v053_sobre_chronos_1000": 1.0697450494476988
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Brígida",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.19926388940403877,
+   "v053_sobre_ref_ic95": [
+    0.17711849701422785,
+    0.22034022242262724
+   ],
+   "choque": 0.0051549950683893,
+   "v054_sobre_ref": 0.1992638852127127,
+   "v054_sobre_v053": 0.9999999789659528,
+   "v054_sobre_v053_ic95": [
+    0.9999999320025796,
+    1.0000000004532874
+   ],
+   "nan": 0,
+   "custo_v054": 1206.6014652014653,
+   "custo_v053": 1302.9569291819291,
+   "razao_custo": 0.9260486192425706,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 1217,
+    "m1_fp_per_step": 414.72542735042737
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.2270732189499343,
+   "v054_sobre_chronos_1000": 1.177205333059702,
+   "v053_sobre_chronos_1000": 1.1772053730666923
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Janaúba",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.2241649420275543,
+   "v053_sobre_ref_ic95": [
+    0.19594599646634886,
+    0.25218772822908725
+   ],
+   "choque": 0.0042333456957597245,
+   "v054_sobre_ref": 0.2241649393491351,
+   "v054_sobre_v053": 0.9999999880515695,
+   "v054_sobre_v053_ic95": [
+    0.9999999504689557,
+    1.0000000106415685
+   ],
+   "nan": 0,
+   "custo_v054": 1244.9048840048845,
+   "custo_v053": 1336.2704212454212,
+   "razao_custo": 0.9316264613899162,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 1158,
+    "m1_fp_per_step": 415.08577533577534
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.0276910316253112,
+   "v054_sobre_chronos_1000": 1.341329600852147,
+   "v053_sobre_chronos_1000": 1.341329495879122
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Belmonte",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.20749323089154822,
+   "v053_sobre_ref_ic95": [
+    0.18169033726302908,
+    0.23484695975069325
+   ],
+   "choque": 0.003889847358798554,
+   "v054_sobre_ref": 0.20749323089154822,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 1079.909981684982,
+   "custo_v053": 1179.6632173382172,
+   "razao_custo": 0.9154392252067353,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 1264,
+    "m1_fp_per_step": 415.42490842490844
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0753850633123623,
+   "v054_sobre_chronos_1000": 1.405179880687455,
+   "v053_sobre_chronos_1000": 1.405179880687455
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Ciranda",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.1987918549008559,
+   "v053_sobre_ref_ic95": [
+    0.17575502891597164,
+    0.22410583458180522
+   ],
+   "choque": 0.0056472944727009936,
+   "v054_sobre_ref": 0.1987918549008559,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 962.9423687423694,
+   "custo_v053": 1222.9592490842492,
+   "razao_custo": 0.7873871263195562,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 3271,
+    "m1_fp_per_step": 247.63232600732601
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.202270517731965,
+   "v054_sobre_chronos_1000": 1.3671109382216353,
+   "v053_sobre_chronos_1000": 1.3671109382216353
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Helio Valgas",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.22229698912988682,
+   "v053_sobre_ref_ic95": [
+    0.18993891577585062,
+    0.2534433023877345
+   ],
+   "choque": 0.00452329438022909,
+   "v054_sobre_ref": 0.22229698912437643,
+   "v054_sobre_v053": 0.9999999999752115,
+   "v054_sobre_v053_ic95": [
+    0.9999999999091088,
+    1.0000000000071703
+   ],
+   "nan": 0,
+   "custo_v054": 1093.739560439561,
+   "custo_v053": 1190.8398962148963,
+   "razao_custo": 0.9184606292718525,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 1224,
+    "m1_fp_per_step": 422.1674297924298
+   },
+   "identica": false,
+   "sarimax_sobre_v054": 1.16743642994564,
+   "v054_sobre_chronos_1000": 1.5042697620602776,
+   "v053_sobre_chronos_1000": 1.5042697623494043
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Luzia",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.24825844937655264,
+   "v053_sobre_ref_ic95": [
+    0.20550778720333454,
+    0.29243326201177766
+   ],
+   "choque": 0.004365489047931215,
+   "v054_sobre_ref": 0.24825844937655264,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 1022.1807387057388,
+   "custo_v053": 1293.508089133089,
+   "razao_custo": 0.7902391545079597,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 3414,
+    "m1_fp_per_step": 248.59813797313797
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.059263551325199,
+   "v054_sobre_chronos_1000": 1.1382734897797382,
+   "v053_sobre_chronos_1000": 1.1382734897797382
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Calcário",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.23212499003108839,
+   "v053_sobre_ref_ic95": [
+    0.20485515242534985,
+    0.26348140019872407
+   ],
+   "choque": 0.004269813221902151,
+   "v054_sobre_ref": 0.23212499003108839,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 1082.6963369963375,
+   "custo_v053": 1165.1821733821735,
+   "razao_custo": 0.9292077768865925,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 2,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 1046,
+    "m1_fp_per_step": 430.0041208791209
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.064712234636656,
+   "v054_sobre_chronos_1000": 1.3343855425965423,
+   "v053_sobre_chronos_1000": 1.3343855425965423
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Alex",
+   "T": 6552,
+   "classe": "v0.53 melhor",
+   "v053_sobre_ref": 0.23420541374850526,
+   "v053_sobre_ref_ic95": [
+    0.20406685225434848,
+    0.26602986842508697
+   ],
+   "choque": 0.004667517708465556,
+   "v054_sobre_ref": 0.23420541374850526,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 889.20054945055,
+   "custo_v053": 1150.893833943834,
+   "razao_custo": 0.7726173546377215,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 3288,
+    "m1_fp_per_step": 248.05357142857142
+   },
+   "identica": true,
+   "sarimax_sobre_v054": 1.0406116007276978,
+   "v054_sobre_chronos_1000": 1.321357806322403,
+   "v053_sobre_chronos_1000": 1.321357806322403
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:RNGWHHD",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 0.9915745389285728,
+   "v053_sobre_ref_ic95": [
+    0.974602463511563,
+    1.024017876849708
+   ],
+   "choque": 0.26976010952198215,
+   "v054_sobre_ref": 0.9915745389285728,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 1209.2785816962146,
+   "custo_v053": 1207.8435074269287,
+   "razao_custo": 1.0011881293068694,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 0,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 0,
+    "m1_fp_per_step": 532.1499760421658
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 1.1052094358733675,
+   "v053_sobre_chronos_1000": 1.1052094358733675
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPMRU_PF4_Y35NY_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0000066977319937,
+   "v053_sobre_ref_ic95": [
+    0.999991963629223,
+    1.0000239728619507
+   ],
+   "choque": 0.018225664857271295,
+   "v054_sobre_ref": 1.0000066977319937,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 1006.6933876377575,
+   "custo_v053": 1114.9217057977958,
+   "razao_custo": 0.9029274274621875,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 880,
+    "m1_fp_per_step": 422.3054623862003
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.8265543519297297,
+   "v053_sobre_chronos_1000": 0.8265543519297297
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPMRU_PF4_RGC_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0000022178558161,
+   "v053_sobre_ref_ic95": [
+    0.9999899864144114,
+    1.0000172188408059
+   ],
+   "choque": 0.018313039897841336,
+   "v054_sobre_ref": 1.0000022248266875,
+   "v054_sobre_v053": 1.000000006970856,
+   "v054_sobre_v053_ic95": [
+    0.9999999978303409,
+    1.0000000194296481
+   ],
+   "nan": 0,
+   "custo_v054": 984.5765213224724,
+   "custo_v053": 1090.583708672736,
+   "razao_custo": 0.9027977527013706,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 864,
+    "m1_fp_per_step": 424.51437470052707
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.9025692940814692,
+   "v053_sobre_chronos_1000": 0.9025692800181652
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2F_PF4_Y35NY_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0083847906380694,
+   "v053_sobre_ref_ic95": [
+    0.9999275117040275,
+    1.023991230958216
+   ],
+   "choque": 0.07301175315456858,
+   "v054_sobre_ref": 1.0083847906380692,
+   "v054_sobre_v053": 0.9999999999999999,
+   "v054_sobre_v053_ic95": [
+    0.9999999999999987,
+    1.0000000000000004
+   ],
+   "nan": 0,
+   "custo_v054": 988.1942501197891,
+   "custo_v053": 1164.5835649257306,
+   "razao_custo": 0.8485387222365701,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1445,
+    "m1_fp_per_step": 354.98610445615714
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.8890778243773059,
+   "v053_sobre_chronos_1000": 0.8890778243773064
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2DXL0_PF4_Y35NY_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0084434482695885,
+   "v053_sobre_ref_ic95": [
+    0.9999001849526081,
+    1.022968720133479
+   ],
+   "choque": 0.062155714837859796,
+   "v054_sobre_ref": 1.0084434481713191,
+   "v054_sobre_v053": 0.9999999999025533,
+   "v054_sobre_v053_ic95": [
+    0.9999999995453559,
+    1.000000000173251
+   ],
+   "nan": 0,
+   "custo_v054": 913.7953521801629,
+   "custo_v053": 1088.6511260182078,
+   "razao_custo": 0.8393830955950158,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1446,
+    "m1_fp_per_step": 356.54623862002876
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.9313287209178276,
+   "v053_sobre_chronos_1000": 0.9313287217886232
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2DXL0_PF4_RGC_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0116228022090417,
+   "v053_sobre_ref_ic95": [
+    0.9997763215505211,
+    1.0305120275850028
+   ],
+   "choque": 0.07406488357156876,
+   "v054_sobre_ref": 1.0116228022090417,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 954.2699568758984,
+   "custo_v053": 1129.842069956876,
+   "razao_custo": 0.8446047303870718,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1444,
+    "m1_fp_per_step": 355.80498322951604
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.8602489979100477,
+   "v053_sobre_chronos_1000": 0.8602489979100477
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2DC_PF4_Y05LA_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0102412280035553,
+   "v053_sobre_ref_ic95": [
+    0.9999728612688166,
+    1.0274718697245453
+   ],
+   "choque": 0.08649100487518938,
+   "v054_sobre_ref": 1.0102412280035702,
+   "v054_sobre_v053": 1.0000000000000147,
+   "v054_sobre_v053_ic95": [
+    0.9999999999999974,
+    1.0000000000000377
+   ],
+   "nan": 0,
+   "custo_v054": 929.1374700527072,
+   "custo_v053": 1105.4446094873024,
+   "razao_custo": 0.8405102002203754,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1444,
+    "m1_fp_per_step": 354.1923814087207
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.9001164354701503,
+   "v053_sobre_chronos_1000": 0.9001164354701411
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPJK_PF4_RGC_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0070559361069757,
+   "v053_sobre_ref_ic95": [
+    0.9999867101401921,
+    1.019816036835189
+   ],
+   "choque": 0.06358170818890237,
+   "v054_sobre_ref": 1.0070559361069757,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 908.0823670340201,
+   "custo_v053": 1083.3832774317202,
+   "razao_custo": 0.8381912347647914,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1437,
+    "m1_fp_per_step": 355.17081935793004
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.8337700953913363,
+   "v053_sobre_chronos_1000": 0.8337700953913363
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPLLPA_PF4_Y44MB_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0015258582143887,
+   "v053_sobre_ref_ic95": [
+    0.9999573312640408,
+    1.0047549430705993
+   ],
+   "choque": 0.05699939960632414,
+   "v054_sobre_ref": 1.0015258582143887,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 897.2130330618113,
+   "custo_v053": 1072.6121705797796,
+   "razao_custo": 0.8364747834036232,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1441,
+    "m1_fp_per_step": 355.0838524197413
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.8964940070403521,
+   "v053_sobre_chronos_1000": 0.8964940070403521
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPMRR_PF4_Y05LA_DPG",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.000092111044617,
+   "v053_sobre_ref_ic95": [
+    0.999937143256385,
+    1.0003481355544919
+   ],
+   "choque": 0.06602462187215075,
+   "v054_sobre_ref": 1.0000921085806953,
+   "v054_sobre_v053": 0.9999999975363051,
+   "v054_sobre_v053_ic95": [
+    0.9999999861370596,
+    1.000000009596494
+   ],
+   "nan": 0,
+   "custo_v054": 1030.206564446574,
+   "custo_v053": 1135.7528030666028,
+   "razao_custo": 0.9070693566988808,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 872,
+    "m1_fp_per_step": 425.855773838045
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.9010096027848972,
+   "v053_sobre_chronos_1000": 0.9010096334301803
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:nominal:1 Mo",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 0.9997131555984329,
+   "v053_sobre_ref_ic95": [
+    0.9986495120310667,
+    1.0005116590067964
+   ],
+   "choque": 0.17006462940259415,
+   "v054_sobre_ref": 0.9997131555930444,
+   "v054_sobre_v053": 0.99999999999461,
+   "v054_sobre_v053_ic95": [
+    0.9999999999560695,
+    1.0000000000365985
+   ],
+   "nan": 0,
+   "custo_v054": 965.5869669381889,
+   "custo_v053": 1098.4305222807857,
+   "razao_custo": 0.8790605753864524,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1098,
+    "m1_fp_per_step": 397.5062290368951
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.7524071134518706,
+   "v053_sobre_chronos_1000": 0.7524071134608943
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:nominal:6 Mo",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0016031982528795,
+   "v053_sobre_ref_ic95": [
+    0.9998641714092504,
+    1.004873260520297
+   ],
+   "choque": 0.05123137130885095,
+   "v054_sobre_ref": 1.0016031982528795,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 944.9134643028272,
+   "custo_v053": 1119.320459990417,
+   "razao_custo": 0.8441849301235117,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1436,
+    "m1_fp_per_step": 355.9429803545759
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.5626674104438759,
+   "v053_sobre_chronos_1000": 0.5626674104438759
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:5 YR",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0000037378645845,
+   "v053_sobre_ref_ic95": [
+    0.9999984720429835,
+    1.0000105320853923
+   ],
+   "choque": 0.012583849527977234,
+   "v054_sobre_ref": 1.0000037234389312,
+   "v054_sobre_v053": 0.9999999855744006,
+   "v054_sobre_v053_ic95": [
+    0.999999956811907,
+    1.0000000099304986
+   ],
+   "nan": 0,
+   "custo_v054": 1051.2914230953525,
+   "custo_v053": 1155.001245807379,
+   "razao_custo": 0.9102080425553737,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 847,
+    "m1_fp_per_step": 426.6370388116914
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.7682164855852985,
+   "v053_sobre_chronos_1000": 0.768216481274927
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:7 YR",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0000020586010498,
+   "v053_sobre_ref_ic95": [
+    0.999998896557436,
+    1.0000056732604792
+   ],
+   "choque": 0.01724939610102408,
+   "v054_sobre_ref": 1.0000020533546075,
+   "v054_sobre_v053": 0.9999999947535685,
+   "v054_sobre_v053_ic95": [
+    0.9999999712564427,
+    1.0000000181121984
+   ],
+   "nan": 0,
+   "custo_v054": 997.0384762817439,
+   "custo_v053": 1103.9226641111643,
+   "razao_custo": 0.9031778300199322,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 880,
+    "m1_fp_per_step": 422.9808337326306
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.7793181124533517,
+   "v053_sobre_chronos_1000": 0.7793181115635317
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:10 YR",
+   "T": 4174,
+   "classe": "indecidível",
+   "v053_sobre_ref": 1.0000029228531857,
+   "v053_sobre_ref_ic95": [
+    0.9999985916553604,
+    1.0000067075916135
+   ],
+   "choque": 0.02709428812266687,
+   "v054_sobre_ref": 1.0000028842771806,
+   "v054_sobre_v053": 0.9999999614241076,
+   "v054_sobre_v053_ic95": [
+    0.99999982162122,
+    1.000000098277152
+   ],
+   "nan": 0,
+   "custo_v054": 985.0815045519884,
+   "custo_v053": 1088.351030186871,
+   "razao_custo": 0.9051137704926405,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 847,
+    "m1_fp_per_step": 426.6370388116914
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.7685719195728432,
+   "v053_sobre_chronos_1000": 0.7685720102457525
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:20 YR",
+   "T": 4174,
+   "classe": "referência melhor",
+   "v053_sobre_ref": 1.0000041691801762,
+   "v053_sobre_ref_ic95": [
+    1.0000008901857893,
+    1.0000081714759361
+   ],
+   "choque": 0.028658769583492543,
+   "v054_sobre_ref": 1.000004179289446,
+   "v054_sobre_v053": 1.0000000101092277,
+   "v054_sobre_v053_ic95": [
+    0.9999999672639017,
+    1.0000000621382983
+   ],
+   "nan": 0,
+   "custo_v054": 950.4858169621466,
+   "custo_v053": 1053.7578342117872,
+   "razao_custo": 0.9019964417850442,
+   "externas_v054": 0,
+   "externas_v053": 0,
+   "remocoes": [],
+   "m1": {
+    "dormant": false,
+    "sleeps": 1,
+    "wakes": 1,
+    "trials": 0,
+    "dormant_steps": 847,
+    "m1_fp_per_step": 426.6370388116914
+   },
+   "identica": false,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.821288850901497,
+   "v053_sobre_chronos_1000": 0.8212888733751855
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:30 YR",
+   "T": 4174,
+   "classe": "referência melhor",
+   "v053_sobre_ref": 1.0001253122849363,
+   "v053_sobre_ref_ic95": [
+    1.0000253309526006,
+    1.0002269563453878
+   ],
+   "choque": 0.031055003929997917,
+   "v054_sobre_ref": 1.0001253122849363,
+   "v054_sobre_v053": 1.0,
+   "v054_sobre_v053_ic95": [
+    1.0,
+    1.0
+   ],
+   "nan": 0,
+   "custo_v054": 941.7586487781502,
+   "custo_v053": 1116.1167704839481,
+   "razao_custo": 0.8437814695408652,
+   "externas_v054": 1,
+   "externas_v053": 1,
+   "remocoes": [],
+   "m1": {
+    "dormant": true,
+    "sleeps": 1,
+    "wakes": 0,
+    "trials": 0,
+    "dormant_steps": 1435,
+    "m1_fp_per_step": 355.941063727839
+   },
+   "identica": true,
+   "sarimax_sobre_v054": null,
+   "v054_sobre_chronos_1000": 0.8243237842746958,
+   "v053_sobre_chronos_1000": 0.8243237842746958
+  }
+ ],
+ "series_curtas": [
+  {
+   "familia": "camels",
+   "serie": "camels:25130000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:31520000",
+   "v054_sobre_melhor": 1.0020851630413479,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:33330000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:33530000",
+   "v054_sobre_melhor": 1.2732338642539085,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:56028000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:56570000",
+   "v054_sobre_melhor": 1.020807894861876,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:56845000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:57770000",
+   "v054_sobre_melhor": 1.0014321695492059,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:58142200",
+   "v054_sobre_melhor": 1.0209334904619827,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:58658000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:58934000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:59240000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:59370000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:60774000",
+   "v054_sobre_melhor": 1.0024031476016182,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61285000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61390000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61460000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61473000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:61500000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:65100000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:65135000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:73765000",
+   "v054_sobre_melhor": 1.0314266477789602,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:73780000",
+   "v054_sobre_melhor": 1.027700017248582,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:86700000",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "camels",
+   "serie": "camels:87160000",
+   "v054_sobre_melhor": 1.3045466215551729,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Bull_education_Barry",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Bull_education_Nichole",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Cockatoo_office_Giovanni",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_assembly_Johnnie",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Elizabeth",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Long",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Rosie",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_education_Shaun",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Fox_office_Bernard",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Hog_education_Beth",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Hog_education_Cathleen",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:chilledwater:Peacock_lodging_Matthew",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Crow_education_Omer",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Eagle_office_Donovan",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Eagle_office_Nereida",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Eagle_office_Ryan",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Fox_education_Louie",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:hotwater:Fox_education_Virgil",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Bull_assembly_Maren",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_education_Evangeline",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_education_Janet",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_education_Tyler",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Cockatoo_public_Valerie",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Eagle_education_Teresa",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Eagle_health_Vincenza",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Hog_education_George",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Hog_office_Denita",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "bdg2",
+   "serie": "bdg2:steam:Moose_education_Florence",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Cerro Chato",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Campo dos Ventos",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Icaraí",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Chapada II",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Mangue Seco",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Campo Formoso",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Renascença",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "eolica",
+   "serie": "Conj. Tanque Novo",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Brígida",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Janaúba",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Belmonte",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Ciranda",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Helio Valgas",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Luzia",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Calcário",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "solar",
+   "serie": "Conj. Alex",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:RNGWHHD",
+   "v054_sobre_melhor": 1.0000829329560341,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPMRU_PF4_Y35NY_DPG",
+   "v054_sobre_melhor": 1.000042191503352,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPMRU_PF4_RGC_DPG",
+   "v054_sobre_melhor": 1.000038506989277,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2F_PF4_Y35NY_DPG",
+   "v054_sobre_melhor": 1.0001164017038864,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2DXL0_PF4_Y35NY_DPG",
+   "v054_sobre_melhor": 1.000028444486897,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2DXL0_PF4_RGC_DPG",
+   "v054_sobre_melhor": 1.0000025142339295,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPD2DC_PF4_Y05LA_DPG",
+   "v054_sobre_melhor": 1.000047251881832,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPJK_PF4_RGC_DPG",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPLLPA_PF4_Y44MB_DPG",
+   "v054_sobre_melhor": 1.0013723548648312,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_eia:EER_EPMRR_PF4_Y05LA_DPG",
+   "v054_sobre_melhor": 1.0000520925936063,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:nominal:1 Mo",
+   "v054_sobre_melhor": 1.0006137021270634,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:nominal:6 Mo",
+   "v054_sobre_melhor": 1.0,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:5 YR",
+   "v054_sobre_melhor": 1.0001294069922422,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:7 YR",
+   "v054_sobre_melhor": 1.0000535296459243,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:10 YR",
+   "v054_sobre_melhor": 1.0001099656784476,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:20 YR",
+   "v054_sobre_melhor": 1.000445401230667,
+   "nan": 0
+  },
+  {
+   "familia": "niveis",
+   "serie": "nivel_tesouro:real:30 YR",
+   "v054_sobre_melhor": 1.0012463420847812,
+   "nan": 0
+  }
+ ]
+}

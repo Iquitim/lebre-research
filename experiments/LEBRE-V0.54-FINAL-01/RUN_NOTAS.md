@@ -22,3 +22,17 @@ Nenhuma análise foi feita sobre a primeira passada; só a contagem de concluíd
 Conferido num processo filho que o `final_dados` importado é o da v0.54, e que a análise reproduz o resultado do ensaio.
 SHA-256 (12 primeiros dígitos): `final_run.py` 341d51259eeb → 4952f1d3b95b; `final_analise.py` 9ce193852fa0 → a3db5db81a9a
 (`SHA256SUMS.txt` atualizado). A segunda passada roda só as séries que faltam (as 33 de eólica, solar e níveis).
+
+## 2. Chronos-2: falha de ambiente nos níveis (11 a 13/10/2026)
+
+A primeira execução de `final_chronos.py` concluiu 76 de 93 séries e parou na primeira série de níveis: o Python do
+sistema, onde o Chronos-2 roda, não tinha o leitor de planilhas `.xls` (`xlrd`), usado por `final_dados.eia_xls`. Nenhum
+código mudou. A execução foi completada com o mesmo `xlrd` 2.0.1 do ambiente do LEBRE Lab, posto só no `PYTHONPATH`
+dessa execução (cópia do pacote, sem instalar nada no sistema); o script pula as séries já feitas. O Chronos-2 é só
+referência reportada e não entra em nenhum critério.
+
+## 3. SARIMAX nos níveis
+
+O SARIMAX com entradas falhou nas 17 séries de níveis (`MissingDataError: exog contains inf or nans`): as entradas têm
+lacunas em dias sem negociação, e `comp_dev.run_airline_x` não as aceita. O mesmo aconteceu com o câmbio em nível na
+avaliação da v0.53. O SARIMAX é só referência reportada; nada foi refeito.
