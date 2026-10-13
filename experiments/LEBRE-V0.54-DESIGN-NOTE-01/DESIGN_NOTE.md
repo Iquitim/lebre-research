@@ -8,6 +8,16 @@ LEBRE Lab (`diagnosticos/E23_RESULTADO.md`, commits `c8275a9` e `8c81617`, com a
 (custo proporcional ao uso), 2 (remoções que acontecem e interpretação em séries não estacionárias) e 3 (ciclo como
 hipótese). A expansão para várias saídas e vários passos passa para a v0.55. Princípio: rigor antes de pressa.
 
+> **Atualização 13/10/2026 (v0.54 promovida):** a avaliação final pré-registrada (`experiments/LEBRE-V0.54-FINAL-01/`,
+> `PREREG_V054_FINAL.md`, resultado `FINAL_RESULTADO.md`, commit `c0effa2`) promoveu a v0.54 = v0.53 + **M5a** (M1
+> dormente) + **M5b** (relatório de equivalentes a cada 31 passos) + **M4** (remoção disparada, com evidência por
+> episódio). Nas 93 séries da reserva: nenhuma piora em nenhuma família (erro v0.54 ÷ v0.53 de 0,989 a 1,000), custo
+> mediano 0,905 do da v0.53 (IC 95% 0,857 a 0,932), memória estimada 85 KB. **Ficaram fora:** M3 (`M3_DIAGNOSTICO.md`;
+> entradas espúrias em níveis continuam: 3 de 17 séries, como na v0.53) e M6 (dois desenhos medidos; o ciclo continua
+> precisando ser declarado). Metas não atingidas e declaradas: custo com 50 entradas ≤ 2 vezes o custo com 5 (M5b);
+> o "30% a menos" citado como exemplo na seção 4. Uma falha de infraestrutura na primeira passada foi corrigida e
+> documentada (`RUN_NOTAS.md`).
+
 ## 0. Resumo
 
 A v0.53 ganhou da v0.52 sem piorar nenhuma família, mas paga por isso em todas: custo mediano de 919 operações por
