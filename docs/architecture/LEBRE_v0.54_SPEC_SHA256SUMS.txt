@@ -1,0 +1,9 @@
+# LEBRE v0.54 specification, revision 0 (2026-10-14): self-contained document (structural core with triggered removal and cheap equivalence report + M1 with dormancy + M2), including the v0.54 final evaluation, the stress audit and errata 01. PDFs, HTMLs and builder. Inputs: this repository (v0.54 and v0.53 final evaluations, audit; core evidence from the frozen v0.52 result folders) and the public LEBRE Lab at commit 7acea5f.
+c2f6e1d19f1212cdf2356a561df8ebd9e5b07560461f19171e037d8636c35fc9 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.54_SPEC_PTBR.pdf
+9dc8056a7efbe2b1c3420172a42d3941f970ec3b9479c1b87089c4489d979b31 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.54_SPEC_EN.pdf
+47e16dc8e485d24ece61347dd6f167b06b335282944b1a1b6d2d2b9f8edbdd64 *docs/architecture/pdf_source/LEBRE_v0.54_SPEC_PTBR.html
+da1a0d4bb1b46cfd0ff696c954c3386deddcd058737904db7e809df178672b72 *docs/architecture/pdf_source/LEBRE_v0.54_SPEC_EN.html
+97e246d9995ff7257acefbd20ab0f54498124f1c44a7cff9e026bbabf85cbc9d *docs/architecture/pdf_source/build_v054_spec.py
+0ff1477fb08d0ca99c421b7409b3e8b6dc484ce0f7a9df0e489efc791740a903 *docs/architecture/pdf_source/v054_text.py
+65452c170bd06b4c47c7aa2366a32e1ba51ab77d9d28560668af004705b513da *docs/architecture/pdf_source/v054_data.py
+0012bd88fe834098d67a192affd91590491b21375f779295bfa8be15ed2c8205 *docs/architecture/pdf_source/v054_diagrams.py

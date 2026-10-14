@@ -1,0 +1,21 @@
+{
+  "_description": "Canonical configuration of LEBRE v0.54 (promoted 2026-10-13 by the pre-registered final evaluation; errata 01 of 2026-10-14; freeze record docs/architecture/LEBRE_v0.54_FREEZE_RECORD.md). Keyword arguments to Lebre054(d, season, season2, reference, **config); every other constructor argument keeps its default in experiments/LEBRE-V0.54-PROTO-01/lebre054/model054.py (commit f9906c4). The v0.53 inside is lebre==0.2.0, copied byte for byte.",
+  "_source": "experiments/LEBRE-V0.54-FINAL-01/final_run.py (KW054), the configuration run in the final evaluation (commit cfe72ce; errata 01 keeps the same forecasts)",
+  "model_class": "lebre054.model054.Lebre054",
+  "config": {
+    "m5a": true,
+    "m5b": true,
+    "m4": true,
+    "m6": false
+  },
+  "reference_rule": {
+    "financial_returns": "zero",
+    "declared_cycle": "seasonal",
+    "default": "persistence"
+  },
+  "season_rule": {
+    "hourly": 24,
+    "bdg2_and_load_season2": 168,
+    "default": null
+  }
+}

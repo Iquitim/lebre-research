@@ -51,6 +51,16 @@ Rule followed throughout: every measurement set is declared (seeds included) **b
 | 20261007–20261052 | Bootstrap and classification seeds of the v0.53 development measurements, validations 1 to 5 and diagnostics, each declared in the plan of its measurement | LEBRE Lab, [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab) (`analises/*_PLANO.md`, `diagnosticos/*_PLANO.md`) |
 | 20261053 / 20261054 | Classification / measurement bootstrap of the v0.53 final evaluation | `experiments/LEBRE-V0.53-FINAL-01/final_analise.py` |
 
+## v0.54 line (LEBRE Lab, final evaluation, audit and errata)
+
+| Seeds | Use | Where |
+|---|---|---|
+| 5600–5609 | Prototype tests of M5a and exploration for M5b (no registered measurement) | `experiments/LEBRE-V0.54-PROTO-01/tests/`, M5b spec |
+| 20261060–20261249 | Bootstrap seeds, scenario seeds and validation-6 synthetic seeds of the M5a measurements, each declared in its plan | LEBRE Lab (`analises/M5A_*_PLANO.md`, `VALIDACAO6_PLANO.md`) |
+| 20261300–20261343 | Prototype tests of M5b, M4 and M6 (20261300–04), explorations without registered measurement (20261310–39), bootstrap of M4_E1, M6_E1, M4_E2, M6_E2 (20261340–43) | prototype tests; specs; LEBRE Lab plans |
+| 2026101200–2026101293 | Validation 7 synthetic families (…200–…289) and bootstrap (…290); v0.54 final evaluation classification / measurement / cost bootstrap (…291 / …292 / …293) | LEBRE Lab `VALIDACAO7_PLANO.md`; `experiments/LEBRE-V0.54-FINAL-01/final_analise.py` |
+| 2026101300–2026101469 | Stress audit series streams `default_rng([2026101300, test, type, k])` and bootstrap (…301); errata 01 checks (`[2026101400, …]`) and second errata measurement (…410–…469) | `experiments/LEBRE-V0.54-AUDIT-01/`; LEBRE Lab `ERRATA01_V054_E2_PLANO.md` |
+
 ## Earlier lines (v0.3–v0.51), for collision avoidance
 
 These ranges were used in earlier lines: 2176–2265, 2401–2430, 2501–2530, 2561–2590 and 7301–7613. See the corresponding `experiments/LEBRE-V0.4*`, `LEBRE-V0.46*` and `LEBRE-V0.51*` folders.

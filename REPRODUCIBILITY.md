@@ -113,3 +113,19 @@ v0.53 was developed in the public **LEBRE Lab** ([github.com/Iquitim/lebre-lab](
 | Integrity | `docs/architecture/LEBRE_v0.53_SHA256SUMS.txt` (177 files), `LEBRE_v0.53_SPEC_r1_SHA256SUMS.txt` (specification, revision 1) | `python scripts/verify_integrity.py` |
 
 **Caveats.** The reserve is consumed: re-running reproduces the published result, but it is not a new evaluation. Two fixes made during the run (reading the 2026 load by subsystem code; an exact-tie degenerate short series) are in `experiments/LEBRE-V0.53-FINAL-01/RUN_NOTAS.md`. Validations 4 and 5 of the Lab built the solar, wind and load families with a 30 h cycle instead of 24 h (errata in the Lab, `analises/ERRATA_SEASON_VALIDACOES_4_5.md`).
+
+## 9. LEBRE v0.54
+
+v0.54 was developed in the public **LEBRE Lab** and promoted here by a pre-registered final evaluation; a stress audit after the promotion led to errata 01.
+
+| Step | Where | Output |
+|---|---|---|
+| Final-evaluation reserve (drawn 2026-10-10, before any v0.54 code; seeds 5421/5422 and the v0.52 permutations) | `experiments/LEBRE-V0.54-DATA-01/` (`make_split_v054.py`, `snapshot_v054.py`) | `SPLIT_V054.json` (+ SHA-256), `SNAPSHOT_SHA256SUMS.txt` (raw files in `data/external_v054/`, out of git) |
+| Frozen code | `experiments/LEBRE-V0.54-PROTO-01/` at commit `f9906c4` (final evaluation run with `cfe72ce`, identical forecasts); configuration `configs/lebre_v054_canonical.json` | tests: `python -m pytest experiments/LEBRE-V0.54-PROTO-01/tests` (23; need `lebre==0.2.0`) |
+| Development, validations 6 and 7, errata measurements, audit T10 (plans committed before each run) | LEBRE Lab: `analises/` (needs `LEBRE054_PROTO` pointing to a git worktree at the commit recorded in each result, and `LEBRE053_PROTO`) | `*_RESULTADO.md` and JSON per family |
+| Rehearsal on spent series | `experiments/LEBRE-V0.54-FINAL-01/ensaio_v054.py` | `ENSAIO_RESULTADO.md` |
+| Final run (single, pre-registered) and analysis | `final_run.py`, `final_chronos.py`, `final_analise.py` | `preds/`, `chronos/`, `FINAL_RESULTADO.md`, `final_resultado.json` |
+| Stress audit (after the promotion) | `experiments/LEBRE-V0.54-AUDIT-01/` (`auditoria.py`, `analise_auditoria.py`) | `RELATORIO_AUDITORIA.md`, `analise_resultados.json` |
+| Integrity | `docs/architecture/LEBRE_v0.54_SHA256SUMS.txt` (148 files), `LEBRE_v0.54_SPEC_SHA256SUMS.txt` (specification) | `python scripts/verify_integrity.py` |
+
+**Caveats.** The reserve is consumed: re-running reproduces the published result, but it is not a new evaluation. The infrastructure failures of the run (child processes importing the v0.53 loader of the same name; Chronos-2 environment without `xlrd`) are in `experiments/LEBRE-V0.54-FINAL-01/RUN_NOTAS.md`. Validation 6 used 20 real and 50 synthetic series (two frozen files say 24 real; `docs/architecture/LEBRE_v0.54_FREEZE_ADDENDUM_01.md`).

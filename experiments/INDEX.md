@@ -17,6 +17,18 @@ Scope (project owner, 10 Oct 2026): finish the consolidation — cost proportion
 | `LEBRE-V0.54-DESIGN-NOTE-01` | Design note 01: failures, measured baseline, changes, criteria, process, reserve decisions | design |
 | `LEBRE-V0.54-DATA-01` | Final-evaluation reserve (drawn 10 Oct 2026, before any v0.54 code): CAMELS-BR 140–169, BDG2 115–144, 8 wind plants (seed 5421), 8 solar plants Jan–Sep 2026 (seed 5422, time split), 17 non-stationary level series (EIA, US Treasury); raw-data snapshot hashes, guard | F |
 
+## LEBRE v0.54 (10–14 Oct 2026) — promoted
+
+Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 2026 (freeze record `docs/architecture/LEBRE_v0.54_FREEZE_RECORD.md` and addendum 01; self-contained spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.54_SPEC_{EN,PTBR}.pdf`). Development, validations 6 and 7, the errata measurements and the bench part of the audit are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).
+
+| Folder | Role | Status |
+|---|---|---|
+| `LEBRE-V0.54-DESIGN-NOTE-01` | Design note, specification drafts of M5a (drafts 0–2), M5b (drafts 0–2), M4 (drafts 0–1) and M6 (drafts 0–1), M3 diagnosis, literature audit PRA-11 (in Portuguese) | F |
+| `LEBRE-V0.54-DATA-01` | Final-evaluation reserve (drawn 10 Oct 2026, before any v0.54 code), raw-data snapshot hashes, guard | F |
+| `LEBRE-V0.54-PROTO-01` | **v0.54 implementation** (frozen code: commit `f9906c4`; final evaluation run with `cfe72ce`, identical forecasts): v0.53 copied byte for byte from `lebre==0.2.0` + M5a (`dormancy.py`) + M5b (`screening.py`) + M4 (`removal.py`); M6 (`cycle.py`) present and off; tests | F |
+| `LEBRE-V0.54-FINAL-01` | Final evaluation (93 reserved series): pre-registration, loaders, run and analysis scripts, rehearsal, run notes, results, errata 01 | F, R |
+| `LEBRE-V0.54-AUDIT-01` | Post-promotion stress audit: plan, scripts, numerical summary and report | F |
+
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
 Promoted on 9 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`; self-contained spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_r1_{EN,PTBR}.pdf`). Development, validations 1 to 5 and diagnostics are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).
