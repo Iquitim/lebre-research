@@ -63,3 +63,16 @@ def test_stride_visits_every_phase_of_common_cycles():
     from lebre054.screening import SE_EQ
     for c in (7, 12, 24, 168):
         assert len({(k * SE_EQ) % c for k in range(c)}) == c
+
+
+def test_peak_cost_not_raised_by_the_report_update():
+    """errata 01 (rascunho 2): a atualização espalhada não pode elevar o pico por passo do núcleo acima de 1,05 vez o da
+    v0.54 sem a M5b (no rascunho 1, com 50 entradas, subia 50%)"""
+    X, y = muitas(20261301, 2000, 50)
+
+    def picos(m):
+        ant, pk = 0.0, 0.0
+        for t in range(len(y)):
+            m.step(X[t], float(y[t])); tot = m.core.cost_per_step * m.n_steps; pk = max(pk, tot - ant); ant = tot
+        return pk
+    assert picos(Lebre054(50, m5b=True)) <= 1.05 * picos(Lebre054(50))
