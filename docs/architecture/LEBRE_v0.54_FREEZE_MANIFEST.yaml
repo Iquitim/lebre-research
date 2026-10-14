@@ -1,0 +1,49 @@
+# ==============================================================================
+# LEBRE v0.54 — FREEZE MANIFEST
+# Stage: LEBRE-V0.54-FREEZE-01
+# Date: 2026-10-14
+# ==============================================================================
+
+architecture:
+  name: LEBRE
+  expansion: Lifecycle-governed Evidence-Based Resource Evolution
+  version: "0.54"
+  variant: consolidation (M5a + M5b + M4 over unchanged v0.53 = lebre 0.2.0)
+  status: PROMOTED_RESEARCH_VERSION_WITH_SCOPE_LIMITS
+  promoted_by: pre-registered binding rule (experiments/LEBRE-V0.54-FINAL-01/PREREG_V054_FINAL.md), single run on the v0.54 reserve
+  canonical_reference: "0.1"            # unchanged
+  frozen_research_versions: ["0.51", "0.52", "0.53"]   # verified by scripts/verify_integrity.py on 2026-10-14
+  principle: deliver well under a minimal compute budget without catastrophic failures; spend only where used; structure also leaves when evidence stops supporting it
+  components: [v053_lebre_0_2_0_unchanged, m5a_dormant_precision_layer, m5b_cheap_equivalence_report_row_spread, m4_triggered_removal_per_episode_evidence]
+  not_included: {M3: deferred to v0.55 (M3_DIAGNOSTICO.md), M6: two measured drafts failed undeclared-cycle criterion on solar (code present, off)}
+
+frozen_code:
+  repository: lebre-research
+  commit: f9906c4                       # promoted code cfe72ce + errata 01 (M5b draft 2): forecasts, decisions and report identical
+  promoted_commit: cfe72ce              # code executed in the final evaluation
+  folder: experiments/LEBRE-V0.54-PROTO-01
+  base_copies_of_lebre_0_2_0: verified against SHA256_COPIAS.txt by the tests
+  tests: 23 passing
+
+canonical_configuration:
+  call: Lebre054(d, season, season2, reference, m5a=True, m5b=True, m4=True)   # m6=False
+  reference_rule: {zero: financial returns, seasonal: declared cycle, persistence: no cycle}
+
+final_evaluation:
+  folder: experiments/LEBRE-V0.54-FINAL-01
+  series: 93                            # CAMELS-BR 30, BDG2 30, wind 8, solar 8 (Jan-Sep 2026), levels 17 (EIA, US Treasury)
+  no_harm_any_family: true              # v0.54/v0.53 0.989-1.000 per family; short series 1.007
+  median_cost_ratio: 0.905              # 95% CI 0.857-0.932
+  memory_estimate_bytes: 85268
+  infrastructure_notes: RUN_NOTAS.md
+
+errata:
+  - id: errata_01
+    file: experiments/LEBRE-V0.54-FINAL-01/ERRATA_01.md
+    corrected: M5b per-step peak cost (+50% at d=50) -> draft 2, peak <= 1.054 x v0.53, accepted on new data
+    declared: M4 removes relations absent > ~5,200 steps and must re-detect them (+5-10% error with 7,500-15,000-step blocks)
+
+audit: experiments/LEBRE-V0.54-AUDIT-01/RELATORIO_AUDITORIA.md
+development_and_validations: Iquitim/lebre-lab, analises/ (M5A_E*, M5B_E*, M4_E*, M6_E*, VALIDACAO6*, VALIDACAO7*, ERRATA01*, AUDITORIA_V054_E20*)
+
+sha256sums: docs/architecture/LEBRE_v0.54_SHA256SUMS.txt   # 148 tracked files of the five v0.54 folders
