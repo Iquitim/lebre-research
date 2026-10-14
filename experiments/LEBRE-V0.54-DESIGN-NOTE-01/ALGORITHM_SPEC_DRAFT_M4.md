@@ -117,3 +117,28 @@ troca; nenhuma remoção falsa (T-A01, T-A02); pior limite superior 1,0048 (T-A0
 **Ressalva declarada:** em 2 de 20 séries de T-A07, a remoção aconteceu no retorno da relação intermitente (a duração
 mínima de 5.000 passos coincide com o bloco desligado do gerador). A M4 não resolve a interpretação em níveis (M3), e a
 evidência vinculante continua sendo a avaliação final pré-registrada da v0.54.
+
+## Limitação declarada (auditoria de estresse, 13/10/2026; errata 01 da v0.54)
+
+A auditoria de estresse (`experiments/LEBRE-V0.54-AUDIT-01/RELATORIO_AUDITORIA.md`, teste T5) mediu o efeito da M4 em
+relações que ligam e desligam em blocos, com 10 séries por comprimento de bloco e 60.000 passos:
+
+| Bloco ligado/desligado | v0.54 ÷ v0.53 (erro) | remoções |
+|---|---|---|
+| até 5.000 passos | 1,000 a 1,016 | 0 a 2 |
+| 7.500 | 1,100 | 36 |
+| 10.000 | 1,055 | 28 |
+| 15.000 | 1,046 | 20 |
+
+**Mecanismo.** Quando uma relação some por mais de ~5.200 passos, o teste disparado acumula os 5.000 passos mínimos de
+evidência e a remove; isso é válido para o episódio testado. Quando ela volta, a LEBRE não tem memória de que a relação
+existiu e precisa redetectá-la como nova: a readição leva em mediana 675 a 920 passos (até 2.250), e o sinal perdido em
+cada volta custa erro. Com blocos curtos (até 5.000 passos), a remoção não chega a acontecer.
+
+**Consequência prática.** Relações sazonais em dados horários (por exemplo, um efeito de temperatura que existe só numa
+estação) têm esse formato. Na avaliação final (93 séries da reserva) houve 1 remoção e nenhuma piora, mas a reserva não
+tinha séries longas com relações que somem e voltam.
+
+**Status.** Limitação da v0.54, sem correção nesta versão. Caminhos para a v0.55: readição rápida de uma unidade removida
+há pouco, partindo dos pesos que ela tinha; duração mínima de remoção ligada ao histórico da unidade. Qualquer mudança
+altera previsões e exige o processo completo.
