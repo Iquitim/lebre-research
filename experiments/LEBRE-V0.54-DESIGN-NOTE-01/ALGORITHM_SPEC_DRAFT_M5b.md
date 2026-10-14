@@ -106,3 +106,11 @@ estação nova de Pequim, 6 eólicas nunca usadas), usada uma única vez: **a M5
 todas as séries, custo do núcleo com razão 0,719 no grupo d = 50, nenhuma discordância no relatório de equivalentes.
 Ressalva mantida: a meta original de custo (≤ 1,5 ou 2,0 vezes o custo com 5 entradas) não foi atingida; a M5b corta só a
 parte quadrática do relatório.
+
+## Rascunho 2 (errata 01 da v0.54, 14/10/2026)
+
+A auditoria de estresse mostrou que a atualização inteira a cada 31 passos coincidia periodicamente com a regressão da
+camada M1 e elevava o pico de custo por passo (+11% com 20 entradas, +50% com 50). No rascunho 2, a amostra de cada ciclo
+é a mesma, mas a matriz é atualizada uma linha por vez nos passos seguintes. Previsões, decisões e relatório são idênticos
+aos do rascunho 1, e o custo total é o mesmo. Aceito na segunda medição da errata 01, em 60 séries novas, com pico de no
+máximo 1,054 vez o da v0.53. Detalhes, medições e consequências em `experiments/LEBRE-V0.54-FINAL-01/ERRATA_01.md`.

@@ -18,6 +18,13 @@ hipótese). A expansão para várias saídas e vários passos passa para a v0.55
 > o "30% a menos" citado como exemplo na seção 4. Uma falha de infraestrutura na primeira passada foi corrigida e
 > documentada (`RUN_NOTAS.md`).
 
+> **Atualização 14/10/2026 (errata 01):** a auditoria de estresse pós-promoção (`experiments/LEBRE-V0.54-AUDIT-01/`)
+> não encontrou defeito de correção nem falha catastrófica, mas achou dois problemas. (1) A M5b elevava o pico de custo
+> por passo com muitas entradas; foi corrigida (M5b rascunho 2, previsões idênticas, aceita em dados novos), e o código
+> da v0.54 passa a ser o do commit `f9906c4`. (2) A M4 remove relações que somem por mais de ~5.200 passos e precisa
+> redetectá-las quando voltam (+5% a +10% de erro com blocos de 7.500 a 15.000 passos); fica declarada como limitação,
+> sem correção na v0.54. Detalhes em `experiments/LEBRE-V0.54-FINAL-01/ERRATA_01.md`.
+
 ## 0. Resumo
 
 A v0.53 ganhou da v0.52 sem piorar nenhuma família, mas paga por isso em todas: custo mediano de 919 operações por
