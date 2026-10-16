@@ -29,6 +29,12 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | `LEBRE-V0.54-FINAL-01` | Final evaluation (93 reserved series): pre-registration, loaders, run and analysis scripts, rehearsal, run notes, results, errata 01 | F, R |
 | `LEBRE-V0.54-AUDIT-01` | Post-promotion stress audit: plan, scripts, numerical summary and report | F |
 
+## Towards v0.55 (from 16 Oct 2026) — research programme, no measurement yet
+
+| Folder | Role | Status |
+|---|---|---|
+| `LEBRE-V0.55-FRONTIERS-01` | Audit of the v0.54 architecture and research programme for four candidate frontiers (sequential validity under adaptive NLMS, memory–structure cascade, memory of intermittent relations, high-dimensional discovery): evidence already on record, deductions, literature, decision matrix, roadmap (in Portuguese). No new measurement | design |
+
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
 Promoted on 9 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.53_FREEZE_RECORD.md`; self-contained spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.53_SPEC_r1_{EN,PTBR}.pdf`). Development, validations 1 to 5 and diagnostics are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab).
