@@ -201,3 +201,21 @@ resultado em `analises/D2_V055_RESULTADO.md`).
   previsão em nenhuma das duas versões. É um limite comum, não uma piora de B6.
 - **Hipótese para o rascunho 4, não testada:** a estrutura sobre a inovação da memória como **terceiro** especialista,
   combinado pela mesma média dinâmica.
+
+## Adendo 04 (16/10/2026) — resultado da D3 (rascunho 4, B7)
+
+Medição pré-registrada no LEBRE Lab (`analises/D3_V055_PLANO.md`, commit `870f00e`; resultado em
+`analises/D3_V055_RESULTADO.md`).
+
+- **B7 não passou:**
+  - retenção em P6: 49/60 contra 54/60 da v0.54;
+  - em P5, a informação não chegou à previsão de forma demonstrável (limite superior 1,005). A v0.54 já estava a 6% do
+    piso, então havia pouco a ganhar.
+- **Nos demais critérios, B7 passou:**
+  - foi o primeiro rascunho a levar a informação de uma entrada verdadeira à previsão numa série integrada (P3: 0,984,
+    IC até 0,991);
+  - manteve 0 entradas espúrias (a v0.54 termina com espúria em 40 de 60 séries de P6);
+  - não piorou a precisão em nenhuma célula;
+  - o custo ficou 6% acima do da v0.54.
+- **O déficit de P6 é de poder de descoberta** na presença de passeios concorrentes: 10 de 11 séries sem x0 nunca a
+  aceitaram.
