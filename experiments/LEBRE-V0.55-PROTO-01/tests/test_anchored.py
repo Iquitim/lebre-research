@@ -3,7 +3,7 @@
 
 1. Identidade: A0 (reescrita com as alavancas desligadas) = A (v0.54 canônica), bit a bit, em previsões, intervalos,
    eventos, custo e cobertura.
-2. Não vazamento: em B, B1, B2, B4, B5 e B6, trocar todo o futuro (entradas e alvos depois de t0) não muda nenhuma previsão até t0.
+2. Não vazamento: em B, B1, B2, B4, B5, B6 e B7, trocar todo o futuro (entradas e alvos depois de t0) não muda nenhuma previsão até t0.
 3. Coerência: em B, B2 e B5, os pesos lentos ficam alinhados com as unidades ativas depois de cada passo, e nenhum teste
    abre na janela de assentamento.
 """
@@ -89,7 +89,7 @@ def test_scenarios_exercise_the_core():
     assert ("accepted", "add") in kinds and ("accepted", "split") in kinds and ("accepted", "remove") in kinds
 
 
-@pytest.mark.parametrize("variant", ["B", "B1", "B2", "B4", "B5", "B6"])
+@pytest.mark.parametrize("variant", ["B", "B1", "B2", "B4", "B5", "B6", "B7"])
 @pytest.mark.parametrize("name", ["band_season_gaps", "relation_vanishes"])
 def test_no_leakage(name, variant):
     sc = SC[name]; T = len(sc["y"]); t0 = T // 2
@@ -122,3 +122,16 @@ def test_slow_reference_alignment_and_settling(name, variant):
     assert np.isfinite(f).all()
     assert seen["opened_in_settle"] == 0
     assert any(e.outcome == "accepted" for e in m.events)
+
+
+@pytest.mark.parametrize("name", ["opposite_lags_split", "relation_vanishes", "random_walk_level"])
+def test_innovation_structure_alignment(name):
+    def check(m, t):
+        c = m.core._core
+        assert set(c.inn_w) == set(c.active)
+        for u, st in c.active.items():
+            assert len(c.inn_w[u]) == len(st["w"])
+        assert 0.0 <= c.wI <= 1.0
+
+    m, f, _, _ = run(name, "B7", check=check)
+    assert np.isfinite(f).all()

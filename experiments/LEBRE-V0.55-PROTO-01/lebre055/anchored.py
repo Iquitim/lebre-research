@@ -44,6 +44,20 @@ previsão viva quando a memória é fraca. Nova chave REF_SPLIT:
   como na v0.54.
 A triagem segue a mesma separação: entradas externas com o resíduo y − R; passado do alvo, estado residual e divisões
 internas com y − s. Numa troca, o tipo é o da unidade que entra. A escala B vem de y − R.
+
+Rascunho 4 (16/10/2026, depois da D2 do LEBRE Lab, analises/D2_V055_RESULTADO.md): numa série integrada, a estrutura de
+nível perde para a memória (wS ≈ 0), e a informação de uma entrada verdadeira sobre as diferenças não chega à previsão,
+nem na v0.54 nem em B6. Nova chave INNOV (sobre REF_SPLIT): um terceiro especialista, a **estrutura de inovação** ŝ_Δ,
+prevê r = y − m com **as mesmas unidades aceitas e os mesmos atributos** da estrutura de nível, só com pesos próprios
+(NLMS μ = 0,05). Uma descoberta serve às duas, sem uma segunda triagem. A combinação é aninhada:
+- L₁ = m + wS·(s − m), o núcleo da v0.54;
+- L = L₁ + wI·((m + ŝ_Δ) − L₁), com wI pela mesma média dinâmica (λ = 0,99, η = 0,5, atualizada a cada 8 passos) entre
+  L₁ e m + ŝ_Δ.
+Onde a inovação não ajuda, wI → 0 e o núcleo volta a ser L₁. A referência das unidades externas é L, e a contribuição
+descontada de uma unidade externa é exata: (1 − wI)·wS·c_s + wI·c_Δ. As unidades internas continuam contra s. Uma
+unidade aceita entra nas duas estruturas com os pesos do desafiante; divisões e remoções são aplicadas às duas.
+Na fumaça do rascunho 0 (cascata), a estrutura de inovação errava onde precisava cancelar yₜ₋₁. Aqui ela não substitui
+nada: só ganha peso onde ajuda.
 """
 import math
 
@@ -61,6 +75,7 @@ class AnchoredMixin:
     SLOW = False
     REF_CORE = False
     REF_SPLIT = False
+    INNOV = False
     MU_REF = MU_REF
     N_SETTLE = N_SETTLE
 
@@ -69,6 +84,8 @@ class AnchoredMixin:
         self.base_s = self.base.copy(); self.slow_w = {}           # cópia lenta: base e pesos por unidade ativa
         self.last_change = 0                                        # instante da última mudança aceita (o início conta)
         self._refs = None; self.res_prev_int = 0.0                  # rascunho 3: referência por experimento
+        self.base_i = self.base.copy(); self.inn_w = {}             # rascunho 4: estrutura de inovação
+        self.Di = 0.0; self.wI = 0.5; self._inn = None
         k = len(self.M.feats)
         self.wphi = np.zeros(k); self.wphi_s = np.zeros(k); self._ph = np.zeros(k)   # rascunho 1: atributos da memória
 
@@ -92,6 +109,16 @@ class AnchoredMixin:
         """unidade interna (passado do alvo, estado residual e divisões do passado do alvo); numa troca, a que entra"""
         u = self.unit_of(ex.add_key) if ex.add_key else ex.rem_key
         return u[0] == "res" or (u[0] == "in" and u[1] == self.d - 1)
+
+    def _contrib_L(self, u):
+        """contribuição exata da unidade u na previsão do núcleo com o terceiro especialista (rascunho 4)"""
+        b = self.block(u)
+        return (1.0 - self.wI) * self.wS * float(self.active[u]["w"] @ b) + self.wI * float(self.inn_w[u] @ b)
+
+    def _contrib_L_seg(self, key):
+        i, sg = key[1], key[2:]
+        u = ("in", i); st = self.active[u]; j = st["segs"].index(sg); mu_ = self._mean(i, sg)
+        return (1.0 - self.wI) * self.wS * float(st["w"][j]) * mu_ + self.wI * float(self.inn_w[u][j]) * mu_
 
     def _seg_contrib_ref(self, key):
         i, sg = key[1], key[2:]
@@ -118,6 +145,12 @@ class AnchoredMixin:
             s = m + s + float(self.wphi @ self._ph)                 # nível: memória + estrutura sobre a inovação
             self.fp["structure"] += 2 * len(self._ph) + 3
         f = m + self.wS * (s - m)
+        if self.INNOV:                                              # rascunho 4: terceiro especialista, aninhado
+            si = float(self.base_i @ xb) + sum(float(self.inn_w[u] @ self.block(u)) for u in self.active)
+            L1, Li = f, m + si
+            f = L1 + self.wI * (Li - L1); self._inn = (L1, Li)
+            self.fp["structure"] += 2 * (self.d + 1) + sum(3 * len(st["w"]) for st in self.active.values()) + 4
+        f_core = f
         if self.env_n >= 50:
             w_ = OUT_MARGIN * (self.env_hi - self.env_lo)
             fc = min(max(f, self.env_lo - w_), self.env_hi + w_) if math.isfinite(f) else self.last_obs
@@ -135,18 +168,24 @@ class AnchoredMixin:
             ref = m + self.wS * (ref - m); kr = self.wS              # rascunho 2: referência = previsão do núcleo
         outs, rrs = [], []
         if self.REF_SPLIT:                                          # rascunho 3: referência pelo tipo da unidade
-            refL = m + self.wS * (s - m)
+            refL = f_core if self.INNOV else m + self.wS * (s - m)
             self._refs = []
             for ex in self.engine.slots:
                 internal = self._internal(ex)
                 rx, kx = (s, 1.0) if internal else (refL, self.wS)
                 self._refs.append(rx)
                 if ex.kind == "split":
-                    c = kx * self._seg_contrib_ref(ex.add_key)
+                    if self.INNOV and not internal:
+                        c = self._contrib_L_seg(ex.add_key)
+                    else:
+                        c = kx * self._seg_contrib_ref(ex.add_key)
                     outs.append(rx - c + float(ex.w @ self._cf(ex))); rrs.append(c)
                     continue
                 a = float(ex.w @ self._cf(ex)) if ex.add_key else 0.0
-                rm = kx * float(self._wref(ex.rem_key) @ self.block(ex.rem_key)) if ex.rem_key else 0.0
+                if ex.rem_key and self.INNOV and not internal:
+                    rm = self._contrib_L(ex.rem_key)
+                else:
+                    rm = kx * float(self._wref(ex.rem_key) @ self.block(ex.rem_key)) if ex.rem_key else 0.0
                 outs.append(rx + a - rm); rrs.append(rm)
             ref = refL
             self.fp["experiments"] += 6 * len(outs)
@@ -217,6 +256,12 @@ class AnchoredMixin:
                     c = abs(float(st["w"] @ b))
                     self.contrib_ema[u] = c if u not in self.contrib_ema else self.contrib_ema[u] + 0.01 * (c - self.contrib_ema[u])
                 self.fp["structure"] += 4 * (len(xb) + sum(len(b) for b in blocks.values())) + 4
+                if self.INNOV:                                       # rascunho 4: NLMS da estrutura de inovação
+                    gi = MU * (y - self._inn[1]) / den
+                    self.base_i += gi * xb
+                    for u, b in blocks.items():
+                        self.inn_w[u] = self.inn_w[u] + gi * b
+                    self.fp["structure"] += 4 * (len(xb) + sum(len(b) for b in blocks.values())) + 4
                 if self.SLOW and self.t >= self.N_SETTLE:            # NLMS lento da referência, sobre o próprio resíduo
                     gs = self.MU_REF * res_ref / den
                     self.base_s += gs * xb
@@ -235,10 +280,18 @@ class AnchoredMixin:
             es, em = y - s, y - m
             self.D = LAM * self.D + (es * es - em * em) / (self.sig ** 2 + 1e-12)
             self.fp["control"] += 7
+            if self.INNOV:                                           # rascunho 4: média dinâmica entre L₁ e m + ŝ_Δ
+                e1, ei = y - self._inn[0], y - self._inn[1]
+                self.Di = LAM * self.Di + (ei * ei - e1 * e1) / (self.sig ** 2 + 1e-12)
+                self.fp["control"] += 7
             if self.t % EVERY == 0:
                 z = ETA * self.D
                 self.wS = 1.0 / (1.0 + math.exp(z)) if z < 700 else 0.0
                 self.fp["control"] += 4
+                if self.INNOV:
+                    zi = ETA * self.Di
+                    self.wI = 1.0 / (1.0 + math.exp(zi)) if zi < 700 else 0.0
+                    self.fp["control"] += 4
             self.e2 = e * e if self.e2 is None else self.e2 + (1 - LAM) * (e * e - self.e2)
             if self.qhat is None:
                 self.qhat = 1.645 * math.sqrt(self.e2)
@@ -312,11 +365,43 @@ class AnchoredMixin:
             self.fp["screening"] += 14
 
     # ---------------- lifecycle
+    def _realign(self, store, old, ex, segs_of):
+        """pesos de uma estrutura paralela (lenta ou de inovação) realinhados com as unidades ativas depois de uma
+        aceitação: unidade sem mudança mantém; divisão aplica a mesma fusão; unidade nova recebe os pesos do desafiante"""
+        new = {}
+        for u, st in self.active.items():
+            if u in old and old[u][0] == segs_of(st):
+                new[u] = old[u][1]
+            elif ex.kind == "split" and u == self.unit_of(ex.add_key) and u in old:
+                segs_o, w_o = old[u]; sg = ex.add_key[2:]; j = segs_o.index(sg); l_, r_ = halves(sg)
+                segs = segs_o[:j] + [l_, r_] + segs_o[j + 1:]
+                w = np.concatenate([w_o[:j], ex.w, w_o[j + 1:]])
+                merged = {}
+                for sg_, w_ in zip(segs, w):
+                    merged[sg_] = merged.get(sg_, 0.0) + float(w_)
+                new[u] = np.array(list(merged.values()))
+            else:
+                new[u] = np.array(st["w"], float)
+            assert len(new[u]) == len(st["w"])
+        return new
+
     def _accept(self, ex, le):
+        if self.INNOV:
+            segs_of = lambda st: None if st["segs"] is None else list(st["segs"])
+            old_i = {u: (segs_of(st), self.inn_w[u].copy()) for u, st in self.active.items()}
+            super()._accept(ex, le) if not self.SLOW else self._accept_slow(ex, le)
+            self.inn_w = self._realign(self.inn_w, old_i, ex, segs_of)
+            if ex.kind != "split" and ex.add_key and ex.add_key[0] == "in":
+                self.base_i[1 + ex.add_key[1]] += float(ex.w[-1])
+            self.last_change = self.t
+            return
         if not self.SLOW:
             super()._accept(ex, le)
             self.last_change = self.t
             return
+        self._accept_slow(ex, le)
+
+    def _accept_slow(self, ex, le):
         segs_of = lambda st: None if st["segs"] is None else list(st["segs"])
         old = {u: (segs_of(st), self.slow_w[u].copy()) for u, st in self.active.items()}
         super()._accept(ex, le)

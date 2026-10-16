@@ -62,3 +62,19 @@ B6: unidades externas testadas contra a previsão do núcleo; internas (passado 
 | random_walk_level | 0,2440 | 0,2440 | 0,2440 |
 | relation_vanishes | 0,1045 | 0,1046 | 0,1046 |
 | Passeios: séries com entrada externa no fim (de 8) | 2 | 0 | 0 |
+
+## Rascunho 4 (B7), depois da D2 — mesma fumaça, mais um cenário tipo P3 (semente só de teste 5479)
+
+B7 = B6 + estrutura de inovação como terceiro especialista, aninhado (mesmas unidades, pesos próprios).
+
+| Cenário | A | B6 | B7 |
+|---|---|---|---|
+| band_season_gaps | 0,1405 | 0,1510 | 0,1510 |
+| correlated_12 | 0,1158 | 0,1233 | 0,1231 |
+| opposite_lags_split | 0,1734 | 0,1515 | 0,1515 |
+| random_walk_level | 0,2440 | 0,2440 | 0,2440 |
+| relation_vanishes | 0,1045 | 0,1046 | 0,1046 |
+| Passeios: séries com entrada externa no fim (de 8) | 2 | 0 | 0 |
+| Tipo P3, 6 séries: MSE médio / x0 no fim | 0,3111 / 6 | 0,3106 / 5 | **0,3060 / 6** (wI = 1, wS = 0) |
+
+Custo de B7: +40 a +150 operações por passo sobre B6 nesses cenários.
