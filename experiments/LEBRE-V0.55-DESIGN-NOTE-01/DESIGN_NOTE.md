@@ -169,3 +169,20 @@ do §2 continua valendo sem mudança, com R = L.
 
 A D1 compara **A** (controle), **B4** (referência = previsão do núcleo; principal) e **B5** (B4 com a cópia lenta;
 secundária). O pré-registro da D1 fica no LEBRE Lab, como as medições de desenvolvimento da v0.54.
+
+## Adendo 02 (16/10/2026) — resultado da D1
+
+Medição pré-registrada no LEBRE Lab (`analises/D1_V055_PLANO.md`, commit `d0865d8`; resultado em
+`analises/D1_V055_RESULTADO.md`, commit `dd095f0`). **Nenhuma variante passou.**
+
+- **B4 passou em tudo, menos na precisão do banco E20:** YB01, B03 e YB06 tiveram limite superior do IC acima de 1,02.
+- **No defeito da M3, o efeito foi forte:**
+  - passeios com entradas que passeiam: 26 de 60 séries com entrada espúria no fim na v0.54, 0 de 60 em B4;
+  - famílias de níveis do E20: 16 de 20 contra 0 de 20.
+- **Diagnóstico descritivo:** B4 também barra unidades internas (o passado do próprio alvo) que melhoram a previsão viva
+  quando a memória é fraca.
+- **Hipótese para o rascunho 3, não testada:**
+  - unidades externas testadas contra a previsão do núcleo;
+  - unidades internas testadas contra s, como na v0.54.
+
+Uma nova medição exige dados ou sementes nunca usados neste banco.
