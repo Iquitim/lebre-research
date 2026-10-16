@@ -219,3 +219,20 @@ Medição pré-registrada no LEBRE Lab (`analises/D3_V055_PLANO.md`, commit `870
   - o custo ficou 6% acima do da v0.54.
 - **O déficit de P6 é de poder de descoberta** na presença de passeios concorrentes: 10 de 11 séries sem x0 nunca a
   aceitaram.
+
+## Adendo 05 (16/10/2026) — resultado da D4 (rascunho 5, B8)
+
+Medição pré-registrada no LEBRE Lab (`analises/D4_V055_PLANO.md`, commit `4f19e43`; resultado em
+`analises/D4_V055_RESULTADO.md`).
+
+- **B8 não passou:** na célula de memória fraca W4, a razão contra a v0.54 foi 1,36.
+- **O que mirava, passou:**
+  - retenção em P6: 54/60;
+  - informação na previsão: P3 0,965 e P6 0,966, com IC abaixo de 1.
+- **Mecanismo:** o portão por wS se trava sozinho. Ele bloqueia a unidade interna que faria a estrutura de nível ganhar
+  peso. O portão fica rejeitado.
+
+**Situação acumulada, em sintéticos:**
+- robusto: entradas externas contra a previsão do núcleo, unidades internas contra s;
+- parcial: a estrutura de inovação (B7);
+- em aberto: como liberar as vagas em séries integradas sem travar a memória fraca.
