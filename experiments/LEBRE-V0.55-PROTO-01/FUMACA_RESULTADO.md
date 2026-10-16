@@ -78,3 +78,16 @@ B7 = B6 + estrutura de inovação como terceiro especialista, aninhado (mesmas u
 | Tipo P3, 6 séries: MSE médio / x0 no fim | 0,3111 / 6 | 0,3106 / 5 | **0,3060 / 6** (wI = 1, wS = 0) |
 
 Custo de B7: +40 a +150 operações por passo sobre B6 nesses cenários.
+
+## Rascunho 5 (B8), depois da D3 — mesma fumaça, mais um cenário tipo P6 (semente só de teste 5480, 10 séries)
+
+B8 = B7 + nenhum teste novo de unidade interna enquanto wS < 0,05.
+
+- Cenários dos testes: B8 é igual a B7 em todos.
+- Tipo P6:
+
+| | A | B7 | B8 |
+|---|---|---|---|
+| x0 no fim | 8 | 10 | 10 |
+| séries com espúria no fim | 6 | 0 | 0 |
+| MSE médio | 0,3192 | 0,3112 | 0,3063 |

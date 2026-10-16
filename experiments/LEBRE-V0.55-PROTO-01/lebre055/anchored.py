@@ -58,6 +58,14 @@ descontada de uma unidade externa é exata: (1 − wI)·wS·c_s + wI·c_Δ. As u
 unidade aceita entra nas duas estruturas com os pesos do desafiante; divisões e remoções são aplicadas às duas.
 Na fumaça do rascunho 0 (cascata), a estrutura de inovação errava onde precisava cancelar yₜ₋₁. Aqui ela não substitui
 nada: só ganha peso onde ajuda.
+
+Rascunho 5 (16/10/2026, depois da D3 do LEBRE Lab, analises/D3_V055_RESULTADO.md, com diagnóstico nas séries já gastas
+da P6): em série integrada, o peso da estrutura de nível wS fica em 0. As vagas de experimento eram ocupadas por testes
+de unidades **internas** contra s (divisões do passado do alvo, estado residual), que não podem mudar a previsão. A
+entrada verdadeira quase nunca ganhava vez. Nova chave GATE_INTERNAL (sobre INNOV): enquanto wS < W_GATE = 0,05, a
+triagem dá estatística zero às unidades internas e às divisões delas, e nenhum teste novo delas abre. Os testes em
+curso seguem, e as remoções não mudam. É a regra "gastar só onde há uso", que a v0.54 já aplica à M1. A decisão usa só
+wS, que é previsível.
 """
 import math
 
@@ -76,6 +84,8 @@ class AnchoredMixin:
     REF_CORE = False
     REF_SPLIT = False
     INNOV = False
+    GATE_INTERNAL = False
+    W_GATE = 0.05
     MU_REF = MU_REF
     N_SETTLE = N_SETTLE
 
@@ -104,6 +114,12 @@ class AnchoredMixin:
 
     def _wref(self, u):
         return self.slow_w[u] if self.SLOW else self.active[u]["w"]
+
+    def screen_stat(self, key):
+        """rascunho 5: unidades internas sem estatística de triagem enquanto a estrutura de nível não pesa na previsão"""
+        if self.GATE_INTERNAL and self.wS < self.W_GATE and (key[0] == "res" or (key[0] in ("in", "split") and key[1] == self.d - 1)):
+            return 0.0
+        return super().screen_stat(key)
 
     def _internal(self, ex):
         """unidade interna (passado do alvo, estado residual e divisões do passado do alvo); numa troca, a que entra"""

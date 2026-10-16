@@ -3,7 +3,7 @@
 
 1. Identidade: A0 (reescrita com as alavancas desligadas) = A (v0.54 canônica), bit a bit, em previsões, intervalos,
    eventos, custo e cobertura.
-2. Não vazamento: em B, B1, B2, B4, B5, B6 e B7, trocar todo o futuro (entradas e alvos depois de t0) não muda nenhuma previsão até t0.
+2. Não vazamento: em B, B1, B2, B4, B5, B6, B7 e B8, trocar todo o futuro (entradas e alvos depois de t0) não muda nenhuma previsão até t0.
 3. Coerência: em B, B2 e B5, os pesos lentos ficam alinhados com as unidades ativas depois de cada passo, e nenhum teste
    abre na janela de assentamento.
 """
@@ -89,7 +89,7 @@ def test_scenarios_exercise_the_core():
     assert ("accepted", "add") in kinds and ("accepted", "split") in kinds and ("accepted", "remove") in kinds
 
 
-@pytest.mark.parametrize("variant", ["B", "B1", "B2", "B4", "B5", "B6", "B7"])
+@pytest.mark.parametrize("variant", ["B", "B1", "B2", "B4", "B5", "B6", "B7", "B8"])
 @pytest.mark.parametrize("name", ["band_season_gaps", "relation_vanishes"])
 def test_no_leakage(name, variant):
     sc = SC[name]; T = len(sc["y"]); t0 = T // 2
