@@ -34,6 +34,7 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | Folder | Role | Status |
 |---|---|---|
 | `LEBRE-V0.55-FRONTIERS-01` | Audit of the v0.54 architecture and research programme for four candidate frontiers (sequential validity under adaptive NLMS, memory–structure cascade, memory of intermittent relations, high-dimensional discovery): evidence already on record, deductions, literature, decision matrix, roadmap (in Portuguese). No new measurement | design |
+| `LEBRE-V0.55-DESIGN-NOTE-01` | Design note 01 (draft 0) of the memory-anchored core with a slow test reference: theoretical target (structural FDR <= 2 alpha + P(reference error event)), specification, development measurement D1 to pre-register; formal note F1 (validity of the e-processes under any predictable learner; e-LOND with asynchronous decisions; joint bound 2 alpha) with a numerical sanity check (in Portuguese). No measurement | design |
 
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
