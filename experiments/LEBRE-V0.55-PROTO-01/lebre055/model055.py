@@ -9,7 +9,8 @@ Variantes (medição D1):
 - B1: só a âncora;
 - B2: só a referência lenta;
 - B4: referência dos testes = previsão combinada do núcleo (rascunho 2), previsão viva da v0.54;
-- B5: B4 com a cópia lenta da estrutura dentro da referência.
+- B5: B4 com a cópia lenta da estrutura dentro da referência;
+- B6: rascunho 3: unidades externas testadas contra a previsão do núcleo, internas contra s.
 """
 from ._core import Core  # noqa: F401  (mantido para leitura: a classe base da hierarquia)
 from .anchored import AnchoredMixin
@@ -17,7 +18,7 @@ from .model054 import Lebre054
 from .removal import RemovalMixin
 from .screening import Core054
 
-ALGORITHM_VERSION = "LEBRE v0.55 (protótipo: núcleo ancorado, rascunhos 0 a 2)"
+ALGORITHM_VERSION = "LEBRE v0.55 (protótipo: núcleo ancorado, rascunhos 0 a 3)"
 
 
 class CoreA0(AnchoredMixin, RemovalMixin, Core054):
@@ -44,7 +45,11 @@ class CoreB5(AnchoredMixin, RemovalMixin, Core054):
     ANCHOR, SLOW, REF_CORE = False, True, True
 
 
-VARIANTS = {"A": None, "A0": CoreA0, "B": CoreB, "B1": CoreB1, "B2": CoreB2, "B4": CoreB4, "B5": CoreB5}
+class CoreB6(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW, REF_CORE, REF_SPLIT = False, False, False, True
+
+
+VARIANTS = {"A": None, "A0": CoreA0, "B": CoreB, "B1": CoreB1, "B2": CoreB2, "B4": CoreB4, "B5": CoreB5, "B6": CoreB6}
 CANONICAL_V054 = dict(m5a=True, m5b=True, m4=True, m6=False)
 
 

@@ -49,3 +49,16 @@ entram na D1.
 
 **Variantes da D1:** A (controle), **B4 (principal)** e B5 (secundária). B, B1 e B2 ficam registradas como resultados
 negativos de desenvolvimento.
+
+## Rascunho 3 (B6), depois da D1 — mesma fumaça
+
+B6: unidades externas testadas contra a previsão do núcleo; internas (passado do alvo, estado residual) contra s.
+
+| Cenário | A | B4 | B6 |
+|---|---|---|---|
+| band_season_gaps | 0,1405 | 0,1363 | 0,1510 |
+| correlated_12 | 0,1158 | 0,1233 | 0,1233 |
+| opposite_lags_split | 0,1734 | 0,2038 | **0,1515** (divisões recuperadas) |
+| random_walk_level | 0,2440 | 0,2440 | 0,2440 |
+| relation_vanishes | 0,1045 | 0,1046 | 0,1046 |
+| Passeios: séries com entrada externa no fim (de 8) | 2 | 0 | 0 |

@@ -34,13 +34,24 @@ testes** passa a ser a previsão combinada do núcleo, Rₜ = mₜ + wS·(sₜ �
 unitária). A remoção de uma unidade desconta wS × a sua contribuição; o desafiante de adição corrige R diretamente
 (gₜ = Rₜ + aₜ). Com SLOW, sₜ na referência é a cópia lenta. Desvio declarado: os pesos aceitos entram em s como hoje,
 embora o desafiante tenha aprendido a corrigir R.
+
+Rascunho 3 (16/10/2026, depois da D1 do LEBRE Lab, analises/D1_V055_RESULTADO.md): B4 eliminou as entradas externas
+espúrias em séries integradas, mas também barrou unidades **internas** (o passado do próprio alvo) que melhoram a
+previsão viva quando a memória é fraca. Nova chave REF_SPLIT:
+- unidades **externas** (entradas x0, …, x_{d−1} e as suas divisões) são testadas contra a previsão do núcleo
+  R = m + wS·(s − m), e as suas remoções descontam wS × a contribuição;
+- unidades **internas** (o passado do alvo, o estado residual e as divisões do passado do alvo) são testadas contra s,
+  como na v0.54.
+A triagem segue a mesma separação: entradas externas com o resíduo y − R; passado do alvo, estado residual e divisões
+internas com y − s. Numa troca, o tipo é o da unidade que entra. A escala B vem de y − R.
 """
 import math
 
 import numpy as np
 
-from ._core import (ALPHA_COV, CHAL_WARM, CLIP_K, CLIP_X, DECIDE_EVERY, ETA, EVERY, GAMMA_Q, LAM, MU, OUT_MARGIN,
-                    OUT_RHO, PEAK_UNTIL, POLES, SCALE_FLOOR, halves)
+from ._core import (ALPHA_COV, BANDS, CHAL_WARM, CLIP_K, CLIP_X, DECIDE_EVERY, ETA, EVERY, GAMMA_Q, LAM, MU, OUT_MARGIN,
+                    OUT_RHO, PEAK_UNTIL, POLES, SCALE_FLOOR, SCREEN_EVERY, SCREEN_W, halves)
+from .screening import SE_EQ
 
 MU_REF, N_SETTLE = 0.01, 500
 
@@ -49,6 +60,7 @@ class AnchoredMixin:
     ANCHOR = False
     SLOW = False
     REF_CORE = False
+    REF_SPLIT = False
     MU_REF = MU_REF
     N_SETTLE = N_SETTLE
 
@@ -56,6 +68,7 @@ class AnchoredMixin:
         super().__init__(d, season=season, season2=season2)
         self.base_s = self.base.copy(); self.slow_w = {}           # cópia lenta: base e pesos por unidade ativa
         self.last_change = 0                                        # instante da última mudança aceita (o início conta)
+        self._refs = None; self.res_prev_int = 0.0                  # rascunho 3: referência por experimento
         k = len(self.M.feats)
         self.wphi = np.zeros(k); self.wphi_s = np.zeros(k); self._ph = np.zeros(k)   # rascunho 1: atributos da memória
 
@@ -74,6 +87,11 @@ class AnchoredMixin:
 
     def _wref(self, u):
         return self.slow_w[u] if self.SLOW else self.active[u]["w"]
+
+    def _internal(self, ex):
+        """unidade interna (passado do alvo, estado residual e divisões do passado do alvo); numa troca, a que entra"""
+        u = self.unit_of(ex.add_key) if ex.add_key else ex.rem_key
+        return u[0] == "res" or (u[0] == "in" and u[1] == self.d - 1)
 
     def _seg_contrib_ref(self, key):
         i, sg = key[1], key[2:]
@@ -116,6 +134,24 @@ class AnchoredMixin:
         if self.REF_CORE:
             ref = m + self.wS * (ref - m); kr = self.wS              # rascunho 2: referência = previsão do núcleo
         outs, rrs = [], []
+        if self.REF_SPLIT:                                          # rascunho 3: referência pelo tipo da unidade
+            refL = m + self.wS * (s - m)
+            self._refs = []
+            for ex in self.engine.slots:
+                internal = self._internal(ex)
+                rx, kx = (s, 1.0) if internal else (refL, self.wS)
+                self._refs.append(rx)
+                if ex.kind == "split":
+                    c = kx * self._seg_contrib_ref(ex.add_key)
+                    outs.append(rx - c + float(ex.w @ self._cf(ex))); rrs.append(c)
+                    continue
+                a = float(ex.w @ self._cf(ex)) if ex.add_key else 0.0
+                rm = kx * float(self._wref(ex.rem_key) @ self.block(ex.rem_key)) if ex.rem_key else 0.0
+                outs.append(rx + a - rm); rrs.append(rm)
+            ref = refL
+            self.fp["experiments"] += 6 * len(outs)
+            self._pending = (xb, m, s, f, ref, outs, rrs)
+            return f
         for ex in self.engine.slots:
             if ex.kind == "split":
                 c = kr * self._seg_contrib_ref(ex.add_key) if self.REF_CORE else self._seg_contrib_ref(ex.add_key)
@@ -149,14 +185,16 @@ class AnchoredMixin:
             self.fp["control"] += 8
             lf = min(er * er / (B * B), 1.0)
             res = y - s
-            res_ref = y - ref if (self.SLOW or self.REF_CORE) else res   # resíduo da referência dos testes
+            res_ref = y - ref if (self.SLOW or self.REF_CORE or self.REF_SPLIT) else res   # resíduo da referência dos testes
+            refs = self._refs if self.REF_SPLIT else None
             if learn:
-                for ex, g, back in zip(self.engine.slots, outs, rrs):
+                for j, (ex, g, back) in enumerate(zip(self.engine.slots, outs, rrs)):
                     ex.k += 1
+                    lfx = lf if refs is None else min((y - refs[j]) ** 2 / (B * B), 1.0)
                     if ex.k > CHAL_WARM or not ex.add_key:
-                        ex.observe(lf - min((y - g) ** 2 / (B * B), 1.0) - ex.eps)
+                        ex.observe(lfx - min((y - g) ** 2 / (B * B), 1.0) - ex.eps)
                     if ex.add_key:                                   # RLS on the residual the change would explain
-                        rr = res_ref + back
+                        rr = (res_ref if refs is None else y - refs[j]) + back
                         if ex.add_key[0] == "in" and ex.k <= PEAK_UNTIL:
                             self._peak_stats(ex, rr)
                         fx = self._cf(ex)
@@ -187,8 +225,12 @@ class AnchoredMixin:
                     for u, b in blocks.items():
                         self.slow_w[u] = self.slow_w[u] + gs * b
                     self.fp["structure"] += 4 * (len(xb) + sum(len(b) for b in blocks.values())) + 4
-                self._screen_spread(res_ref)
-                self.res_prev = res_ref
+                if self.REF_SPLIT:
+                    self._screen_spread_split(res_ref, res)
+                    self.res_prev = res_ref; self.res_prev_int = res
+                else:
+                    self._screen_spread(res_ref)
+                    self.res_prev = res_ref
                 self.res2 = res * res if self.res2 is None else self.res2 + (1 - LAM) * (res * res - self.res2)
             es, em = y - s, y - m
             self.D = LAM * self.D + (es * es - em * em) / (self.sig ** 2 + 1e-12)
@@ -230,6 +272,44 @@ class AnchoredMixin:
         if self.t % DECIDE_EVERY == 0 and self.t > 0:
             self._decide()
         self.t += 1
+
+    # ---------------- triagem do rascunho 3: o _screen_spread da M5b com dois resíduos
+    def _screen_spread_split(self, res, res_int):
+        w, se, t = SCREEN_W, SCREEN_EVERY, self.t
+        act = {u[1] for u in self.active if u[0] == "in"}
+        due = [i for i in range(self.d) if (t + i) % se == 0]
+        x, x1, ra = self.H[0], self.H[1], 1e-3 * se
+        own = self.d - 1
+        for i in due:
+            self.a_c0[i] += ra * (x[i] * x[i] - self.a_c0[i]); self.a_c1[i] += ra * (x[i] * x1[i] - self.a_c1[i])
+            self.fp["screening"] += 6
+            if i in act:
+                continue
+            rz, rp = (res_int, self.res_prev_int) if i == own else (res, self.res_prev)
+            a = float(self._a()[i]); pres = rz - a * rp
+            for b, (lo, hi) in enumerate(BANDS):
+                ub = (self.bs[b, i] - a * (self.bs[b, i] - self.H[lo, i] + self.H[hi + 1, i])) / (hi - lo + 1)
+                self.sc_xy[b, i] += w * (pres * ub - self.sc_xy[b, i]); self.sc_xx[b, i] += w * (ub * ub - self.sc_xx[b, i])
+            self.sc_yy[i] += w * (pres * pres - self.sc_yy[i])
+            self.fp["screening"] += 11 * len(BANDS) + 5
+        if t % se == self.d % se:                                   # residual latent unit (interna)
+            self.sr_xy += w * (res_int * self.r - self.sr_xy); self.sr_xx += w * (self.r * self.r - self.sr_xx)
+            self.sr_yy += w * (res_int * res_int - self.sr_yy); self.fp["screening"] += 12 * len(POLES)
+        if t % SE_EQ == (self.d + 1) % SE_EQ:                       # equivalence groups (reporting only), M5b
+            self._eq_flush()
+            gw = 1e-3 * SE_EQ
+            self.g_m += gw * (x - self.g_m); self._eq_xc = x - self.g_m; self._eq_next = 0
+            self.fp["screening"] += 2 * self.d
+        self._eq_rows(-(-self.d // (SE_EQ - 1)))
+        for j, key in enumerate(self.split_keys()):
+            if (t + j) % se:
+                continue
+            i, sg = key[1], key[2:]
+            rz = res_int if i == own else res
+            l_, r_ = halves(sg); dv = self._mean(i, l_) - self._mean(i, r_)
+            st = self.sp.setdefault(key, [0.0, 1e-3, 1.0])
+            st[0] += w * (rz * dv - st[0]); st[1] += w * (dv * dv - st[1]); st[2] += w * (rz * rz - st[2])
+            self.fp["screening"] += 14
 
     # ---------------- lifecycle
     def _accept(self, ex, le):
