@@ -1,0 +1,62 @@
+"""LEBRE v0.55 (protótipo de desenvolvimento): a v0.54 canônica (M5a + M5b + M4), copiada sem alteração do commit
+f9906c4 (hashes em SHA256_COPIAS.txt), com o núcleo ancorado de anchored.py (rascunho 0 da nota de desenho
+experiments/LEBRE-V0.55-DESIGN-NOTE-01/DESIGN_NOTE.md).
+
+Variantes (medição D1):
+- A:  v0.54 canônica, sem nenhuma mudança (classe de núcleo original);
+- A0: a reescrita de predict/observe com as duas alavancas desligadas; deve ser idêntica a A bit a bit;
+- B:  âncora na memória + referência lenta dos testes;
+- B1: só a âncora;
+- B2: só a referência lenta;
+- B4: referência dos testes = previsão combinada do núcleo (rascunho 2), previsão viva da v0.54;
+- B5: B4 com a cópia lenta da estrutura dentro da referência.
+"""
+from ._core import Core  # noqa: F401  (mantido para leitura: a classe base da hierarquia)
+from .anchored import AnchoredMixin
+from .model054 import Lebre054
+from .removal import RemovalMixin
+from .screening import Core054
+
+ALGORITHM_VERSION = "LEBRE v0.55 (protótipo: núcleo ancorado, rascunhos 0 a 2)"
+
+
+class CoreA0(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW = False, False
+
+
+class CoreB(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW = True, True
+
+
+class CoreB1(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW = True, False
+
+
+class CoreB2(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW = False, True
+
+
+class CoreB4(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW, REF_CORE = False, False, True
+
+
+class CoreB5(AnchoredMixin, RemovalMixin, Core054):
+    ANCHOR, SLOW, REF_CORE = False, True, True
+
+
+VARIANTS = {"A": None, "A0": CoreA0, "B": CoreB, "B1": CoreB1, "B2": CoreB2, "B4": CoreB4, "B5": CoreB5}
+CANONICAL_V054 = dict(m5a=True, m5b=True, m4=True, m6=False)
+
+
+class Lebre055(Lebre054):
+    """Mesma interface de Lebre054 (v0.54 canônica); `variant` escolhe o núcleo (ver o docstring do módulo)."""
+
+    def __init__(self, n_inputs, season=None, season2=None, standardize=True, reference=None, core_only=False, variant="B"):
+        if variant not in VARIANTS:
+            raise ValueError(f"variant must be one of {sorted(VARIANTS)}")
+        super().__init__(n_inputs, season=season, season2=season2, standardize=standardize, reference=reference,
+                         core_only=core_only, **CANONICAL_V054)
+        self.variant = variant
+        cls = VARIANTS[variant]
+        if cls is not None:
+            self.core._core = cls(self.n_inputs, season=season, season2=season2)

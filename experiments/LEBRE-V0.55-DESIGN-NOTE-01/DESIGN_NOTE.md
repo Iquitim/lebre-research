@@ -149,3 +149,23 @@ medida, cada uma passa pelo teste de identidade (com tudo desligado, igual à v0
 3. Pré-registro e execução da D1.
 4. Se passar: validação em dados novos; em paralelo, a correção da M4 (F3, variante A′), sobre o núcleo novo.
 5. Avaliação final pré-registrada da v0.55, com regra de promoção vinculante e reserva nova.
+
+## Adendo 01 (16/10/2026) — rascunho 2, depois do teste de fumaça
+
+O teste de fumaça do protótipo (`experiments/LEBRE-V0.55-PROTO-01/FUMACA_RESULTADO.md`, cenários dos testes, nenhuma
+semente da D1) mudou o desenho antes de qualquer medição registrada:
+
+- **A âncora na previsão viva (§4, "alvo da estrutura = rₜ") tem custo de precisão real.** A estrutura aprendida sobre a
+  inovação da memória erra muito mais, mesmo com a estrutura certa aceita. Fica como resultado negativo de
+  desenvolvimento.
+- **A referência lenta sozinha piora as séries de níveis** (8 de 8 passeios com entrada espúria).
+- **Rascunho 2:** a previsão viva continua exatamente a da v0.54, e só a **referência dos testes** muda para a previsão
+  combinada do núcleo, Rₜ = mₜ + wS·(sₜ − mₜ). Ela já contém a memória, com raiz unitária. Nos passeios, deu 0 de 8
+  contra 2 de 8 da v0.54, com precisão próxima.
+
+**Consequência para o alvo teórico (§2).** A hipótese (A2) passa a ser sobre o espaço da previsão do núcleo, uma mistura
+de memória e estrutura com peso previsível wS. No passeio aleatório, f\* = yₜ₋₁ ≈ mₜ e wS → 0, então η é pequeno. O resto
+do §2 continua valendo sem mudança, com R = L.
+
+A D1 compara **A** (controle), **B4** (referência = previsão do núcleo; principal) e **B5** (B4 com a cópia lenta;
+secundária). O pré-registro da D1 fica no LEBRE Lab, como as medições de desenvolvimento da v0.54.
