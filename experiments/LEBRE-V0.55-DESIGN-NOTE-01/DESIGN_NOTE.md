@@ -186,3 +186,18 @@ Medição pré-registrada no LEBRE Lab (`analises/D1_V055_PLANO.md`, commit `d08
   - unidades internas testadas contra s, como na v0.54.
 
 Uma nova medição exige dados ou sementes nunca usados neste banco.
+
+## Adendo 03 (16/10/2026) — resultado da D2 (rascunho 3, B6)
+
+Medição pré-registrada no LEBRE Lab, só sintéticos com sementes novas (`analises/D2_V055_PLANO.md`, commit `c059587`;
+resultado em `analises/D2_V055_RESULTADO.md`).
+
+- **B6 não passou:** reprovou só na retenção em P3 (50/60 contra 55/60 da v0.54). O banco foi válido.
+- **No resto, B6 confirmou o efeito positivo:**
+  - eliminou as entradas espúrias em séries integradas (33/60 → 0/60);
+  - corrigiu a perda de B4 com memória fraca;
+  - não piorou a precisão em nenhuma célula.
+- **Diagnóstico descritivo:** em P3, o peso da estrutura no núcleo é ~0. A informação da entrada verdadeira não chega à
+  previsão em nenhuma das duas versões. É um limite comum, não uma piora de B6.
+- **Hipótese para o rascunho 4, não testada:** a estrutura sobre a inovação da memória como **terceiro** especialista,
+  combinado pela mesma média dinâmica.
