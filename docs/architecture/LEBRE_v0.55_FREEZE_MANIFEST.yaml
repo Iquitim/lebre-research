@@ -1,0 +1,49 @@
+# ==============================================================================
+# LEBRE v0.55 — FREEZE MANIFEST
+# Stage: LEBRE-V0.55-FREEZE-01
+# Date: 2026-10-17
+# ==============================================================================
+
+architecture:
+  name: LEBRE
+  expansion: Lifecycle-governed Evidence-Based Resource Evolution
+  version: "0.55"
+  variant: anchored core (B10) over v0.54
+  status: PROMOTED_RESEARCH_VERSION_WITH_SCOPE_LIMITS
+  promoted_by: pre-registered binding rule (experiments/LEBRE-V0.55-FINAL-01/PREREG_V055_FINAL.md), single run on the v0.55 reserve
+  canonical_reference: "0.1"            # unchanged
+  frozen_research_versions: ["0.51", "0.52", "0.53", "0.54"]   # verified by scripts/verify_integrity.py on 2026-10-17
+  components: [v054_unchanged, external_units_tested_against_core_forecast, innovation_structure_nested_third_expert,
+               soft_gate_by_screening, weights_from_own_learned_residual, predictable_one_step_scale_floor]
+
+frozen_code:
+  repository: lebre-research
+  commit: b0522a0
+  folder: experiments/LEBRE-V0.55-PROTO-01
+  variant: B10
+  base_copies_of_v054: verified against SHA256_COPIAS.txt (f9906c4)
+  tests: 41 passing
+
+canonical_configuration:
+  call: Lebre055(d, season, season2, reference, variant="B10")
+  reference_rule: {zero: financial returns, seasonal: declared cycle, persistence: no cycle}
+
+evidence:
+  final_evaluation: experiments/LEBRE-V0.55-FINAL-01/FINAL_RESULTADO.md
+  rule: {R1: per-family upper CI <= 1.02 vs v0.54, R2: placebo inputs in final structure upper CI <= 0.10 and <= v0.54,
+         R3: no non-finite, R4: median cost <= 1.25, R5: memory <= 131072 B}
+  results: {camels: 1.008, bdg2: 0.998, eolica: 0.994, solar: 0.993, niveis_ecb: 1.000, placebo_v055: "0/84",
+            placebo_v054: "4/84", cost_median: 0.989, memory_bytes: 86180}
+  development_and_confirmation: lebre-lab analises/BANCO_V055_PLANO.md, BANCO_V055_D5_RESULTADO.md, BANCO_V055_C1_RESULTADO.md
+  real_validation: experiments/LEBRE-V0.55-VAL-01/VAL_RESULTADO.md
+  external_comparison: experiments/LEBRE-V0.55-COMP-01/COMP_RESULTADO.md   # reference only
+
+scope_limits:
+  - small significant loss on basins vs v0.54 (1.008); ARX with RLS of the same cost class better on basins
+  - integrated-series gain shown only on synthetic data (ECB levels 1.000)
+  - weak real relations registered as structure more slowly
+  - formal note F1 single-author, not independently reviewed; erratum 01 (v0.54 test scale not strictly predictable)
+  - structural FDR controlled empirically; theoretical joint bound 2 alpha
+  - one-step only; memory and cost estimated, not measured on a microcontroller; no component is original
+
+files_manifest: docs/architecture/LEBRE_v0.55_SHA256SUMS.txt    # 64 tracked files of the eight v0.55 folders
