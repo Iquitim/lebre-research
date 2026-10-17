@@ -66,6 +66,31 @@ entrada verdadeira quase nunca ganhava vez. Nova chave GATE_INTERNAL (sobre INNO
 triagem dá estatística zero às unidades internas e às divisões delas, e nenhum teste novo delas abre. Os testes em
 curso seguem, e as remoções não mudam. É a regra "gastar só onde há uso", que a v0.54 já aplica à M1. A decisão usa só
 wS, que é previsível.
+
+Rascunho 6 (17/10/2026, depois da D4, analises/D4_V055_RESULTADO.md, e de um diagnóstico nas séries já gastas da D4):
+1. O portão rígido do rascunho 5 se trava: com wS baixo, bloqueia a unidade interna que faria wS subir (W4: 1,36). Nova
+   chave SCREEN_CORE_INT, um **portão suave pela triagem**: a triagem das unidades internas (passado do alvo, estado
+   residual e divisões do passado do alvo) usa o resíduo da **previsão do núcleo**, y − L, como as externas. Uma unidade
+   interna só ganha vaga se explica o que o núcleo ainda erra. Não há limiar novo nem dependência da própria decisão. Os
+   testes das internas continuam contra s.
+2. Defeito do rascunho 4 (série P3 k = 45 da D4, razão 2,08): uma unidade interna aceita entrava na estrutura de
+   inovação com os pesos do desafiante, que tinha aprendido o resíduo de s, enorme quando wS ≈ 0. A estrutura de
+   inovação explodia. Nova chave INN_FROM_OWN_RESIDUAL: uma unidade só leva os pesos do desafiante para a estrutura cujo
+   resíduo ele aprendeu. As internas entram na inovação com peso zero (divisões: as duas metades com o peso da mãe, como
+   o núcleo faz), e o peso de atraso zero de uma interna não vai para a base da inovação. As externas, aprendidas contra
+   L, entram nas duas.
+
+Rascunho 7 (17/10/2026, diagnóstico nas séries já gastas da D4): o piso de escala dos testes,
+B = 2·max(σ̂_ref, 0,1·desvio do alvo), usa o desvio do **nível**. Numa série integrada, esse desvio cresce sem limite:
+na P3 da D4, o piso foi 5,6 contra σ̂_ref = 0,71, e B = 11 em vez de 1,4. A melhora de uma entrada verdadeira fica cerca
+de 60 vezes menor e cai abaixo da margem ε. Isso explica a retenção fraca de x0 em séries integradas em todas as
+rodadas. Duas chaves novas:
+- PRED_FLOOR: o piso passa a ser calculado **antes** de ver yₜ. Na v0.54, ele é calculado depois de atualizar a
+  variância com o próprio yₜ, e B não é estritamente previsível, ao contrário do que a Nota formal F1 afirma (errata
+  01 da nota). O efeito é de ordem 1/n por passo;
+- DIFF_FLOOR: o piso passa a 0,1·√(min(variância do nível, variância de Δy)), as duas estimadas causalmente com a
+  mesma regra. Nas séries estacionárias, o piso já fica bem abaixo de σ̂_ref, e nada muda na prática. Nas integradas,
+  a escala passa a ser a de uma passada.
 """
 import math
 
@@ -85,6 +110,10 @@ class AnchoredMixin:
     REF_SPLIT = False
     INNOV = False
     GATE_INTERNAL = False
+    SCREEN_CORE_INT = False
+    INN_FROM_OWN_RESIDUAL = False
+    PRED_FLOOR = False
+    DIFF_FLOOR = False
     W_GATE = 0.05
     MU_REF = MU_REF
     N_SETTLE = N_SETTLE
@@ -95,6 +124,7 @@ class AnchoredMixin:
         self.last_change = 0                                        # instante da última mudança aceita (o início conta)
         self._refs = None; self.res_prev_int = 0.0                  # rascunho 3: referência por experimento
         self.base_i = self.base.copy(); self.inn_w = {}             # rascunho 4: estrutura de inovação
+        self.d_sm = None; self.d_sv = 0.0; self.n_d = 0              # rascunho 7: variância causal de Δy
         self.Di = 0.0; self.wI = 0.5; self._inn = None
         k = len(self.M.feats)
         self.wphi = np.zeros(k); self.wphi_s = np.zeros(k); self._ph = np.zeros(k)   # rascunho 1: atributos da memória
@@ -231,11 +261,22 @@ class AnchoredMixin:
         if y_ok:
             e = y - f; er = y - ref
             self.e2r = er * er if self.e2r is None else self.e2r + (1 - LAM) * (er * er - self.e2r)
+            if self.PRED_FLOOR or self.DIFF_FLOOR:                   # rascunho 7: piso só do passado
+                v_ = min(self.y_sv, self.d_sv) if (self.DIFF_FLOOR and self.n_d > 0) else self.y_sv
+                floor_p = SCALE_FLOOR * math.sqrt(max(v_, 0.0)) if self.t >= 200 else 0.0
+                if self.last_obs is not None:                        # variância de Δy, atualizada depois do piso
+                    dd = y - self.last_obs
+                    if self.d_sm is None:
+                        self.d_sm = dd; self.n_d = 0
+                    self.n_d += 1; rd = max(1e-4, 1.0 / self.n_d)
+                    e_ = dd - self.d_sm; self.d_sm += rd * e_; self.d_sv += rd * (e_ * (dd - self.d_sm) - self.d_sv)
             if self.y_sm is None:
                 self.y_sm = y; self.n_y = 0
             self.n_y += 1; ry = max(1e-4, 1.0 / self.n_y)
             dy = y - self.y_sm; self.y_sm += ry * dy; self.y_sv += ry * (dy * (y - self.y_sm) - self.y_sv)
             floor = SCALE_FLOOR * math.sqrt(max(self.y_sv, 0.0)) if self.t >= 200 else 0.0
+            if self.PRED_FLOOR or self.DIFF_FLOOR:
+                floor = floor_p
             B = CLIP_K * max(self.sigr, floor)
             self.fp["control"] += 8
             lf = min(er * er / (B * B), 1.0)
@@ -287,8 +328,9 @@ class AnchoredMixin:
                         self.slow_w[u] = self.slow_w[u] + gs * b
                     self.fp["structure"] += 4 * (len(xb) + sum(len(b) for b in blocks.values())) + 4
                 if self.REF_SPLIT:
-                    self._screen_spread_split(res_ref, res)
-                    self.res_prev = res_ref; self.res_prev_int = res
+                    rint = res_ref if self.SCREEN_CORE_INT else res        # rascunho 6: portão suave pela triagem
+                    self._screen_spread_split(res_ref, rint)
+                    self.res_prev = res_ref; self.res_prev_int = rint
                 else:
                     self._screen_spread(res_ref)
                     self.res_prev = res_ref
@@ -381,7 +423,7 @@ class AnchoredMixin:
             self.fp["screening"] += 14
 
     # ---------------- lifecycle
-    def _realign(self, store, old, ex, segs_of):
+    def _realign(self, store, old, ex, segs_of, zero_new=False):
         """pesos de uma estrutura paralela (lenta ou de inovação) realinhados com as unidades ativas depois de uma
         aceitação: unidade sem mudança mantém; divisão aplica a mesma fusão; unidade nova recebe os pesos do desafiante"""
         new = {}
@@ -391,13 +433,14 @@ class AnchoredMixin:
             elif ex.kind == "split" and u == self.unit_of(ex.add_key) and u in old:
                 segs_o, w_o = old[u]; sg = ex.add_key[2:]; j = segs_o.index(sg); l_, r_ = halves(sg)
                 segs = segs_o[:j] + [l_, r_] + segs_o[j + 1:]
-                w = np.concatenate([w_o[:j], ex.w, w_o[j + 1:]])
+                halves_w = np.full(2, w_o[j]) if zero_new else ex.w        # rascunho 6: metades com o peso da mãe
+                w = np.concatenate([w_o[:j], halves_w, w_o[j + 1:]])
                 merged = {}
                 for sg_, w_ in zip(segs, w):
                     merged[sg_] = merged.get(sg_, 0.0) + float(w_)
                 new[u] = np.array(list(merged.values()))
             else:
-                new[u] = np.array(st["w"], float)
+                new[u] = np.zeros(len(st["w"])) if zero_new else np.array(st["w"], float)
             assert len(new[u]) == len(st["w"])
         return new
 
@@ -406,8 +449,9 @@ class AnchoredMixin:
             segs_of = lambda st: None if st["segs"] is None else list(st["segs"])
             old_i = {u: (segs_of(st), self.inn_w[u].copy()) for u, st in self.active.items()}
             super()._accept(ex, le) if not self.SLOW else self._accept_slow(ex, le)
-            self.inn_w = self._realign(self.inn_w, old_i, ex, segs_of)
-            if ex.kind != "split" and ex.add_key and ex.add_key[0] == "in":
+            internal = self.INN_FROM_OWN_RESIDUAL and bool(ex.add_key) and self._internal(ex)
+            self.inn_w = self._realign(self.inn_w, old_i, ex, segs_of, zero_new=internal)
+            if ex.kind != "split" and ex.add_key and ex.add_key[0] == "in" and not internal:
                 self.base_i[1 + ex.add_key[1]] += float(ex.w[-1])
             self.last_change = self.t
             return
