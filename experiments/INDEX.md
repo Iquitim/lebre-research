@@ -40,6 +40,7 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | `LEBRE-V0.55-VAL-01` | Pre-registered validation of the anchored core (B10, frozen at `b0522a0`) against v0.54 on the never-used real series | val |
 | `LEBRE-V0.55-DATA-02` | Final-evaluation reserve of v0.55 (rules committed before any download; metadata-only draw): CAMELS-BR 190-219, BDG2 175-204, 8 wind (seed 5521), 8 solar Jan-Sep 2026 (seed 5522), 8 ECB euro reference rates outside the Fed H.10; commercial paper rates excluded by the coverage rule; raw-data hashes | F |
 | `LEBRE-V0.55-FINAL-01` | Pre-registered final evaluation of v0.55 (B10 vs v0.54, real inputs and placebo random-walk inputs as a negative control; binding promotion rule R1-R5) | F |
+| `LEBRE-V0.55-COMP-01` | Comparison of v0.55 with external models on the v0.55 reserve (reference only, outside the promotion): online linear (ARX NLMS/RLS, NLinear, DLinear), SARIMAX-X, gradient boosting, Chronos-2 (with and without covariates), Chronos-Bolt, TTM (zero-shot and fine-tuned with inputs); paired block bootstrap, Holm correction | ref |
 
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
