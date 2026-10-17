@@ -36,6 +36,8 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | `LEBRE-V0.55-FRONTIERS-01` | Audit of the v0.54 architecture and research programme for four candidate frontiers (sequential validity under adaptive NLMS, memory–structure cascade, memory of intermittent relations, high-dimensional discovery): evidence already on record, deductions, literature, decision matrix, roadmap (in Portuguese). No new measurement | design |
 | `LEBRE-V0.55-DESIGN-NOTE-01` | Design note 01 (draft 0) of the memory-anchored core with a slow test reference: theoretical target (structural FDR <= 2 alpha + P(reference error event)), specification, development measurement D1 to pre-register; formal note F1 (validity of the e-processes under any predictable learner; e-LOND with asynchronous decisions; joint bound 2 alpha) with a numerical sanity check (in Portuguese). No measurement | design |
 | `LEBRE-V0.55-PROTO-01` | v0.55 development prototype: v0.54 copied byte for byte (`f9906c4`) + `anchored.py` (levers ANCHOR, SLOW, REF_CORE; drafts 0-2) and `model055.py` (variants A, A0, B, B1, B2, B4, B5); tests (bit-for-bit identity of the rewrite with v0.54, no leakage, slow-reference alignment); smoke record that chose the D1 variants (cascade on the live forecast and slow reference alone are negative development results) | dev |
+| `LEBRE-V0.55-DATA-01` | Validation series of v0.55 drawn from metadata only (CAMELS-BR positions 170-189, BDG2 145-174; 47 basins and 591 meters left for the final evaluation) | data |
+| `LEBRE-V0.55-VAL-01` | Pre-registered validation of the anchored core (B10, frozen at `b0522a0`) against v0.54 on the never-used real series | val |
 
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
