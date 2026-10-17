@@ -3,6 +3,10 @@
 CHRONOS2_COV, CHRONOS2, CHRONOS_BOLT_SMALL (zero-shot, contexto 512, mediana; chronos_dev.contexts sem alteração),
 TTM_ZS e TTM_FT_EXOG (ttm_run.run com lr 1e-4, 30 épocas, parada antecipada; ajuste só na janela de calibração).
 Grava fundacao/<família>__<id>.npz (fora do git). Uso: python comp_fundacao.py
+
+Dispositivo: GPU (CUDA) se disponível, a pedido do responsável (17/10/2026). O TTM usa ttm_gpu.py, cópia de
+ttm_run.py que só move modelos e tensores para a GPU. A execução parcial anterior em CPU (14 séries) foi descartada,
+e todas as séries rodam no mesmo dispositivo (RUN_NOTAS.md).
 """
 import importlib.util
 import sys
@@ -18,7 +22,9 @@ OUT = AQUI / "fundacao"
 sys.path.insert(0, str(RAIZ / "experiments" / "LEBRE-V0.52-PROTO-01"))
 sys.path.insert(0, str(RAIZ / "experiments" / "LEBRE-V0.52-EXT-01"))
 import chronos_dev as CH  # noqa: E402
-import ttm_run as TTM  # noqa: E402
+sys.path.insert(0, str(AQUI))
+import ttm_gpu as TTM  # noqa: E402
+DEV = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 def _fr():
@@ -32,7 +38,7 @@ def prever(pipe, inp):
     for b in range(0, len(inp), 256):
         q, _ = pipe.predict_quantiles(inp[b:b + 256], prediction_length=1, quantile_levels=[0.5])
         q = torch.stack([qq.reshape(-1)[0] for qq in q]) if isinstance(q, list) else q.reshape(len(inp[b:b + 256]), -1)[:, 0]
-        out.append(q.float().numpy())
+        out.append(q.float().cpu().numpy())
     return np.concatenate(out)
 
 
@@ -41,8 +47,9 @@ if __name__ == "__main__":
     from chronos import BaseChronosPipeline
     OUT.mkdir(exist_ok=True)
     FR = _fr()
-    pipes = {"CHRONOS2": BaseChronosPipeline.from_pretrained("amazon/chronos-2", device_map="cpu"),
-             "CHRONOS_BOLT_SMALL": BaseChronosPipeline.from_pretrained("amazon/chronos-bolt-small", device_map="cpu")}
+    print("dispositivo:", DEV, torch.__version__, torch.cuda.get_device_name(0) if DEV == "cuda" else "", flush=True)
+    pipes = {"CHRONOS2": BaseChronosPipeline.from_pretrained("amazon/chronos-2", device_map=DEV),
+             "CHRONOS_BOLT_SMALL": BaseChronosPipeline.from_pretrained("amazon/chronos-bolt-small", device_map=DEV)}
     for familia, ident in FR.tarefas():
         f = OUT / f"{familia}__{''.join(c if c.isalnum() else '_' for c in str(ident))}.npz"
         if f.exists():
