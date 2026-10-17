@@ -1,0 +1,636 @@
+{
+ "familias": {
+  "camels": {
+   "n": 20,
+   "geo": 1.0031760685156639,
+   "ic95": [
+    0.9913014974299245,
+    1.0183576896467563
+   ]
+  },
+  "bdg2": {
+   "n": 30,
+   "geo": 0.9926746144324556,
+   "ic95": [
+    0.9841998231737534,
+    1.0017433452976185
+   ]
+  }
+ },
+ "series": [
+  {
+   "familia": "camels",
+   "ident": "12500000",
+   "razao": 1.006691662300219,
+   "custo_razao": 0.9200435791447654,
+   "nan": 0,
+   "externas_A": [
+    "x1",
+    "x2"
+   ],
+   "externas_B10": [],
+   "wI": 1.884334194991376e-12,
+   "wS_A": 0.9999999999999771
+  },
+  {
+   "familia": "camels",
+   "ident": "12700000",
+   "razao": 0.9250160112072968,
+   "custo_razao": 0.868731447728155,
+   "nan": 0,
+   "externas_A": [
+    "x1",
+    "x2"
+   ],
+   "externas_B10": [],
+   "wI": 1.0,
+   "wS_A": 0.9932302271696372
+  },
+  {
+   "familia": "camels",
+   "ident": "22680000",
+   "razao": 1.018602928662228,
+   "custo_razao": 0.9855558898618418,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 4.989283688785423e-10,
+   "wS_A": 1.3479956021203619e-06
+  },
+  {
+   "familia": "camels",
+   "ident": "22700000",
+   "razao": 0.9746360222190811,
+   "custo_razao": 1.0565772240325635,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 1.6517691501607783e-07,
+   "wS_A": 5.047761679936006e-09
+  },
+  {
+   "familia": "camels",
+   "ident": "55370000",
+   "razao": 1.0527991177894105,
+   "custo_razao": 1.0464524609244343,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.07003837830800247,
+   "wS_A": 0.9999874247912964
+  },
+  {
+   "familia": "camels",
+   "ident": "55660000",
+   "razao": 1.009176550644817,
+   "custo_razao": 1.0355371113435006,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.8480617036732332,
+   "wS_A": 0.999849524440824
+  },
+  {
+   "familia": "camels",
+   "ident": "57420000",
+   "razao": 0.9966791955135854,
+   "custo_razao": 1.0269684713181755,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 1.7417606913546091e-22,
+   "wS_A": 0.0003152053810004031
+  },
+  {
+   "familia": "camels",
+   "ident": "58535000",
+   "razao": 1.0098923245345683,
+   "custo_razao": 1.0817369403429156,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 1.1498572738881134e-16,
+   "wS_A": 0.9995354147899105
+  },
+  {
+   "familia": "camels",
+   "ident": "58930000",
+   "razao": 1.0333694714622927,
+   "custo_razao": 1.0328630310876057,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 4.076844013084989e-06,
+   "wS_A": 0.9998817151329437
+  },
+  {
+   "familia": "camels",
+   "ident": "59355000",
+   "razao": 1.009979694018466,
+   "custo_razao": 1.040991968909977,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.43570014914720434,
+   "wS_A": 0.9181711759445246
+  },
+  {
+   "familia": "camels",
+   "ident": "59380000",
+   "razao": 1.012746261986017,
+   "custo_razao": 1.0422285969054117,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 7.991547824043206e-57,
+   "wS_A": 1.0
+  },
+  {
+   "familia": "camels",
+   "ident": "60220000",
+   "razao": 1.0281876660203908,
+   "custo_razao": 1.0453970169520852,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.9420417228685408,
+   "wS_A": 6.95706281427189e-06
+  },
+  {
+   "familia": "camels",
+   "ident": "61052000",
+   "razao": 0.9905622368937284,
+   "custo_razao": 0.9796636835942788,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 3.833870802124544e-27,
+   "wS_A": 1.0
+  },
+  {
+   "familia": "camels",
+   "ident": "61280000",
+   "razao": 1.0123409749115704,
+   "custo_razao": 1.1249270154881148,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.0022636470749165514,
+   "wS_A": 1.9256950331696405e-06
+  },
+  {
+   "familia": "camels",
+   "ident": "64619950",
+   "razao": 0.9889439297422099,
+   "custo_razao": 1.0921520579913355,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.9999999914994905,
+   "wS_A": 3.0450869001987607e-13
+  },
+  {
+   "familia": "camels",
+   "ident": "64771500",
+   "razao": 0.9218950624088704,
+   "custo_razao": 1.0468910487517114,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 1.489927795649224e-05,
+   "wS_A": 0.9999996448735615
+  },
+  {
+   "familia": "camels",
+   "ident": "64773000",
+   "razao": 1.0182350451253825,
+   "custo_razao": 1.045348224471513,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 1.0600879142174195e-47,
+   "wS_A": 1.0
+  },
+  {
+   "familia": "camels",
+   "ident": "64810000",
+   "razao": 1.057085827138268,
+   "custo_razao": 1.10285192886117,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 1.3337197486842306e-09,
+   "wS_A": 0.9999999999985874
+  },
+  {
+   "familia": "camels",
+   "ident": "70200000",
+   "razao": 0.9971489827884183,
+   "custo_razao": 1.0374211004302965,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.6445984135673837,
+   "wS_A": 0.9111162648201007
+  },
+  {
+   "familia": "camels",
+   "ident": "83892990",
+   "razao": 1.0106147809468577,
+   "custo_razao": 1.0003131422834037,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 9.467698328392103e-304,
+   "wS_A": 1.0
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_assembly_Beau",
+   "razao": 1.001773150473589,
+   "custo_razao": 1.0390820157511667,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.056308100893408326,
+   "wS_A": 0.9999999672929307
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_assembly_Nathanial",
+   "razao": 0.9296334080131213,
+   "custo_razao": 0.8292111612565916,
+   "nan": 0,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [],
+   "wI": 0.7839186155225935,
+   "wS_A": 2.996109707982746e-22
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Kristal",
+   "razao": 0.9572688896857398,
+   "custo_razao": 0.9576583993301397,
+   "nan": 0,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [],
+   "wI": 2.5612387717681593e-10,
+   "wS_A": 8.1558149611477e-32
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Miquel",
+   "razao": 0.9286410179412029,
+   "custo_razao": 0.9789770823692181,
+   "nan": 0,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [
+    "x1"
+   ],
+   "wI": 7.868533529027872e-11,
+   "wS_A": 4.142339224522808e-66
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_lodging_Perry",
+   "razao": 1.0593389571601748,
+   "custo_razao": 1.0168304026359796,
+   "nan": 0,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [
+    "x1"
+   ],
+   "wI": 0.8656683149846631,
+   "wS_A": 0.9998516249154544
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_office_Efren",
+   "razao": 0.9535675400632027,
+   "custo_razao": 1.0723288502780672,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 5.961793471096393e-05,
+   "wS_A": 2.0382891111349228e-09
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_education_Norah",
+   "razao": 1.0257550752071969,
+   "custo_razao": 0.8945141669370833,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.9999864206257231,
+   "wS_A": 1.0
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_education_Wesley",
+   "razao": 1.0087870160675083,
+   "custo_razao": 1.043489306743904,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.28025155263643897,
+   "wS_A": 0.00011365732452303944
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_lodging_Casey",
+   "razao": 1.0048373526713548,
+   "custo_razao": 0.975443609611243,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.9999999998615987,
+   "wS_A": 0.9999999999727269
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_office_Lamont",
+   "razao": 0.9960439253566393,
+   "custo_razao": 1.0579148209820415,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.4909715170993629,
+   "wS_A": 0.1642288733468798
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_office_Mandi",
+   "razao": 1.1484030714944915,
+   "custo_razao": 1.070518191704703,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.0001723309252815966,
+   "wS_A": 1.3919923316087568e-29
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_office_Sonya",
+   "razao": 1.0037111025464895,
+   "custo_razao": 1.111492482801628,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.7639524925543778,
+   "wS_A": 0.0020723209261015066
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Fox_education_Andre",
+   "razao": 0.9860355623588724,
+   "custo_razao": 0.9521475048744087,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 8.079967648517684e-23,
+   "wS_A": 1.2881962054177719e-113
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Fox_education_Kendrick",
+   "razao": 0.9861367982447025,
+   "custo_razao": 0.9826159083800697,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.06523162623084809,
+   "wS_A": 6.853028413425802e-06
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_office_Elnora",
+   "razao": 0.9879557694232878,
+   "custo_razao": 0.9646754141586207,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.0002293846218639163,
+   "wS_A": 6.304924208169462e-08
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Eagle_education_Sheena",
+   "razao": 1.0042272936055028,
+   "custo_razao": 1.134342260435337,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.0001991102396025463,
+   "wS_A": 0.000939359791329053
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Eagle_office_Jeff",
+   "razao": 0.9964719176051272,
+   "custo_razao": 0.935642260980697,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.001642611096378917,
+   "wS_A": 0.5202844508334958
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Fox_education_Elizabeth",
+   "razao": 0.9802829787134698,
+   "custo_razao": 0.8737146070444121,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.981635971976689,
+   "wS_A": 0.009992023504734231
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Robin_education_Madeline",
+   "razao": 1.027644537760804,
+   "custo_razao": 1.0807870807919893,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.01190217258391309,
+   "wS_A": 6.62184523942355e-09
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_education_Lydia",
+   "razao": 0.980380241316817,
+   "custo_razao": 0.9283300438698969,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.5184369548134858,
+   "wS_A": 0.9540710592444407
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_lodging_Danielle",
+   "razao": 0.9808944732024115,
+   "custo_razao": 0.9278810179070359,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.3796047845506985,
+   "wS_A": 0.537076104651643
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_assembly_Britt",
+   "razao": 0.9806704487621174,
+   "custo_razao": 0.9992543812556263,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.9950855414440665,
+   "wS_A": 7.016818296878136e-15
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_assembly_Emilio",
+   "razao": 0.9803113788828189,
+   "custo_razao": 0.8864614837199003,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.9844082084256649,
+   "wS_A": 0.11646382963680565
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_education_Flora",
+   "razao": 0.9740700878029117,
+   "custo_razao": 1.108526155611429,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "wI": 0.37071919381546475,
+   "wS_A": 0.300763970946812
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_education_Janell",
+   "razao": 0.9665834028093282,
+   "custo_razao": 0.9994808608964558,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.9989432854665412,
+   "wS_A": 0.000857801097686768
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_health_May",
+   "razao": 0.9668086973342704,
+   "custo_razao": 0.9475320718619378,
+   "nan": 0,
+   "externas_A": [
+    "x1"
+   ],
+   "externas_B10": [],
+   "wI": 0.47174548948592454,
+   "wS_A": 1.1208239465917551e-30
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_lodging_Celeste",
+   "razao": 1.0356878088879866,
+   "custo_razao": 1.128901182109778,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.0,
+   "wS_A": 0.0
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Charla",
+   "razao": 0.9694575024903557,
+   "custo_razao": 0.8930567064916998,
+   "nan": 0,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "wI": 0.47645567966318497,
+   "wS_A": 1.170715969010366e-12
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Cordelia",
+   "razao": 0.9990843359394469,
+   "custo_razao": 0.8017146858925275,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.594423163595721,
+   "wS_A": 7.947207568150098e-31
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_public_Kevin",
+   "razao": 0.9827546392816847,
+   "custo_razao": 0.9994462520431662,
+   "nan": 0,
+   "externas_A": [],
+   "externas_B10": [],
+   "wI": 0.5366734500494311,
+   "wS_A": 1.958690249327709e-14
+  }
+ ],
+ "criterios": {
+  "V-a": true,
+  "V-b": true,
+  "V-c": true,
+  "custo_mediana": 1.0218994369770775,
+  "nan": 0,
+  "PASSA": true
+ }
+}

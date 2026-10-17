@@ -236,3 +236,27 @@ Medição pré-registrada no LEBRE Lab (`analises/D4_V055_PLANO.md`, commit `4f1
 - robusto: entradas externas contra a previsão do núcleo, unidades internas contra s;
 - parcial: a estrutura de inovação (B7);
 - em aberto: como liberar as vagas em séries integradas sem travar a memória fraca.
+
+## Adendo 06 (17/10/2026) — banco fixo, confirmação e validação real: B10 é a candidata da v0.55
+
+Depois da D4, o desenvolvimento passou a um **banco fixo** no LEBRE Lab: 23 células, 8 delas novas, com critérios fixos
+para todas as rodadas (`analises/BANCO_V055_PLANO.md`).
+
+**Rascunhos 6 e 7, motivados por diagnósticos nas séries já gastas da D4:**
+- **Rascunho 6:** um portão suave pela triagem (as unidades internas são triadas pelo resíduo da previsão do núcleo),
+  e os pesos de cada estrutura vêm do resíduo que o desafiante aprendeu.
+- **Rascunho 7:** o piso de escala dos testes passa a ser previsível e na escala de uma passada. O piso antigo era 8
+  vezes o erro real em séries integradas. A investigação também achou a errata 01 da Nota formal F1.
+
+**Medições:**
+
+| Medição | Resultado |
+|---|---|
+| D5 (desenvolvimento) | B10 passa em todos os critérios |
+| C1 (confirmação: B10 congelada em `b0522a0`, sementes nunca usadas, execução única) | B10 passa em todos: espúrias 0 (v0.54: 22/60 e 22/40); retenção ≥ v0.54 em todas as células; precisão ≤ 1,02 nas 23; integradas com entrada 0,913 (0,907–0,918); custo 1,043 |
+| Validação real (`experiments/LEBRE-V0.55-VAL-01`, 20 bacias e 30 medidores nunca usados) | passa: camels 1,003 (até 1,018); bdg2 0,993 (até 1,002); custo 1,022 |
+
+**Limite declarado:** em dados reais, B10 registra relações fracas como estrutura mais devagar. O ganho em séries
+integradas reais ainda não foi testado, porque falta uma reserva de séries de níveis nova.
+
+**B10 é a candidata da v0.55 para a avaliação final.**
