@@ -1,0 +1,279 @@
+{
+ "criado": "2026-10-17T17:07:40",
+ "snapshot_base_sha256": "f6de71fdf27143c1c6f6dfef88d99597ff4b022d5a270facb280d56917dc6f55",
+ "camels_br": {
+  "semente": 5202,
+  "n_elegiveis": 237,
+  "posicoes": "190-219",
+  "reservadas": [
+   29100000,
+   32620000,
+   33205000,
+   33250000,
+   33321000,
+   34070000,
+   34090000,
+   55560000,
+   56750000,
+   57400000,
+   58060000,
+   58220000,
+   58573000,
+   58910000,
+   60930000,
+   61009000,
+   61012000,
+   61031000,
+   61060000,
+   61075000,
+   61122000,
+   64618000,
+   65095000,
+   65809000,
+   65925000,
+   65960000,
+   72430000,
+   82350000,
+   83345000,
+   84249998
+  ],
+  "substituidas_por_ausencia": [],
+  "conferencia": "posições 170-189 = validação da v0.55"
+ },
+ "bdg2": {
+  "semente": 5203,
+  "n_elegiveis": 766,
+  "posicoes": "175-204",
+  "reservadas": [
+   "chilledwater:Bobcat_other_Howard",
+   "chilledwater:Bull_education_Fabiola",
+   "chilledwater:Bull_education_Krista",
+   "chilledwater:Bull_education_Luke",
+   "chilledwater:Bull_public_Jefferson",
+   "chilledwater:Eagle_education_Cassie",
+   "chilledwater:Eagle_education_Paul",
+   "chilledwater:Eagle_education_Shana",
+   "chilledwater:Eagle_education_Teresa",
+   "chilledwater:Eagle_office_Nereida",
+   "chilledwater:Fox_education_Leota",
+   "chilledwater:Moose_education_Rene",
+   "hotwater:Eagle_education_Samantha",
+   "hotwater:Eagle_health_Amy",
+   "steam:Bull_assembly_Amalia",
+   "steam:Bull_education_Mario",
+   "steam:Bull_lodging_Terence",
+   "steam:Cockatoo_assembly_Fernanda",
+   "steam:Cockatoo_assembly_Rodger",
+   "steam:Cockatoo_education_June",
+   "steam:Eagle_health_Gregoria",
+   "steam:Eagle_lodging_Dawn",
+   "steam:Eagle_office_Phyllis",
+   "steam:Hog_education_Wayne",
+   "steam:Hog_office_Corey",
+   "steam:Hog_office_Cornell",
+   "steam:Hog_office_Jillian",
+   "steam:Hog_services_Adrianna",
+   "steam:Hog_warehouse_Kaye",
+   "steam:Moose_education_Ricardo"
+  ],
+  "sites_compartilhados_com_series_ja_usadas": [
+   "Bull",
+   "Cockatoo",
+   "Eagle",
+   "Fox",
+   "Hog",
+   "Moose"
+  ],
+  "conferencia": "posições 145-174 = validação da v0.55"
+ },
+ "eolica": {
+  "semente": 5521,
+  "periodo": [
+   "2024-01-01",
+   "2025-12-31"
+  ],
+  "n_elegiveis": 40,
+  "excluidas": {
+   "lab": 36,
+   "reserva_v053": 8,
+   "reserva_v054": 8
+  },
+  "reservadas": [
+   {
+    "nome": "Praia Formosa",
+    "cap": 105.0,
+    "lat": -2.919422,
+    "lon": -41.03165,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. GPEXPAN",
+    "cap": 189.9,
+    "lat": -14.395531,
+    "lon": -42.631267,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Afonso Bezerra",
+    "cap": 159.6,
+    "lat": -5.324612,
+    "lon": -36.506188,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Aracati II",
+    "cap": 136.4,
+    "lat": -4.488019,
+    "lon": -37.763092,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Itarema V",
+    "cap": 207.0,
+    "lat": -2.965278,
+    "lon": -39.889444,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Mundo Novo",
+    "cap": 103.5,
+    "lat": -5.18538368867,
+    "lon": -35.64932395471,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Serra Azul",
+    "cap": 118.0,
+    "lat": -11.866389,
+    "lon": -41.458394,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Morro do Chapéu Sul",
+    "cap": 172.0,
+    "lat": -11.592894,
+    "lon": -41.315428,
+    "completude": 1.0
+   }
+  ]
+ },
+ "solar": {
+  "semente": 5522,
+  "periodo": [
+   "2026-01-01",
+   "2026-09-30"
+  ],
+  "n_elegiveis": 19,
+  "excluidas": {
+   "reserva_v054": 8
+  },
+  "observacao": "separação no tempo, como na v0.54",
+  "reservadas": [
+   {
+    "nome": "Conj. Açú III 230 kV",
+    "cap": 452.4,
+    "lat": -5.615819,
+    "lon": -37.035712,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Abaiara 230 kV",
+    "cap": 163.7,
+    "lat": -7.391467,
+    "lon": -38.970836,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Paracatu",
+    "cap": 342.0,
+    "lat": -17.226,
+    "lon": -47.094,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Pereira Barreto",
+    "cap": 458.0,
+    "lat": -20.62,
+    "lon": -51.3,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Arinos 2 500 kV",
+    "cap": 1189.9,
+    "lat": -15.737569,
+    "lon": -45.965895,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Castilho",
+    "cap": 205.0,
+    "lat": -20.79044389,
+    "lon": -51.52926611,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Lar do Sol",
+    "cap": 495.0,
+    "lat": -17.363171,
+    "lon": -44.696978,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Sol do Sertão",
+    "cap": 415.0,
+    "lat": -12.23913,
+    "lon": -42.610434,
+    "completude_2026": 1.0
+   }
+  ]
+ },
+ "niveis_cp": {
+  "cobertura": {
+   "DCPN30": 0.8675,
+   "DCPN2M": 0.7554,
+   "DCPN3M": 0.6785,
+   "DCPF1M": 0.6622,
+   "DCPF2M": 0.6037,
+   "DCPF3M": 0.8241
+  },
+  "reservadas": [],
+  "entradas": [
+   "DFF",
+   "DTB3"
+  ]
+ },
+ "niveis_ecb": {
+  "cobertura": {
+   "PLN": 0.9816,
+   "CZK": 0.9816,
+   "HUF": 0.9816,
+   "RON": 0.9816,
+   "ISK": 0.4854,
+   "TRY": 0.9816,
+   "IDR": 0.9816,
+   "PHP": 0.9816,
+   "ILS": 0.9816
+  },
+  "reservadas": [
+   "PLN",
+   "CZK",
+   "HUF",
+   "RON",
+   "TRY",
+   "IDR",
+   "PHP",
+   "ILS"
+  ],
+  "entradas": [
+   "USD",
+   "GBP",
+   "JPY",
+   "CHF"
+  ]
+ },
+ "periodo": [
+  "2010-01-01",
+  "2025-12-31"
+ ],
+ "cobertura_minima": 0.9
+}

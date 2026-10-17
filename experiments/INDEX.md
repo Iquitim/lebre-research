@@ -38,6 +38,8 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | `LEBRE-V0.55-PROTO-01` | v0.55 development prototype: v0.54 copied byte for byte (`f9906c4`) + `anchored.py` (levers ANCHOR, SLOW, REF_CORE; drafts 0-2) and `model055.py` (variants A, A0, B, B1, B2, B4, B5); tests (bit-for-bit identity of the rewrite with v0.54, no leakage, slow-reference alignment); smoke record that chose the D1 variants (cascade on the live forecast and slow reference alone are negative development results) | dev |
 | `LEBRE-V0.55-DATA-01` | Validation series of v0.55 drawn from metadata only (CAMELS-BR positions 170-189, BDG2 145-174; 47 basins and 591 meters left for the final evaluation) | data |
 | `LEBRE-V0.55-VAL-01` | Pre-registered validation of the anchored core (B10, frozen at `b0522a0`) against v0.54 on the never-used real series | val |
+| `LEBRE-V0.55-DATA-02` | Final-evaluation reserve of v0.55 (rules committed before any download; metadata-only draw): CAMELS-BR 190-219, BDG2 175-204, 8 wind (seed 5521), 8 solar Jan-Sep 2026 (seed 5522), 8 ECB euro reference rates outside the Fed H.10; commercial paper rates excluded by the coverage rule; raw-data hashes | F |
+| `LEBRE-V0.55-FINAL-01` | Pre-registered final evaluation of v0.55 (B10 vs v0.54, real inputs and placebo random-walk inputs as a negative control; binding promotion rule R1-R5) | F |
 
 ## LEBRE v0.53 (5–9 Oct 2026) — promoted
 
