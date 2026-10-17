@@ -15,7 +15,7 @@ Este repositório responde a uma pergunta: **como os resultados da LEBRE foram o
 >
 > O estado atual é a **LEBRE v0.55**, **promovida** em 17/10/2026 por regra pré-registrada e vinculante, numa avaliação única em uma reserva nova de 84 séries (nenhuma família pior que a v0.54 além da margem, razões de 0,993 a 1,008; entradas placebo, passeios aleatórios, na estrutura final em 0 de 84 séries, contra 4 na v0.54; custo mediano por série de 0,989 vez o da v0.54). Tem limites de escopo declarados (piora pequena e significativa nas bacias, onde um ARX de mínimos quadrados recursivos da mesma classe de custo é melhor): ver `docs/architecture/LEBRE_v0.55_FREEZE_RECORD.md`. A especificação e relatório técnico autocontidos estão em `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.55_SPEC_PTBR.pdf`. A versão anterior, v0.54 (promovida em 13/10/2026), continua congelada.
 
-A biblioteca instalável [`lebre`](https://github.com/Iquitim/lebre) (a 0.3.0 implementa a v0.54; a 0.2.0, a v0.53; a 0.1.0, a v0.52-r1) e o artigo (`paper/`, que descreve a v0.52) remetem a este repositório. O desenvolvimento e as validações da v0.53, da v0.54 e da v0.55 foram feitos no [LEBRE Lab](https://github.com/Iquitim/lebre-lab), público.
+A biblioteca instalável [`lebre`](https://github.com/Iquitim/lebre) (a 0.4.0 implementa a v0.55; a 0.3.0, a v0.54; a 0.2.0, a v0.53; a 0.1.0, a v0.52-r1) e o artigo (`paper/`, que descreve a v0.52) remetem a este repositório. O desenvolvimento e as validações da v0.53, da v0.54 e da v0.55 foram feitos no [LEBRE Lab](https://github.com/Iquitim/lebre-lab), público.
 
 ## Por onde começar
 

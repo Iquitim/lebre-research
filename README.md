@@ -8,7 +8,7 @@ This repository answers one question: **how were the LEBRE results obtained?** I
 >
 > The current state is **LEBRE v0.55**, **promoted** on 2026-10-17 by a pre-registered binding rule in a single evaluation on a new reserve of 84 series (no family worse than v0.54 beyond the margin, ratios 0.993 to 1.008; placebo random-walk inputs in the final structure on 0 of 84 series, against 4 for v0.54; median per-series cost 0.989 of v0.54's). It has declared scope limits (a small significant loss on basins, where a recursive-least-squares ARX of the same cost class is better): see `docs/architecture/LEBRE_v0.55_FREEZE_RECORD.md`. Its self-contained specification and technical report is `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.55_SPEC_{EN,PTBR}.pdf`. The previous version, v0.54 (promoted 2026-10-13), remains frozen.
 
-The installable library [`lebre`](https://github.com/Iquitim/lebre) (0.3.0 implements v0.54; 0.2.0, v0.53; 0.1.0, v0.52-r1) and the paper (`paper/`, which describes v0.52) point back to this repository. Development and validations of v0.53, v0.54 and v0.55 were run in the public [LEBRE Lab](https://github.com/Iquitim/lebre-lab).
+The installable library [`lebre`](https://github.com/Iquitim/lebre) (0.4.0 implements v0.55; 0.3.0, v0.54; 0.2.0, v0.53; 0.1.0, v0.52-r1) and the paper (`paper/`, which describes v0.52) point back to this repository. Development and validations of v0.53, v0.54 and v0.55 were run in the public [LEBRE Lab](https://github.com/Iquitim/lebre-lab).
 
 ## Where to start
 
@@ -52,7 +52,7 @@ Moving files would break both. Organisation is therefore provided by the indexes
 | `docs/architecture/` | Specifications (v0.1, v0.3.2, v0.51, v0.52 and its r1, v0.53 and its self-contained r1, v0.54, v0.55), freeze records, SHA-256 manifests, release notes, PDF builders (`pdf_source/`). |
 | `configs/` | Canonical configurations of v0.52, v0.53, v0.54 and v0.55, machine-readable. |
 | `paper/` | The preprint (LaTeX), with its asset generator and arXiv package. |
-| `packages/lebre/` | Snapshot of the installable library `lebre` 0.1.0 (implements v0.52-r1; bit for bit in the reference environment). The library is developed at https://github.com/Iquitim/lebre, where 0.3.0 implements v0.54. |
+| `packages/lebre/` | Snapshot of the installable library `lebre` 0.1.0 (implements v0.52-r1; bit for bit in the reference environment). The library is developed at https://github.com/Iquitim/lebre, where 0.4.0 implements v0.55. |
 | `scripts/` | Repository-level tools: integrity check, smoke reproduction, artifact manifest. |
 | `data/` | Loaders and checksum lists of the public datasets. Raw data are **not** in git (see `data/README.md`). |
 | `src/`, `tests/`, `docs/history/phase-v0.1/` | Early-phase code and documents (v0.1 era), kept as the historical record. |
