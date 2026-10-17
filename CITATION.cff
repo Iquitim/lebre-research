@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this research record, please cite it as below."
 type: software
-title: "LEBRE research record — v0.54"
-version: "v0.54"
-doi: "10.5281/zenodo.23376152"
-date-released: "2026-10-14"
+title: "LEBRE research record — v0.55"
+version: "v0.55"
+doi: "10.5281/zenodo.23049102"
+date-released: "2026-10-17"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23049102"
@@ -32,11 +32,12 @@ abstract: >-
   structural change by an anytime-valid sequential test (e-process) of
   predictive improvement; layer M1 adds a precision expert combined by
   AdaHedge, and layer M2 starts the forecast from a declared trivial reference.
-  Version v0.54 (M1 dormancy, cheap equivalence report, triggered removals) was
-  promoted by a pre-registered rule on 93 reserved series, with errata 01.
+  Version v0.55 (anchored core: external inputs tested against the core forecast,
+  innovation structure, soft gate) was promoted by a pre-registered binding rule
+  on 84 reserved series, with placebo inputs as a negative control.
   Contains the Python reference implementation, a C99 port of the core with
   simulated Cortex-M4F measurements, experiment scripts, pre-registrations,
-  results, frozen versions with SHA-256 manifests and the self-contained v0.54
+  results, frozen versions with SHA-256 manifests and the self-contained v0.55
   specification.
 keywords:
   - online forecasting
