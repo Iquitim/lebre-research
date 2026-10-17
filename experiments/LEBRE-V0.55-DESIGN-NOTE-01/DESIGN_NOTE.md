@@ -260,3 +260,22 @@ para todas as rodadas (`analises/BANCO_V055_PLANO.md`).
 integradas reais ainda não foi testado, porque falta uma reserva de séries de níveis nova.
 
 **B10 é a candidata da v0.55 para a avaliação final.**
+
+## Adendo 07 (17/10/2026) — avaliação final: v0.55 PROMOVIDA
+
+Avaliação pré-registrada com regra vinculante (`experiments/LEBRE-V0.55-FINAL-01`), numa reserva nova
+(`experiments/LEBRE-V0.55-DATA-02`): 30 bacias, 30 prédios, 8 usinas eólicas, 8 solares e 8 taxas do euro do BCE.
+
+**Todos os critérios passaram:**
+- sem piora por família (pior: bacias, 1,008, com limite superior de 1,014);
+- **controle negativo com placebos em dados reais:** 0/84 na v0.55, contra 4/84 na v0.54;
+- nenhuma previsão não finita;
+- custo 0,989 (menor que o da v0.54);
+- memória de 86.180 B.
+
+**Limites declarados:**
+- piora pequena e significativa nas bacias;
+- descoberta mais lenta de relações reais fracas;
+- o ganho em séries integradas não apareceu nos níveis reais testados.
+
+**A v0.55 é o núcleo ancorado B10, commit `b0522a0`.**

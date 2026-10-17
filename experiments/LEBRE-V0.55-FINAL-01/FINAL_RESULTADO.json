@@ -1,0 +1,1238 @@
+{
+ "familias": {
+  "camels": {
+   "n": 30,
+   "geo": 1.0082012008514436,
+   "ic95": [
+    1.0032857360531722,
+    1.014042962120318
+   ],
+   "curta_geo": 1.0523434611016265,
+   "curta_ic95": [
+    0.9979580088564562,
+    1.0578643496725648
+   ],
+   "externas_A": 13,
+   "externas_B10": 7,
+   "placebo_A": 0,
+   "placebo_B10": 0,
+   "inovacao_ativa": 7
+  },
+  "bdg2": {
+   "n": 30,
+   "geo": 0.9976478858854457,
+   "ic95": [
+    0.9877070220363402,
+    1.0089374247486302
+   ],
+   "curta_geo": 1.0072122174781115,
+   "curta_ic95": [
+    0.9786590716951795,
+    1.0407655907693962
+   ],
+   "externas_A": 18,
+   "externas_B10": 1,
+   "placebo_A": 3,
+   "placebo_B10": 0,
+   "inovacao_ativa": 11
+  },
+  "eolica": {
+   "n": 8,
+   "geo": 0.9944861266965614,
+   "ic95": [
+    0.9915205863430432,
+    0.9974078988825779
+   ],
+   "curta_geo": 0.9924123733039754,
+   "curta_ic95": [
+    0.9884622098774111,
+    0.9959034624774333
+   ],
+   "externas_A": 2,
+   "externas_B10": 0,
+   "placebo_A": 0,
+   "placebo_B10": 0,
+   "inovacao_ativa": 7
+  },
+  "solar": {
+   "n": 8,
+   "geo": 0.9929816733572456,
+   "ic95": [
+    0.9880822944695037,
+    0.9978758637905386
+   ],
+   "curta_geo": 1.0196844931632993,
+   "curta_ic95": [
+    1.0125638134483117,
+    1.02760384305498
+   ],
+   "externas_A": 1,
+   "externas_B10": 0,
+   "placebo_A": 0,
+   "placebo_B10": 0,
+   "inovacao_ativa": 6
+  },
+  "niveis_ecb": {
+   "n": 8,
+   "geo": 1.0001089297185384,
+   "ic95": [
+    0.9999024775441555,
+    1.0002565356634028
+   ],
+   "curta_geo": 1.0001728953168179,
+   "curta_ic95": [
+    0.9997628353747375,
+    1.0006463359893476
+   ],
+   "externas_A": 8,
+   "externas_B10": 0,
+   "placebo_A": 1,
+   "placebo_B10": 0,
+   "inovacao_ativa": 1
+  }
+ },
+ "series": [
+  {
+   "familia": "camels",
+   "ident": "29100000",
+   "razao": 0.9927884758791738,
+   "razao_curta": 0.9890874374523058,
+   "custo_razao": 0.9133710999071679,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.6698615031560434e-13
+  },
+  {
+   "familia": "camels",
+   "ident": "32620000",
+   "razao": 0.9955168884001474,
+   "razao_curta": 0.9511578739209544,
+   "custo_razao": 0.9201478835578644,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.4543133004581977e-24
+  },
+  {
+   "familia": "camels",
+   "ident": "33205000",
+   "razao": 1.0567859553049677,
+   "razao_curta": 0.9997486610515539,
+   "custo_razao": 0.9244300472900108,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 6.691198343997284e-10
+  },
+  {
+   "familia": "camels",
+   "ident": "33250000",
+   "razao": 0.9736412838130919,
+   "razao_curta": 0.9985647007072818,
+   "custo_razao": 1.0416733650657857,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 2.5024544702489637e-07
+  },
+  {
+   "familia": "camels",
+   "ident": "33321000",
+   "razao": 0.999964914388867,
+   "razao_curta": 0.9973301449298212,
+   "custo_razao": 1.0432692854626087,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9670114534859772
+  },
+  {
+   "familia": "camels",
+   "ident": "34070000",
+   "razao": 0.9834326645028663,
+   "razao_curta": 0.9959477352704045,
+   "custo_razao": 1.0670687287646332,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 5.644508947719329e-16
+  },
+  {
+   "familia": "camels",
+   "ident": "34090000",
+   "razao": 1.0000545518392698,
+   "razao_curta": 1.0004034391217236,
+   "custo_razao": 0.9987448043514421,
+   "externas_A": [
+    "x0",
+    "x1"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.0941053167948895e-13
+  },
+  {
+   "familia": "camels",
+   "ident": "55560000",
+   "razao": 0.9498687460229284,
+   "razao_curta": 1.0002001008545414,
+   "custo_razao": 0.983232370560332,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.5706198256719412
+  },
+  {
+   "familia": "camels",
+   "ident": "56750000",
+   "razao": 1.0173142433401945,
+   "razao_curta": 1.060441683818138,
+   "custo_razao": 1.0034671621758435,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 2.5307797759743242e-33
+  },
+  {
+   "familia": "camels",
+   "ident": "57400000",
+   "razao": 1.0160419500528555,
+   "razao_curta": 0.9988916233725734,
+   "custo_razao": 1.0816346775417844,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.0392284534839929e-96
+  },
+  {
+   "familia": "camels",
+   "ident": "58060000",
+   "razao": 1.0065147420609737,
+   "razao_curta": 1.0031075504107165,
+   "custo_razao": 1.1049586847073805,
+   "externas_A": [],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.506859700173688e-18
+  },
+  {
+   "familia": "camels",
+   "ident": "58220000",
+   "razao": 1.0206392234882724,
+   "razao_curta": 1.0061762218350376,
+   "custo_razao": 1.0556824873970936,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0005662023204160818
+  },
+  {
+   "familia": "camels",
+   "ident": "58573000",
+   "razao": 1.071690502481989,
+   "razao_curta": 1.0114827477121933,
+   "custo_razao": 1.0142173200468347,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.1445233283008304
+  },
+  {
+   "familia": "camels",
+   "ident": "58910000",
+   "razao": 1.0109267696782476,
+   "razao_curta": 1.0798406592104568,
+   "custo_razao": 1.0425331105995495,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.010527830554564452
+  },
+  {
+   "familia": "camels",
+   "ident": "60930000",
+   "razao": 0.9985435031146949,
+   "razao_curta": 1.0003857569195422,
+   "custo_razao": 1.077383193893618,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 9.951270213339159e-13
+  },
+  {
+   "familia": "camels",
+   "ident": "61009000",
+   "razao": 1.008118467427072,
+   "razao_curta": 1.0115875889776116,
+   "custo_razao": 1.0227890866796692,
+   "externas_A": [
+    "x0",
+    "x2"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9998163759041405
+  },
+  {
+   "familia": "camels",
+   "ident": "61012000",
+   "razao": 0.9971422291923342,
+   "razao_curta": 0.9927390848452241,
+   "custo_razao": 1.02268231661361,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.006335558511047303
+  },
+  {
+   "familia": "camels",
+   "ident": "61031000",
+   "razao": 1.0466388275680927,
+   "razao_curta": 0.9915460373475181,
+   "custo_razao": 0.9742885447143528,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 2.1573433600327046e-34
+  },
+  {
+   "familia": "camels",
+   "ident": "61060000",
+   "razao": 0.9827085747444559,
+   "razao_curta": 1.000609995268923,
+   "custo_razao": 1.1712858601190892,
+   "externas_A": [],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 6.164610582001123e-19
+  },
+  {
+   "familia": "camels",
+   "ident": "61075000",
+   "razao": 1.023288760527102,
+   "razao_curta": 1.0106879768294827,
+   "custo_razao": 1.102416618574887,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.7953570514105877
+  },
+  {
+   "familia": "camels",
+   "ident": "61122000",
+   "razao": 1.029840561739698,
+   "razao_curta": 1.046386359263063,
+   "custo_razao": 0.9467917061767948,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.3873727096330517
+  },
+  {
+   "familia": "camels",
+   "ident": "64618000",
+   "razao": 0.9942888920011279,
+   "razao_curta": 0.9749084362751271,
+   "custo_razao": 0.9253753011708291,
+   "externas_A": [
+    "x0",
+    "x2"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.898764150907
+  },
+  {
+   "familia": "camels",
+   "ident": "65095000",
+   "razao": 0.9897498050647754,
+   "razao_curta": 0.9883634461325038,
+   "custo_razao": 0.9560442075174721,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.985533162428131
+  },
+  {
+   "familia": "camels",
+   "ident": "65809000",
+   "razao": 1.0249448459877528,
+   "razao_curta": 4.08465012627808,
+   "custo_razao": 0.9884308202259378,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 2.1128948000942743e-11
+  },
+  {
+   "familia": "camels",
+   "ident": "65925000",
+   "razao": 1.0081142353186625,
+   "razao_curta": 1.0002123794449578,
+   "custo_razao": 1.0887528061257217,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 3.6891151935264226e-140
+  },
+  {
+   "familia": "camels",
+   "ident": "65960000",
+   "razao": 1.0507780667103785,
+   "razao_curta": 1.00432760333785,
+   "custo_razao": 1.0721897667152809,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 4.427981053296339e-08
+  },
+  {
+   "familia": "camels",
+   "ident": "72430000",
+   "razao": 0.996878921508919,
+   "razao_curta": 0.9747795519677817,
+   "custo_razao": 1.000476145066884,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9999326761110858
+  },
+  {
+   "familia": "camels",
+   "ident": "82350000",
+   "razao": 1.0011137785517066,
+   "razao_curta": 1.0325762212620309,
+   "custo_razao": 1.0553731092783476,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.1186195710921233e-141
+  },
+  {
+   "familia": "camels",
+   "ident": "83345000",
+   "razao": 1.0060060872788334,
+   "razao_curta": 1.0053325769780184,
+   "custo_razao": 1.0399525911495258,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.8491063386983187e-43
+  },
+  {
+   "familia": "camels",
+   "ident": "84249998",
+   "razao": 1.0017257801740242,
+   "razao_curta": 1.0052038930650613,
+   "custo_razao": 1.1048013253203262,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0104672645051695
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bobcat_other_Howard",
+   "razao": 1.0028226277006937,
+   "razao_curta": 0.9964992517903134,
+   "custo_razao": 0.9348410030460985,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.01093748733872004
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Fabiola",
+   "razao": 0.9597888286998059,
+   "razao_curta": 1.0010913137428317,
+   "custo_razao": 1.1071424125976996,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [
+    "x0"
+   ],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 3.932978196346169e-09
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Krista",
+   "razao": 0.9929984304160122,
+   "razao_curta": 0.9926823021082235,
+   "custo_razao": 1.1091318190613948,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0006472314783473015
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Luke",
+   "razao": 0.991996085891825,
+   "razao_curta": 1.0151336217344844,
+   "custo_razao": 1.0255455060579233,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 3.6682565410652135e-07
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_public_Jefferson",
+   "razao": 0.9576888099903851,
+   "razao_curta": 1.0265532026143382,
+   "custo_razao": 0.9242388253874005,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.7655254444545135
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_education_Cassie",
+   "razao": 1.1390199801955476,
+   "razao_curta": 0.9740097680998956,
+   "custo_razao": 0.9025380841004295,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": true,
+   "placebo_B10": false,
+   "wI": 0.027483203875360185
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_education_Paul",
+   "razao": 1.0067007840860618,
+   "razao_curta": 0.9725764453043519,
+   "custo_razao": 0.9234582128918164,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 2.0989615891853704e-18
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_education_Shana",
+   "razao": 1.0070066063466114,
+   "razao_curta": 1.0121634273271238,
+   "custo_razao": 0.9594795158802254,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.46556153901939784
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_education_Teresa",
+   "razao": 0.9833983364914547,
+   "razao_curta": 0.6006500294522613,
+   "custo_razao": 1.0365605081651315,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.8535827586443666
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Eagle_office_Nereida",
+   "razao": 1.071300760613826,
+   "razao_curta": 1.012128107654926,
+   "custo_razao": 1.2097835694857664,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0005993484874144523
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Fox_education_Leota",
+   "razao": 0.9830109120218142,
+   "razao_curta": 0.9868181067405691,
+   "custo_razao": 1.067518992917172,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.2319699622743125
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Moose_education_Rene",
+   "razao": 0.9988556038824171,
+   "razao_curta": 1.0111413610279274,
+   "custo_razao": 0.9359897002903446,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.012719685691294563
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Eagle_education_Samantha",
+   "razao": 1.0023633056662626,
+   "razao_curta": 0.9909514175669352,
+   "custo_razao": 1.0135712243730988,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.16379778833762643
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Eagle_health_Amy",
+   "razao": 0.997021045711818,
+   "razao_curta": 0.9975849327626715,
+   "custo_razao": 1.0292060313805989,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0007459983508297716
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_assembly_Amalia",
+   "razao": 0.9957032142251767,
+   "razao_curta": 1.0054610160328963,
+   "custo_razao": 0.9893359455674776,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.8810304906233786
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_education_Mario",
+   "razao": 0.9497549493669966,
+   "razao_curta": 1.0048841861159123,
+   "custo_razao": 1.0173289692401917,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0003152219888749191
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_lodging_Terence",
+   "razao": 0.99436966160864,
+   "razao_curta": 1.023122609295045,
+   "custo_razao": 0.9498830038905123,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.6123390093516459
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_assembly_Fernanda",
+   "razao": 0.9493974830525972,
+   "razao_curta": 1.0105040322506127,
+   "custo_razao": 1.069256235829314,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9915098532138359
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_assembly_Rodger",
+   "razao": 0.9586379747970022,
+   "razao_curta": 1.008708906909443,
+   "custo_razao": 0.9577526015456176,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": true,
+   "placebo_B10": false,
+   "wI": 0.7531590916155466
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_education_June",
+   "razao": 0.9701202228390315,
+   "razao_curta": 1.0087049179643477,
+   "custo_razao": 1.0146584151927172,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.8364283295418254
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Eagle_health_Gregoria",
+   "razao": 0.9717901413156039,
+   "razao_curta": 1.6501172112126543,
+   "custo_razao": 0.9738637813784122,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 1.818824375839323e-75
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Eagle_lodging_Dawn",
+   "razao": 0.9946621926964725,
+   "razao_curta": 0.9888782419120352,
+   "custo_razao": 1.0422169217206168,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.15711500307805357
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Eagle_office_Phyllis",
+   "razao": 0.9916483996174839,
+   "razao_curta": 1.2601136586969583,
+   "custo_razao": 0.9838076928286261,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.42946892972986145
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_education_Wayne",
+   "razao": 0.9888016642020478,
+   "razao_curta": 1.0035828779873188,
+   "custo_razao": 0.9439337112288602,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9941834285523969
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Corey",
+   "razao": 0.9839344139525374,
+   "razao_curta": 0.9713069255756325,
+   "custo_razao": 0.9634129768497705,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.5563093435879739
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Cornell",
+   "razao": 1.0028659672594438,
+   "razao_curta": 1.0056534886285153,
+   "custo_razao": 1.004668531173096,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.8888125725467828
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Jillian",
+   "razao": 0.9910274932407672,
+   "razao_curta": 0.9918331054604831,
+   "custo_razao": 0.9327004716671833,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0650236394197078
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_services_Adrianna",
+   "razao": 0.9924027243848953,
+   "razao_curta": 0.9920693203178651,
+   "custo_razao": 0.9236690238903695,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": true,
+   "placebo_B10": false,
+   "wI": 0.9791113634867318
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_warehouse_Kaye",
+   "razao": 0.9687369671274542,
+   "razao_curta": 0.9917209193968317,
+   "custo_razao": 0.7722569412430093,
+   "externas_A": [
+    "x0"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Moose_education_Ricardo",
+   "razao": 1.162034943849904,
+   "razao_curta": 1.000104807910513,
+   "custo_razao": 1.1382478107679685,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. Afonso Bezerra",
+   "razao": 0.9897208294528353,
+   "razao_curta": 0.9944835893680539,
+   "custo_razao": 0.9300336995313139,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.707227826810083
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. Aracati II",
+   "razao": 0.9928857680015404,
+   "razao_curta": 1.0000714733420901,
+   "custo_razao": 1.0355952523893974,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.7885583926688409
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. GPEXPAN",
+   "razao": 0.9920238475952382,
+   "razao_curta": 0.9929380614458517,
+   "custo_razao": 1.0930617543602192,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.5454217243470179
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. Itarema V",
+   "razao": 0.9941515864431699,
+   "razao_curta": 0.9970651297591262,
+   "custo_razao": 0.9434586351310632,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.807194147135762
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. Morro do Chapéu Sul",
+   "razao": 0.9967216151295744,
+   "razao_curta": 0.9826434599610075,
+   "custo_razao": 0.9825772605710251,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.09167748620982212
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. Mundo Novo",
+   "razao": 1.0125465760904082,
+   "razao_curta": 0.9905854802000775,
+   "custo_razao": 1.0812910270466787,
+   "externas_A": [
+    "x1",
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.8796246181507552
+  },
+  {
+   "familia": "eolica",
+   "ident": "Conj. Serra Azul",
+   "razao": 0.980108051952327,
+   "razao_curta": 0.9816916349003579,
+   "custo_razao": 1.0201550556877934,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9933080410596078
+  },
+  {
+   "familia": "eolica",
+   "ident": "Praia Formosa",
+   "razao": 0.9980223578940487,
+   "razao_curta": 1.0,
+   "custo_razao": 0.9870889517919337,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.5976141316105229
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Abaiara 230 kV",
+   "razao": 0.9857676546435095,
+   "razao_curta": 1.002958256773471,
+   "custo_razao": 0.9220526979508474,
+   "externas_A": [
+    "x1"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.1904811317133502
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Arinos 2 500 kV",
+   "razao": 0.994618499996182,
+   "razao_curta": 1.035076055065212,
+   "custo_razao": 0.8880245842467855,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9254725201668655
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Açú III 230 kV",
+   "razao": 0.9931024233128276,
+   "razao_curta": 0.9993967372861507,
+   "custo_razao": 0.9321734315382615,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.7784268591094735
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Castilho",
+   "razao": 0.9892989884518156,
+   "razao_curta": 1.0146164443800365,
+   "custo_razao": 0.9891928469675876,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9498638949210793
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Lar do Sol",
+   "razao": 1.0008079865751478,
+   "razao_curta": 1.019237813936347,
+   "custo_razao": 0.9527938484715478,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.7256773666251937
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Paracatu",
+   "razao": 0.9958171259491774,
+   "razao_curta": 1.0258571095181441,
+   "custo_razao": 0.8942196301001707,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.36927939402191734
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Pereira Barreto",
+   "razao": 0.9835208007835363,
+   "razao_curta": 1.022396222075764,
+   "custo_razao": 0.9605668746077282,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9994417792262643
+  },
+  {
+   "familia": "solar",
+   "ident": "Conj. Sol do Sertão",
+   "razao": 1.001067262655798,
+   "razao_curta": 1.0386038739862582,
+   "custo_razao": 1.0420181845044658,
+   "externas_A": [],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.9316776596370916
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "CZK",
+   "razao": 0.9999973079919928,
+   "razao_curta": 0.9999827605311895,
+   "custo_razao": 0.7616188201160674,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 4.222813721679847e-05
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "HUF",
+   "razao": 0.9999853087395999,
+   "razao_curta": 0.9999957126505506,
+   "custo_razao": 0.9003317285946387,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": true,
+   "placebo_B10": false,
+   "wI": 0.7250562753947539
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "IDR",
+   "razao": 1.0000019740129649,
+   "razao_curta": 1.000436456710479,
+   "custo_razao": 0.8721948057095066,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.25194730546741806
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "ILS",
+   "razao": 1.0000007474389991,
+   "razao_curta": 0.9999909356355478,
+   "custo_razao": 0.809299236721069,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.4961703729821509
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "PHP",
+   "razao": 1.0000013850994134,
+   "razao_curta": 0.9999950578306305,
+   "custo_razao": 0.9694829108114821,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.06920609804674889
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "PLN",
+   "razao": 0.9999961253732617,
+   "razao_curta": 1.0013538220043954,
+   "custo_razao": 0.8288093212927136,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.0721323123903241
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "RON",
+   "razao": 0.9999996300091646,
+   "razao_curta": 0.9996225985815941,
+   "custo_razao": 0.7755296013763527,
+   "externas_A": [
+    "x2"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 2.8831579700841887e-169
+  },
+  {
+   "familia": "niveis_ecb",
+   "ident": "TRY",
+   "razao": 1.0008893069450624,
+   "razao_curta": 1.0000067813109548,
+   "custo_razao": 0.7685460542097061,
+   "externas_A": [
+    "x0",
+    "x2",
+    "x3"
+   ],
+   "externas_B10": [],
+   "placebo_A": false,
+   "placebo_B10": false,
+   "wI": 0.26164784915588674
+  }
+ ],
+ "criterios": {
+  "R1": true,
+  "R2": true,
+  "R2_placebo": {
+   "A": 4,
+   "B10": 0,
+   "n": 84,
+   "B10_sup": 0.04296491962956511,
+   "A_sup": 0.11745697137182959
+  },
+  "R3": true,
+  "R3_nan": 0,
+  "R4": true,
+  "R4_mediana": 0.9888118335967626,
+  "R5": true,
+  "R5_bytes": 86180,
+  "R5_info": {
+   "k": 28,
+   "numeros_m1": 1100,
+   "numeros_m2": 207,
+   "numeros_v054": 22,
+   "numeros_v055": 70
+  },
+  "PROMOVIDA": true
+ }
+}
