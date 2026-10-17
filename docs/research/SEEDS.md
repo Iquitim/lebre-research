@@ -61,6 +61,19 @@ Rule followed throughout: every measurement set is declared (seeds included) **b
 | 2026101200–2026101293 | Validation 7 synthetic families (…200–…289) and bootstrap (…290); v0.54 final evaluation classification / measurement / cost bootstrap (…291 / …292 / …293) | LEBRE Lab `VALIDACAO7_PLANO.md`; `experiments/LEBRE-V0.54-FINAL-01/final_analise.py` |
 | 2026101300–2026101469 | Stress audit series streams `default_rng([2026101300, test, type, k])` and bootstrap (…301); errata 01 checks (`[2026101400, …]`) and second errata measurement (…410–…469) | `experiments/LEBRE-V0.54-AUDIT-01/`; LEBRE Lab `ERRATA01_V054_E2_PLANO.md` |
 
+## v0.55 line (LEBRE Lab, validation, final evaluation and comparison)
+
+| Seeds | Use | Where |
+|---|---|---|
+| 5202 / 5203 | v0.52 permutations of CAMELS-BR / BDG2, reused: positions 170–189 / 145–174 (validation) and 190–219 / 175–204 (final reserve) | `experiments/LEBRE-V0.55-DATA-01/`, `LEBRE-V0.55-DATA-02/` |
+| 5521 / 5522 | Draw of the 8 wind / 8 solar ONS plants of the v0.55 reserve | `experiments/LEBRE-V0.55-DATA-02/make_split_v055.py` |
+| 2026101590–2026101920 | Development rounds D1 to D4: series streams, bootstrap and rehearsal seeds, each declared in its plan (range 2026101500–2026102999 checked as unused on 16 Oct 2026) | LEBRE Lab `analises/D1_V055_PLANO.md` to `D4_V055_PLANO.md` |
+| 2026101950–2026102130 | Fixed bench: round D5 (2026102000–2026102022, 2026101950, 2026102030) and confirmation C1 (2026102100–2026102122, 2026102070, 2026102130) | LEBRE Lab `analises/BANCO_V055_PLANO.md` |
+| 2026102210 | Bootstrap of the real validation | `experiments/LEBRE-V0.55-VAL-01/val_analise.py` |
+| 2026102500 | Placebo random-walk inputs of the final evaluation, `[2026102500, family, series]` | `experiments/LEBRE-V0.55-FINAL-01/final_run.py` |
+| 2026102600 | Bootstrap of the final evaluation | `experiments/LEBRE-V0.55-FINAL-01/final_analise.py` |
+| 2026102700 | Bootstrap of the external comparison (TTM fine-tuning uses seed 0) | `experiments/LEBRE-V0.55-COMP-01/comp_analise.py`, `ttm_gpu.py` |
+
 ## Earlier lines (v0.3–v0.51), for collision avoidance
 
 These ranges were used in earlier lines: 2176–2265, 2401–2430, 2501–2530, 2561–2590 and 7301–7613. See the corresponding `experiments/LEBRE-V0.4*`, `LEBRE-V0.46*` and `LEBRE-V0.51*` folders.

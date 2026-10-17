@@ -29,7 +29,9 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | `LEBRE-V0.54-FINAL-01` | Final evaluation (93 reserved series): pre-registration, loaders, run and analysis scripts, rehearsal, run notes, results, errata 01 | F, R |
 | `LEBRE-V0.54-AUDIT-01` | Post-promotion stress audit: plan, scripts, numerical summary and report | F |
 
-## Towards v0.55 (from 16 Oct 2026) — research programme, no measurement yet
+## LEBRE v0.55 (16–17 Oct 2026) — promoted
+
+Promoted on 17 Oct 2026 by a pre-registered binding rule (freeze record `docs/architecture/LEBRE_v0.55_FREEZE_RECORD.md`; self-contained spec `docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.55_SPEC_{EN,PTBR}.pdf`). Development rounds D1 to D4, the fixed bench (round D5) and the confirmation C1 are in the public LEBRE Lab: [github.com/Iquitim/lebre-lab](https://github.com/Iquitim/lebre-lab) (`analises/`).
 
 | Folder | Role | Status |
 |---|---|---|

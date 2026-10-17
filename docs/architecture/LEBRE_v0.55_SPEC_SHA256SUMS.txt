@@ -1,0 +1,9 @@
+# LEBRE v0.55 specification, revision 0 (2026-10-17): self-contained document (anchored structural core with innovation structure, soft gate and one-step scale, triggered removal and cheap equivalence report + M1 with dormancy + M2), including the v0.55 final evaluation with the placebo control, the external comparison, formal note F1 and its erratum 01. PDFs, HTMLs and builder. Inputs: this repository (v0.55 final evaluation, validation and comparison; earlier evidence through the earlier builders) and the public LEBRE Lab at commit 7688f84.
+eff9b87e2c308e26f21dac14fbf93a48ea28a1937ea6edadb1d9888e890df822 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.55_SPEC_PTBR.pdf
+51278a141cf82f095a4735f6a3b3ff535d64441123363548cc5d285d47d56c77 *docs/architecture/pdf/LEBRE_ARCHITECTURE_v0.55_SPEC_EN.pdf
+86bb5cfa9c5c6283767aa2fafa0d8c5e5ad063d2d8c9c8e1abd0e1e4bbb25990 *docs/architecture/pdf_source/LEBRE_v0.55_SPEC_PTBR.html
+100052ae1cce26bc1bb3b1cd5a54446ce86ec189d3e246487c2921880f18220a *docs/architecture/pdf_source/LEBRE_v0.55_SPEC_EN.html
+680114c7b044d4d320573668f7ec0e8ce60f52bc034fe875b95eddba0191040e *docs/architecture/pdf_source/build_v055_spec.py
+e445cbd18df9af7d5df20e521137a5904ed3187bef47d21e0b9106b899e92092 *docs/architecture/pdf_source/v055_text.py
+15c432c9fe12c7eb8f592c488543df5d635999bc2a5ab2fafe3b25087b58573e *docs/architecture/pdf_source/v055_data.py
+30aef6e0f2163b3fd95eba0968f736289c4cb1beac87afe8e03b2cec2eda5034 *docs/architecture/pdf_source/v055_diagrams.py

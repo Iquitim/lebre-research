@@ -1,0 +1,30 @@
+{
+  "_description": "Canonical configuration of LEBRE v0.55 (promoted 2026-10-17 by the pre-registered final evaluation; freeze record docs/architecture/LEBRE_v0.55_FREEZE_RECORD.md). Call Lebre055(d, season, season2, reference, variant=\"B10\"); every other constructor argument keeps its default in experiments/LEBRE-V0.55-PROTO-01/lebre055/model055.py (commit b0522a0). B10 is the canonical v0.54 (m5a, m5b, m4 on; m6 off; copied byte for byte from f9906c4) with the anchored-core levers listed below.",
+  "_source": "experiments/LEBRE-V0.55-FINAL-01/final_run.py, the configuration run in the final evaluation",
+  "model_class": "lebre055.model055.Lebre055",
+  "config": {
+    "variant": "B10"
+  },
+  "variant_B10_levers": {
+    "REF_SPLIT": true,
+    "INNOV": true,
+    "SCREEN_CORE_INT": true,
+    "INN_FROM_OWN_RESIDUAL": true,
+    "PRED_FLOOR": true,
+    "DIFF_FLOOR": true,
+    "ANCHOR": false,
+    "SLOW": false,
+    "REF_CORE": false,
+    "GATE_INTERNAL": false
+  },
+  "reference_rule": {
+    "financial_returns": "zero",
+    "declared_cycle": "seasonal",
+    "default": "persistence"
+  },
+  "season_rule": {
+    "hourly": 24,
+    "bdg2_season2": 168,
+    "default": null
+  }
+}

@@ -129,3 +129,20 @@ v0.54 was developed in the public **LEBRE Lab** and promoted here by a pre-regis
 | Integrity | `docs/architecture/LEBRE_v0.54_SHA256SUMS.txt` (148 files), `LEBRE_v0.54_SPEC_SHA256SUMS.txt` (specification) | `python scripts/verify_integrity.py` |
 
 **Caveats.** The reserve is consumed: re-running reproduces the published result, but it is not a new evaluation. The infrastructure failures of the run (child processes importing the v0.53 loader of the same name; Chronos-2 environment without `xlrd`) are in `experiments/LEBRE-V0.54-FINAL-01/RUN_NOTAS.md`. Validation 6 used 20 real and 50 synthetic series (two frozen files say 24 real; `docs/architecture/LEBRE_v0.54_FREEZE_ADDENDUM_01.md`).
+
+## 10. LEBRE v0.55
+
+v0.55 was developed in the public **LEBRE Lab** (rounds D1 to D4, the fixed bench with round D5, the confirmation C1) and validated and promoted here by pre-registered single runs on never-used real series.
+
+| Step | Where | Output |
+|---|---|---|
+| Frozen code | `experiments/LEBRE-V0.55-PROTO-01/` at commit `b0522a0`, variant `B10`; configuration `configs/lebre_v055_canonical.json` | tests: `python -m pytest experiments/LEBRE-V0.55-PROTO-01/tests` (41; v0.54 copies checked by `SHA256_COPIAS.txt`) |
+| Design and theory | `experiments/LEBRE-V0.55-DESIGN-NOTE-01/` (design note with addenda 01–07, formal note F1 and its erratum 01) | `python experiments/LEBRE-V0.55-DESIGN-NOTE-01/check_inequalities.py` (numerical check of the inequalities) |
+| Development and confirmation (plans committed before each run) | LEBRE Lab: `analises/D1_V055_*` to `D4_V055_*`, `BANCO_V055_PLANO.md`, `banco_v055.py` | `*_RESULTADO.md`; `d1_v055/` to `d4_v055/`, `banco_v055_D5/`, `banco_v055_C1/` (`resumo.json`) |
+| Real validation (CAMELS-BR positions 170–189, BDG2 145–174) | `experiments/LEBRE-V0.55-DATA-01/`, `experiments/LEBRE-V0.55-VAL-01/` (`val_run.py`, `val_analise.py`) | `VAL_RESULTADO.md`, `VAL_RESULTADO.json` |
+| Final-evaluation reserve (rules committed before any download) | `experiments/LEBRE-V0.55-DATA-02/` (`SPLIT_RULES.md`, `snapshot_v055.py`, `make_split_v055.py`) | `SPLIT_V055.json` (+ SHA-256), `SNAPSHOT_SHA256SUMS.txt` (37 raw files, out of git) |
+| Final run (single, pre-registered, with placebo inputs) and analysis | `experiments/LEBRE-V0.55-FINAL-01/` (`final_run.py`, `final_analise.py`) | `preds/` (out of git), `FINAL_RESULTADO.md`, `FINAL_RESULTADO.json` |
+| External comparison (reference only; plan committed before running) | `experiments/LEBRE-V0.55-COMP-01/` (`comp_run.py`, `comp_fundacao.py`, `ttm_gpu.py`, `comp_analise.py`) | `preds/`, `fundacao/` (out of git), `COMP_RESULTADO.md`, `COMP_RESULTADO.json`, `COMP_MEDIANAS_1000PTS.json` |
+| Integrity | `docs/architecture/LEBRE_v0.55_SHA256SUMS.txt` (64 files), `LEBRE_v0.55_SPEC_SHA256SUMS.txt` (specification) | `python scripts/verify_integrity.py` |
+
+**Caveats.** The reserve is consumed: re-running reproduces the published result, but it is not a new evaluation. The foundation models of the comparison ran on a GPU (CUDA build of torch 2.11.0); a partial CPU run was discarded unanalysed (`experiments/LEBRE-V0.55-COMP-01/RUN_NOTAS.md`). GPU kernels are not guaranteed bit for bit across hardware, so their numbers may differ in the last digits. The dense NLMS ARX diverges on some series and is reported with per-series medians.
