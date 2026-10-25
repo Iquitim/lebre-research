@@ -156,5 +156,22 @@ def replica(v, desvio=False):
     print(json.dumps(res, ensure_ascii=False)[:1500])
 
 
+def ons():
+    """checagem de segurança da C5 nos rios do ONS (RUN_NOTAS.md, §4), declarada antes de rodar"""
+    R_ = _cmp(); sem = 2026102806
+    S = carregar(("ONSD", "ONSR"))
+    res = {}
+    for tag, k in enumerate(("ONSD", "ONSR")):
+        ss = [s for s in S if s["info"]["_"]["parte"] == k]
+        res[k] = par(R_, ss, "C5", "A", 56, sem, 500 + tag, 0)
+        res[k]["custo"] = float(np.median([s["info"]["C5"]["custo"] / s["info"]["A"]["custo"] for s in ss]))
+        res[k]["passa"] = bool(res[k]["ic95"][1] <= LIM_K1)
+    res["passa"] = bool(all(res[k]["passa"] for k in ("ONSD", "ONSR")))
+    (AQUI / "DEV_M1_RESULTADO_ons.json").write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8",
+                                                   newline="\n")
+    for k in ("ONSD", "ONSR"):
+        r = res[k]; print(k, r["n"], f"C5/A {r['razao']:.3f} [{r['ic95'][0]:.3f}; {r['ic95'][1]:.3f}] custo {r['custo']:.3f} passa {r['passa']}")
+
+
 if __name__ == "__main__":
-    escolha() if sys.argv[1] == "escolha" else replica(sys.argv[2], "--desvio" in sys.argv)
+    {"escolha": lambda: escolha(), "ons": lambda: ons()}.get(sys.argv[1], lambda: replica(sys.argv[2], "--desvio" in sys.argv))()

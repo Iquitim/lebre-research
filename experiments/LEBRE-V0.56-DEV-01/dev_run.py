@@ -41,6 +41,8 @@ def _serie(parte, ident):
         ref = "zero" if s.get("zero_baseline") else ("seasonal" if s.get("season") else "persistence")
         return dict(nome=str(s.get("nome")), y=np.asarray(s["y"], float), X=np.asarray(s["X"], float), q=None,
                     season=s.get("season"), season2=s.get("season2"), ref=ref, origem=str(origem))
+    if parte in ("ONSD", "ONSR"):
+        return DD.carregar_rio(ident)
     if parte in ("P", "R"):
         s = DD.carregar_predio(ident); s["ref"] = "seasonal"
         return s
@@ -89,6 +91,9 @@ def tarefas(modo, escolhida=None):
         t = [("e20", (fam, k), TODAS) for fam in E20.TODAS for k in range(len(list(E20._series(fam))))]
         t += [("P", m, TODAS) for m in P["P"]] + [("DA", g, TODAS) for g in C["A"]]
         return t
+    if modo == "ons":                                                 # RUN_NOTAS.md, §4
+        O = DD.rios_ons()
+        return [(k, t, ("A", "C5")) for k in ("ONSD", "ONSR") for t in O[k]]
     assert escolhida in TODAS[1:]
     v = ("A", escolhida)
     return [("DB", g, v) for g in C["B"]] + [("R", m, v) for m in P["R"]]

@@ -50,6 +50,22 @@ def carregar_predio(meter, P=None):
                 q=np.asarray(d["quarantine"], bool), season=d["season"], season2=168)
 
 
+def rios_ons():
+    """séries de rios do ONS do SPLIT_V052: desenvolvimento (11) e reserva 1 (45, consumida em 2026-09)"""
+    o = _json(E / "LEBRE-V0.52-DATA-01" / "SPLIT_V052.json")["ons"]
+    return {"ONSD": [r["target"] for r in o["development"]], "ONSR": [r["target"] for r in o["held_out"]]}
+
+
+def carregar_rio(target, O=None):
+    O = O or rios_ons()
+    assert target in O["ONSD"] or target in O["ONSR"], f"rio {target} fora dos conjuntos declarados"
+    sys.path.insert(0, str(E / "LEBRE-V0.52-PROTO-01"))
+    import data_v052 as D
+    d = D.load_ons(target, final=True)                          # reserva 1 consumida (RUN_NOTAS.md, §4)
+    return dict(nome=d["task"], y=np.asarray(d["y"], float), X=np.asarray(d["X"], float),
+                q=np.asarray(d["quarantine"], bool), season=d["season"], season2=None, ref="seasonal")
+
+
 def e20():
     if str(LAB) not in sys.path:
         sys.path.insert(0, str(LAB))
