@@ -21,3 +21,8 @@ maior. Sementes de bootstrap: as mesmas do conjunto (o contraste recebe um índi
 
 Pela regra 4 do plano, rodam em D-B só os modelos dos ingredientes classificados como "parte substancial" em D-A (R1,
 R3, R4, R6 e a memória fraca, que vem de L2), mais R0 e L0; e a checagem suplementar R6x.
+
+Execução (25/10/2026, commit `fec469c`): R6x em D-A e os modelos R0, R1, R3, R4, R6, R6x, L0 e L2 em D-B; 60 de 60
+tarefas sem erro. A nova análise de D-A, com a checagem suplementar acrescentada, reproduziu exatamente os contrastes, as
+regras, as janelas e os regimes da primeira análise (conferido contra a cópia salva antes da mudança). Resultado:
+`DIAG_RESULTADO.md`.
