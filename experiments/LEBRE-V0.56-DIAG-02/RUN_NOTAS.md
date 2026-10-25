@@ -12,3 +12,6 @@ limiar (log 0,052 contra 0,5·G = 0,058).
 ## 2. D-B (replicação)
 
 Pela regra 3: só M5, mais M0.
+
+Execução (25/10/2026): M0 e M5 em D-B, 30 de 30 bacias sem erro; M0 de novo idêntica, bit a bit, à L0 do DIAG-01. M5
+replicada pela regra 3. Resultado: `DIAG_M1_RESULTADO.md`.
