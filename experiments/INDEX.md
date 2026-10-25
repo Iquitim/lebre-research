@@ -35,6 +35,7 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 |---|---|---|
 | `LEBRE-V0.56-DIAG-01` | Basin diagnosis (exploratory, consumed reserves only: CAMELS-BR positions 140–169 for discovery, 110–139 for replication; v0.55 data excluded, unused basins sealed): which ingredient of the recursive-least-squares ARX explains its advantage over v0.55 on basins. Result: second-order adaptation and the autoregressive dynamics of the memory, both replicated; acceptance delay and forgetting rejected | F |
 | `LEBRE-V0.56-DIAG-02` | M1 diagnosis on the same consumed basin reserves: M1 is already an RLS ARX, but updated every 8 targets, clipped around the core forecast and with two target lags; the three removed together close most of the gap to the RLS ARX (D-A 1.124 → 1.016; D-B 1.053 → 0.959), replicated, at ~2.7× the cost | F |
+| `LEBRE-V0.56-DEV-01` | Cheap version of the M1 correction on an all-family bench of used data (E20, BDG2 and CAMELS-BR consumed reserves): no variant admissible by the fixed rule; C5 (RLS every 4 targets, 3 lag bands, 3 target lags, no clip; cost 0.985) carried forward by a declared deviation (69.4% of the basin gain vs 70%), improves 18 E20 families, replicated on D-B (1.053) and buildings (0.995): the v0.56 candidate | F |
 | `LEBRE-V0.56-DATA-01` | Source of new basins for the v0.56 final evaluation, decided before any download: CAMELS-CL 2018 (PANGAEA, CC-BY-4.0) | decision |
 
 ## LEBRE v0.55 (16–17 Oct 2026) — promoted

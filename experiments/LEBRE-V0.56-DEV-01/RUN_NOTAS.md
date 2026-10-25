@@ -25,3 +25,9 @@ defasagem, 3 defasagens do alvo, sem recorte), embora ela não seja admissível 
   acima de zero e pelo menos metade do de D-A; prédios R com limite superior ≤ 1,02).
 - **Código:** `dev_analise.py replica C5 --desvio` aceita a C5 apesar de `escolhida = None`. É a única mudança, e ela não
   altera nenhum cálculo.
+
+## 3. Replicação da C5 (25/10/2026)
+
+`dev_run.py replica C5`: 60 de 60 tarefas sem erro (bacias D-B e prédios R, A e C5). `dev_analise.py replica C5
+--desvio`: **replicada**. Bacias D-B: v0.55 ÷ C5 = 1,053 [1,041; 1,067] (log 0,052 contra o mínimo de 0,035, metade do de
+D-A); prédios R: C5 ÷ v0.55 = 0,995 [0,989; 1,000]; custo mediano 0,96. Números: `DEV_M1_RESULTADO_replica.json`.

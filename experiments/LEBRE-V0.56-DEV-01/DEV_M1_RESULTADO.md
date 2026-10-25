@@ -49,3 +49,18 @@ cenários sintéticos (A02, A04, A10). As pioras significativas são todas menor
 A regra não admite nenhuma variante. Seguir com qualquer uma delas é um **desvio declarado** da regra de escolha, a
 registrar antes da replicação. A replicação (bacias D-B e prédios R) e, depois, a validação e a avaliação final em dados
 nunca usados continuam sendo os testes que decidem.
+
+## 5. Decisão e replicação (25/10/2026)
+
+O responsável pelo projeto decidiu seguir com a **C5**, com desvio declarado só no critério K2 (`RUN_NOTAS.md`, §2,
+registrado antes da replicação). A replicação, pela regra da §5 sem mudança, **passou**:
+
+| | Resultado | Exigência |
+|---|---|---|
+| Bacias D-B (posições 110–139): v0.55 ÷ C5 | 1,053 [1,041; 1,067] | IC acima de 1 e ≥ metade do ganho de D-A |
+| Prédios R (posições 85–114): C5 ÷ v0.55 | 0,995 [0,989; 1,000] | limite superior ≤ 1,02 |
+| Custo mediano | 0,96 | — |
+
+**A C5 é a candidata da v0.56:** a M1 com o RLS atualizado a cada 4 alvos aprendidos, 3 bandas de defasagem das entradas
+([0], [1], [2–3]), 3 defasagens do alvo e sem o recorte de E; o resto da v0.55 sem mudança. Ela ainda precisa da
+validação e da avaliação final pré-registradas em dados nunca usados.
