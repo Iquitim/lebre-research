@@ -1,0 +1,480 @@
+{
+ "n": 50,
+ "familias": {
+  "camels_cl": {
+   "n": 20,
+   "geo": 0.8996489749548148,
+   "ic95": [
+    0.8820131659900193,
+    0.9154906148035916
+   ],
+   "curta_geo": 0.985535735612902,
+   "custo_mediana": 1.0448492811293764
+  },
+  "bdg2": {
+   "n": 30,
+   "geo": 1.2002814306792122,
+   "ic95": [
+    1.0090746579459773,
+    1.2500801491096043
+   ],
+   "curta_geo": NaN,
+   "custo_mediana": 1.0302648765699265
+  }
+ },
+ "series": [
+  {
+   "familia": "camels_cl",
+   "ident": "10137001",
+   "razao": 0.7727766310170371,
+   "razao_curta": 1.0317804569137885,
+   "custo_razao": 1.0467787980443946,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "10306001",
+   "razao": 0.8352278825894609,
+   "razao_curta": 0.8856252747511917,
+   "custo_razao": 1.0393140884723668,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "10363002",
+   "razao": 0.7165052590918776,
+   "razao_curta": 0.8701141634797583,
+   "custo_razao": 1.0446335576063936,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "12284007",
+   "razao": 0.929148005355429,
+   "razao_curta": 0.9783103377955298,
+   "custo_razao": 1.0426016346532743,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "12582001",
+   "razao": 0.9291014723265472,
+   "razao_curta": 0.9325055361031814,
+   "custo_razao": 1.0917684803601002,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "12805001",
+   "razao": 0.9938237627765182,
+   "razao_curta": 1.0000270789304426,
+   "custo_razao": 1.0594243325286385,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "2101001",
+   "razao": 0.9853997840492128,
+   "razao_curta": 0.9999996764348291,
+   "custo_razao": 1.0603072623243885,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "4313001",
+   "razao": 0.9868176182424789,
+   "razao_curta": 1.0000003122657366,
+   "custo_razao": 1.2063150012802086,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "4522002",
+   "razao": 1.0567313695895029,
+   "razao_curta": 0.9366992174850538,
+   "custo_razao": 1.0432326421201263,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "4523002",
+   "razao": 0.9521922010901507,
+   "razao_curta": 1.0929503013758046,
+   "custo_razao": 1.0523209174662573,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "4533002",
+   "razao": 1.1873832846851542,
+   "razao_curta": 1.393959217474073,
+   "custo_razao": 0.9337454414464433,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "7103001",
+   "razao": 0.8835068920514905,
+   "razao_curta": 0.9152746136737487,
+   "custo_razao": 1.0376578197290933,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "7350003",
+   "razao": 1.0550759203783078,
+   "razao_curta": 1.0104925977262258,
+   "custo_razao": 1.037051862070135,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "7374001",
+   "razao": 0.7713467852066571,
+   "razao_curta": 0.9546212139263445,
+   "custo_razao": 1.0425918751368624,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "8104001",
+   "razao": 0.9070566736099158,
+   "razao_curta": 0.9467165826648563,
+   "custo_razao": 1.0463013564656714,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "8135002",
+   "razao": 0.6963697697999292,
+   "razao_curta": 0.9539468806801359,
+   "custo_razao": 1.1340069927673204,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "8342001",
+   "razao": 0.9606076588580785,
+   "razao_curta": 0.9958011627344261,
+   "custo_razao": 1.0382068722337643,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "9131001",
+   "razao": 0.7958504187101632,
+   "razao_curta": 0.9808123985278265,
+   "custo_razao": 1.045065004652359,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "9412001",
+   "razao": 0.8275674075438091,
+   "razao_curta": 0.9268834928662563,
+   "custo_razao": 1.0405595211687186,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "9414001",
+   "razao": 0.9107474803978107,
+   "razao_curta": 1.0,
+   "custo_razao": 1.0466267573460735,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_assembly_Brandon",
+   "razao": 0.9990411996934921,
+   "razao_curta": 0.982517085821739,
+   "custo_razao": 1.126705832356359,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Roland",
+   "razao": 1.0000000946089467,
+   "razao_curta": 1.0,
+   "custo_razao": 1.00499559998134,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Bull_education_Venita",
+   "razao": 1.0,
+   "razao_curta": 0.9999999999989962,
+   "custo_razao": 0.9943636017497545,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Cockatoo_office_Alton",
+   "razao": 0.9894312548424121,
+   "razao_curta": 1.000366423897448,
+   "custo_razao": 1.1786453027536716,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Fox_assembly_Adrianne",
+   "razao": 0.9563036700934949,
+   "razao_curta": 1.000000000000018,
+   "custo_razao": 0.8766863462094618,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Fox_education_Lilly",
+   "razao": 0.9999999999999089,
+   "razao_curta": 0.9970232293800547,
+   "custo_razao": 0.9775390487117455,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Fox_office_Essie",
+   "razao": 1.0,
+   "razao_curta": 0.9999739270002834,
+   "custo_razao": 0.9520804575540978,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_education_Sonia",
+   "razao": 0.9568907848025792,
+   "razao_curta": 0.9134056053321736,
+   "custo_razao": 1.0660068448867597,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_office_Candi",
+   "razao": 0.9999414453356203,
+   "razao_curta": 0.9984743565327219,
+   "custo_razao": 0.8990404318938733,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_office_Myles",
+   "razao": 1.0000056844256557,
+   "razao_curta": 0.9999999989772014,
+   "custo_razao": 1.0057045495220691,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_office_Shawna",
+   "razao": 255.02714738683065,
+   "razao_curta": NaN,
+   "custo_razao": 0.8354328180112639,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_public_Octavia",
+   "razao": 1.0013380136409258,
+   "razao_curta": 1.9261118028382365,
+   "custo_razao": 1.0410706529735416,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Bobcat_education_Rosalva",
+   "razao": 0.9911664533112345,
+   "razao_curta": 0.9999721878364443,
+   "custo_razao": 1.00742684726998,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Eagle_assembly_Margret",
+   "razao": 1.009377716884527,
+   "razao_curta": 0.9793975545372505,
+   "custo_razao": 1.0930004272335971,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Eagle_office_Phyllis",
+   "razao": 0.9978168518657109,
+   "razao_curta": 0.9420588599623114,
+   "custo_razao": 1.31955948872959,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "hotwater:Fox_lodging_Jina",
+   "razao": 0.9995157130063284,
+   "razao_curta": 0.9977277943842852,
+   "custo_razao": 1.0644683239011021,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_assembly_Goldie",
+   "razao": 0.9489771758184211,
+   "razao_curta": 0.9732010057033028,
+   "custo_razao": 1.1189134055397474,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_education_Violeta",
+   "razao": 1.008132864567953,
+   "razao_curta": 1.0,
+   "custo_razao": 1.1341539200979625,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_office_Trevor",
+   "razao": 0.9969569946316102,
+   "razao_curta": 0.9999999882475532,
+   "custo_razao": 1.0013886265692016,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Bull_public_Jefferson",
+   "razao": 1.0221281309062098,
+   "razao_curta": 0.8488450376856478,
+   "custo_razao": 1.1248521322053395,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_education_Christi",
+   "razao": 1.0338486763688832,
+   "razao_curta": 0.9222575501785871,
+   "custo_razao": 1.1389994895531677,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_education_Eunice",
+   "razao": 1.0014997488390012,
+   "razao_curta": 0.985284896630085,
+   "custo_razao": 1.2253101530141155,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_industrial_Sarita",
+   "razao": 1.0,
+   "razao_curta": 1.0,
+   "custo_razao": 0.9966602468383572,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_lodging_Brian",
+   "razao": 1.0000039634715836,
+   "razao_curta": 1.0000014746668484,
+   "custo_razao": 0.9532941835533264,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_lodging_Mauricio",
+   "razao": 1.0006309818659278,
+   "razao_curta": 0.9999716882073527,
+   "custo_razao": 1.004915796956922,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Byron",
+   "razao": 1.0197716985655398,
+   "razao_curta": 0.7946192051729951,
+   "custo_razao": 1.1803461360321716,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Gustavo",
+   "razao": 0.9979318727237436,
+   "razao_curta": 0.9997615918827473,
+   "custo_razao": 0.9218171793377883,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Joey",
+   "razao": 0.9999729629465988,
+   "razao_curta": 1.0001494318666857,
+   "custo_razao": 1.204467029201082,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Hog_office_Terry",
+   "razao": 1.0001284465543816,
+   "razao_curta": 0.9999998507216212,
+   "custo_razao": 1.0194591001663114,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Peacock_office_Effie",
+   "razao": 1.009006017513455,
+   "razao_curta": 0.903196548457409,
+   "custo_razao": 1.2318359965370167,
+   "estrutura_igual": true
+  }
+ ],
+ "criterios": {
+  "V1": true,
+  "V2": false,
+  "sem_nan_novas": true,
+  "custo_mediana": 1.0439330998632599,
+  "custo_ok": true,
+  "PASSA": false
+ },
+ "piores": [
+  {
+   "familia": "bdg2",
+   "ident": "chilledwater:Hog_office_Shawna",
+   "razao": 255.02714738683065,
+   "razao_curta": NaN,
+   "custo_razao": 0.8354328180112639,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "4533002",
+   "razao": 1.1873832846851542,
+   "razao_curta": 1.393959217474073,
+   "custo_razao": 0.9337454414464433,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "4522002",
+   "razao": 1.0567313695895029,
+   "razao_curta": 0.9366992174850538,
+   "custo_razao": 1.0432326421201263,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "camels_cl",
+   "ident": "7350003",
+   "razao": 1.0550759203783078,
+   "razao_curta": 1.0104925977262258,
+   "custo_razao": 1.037051862070135,
+   "estrutura_igual": true
+  },
+  {
+   "familia": "bdg2",
+   "ident": "steam:Cockatoo_education_Christi",
+   "razao": 1.0338486763688832,
+   "razao_curta": 0.9222575501785871,
+   "custo_razao": 1.1389994895531677,
+   "estrutura_igual": true
+  }
+ ],
+ "estrutura_igual_em_todas": true,
+ "fracao_atualizacoes_mediana": 0.30611090876598107,
+ "custo_p95": 1.2167623347338574
+}
