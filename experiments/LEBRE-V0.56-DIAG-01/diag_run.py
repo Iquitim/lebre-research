@@ -29,12 +29,13 @@ OUT = AQUI / "preds"
 COMMIT = "b0522a0"
 LAMBDAS = (0.99, 0.999, 0.9999)
 MUS = (0.01, 0.05, 0.2)
+MUS_X = (0.5, 1.0)                                               # checagem suplementar R6x (RUN_NOTAS.md, §2)
 # código: (lags das entradas, colunas das entradas, lags do alvo, algoritmo, lambda fixo)
 ESCADA = {"R0": (3, (0, 1, 2), 3, "rls", None), "R1": (3, (), 3, "rls", None), "R2": (3, (0,), 3, "rls", None),
           "R3": (0, (0, 1, 2), 3, "rls", None), "R4": (3, (0, 1, 2), 1, "rls", None), "R5": (3, (0, 1, 2), 3, "rls", 1.0),
-          "R6": (3, (0, 1, 2), 3, "nlms", None)}
+          "R6": (3, (0, 1, 2), 3, "nlms", None), "R6x": (3, (0, 1, 2), 3, "nlms_x", None)}
 LEBRE = ("L0", "L1", "L2", "L3")                                 # L4 (memória) é gravada dentro de L2
-TODOS = tuple(ESCADA) + LEBRE
+TODOS = tuple(k for k in ESCADA if k != "R6x") + LEBRE
 
 
 def _modulo(nome, caminho):
@@ -96,7 +97,7 @@ class ArxGen:
 
 def run_arx(Xs, y, cfg, par):
     Kx, cols, Ky, alg, _ = cfg
-    m = ArxGen(len(cols), Kx, Ky, alg, par); Xc = Xs[:, list(cols)]
+    m = ArxGen(len(cols), Kx, Ky, "nlms" if alg == "nlms_x" else alg, par); Xc = Xs[:, list(cols)]
     pred = np.full(len(y), np.nan); fp = []
     for t in range(len(y)):
         if not np.isfinite(y[t]):
@@ -109,7 +110,7 @@ def run_arx(Xs, y, cfg, par):
 
 
 def calib_arx(Xs, y, cfg, idx):
-    grade = (cfg[4],) if cfg[4] is not None else (LAMBDAS if cfg[3] == "rls" else MUS)
+    grade = (cfg[4],) if cfg[4] is not None else {"rls": LAMBDAS, "nlms": MUS, "nlms_x": MUS_X}[cfg[3]]
     best, bm = grade[0], float("inf")
     for par in grade:
         p, _, ok = run_arx(Xs[idx], y[idx], cfg, par)
@@ -193,7 +194,7 @@ if __name__ == "__main__":
         fumaca(); sys.exit(0)
     assert conj in ("A", "B")
     modelos = tuple(sys.argv[2:]) or TODOS
-    assert set(modelos) <= set(TODOS), modelos
+    assert set(modelos) <= set(TODOS) | {"R6x"}, modelos
     import diag_dados as DD
     C, _ = DD.conjuntos()
     OUT.mkdir(exist_ok=True)

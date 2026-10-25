@@ -25,6 +25,7 @@ BLOCO, TEST_FRAC = 30, 0.30
 ESCADA = [(f"D_{k}", k, "R0") for k in ("R1", "R2", "R3", "R4", "R5", "R6")]
 LADO_LEBRE = [("L2_vs_L0", "L2", "L0"), ("L0_vs_L3", "L0", "L3"), ("L4_vs_R1", "L4", "R1")]
 FORA_HOLM = [("G", "L0", "R0"), ("Q2", "L0", "L1")]
+SUPLEMENTAR = [("D_R6x", "R6x", "R0"), ("R6x_vs_R6", "R6x", "R6")]   # post hoc (RUN_NOTAS.md, §2), fora da §5
 
 
 def _cmp():
@@ -57,6 +58,7 @@ def contraste(S, a, b, modelos, conj, ci, R_, janela=None):
     logs, rr = [], []
     for si, s in enumerate(S):
         ok = mascara(s, modelos) if janela is None else janela(s, a, b)
+        ok = ok & np.isfinite(s["P"][a]) & np.isfinite(s["P"][b])     # só muda algo na checagem suplementar
         y = s["y"][ok]
         if len(y) < 50:
             continue
@@ -120,12 +122,13 @@ def descritivo(S, a, b, modelos):
 def main(conj):
     R_ = _cmp(); S = carregar(conj)
     modelos = sorted(set.intersection(*[set(s["P"]) for s in S]))
+    principais = [k for k in modelos if k != "R6x"]                 # a máscara da §3 não depende da checagem suplementar
     res = {"conjunto": conj, "modelos": modelos, "n_series": len(S)}
     fam = [c for c in ESCADA + LADO_LEBRE if c[1] in modelos and c[2] in modelos]
     con = {}
-    for ci, (rot, a, b) in enumerate(FORA_HOLM + fam):
+    for ci, (rot, a, b) in enumerate(FORA_HOLM + fam + SUPLEMENTAR):
         if a in modelos and b in modelos:
-            con[rot] = contraste(S, a, b, modelos, conj, ci, R_)
+            con[rot] = contraste(S, a, b, principais, conj, ci, R_)
     sig = R_.holm([con[c[0]]["p"] for c in fam])
     for c, sg in zip(fam, sig):
         con[c[0]]["holm"] = bool(sg)
@@ -140,14 +143,14 @@ def main(conj):
         if "L4_vs_R1" in con:
             c = con["L4_vs_R1"]; regras["memoria_fraca"] = bool(c["holm"] and c["log"] > 0)
         res["regras_secao5"] = regras
-        res["janelas_tempo_G"] = {f"{lo}-{hi}": contraste(S, "L0", "R0", modelos, conj, 90 + i, R_, janela_tempo(lo, hi))
+        res["janelas_tempo_G"] = {f"{lo}-{hi}": contraste(S, "L0", "R0", principais, conj, 90 + i, R_, janela_tempo(lo, hi))
                                   for i, (lo, hi) in enumerate(((200, 2000), (2000, 5000), (5000, 10 ** 9)))}
-        res["regimes_G"] = localizar(S, "L0", "R0", modelos)
-        res["descritivo_G"] = descritivo(S, "L0", "R0", modelos)
+        res["regimes_G"] = localizar(S, "L0", "R0", principais)
+        res["descritivo_G"] = descritivo(S, "L0", "R0", principais)
     if "Q2" in con:
-        res["janelas_tempo_Q2"] = {f"{lo}-{hi}": contraste(S, "L0", "L1", modelos, conj, 95 + i, R_, janela_tempo(lo, hi))
+        res["janelas_tempo_Q2"] = {f"{lo}-{hi}": contraste(S, "L0", "L1", principais, conj, 95 + i, R_, janela_tempo(lo, hi))
                                    for i, (lo, hi) in enumerate(((200, 2000), (2000, 5000), (5000, 10 ** 9)))}
-        res["regimes_Q2"] = localizar(S, "L0", "L1", modelos)
+        res["regimes_Q2"] = localizar(S, "L0", "L1", principais)
     res["parametros"] = {k: [s["info"][k].get("par") for s in S] for k in modelos if k.startswith("R")}
     (AQUI / f"DIAG_RESULTADO_{conj}.json").write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8",
                                                      newline="\n")
