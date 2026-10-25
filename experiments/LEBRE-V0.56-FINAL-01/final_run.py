@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""final_run.py — avaliação final da v0.56 (PREREG_V056_FINAL.md): A (v0.55) e C5 do protótipo no commit ef77728, com as
-entradas reais e com duas entradas placebo, nas 93 séries da avaliação final de LEBRE-V0.56-DATA-01/SPLIT_V056.json.
-Só roda se a validação tiver passado. Grava preds/<família>__<id>.npz e .json (fora do git).
-Uso: LEBRE056_PROTO=<worktree ef77728>/experiments/LEBRE-V0.56-PROTO-01 python final_run.py
+"""final_run.py — avaliação final da v0.56 (PREREG_V056_FINAL.md e adendo 01): A (v0.55) e D4 do protótipo 02 no commit
+c3074bd, com as entradas reais e com duas entradas placebo, nas 93 séries da avaliação final de LEBRE-V0.56-DATA-01/SPLIT_V056.json.
+Só roda se a segunda validação (LEBRE-V0.56-VAL-02) tiver passado. Grava preds/<família>__<id>.npz e .json (fora do git).
+Uso: LEBRE056D_PROTO=<worktree c3074bd>/experiments/LEBRE-V0.56-PROTO-02 python final_run.py
 """
 import hashlib
 import json
@@ -20,27 +20,27 @@ import numpy as np
 AQUI = Path(__file__).resolve().parent
 RAIZ = AQUI.parents[1]
 OUT = AQUI / "preds"
-COMMIT = "ef77728"
+COMMIT = "c3074bd"
 SEMENTE_PLACEBO = 2026102900
 FAMILIAS = ["camels_cl", "bdg2", "eolica", "solar", "camels_br"]
 sys.path.insert(0, str(RAIZ / "experiments" / "LEBRE-V0.56-DATA-01"))
 
 
 def validacao_passou():
-    r = json.loads((RAIZ / "experiments" / "LEBRE-V0.56-VAL-01" / "VAL_RESULTADO.json").read_text(encoding="utf-8"))
+    r = json.loads((RAIZ / "experiments" / "LEBRE-V0.56-VAL-02" / "VAL2_RESULTADO.json").read_text(encoding="utf-8"))
     return bool(r["criterios"]["PASSA"])
 
 
 def proto():
-    p = os.environ["LEBRE056_PROTO"]
+    p = os.environ["LEBRE056D_PROTO"]
     head = subprocess.run(["git", "-C", p, "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
     sujo = subprocess.run(["git", "-C", p, "status", "--porcelain", "--", "."], capture_output=True, text=True).stdout.strip()
     if head != COMMIT or sujo:
         raise SystemExit(f"protótipo errado ou alterado: {head} {sujo}")
     if p not in sys.path:
         sys.path.insert(0, p)
-    from lebre056.model056 import Lebre056
-    return Lebre056
+    from lebre056.model056d import Lebre056D
+    return Lebre056D
 
 
 def rodar(L, s, ref, X, v):
@@ -70,7 +70,7 @@ def job(arg):
         Xp = np.column_stack([X, np.cumsum(rng.standard_normal((T, 2)), 0)])
         placebo = [f"x{X.shape[1]}", f"x{X.shape[1] + 1}"]
         prev, info = {}, {}
-        for v in ("A", "C5"):
+        for v in ("A", "D4"):
             prev[v], info[v] = rodar(L, s, ref, X, v)
             prev[v + "_pl"], info[v + "_pl"] = rodar(L, s, ref, Xp, v)
         np.savez_compressed(base.with_suffix(".npz"), y=s["y"], **prev)
