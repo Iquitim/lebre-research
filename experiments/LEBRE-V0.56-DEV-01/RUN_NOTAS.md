@@ -57,3 +57,19 @@ Achados da revisão, antes de seguir para a avaliação final:
 fim, blocos de 56 passos (uma semana), semente 2026102806 (conferida como não usada). **Critério:** limite superior do IC
 95% da razão C5 ÷ A ≤ 1,02 em cada um dos dois grupos. Se falhar, isso é registrado como falha de segurança da C5 e a
 decisão volta ao responsável pelo projeto.
+
+Execução da checagem dos rios: a primeira tentativa, no ambiente do Lab, falhou nas 56 séries antes de qualquer previsão
+(o ambiente não tem leitor de parquet, o formato dos dados do ONS). Repetida com o Python do sistema (a parte dos rios não
+usa o E20), sem nenhuma outra mudança.
+
+**Resultado da checagem dos rios (56 de 56 séries sem erro):** passa. Desenvolvimento (11): C5 ÷ A = 0,994 [0,981;
+1,005]; reserva 1 (45): 0,968 [0,955; 0,981]; custo 1,02. A C5 **melhora** os rios. Piores séries: Itaúba 1,092, Rosana
+1,066, Jupiá 1,035; melhor: Machadinho 0,540. Números: `DEV_M1_RESULTADO_ons.json`.
+
+**Achados descritivos da revisão (sem critério):**
+- **Cauda por série** (848 séries do banco e das replicações, sem os rios): 0,2% das séries pioram mais de 5% com a C5,
+  1,2% pioram mais de 2% e 10,4% melhoram mais de 2%. As duas piores são bacias de D-B (84095000: 1,167; 70300000:
+  1,073). Nos rios, as três piores ficam entre 1,035 e 1,092. **A média por família esconde pioras isoladas de até ~17%**;
+  isso precisa estar nos limites da candidata.
+- **Diferença restante para o ARX-RLS** (média geométrica por série, sem IC): C5 ÷ ARX-RLS = 1,048 em D-A (era 1,124 na
+  v0.55) e 1,000 em D-B (era 1,053).

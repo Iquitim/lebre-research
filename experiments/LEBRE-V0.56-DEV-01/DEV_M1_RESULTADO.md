@@ -64,3 +64,23 @@ registrado antes da replicação). A replicação, pela regra da §5 sem mudanç
 **A C5 é a candidata da v0.56:** a M1 com o RLS atualizado a cada 4 alvos aprendidos, 3 bandas de defasagem das entradas
 ([0], [1], [2–3]), 3 defasagens do alvo e sem o recorte de E; o resto da v0.55 sem mudança. Ela ainda precisa da
 validação e da avaliação final pré-registradas em dados nunca usados.
+
+## 6. Verificação pós-escolha (pedido do responsável pelo projeto)
+
+Detalhes em `RUN_NOTAS.md`, §4.
+
+| Verificação | Resultado |
+|---|---|
+| Famílias descartadas no critério de não piora | nenhuma (64 famílias, 728 séries em todas as variantes) |
+| Consistência entre etapas e ambientes | A = L0 do DIAG-01 (60 bacias) e C0 = M5 do DIAG-02 (30 bacias), bit a bit |
+| A mudança da M1 altera a estrutura? | não: eventos do núcleo, estrutura e previsão do núcleo idênticos em 11 séries; o controle placebo não muda |
+| **Lacuna corrigida: rios do ONS** (onde o RLS piorou na v0.52; ausentes do banco) | checagem declarada antes de rodar: **passa e melhora** (reserva 1: 0,968 [0,955; 0,981]; desenvolvimento: 0,994) |
+| Independência da replicação nas bacias | limitada: D-B já tinha sido usada nos diagnósticos; só os prédios R e os rios eram novos para esta linha |
+| Pioras isoladas por série | raras (0,2% acima de 5%), mas até 1,167 numa bacia e 1,092 num rio |
+| Diferença restante para o ARX-RLS | 1,048 (D-A) e 1,000 (D-B) |
+
+**Limites da candidata que a avaliação final precisa observar:**
+- a escolha usou o desvio declarado no K2;
+- a direção da correção foi achada e replicada em bacias já olhadas;
+- há pioras isoladas de até ~17% numa série;
+- os eventos do portão da M2 podem mudar.
