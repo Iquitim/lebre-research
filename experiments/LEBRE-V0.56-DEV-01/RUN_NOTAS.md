@@ -9,3 +9,19 @@ afetam as previsões. Análise sem desvio do plano.
 
 Resultado: nenhuma variante admissível (`DEV_M1_RESULTADO.md`); a decisão volta ao responsável pelo projeto, como manda
 a §5 do plano.
+
+## 2. Desvio declarado (25/10/2026, antes da replicação)
+
+**Decisão do responsável pelo projeto:** seguir com a **C5** (RLS da M1 a cada 4 alvos aprendidos, 3 bandas de
+defasagem, 3 defasagens do alvo, sem recorte), embora ela não seja admissível pela regra da §5 do plano.
+
+- **Critério desviado:** só o K2 (ganho nas bacias). A C5 preserva 69,4% do ganho da correção completa em D-A, contra o
+  mínimo de 70%.
+- **Critérios mantidos, todos aprovados pela C5:** K1 (nenhuma família do E20 nem os prédios com limite superior acima de
+  1,02; a pior foi 1,010), K3 (custo mediano 0,985) e K4 (nenhuma previsão não finita a mais).
+- **Motivo:** o K2 mede quanto do ganho possível se preserva, não segurança nem custo. A alternativa mais próxima (C4)
+  exigiria afrouxar o critério de não piora.
+- **Replicação, sem mudança:** a regra de replicação da §5 continua valendo integralmente para a C5 (ganho em D-B com IC
+  acima de zero e pelo menos metade do de D-A; prédios R com limite superior ≤ 1,02).
+- **Código:** `dev_analise.py replica C5 --desvio` aceita a C5 apesar de `escolhida = None`. É a única mudança, e ela não
+  altera nenhum cálculo.

@@ -141,15 +141,15 @@ def escolha():
     print("escolhida:", res["escolhida"])
 
 
-def replica(v):
+def replica(v, desvio=False):
     R_ = _cmp(); sem = SEMENTE["replica"]
     ref = json.loads((AQUI / "DEV_M1_RESULTADO_escolha.json").read_text(encoding="utf-8"))
-    assert ref["escolhida"] == v, (ref["escolhida"], v)
+    assert ref["escolhida"] == v or (desvio and v == "C5"), (ref["escolhida"], v)    # desvio declarado: RUN_NOTAS.md, §2
     S = carregar(("DB", "R"))
     DB = [s for s in S if s["info"]["_"]["parte"] == "DB"]; RR = [s for s in S if s["info"]["_"]["parte"] == "R"]
     g = par(R_, DB, "A", v, BLOCO["DB"], sem, 300, 0); pr = par(R_, RR, v, "A", BLOCO["R"], sem, 400, 0)
     gA = ref["bacias_ganho"][v]["log"]
-    res = dict(variante=v, bacias_DB_ganho=g, predios_R=pr, custo=custos(S, (v,)),
+    res = dict(variante=v, desvio_declarado=bool(desvio), bacias_DB_ganho=g, predios_R=pr, custo=custos(S, (v,)),
                replica=bool(g["ic95_log"][0] > 0 and g["log"] >= 0.5 * gA and pr["ic95"][1] <= LIM_K1))
     (AQUI / "DEV_M1_RESULTADO_replica.json").write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n",
                                                        encoding="utf-8", newline="\n")
@@ -157,4 +157,4 @@ def replica(v):
 
 
 if __name__ == "__main__":
-    escolha() if sys.argv[1] == "escolha" else replica(sys.argv[2])
+    escolha() if sys.argv[1] == "escolha" else replica(sys.argv[2], "--desvio" in sys.argv)

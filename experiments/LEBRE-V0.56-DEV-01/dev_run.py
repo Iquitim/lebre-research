@@ -52,6 +52,9 @@ def job(arg):
     parte, ident, variantes = arg
     nome = f"{parte}__{ident[0]}__{ident[1]}" if parte == "e20" else f"{parte}__{''.join(c if c.isalnum() else '_' for c in str(ident))}"
     base = OUT / nome
+    if base.with_suffix(".json").exists() and all(v in json.loads(base.with_suffix(".json").read_text(encoding="utf-8"))
+                                                  for v in variantes):
+        return nome, "já feito"                                       # retomada sem refazer o que está pronto
     try:
         t0 = time.time(); proto()
         sys.path.insert(0, str(AQUI))
