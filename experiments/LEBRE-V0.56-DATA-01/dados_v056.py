@@ -24,6 +24,7 @@ RAIZ = AQUI.parents[1]
 E = RAIZ / "experiments"
 SNAP53, SNAP54, SNAP56 = (RAIZ / "data" / f"external_v05{k}" for k in (3, 4, 6))
 SPLIT_SHA = "ec9bb01ea6dcb8bc177a55e7729081746b22fbcd86ca35297674e640d10604e3"
+VAL2_SHA = "7a80c2911cff967e1422cb2ad37b587967b818921f8102c00559b97555557d76"   # adendo 01
 JANELA = pd.date_range("1990-01-01", "2014-12-31", freq="D")
 ESPERADO = {"camels_cl": (None, None, 3, "persistence"), "bdg2": (24, 168, 2, "seasonal"), "eolica": (24, None, 5, "seasonal"),
             "solar": (24, None, 4, "seasonal"), "camels_br": (None, None, 3, "persistence")}
@@ -36,8 +37,18 @@ def split():
     return json.loads(p.read_text(encoding="utf-8"))
 
 
+@functools.lru_cache(maxsize=1)
+def split_val2():
+    p = AQUI / "SPLIT_V056_VAL2.json"
+    assert hashlib.sha256(p.read_bytes()).hexdigest() == VAL2_SHA, "SPLIT_V056_VAL2.json alterado"
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
 def series(uso):
-    """[(família, id)] da validação ("validacao") ou da avaliação final ("final")"""
+    """[(família, id)] da validação ("validacao"), da segunda validação ("validacao2", adendo 01) ou da avaliação final"""
+    if uso == "validacao2":
+        V = split_val2()
+        return [("camels_cl", g) for g in V["camels_cl"]["validacao2"]] + [("bdg2", m) for m in V["bdg2"]["validacao2"]]
     S = split()
     if uso == "validacao":
         return [("camels_cl", g) for g in S["camels_cl"]["validacao"]] + [("bdg2", m) for m in S["bdg2"]["validacao"]]
@@ -48,7 +59,7 @@ def series(uso):
 
 
 def _permitida(familia, ident):
-    return (familia, ident) in set(series("validacao")) | set(series("final"))
+    return (familia, ident) in set(series("validacao")) | set(series("validacao2")) | set(series("final"))
 
 
 @functools.lru_cache(maxsize=4)
