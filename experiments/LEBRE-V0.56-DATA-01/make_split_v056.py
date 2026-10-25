@@ -32,7 +32,7 @@ D52, D53, D54, D56 = (ROOT / "data" / f"external_v05{k}" for k in (2, 3, 4, 6))
 CL = D56 / "camels_cl"
 SEED_CL, SEED_EOLICA, SEED_SOLAR, SEED_BDG2 = 5662, 5663, 5664, 5203
 MIN_COV = 0.9                                                    # BDG2, como na v0.52
-JANELA = pd.date_range("1990-01-01", "2015-12-31", freq="D")
+JANELA = pd.date_range("1990-01-01", "2014-12-31", freq="D")   # correção 01
 _s = importlib.util.spec_from_file_location("make_split_v054", E / "LEBRE-V0.54-DATA-01" / "make_split_v054.py")
 M54 = importlib.util.module_from_spec(_s); _s.loader.exec_module(M54)
 
@@ -71,7 +71,7 @@ def camels_cl():
     pick = [str(x) for x in np.random.default_rng(SEED_CL).permutation(sorted(ok, key=int))]
     final, val = pick[:30], pick[30:50]
     return dict(semente=SEED_CL, n_bacias=a.shape[1], n_quase_naturais=len(ids), n_elegiveis=len(pick),
-                janela=["1990-01-01", "2015-12-31"], final_posicoes="0-29", validacao_posicoes="30-49",
+                janela=["1990-01-01", "2014-12-31"], final_posicoes="0-29", validacao_posicoes="30-49",
                 final=final, validacao=val, permutacao=pick,
                 cobertura={g: {k: round(float(cob[k].get(g, 0)), 4) for k in cob} for g in final + val})
 
