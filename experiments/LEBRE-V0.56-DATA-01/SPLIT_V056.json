@@ -1,0 +1,725 @@
+{
+ "criado": "2026-10-25T13:55:44",
+ "snapshot_base_sha256": "5f075a29d9a530fae81c7ffbb748600a4477091a0385453f59377bb7dc5ccf24",
+ "camels_cl": {
+  "semente": 5662,
+  "n_bacias": 516,
+  "n_quase_naturais": 237,
+  "n_elegiveis": 103,
+  "janela": [
+   "1990-01-01",
+   "2014-12-31"
+  ],
+  "final_posicoes": "0-29",
+  "validacao_posicoes": "30-49",
+  "final": [
+   "5721001",
+   "10102001",
+   "5741001",
+   "11141001",
+   "7112001",
+   "10328001",
+   "9127001",
+   "12284003",
+   "9416001",
+   "4515002",
+   "12289002",
+   "12285001",
+   "9123001",
+   "4314002",
+   "6027001",
+   "5101001",
+   "5730008",
+   "12600001",
+   "4501001",
+   "9434001",
+   "9433001",
+   "11143001",
+   "4311001",
+   "7115001",
+   "9404001",
+   "4302001",
+   "10343001",
+   "7372001",
+   "1050002",
+   "4531002"
+  ],
+  "validacao": [
+   "3421001",
+   "4514001",
+   "8130002",
+   "4503001",
+   "8123001",
+   "10364001",
+   "8317001",
+   "4703002",
+   "12284006",
+   "8351001",
+   "12876001",
+   "4530001",
+   "7354002",
+   "7116001",
+   "3414001",
+   "10121001",
+   "4512001",
+   "5411001",
+   "9437002",
+   "4511002"
+  ],
+  "permutacao": [
+   "5721001",
+   "10102001",
+   "5741001",
+   "11141001",
+   "7112001",
+   "10328001",
+   "9127001",
+   "12284003",
+   "9416001",
+   "4515002",
+   "12289002",
+   "12285001",
+   "9123001",
+   "4314002",
+   "6027001",
+   "5101001",
+   "5730008",
+   "12600001",
+   "4501001",
+   "9434001",
+   "9433001",
+   "11143001",
+   "4311001",
+   "7115001",
+   "9404001",
+   "4302001",
+   "10343001",
+   "7372001",
+   "1050002",
+   "4531002",
+   "3421001",
+   "4514001",
+   "8130002",
+   "4503001",
+   "8123001",
+   "10364001",
+   "8317001",
+   "4703002",
+   "12284006",
+   "8351001",
+   "12876001",
+   "4530001",
+   "7354002",
+   "7116001",
+   "3414001",
+   "10121001",
+   "4512001",
+   "5411001",
+   "9437002",
+   "4511002",
+   "4523002",
+   "7374001",
+   "12805001",
+   "4522002",
+   "9412001",
+   "7350003",
+   "10137001",
+   "2101001",
+   "4313001",
+   "12284007",
+   "7103001",
+   "8135002",
+   "10363002",
+   "9414001",
+   "10306001",
+   "8104001",
+   "8342001",
+   "12582001",
+   "9131001",
+   "4533002",
+   "5200001",
+   "1050004",
+   "5100001",
+   "10411002",
+   "9402001",
+   "10362001",
+   "10304001",
+   "9122002",
+   "12585001",
+   "10340001",
+   "9135001",
+   "9140001",
+   "9134001",
+   "8304001",
+   "7330001",
+   "9129002",
+   "10134001",
+   "4513001",
+   "4520001",
+   "8132001",
+   "12284002",
+   "8124002",
+   "10356001",
+   "3430003",
+   "1310002",
+   "12802001",
+   "11143002",
+   "10111001",
+   "4712001",
+   "9420001",
+   "11302001",
+   "12452001",
+   "12586001"
+  ],
+  "cobertura": {
+   "5721001": {
+    "vazao": 0.9962,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "10102001": {
+    "vazao": 0.9301,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "5741001": {
+    "vazao": 0.8509,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "11141001": {
+    "vazao": 0.8616,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "7112001": {
+    "vazao": 0.9071,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "10328001": {
+    "vazao": 0.9494,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9127001": {
+    "vazao": 0.997,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "12284003": {
+    "vazao": 0.9735,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9416001": {
+    "vazao": 0.9055,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4515002": {
+    "vazao": 0.8808,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "12289002": {
+    "vazao": 0.9726,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "12285001": {
+    "vazao": 0.9739,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9123001": {
+    "vazao": 0.9933,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4314002": {
+    "vazao": 0.9929,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "6027001": {
+    "vazao": 0.9106,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "5101001": {
+    "vazao": 0.9314,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "5730008": {
+    "vazao": 0.8827,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "12600001": {
+    "vazao": 0.9728,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4501001": {
+    "vazao": 0.9616,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9434001": {
+    "vazao": 0.9601,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9433001": {
+    "vazao": 0.9038,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "11143001": {
+    "vazao": 0.9415,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4311001": {
+    "vazao": 0.9972,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "7115001": {
+    "vazao": 0.9533,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9404001": {
+    "vazao": 0.9636,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4302001": {
+    "vazao": 0.9273,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "10343001": {
+    "vazao": 0.9572,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "7372001": {
+    "vazao": 0.951,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "1050002": {
+    "vazao": 0.9564,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4531002": {
+    "vazao": 0.9161,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "3421001": {
+    "vazao": 0.9567,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4514001": {
+    "vazao": 0.9556,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "8130002": {
+    "vazao": 0.9999,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4503001": {
+    "vazao": 0.9461,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "8123001": {
+    "vazao": 0.9724,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "10364001": {
+    "vazao": 0.9293,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "8317001": {
+    "vazao": 0.9636,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4703002": {
+    "vazao": 1.0,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "12284006": {
+    "vazao": 0.9907,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "8351001": {
+    "vazao": 0.8907,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "12876001": {
+    "vazao": 0.9629,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4530001": {
+    "vazao": 0.9331,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "7354002": {
+    "vazao": 0.9745,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "7116001": {
+    "vazao": 0.9505,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "3414001": {
+    "vazao": 0.9836,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "10121001": {
+    "vazao": 0.9319,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4512001": {
+    "vazao": 0.9564,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "5411001": {
+    "vazao": 0.9193,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "9437002": {
+    "vazao": 0.9416,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   },
+   "4511002": {
+    "vazao": 0.9964,
+    "precip_mswep": 1.0,
+    "tmean_cr2met": 1.0,
+    "pet_hargreaves": 1.0
+   }
+  }
+ },
+ "bdg2": {
+  "semente": 5203,
+  "n_elegiveis": 766,
+  "validacao_posicoes": "205-234",
+  "final_posicoes": "235-264",
+  "validacao": [
+   "chilledwater:Bull_assembly_Lesa",
+   "chilledwater:Bull_education_Annette",
+   "chilledwater:Bull_education_Kendra",
+   "chilledwater:Eagle_assembly_Latrina",
+   "chilledwater:Eagle_education_Alberto",
+   "chilledwater:Eagle_health_Gregoria",
+   "chilledwater:Eagle_office_Francis",
+   "chilledwater:Fox_education_Claire",
+   "chilledwater:Fox_education_Elois",
+   "chilledwater:Fox_education_Elvira",
+   "chilledwater:Fox_education_Tonya",
+   "chilledwater:Fox_office_Alice",
+   "chilledwater:Fox_office_Carson",
+   "chilledwater:Fox_office_Edythe",
+   "chilledwater:Hog_education_Casandra",
+   "chilledwater:Hog_education_Haywood",
+   "chilledwater:Hog_education_Roberto",
+   "chilledwater:Hog_office_Nia",
+   "chilledwater:Moose_education_Sasha",
+   "chilledwater:Panther_education_Zelda",
+   "chilledwater:Peacock_office_Naomi",
+   "hotwater:Bobcat_education_Monte",
+   "hotwater:Eagle_assembly_Ian",
+   "hotwater:Eagle_lodging_Stephanie",
+   "hotwater:Fox_education_Otilia",
+   "steam:Bull_education_Lenny",
+   "steam:Eagle_office_Dallas",
+   "steam:Hog_food_Morgan",
+   "steam:Hog_other_Noma",
+   "steam:Hog_parking_Bernardo"
+  ],
+  "final": [
+   "chilledwater:Bull_education_Delia",
+   "chilledwater:Bull_education_Elva",
+   "chilledwater:Bull_lodging_Anibal",
+   "chilledwater:Eagle_education_Samantha",
+   "chilledwater:Eagle_office_Chantelle",
+   "chilledwater:Eagle_office_Marisela",
+   "chilledwater:Eagle_public_Missy",
+   "chilledwater:Eagle_public_Pearle",
+   "chilledwater:Fox_assembly_Audrey",
+   "chilledwater:Fox_education_Nilda",
+   "chilledwater:Fox_education_Virgil",
+   "chilledwater:Fox_lodging_Alana",
+   "chilledwater:Hog_education_Martha",
+   "chilledwater:Hog_office_Sarah",
+   "chilledwater:Hog_public_Kevin",
+   "chilledwater:Panther_office_Brent",
+   "hotwater:Eagle_assembly_Josie",
+   "hotwater:Eagle_office_Henriette",
+   "hotwater:Fox_education_Jaclyn",
+   "hotwater:Fox_education_Melvin",
+   "steam:Bull_education_Brain",
+   "steam:Bull_lodging_Carie",
+   "steam:Cockatoo_assembly_Heath",
+   "steam:Cockatoo_office_Giovanni",
+   "steam:Cockatoo_office_Jimmy",
+   "steam:Eagle_education_Peter",
+   "steam:Eagle_food_Kay",
+   "steam:Hog_office_Garrett",
+   "steam:Hog_office_Vera",
+   "steam:Moose_education_Marlon"
+  ],
+  "sites_compartilhados_com_series_ja_usadas": [
+   "Bobcat",
+   "Bull",
+   "Cockatoo",
+   "Eagle",
+   "Fox",
+   "Hog",
+   "Moose",
+   "Panther",
+   "Peacock"
+  ]
+ },
+ "eolica": {
+  "semente": 5663,
+  "periodo": [
+   "2024-01-01",
+   "2025-12-31"
+  ],
+  "n_elegiveis": 32,
+  "excluidas": {
+   "lab": 36,
+   "reserva_v053": 8,
+   "reserva_v054": 8,
+   "reserva_v055": 8
+  },
+  "reservadas": [
+   {
+    "nome": "Conj. Anemus",
+    "cap": 138.6,
+    "lat": -6.205313,
+    "lon": -36.593134,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Atlântica",
+    "cap": 120.0,
+    "lat": -29.895,
+    "lon": -50.31388889,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Chafariz Sul II",
+    "cap": 169.8,
+    "lat": -6.983396,
+    "lon": -36.887927,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Chafariz Sul I",
+    "cap": 142.1,
+    "lat": -6.971064,
+    "lon": -36.879495,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Faísa",
+    "cap": 225.8,
+    "lat": -3.341129,
+    "lon": -39.260423,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Umari",
+    "cap": 202.5,
+    "lat": -6.4060115,
+    "lon": -35.7450845,
+    "completude": 0.9891
+   },
+   {
+    "nome": "Conj. Asa Branca",
+    "cap": 160.0,
+    "lat": -5.354814,
+    "lon": -36.003442,
+    "completude": 1.0
+   },
+   {
+    "nome": "Conj. Santa Clara",
+    "cap": 188.0,
+    "lat": -5.261185,
+    "lon": -35.920164,
+    "completude": 1.0
+   }
+  ]
+ },
+ "solar": {
+  "semente": 5664,
+  "periodo": [
+   "2026-01-01",
+   "2026-09-30"
+  ],
+  "n_elegiveis": 11,
+  "excluidas": {
+   "reserva_v054": 8,
+   "reserva_v055": 8
+  },
+  "observacao": "separação no tempo",
+  "reservadas": [
+   {
+    "nome": "Conj. Rio Alto",
+    "cap": 216.0,
+    "lat": -6.9661,
+    "lon": -37.9892,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Sol do Cerrado",
+    "cap": 681.3,
+    "lat": -15.384427,
+    "lon": -43.785949,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Nova Olinda",
+    "cap": 210.0,
+    "lat": -8.194181,
+    "lon": -42.556878,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Guaimbê",
+    "cap": 150.0,
+    "lat": -21.893809,
+    "lon": -49.863684,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Futura",
+    "cap": 692.4,
+    "lat": -9.660782,
+    "lon": -40.686021,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Banabuiú",
+    "cap": 230.0,
+    "lat": -5.3231,
+    "lon": -38.83,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Pirapora 2",
+    "cap": 329.0,
+    "lat": -17.4056,
+    "lon": -44.9225,
+    "completude_2026": 1.0
+   },
+   {
+    "nome": "Conj. Lavras",
+    "cap": 201.0,
+    "lat": -3.791728,
+    "lon": -38.932812,
+    "completude_2026": 1.0
+   }
+  ]
+ },
+ "camels_br": {
+  "semente": 5202,
+  "posicoes": "220-236",
+  "reservadas": [
+   33380000,
+   33480000,
+   33760000,
+   33780000,
+   55360000,
+   56860000,
+   58720000,
+   60910000,
+   61100000,
+   61271000,
+   61305000,
+   61350000,
+   64382000,
+   72630000,
+   74205000,
+   74295000,
+   82320000
+  ],
+  "ausentes_do_arquivo": []
+ }
+}
