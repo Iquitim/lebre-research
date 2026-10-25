@@ -214,5 +214,52 @@ def analise():
         print(f"{att:22s} ganho C5 rho {d['ganho_C5_rho']:+.2f} (p {d['ganho_C5_p']:.2f})  G rho {d['G_rho']:+.2f} (p {d['G_p']:.2f})  mediana {d['mediana']:.3g}")
 
 
+# ------------------------------------------------------------------ adendo (RUN_NOTAS.md, §3)
+ADENDO = {"C1": dict(every=2, nbands=5), "C2": dict(every=4, nbands=5), "C3": dict(every=1, nbands=3), "C4": dict(every=2, nbands=3)}
+
+
+def job_adendo(gid):
+    base = OUT / f"CLV__{gid}"
+    try:
+        t0 = time.time(); proto()
+        from lebre056.model056 import Lebre056
+        from lebre056.precision056 import DormantPrecisionParam
+        s = serie_cl(gid); y, X, q = s["y"], s["X"], s["q"]
+        Z = dict(np.load(base.with_suffix(".npz"))); info = json.loads(base.with_suffix(".json").read_text(encoding="utf-8"))
+        for v, cfg in ADENDO.items():
+            if v in Z:
+                continue
+            m = Lebre056(3, season=None, season2=None, reference="persistence", variant="A")
+            m._m1 = DormantPrecisionParam(m.n_inputs, ylags=3, clip=False, **cfg)
+            f = np.full(len(y), np.nan)
+            for t in range(len(y)):
+                f[t] = m.predict(X[t]).value
+                m.observe(None if not math.isfinite(y[t]) else float(y[t]), bool(q[t]))
+            Z[v] = f; info[v] = dict(custo=m.cost_per_step)
+        np.savez_compressed(base.with_suffix(".npz"), **Z)
+        base.with_suffix(".json").write_text(json.dumps(info, ensure_ascii=False, default=str) + "\n", encoding="utf-8", newline="\n")
+        return gid, f"ok {round(time.time() - t0)}s"
+    except Exception:
+        return gid, "ERRO " + traceback.format_exc()[-800:]
+
+
+def adendo():
+    import dados_v056 as D
+    ts = [g for f, g in D.series("validacao") if f == "camels_cl"]
+    with ProcessPoolExecutor(14) as ex:
+        for g, st in ex.map(job_adendo, ts, chunksize=1):
+            print(g, st, flush=True)
+    R_ = _cmp(); S = []
+    for g in ts:
+        Z = np.load(OUT / f"CLV__{g}.npz"); info = json.loads((OUT / f"CLV__{g}.json").read_text(encoding="utf-8"))
+        S.append(dict(info=info, y=Z["y"], P={k: v for k, v in Z.items() if k != "y"}))
+    res = {}
+    for i, v in enumerate(("C0", "C1", "C2", "C3", "C4", "C5")):
+        res[v] = contraste(R_, S, "A", v, 20 + i)
+        res[v]["custo_mediana"] = float(np.median([s["info"][v]["custo"] / s["info"]["A"]["custo"] for s in S]))
+        print(f"v0.55 ÷ {v}: {res[v]['razao']:.3f} [{res[v]['ic95'][0]:.3f}; {res[v]['ic95'][1]:.3f}]  custo {res[v]['custo_mediana']:.2f}")
+    (AQUI / "DIAG_CHILE_ADENDO.json").write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+
+
 if __name__ == "__main__":
-    {"run": run, "analise": analise}[sys.argv[1]]()
+    {"run": run, "analise": analise, "adendo": adendo}[sys.argv[1]]()
