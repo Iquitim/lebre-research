@@ -22,3 +22,6 @@ enquanto a versão barata (C5: a cada 4, 3 bandas) quase não melhora. Para sepa
 C1 (a cada 2, 5 bandas), C2 (a cada 4, 5 bandas), C3 (a cada 1, 3 bandas) e C4 (a cada 2, 3 bandas). Leitura
 descritiva: razão v0.55 ÷ variante, com o mesmo bootstrap e a mesma semente do diagnóstico (índices de contraste
 próprios). Só exploratório: as bacias de CL-V já foram gastas; nada aqui escolhe uma candidata.
+
+Execução do adendo (25/10/2026): C1 a C4 nas 20 bacias de CL-V, sem erro. Resultado em `DIAG_CHILE_ADENDO.json` e no
+relatório `DIAG_CHILE_RESULTADO.md`.
