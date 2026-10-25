@@ -40,6 +40,8 @@ Promoted on 13 Oct 2026 by a pre-registered binding rule; errata 01 on 14 Oct 20
 | `LEBRE-V0.56-VAL-01` | Pre-registered validation on never-used series (20 CAMELS-CL basins, 30 BDG2 meters): **not passed** — basins 0.988 [0.969; 1.005] (required upper < 1.00), buildings 0.989 [0.983; 0.995]; the final evaluation was not run | F |
 | `LEBRE-V0.56-FINAL-01` | Final-evaluation pre-registration (binding rule R1–R6) and scripts, committed before the validation; **not run** (validation failed) | not run |
 | `LEBRE-V0.56-DIAG-03` | Why the C5 gain fell in Chile (exploratory, spent validation basins): the full M1 correction gains 7.5% in Chile; the cheap C5 lost it because it updates the regression every 4 steps; every 2 steps with 3 lag bands (C4) keeps the gain in Chile (1.071) and Brazil (89%) at cost ~1.15-1.19 | F |
+| `LEBRE-V0.56-DESIGN-NOTE-01` | Design note 01: inventory of fixed constants (guarantee, safety, learning, representation) and a prioritized programme to make learning-related ones dynamic | design |
+| `LEBRE-V0.56-DEV-02` | M1 study on demand (update the regression only when the error surprises) vs fixed periods, on 894 used series: D4 (average budget 1/4, ~30% of targets updated) keeps ~90-100% of the every-step gain in Brazilian and Chilean basins at cost 1.055, no family harmed; sensitivity screen: the memory step (0.05) is miscalibrated everywhere (0.02 better in all parts) | F |
 | `LEBRE-V0.56-DATA-01` | New-basin source decided before download (CAMELS-CL 2018, PANGAEA, CC-BY-4.0); data rules (and correction 01: MSWEP ends 2014), snapshot hashes, draw (`SPLIT_V056.json`), guarded loader | F |
 
 ## LEBRE v0.55 (16–17 Oct 2026) — promoted
