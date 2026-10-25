@@ -13,3 +13,9 @@ São o mesmo método, um bootstrap pareado de blocos móveis com 2.000 réplicas
 no tratamento dos passos sem alvo. **O script commitado antes da execução (`val_analise.py`, commit `6c32263`) usa
 `reps`, a função nomeada no pré-registro, e é ele que vale.** A avaliação final usa "a mesma estatística da validação"
 (`PREREG_V056_FINAL.md`, §2), portanto também `reps`. Nenhuma mudança de código.
+
+## 2. Execução (25/10/2026)
+
+`val_run.py`: 50 de 50 séries sem erro (protótipo num worktree limpo do commit `ef77728`). `val_analise.py`: **não passa**
+(V1 falha). Os scripts da avaliação final foram commitados (`046d224`) antes da leitura deste resultado e não serão
+executados.
