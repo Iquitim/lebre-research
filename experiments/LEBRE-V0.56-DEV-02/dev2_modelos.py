@@ -55,6 +55,8 @@ def classes():
                 dec = True
             elif self.regra == "faixa":
                 dec = abs(e) > math.sqrt(self.se2); self.fp += 3
+            elif self.se2 <= 0.0:                                                   # erro esperado zero: qualquer erro surpreende
+                dec = e != 0.0; self.fp += 1
             elif self.regra == "censura":
                 zpz = float(z @ (self.P @ z)); self.fp += 2 * k * k + k
                 dec = e * e / (self.se2 * (1.0 + zpz)) > 1.0; self.fp += 4
